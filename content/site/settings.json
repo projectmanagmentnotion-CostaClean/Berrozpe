@@ -2,18 +2,27 @@
   "brandName": "Instal Berrozpe",
   "siteUrl": "https://instalberrozpe.com",
   "locale": "es_ES",
-  "defaultTitle": "Instal Berrozpe | Base web en validacion editorial",
+  "defaultTitle": "Instal Berrozpe | Electricidad, lampisteria, climatizacion y seguridad en Blanes",
   "titleTemplate": "%s | Instal Berrozpe",
-  "defaultDescription": "Base tecnica estatica preparada para una futura validacion editorial, SEO local y despliegue en SiteGround.",
+  "defaultDescription": "Instal Berrozpe muestra actualmente servicios de electricidad, lampisteria, climatizacion, alarmas y camaras de seguridad con base en Blanes.",
   "businessName": "Instal Berrozpe",
-  "legalName": "",
-  "primaryPhone": "",
+  "legalName": "Instal Berrozpe S.L.",
+  "primaryPhone": "676 04 33 89",
   "primaryEmail": "",
-  "locality": "",
-  "region": "",
+  "locality": "Blanes",
+  "region": "Girona",
   "countryCode": "ES",
-  "postalCode": "",
-  "addressLine": "",
+  "postalCode": "17300",
+  "addressLine": "C/ Antiga nº 68, Baixos",
   "coverageArea": [],
-  "socialLinks": []
+  "socialLinks": [
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%20quiero%20informacion%20😁"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/instalberrozpe/?hl=es"
+    }
+  ]
 }

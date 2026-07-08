@@ -6,10 +6,18 @@ import siteSettings from '../../content/site/settings.json';
 import legalNotice from '../../content/legal/legal-notice.json';
 import privacyPolicy from '../../content/legal/privacy-policy.json';
 import cookiesPolicy from '../../content/legal/cookies-policy.json';
+import electricityAndDomotica from '../../content/services/electricidad-y-domotica.json';
+import lampisteriaAndClimatizacion from '../../content/services/lampisteria-y-climatizacion.json';
+import alarmsAndCameras from '../../content/services/alarmas-y-camaras.json';
 import placeholderService from '../../content/services/servicio-pendiente.json';
 import type { HomeSection, LegalPage, ServiceEntry, SiteSettings } from '../data/types';
 
-const services = [placeholderService] satisfies ServiceEntry[];
+const services = [
+  electricityAndDomotica,
+  lampisteriaAndClimatizacion,
+  alarmsAndCameras,
+  placeholderService,
+] satisfies ServiceEntry[];
 const legalPages = [legalNotice, privacyPolicy, cookiesPolicy] satisfies LegalPage[];
 const homeSections = [hero, servicesOverview, processSection, contactSection] satisfies HomeSection[];
 

@@ -1,9 +1,11 @@
 {
   "sectionId": "services-overview",
   "eyebrow": "Servicios",
-  "title": "Cada servicio vive en su propio archivo",
-  "body": "La arquitectura queda preparada para publicar fichas individuales desde contenido estructurado, sin copy embebido dentro del frontend.",
+  "title": "Servicios reales detectados en la web actual",
+  "body": "La auditoria actual confirma tres servicios principales publicados en espanol, con variantes equivalentes en ingles y catalan.",
   "items": [
-    "No hay servicios publicados todavia. Usa `/content/services` para dar de alta cada servicio real con su propio archivo."
+    "Electricidad y domotica.",
+    "Lampisteria y climatizacion.",
+    "Alarmas y camaras CCTV e IP."
   ]
 }
