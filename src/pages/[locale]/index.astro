@@ -1,0 +1,48 @@
+---
+import BulletSection from '../../components/BulletSection.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ServicesPreview from '../../components/ServicesPreview.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  getAllowedLocales,
+  getHomeCollection,
+  getLanguageSwitcherLinksForPage,
+  getPublishedServices,
+  getRouteCatalog,
+  getSeoData,
+  isLocale,
+  type Locale,
+} from '../../lib/content';
+
+export function getStaticPaths() {
+  return getAllowedLocales().map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+
+if (!isLocale(locale)) {
+  throw new Error(`Unsupported locale: ${locale}`);
+}
+
+const home = getHomeCollection(locale);
+const services = getPublishedServices(locale);
+const seo = getSeoData(locale);
+const routes = getRouteCatalog(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  title={seo.titles.home}
+  description={seo.descriptions.home}
+  canonicalPath={routes.home}
+  alternates={getLanguageSwitcherLinksForPage('home')}
+>
+  <HeroSection section={home.hero} />
+  <ServicesPreview locale={locale} section={home.servicesOverview} services={services} />
+  <BulletSection section={home.process} />
+  <ContactSection locale={locale} section={home.contactCta} />
+</BaseLayout>

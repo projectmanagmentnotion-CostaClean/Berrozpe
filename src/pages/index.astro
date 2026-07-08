@@ -1,23 +1,22 @@
 ---
-import BulletSection from '../components/BulletSection.astro';
-import ContactSection from '../components/ContactSection.astro';
-import HeroSection from '../components/HeroSection.astro';
-import ServicesPreview from '../components/ServicesPreview.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getHomeSection, getPublishedServices, getSeoData, getSiteSettings } from '../lib/content';
-
-const site = getSiteSettings();
-const seo = getSeoData();
-const hero = getHomeSection('hero');
-const servicesOverview = getHomeSection('services-overview');
-const processSection = getHomeSection('process');
-const contactSection = getHomeSection('contact-cta');
-const services = getPublishedServices();
+const targetPath = '/es/';
 ---
 
-<BaseLayout title={seo.titles.home ?? site.defaultTitle} description={seo.descriptions.home ?? site.defaultDescription} path="/">
-  <HeroSection section={hero} />
-  <ServicesPreview section={servicesOverview} services={services} />
-  <BulletSection section={processSection} />
-  <ContactSection section={contactSection} />
-</BaseLayout>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${targetPath}`} />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://instalberrozpe.com/" />
+    <link rel="alternate" hreflang="es" href="https://instalberrozpe.com/es/" />
+    <link rel="alternate" hreflang="ca" href="https://instalberrozpe.com/ca/" />
+    <link rel="alternate" hreflang="en" href="https://instalberrozpe.com/en/" />
+    <link rel="alternate" hreflang="de" href="https://instalberrozpe.com/de/" />
+    <link rel="alternate" hreflang="x-default" href="https://instalberrozpe.com/es/" />
+    <title>Instal Berrozpe</title>
+  </head>
+  <body>
+    <p><a href={targetPath}>Continuar a la versión española</a></p>
+  </body>
+</html>

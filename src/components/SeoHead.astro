@@ -1,25 +1,31 @@
 ---
-import { getSeoData, getSiteSettings } from '../lib/content';
+import { DEFAULT_LOCALE, getCanonicalUrl, getSiteSettings } from '../lib/content';
+import type { AlternateLink, Locale } from '../lib/content';
 
 interface Props {
+  locale: Locale;
   title?: string;
   description?: string;
-  path?: string;
+  canonicalPath: string;
+  alternates: AlternateLink[];
+  xDefaultPath?: string;
   noIndex?: boolean;
 }
 
 const {
+  locale,
   title,
   description,
-  path = '/',
+  canonicalPath,
+  alternates,
+  xDefaultPath,
   noIndex = false,
 } = Astro.props;
 
-const site = getSiteSettings();
-const seo = getSeoData();
+const site = getSiteSettings(locale);
 const resolvedTitle = title ?? site.defaultTitle;
 const resolvedDescription = description ?? site.defaultDescription;
-const canonicalUrl = new URL(path, site.siteUrl).toString();
+const canonicalUrl = getCanonicalUrl(canonicalPath);
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -45,7 +51,7 @@ const localBusinessSchema = {
 <meta name="description" content={resolvedDescription} />
 <link rel="canonical" href={canonicalUrl} />
 <meta property="og:type" content="website" />
-<meta property="og:locale" content={site.locale} />
+<meta property="og:locale" content={locale} />
 <meta property="og:site_name" content={site.brandName} />
 <meta property="og:title" content={resolvedTitle} />
 <meta property="og:description" content={resolvedDescription} />
@@ -53,9 +59,13 @@ const localBusinessSchema = {
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={resolvedTitle} />
 <meta name="twitter:description" content={resolvedDescription} />
-{Object.entries(seo.localeAlternates).map(([localeCode, href]) => (
-  <link rel="alternate" hreflang={localeCode} href={href} />
+{alternates.map((alternate) => (
+  <link rel="alternate" hreflang={alternate.locale} href={getCanonicalUrl(alternate.href)} />
 ))}
-<link rel="alternate" hreflang="x-default" href={seo.localeAlternates[seo.defaultLocale] ?? site.siteUrl} />
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href={getCanonicalUrl(xDefaultPath ?? alternates.find((alternate) => alternate.locale === DEFAULT_LOCALE)?.href ?? site.localeBasePath)}
+/>
 {noIndex && <meta name="robots" content="noindex, nofollow" />}
 <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />

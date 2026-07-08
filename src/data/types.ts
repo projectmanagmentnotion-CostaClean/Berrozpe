@@ -2,6 +2,8 @@ export interface SiteSettings {
   brandName: string;
   siteUrl: string;
   locale: string;
+  localeBasePath: string;
+  localeLabel: string;
   defaultLocale: string;
   supportedLocales: string[];
   defaultTitle: string;
@@ -63,6 +65,16 @@ export interface HomeSection {
   items?: string[];
 }
 
+export interface HomeCollection {
+  locale: string;
+  hero: HomeSection;
+  servicesOverview: HomeSection;
+  whyChooseUs: HomeSection;
+  process: HomeSection;
+  contactCta: HomeSection;
+  faqs: HomeSection;
+}
+
 export interface NavigationData {
   locale: string;
   items: Array<{
@@ -80,6 +92,14 @@ export interface SeoData {
   titles: Record<string, string>;
   descriptions: Record<string, string>;
   hreflang: Record<string, Record<string, string>>;
+}
+
+export interface RedirectData {
+  redirects: Array<{
+    from: string;
+    to: string;
+    notes: string;
+  }>;
 }
 
 export interface ListBlock {

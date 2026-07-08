@@ -1,14 +1,16 @@
 ---
 import type { HomeSection } from '../data/types';
+import type { Locale } from '../lib/content';
 import { getSharedContact, getSiteSettings } from '../lib/content';
 import SectionShell from './SectionShell.astro';
 
 interface Props {
+  locale: Locale;
   section: HomeSection;
 }
 
-const { section } = Astro.props;
-const site = getSiteSettings();
+const { locale, section } = Astro.props;
+const site = getSiteSettings(locale);
 const contact = getSharedContact();
 ---
 

@@ -1,28 +1,43 @@
 ---
+import type { AlternateLink, Locale } from '../lib/content';
 import { getNavigation, getSiteSettings } from '../lib/content';
+import LanguageSwitcher from './LanguageSwitcher.astro';
 
-const site = getSiteSettings();
-const navigation = getNavigation();
+interface Props {
+  locale: Locale;
+  languageLinks: AlternateLink[];
+}
+
+const { locale, languageLinks } = Astro.props;
+const site = getSiteSettings(locale);
+const navigation = getNavigation(locale);
 ---
 
 <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a class="text-sm font-semibold uppercase tracking-[0.24em] text-white" href="/">
-      {site.brandName}
-    </a>
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4 lg:flex-row lg:items-center lg:justify-between">
+    <div class="flex items-center justify-between gap-4">
+      <a class="text-sm font-semibold uppercase tracking-[0.24em] text-white" href={site.localeBasePath}>
+        {site.brandName}
+      </a>
+      <div class="lg:hidden">
+        <LanguageSwitcher currentLocale={locale} links={languageLinks} label={navigation.items.find((item) => item.id === 'language')?.label ?? 'Language'} />
+      </div>
+    </div>
 
-    <nav aria-label="Principal">
-      <ul class="flex items-center gap-6 text-sm text-slate-200">
-        {navigation.items.map((item) => (
-          <li>
-            {item.href ? (
-              <a class="transition hover:text-white" href={item.href}>{item.label}</a>
-            ) : (
-              <span class="text-slate-400">{item.label}</span>
-            )}
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
+      <nav aria-label="Principal">
+        <ul class="flex flex-wrap items-center gap-4 text-sm text-slate-200 lg:justify-end">
+          {navigation.items.filter((item) => item.id !== 'language').map((item) => (
+            <li>
+              <a class="transition hover:text-white" href={item.href ?? site.localeBasePath}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div class="hidden lg:block">
+        <LanguageSwitcher currentLocale={locale} links={languageLinks} label={navigation.items.find((item) => item.id === 'language')?.label ?? 'Language'} />
+      </div>
+    </div>
   </div>
 </header>

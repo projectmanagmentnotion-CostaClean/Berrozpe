@@ -1,10 +1,10 @@
 {
   "locale": "es",
   "items": [
-    { "id": "home", "label": "Inicio", "href": "/" },
-    { "id": "services", "label": "Servicios", "href": "/servicios/" },
-    { "id": "about", "label": "Sobre nosotros", "href": "/sobre-nosotros/" },
-    { "id": "contact", "label": "Contacto", "href": "/contacto/" },
+    { "id": "home", "label": "Inicio", "href": "/es/" },
+    { "id": "services", "label": "Servicios", "href": "/es/servicios/" },
+    { "id": "about", "label": "Sobre nosotros", "href": "/es/sobre-nosotros/" },
+    { "id": "contact", "label": "Contacto", "href": "/es/contacto/" },
     { "id": "language", "label": "Idioma", "href": null }
   ],
   "ui": {

@@ -6,9 +6,9 @@
     "title": "Base multidioma preparada a partir del contenido real auditado",
     "body": "El contenido confirmado hasta ahora permite estructurar una nueva web con tres servicios principales, contacto público y revisión legal pendiente.",
     "primaryCtaLabel": "Ver servicios",
-    "primaryCtaHref": "/servicios/",
+    "primaryCtaHref": "/es/servicios/",
     "secondaryCtaLabel": "Ir a contacto",
-    "secondaryCtaHref": "/contacto/"
+    "secondaryCtaHref": "/es/contacto/"
   },
   "servicesOverview": {
     "sectionId": "services-overview",

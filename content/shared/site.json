@@ -4,7 +4,7 @@
   "defaultLocale": "es",
   "supportedLocales": ["es", "ca", "en", "de"],
   "localeBasePaths": {
-    "es": "/",
+    "es": "/es/",
     "ca": "/ca/",
     "en": "/en/",
     "de": "/de/"

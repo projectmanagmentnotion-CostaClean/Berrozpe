@@ -10,7 +10,7 @@
       "locales": {
         "es": {
           "slug": "electricidad-y-domotica",
-          "path": "/servicios/electricidad-y-domotica/"
+          "path": "/es/servicios/electricidad-y-domotica/"
         },
         "ca": {
           "slug": "electricitat-i-domotica",
@@ -31,7 +31,7 @@
       "locales": {
         "es": {
           "slug": "lampisteria-y-climatizacion",
-          "path": "/servicios/lampisteria-y-climatizacion/"
+          "path": "/es/servicios/lampisteria-y-climatizacion/"
         },
         "ca": {
           "slug": "lampisteria-i-climatitzacio",
@@ -52,7 +52,7 @@
       "locales": {
         "es": {
           "slug": "alarmas-y-camaras",
-          "path": "/servicios/alarmas-y-camaras/"
+          "path": "/es/servicios/alarmas-y-camaras/"
         },
         "ca": {
           "slug": "alarmes-i-cameres",

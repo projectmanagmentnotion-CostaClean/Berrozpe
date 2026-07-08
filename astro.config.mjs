@@ -6,7 +6,11 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://instalberrozpe.com',
   output: 'static',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => page !== 'https://instalberrozpe.com/',
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

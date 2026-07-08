@@ -2,34 +2,54 @@
 import SeoHead from '../components/SeoHead.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import type { AlternateLink, Locale } from '../lib/content';
 import '../styles/global.css';
 
 interface Props {
+  locale: Locale;
   title?: string;
   description?: string;
-  path?: string;
+  canonicalPath: string;
+  alternates: AlternateLink[];
+  xDefaultPath?: string;
   noIndex?: boolean;
 }
 
-const { title, description, path, noIndex = false } = Astro.props;
+const {
+  locale,
+  title,
+  description,
+  canonicalPath,
+  alternates,
+  xDefaultPath,
+  noIndex = false,
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <SeoHead title={title} description={description} path={path} noIndex={noIndex} />
+    <SeoHead
+      locale={locale}
+      title={title}
+      description={description}
+      canonicalPath={canonicalPath}
+      alternates={alternates}
+      xDefaultPath={xDefaultPath}
+      noIndex={noIndex}
+    />
   </head>
   <body class="bg-slate-950 text-white antialiased">
     <div class="relative isolate min-h-screen overflow-hidden">
       <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.16),_transparent_55%)]"></div>
-      <SiteHeader />
+      <SiteHeader locale={locale} languageLinks={alternates} />
       <main>
         <slot />
       </main>
-      <SiteFooter />
+      <SiteFooter locale={locale} />
     </div>
   </body>
 </html>

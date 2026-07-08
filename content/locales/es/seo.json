@@ -2,7 +2,7 @@
   "locale": "es",
   "defaultLocale": "es",
   "localeAlternates": {
-    "es": "https://instalberrozpe.com/",
+    "es": "https://instalberrozpe.com/es/",
     "ca": "https://instalberrozpe.com/ca/",
     "en": "https://instalberrozpe.com/en/",
     "de": "https://instalberrozpe.com/de/"
@@ -29,49 +29,49 @@
   },
   "hreflang": {
     "home": {
-      "es": "https://instalberrozpe.com/",
+      "es": "https://instalberrozpe.com/es/",
       "ca": "https://instalberrozpe.com/ca/",
       "en": "https://instalberrozpe.com/en/",
       "de": "https://instalberrozpe.com/de/"
     },
     "services": {
-      "es": "https://instalberrozpe.com/servicios/",
+      "es": "https://instalberrozpe.com/es/servicios/",
       "ca": "https://instalberrozpe.com/ca/serveis/",
       "en": "https://instalberrozpe.com/en/services/",
       "de": "https://instalberrozpe.com/de/dienstleistungen/"
     },
     "about": {
-      "es": "https://instalberrozpe.com/sobre-nosotros/",
+      "es": "https://instalberrozpe.com/es/sobre-nosotros/",
       "ca": "https://instalberrozpe.com/ca/sobre-nosaltres/",
       "en": "https://instalberrozpe.com/en/about-us/",
       "de": "https://instalberrozpe.com/de/ueber-uns/"
     },
     "contact": {
-      "es": "https://instalberrozpe.com/contacto/",
+      "es": "https://instalberrozpe.com/es/contacto/",
       "ca": "https://instalberrozpe.com/ca/contacte/",
       "en": "https://instalberrozpe.com/en/contact/",
       "de": "https://instalberrozpe.com/de/kontakt/"
     },
     "legalNotice": {
-      "es": "https://instalberrozpe.com/aviso-legal/",
+      "es": "https://instalberrozpe.com/es/aviso-legal/",
       "ca": "https://instalberrozpe.com/ca/avis-legal/",
       "en": "https://instalberrozpe.com/en/legal-notice/",
       "de": "https://instalberrozpe.com/de/impressum/"
     },
     "privacy": {
-      "es": "https://instalberrozpe.com/politica-de-privacidad/",
+      "es": "https://instalberrozpe.com/es/politica-de-privacidad/",
       "ca": "https://instalberrozpe.com/ca/politica-de-privacitat/",
       "en": "https://instalberrozpe.com/en/privacy-policy/",
       "de": "https://instalberrozpe.com/de/datenschutz/"
     },
     "cookies": {
-      "es": "https://instalberrozpe.com/politica-de-cookies/",
+      "es": "https://instalberrozpe.com/es/politica-de-cookies/",
       "ca": "https://instalberrozpe.com/ca/politica-de-cookies/",
       "en": "https://instalberrozpe.com/en/cookie-policy/",
       "de": "https://instalberrozpe.com/de/cookies/"
     },
     "terms": {
-      "es": "https://instalberrozpe.com/terminos-y-condiciones/",
+      "es": "https://instalberrozpe.com/es/terminos-y-condiciones/",
       "ca": "https://instalberrozpe.com/ca/termes-i-condicions/",
       "en": "https://instalberrozpe.com/en/terms-and-conditions/",
       "de": "https://instalberrozpe.com/de/allgemeine-geschaeftsbedingungen/"

@@ -1,107 +1,46 @@
 # 03 Information Architecture
 
-## Objetivo
+## Decisión de raíz
 
-Definir una arquitectura multidioma sincronizada, mantenible y basada exclusivamente en contenido auditado o marcado como pendiente.
+- `/` no actúa como home de contenido.
+- `/` redirige de forma controlada a `/es/`.
+- `x-default` apunta a la variante española mientras no exista un selector neutro de entrada.
 
-## Estructura por idioma
+## Arquitectura de rutas
 
-Cada idioma mantiene exactamente las mismas capas:
+- Todas las páginas publicables viven bajo prefijo de idioma: `/es/`, `/ca/`, `/en/`, `/de/`.
+- El routing consume `content/shared/` para datos comunes y equivalencias de servicios.
+- El routing consume `content/locales/{locale}/` para navegación, SEO, home, servicios y legales.
 
-- Inicio
-- Servicios
-- Tres páginas de servicio
-- Sobre nosotros
-- Contacto
-- Aviso legal
-- Política de privacidad
-- Política de cookies
-- Términos y condiciones
-
-## Fuente de verdad
+## Capas de contenido
 
 ### `content/shared/`
 
-- `site.json`: configuración global, locales soportados y base paths.
-- `contact.json`: dirección, teléfonos, emails detectados, horario y pendientes compartidos.
-- `services-index.json`: identificador común de servicios y slugs por idioma.
-- `redirects.json`: tabla base de redirecciones.
+- `site.json`: locales permitidos, paths base y etiquetas.
+- `contact.json`: teléfonos, dirección, horario, emails detectados y pendientes.
+- `services-index.json`: `serviceId` común y slugs/rutas por idioma.
+- `redirects.json`: fuente de verdad de redirecciones legacy.
 
 ### `content/locales/{locale}/`
 
-- `navigation.json`: navegación y etiquetas UI.
-- `home.json`: secciones del home.
-- `seo.json`: titles, descriptions, hreflang y alternates.
-- `services/*.json`: servicios sincronizados por idioma.
-- `legal/*.json`: placeholders legales sincronizados por idioma.
+- `navigation.json`: navegación local.
+- `home.json`: bloques del home.
+- `seo.json`: titles, descriptions y hreflang de páginas estáticas.
+- `services/*.json`: detalle de servicio por idioma.
+- `legal/*.json`: páginas legales por idioma.
 
-## Regla de sincronía
+## Helpers de sincronización
 
-No se puede:
+- Lista de locales permitidos: `LOCALES` en [src/lib/content.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/content.ts).
+- Lista de servicios permitidos: `SERVICE_IDS`.
+- Catálogo de rutas por idioma: `getRouteCatalog(locale)`.
+- Alternates por página: `getLanguageSwitcherLinksForPage(pageId)`.
+- Alternates por servicio: `getLanguageSwitcherLinksForService(serviceId)`.
+- Equivalencia de servicio por `serviceId`: `getServiceById()` y `getServiceRouteById()`.
+- Fallback seguro: si falta una traducción local, se cae a `es`.
 
-- añadir un servicio a un idioma sin añadirlo a los otros tres,
-- añadir una sección al home de un idioma sin replicarla en los otros tres,
-- cerrar un dato pendiente en un idioma y dejarlo abierto en los demás.
+## Páginas renderizadas
 
-## Páginas y contenido
-
-### 1. Inicio
-
-Bloques base:
-
-- `hero`
-- `servicesOverview`
-- `whyChooseUs`
-- `process`
-- `contactCta`
-- `faqs`
-
-### 2. Servicios
-
-Proporciona un índice común de los tres servicios confirmados.
-
-### 3. Páginas de servicio
-
-Cada servicio comparte la misma estructura de contenido:
-
-- `slug`
-- `locale`
-- `title`
-- `shortTitle`
-- `seoTitle`
-- `seoDescription`
-- `heroTitle`
-- `intro`
-- `summary`
-- `includes`
-- `benefits`
-- `process`
-- `faqs`
-- `relatedServices`
-- `cta`
-- `pendingConfirmation`
-
-### 4. Sobre nosotros
-
-Se apoya en contenido auditado y evita afirmaciones no verificadas.
-
-### 5. Contacto
-
-Consume únicamente `content/shared/contact.json` para datos compartidos.
-
-### 6. Legal
-
-Todos los legales existen en los cuatro idiomas y se marcan como pendientes de revisión jurídica.
-
-## Routing
-
-- `es` sin prefijo.
-- `ca`, `en` y `de` con prefijo de idioma.
-- Slugs de servicio traducidos y conectados por `serviceId`.
-
-## Riesgos actuales
-
-- Email principal sin confirmar.
-- Cobertura geográfica exacta sin confirmar.
-- Legales aún no validados.
-- Parte del copy auditado contiene claims que deben seguir marcados como pendientes.
+- Home localizado: [src/pages/[locale]/index.astro](/C:/Users/USUARIO/Documents/Berrozpe/src/pages/[locale]/index.astro)
+- Rutas internas localizadas: [src/pages/[locale]/[...segments].astro](/C:/Users/USUARIO/Documents/Berrozpe/src/pages/[locale]/[...segments].astro)
+- Redirección de raíz: [src/pages/index.astro](/C:/Users/USUARIO/Documents/Berrozpe/src/pages/index.astro)

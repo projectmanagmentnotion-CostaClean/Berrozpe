@@ -56,9 +56,9 @@
   ],
   "cta": {
     "label": "Solicitar información",
-    "href": "/contacto/",
+    "href": "/es/contacto/",
     "secondaryLabel": "Ver otros servicios",
-    "secondaryHref": "/servicios/"
+    "secondaryHref": "/es/servicios/"
   },
   "pendingConfirmation": [
     "La mención a TECALSA aparece en la web actual y conviene confirmar si debe mantenerse.",

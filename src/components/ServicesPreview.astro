@@ -1,15 +1,17 @@
 ---
 import { getNavigation, getServiceRouteById } from '../lib/content';
-import type { HomeSection, ServiceEntry } from '../data/types';
+import type { HomeSection } from '../data/types';
+import type { LocalizedServiceEntry, Locale } from '../lib/content';
 import SectionShell from './SectionShell.astro';
 
 interface Props {
+  locale: Locale;
   section: HomeSection;
-  services: ServiceEntry[];
+  services: LocalizedServiceEntry[];
 }
 
-const { section, services } = Astro.props;
-const navigation = getNavigation();
+const { locale, section, services } = Astro.props;
+const navigation = getNavigation(locale);
 ---
 
 <SectionShell id={section.sectionId} eyebrow={section.eyebrow} title={section.title} body={section.body}>
@@ -19,7 +21,7 @@ const navigation = getNavigation();
         <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
           <h3 class="text-xl font-semibold text-white">{service.heroTitle}</h3>
           <p class="mt-3 text-sm leading-7 text-slate-300">{service.summary}</p>
-          <a class="mt-5 inline-flex text-sm font-semibold text-cyan-300" href={getServiceRouteById(service.slug) ?? `/servicios/${service.slug}/`}>
+          <a class="mt-5 inline-flex text-sm font-semibold text-cyan-300" href={getServiceRouteById(service.serviceId, locale) ?? '#'}>
             {navigation.ui.serviceLink}
           </a>
         </article>

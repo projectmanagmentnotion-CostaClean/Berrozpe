@@ -1,95 +1,40 @@
 # 02 Sitemap
 
-## Criterio
+## Decisión
 
-Sitemap final recomendado con cuatro idiomas sincronizados:
+- La raíz `/` existe solo como redirección controlada a `/es/`.
+- El sitemap indexable se basa en las rutas finales con prefijo de idioma para `es`, `ca`, `en` y `de`.
+- Todas las páginas publicables tienen equivalente en los cuatro idiomas.
 
-- `es` como idioma por defecto.
-- `ca`, `en` y `de` bajo prefijo de idioma.
-- Mismos servicios, mismas páginas base y mismos legales en los cuatro idiomas.
+## Rutas finales
 
-## Estructura de rutas recomendada
+### Comunes por idioma
 
-### Español `es`
+| Tipo | es | ca | en | de |
+| --- | --- | --- | --- | --- |
+| Home | `/es/` | `/ca/` | `/en/` | `/de/` |
+| Servicios | `/es/servicios/` | `/ca/serveis/` | `/en/services/` | `/de/dienstleistungen/` |
+| Sobre nosotros | `/es/sobre-nosotros/` | `/ca/sobre-nosaltres/` | `/en/about-us/` | `/de/ueber-uns/` |
+| Contacto | `/es/contacto/` | `/ca/contacte/` | `/en/contact/` | `/de/kontakt/` |
+| Aviso legal | `/es/aviso-legal/` | `/ca/avis-legal/` | `/en/legal-notice/` | `/de/impressum/` |
+| Privacidad | `/es/politica-de-privacidad/` | `/ca/politica-de-privacitat/` | `/en/privacy-policy/` | `/de/datenschutz/` |
+| Cookies | `/es/politica-de-cookies/` | `/ca/politica-de-cookies/` | `/en/cookie-policy/` | `/de/cookies/` |
+| Términos | `/es/terminos-y-condiciones/` | `/ca/termes-i-condicions/` | `/en/terms-and-conditions/` | `/de/allgemeine-geschaeftsbedingungen/` |
 
-| URL | Tipo |
-| --- | --- |
-| `/` | Inicio |
-| `/servicios/` | Índice de servicios |
-| `/servicios/electricidad-y-domotica/` | Servicio |
-| `/servicios/lampisteria-y-climatizacion/` | Servicio |
-| `/servicios/alarmas-y-camaras/` | Servicio |
-| `/sobre-nosotros/` | Corporativa |
-| `/contacto/` | Contacto |
-| `/aviso-legal/` | Legal |
-| `/politica-de-privacidad/` | Legal |
-| `/politica-de-cookies/` | Legal |
-| `/terminos-y-condiciones/` | Legal |
+### Servicios sincronizados
 
-### Catalán `ca`
+| serviceId | es | ca | en | de |
+| --- | --- | --- | --- | --- |
+| `electricidad-y-domotica` | `/es/servicios/electricidad-y-domotica/` | `/ca/serveis/electricitat-i-domotica/` | `/en/services/electricity-and-home-automation/` | `/de/dienstleistungen/elektrizitaet-und-smart-home/` |
+| `lampisteria-y-climatizacion` | `/es/servicios/lampisteria-y-climatizacion/` | `/ca/serveis/lampisteria-i-climatitzacio/` | `/en/services/plumbing-and-climate-control/` | `/de/dienstleistungen/sanitaer-und-klimatechnik/` |
+| `alarmas-y-camaras` | `/es/servicios/alarmas-y-camaras/` | `/ca/serveis/alarmes-i-cameres/` | `/en/services/alarms-and-cameras/` | `/de/dienstleistungen/alarmanlagen-und-kameras/` |
 
-| URL | Tipo |
-| --- | --- |
-| `/ca/` | Inici |
-| `/ca/serveis/` | Índex de serveis |
-| `/ca/serveis/electricitat-i-domotica/` | Servei |
-| `/ca/serveis/lampisteria-i-climatitzacio/` | Servei |
-| `/ca/serveis/alarmes-i-cameres/` | Servei |
-| `/ca/sobre-nosaltres/` | Corporativa |
-| `/ca/contacte/` | Contacte |
-| `/ca/avis-legal/` | Legal |
-| `/ca/politica-de-privacitat/` | Legal |
-| `/ca/politica-de-cookies/` | Legal |
-| `/ca/termes-i-condicions/` | Legal |
+## Resultado esperado en build
 
-### Inglés `en`
-
-| URL | Tipo |
-| --- | --- |
-| `/en/` | Home |
-| `/en/services/` | Services index |
-| `/en/services/electricity-and-home-automation/` | Service |
-| `/en/services/plumbing-and-climate-control/` | Service |
-| `/en/services/alarms-and-cameras/` | Service |
-| `/en/about-us/` | Corporate |
-| `/en/contact/` | Contact |
-| `/en/legal-notice/` | Legal |
-| `/en/privacy-policy/` | Legal |
-| `/en/cookie-policy/` | Legal |
-| `/en/terms-and-conditions/` | Legal |
-
-### Alemán `de`
-
-| URL | Tipo |
-| --- | --- |
-| `/de/` | Start |
-| `/de/dienstleistungen/` | Leistungsübersicht |
-| `/de/dienstleistungen/elektrizitaet-und-smart-home/` | Leistung |
-| `/de/dienstleistungen/sanitaer-und-klimatechnik/` | Leistung |
-| `/de/dienstleistungen/alarmanlagen-und-kameras/` | Leistung |
-| `/de/ueber-uns/` | Unternehmensseite |
-| `/de/kontakt/` | Kontakt |
-| `/de/impressum/` | Legal |
-| `/de/datenschutz/` | Legal |
-| `/de/cookies/` | Legal |
-| `/de/allgemeine-geschaeftsbedingungen/` | Legal |
-
-## Servicios incluidos
-
-- Electricidad y domótica
-- Lampistería y climatización
-- Alarmas y cámaras
-
-## Subservicios no elevados a landing propia
-
-- Energía solar fotovoltaica
-- Asesoría energética
-- Aire acondicionado
-- Calefacción
-- Calderas
-- Energía solar térmica
-- CCTV/IP como detalle interno
-
-## Nota operativa
-
-La estructura multidioma queda definida en contenido aunque la interfaz pública actual solo renderice la variante `es` en esta fase.
+- 4 homes
+- 4 índices de servicios
+- 12 detalles de servicio
+- 4 páginas de sobre nosotros
+- 4 páginas de contacto
+- 16 páginas legales
+- 1 raíz técnica `/` con redirección a `/es/`

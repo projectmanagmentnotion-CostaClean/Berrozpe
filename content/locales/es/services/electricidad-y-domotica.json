@@ -57,9 +57,9 @@
   ],
   "cta": {
     "label": "Solicitar información",
-    "href": "/contacto/",
+    "href": "/es/contacto/",
     "secondaryLabel": "Ver otros servicios",
-    "secondaryHref": "/servicios/"
+    "secondaryHref": "/es/servicios/"
   },
   "pendingConfirmation": [
     "La mención a equipos controlables por wifi aparece en la web actual y necesita validación editorial antes de convertirse en claim principal.",

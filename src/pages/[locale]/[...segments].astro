@@ -1,0 +1,260 @@
+---
+import BulletSection from '../../components/BulletSection.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { LegalPageId, Locale, LocalizedLegalPage, LocalizedServiceEntry, ServiceId } from '../../lib/content';
+import {
+  getAllowedLocales,
+  getHomeCollection,
+  getLanguageSwitcherLinksForPage,
+  getLanguageSwitcherLinksForService,
+  getLegalPageById,
+  getLegalPages,
+  getNavigation,
+  getPathWithoutLocalePrefix,
+  getPublishedServices,
+  getRouteCatalog,
+  getSeoData,
+  getServiceById,
+  getServiceRouteById,
+} from '../../lib/content';
+
+type PageKind = 'services-index' | 'service-detail' | 'about' | 'contact' | 'legal';
+
+interface PageProps {
+  locale: Locale;
+  kind: PageKind;
+  canonicalPath: string;
+  serviceId?: ServiceId;
+  legalPageId?: LegalPageId;
+}
+
+export function getStaticPaths() {
+  return getAllowedLocales().flatMap((locale) => {
+    const routes = getRouteCatalog(locale);
+    const services = getPublishedServices(locale);
+    const legalPages = getLegalPages(locale);
+
+    return [
+      {
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.services) },
+        props: { locale, kind: 'services-index', canonicalPath: routes.services },
+      },
+      {
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.about) },
+        props: { locale, kind: 'about', canonicalPath: routes.about },
+      },
+      {
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.contact) },
+        props: { locale, kind: 'contact', canonicalPath: routes.contact },
+      },
+      ...services.map((service) => ({
+        params: {
+          locale,
+          segments: getPathWithoutLocalePrefix(
+            locale,
+            getServiceRouteById(service.serviceId, locale) ?? routes.services,
+          ),
+        },
+        props: {
+          locale,
+          kind: 'service-detail',
+          canonicalPath: getServiceRouteById(service.serviceId, locale) ?? routes.services,
+          serviceId: service.serviceId,
+        },
+      })),
+      ...legalPages.map((page) => ({
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.legal[page.pageId]) },
+        props: {
+          locale,
+          kind: 'legal',
+          canonicalPath: routes.legal[page.pageId],
+          legalPageId: page.pageId,
+        },
+      })),
+    ];
+  });
+}
+
+const {
+  locale,
+  kind,
+  canonicalPath,
+  serviceId,
+  legalPageId,
+} = Astro.props as PageProps;
+
+const navigation = getNavigation(locale);
+const home = getHomeCollection(locale);
+const seo = getSeoData(locale);
+const services = getPublishedServices(locale);
+
+const service = kind === 'service-detail' && serviceId ? getServiceById(serviceId, locale) : undefined;
+const legalPage = kind === 'legal' && legalPageId ? getLegalPageById(legalPageId, locale) : undefined;
+
+if (kind === 'service-detail' && !service) {
+  throw new Error(`Service not found for ${serviceId} (${locale})`);
+}
+
+if (kind === 'legal' && !legalPage) {
+  throw new Error(`Legal page not found for ${legalPageId} (${locale})`);
+}
+---
+
+<BaseLayout
+  locale={locale}
+  title={kind === 'services-index'
+    ? seo.titles.services
+    : kind === 'about'
+      ? seo.titles.about
+      : kind === 'contact'
+        ? seo.titles.contact
+        : kind === 'legal'
+          ? legalPage?.seoTitle
+          : service?.seoTitle}
+  description={kind === 'services-index'
+    ? seo.descriptions.services
+    : kind === 'about'
+      ? seo.descriptions.about
+      : kind === 'contact'
+        ? seo.descriptions.contact
+        : kind === 'legal'
+          ? legalPage?.seoDescription
+          : service?.seoDescription}
+  canonicalPath={canonicalPath}
+  alternates={kind === 'service-detail' && serviceId
+    ? getLanguageSwitcherLinksForService(serviceId)
+    : getLanguageSwitcherLinksForPage((legalPageId ?? (kind === 'services-index' ? 'services' : kind)) as LegalPageId | 'services' | 'about' | 'contact')}
+  xDefaultPath={kind === 'service-detail' && serviceId ? getServiceRouteById(serviceId, 'es') : undefined}
+>
+  {kind === 'services-index' && (
+    <section class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div class="max-w-3xl space-y-4">
+        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{home.servicesOverview.eyebrow}</p>
+        <h1 class="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+          {navigation.items.find((item) => item.id === 'services')?.label}
+        </h1>
+        <p class="text-base leading-8 text-slate-300 md:text-lg">{home.servicesOverview.body}</p>
+      </div>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2">
+        {services.map((entry) => (
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-xl font-semibold text-white">{entry.title}</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-300">{entry.summary}</p>
+            <a class="mt-5 inline-flex text-sm font-semibold text-cyan-300" href={getServiceRouteById(entry.serviceId, locale) ?? '#'}>
+              {navigation.ui.serviceLink}
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {kind === 'about' && <BulletSection section={home.whyChooseUs} />}
+
+  {kind === 'contact' && <ContactSection locale={locale} section={home.contactCta} />}
+
+  {kind === 'service-detail' && service && (
+    <section class="mx-auto max-w-4xl px-6 py-16 md:py-24" data-animate>
+      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{navigation.ui.serviceEyebrow}</p>
+      <h1 class="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">{service.heroTitle}</h1>
+      <p class="mt-6 text-base leading-8 text-slate-300">{service.intro}</p>
+      <p class="mt-4 text-lg leading-8 text-slate-300">{service.summary}</p>
+
+      <div class="mt-10 grid gap-8 md:grid-cols-2">
+        <section class="space-y-4">
+          <h2 class="text-2xl font-semibold text-white">{service.includes.title}</h2>
+          <ul class="space-y-2 text-base leading-8 text-slate-300">
+            {service.includes.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-semibold text-white">{service.benefits.title}</h2>
+          <ul class="space-y-2 text-base leading-8 text-slate-300">
+            {service.benefits.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
+      <section class="mt-10 space-y-4">
+        <h2 class="text-2xl font-semibold text-white">{service.process.title}</h2>
+        <ul class="space-y-2 text-base leading-8 text-slate-300">
+          {service.process.items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mt-10 space-y-6">
+        <h2 class="text-2xl font-semibold text-white">{service.faqs.title}</h2>
+        {service.faqs.items.map((item) => (
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 class="text-lg font-semibold text-white">{item.question}</h3>
+            <p class="mt-3 text-base leading-8 text-slate-300">{item.answer}</p>
+          </article>
+        ))}
+      </section>
+
+      <section class="mt-10 space-y-4">
+        <h2 class="text-2xl font-semibold text-white">{navigation.ui.relatedServicesTitle}</h2>
+        <div class="flex flex-wrap gap-3">
+          {service.relatedServices.map((relatedServiceId) => {
+            const relatedService = getServiceById(relatedServiceId, locale);
+            const route = getServiceRouteById(relatedServiceId, locale);
+
+            return relatedService && route ? (
+              <a class="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-200 transition hover:border-cyan-300/50" href={route}>
+                {relatedService.shortTitle}
+              </a>
+            ) : null;
+          })}
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold text-white">{navigation.ui.pendingConfirmationLabel}</h2>
+        <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-300">
+          {service.pendingConfirmation.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="inline-flex rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950" href={service.cta.href}>{service.cta.label}</a>
+          <a class="inline-flex rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white" href={service.cta.secondaryHref}>{service.cta.secondaryLabel}</a>
+        </div>
+      </section>
+    </section>
+  )}
+
+  {kind === 'legal' && legalPage && (
+    <section class="mx-auto max-w-4xl px-6 py-16 md:py-24" data-animate>
+      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{navigation.ui.legalEyebrow}</p>
+      <h1 class="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">{legalPage.title}</h1>
+      <p class="mt-6 text-base leading-8 text-slate-300">{legalPage.intro}</p>
+      <p class="mt-4 text-sm text-slate-400">{legalPage.updatedAtLabel}: {legalPage.updatedAtValue}</p>
+
+      <div class="mt-10 space-y-10">
+        {legalPage.sections.map((section) => (
+          <section class="space-y-4">
+            <h2 class="text-2xl font-semibold text-white">{section.heading}</h2>
+            {section.body.map((paragraph) => (
+              <p class="text-base leading-8 text-slate-300">{paragraph}</p>
+            ))}
+          </section>
+        ))}
+      </div>
+
+      {legalPage.pendingLegalReview && (
+        <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-7 text-slate-300">
+          {legalPage.pendingReviewNote}
+        </div>
+      )}
+    </section>
+  )}
+</BaseLayout>

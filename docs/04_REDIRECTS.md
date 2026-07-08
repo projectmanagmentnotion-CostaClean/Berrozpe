@@ -2,35 +2,40 @@
 
 ## Criterio
 
-Tabla de redirecciones 301 recomendada desde la estructura actual auditada hacia la nueva arquitectura multidioma sincronizada.
+- Toda URL histórica debe resolver a la misma intención y al mismo idioma cuando exista equivalente.
+- Las rutas españolas antiguas sin prefijo se consolidan bajo `/es/`.
+- La raíz `/` redirige a `/es/`.
 
-| URL actual | URL nueva recomendada | Motivo |
+## Tabla 301 recomendada
+
+| Antigua | Nueva | Motivo |
 | --- | --- | --- |
-| `/` | `/` | El dominio raíz deja de ser selector de idioma y pasa a ser home ES. |
-| `/inicio/` | `/` | Home ES antigua al nuevo home ES. |
-| `/home/` | `/en/` | Home EN antigua al nuevo home EN. |
-| `/inici/` | `/ca/` | Home CA antigua al nuevo home CA. |
-| `/electricidad-y-domotica/` | `/servicios/electricidad-y-domotica/` | Servicio ES reubicado bajo `/servicios/`. |
-| `/electricity-and-home-automation/` | `/en/services/electricity-and-home-automation/` | Servicio EN al nuevo árbol EN. |
-| `/electricitat-i-domotica/` | `/ca/serveis/electricitat-i-domotica/` | Servicio CA al nuevo árbol CA. |
-| `/lampisteria-y-climatizacion/` | `/servicios/lampisteria-y-climatizacion/` | Servicio ES reubicado bajo `/servicios/`. |
-| `/plumbing-and-climate/` | `/en/services/plumbing-and-climate-control/` | Servicio EN con slug nuevo normalizado. |
-| `/lampisteria-y-climatizacio/` | `/ca/serveis/lampisteria-i-climatitzacio/` | Servicio CA con slug nuevo normalizado. |
-| `/alarmas-y-camaras-2/` | `/servicios/alarmas-y-camaras/` | Se elimina el sufijo estructural `-2`. |
-| `/alarms-and-cameras/` | `/en/services/alarms-and-cameras/` | Servicio EN al nuevo árbol EN. |
-| `/alarmes-i-cameres/` | `/ca/serveis/alarmes-i-cameres/` | Servicio CA al nuevo árbol CA. |
-| `/sobre-nosotros/` | `/sobre-nosotros/` | La ruta ES se mantiene. |
-| `/about-us/` | `/en/about-us/` | La ruta EN pasa a vivir bajo prefijo de idioma. |
-| `/sobre-nosaltres/` | `/ca/sobre-nosaltres/` | La ruta CA pasa a vivir bajo prefijo de idioma. |
-| `/contacto/` | `/contacto/` | La ruta ES se mantiene. |
-| `/contact/` | `/en/contact/` | La ruta EN pasa a vivir bajo prefijo de idioma. |
-| `/contacte/` | `/ca/contacte/` | La ruta CA pasa a vivir bajo prefijo de idioma. |
-| `/terminos-y-condiciones-es/` | `/terminos-y-condiciones/` | Legal ES unificado. |
-| `/terminos-y-condiciones-en/` | `/en/terms-and-conditions/` | Legal EN bajo prefijo de idioma. |
-| `/terminos-y-condiciones-cat/` | `/ca/termes-i-condicions/` | Legal CA bajo prefijo de idioma. |
-| `/politica-de-cookies/` | `/politica-de-cookies/` | La ruta ES se mantiene. |
-| `/mas-informacion-sobre-las-cookies/` | `/politica-de-cookies/` | La página auxiliar se integra en cookies. |
+| `/` | `/es/` | Entrada controlada a la variante española. |
+| `/inicio/` | `/es/` | Home ES antigua. |
+| `/servicios/` | `/es/servicios/` | Índice ES antiguo sin prefijo. |
+| `/sobre-nosotros/` | `/es/sobre-nosotros/` | Página ES antigua sin prefijo. |
+| `/contacto/` | `/es/contacto/` | Página ES antigua sin prefijo. |
+| `/aviso-legal/` | `/es/aviso-legal/` | Legal ES antigua sin prefijo. |
+| `/politica-de-privacidad/` | `/es/politica-de-privacidad/` | Legal ES antigua sin prefijo. |
+| `/politica-de-cookies/` | `/es/politica-de-cookies/` | Legal ES antigua sin prefijo. |
+| `/terminos-y-condiciones/` | `/es/terminos-y-condiciones/` | Legal ES antigua sin prefijo. |
+| `/electricidad-y-domotica/` | `/es/servicios/electricidad-y-domotica/` | Servicio ES antiguo. |
+| `/lampisteria-y-climatizacion/` | `/es/servicios/lampisteria-y-climatizacion/` | Servicio ES antiguo. |
+| `/alarmas-y-camaras-2/` | `/es/servicios/alarmas-y-camaras/` | Normalización de slug raro. |
+| `/home/` | `/en/` | Home EN antigua. |
+| `/about-us/` | `/en/about-us/` | Página EN antigua sin prefijo. |
+| `/contact/` | `/en/contact/` | Página EN antigua sin prefijo. |
+| `/electricity-and-home-automation/` | `/en/services/electricity-and-home-automation/` | Servicio EN antiguo. |
+| `/plumbing-and-climate/` | `/en/services/plumbing-and-climate-control/` | Servicio EN antiguo con slug normalizado. |
+| `/alarms-and-cameras/` | `/en/services/alarms-and-cameras/` | Servicio EN antiguo. |
+| `/inici/` | `/ca/` | Home CA antigua. |
+| `/sobre-nosaltres/` | `/ca/sobre-nosaltres/` | Página CA antigua sin prefijo. |
+| `/contacte/` | `/ca/contacte/` | Página CA antigua sin prefijo. |
+| `/electricitat-i-domotica/` | `/ca/serveis/electricitat-i-domotica/` | Servicio CA antiguo. |
+| `/lampisteria-y-climatizacio/` | `/ca/serveis/lampisteria-i-climatitzacio/` | Servicio CA antiguo con slug normalizado. |
+| `/alarmes-i-cameres/` | `/ca/serveis/alarmes-i-cameres/` | Servicio CA antiguo. |
 
-## Regla adicional
+## Implementación preparada
 
-- Si el routing multidioma definitivo se activa, toda URL histórica debe redirigir a la versión del mismo idioma cuando exista, y no siempre a la versión `es`.
+- Fuente de verdad editorial: [content/shared/redirects.json](/C:/Users/USUARIO/Documents/Berrozpe/content/shared/redirects.json)
+- Reglas de Apache para SiteGround: [public/.htaccess](/C:/Users/USUARIO/Documents/Berrozpe/public/.htaccess)

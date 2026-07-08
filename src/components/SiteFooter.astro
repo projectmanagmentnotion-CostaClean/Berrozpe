@@ -1,9 +1,15 @@
 ---
+import type { Locale } from '../lib/content';
 import { getLegalPages, getNavigation, getSiteSettings } from '../lib/content';
 
-const site = getSiteSettings();
-const legalPages = getLegalPages();
-const navigation = getNavigation();
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const site = getSiteSettings(locale);
+const legalPages = getLegalPages(locale);
+const navigation = getNavigation(locale);
 ---
 
 <footer class="border-t border-white/10 bg-slate-950">
@@ -22,7 +28,7 @@ const navigation = getNavigation();
       <ul class="mt-3 space-y-2 text-sm text-slate-300">
         {legalPages.map((page) => (
           <li>
-            <a class="transition hover:text-white" href={`/legal/${page.slug}/`}>{page.title}</a>
+            <a class="transition hover:text-white" href={`/${locale}/${page.slug}/`}>{page.title}</a>
           </li>
         ))}
       </ul>

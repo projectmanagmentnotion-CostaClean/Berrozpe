@@ -1,0 +1,32 @@
+RewriteEngine On
+
+# Root language handling
+RewriteRule ^$ /es/ [R=302,L]
+
+# Legacy Spanish pages
+Redirect 301 /inicio/ /es/
+Redirect 301 /servicios/ /es/servicios/
+Redirect 301 /sobre-nosotros/ /es/sobre-nosotros/
+Redirect 301 /contacto/ /es/contacto/
+Redirect 301 /aviso-legal/ /es/aviso-legal/
+Redirect 301 /politica-de-privacidad/ /es/politica-de-privacidad/
+Redirect 301 /politica-de-cookies/ /es/politica-de-cookies/
+Redirect 301 /terminos-y-condiciones/ /es/terminos-y-condiciones/
+
+# Legacy service URLs
+Redirect 301 /electricidad-y-domotica/ /es/servicios/electricidad-y-domotica/
+Redirect 301 /lampisteria-y-climatizacion/ /es/servicios/lampisteria-y-climatizacion/
+Redirect 301 /alarmas-y-camaras-2/ /es/servicios/alarmas-y-camaras/
+
+# Legacy multilingual URLs
+Redirect 301 /home/ /en/
+Redirect 301 /inici/ /ca/
+Redirect 301 /about-us/ /en/about-us/
+Redirect 301 /contact/ /en/contact/
+Redirect 301 /contacte/ /ca/contacte/
+Redirect 301 /electricity-and-home-automation/ /en/services/electricity-and-home-automation/
+Redirect 301 /plumbing-and-climate/ /en/services/plumbing-and-climate-control/
+Redirect 301 /alarms-and-cameras/ /en/services/alarms-and-cameras/
+Redirect 301 /electricitat-i-domotica/ /ca/serveis/electricitat-i-domotica/
+Redirect 301 /lampisteria-y-climatizacio/ /ca/serveis/lampisteria-i-climatitzacio/
+Redirect 301 /alarmes-i-cameres/ /ca/serveis/alarmes-i-cameres/
