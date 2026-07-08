@@ -1,0 +1,67 @@
+{
+  "slug": "alarms-and-cameras",
+  "locale": "en",
+  "title": "Alarms and cameras",
+  "shortTitle": "Alarms and cameras",
+  "seoTitle": "Alarms and cameras | Instal Berrozpe",
+  "seoDescription": "Audited service with alarms and CCTV/IP cameras within the current Instal Berrozpe website.",
+  "heroTitle": "Alarms and cameras",
+  "intro": "The current website presents this service as a security offer for home or business.",
+  "summary": "It is structured around two main blocks: alarms and CCTV/IP cameras.",
+  "includes": {
+    "title": "Includes",
+    "items": [
+      "Alarms.",
+      "CCTV cameras.",
+      "IP cameras."
+    ]
+  },
+  "benefits": {
+    "title": "Key points",
+    "items": [
+      "The current website positions it for home or business.",
+      "It relies on a security and remote supervision angle.",
+      "Alarms and cameras grouped into one audited page."
+    ]
+  },
+  "process": {
+    "title": "Described process",
+    "items": [
+      "Contact to explain the security need.",
+      "Advice on the most suitable solution.",
+      "Installation of the alarm or camera system.",
+      "Follow-up support mentioned on the current website."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What does the current website mention inside this service?",
+        "answer": "The audit confirms two blocks: alarms and CCTV/IP cameras."
+      },
+      {
+        "question": "Can the camera feed be checked remotely?",
+        "answer": "The current page mentions remote access for IP cameras through the internet."
+      },
+      {
+        "question": "Is any receiving center mentioned by name?",
+        "answer": "Yes. The current website mentions TECALSA in the alarms section."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "lampisteria-y-climatizacion"
+  ],
+  "cta": {
+    "label": "Request information",
+    "href": "/en/contact/",
+    "secondaryLabel": "View other services",
+    "secondaryHref": "/en/services/"
+  },
+  "pendingConfirmation": [
+    "The reference to TECALSA appears on the current website and should be confirmed before being kept.",
+    "The current website speaks about constant monitoring and needs validation before it is treated as a closed operational promise."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "privacy-policy",
+  "locale": "en",
+  "title": "Privacy policy",
+  "seoTitle": "Privacy policy | Instal Berrozpe",
+  "seoDescription": "Multilingual privacy policy template pending legal review.",
+  "updatedAtLabel": "Review status",
+  "updatedAtValue": "Pending legal review",
+  "intro": "This multilingual template exists only as a technical base. It must not be published as final legal copy without legal review.",
+  "sections": [
+    {
+      "heading": "Data controller",
+      "body": [
+        "Complete this section only with legal details confirmed by the site owner.",
+        "Do not insert tax entity names, VAT numbers or registry data unless they have been validated for this new version."
+      ]
+    },
+    {
+      "heading": "Purposes and legal bases",
+      "body": [
+        "List only real and active purposes in the published version.",
+        "Align legal bases with the forms, contact channels and services that are finally published."
+      ]
+    },
+    {
+      "heading": "User rights",
+      "body": [
+        "Define the real channel for access, rectification, erasure, objection, restriction and portability requests.",
+        "Review retention policy and possible data sharing before publication."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pending full legal review before publication."
+}

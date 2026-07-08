@@ -4,27 +4,35 @@
 
 Todo el contenido editable debe vivir en `/content`.
 
-## Estructura
+## Estructura actual
 
-- `content/site/settings.json`
-  - Ajustes globales, SEO base y datos de negocio.
-- `content/home/*.json`
-  - Cada seccion principal del home en su propio archivo.
-- `content/services/*.json`
-  - Un archivo por servicio.
-  - Campos minimos: `slug`, `status`, `seoTitle`, `seoDescription`, `heroTitle`, `summary`, `body`, `serviceAreaNote`.
-- `content/legal/*.json`
-  - Paginas legales independientes.
+- `content/shared/site.json`
+  - Configuración global, locales soportados y base paths.
+- `content/shared/contact.json`
+  - Dirección, teléfonos, horarios, emails detectados y pendientes.
+- `content/shared/services-index.json`
+  - Identificador común y slugs por idioma.
+- `content/shared/redirects.json`
+  - Redirecciones base.
+- `content/locales/{locale}/navigation.json`
+  - Navegación y etiquetas UI.
+- `content/locales/{locale}/home.json`
+  - Secciones del home.
+- `content/locales/{locale}/seo.json`
+  - Titles, descriptions, hreflang y alternates.
+- `content/locales/{locale}/services/*.json`
+  - Un archivo por servicio y por idioma.
+- `content/locales/{locale}/legal/*.json`
+  - Un archivo por legal y por idioma.
 
-## Publicacion de servicios
+## Regla de sincronía
 
-1. Duplicar el formato de `content/services/servicio-pendiente.json`.
-2. Sustituir el contenido por informacion real validada.
-3. Cambiar `status` a `published`.
-4. Ejecutar `npm run build`.
+1. No crear contenido en un idioma sin replicarlo en los otros tres.
+2. No mover datos comunes fuera de `content/shared/`.
+3. Si un dato está pendiente, debe permanecer pendiente en todos los idiomas o resolverse en `shared/`.
 
-## Contenido prohibido en codigo
+## Contenido prohibido en código
 
 - Titulares comerciales dentro de componentes.
 - Descripciones de servicios dentro de `src/`.
-- Datos legales reales dispersos fuera de `content/`.
+- Datos legales o de contacto reales dispersos fuera de `content/`.

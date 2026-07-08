@@ -1,0 +1,28 @@
+{
+  "slug": "avis-legal",
+  "locale": "ca",
+  "title": "Avís legal",
+  "seoTitle": "Avís legal | Instal Berrozpe",
+  "seoDescription": "Plantilla multilingüe d'avís legal pendent de revisió jurídica.",
+  "updatedAtLabel": "Estat de revisió",
+  "updatedAtValue": "Pendent de revisió legal",
+  "intro": "Aquest avís legal és una base tècnica multilingüe i requereix validació jurídica abans de publicar-se.",
+  "sections": [
+    {
+      "heading": "Titularitat del lloc",
+      "body": [
+        "Afegir només les dades del titular que hagin estat confirmades per a la nova web.",
+        "No reutilitzar automàticament dades fiscals del lloc anterior sense confirmació expressa."
+      ]
+    },
+    {
+      "heading": "Condicions d'ús",
+      "body": [
+        "Definir condicions d'accés, ús i responsabilitat segons l'abast real del lloc publicat.",
+        "Revisar enllaços externs, formularis i recursos de tercers abans de fixar el text final."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pendent de revisió legal completa abans de la publicació."
+}

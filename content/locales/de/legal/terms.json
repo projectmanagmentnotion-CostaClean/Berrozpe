@@ -1,0 +1,28 @@
+{
+  "slug": "allgemeine-geschaeftsbedingungen",
+  "locale": "de",
+  "title": "Allgemeine Geschäftsbedingungen",
+  "seoTitle": "Allgemeine Geschäftsbedingungen | Instal Berrozpe",
+  "seoDescription": "Mehrsprachige AGB-Vorlage mit ausstehender rechtlicher Prüfung.",
+  "updatedAtLabel": "Prüfstatus",
+  "updatedAtValue": "Rechtliche Prüfung ausstehend",
+  "intro": "Diese Vorlage ersetzt die geerbten Bedingungen und benötigt eine rechtliche Prüfung, bevor sie als endgültig gelten kann.",
+  "sections": [
+    {
+      "heading": "Umfang der Website und der Informationen",
+      "body": [
+        "Klarstellen, ob die Website nur Leistungen darstellt oder auch Vertragsabschlüsse, Buchungen oder verbindliche Angebotsprozesse enthält.",
+        "Rückgabe- oder Verkaufsbedingungen nicht automatisch übernehmen, wenn sie auf die neue Version nicht zutreffen."
+      ]
+    },
+    {
+      "heading": "Kontakt und Beschwerden",
+      "body": [
+        "Den offiziellen Kanal für Anfragen, Anliegen und Beschwerden festlegen, sobald die Haupt-E-Mail bestätigt wurde.",
+        "Unternehmens- und Verantwortlichkeitsdaten vor der finalen Veröffentlichung prüfen."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Vor der Veröffentlichung ist eine vollständige rechtliche Prüfung erforderlich."
+}

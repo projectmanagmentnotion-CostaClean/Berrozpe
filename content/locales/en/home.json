@@ -1,0 +1,67 @@
+{
+  "locale": "en",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Synchronized content",
+    "title": "Multilingual base prepared from the audited live content",
+    "body": "The confirmed material currently supports a new website structure with three main services, public contact details and pending legal review.",
+    "primaryCtaLabel": "View services",
+    "primaryCtaHref": "/en/services/",
+    "secondaryCtaLabel": "Go to contact",
+    "secondaryCtaHref": "/en/contact/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Services",
+    "title": "Three main services confirmed",
+    "body": "The current audit confirms three service lines with their own pages on the existing website.",
+    "items": [
+      "Electricity and home automation.",
+      "Plumbing and climate control.",
+      "Alarms and cameras."
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "About us",
+    "title": "What is confirmed before the final redesign",
+    "body": "The new editorial base prioritizes audited data and removes promises that have not yet been validated.",
+    "items": [
+      "Three main services confirmed.",
+      "Address, mobile, phone/fax and opening hours detected on the current site.",
+      "Primary email pending confirmation.",
+      "Exact geographic coverage still pending definition."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Process",
+    "title": "How the current site describes the service flow",
+    "body": "The current website repeats a pattern of contact, advice, intervention and later support.",
+    "items": [
+      "Contact request through form, phone, email or WhatsApp.",
+      "Advice for home or business depending on the service.",
+      "Installation or service intervention.",
+      "After-sales support mentioned on the current website."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Contact",
+    "title": "Partially confirmed contact data",
+    "body": "Address, phones and opening hours are confirmed. The primary email still needs editorial validation.",
+    "primaryCtaLabel": "Mobile",
+    "secondaryCtaLabel": "Detected emails"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Frequently asked questions",
+    "title": "Questions already published on the current site",
+    "body": "These answers rely on audited content and can be revised once final editorial validation exists.",
+    "items": [
+      "They work on residential and commercial projects.",
+      "A quote can be requested by form, phone or email.",
+      "The current website mentions a 24 to 48 business hour response time."
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "locale": "ca",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Contingut sincronitzat",
+    "title": "Base multilingüe preparada a partir del contingut real auditat",
+    "body": "El contingut confirmat fins ara permet estructurar una nova web amb tres serveis principals, contacte públic i revisió legal pendent.",
+    "primaryCtaLabel": "Veure serveis",
+    "primaryCtaHref": "/ca/serveis/",
+    "secondaryCtaLabel": "Anar a contacte",
+    "secondaryCtaHref": "/ca/contacte/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Serveis",
+    "title": "Tres serveis principals confirmats",
+    "body": "L'auditoria actual confirma tres línies de servei amb pàgina pròpia a la web existent.",
+    "items": [
+      "Electricitat i domòtica.",
+      "Lampisteria i climatització.",
+      "Alarmes i càmeres."
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "Sobre nosaltres",
+    "title": "Què queda confirmat abans del redisseny final",
+    "body": "La nova base editorial prioritza dades auditades i elimina promeses que encara no han estat validades.",
+    "items": [
+      "Tres serveis principals confirmats.",
+      "Adreça, mòbil, telèfon/fax i horari detectats a la web actual.",
+      "Email principal pendent de confirmació.",
+      "Cobertura geogràfica exacta pendent de definir."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Procés",
+    "title": "Com presenta el servei la web actual",
+    "body": "La web vigent repeteix un patró de contacte, assessorament, intervenció i suport posterior.",
+    "items": [
+      "Sol·licitud de contacte per formulari, telèfon, email o WhatsApp.",
+      "Assessorament per a llar o negoci segons el servei.",
+      "Instal·lació o intervenció del servei sol·licitat.",
+      "Suport postvenda mencionat a la web actual."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Contacte",
+    "title": "Contacte confirmat parcialment",
+    "body": "L'adreça, els telèfons i l'horari estan confirmats. L'email principal continua pendent de validació editorial.",
+    "primaryCtaLabel": "Mòbil",
+    "secondaryCtaLabel": "Emails detectats"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Preguntes freqüents",
+    "title": "Preguntes que ja apareixen a la web actual",
+    "body": "Aquestes respostes es basen en el contingut auditat i es poden revisar quan hi hagi validació editorial definitiva.",
+    "items": [
+      "Treballen amb projectes residencials i comercials.",
+      "El pressupost es pot demanar per formulari, telèfon o email.",
+      "La web actual indica un temps de resposta de 24 a 48 hores laborables."
+    ]
+  }
+}

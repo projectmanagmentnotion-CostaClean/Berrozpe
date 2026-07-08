@@ -1,0 +1,35 @@
+{
+  "slug": "politica-de-privacidad",
+  "locale": "es",
+  "title": "Política de privacidad",
+  "seoTitle": "Política de privacidad | Instal Berrozpe",
+  "seoDescription": "Plantilla multidioma de política de privacidad pendiente de revisión jurídica.",
+  "updatedAtLabel": "Estado de revisión",
+  "updatedAtValue": "Pendiente de revisión legal",
+  "intro": "Esta plantilla multidioma existe solo como base técnica. No debe publicarse como texto jurídico definitivo sin revisión legal.",
+  "sections": [
+    {
+      "heading": "Responsable del tratamiento",
+      "body": [
+        "Completar únicamente con los datos jurídicos confirmados por la propiedad del sitio.",
+        "No insertar razón social fiscal, NIF o datos registrales si no han sido validados para esta nueva versión."
+      ]
+    },
+    {
+      "heading": "Finalidades y bases jurídicas",
+      "body": [
+        "Enumerar únicamente finalidades reales y activas en la versión publicada.",
+        "Alinear las bases jurídicas con los formularios, canales de contacto y servicios que finalmente se publiquen."
+      ]
+    },
+    {
+      "heading": "Derechos de las personas usuarias",
+      "body": [
+        "Definir el canal real para ejercer acceso, rectificación, supresión, oposición, limitación y portabilidad.",
+        "Revisar también la política de conservación y posibles cesiones antes de publicación."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pendiente de revisión legal completa antes de publicación."
+}

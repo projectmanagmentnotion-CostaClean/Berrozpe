@@ -1,0 +1,67 @@
+{
+  "locale": "de",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Synchronisierter Inhalt",
+    "title": "Mehrsprachige Basis auf Grundlage der geprüften Live-Inhalte",
+    "body": "Das bisher bestätigte Material ermöglicht eine neue Website-Struktur mit drei Hauptleistungen, öffentlichen Kontaktdaten und noch offener rechtlicher Prüfung.",
+    "primaryCtaLabel": "Leistungen ansehen",
+    "primaryCtaHref": "/de/dienstleistungen/",
+    "secondaryCtaLabel": "Zum Kontakt",
+    "secondaryCtaHref": "/de/kontakt/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Leistungen",
+    "title": "Drei Hauptleistungen bestätigt",
+    "body": "Die aktuelle Prüfung bestätigt drei Leistungsbereiche mit eigener Seite auf der bestehenden Website.",
+    "items": [
+      "Elektrizität und Smart Home.",
+      "Sanitär und Klimatechnik.",
+      "Alarmanlagen und Kameras."
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "Über uns",
+    "title": "Was vor dem finalen Redesign bestätigt ist",
+    "body": "Die neue redaktionelle Basis priorisiert geprüfte Daten und entfernt Aussagen, die noch nicht validiert wurden.",
+    "items": [
+      "Drei Hauptleistungen bestätigt.",
+      "Adresse, Mobilnummer, Telefon/Fax und Öffnungszeiten auf der aktuellen Website erkannt.",
+      "Haupt-E-Mail noch nicht bestätigt.",
+      "Genaue geografische Abdeckung noch offen."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Ablauf",
+    "title": "Wie die aktuelle Website den Leistungsablauf beschreibt",
+    "body": "Die aktuelle Website wiederholt ein Muster aus Kontakt, Beratung, Umsetzung und späterer Unterstützung.",
+    "items": [
+      "Kontaktanfrage per Formular, Telefon, E-Mail oder WhatsApp.",
+      "Beratung für Wohn- oder Geschäftsobjekte je nach Leistung.",
+      "Installation oder Durchführung der angefragten Leistung.",
+      "After-Sales-Support wird auf der aktuellen Website erwähnt."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Kontakt",
+    "title": "Kontaktdaten teilweise bestätigt",
+    "body": "Adresse, Telefonnummern und Öffnungszeiten sind bestätigt. Die Haupt-E-Mail benötigt noch redaktionelle Validierung.",
+    "primaryCtaLabel": "Mobil",
+    "secondaryCtaLabel": "Erkannte E-Mails"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen, die bereits auf der aktuellen Website erscheinen",
+    "body": "Diese Antworten basieren auf den geprüften Inhalten und können nach der finalen redaktionellen Freigabe angepasst werden.",
+    "items": [
+      "Es wird für private und gewerbliche Projekte gearbeitet.",
+      "Ein Angebot kann per Formular, Telefon oder E-Mail angefragt werden.",
+      "Die aktuelle Website nennt eine Antwortzeit von 24 bis 48 Geschäftsstunden."
+    ]
+  }
+}

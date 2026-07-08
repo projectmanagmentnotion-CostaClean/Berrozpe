@@ -1,28 +1,86 @@
-import hero from '../../content/home/hero.json';
-import processSection from '../../content/home/process.json';
-import servicesOverview from '../../content/home/services-overview.json';
-import contactSection from '../../content/home/contact-cta.json';
-import siteSettings from '../../content/site/settings.json';
-import legalNotice from '../../content/legal/legal-notice.json';
-import privacyPolicy from '../../content/legal/privacy-policy.json';
-import cookiesPolicy from '../../content/legal/cookies-policy.json';
-import electricityAndDomotica from '../../content/services/electricidad-y-domotica.json';
-import lampisteriaAndClimatizacion from '../../content/services/lampisteria-y-climatizacion.json';
-import alarmsAndCameras from '../../content/services/alarmas-y-camaras.json';
-import placeholderService from '../../content/services/servicio-pendiente.json';
-import type { HomeSection, LegalPage, ServiceEntry, SiteSettings } from '../data/types';
+import sharedSite from '../../content/shared/site.json';
+import sharedContact from '../../content/shared/contact.json';
+import sharedServicesIndex from '../../content/shared/services-index.json';
+import esNavigation from '../../content/locales/es/navigation.json';
+import esHome from '../../content/locales/es/home.json';
+import esSeo from '../../content/locales/es/seo.json';
+import esElectricidadYDomotica from '../../content/locales/es/services/electricidad-y-domotica.json';
+import esLampisteriaYClimatizacion from '../../content/locales/es/services/lampisteria-y-climatizacion.json';
+import esAlarmasYCamaras from '../../content/locales/es/services/alarmas-y-camaras.json';
+import esPrivacy from '../../content/locales/es/legal/privacy.json';
+import esLegalNotice from '../../content/locales/es/legal/legal-notice.json';
+import esCookies from '../../content/locales/es/legal/cookies.json';
+import esTerms from '../../content/locales/es/legal/terms.json';
+import type {
+  HomeSection,
+  LegalPage,
+  NavigationData,
+  SeoData,
+  ServiceEntry,
+  SharedContact,
+  SiteSettings,
+} from '../data/types';
+
+const locale = 'es';
 
 const services = [
-  electricityAndDomotica,
-  lampisteriaAndClimatizacion,
-  alarmsAndCameras,
-  placeholderService,
+  esElectricidadYDomotica,
+  esLampisteriaYClimatizacion,
+  esAlarmasYCamaras,
 ] satisfies ServiceEntry[];
-const legalPages = [legalNotice, privacyPolicy, cookiesPolicy] satisfies LegalPage[];
-const homeSections = [hero, servicesOverview, processSection, contactSection] satisfies HomeSection[];
+
+const legalPages = [
+  esPrivacy,
+  esLegalNotice,
+  esCookies,
+  esTerms,
+] satisfies LegalPage[];
+
+const homeSections = [
+  esHome.hero,
+  esHome.servicesOverview,
+  esHome.process,
+  esHome.contactCta,
+] satisfies HomeSection[];
 
 export function getSiteSettings(): SiteSettings {
-  return siteSettings;
+  return {
+    brandName: sharedSite.brandName,
+    siteUrl: sharedSite.siteUrl,
+    locale,
+    defaultLocale: sharedSite.defaultLocale,
+    supportedLocales: sharedSite.supportedLocales,
+    defaultTitle: esSeo.titles.home,
+    titleTemplate: `%s | ${sharedSite.brandName}`,
+    defaultDescription: esSeo.descriptions.home,
+    businessName: sharedSite.brandName,
+    legalName: null,
+    primaryPhone: sharedContact.phones.mobile,
+    primaryEmail: sharedContact.primaryEmail,
+    locality: sharedContact.address.locality,
+    region: sharedContact.address.region,
+    countryCode: sharedContact.address.countryCode,
+    postalCode: sharedContact.address.postalCode,
+    addressLine: sharedContact.address.streetAddress,
+    coverageArea: [],
+    socialLinks: sharedContact.socialLinks,
+  };
+}
+
+export function getSharedContact(): SharedContact {
+  return sharedContact;
+}
+
+export function getNavigation(): NavigationData {
+  return esNavigation;
+}
+
+export function getSeoData(): SeoData {
+  return esSeo;
+}
+
+export function getHomeCollection() {
+  return esHome;
 }
 
 export function getHomeSections(): HomeSection[] {
@@ -40,7 +98,7 @@ export function getHomeSection(sectionId: string): HomeSection {
 }
 
 export function getPublishedServices(): ServiceEntry[] {
-  return services.filter((service) => service.status === 'published');
+  return services;
 }
 
 export function getAllServices(): ServiceEntry[] {
@@ -49,6 +107,19 @@ export function getAllServices(): ServiceEntry[] {
 
 export function getServiceBySlug(slug: string): ServiceEntry | undefined {
   return services.find((service) => service.slug === slug);
+}
+
+export function getServiceRouteById(serviceId: string, contentLocale = locale): string | undefined {
+  const service = sharedServicesIndex.services.find((entry) => entry.serviceId === serviceId);
+
+  return service?.locales?.[contentLocale as keyof typeof service.locales]?.path;
+}
+
+export function getServiceById(serviceId: string): ServiceEntry | undefined {
+  const route = getServiceRouteById(serviceId);
+  const slug = route?.split('/').filter(Boolean).at(-1);
+
+  return slug ? getServiceBySlug(slug) : undefined;
 }
 
 export function getLegalPages(): LegalPage[] {

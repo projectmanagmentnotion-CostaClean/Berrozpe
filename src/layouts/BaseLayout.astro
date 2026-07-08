@@ -31,25 +31,5 @@ const { title, description, path, noIndex = false } = Astro.props;
       </main>
       <SiteFooter />
     </div>
-
-    <script>
-      import gsap from 'gsap';
-
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      if (!prefersReducedMotion) {
-        gsap.fromTo(
-          '[data-animate]',
-          { opacity: 0, y: 28 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: 0.12,
-            ease: 'power2.out',
-          },
-        );
-      }
-    </script>
   </body>
 </html>

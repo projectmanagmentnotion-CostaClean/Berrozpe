@@ -1,0 +1,68 @@
+{
+  "slug": "elektrizitaet-und-smart-home",
+  "locale": "de",
+  "title": "Elektrizität und Smart Home",
+  "shortTitle": "Elektrizität und Smart Home",
+  "seoTitle": "Elektrizität und Smart Home | Instal Berrozpe",
+  "seoDescription": "Geprüfte Leistung mit Elektrizität, Smart Home, Photovoltaik und Energieberatung auf der aktuellen Website von Instal Berrozpe.",
+  "heroTitle": "Elektrizität und Smart Home",
+  "intro": "Die aktuelle Website bündelt diese Leistung als Lösungen für Elektrizität und Automatisierung für Wohn- oder Geschäftsobjekte.",
+  "summary": "Enthalten sind elektrische Installationen, Smart Home, Photovoltaik und Energieberatung laut geprüften Inhalten.",
+  "includes": {
+    "title": "Enthält",
+    "items": [
+      "Elektrische Installationen.",
+      "Smart Home.",
+      "Photovoltaik.",
+      "Energieberatung."
+    ]
+  },
+  "benefits": {
+    "title": "Kernaussagen",
+    "items": [
+      "Leistung für Wohn- oder Geschäftsobjekte beschrieben.",
+      "Aktueller Fokus auf Komfort, Sicherheit und Energieeffizienz.",
+      "Mehrere Lösungen innerhalb einer geprüften Seite gebündelt."
+    ]
+  },
+  "process": {
+    "title": "Beschriebener Ablauf",
+    "items": [
+      "Erstkontakt zur Erläuterung des Bedarfs.",
+      "Beratung zur passenden Lösung.",
+      "Installation oder Durchführung der Leistung.",
+      "Spätere Unterstützung wird auf der aktuellen Website erwähnt."
+    ]
+  },
+  "faqs": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Was ist Smart Home laut aktueller Website?",
+        "answer": "Die aktuelle Website beschreibt es als System zur Automatisierung und Steuerung von Licht, Klima, Geräten und Sicherheit."
+      },
+      {
+        "question": "Welche Sicherheitssysteme werden auf der aktuellen Website erwähnt?",
+        "answer": "Die Website verknüpft diese Leistung mit Alarmanlagen und CCTV-Kameras als Teil des Gesamtangebots."
+      },
+      {
+        "question": "Warum ist Energieberatung in dieser Leistung enthalten?",
+        "answer": "Die geprüfte Seite stellt sie als Möglichkeit dar, den Verbrauch zu optimieren und Energiekosten zu senken."
+      }
+    ]
+  },
+  "relatedServices": [
+    "lampisteria-y-climatizacion",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "label": "Information anfordern",
+    "href": "/de/kontakt/",
+    "secondaryLabel": "Weitere Leistungen ansehen",
+    "secondaryHref": "/de/dienstleistungen/"
+  },
+  "pendingConfirmation": [
+    "Der Hinweis auf per WLAN steuerbare Geräte erscheint auf der aktuellen Website und benötigt redaktionelle Validierung, bevor er als Hauptaussage genutzt wird.",
+    "Die Abdeckung außerhalb des lokalen Gebiets wird allgemein erwähnt und benötigt eine geografische Definition."
+  ]
+}

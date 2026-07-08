@@ -1,0 +1,28 @@
+{
+  "slug": "aviso-legal",
+  "locale": "es",
+  "title": "Aviso legal",
+  "seoTitle": "Aviso legal | Instal Berrozpe",
+  "seoDescription": "Plantilla multidioma de aviso legal pendiente de revisión jurídica.",
+  "updatedAtLabel": "Estado de revisión",
+  "updatedAtValue": "Pendiente de revisión legal",
+  "intro": "Este aviso legal es una base técnica multidioma y requiere validación jurídica antes de publicarse.",
+  "sections": [
+    {
+      "heading": "Titularidad del sitio",
+      "body": [
+        "Añadir solo los datos del titular que hayan sido confirmados para la nueva web.",
+        "No reutilizar automáticamente datos fiscales del sitio anterior sin confirmación expresa."
+      ]
+    },
+    {
+      "heading": "Condiciones de uso",
+      "body": [
+        "Definir condiciones de acceso, uso y responsabilidad según el alcance real del sitio publicado.",
+        "Revisar enlaces externos, formularios y recursos de terceros antes de fijar el texto final."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pendiente de revisión legal completa antes de publicación."
+}

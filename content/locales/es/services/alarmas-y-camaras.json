@@ -1,0 +1,67 @@
+{
+  "slug": "alarmas-y-camaras",
+  "locale": "es",
+  "title": "Alarmas y cámaras",
+  "shortTitle": "Alarmas y cámaras",
+  "seoTitle": "Alarmas y cámaras | Instal Berrozpe",
+  "seoDescription": "Servicio auditado con alarmas y cámaras CCTV e IP dentro de la web actual de Instal Berrozpe.",
+  "heroTitle": "Alarmas y cámaras",
+  "intro": "La web actual presenta este servicio como una oferta de seguridad para hogar o negocio.",
+  "summary": "Se estructura en dos bloques principales: alarmas y cámaras CCTV e IP.",
+  "includes": {
+    "title": "Incluye",
+    "items": [
+      "Alarmas.",
+      "Cámaras CCTV.",
+      "Cámaras IP."
+    ]
+  },
+  "benefits": {
+    "title": "Puntos clave",
+    "items": [
+      "La web actual lo orienta a vivienda o negocio.",
+      "Se apoya en un enfoque de seguridad y supervisión remota.",
+      "Agrupa alarmas y cámaras dentro de una misma página auditada."
+    ]
+  },
+  "process": {
+    "title": "Proceso descrito",
+    "items": [
+      "Contacto para exponer la necesidad de seguridad.",
+      "Asesoramiento sobre la solución más adecuada.",
+      "Instalación del sistema de alarmas o cámaras.",
+      "Seguimiento posterior mencionado en la web actual."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué menciona la web actual dentro de este servicio?",
+        "answer": "La auditoría confirma dos bloques: alarmas y cámaras CCTV e IP."
+      },
+      {
+        "question": "¿Se puede consultar la imagen desde otro lugar?",
+        "answer": "La página actual indica acceso remoto para cámaras IP a través de internet."
+      },
+      {
+        "question": "¿Aparece alguna central receptora mencionada por nombre?",
+        "answer": "Sí. La web actual menciona a TECALSA en la sección de alarmas."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "lampisteria-y-climatizacion"
+  ],
+  "cta": {
+    "label": "Solicitar información",
+    "href": "/contacto/",
+    "secondaryLabel": "Ver otros servicios",
+    "secondaryHref": "/servicios/"
+  },
+  "pendingConfirmation": [
+    "La mención a TECALSA aparece en la web actual y conviene confirmar si debe mantenerse.",
+    "La web actual habla de vigilancia constante y necesita validación antes de tratarse como promesa operativa cerrada."
+  ]
+}

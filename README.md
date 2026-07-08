@@ -1,21 +1,22 @@
 # Instal Berrozpe
 
-Base tecnica de la nueva web estatica de `instalberrozpe.com`, preparada para desplegar `dist/` en SiteGround.
+Base técnica de la nueva web estática de `instalberrozpe.com`, preparada para desplegar `dist/` en SiteGround.
 
 ## Stack
 
 - Astro
 - TypeScript
 - Tailwind CSS
-- GSAP
+- GSAP instalado
 
 ## Principios del proyecto
 
 - No inventar contenido comercial ni datos legales.
 - Todo el contenido editable vive en `/content`.
-- Cada servicio tiene su archivo individual en `/content/services`.
-- Los componentes no incluyen textos comerciales hardcodeados.
-- La build es estatica y el despliegue se hace subiendo solo `/dist`.
+- Los datos compartidos viven en `content/shared/`.
+- Los textos traducibles viven en `content/locales/{locale}/`.
+- Los componentes no incluyen copy comercial hardcodeado.
+- La build es estática y el despliegue se hace subiendo solo `/dist`.
 
 ## Scripts
 
@@ -30,14 +31,16 @@ npm run preview
 
 ```text
 /
-|-- assets-source/         # Material fuente no publico
-|-- content/               # Contenido editable del sitio
-|   |-- home/
-|   |-- legal/
-|   |-- services/
-|   `-- site/
-|-- docs/                  # Documentacion para agentes y mantenimiento
-|-- public/                # Activos publicos finales
+|-- assets-source/
+|-- content/
+|   |-- shared/
+|   `-- locales/
+|       |-- es/
+|       |-- ca/
+|       |-- en/
+|       `-- de/
+|-- docs/
+|-- public/
 `-- src/
     |-- components/
     |-- data/
@@ -49,16 +52,21 @@ npm run preview
 
 ## Flujo editorial
 
-1. Editar contenido solo dentro de `/content`.
-2. Mantener los servicios en archivos individuales.
-3. Revisar placeholders legales antes de publicar.
-4. Ejecutar `npm run build`.
-5. Subir el contenido de `/dist` al hosting de SiteGround.
+1. Editar datos comunes solo en `content/shared/`.
+2. Editar traducciones solo en `content/locales/{locale}/`.
+3. Mantener los 4 idiomas sincronizados en estructura y contenido base.
+4. Revisar placeholders legales antes de publicar.
+5. Ejecutar `npm run build`.
+6. Subir el contenido de `/dist` al hosting de SiteGround cuando exista validación de despliegue.
 
-## Documentacion
+## Documentación
 
 - [AGENTS.md](./AGENTS.md)
 - [Arquitectura](./docs/architecture.md)
-- [Modelo de contenido](./docs/content-model.md)
-- [Despliegue en SiteGround](./docs/deployment-siteground.md)
-- [Reglas editoriales y RGPD](./docs/editorial-rules.md)
+- [Inventario de contenido](./docs/01_CONTENT_INVENTORY.md)
+- [Sitemap](./docs/02_SITEMAP.md)
+- [Arquitectura de información](./docs/03_INFORMATION_ARCHITECTURE.md)
+- [Redirecciones](./docs/04_REDIRECTS.md)
+- [Inventario de assets](./docs/05_ASSET_INVENTORY.md)
+- [SEO local y hreflang](./docs/SEO_LOCAL.md)
+- [Legales RGPD y cookies](./docs/LEGAL_RGPD_COOKIES.md)

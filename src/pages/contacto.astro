@@ -1,0 +1,12 @@
+---
+import ContactSection from '../components/ContactSection.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getHomeCollection, getSeoData } from '../lib/content';
+
+const home = getHomeCollection();
+const seo = getSeoData();
+---
+
+<BaseLayout title={seo.titles.contact} description={seo.descriptions.contact} path="/contacto/">
+  <ContactSection section={home.contactCta} />
+</BaseLayout>

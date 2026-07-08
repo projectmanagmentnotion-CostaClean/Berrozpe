@@ -1,0 +1,28 @@
+{
+  "slug": "cookies",
+  "locale": "de",
+  "title": "Cookie-Richtlinie",
+  "seoTitle": "Cookie-Richtlinie | Instal Berrozpe",
+  "seoDescription": "Mehrsprachige Cookie-Vorlage mit ausstehender rechtlicher Prüfung.",
+  "updatedAtLabel": "Prüfstatus",
+  "updatedAtValue": "Rechtliche Prüfung ausstehend",
+  "intro": "Diese Cookie-Richtlinie muss vor der Veröffentlichung an die tatsächlich aktiven Cookies der künftigen Website angepasst werden.",
+  "sections": [
+    {
+      "heading": "Tatsächlich eingesetzte Cookies",
+      "body": [
+        "Nur technische, analytische oder Drittanbieter-Cookies dokumentieren, die in Produktion wirklich vorhanden sind.",
+        "Texte der alten Website nicht automatisch übernehmen, ohne aktive Skripte und Dienste zu prüfen."
+      ]
+    },
+    {
+      "heading": "Einwilligung und Verwaltung",
+      "body": [
+        "Wenn nicht notwendige Cookies aktiviert werden, muss ein vorheriges und granuläres Einwilligungssystem vorhanden sein.",
+        "Die vorherige Prüfung erkannte ein Cookie-Banner und eine geerbte Richtlinie, bestätigte jedoch kein aktives Analytics in der geprüften HTML-Stichprobe."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Vor der Veröffentlichung ist eine vollständige rechtliche Prüfung erforderlich."
+}

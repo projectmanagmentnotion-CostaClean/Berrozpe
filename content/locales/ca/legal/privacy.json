@@ -1,0 +1,35 @@
+{
+  "slug": "politica-de-privacitat",
+  "locale": "ca",
+  "title": "Política de privacitat",
+  "seoTitle": "Política de privacitat | Instal Berrozpe",
+  "seoDescription": "Plantilla multilingüe de política de privacitat pendent de revisió jurídica.",
+  "updatedAtLabel": "Estat de revisió",
+  "updatedAtValue": "Pendent de revisió legal",
+  "intro": "Aquesta plantilla multilingüe existeix només com a base tècnica. No s'ha de publicar com a text jurídic definitiu sense revisió legal.",
+  "sections": [
+    {
+      "heading": "Responsable del tractament",
+      "body": [
+        "Completar únicament amb les dades jurídiques confirmades per la propietat del lloc.",
+        "No inserir raó social fiscal, NIF o dades registrals si no han estat validades per a aquesta nova versió."
+      ]
+    },
+    {
+      "heading": "Finalitats i bases jurídiques",
+      "body": [
+        "Enumerar únicament finalitats reals i actives en la versió publicada.",
+        "Alinear les bases jurídiques amb els formularis, canals de contacte i serveis que finalment es publiquin."
+      ]
+    },
+    {
+      "heading": "Drets de les persones usuàries",
+      "body": [
+        "Definir el canal real per exercir accés, rectificació, supressió, oposició, limitació i portabilitat.",
+        "Revisar també la política de conservació i possibles cessions abans de la publicació."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pendent de revisió legal completa abans de la publicació."
+}

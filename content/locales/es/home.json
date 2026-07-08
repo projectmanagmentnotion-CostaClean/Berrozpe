@@ -1,0 +1,67 @@
+{
+  "locale": "es",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Contenido sincronizado",
+    "title": "Base multidioma preparada a partir del contenido real auditado",
+    "body": "El contenido confirmado hasta ahora permite estructurar una nueva web con tres servicios principales, contacto público y revisión legal pendiente.",
+    "primaryCtaLabel": "Ver servicios",
+    "primaryCtaHref": "/servicios/",
+    "secondaryCtaLabel": "Ir a contacto",
+    "secondaryCtaHref": "/contacto/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Servicios",
+    "title": "Tres servicios principales confirmados",
+    "body": "La auditoría actual confirma tres líneas de servicio con página propia en la web existente.",
+    "items": [
+      "Electricidad y domótica.",
+      "Lampistería y climatización.",
+      "Alarmas y cámaras."
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "Sobre nosotros",
+    "title": "Qué queda confirmado antes del rediseño final",
+    "body": "La nueva base editorial prioriza datos auditados y elimina promesas que todavía no han sido validadas.",
+    "items": [
+      "Tres servicios principales confirmados.",
+      "Dirección, móvil, teléfono/fax y horario detectados en la web actual.",
+      "Email principal pendiente de confirmación.",
+      "Cobertura geográfica exacta pendiente de definir."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Proceso",
+    "title": "Cómo presenta el servicio la web actual",
+    "body": "La web vigente repite un patrón de contacto, asesoramiento, intervención y soporte posterior.",
+    "items": [
+      "Solicitud de contacto por formulario, teléfono, email o WhatsApp.",
+      "Asesoramiento para hogar o negocio según el servicio.",
+      "Instalación o intervención del servicio solicitado.",
+      "Soporte postventa mencionado en la web actual."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Contacto",
+    "title": "Contacto confirmado parcialmente",
+    "body": "La dirección, los teléfonos y el horario están confirmados. El email principal sigue pendiente de validación editorial.",
+    "primaryCtaLabel": "Móvil",
+    "secondaryCtaLabel": "Emails detectados"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas que ya aparecen en la web actual",
+    "body": "Estas respuestas se apoyan en el contenido auditado y pueden revisarse cuando haya validación editorial definitiva.",
+    "items": [
+      "Trabajan con proyectos residenciales y comerciales.",
+      "El presupuesto puede solicitarse por formulario, teléfono o email.",
+      "La web actual menciona un tiempo de respuesta de 24 a 48 horas laborables."
+    ]
+  }
+}

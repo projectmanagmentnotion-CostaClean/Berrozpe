@@ -1,0 +1,68 @@
+{
+  "slug": "electricity-and-home-automation",
+  "locale": "en",
+  "title": "Electricity and home automation",
+  "shortTitle": "Electricity and automation",
+  "seoTitle": "Electricity and home automation | Instal Berrozpe",
+  "seoDescription": "Audited service with electricity, home automation, photovoltaic solar energy and energy advice within the current Instal Berrozpe website.",
+  "heroTitle": "Electricity and home automation",
+  "intro": "The current website groups this service as electricity and automation solutions for home or business.",
+  "summary": "It includes electrical installations, home automation, photovoltaic solar energy and energy advice according to the audited content.",
+  "includes": {
+    "title": "Includes",
+    "items": [
+      "Electrical installations.",
+      "Home automation.",
+      "Photovoltaic solar energy.",
+      "Energy advice."
+    ]
+  },
+  "benefits": {
+    "title": "Key points",
+    "items": [
+      "Service described for home or business.",
+      "Current focus on comfort, security and energy efficiency.",
+      "Several solutions grouped inside one audited page."
+    ]
+  },
+  "process": {
+    "title": "Described process",
+    "items": [
+      "Initial contact to explain the need.",
+      "Advice on the most suitable solution.",
+      "Installation or service intervention.",
+      "Later support mentioned on the current website."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What is home automation and how can it help my property?",
+        "answer": "The current website describes it as a system to automate and control lighting, climate, appliances and security."
+      },
+      {
+        "question": "Which security systems does the current website mention?",
+        "answer": "The website itself connects this service with alarms and CCTV cameras as part of its broader offer."
+      },
+      {
+        "question": "Why is energy advice included in this service?",
+        "answer": "The audited page presents it as a way to optimize consumption and reduce energy costs."
+      }
+    ]
+  },
+  "relatedServices": [
+    "lampisteria-y-climatizacion",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "label": "Request information",
+    "href": "/en/contact/",
+    "secondaryLabel": "View other services",
+    "secondaryHref": "/en/services/"
+  },
+  "pendingConfirmation": [
+    "The mention of wifi-controlled equipment appears on the current website and needs editorial validation before becoming a main claim.",
+    "Coverage outside the local area is mentioned in general terms and requires geographic definition."
+  ]
+}

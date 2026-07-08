@@ -1,0 +1,28 @@
+{
+  "redirects": [
+    { "from": "/", "to": "/", "notes": "El dominio raíz deja de ser selector de idioma." },
+    { "from": "/inicio/", "to": "/", "notes": "Home ES antigua al nuevo home ES." },
+    { "from": "/home/", "to": "/en/", "notes": "Home EN antigua al nuevo home EN." },
+    { "from": "/inici/", "to": "/ca/", "notes": "Home CA antigua al nuevo home CA." },
+    { "from": "/electricidad-y-domotica/", "to": "/servicios/electricidad-y-domotica/", "notes": "Servicio ES reubicado bajo /servicios/." },
+    { "from": "/electricity-and-home-automation/", "to": "/en/services/electricity-and-home-automation/", "notes": "Servicio EN antiguo al nuevo árbol EN." },
+    { "from": "/electricitat-i-domotica/", "to": "/ca/serveis/electricitat-i-domotica/", "notes": "Servicio CA antiguo al nuevo árbol CA." },
+    { "from": "/lampisteria-y-climatizacion/", "to": "/servicios/lampisteria-y-climatizacion/", "notes": "Servicio ES reubicado bajo /servicios/." },
+    { "from": "/plumbing-and-climate/", "to": "/en/services/plumbing-and-climate-control/", "notes": "Servicio EN antiguo a nuevo slug EN." },
+    { "from": "/lampisteria-y-climatizacio/", "to": "/ca/serveis/lampisteria-i-climatitzacio/", "notes": "Servicio CA antiguo a slug normalizado." },
+    { "from": "/alarmas-y-camaras-2/", "to": "/servicios/alarmas-y-camaras/", "notes": "Se elimina el sufijo estructural -2." },
+    { "from": "/alarms-and-cameras/", "to": "/en/services/alarms-and-cameras/", "notes": "Servicio EN antiguo al nuevo árbol EN." },
+    { "from": "/alarmes-i-cameres/", "to": "/ca/serveis/alarmes-i-cameres/", "notes": "Servicio CA antiguo al nuevo árbol CA." },
+    { "from": "/sobre-nosotros/", "to": "/sobre-nosotros/", "notes": "La ruta ES se mantiene." },
+    { "from": "/about-us/", "to": "/en/about-us/", "notes": "La ruta EN se mueve bajo prefijo de idioma." },
+    { "from": "/sobre-nosaltres/", "to": "/ca/sobre-nosaltres/", "notes": "La ruta CA se mueve bajo prefijo de idioma." },
+    { "from": "/contacto/", "to": "/contacto/", "notes": "La ruta ES se mantiene." },
+    { "from": "/contact/", "to": "/en/contact/", "notes": "La ruta EN se mueve bajo prefijo de idioma." },
+    { "from": "/contacte/", "to": "/ca/contacte/", "notes": "La ruta CA se mueve bajo prefijo de idioma." },
+    { "from": "/terminos-y-condiciones-es/", "to": "/terminos-y-condiciones/", "notes": "Se unifica la ruta legal ES." },
+    { "from": "/terminos-y-condiciones-en/", "to": "/en/terms-and-conditions/", "notes": "La ruta EN se normaliza." },
+    { "from": "/terminos-y-condiciones-cat/", "to": "/ca/termes-i-condicions/", "notes": "La ruta CA se normaliza." },
+    { "from": "/politica-de-cookies/", "to": "/politica-de-cookies/", "notes": "La ruta ES se mantiene." },
+    { "from": "/mas-informacion-sobre-las-cookies/", "to": "/politica-de-cookies/", "notes": "La página auxiliar se integra en cookies." }
+  ]
+}

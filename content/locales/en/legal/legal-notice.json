@@ -1,0 +1,28 @@
+{
+  "slug": "legal-notice",
+  "locale": "en",
+  "title": "Legal notice",
+  "seoTitle": "Legal notice | Instal Berrozpe",
+  "seoDescription": "Multilingual legal notice template pending legal review.",
+  "updatedAtLabel": "Review status",
+  "updatedAtValue": "Pending legal review",
+  "intro": "This legal notice is a multilingual technical base and requires legal validation before publication.",
+  "sections": [
+    {
+      "heading": "Website ownership",
+      "body": [
+        "Add only owner details that have been confirmed for the new website.",
+        "Do not automatically reuse tax data from the previous site without explicit confirmation."
+      ]
+    },
+    {
+      "heading": "Terms of use",
+      "body": [
+        "Define access, use and liability conditions according to the real scope of the published website.",
+        "Review external links, forms and third-party resources before fixing the final text."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pending full legal review before publication."
+}

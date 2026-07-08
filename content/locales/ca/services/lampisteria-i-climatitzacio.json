@@ -1,0 +1,69 @@
+{
+  "slug": "lampisteria-i-climatitzacio",
+  "locale": "ca",
+  "title": "Lampisteria i climatització",
+  "shortTitle": "Lampisteria i climatització",
+  "seoTitle": "Lampisteria i climatització | Instal Berrozpe",
+  "seoDescription": "Servei auditat amb lampisteria, aire condicionat, calefacció, calderes i energia solar tèrmica a la web actual d'Instal Berrozpe.",
+  "heroTitle": "Lampisteria i climatització",
+  "intro": "La web actual presenta aquest servei com a solucions d'aigua i climatització per a llar o negoci.",
+  "summary": "Agrupa lampisteria, aire condicionat, calefacció, calderes i energia solar tèrmica segons l'auditoria de contingut.",
+  "includes": {
+    "title": "Inclou",
+    "items": [
+      "Lampisteria.",
+      "Aire condicionat.",
+      "Calefacció.",
+      "Calderes.",
+      "Energia solar tèrmica."
+    ]
+  },
+  "benefits": {
+    "title": "Punts clau",
+    "items": [
+      "Servei orientat a confort tèrmic i gestió de l'aigua.",
+      "La web actual el presenta per a habitatge o negoci.",
+      "Agrupa cinc subblocs dins d'una sola pàgina auditada."
+    ]
+  },
+  "process": {
+    "title": "Procés descrit",
+    "items": [
+      "Contacte per explicar la necessitat d'aigua o climatització.",
+      "Assessorament sobre el sistema més adequat.",
+      "Instal·lació o actuació tècnica.",
+      "Seguiment posterior mencionat a la web actual."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntes freqüents",
+    "items": [
+      {
+        "question": "Quines solucions inclou aquesta pàgina de servei?",
+        "answer": "L'auditoria detecta lampisteria, aire condicionat, calefacció, calderes i energia solar tèrmica."
+      },
+      {
+        "question": "La web actual l'orienta a habitatge o negoci?",
+        "answer": "Sí. La redacció actual parla de llar o negoci en diverses seccions."
+      },
+      {
+        "question": "Es menciona control per wifi en aquest servei?",
+        "answer": "Sí. La web actual ho esmenta per a alguns equips, però convé validar-ho abans d'usar-ho com a promesa comercial principal."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "label": "Sol·licitar informació",
+    "href": "/ca/contacte/",
+    "secondaryLabel": "Veure altres serveis",
+    "secondaryHref": "/ca/serveis/"
+  },
+  "pendingConfirmation": [
+    "La menció a equips controlables per wifi apareix a la web actual i necessita validació editorial.",
+    "La cobertura fora de l'àrea local apareix esmentada de manera genèrica i requereix definició geogràfica."
+  ]
+}

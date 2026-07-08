@@ -1,0 +1,29 @@
+{
+  "locale": "de",
+  "items": [
+    { "id": "home", "label": "Start", "href": "/de/" },
+    { "id": "services", "label": "Leistungen", "href": "/de/dienstleistungen/" },
+    { "id": "about", "label": "Über uns", "href": "/de/ueber-uns/" },
+    { "id": "contact", "label": "Kontakt", "href": "/de/kontakt/" },
+    { "id": "language", "label": "Sprache", "href": null }
+  ],
+  "ui": {
+    "serviceLink": "Leistung ansehen",
+    "serviceEyebrow": "Leistung",
+    "legalEyebrow": "Rechtliches",
+    "legalSection": "Rechtliches",
+    "updatedAtLabel": "Angegebener Aktualisierungsstatus",
+    "includesTitle": "Enthält",
+    "benefitsTitle": "Kernaussagen",
+    "processTitle": "Beschriebener Ablauf",
+    "faqsTitle": "Häufige Fragen",
+    "relatedServicesTitle": "Verwandte Leistungen",
+    "contactDetailsTitle": "Kontaktdaten",
+    "detectedEmailsLabel": "Erkannte E-Mails",
+    "pendingConfirmationLabel": "Noch zu bestätigen",
+    "mobileLabel": "Mobil",
+    "landlineLabel": "Telefon/Fax",
+    "scheduleLabel": "Öffnungszeiten",
+    "addressLabel": "Adresse"
+  }
+}

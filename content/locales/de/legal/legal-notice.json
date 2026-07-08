@@ -1,0 +1,28 @@
+{
+  "slug": "impressum",
+  "locale": "de",
+  "title": "Impressum",
+  "seoTitle": "Impressum | Instal Berrozpe",
+  "seoDescription": "Mehrsprachige Impressumsvorlage mit ausstehender rechtlicher Prüfung.",
+  "updatedAtLabel": "Prüfstatus",
+  "updatedAtValue": "Rechtliche Prüfung ausstehend",
+  "intro": "Dieses Impressum ist eine mehrsprachige technische Basis und benötigt vor der Veröffentlichung eine rechtliche Freigabe.",
+  "sections": [
+    {
+      "heading": "Inhaberschaft der Website",
+      "body": [
+        "Nur Angaben zum Inhaber ergänzen, die für die neue Website bestätigt wurden.",
+        "Steuerdaten der alten Website nicht ohne ausdrückliche Bestätigung automatisch übernehmen."
+      ]
+    },
+    {
+      "heading": "Nutzungsbedingungen",
+      "body": [
+        "Zugangs-, Nutzungs- und Haftungsbedingungen entsprechend dem tatsächlichen Umfang der veröffentlichten Website definieren.",
+        "Externe Links, Formulare und Drittressourcen prüfen, bevor der endgültige Text festgelegt wird."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Vor der Veröffentlichung ist eine vollständige rechtliche Prüfung erforderlich."
+}

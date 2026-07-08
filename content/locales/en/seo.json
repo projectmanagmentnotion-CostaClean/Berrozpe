@@ -1,0 +1,80 @@
+{
+  "locale": "en",
+  "defaultLocale": "es",
+  "localeAlternates": {
+    "es": "https://instalberrozpe.com/",
+    "ca": "https://instalberrozpe.com/ca/",
+    "en": "https://instalberrozpe.com/en/",
+    "de": "https://instalberrozpe.com/de/"
+  },
+  "titles": {
+    "home": "Instal Berrozpe | Electricity, plumbing, climate control and security in Blanes",
+    "services": "Services | Instal Berrozpe",
+    "about": "About us | Instal Berrozpe",
+    "contact": "Contact | Instal Berrozpe",
+    "legalNotice": "Legal notice | Instal Berrozpe",
+    "privacy": "Privacy policy | Instal Berrozpe",
+    "cookies": "Cookie policy | Instal Berrozpe",
+    "terms": "Terms and conditions | Instal Berrozpe"
+  },
+  "descriptions": {
+    "home": "Audited editorial base for Instal Berrozpe with three main services, partially confirmed contact data and structure prepared for four languages.",
+    "services": "Synchronized list of the three main services confirmed in the Instal Berrozpe audit.",
+    "about": "Summary of the confirmed content before the final redesign of Instal Berrozpe.",
+    "contact": "Contact details detected on the current Instal Berrozpe website, with the primary email still pending confirmation.",
+    "legalNotice": "Multilingual legal notice template pending legal review.",
+    "privacy": "Multilingual privacy policy template pending legal review.",
+    "cookies": "Multilingual cookie policy template pending legal review.",
+    "terms": "Multilingual terms and conditions template pending legal review."
+  },
+  "hreflang": {
+    "home": {
+      "es": "https://instalberrozpe.com/",
+      "ca": "https://instalberrozpe.com/ca/",
+      "en": "https://instalberrozpe.com/en/",
+      "de": "https://instalberrozpe.com/de/"
+    },
+    "services": {
+      "es": "https://instalberrozpe.com/servicios/",
+      "ca": "https://instalberrozpe.com/ca/serveis/",
+      "en": "https://instalberrozpe.com/en/services/",
+      "de": "https://instalberrozpe.com/de/dienstleistungen/"
+    },
+    "about": {
+      "es": "https://instalberrozpe.com/sobre-nosotros/",
+      "ca": "https://instalberrozpe.com/ca/sobre-nosaltres/",
+      "en": "https://instalberrozpe.com/en/about-us/",
+      "de": "https://instalberrozpe.com/de/ueber-uns/"
+    },
+    "contact": {
+      "es": "https://instalberrozpe.com/contacto/",
+      "ca": "https://instalberrozpe.com/ca/contacte/",
+      "en": "https://instalberrozpe.com/en/contact/",
+      "de": "https://instalberrozpe.com/de/kontakt/"
+    },
+    "legalNotice": {
+      "es": "https://instalberrozpe.com/aviso-legal/",
+      "ca": "https://instalberrozpe.com/ca/avis-legal/",
+      "en": "https://instalberrozpe.com/en/legal-notice/",
+      "de": "https://instalberrozpe.com/de/impressum/"
+    },
+    "privacy": {
+      "es": "https://instalberrozpe.com/politica-de-privacidad/",
+      "ca": "https://instalberrozpe.com/ca/politica-de-privacitat/",
+      "en": "https://instalberrozpe.com/en/privacy-policy/",
+      "de": "https://instalberrozpe.com/de/datenschutz/"
+    },
+    "cookies": {
+      "es": "https://instalberrozpe.com/politica-de-cookies/",
+      "ca": "https://instalberrozpe.com/ca/politica-de-cookies/",
+      "en": "https://instalberrozpe.com/en/cookie-policy/",
+      "de": "https://instalberrozpe.com/de/cookies/"
+    },
+    "terms": {
+      "es": "https://instalberrozpe.com/terminos-y-condiciones/",
+      "ca": "https://instalberrozpe.com/ca/termes-i-condicions/",
+      "en": "https://instalberrozpe.com/en/terms-and-conditions/",
+      "de": "https://instalberrozpe.com/de/allgemeine-geschaeftsbedingungen/"
+    }
+  }
+}

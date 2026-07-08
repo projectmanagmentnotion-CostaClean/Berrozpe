@@ -1,0 +1,69 @@
+{
+  "slug": "plumbing-and-climate-control",
+  "locale": "en",
+  "title": "Plumbing and climate control",
+  "shortTitle": "Plumbing and climate",
+  "seoTitle": "Plumbing and climate control | Instal Berrozpe",
+  "seoDescription": "Audited service with plumbing, air conditioning, heating, boilers and solar thermal energy on the current Instal Berrozpe website.",
+  "heroTitle": "Plumbing and climate control",
+  "intro": "The current website presents this service as water and climate solutions for home or business.",
+  "summary": "It groups plumbing, air conditioning, heating, boilers and solar thermal energy according to the content audit.",
+  "includes": {
+    "title": "Includes",
+    "items": [
+      "Plumbing.",
+      "Air conditioning.",
+      "Heating.",
+      "Boilers.",
+      "Solar thermal energy."
+    ]
+  },
+  "benefits": {
+    "title": "Key points",
+    "items": [
+      "Service focused on thermal comfort and water management.",
+      "The current website presents it for home or business.",
+      "Five sub-blocks grouped in one audited page."
+    ]
+  },
+  "process": {
+    "title": "Described process",
+    "items": [
+      "Contact to explain the water or climate need.",
+      "Advice on the most suitable system.",
+      "Installation or technical intervention.",
+      "Follow-up support mentioned on the current website."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Which solutions are included in this service page?",
+        "answer": "The audit detects plumbing, air conditioning, heating, boilers and solar thermal energy."
+      },
+      {
+        "question": "Does the current website position it for home or business?",
+        "answer": "Yes. The current wording refers to home or business in several sections."
+      },
+      {
+        "question": "Is wifi control mentioned in this service?",
+        "answer": "Yes. The current website mentions it for some equipment, but it should be validated before being used as a main commercial promise."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "label": "Request information",
+    "href": "/en/contact/",
+    "secondaryLabel": "View other services",
+    "secondaryHref": "/en/services/"
+  },
+  "pendingConfirmation": [
+    "The mention of wifi-controlled equipment appears on the current website and needs editorial validation.",
+    "Coverage outside the local area is mentioned in general terms and requires geographic definition."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "politica-de-cookies",
+  "locale": "ca",
+  "title": "Política de cookies",
+  "seoTitle": "Política de cookies | Instal Berrozpe",
+  "seoDescription": "Plantilla multilingüe de política de cookies pendent de revisió jurídica.",
+  "updatedAtLabel": "Estat de revisió",
+  "updatedAtValue": "Pendent de revisió legal",
+  "intro": "Aquesta política de cookies s'ha d'ajustar a les cookies realment actives a la futura web abans de publicar-se.",
+  "sections": [
+    {
+      "heading": "Cookies realment implantades",
+      "body": [
+        "Documentar només cookies tècniques, analítiques o de tercers que existeixin realment en producció.",
+        "No heretar automàticament textos del lloc anterior sense comprovar scripts i serveis actius."
+      ]
+    },
+    {
+      "heading": "Consentiment i gestió",
+      "body": [
+        "Si s'activen cookies no necessàries, haurà d'existir un sistema de consentiment previ i granular.",
+        "L'auditoria anterior va detectar banner de cookies i una política heretada, però no va confirmar Analytics actiu a la mostra HTML revisada."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pendent de revisió legal completa abans de la publicació."
+}

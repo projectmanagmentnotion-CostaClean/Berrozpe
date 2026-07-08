@@ -1,0 +1,29 @@
+{
+  "locale": "en",
+  "items": [
+    { "id": "home", "label": "Home", "href": "/en/" },
+    { "id": "services", "label": "Services", "href": "/en/services/" },
+    { "id": "about", "label": "About us", "href": "/en/about-us/" },
+    { "id": "contact", "label": "Contact", "href": "/en/contact/" },
+    { "id": "language", "label": "Language", "href": null }
+  ],
+  "ui": {
+    "serviceLink": "View service",
+    "serviceEyebrow": "Service",
+    "legalEyebrow": "Legal",
+    "legalSection": "Legal",
+    "updatedAtLabel": "Declared update status",
+    "includesTitle": "Includes",
+    "benefitsTitle": "Key points",
+    "processTitle": "Described process",
+    "faqsTitle": "Frequently asked questions",
+    "relatedServicesTitle": "Related services",
+    "contactDetailsTitle": "Contact details",
+    "detectedEmailsLabel": "Detected emails",
+    "pendingConfirmationLabel": "Pending confirmation",
+    "mobileLabel": "Mobile",
+    "landlineLabel": "Phone/fax",
+    "scheduleLabel": "Opening hours",
+    "addressLabel": "Address"
+  }
+}

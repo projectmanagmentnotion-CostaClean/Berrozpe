@@ -1,0 +1,72 @@
+{
+  "order": [
+    "electricidad-y-domotica",
+    "lampisteria-y-climatizacion",
+    "alarmas-y-camaras"
+  ],
+  "services": [
+    {
+      "serviceId": "electricidad-y-domotica",
+      "locales": {
+        "es": {
+          "slug": "electricidad-y-domotica",
+          "path": "/servicios/electricidad-y-domotica/"
+        },
+        "ca": {
+          "slug": "electricitat-i-domotica",
+          "path": "/ca/serveis/electricitat-i-domotica/"
+        },
+        "en": {
+          "slug": "electricity-and-home-automation",
+          "path": "/en/services/electricity-and-home-automation/"
+        },
+        "de": {
+          "slug": "elektrizitaet-und-smart-home",
+          "path": "/de/dienstleistungen/elektrizitaet-und-smart-home/"
+        }
+      }
+    },
+    {
+      "serviceId": "lampisteria-y-climatizacion",
+      "locales": {
+        "es": {
+          "slug": "lampisteria-y-climatizacion",
+          "path": "/servicios/lampisteria-y-climatizacion/"
+        },
+        "ca": {
+          "slug": "lampisteria-i-climatitzacio",
+          "path": "/ca/serveis/lampisteria-i-climatitzacio/"
+        },
+        "en": {
+          "slug": "plumbing-and-climate-control",
+          "path": "/en/services/plumbing-and-climate-control/"
+        },
+        "de": {
+          "slug": "sanitaer-und-klimatechnik",
+          "path": "/de/dienstleistungen/sanitaer-und-klimatechnik/"
+        }
+      }
+    },
+    {
+      "serviceId": "alarmas-y-camaras",
+      "locales": {
+        "es": {
+          "slug": "alarmas-y-camaras",
+          "path": "/servicios/alarmas-y-camaras/"
+        },
+        "ca": {
+          "slug": "alarmes-i-cameres",
+          "path": "/ca/serveis/alarmes-i-cameres/"
+        },
+        "en": {
+          "slug": "alarms-and-cameras",
+          "path": "/en/services/alarms-and-cameras/"
+        },
+        "de": {
+          "slug": "alarmanlagen-und-kameras",
+          "path": "/de/dienstleistungen/alarmanlagen-und-kameras/"
+        }
+      }
+    }
+  ]
+}

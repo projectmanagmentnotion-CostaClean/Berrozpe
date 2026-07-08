@@ -1,0 +1,28 @@
+{
+  "slug": "terminos-y-condiciones",
+  "locale": "es",
+  "title": "Términos y condiciones",
+  "seoTitle": "Términos y condiciones | Instal Berrozpe",
+  "seoDescription": "Plantilla multidioma de términos y condiciones pendiente de revisión jurídica.",
+  "updatedAtLabel": "Estado de revisión",
+  "updatedAtValue": "Pendiente de revisión legal",
+  "intro": "Esta plantilla sustituye a los términos heredados y requiere revisión jurídica antes de considerarse definitiva.",
+  "sections": [
+    {
+      "heading": "Alcance del sitio y de la información",
+      "body": [
+        "Aclarar si la web actúa solo como presentación de servicios o si incorpora contratación, reservas o presupuestos vinculantes.",
+        "Evitar trasladar automáticamente condiciones de devoluciones o venta si no aplican a la nueva versión."
+      ]
+    },
+    {
+      "heading": "Contacto y reclamaciones",
+      "body": [
+        "Definir el canal oficial para consultas, solicitudes y reclamaciones una vez se confirme el email principal.",
+        "Revisar los datos de empresa y responsable antes de publicación final."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pendiente de revisión legal completa antes de publicación."
+}

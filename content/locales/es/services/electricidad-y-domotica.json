@@ -1,0 +1,68 @@
+{
+  "slug": "electricidad-y-domotica",
+  "locale": "es",
+  "title": "Electricidad y domótica",
+  "shortTitle": "Electricidad y domótica",
+  "seoTitle": "Electricidad y domótica | Instal Berrozpe",
+  "seoDescription": "Servicio auditado con electricidad, domótica, energía solar fotovoltaica y asesoría energética dentro de la web actual de Instal Berrozpe.",
+  "heroTitle": "Electricidad y domótica",
+  "intro": "La web actual agrupa este servicio como soluciones de electricidad y automatización para hogar o negocio.",
+  "summary": "Incluye instalaciones eléctricas, domótica, energía solar fotovoltaica y asesoría energética según el contenido auditado.",
+  "includes": {
+    "title": "Incluye",
+    "items": [
+      "Instalaciones eléctricas.",
+      "Domótica.",
+      "Energía solar fotovoltaica.",
+      "Asesoría energética."
+    ]
+  },
+  "benefits": {
+    "title": "Puntos clave",
+    "items": [
+      "Servicio planteado para hogar o negocio.",
+      "Enfoque actual en comodidad, seguridad y eficiencia energética.",
+      "Agrupa varias soluciones dentro de una misma página auditada."
+    ]
+  },
+  "process": {
+    "title": "Proceso descrito",
+    "items": [
+      "Toma de contacto para explicar la necesidad.",
+      "Asesoramiento sobre la solución más adecuada.",
+      "Instalación o intervención del servicio.",
+      "Soporte posterior mencionado en la web actual."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué es la domótica y cómo puede beneficiar mi hogar?",
+        "answer": "La web actual la describe como un sistema para automatizar y controlar iluminación, clima, electrodomésticos y seguridad."
+      },
+      {
+        "question": "¿Qué sistemas de seguridad menciona la web actual?",
+        "answer": "La propia web enlaza este servicio con alarmas y cámaras CCTV como parte de su propuesta global."
+      },
+      {
+        "question": "¿Por qué aparece la asesoría energética dentro de este servicio?",
+        "answer": "La página auditada la presenta como una ayuda para optimizar el consumo y reducir costes energéticos."
+      }
+    ]
+  },
+  "relatedServices": [
+    "lampisteria-y-climatizacion",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "label": "Solicitar información",
+    "href": "/contacto/",
+    "secondaryLabel": "Ver otros servicios",
+    "secondaryHref": "/servicios/"
+  },
+  "pendingConfirmation": [
+    "La mención a equipos controlables por wifi aparece en la web actual y necesita validación editorial antes de convertirse en claim principal.",
+    "La cobertura fuera del área local aparece mencionada de forma genérica y requiere definición geográfica."
+  ]
+}

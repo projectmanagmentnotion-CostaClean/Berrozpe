@@ -1,8 +1,9 @@
 ---
-import { getLegalPages, getSiteSettings } from '../lib/content';
+import { getLegalPages, getNavigation, getSiteSettings } from '../lib/content';
 
 const site = getSiteSettings();
 const legalPages = getLegalPages();
+const navigation = getNavigation();
 ---
 
 <footer class="border-t border-white/10 bg-slate-950">
@@ -17,7 +18,7 @@ const legalPages = getLegalPages();
     </div>
 
     <div>
-      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-white">Legal</p>
+      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-white">{navigation.ui.legalSection}</p>
       <ul class="mt-3 space-y-2 text-sm text-slate-300">
         {legalPages.map((page) => (
           <li>

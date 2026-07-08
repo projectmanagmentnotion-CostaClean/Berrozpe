@@ -1,0 +1,69 @@
+{
+  "slug": "lampisteria-y-climatizacion",
+  "locale": "es",
+  "title": "Lampistería y climatización",
+  "shortTitle": "Lampistería y climatización",
+  "seoTitle": "Lampistería y climatización | Instal Berrozpe",
+  "seoDescription": "Servicio auditado con lampistería, aire acondicionado, calefacción, calderas y energía solar térmica en la web actual de Instal Berrozpe.",
+  "heroTitle": "Lampistería y climatización",
+  "intro": "La web actual presenta este servicio como soluciones de agua y climatización para hogar o negocio.",
+  "summary": "Agrupa lampistería, aire acondicionado, calefacción, calderas y energía solar térmica según la auditoría de contenido.",
+  "includes": {
+    "title": "Incluye",
+    "items": [
+      "Lampistería.",
+      "Aire acondicionado.",
+      "Calefacción.",
+      "Calderas.",
+      "Energía solar térmica."
+    ]
+  },
+  "benefits": {
+    "title": "Puntos clave",
+    "items": [
+      "Servicio orientado a confort térmico y gestión del agua.",
+      "La web actual lo presenta para vivienda o negocio.",
+      "Agrupa cinco subbloques dentro de una sola página auditada."
+    ]
+  },
+  "process": {
+    "title": "Proceso descrito",
+    "items": [
+      "Contacto para explicar la necesidad de agua o climatización.",
+      "Asesoramiento sobre el sistema más adecuado.",
+      "Instalación o actuación técnica.",
+      "Seguimiento posterior mencionado en la web actual."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué soluciones incluye esta página de servicio?",
+        "answer": "La auditoría detecta lampistería, aire acondicionado, calefacción, calderas y energía solar térmica."
+      },
+      {
+        "question": "¿La web actual lo orienta a vivienda o negocio?",
+        "answer": "Sí. La redacción actual habla de hogar o negocio en varias secciones."
+      },
+      {
+        "question": "¿Se menciona control por wifi en este servicio?",
+        "answer": "Sí. La web actual lo menciona para algunos equipos, pero conviene validarlo antes de usarlo como promesa comercial principal."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "label": "Solicitar información",
+    "href": "/contacto/",
+    "secondaryLabel": "Ver otros servicios",
+    "secondaryHref": "/servicios/"
+  },
+  "pendingConfirmation": [
+    "La mención a equipos controlables por wifi aparece en la web actual y necesita validación editorial.",
+    "La cobertura fuera del área local aparece mencionada de forma genérica y requiere definición geográfica."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "sanitaer-und-klimatechnik",
+  "locale": "de",
+  "title": "Sanitär und Klimatechnik",
+  "shortTitle": "Sanitär und Klima",
+  "seoTitle": "Sanitär und Klimatechnik | Instal Berrozpe",
+  "seoDescription": "Geprüfte Leistung mit Sanitär, Klimaanlage, Heizung, Kesseln und Solarthermie auf der aktuellen Website von Instal Berrozpe.",
+  "heroTitle": "Sanitär und Klimatechnik",
+  "intro": "Die aktuelle Website beschreibt diese Leistung als Wasser- und Klimalösungen für Wohn- oder Geschäftsobjekte.",
+  "summary": "Gebündelt werden Sanitär, Klimaanlage, Heizung, Kessel und Solarthermie laut Inhaltsprüfung.",
+  "includes": {
+    "title": "Enthält",
+    "items": [
+      "Sanitär.",
+      "Klimaanlage.",
+      "Heizung.",
+      "Kessel.",
+      "Solarthermie."
+    ]
+  },
+  "benefits": {
+    "title": "Kernaussagen",
+    "items": [
+      "Leistung mit Fokus auf thermischen Komfort und Wassermanagement.",
+      "Die aktuelle Website beschreibt sie für Wohn- oder Geschäftsobjekte.",
+      "Fünf Unterbereiche innerhalb einer geprüften Seite gebündelt."
+    ]
+  },
+  "process": {
+    "title": "Beschriebener Ablauf",
+    "items": [
+      "Kontakt zur Beschreibung des Wasser- oder Klimabedarfs.",
+      "Beratung zum passenden System.",
+      "Installation oder technischer Einsatz.",
+      "Spätere Begleitung wird auf der aktuellen Website erwähnt."
+    ]
+  },
+  "faqs": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Welche Lösungen umfasst diese Leistungsseite?",
+        "answer": "Die Prüfung erkennt Sanitär, Klimaanlage, Heizung, Kessel und Solarthermie."
+      },
+      {
+        "question": "Wird die Leistung für Wohn- oder Geschäftsobjekte beschrieben?",
+        "answer": "Ja. Die aktuelle Formulierung nennt in mehreren Abschnitten Wohn- oder Geschäftsobjekte."
+      },
+      {
+        "question": "Wird WLAN-Steuerung in dieser Leistung erwähnt?",
+        "answer": "Ja. Die aktuelle Website nennt dies für bestimmte Geräte, aber vor einer kommerziellen Nutzung als Hauptversprechen sollte es validiert werden."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "label": "Information anfordern",
+    "href": "/de/kontakt/",
+    "secondaryLabel": "Weitere Leistungen ansehen",
+    "secondaryHref": "/de/dienstleistungen/"
+  },
+  "pendingConfirmation": [
+    "Der Hinweis auf per WLAN steuerbare Geräte erscheint auf der aktuellen Website und benötigt redaktionelle Validierung.",
+    "Die Abdeckung außerhalb des lokalen Gebiets wird allgemein erwähnt und benötigt eine geografische Definition."
+  ]
+}

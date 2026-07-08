@@ -1,0 +1,28 @@
+{
+  "slug": "terms-and-conditions",
+  "locale": "en",
+  "title": "Terms and conditions",
+  "seoTitle": "Terms and conditions | Instal Berrozpe",
+  "seoDescription": "Multilingual terms and conditions template pending legal review.",
+  "updatedAtLabel": "Review status",
+  "updatedAtValue": "Pending legal review",
+  "intro": "This template replaces the inherited terms and requires legal review before it can be considered final.",
+  "sections": [
+    {
+      "heading": "Scope of the website and information",
+      "body": [
+        "Clarify whether the website only presents services or also includes contracting, booking or binding quotation flows.",
+        "Avoid automatically carrying over returns or sales conditions if they do not apply to the new version."
+      ]
+    },
+    {
+      "heading": "Contact and complaints",
+      "body": [
+        "Define the official channel for inquiries, requests and complaints once the primary email has been confirmed.",
+        "Review company and responsible-party details before final publication."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pending full legal review before publication."
+}

@@ -1,0 +1,47 @@
+{
+  "address": {
+    "streetAddress": "C/ Antiga nº 68, Baixos",
+    "postalCode": "17300",
+    "locality": "Blanes",
+    "region": "Girona",
+    "countryCode": "ES",
+    "displayLines": [
+      "C/ Antiga nº 68, Baixos",
+      "17300 Blanes (Girona)"
+    ],
+    "confirmed": true
+  },
+  "phones": {
+    "mobile": "676 04 33 89",
+    "landline": "872 986 161",
+    "whatsappE164": "+34676043389"
+  },
+  "schedule": {
+    "es": "Lunes - Viernes 8:00 a 18:00",
+    "ca": "Dilluns a Divendres de 8:00 a 18:00",
+    "en": "Monday - Friday 8:00 to 18:00",
+    "de": "Montag - Freitag 8:00 bis 18:00"
+  },
+  "emailsDetected": [
+    "david@instalberrozpe.com",
+    "comercial@instalberrozpe.com"
+  ],
+  "primaryEmail": null,
+  "whatsAppUrl": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%20quiero%20informacion%20😁",
+  "socialLinks": [
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp",
+      "url": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%20quiero%20informacion%20😁"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/instalberrozpe/?hl=es"
+    }
+  ],
+  "pendingConfirmation": [
+    "Confirmar qué email debe ser el principal entre david@instalberrozpe.com y comercial@instalberrozpe.com.",
+    "Confirmar si el teléfono fijo debe seguir mostrándose como teléfono/fax en la nueva web."
+  ]
+}

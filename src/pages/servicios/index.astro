@@ -1,40 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPublishedServices } from '../../lib/content';
+import { getHomeCollection, getNavigation, getPublishedServices, getSeoData, getServiceRouteById } from '../../lib/content';
 
 const services = getPublishedServices();
+const navigation = getNavigation();
+const home = getHomeCollection();
+const seo = getSeoData();
 ---
 
-<BaseLayout
-  title="Servicios | Instal Berrozpe"
-  description="Base de servicios editable desde contenido, preparada para ampliar sin tocar componentes."
-  path="/servicios/"
->
+<BaseLayout title={seo.titles.services} description={seo.descriptions.services} path="/servicios/">
   <section class="mx-auto max-w-6xl px-6 py-16 md:py-24">
     <div class="max-w-3xl space-y-4">
-      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Servicios</p>
-      <h1 class="text-4xl font-semibold tracking-tight text-white md:text-6xl">Catalogo editable desde contenido</h1>
-      <p class="text-base leading-8 text-slate-300 md:text-lg">
-        Esta pagina consume exclusivamente los archivos individuales de `/content/services`.
-      </p>
+      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{home.servicesOverview.eyebrow}</p>
+      <h1 class="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+        {navigation.items.find((item) => item.id === 'services')?.label}
+      </h1>
+      <p class="text-base leading-8 text-slate-300 md:text-lg">{home.servicesOverview.body}</p>
     </div>
 
-    {services.length > 0 ? (
-      <div class="mt-10 grid gap-4 md:grid-cols-2">
-        {services.map((service) => (
-          <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 class="text-xl font-semibold text-white">{service.heroTitle}</h2>
-            <p class="mt-3 text-sm leading-7 text-slate-300">{service.summary}</p>
-            <a class="mt-5 inline-flex text-sm font-semibold text-cyan-300" href={`/servicios/${service.slug}/`}>
-              Ver servicio
-            </a>
-          </article>
-        ))}
-      </div>
-    ) : (
-      <div class="mt-10 rounded-3xl border border-dashed border-white/15 bg-white/5 p-6 text-sm leading-7 text-slate-300">
-        No hay servicios publicados todavia. Anade archivos reales en `/content/services` y cambia `status` a `published`.
-      </div>
-    )}
+    <div class="mt-10 grid gap-4 md:grid-cols-2">
+      {services.map((service) => (
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-semibold text-white">{service.title}</h2>
+          <p class="mt-3 text-sm leading-7 text-slate-300">{service.summary}</p>
+          <a class="mt-5 inline-flex text-sm font-semibold text-cyan-300" href={getServiceRouteById(service.slug) ?? `/servicios/${service.slug}/`}>
+            {navigation.ui.serviceLink}
+          </a>
+        </article>
+      ))}
+    </div>
   </section>
 </BaseLayout>

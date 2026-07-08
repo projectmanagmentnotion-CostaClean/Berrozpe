@@ -1,0 +1,28 @@
+{
+  "slug": "termes-i-condicions",
+  "locale": "ca",
+  "title": "Termes i condicions",
+  "seoTitle": "Termes i condicions | Instal Berrozpe",
+  "seoDescription": "Plantilla multilingüe de termes i condicions pendent de revisió jurídica.",
+  "updatedAtLabel": "Estat de revisió",
+  "updatedAtValue": "Pendent de revisió legal",
+  "intro": "Aquesta plantilla substitueix els termes heretats i requereix revisió jurídica abans de considerar-se definitiva.",
+  "sections": [
+    {
+      "heading": "Abast del lloc i de la informació",
+      "body": [
+        "Aclarir si la web actua només com a presentació de serveis o si incorpora contractació, reserves o pressupostos vinculants.",
+        "Evitar traslladar automàticament condicions de devolucions o venda si no apliquen a la nova versió."
+      ]
+    },
+    {
+      "heading": "Contacte i reclamacions",
+      "body": [
+        "Definir el canal oficial per a consultes, sol·licituds i reclamacions quan es confirmi l'email principal.",
+        "Revisar les dades d'empresa i responsable abans de la publicació final."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pendent de revisió legal completa abans de la publicació."
+}

@@ -2,104 +2,106 @@
 
 ## Objetivo
 
-Definir una arquitectura simple, monolingue y mantenible que se alimente solo desde `/content`.
+Definir una arquitectura multidioma sincronizada, mantenible y basada exclusivamente en contenido auditado o marcado como pendiente.
 
-## Arquitectura recomendada
+## Estructura por idioma
+
+Cada idioma mantiene exactamente las mismas capas:
+
+- Inicio
+- Servicios
+- Tres páginas de servicio
+- Sobre nosotros
+- Contacto
+- Aviso legal
+- Política de privacidad
+- Política de cookies
+- Términos y condiciones
+
+## Fuente de verdad
+
+### `content/shared/`
+
+- `site.json`: configuración global, locales soportados y base paths.
+- `contact.json`: dirección, teléfonos, emails detectados, horario y pendientes compartidos.
+- `services-index.json`: identificador común de servicios y slugs por idioma.
+- `redirects.json`: tabla base de redirecciones.
+
+### `content/locales/{locale}/`
+
+- `navigation.json`: navegación y etiquetas UI.
+- `home.json`: secciones del home.
+- `seo.json`: titles, descriptions, hreflang y alternates.
+- `services/*.json`: servicios sincronizados por idioma.
+- `legal/*.json`: placeholders legales sincronizados por idioma.
+
+## Regla de sincronía
+
+No se puede:
+
+- añadir un servicio a un idioma sin añadirlo a los otros tres,
+- añadir una sección al home de un idioma sin replicarla en los otros tres,
+- cerrar un dato pendiente en un idioma y dejarlo abierto en los demás.
+
+## Páginas y contenido
 
 ### 1. Inicio
 
-Proposito:
+Bloques base:
 
-- Presentar propuesta general.
-- Resumir los tres servicios reales.
-- Mostrar datos de contacto esenciales.
-- Derivar a paginas de servicio y contacto.
-
-Bloques recomendados:
-
-- Hero
-- Resumen de servicios
-- Sobre nosotros resumido
-- Datos de contacto
-- CTA final
+- `hero`
+- `servicesOverview`
+- `whyChooseUs`
+- `process`
+- `contactCta`
+- `faqs`
 
 ### 2. Servicios
 
-Proposito:
+Proporciona un índice común de los tres servicios confirmados.
 
-- Mostrar el listado limpio de los tres servicios reales.
-- Evitar duplicacion de copy entre home y sobre nosotros.
+### 3. Páginas de servicio
 
-### 3. Paginas individuales de servicio
+Cada servicio comparte la misma estructura de contenido:
 
-Proposito:
-
-- Desarrollar cada servicio principal con su propio enfoque SEO.
-- Mantener subservicios como bloques internos mientras no haya evidencia para mas URLs.
-
-Servicios confirmados:
-
-- Electricidad y domotica
-- Lampisteria y climatizacion
-- Alarmas y camaras
+- `slug`
+- `locale`
+- `title`
+- `shortTitle`
+- `seoTitle`
+- `seoDescription`
+- `heroTitle`
+- `intro`
+- `summary`
+- `includes`
+- `benefits`
+- `process`
+- `faqs`
+- `relatedServices`
+- `cta`
+- `pendingConfirmation`
 
 ### 4. Sobre nosotros
 
-Proposito:
-
-- Consolidar identidad de empresa.
-- Mantener solo afirmaciones confirmadas.
-- Unificar email, direccion y horario.
+Se apoya en contenido auditado y evita afirmaciones no verificadas.
 
 ### 5. Contacto
 
-Proposito:
-
-- Mostrar telefono, telefono/fax, direccion, horario, email definitivo y canales externos.
-- Incluir formulario solo si se redefine la via de recepcion y RGPD.
+Consume únicamente `content/shared/contact.json` para datos compartidos.
 
 ### 6. Legal
 
-Proposito:
+Todos los legales existen en los cuatro idiomas y se marcan como pendientes de revisión jurídica.
 
-- Separar claramente aviso legal, privacidad, cookies y terminos.
-- Evitar dependencia de textos heredados no verificados.
+## Routing
 
-## Modelo de contenido recomendado
+- `es` sin prefijo.
+- `ca`, `en` y `de` con prefijo de idioma.
+- Slugs de servicio traducidos y conectados por `serviceId`.
 
-### `content/site`
+## Riesgos actuales
 
-- Ajustes globales
-- Datos de negocio
-- Contacto canonico
-- Metadatos SEO base
-
-### `content/home`
-
-- Un archivo por seccion
-- Sin duplicar descripciones completas de cada servicio
-
-### `content/services`
-
-- Un archivo por servicio principal
-- Slug final limpio
-- Resumen
-- Bloques textuales
-- Nota de cobertura
-
-### `content/legal`
-
-- Un archivo por pagina legal
-- Mantener estatus de validacion fuera del componente
-
-## Decisiones de idioma
-
-- Canonico final recomendado: espanol.
-- EN y CAT actuales deben vivir como redirecciones 301, no como arquitectura final principal, salvo que se confirme estrategia multilingue real.
-
-## Riesgos detectados
-
-- El contenido actual mezcla promesas comerciales no verificadas con datos utiles.
-- Hay conflicto de email principal.
-- No existe una politica de privacidad visible, aunque el sitio la menciona.
-- Hay demasiada repeticion entre home, servicios y corporativa.
+- Email principal sin confirmar.
+- Cobertura geográfica exacta sin confirmar.
+- Legales aún no validados.
+- Parte del copy auditado contiene claims que deben seguir marcados como pendientes.

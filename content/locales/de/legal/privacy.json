@@ -1,0 +1,35 @@
+{
+  "slug": "datenschutz",
+  "locale": "de",
+  "title": "Datenschutz",
+  "seoTitle": "Datenschutz | Instal Berrozpe",
+  "seoDescription": "Mehrsprachige Datenschutzvorlage mit ausstehender rechtlicher Prüfung.",
+  "updatedAtLabel": "Prüfstatus",
+  "updatedAtValue": "Rechtliche Prüfung ausstehend",
+  "intro": "Diese mehrsprachige Vorlage dient nur als technische Basis. Sie darf ohne rechtliche Prüfung nicht als endgültiger Rechtstext veröffentlicht werden.",
+  "sections": [
+    {
+      "heading": "Verantwortliche Stelle",
+      "body": [
+        "Diesen Abschnitt nur mit rechtlichen Angaben ergänzen, die vom Eigentümer der Website bestätigt wurden.",
+        "Keine steuerlichen Firmennamen, Steuernummern oder Registerdaten einfügen, solange sie für diese neue Version nicht validiert wurden."
+      ]
+    },
+    {
+      "heading": "Zwecke und Rechtsgrundlagen",
+      "body": [
+        "Nur reale und aktive Zwecke der veröffentlichten Version aufführen.",
+        "Die Rechtsgrundlagen mit Formularen, Kontaktkanälen und tatsächlich veröffentlichten Leistungen abstimmen."
+      ]
+    },
+    {
+      "heading": "Rechte der Nutzerinnen und Nutzer",
+      "body": [
+        "Den tatsächlichen Kanal für Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung und Übertragbarkeit festlegen.",
+        "Vor der Veröffentlichung auch Aufbewahrung und mögliche Weitergaben prüfen."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Vor der Veröffentlichung ist eine vollständige rechtliche Prüfung erforderlich."
+}

@@ -2,36 +2,35 @@
 
 ## Criterio
 
-Tabla de redirecciones 301 recomendada desde la estructura actual hacia la nueva arquitectura canonica en espanol.
+Tabla de redirecciones 301 recomendada desde la estructura actual auditada hacia la nueva arquitectura multidioma sincronizada.
 
 | URL actual | URL nueva recomendada | Motivo |
 | --- | --- | --- |
-| `/` | `/` | Se mantiene el dominio raiz, pero deja de ser selector de idioma. |
-| `/inicio/` | `/` | Home ES antigua a home final. |
-| `/home/` | `/` | Home EN a home final ES. |
-| `/inici/` | `/` | Home CAT a home final ES. |
-| `/electricidad-y-domotica/` | `/servicios/electricidad-y-domotica/` | Reubicar bajo indice de servicios. |
-| `/electricity-and-home-automation/` | `/servicios/electricidad-y-domotica/` | EN a canonico ES. |
-| `/electricitat-i-domotica/` | `/servicios/electricidad-y-domotica/` | CAT a canonico ES. |
-| `/lampisteria-y-climatizacion/` | `/servicios/lampisteria-y-climatizacion/` | Reubicar bajo indice de servicios. |
-| `/plumbing-and-climate/` | `/servicios/lampisteria-y-climatizacion/` | EN a canonico ES. |
-| `/lampisteria-y-climatizacio/` | `/servicios/lampisteria-y-climatizacion/` | CAT y slug mixto a canonico ES limpio. |
-| `/alarmas-y-camaras-2/` | `/servicios/alarmas-y-camaras/` | Quitar sufijo estructural `-2`. |
-| `/alarms-and-cameras/` | `/servicios/alarmas-y-camaras/` | EN a canonico ES. |
-| `/alarmes-i-cameres/` | `/servicios/alarmas-y-camaras/` | CAT a canonico ES. |
-| `/sobre-nosotros/` | `/sobre-nosotros/` | Mantener slug canonico. |
-| `/about-us/` | `/sobre-nosotros/` | EN a canonico ES. |
-| `/sobre-nosaltres/` | `/sobre-nosotros/` | CAT a canonico ES. |
-| `/contacto/` | `/contacto/` | Mantener slug canonico. |
-| `/contact/` | `/contacto/` | EN a canonico ES. |
-| `/contacte/` | `/contacto/` | CAT a canonico ES. |
-| `/terminos-y-condiciones-es/` | `/terminos-y-condiciones/` | Unificar legales. |
-| `/terminos-y-condiciones-en/` | `/terminos-y-condiciones/` | EN a legal final ES. |
-| `/terminos-y-condiciones-cat/` | `/terminos-y-condiciones/` | CAT a legal final ES. |
-| `/politica-de-cookies/` | `/politica-de-cookies/` | Mantener slug canonico. |
-| `/mas-informacion-sobre-las-cookies/` | `/politica-de-cookies/` | Integrar pagina auxiliar dentro de cookies. |
+| `/` | `/` | El dominio raíz deja de ser selector de idioma y pasa a ser home ES. |
+| `/inicio/` | `/` | Home ES antigua al nuevo home ES. |
+| `/home/` | `/en/` | Home EN antigua al nuevo home EN. |
+| `/inici/` | `/ca/` | Home CA antigua al nuevo home CA. |
+| `/electricidad-y-domotica/` | `/servicios/electricidad-y-domotica/` | Servicio ES reubicado bajo `/servicios/`. |
+| `/electricity-and-home-automation/` | `/en/services/electricity-and-home-automation/` | Servicio EN al nuevo árbol EN. |
+| `/electricitat-i-domotica/` | `/ca/serveis/electricitat-i-domotica/` | Servicio CA al nuevo árbol CA. |
+| `/lampisteria-y-climatizacion/` | `/servicios/lampisteria-y-climatizacion/` | Servicio ES reubicado bajo `/servicios/`. |
+| `/plumbing-and-climate/` | `/en/services/plumbing-and-climate-control/` | Servicio EN con slug nuevo normalizado. |
+| `/lampisteria-y-climatizacio/` | `/ca/serveis/lampisteria-i-climatitzacio/` | Servicio CA con slug nuevo normalizado. |
+| `/alarmas-y-camaras-2/` | `/servicios/alarmas-y-camaras/` | Se elimina el sufijo estructural `-2`. |
+| `/alarms-and-cameras/` | `/en/services/alarms-and-cameras/` | Servicio EN al nuevo árbol EN. |
+| `/alarmes-i-cameres/` | `/ca/serveis/alarmes-i-cameres/` | Servicio CA al nuevo árbol CA. |
+| `/sobre-nosotros/` | `/sobre-nosotros/` | La ruta ES se mantiene. |
+| `/about-us/` | `/en/about-us/` | La ruta EN pasa a vivir bajo prefijo de idioma. |
+| `/sobre-nosaltres/` | `/ca/sobre-nosaltres/` | La ruta CA pasa a vivir bajo prefijo de idioma. |
+| `/contacto/` | `/contacto/` | La ruta ES se mantiene. |
+| `/contact/` | `/en/contact/` | La ruta EN pasa a vivir bajo prefijo de idioma. |
+| `/contacte/` | `/ca/contacte/` | La ruta CA pasa a vivir bajo prefijo de idioma. |
+| `/terminos-y-condiciones-es/` | `/terminos-y-condiciones/` | Legal ES unificado. |
+| `/terminos-y-condiciones-en/` | `/en/terms-and-conditions/` | Legal EN bajo prefijo de idioma. |
+| `/terminos-y-condiciones-cat/` | `/ca/termes-i-condicions/` | Legal CA bajo prefijo de idioma. |
+| `/politica-de-cookies/` | `/politica-de-cookies/` | La ruta ES se mantiene. |
+| `/mas-informacion-sobre-las-cookies/` | `/politica-de-cookies/` | La página auxiliar se integra en cookies. |
 
-## Redirecciones recomendadas adicionales
+## Regla adicional
 
-- Cualquier URL EN o CAT futura no mantenida debe redirigir a su equivalente ES.
-- Si se crean subservicios sin landing propia, redirigir a la landing del servicio principal correspondiente.
+- Si el routing multidioma definitivo se activa, toda URL histórica debe redirigir a la versión del mismo idioma cuando exista, y no siempre a la versión `es`.

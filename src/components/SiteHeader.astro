@@ -1,13 +1,8 @@
 ---
-import { getSiteSettings } from '../lib/content';
+import { getNavigation, getSiteSettings } from '../lib/content';
 
 const site = getSiteSettings();
-
-const navItems = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Servicios', href: '/servicios/' },
-  { label: 'Contacto', href: '#contacto' },
-];
+const navigation = getNavigation();
 ---
 
 <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
@@ -18,9 +13,13 @@ const navItems = [
 
     <nav aria-label="Principal">
       <ul class="flex items-center gap-6 text-sm text-slate-200">
-        {navItems.map((item) => (
+        {navigation.items.map((item) => (
           <li>
-            <a class="transition hover:text-white" href={item.href}>{item.label}</a>
+            {item.href ? (
+              <a class="transition hover:text-white" href={item.href}>{item.label}</a>
+            ) : (
+              <span class="text-slate-400">{item.label}</span>
+            )}
           </li>
         ))}
       </ul>

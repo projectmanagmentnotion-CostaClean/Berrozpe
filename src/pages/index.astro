@@ -4,9 +4,10 @@ import ContactSection from '../components/ContactSection.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ServicesPreview from '../components/ServicesPreview.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getHomeSection, getPublishedServices, getSiteSettings } from '../lib/content';
+import { getHomeSection, getPublishedServices, getSeoData, getSiteSettings } from '../lib/content';
 
 const site = getSiteSettings();
+const seo = getSeoData();
 const hero = getHomeSection('hero');
 const servicesOverview = getHomeSection('services-overview');
 const processSection = getHomeSection('process');
@@ -14,7 +15,7 @@ const contactSection = getHomeSection('contact-cta');
 const services = getPublishedServices();
 ---
 
-<BaseLayout title={site.defaultTitle} description={site.defaultDescription} path="/">
+<BaseLayout title={seo.titles.home ?? site.defaultTitle} description={seo.descriptions.home ?? site.defaultDescription} path="/">
   <HeroSection section={hero} />
   <ServicesPreview section={servicesOverview} services={services} />
   <BulletSection section={processSection} />

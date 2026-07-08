@@ -1,0 +1,28 @@
+{
+  "slug": "cookie-policy",
+  "locale": "en",
+  "title": "Cookie policy",
+  "seoTitle": "Cookie policy | Instal Berrozpe",
+  "seoDescription": "Multilingual cookie policy template pending legal review.",
+  "updatedAtLabel": "Review status",
+  "updatedAtValue": "Pending legal review",
+  "intro": "This cookie policy must be aligned with the cookies that are actually active on the future website before publication.",
+  "sections": [
+    {
+      "heading": "Cookies actually in use",
+      "body": [
+        "Document only technical, analytics or third-party cookies that really exist in production.",
+        "Do not automatically inherit text from the previous site without checking active scripts and services."
+      ]
+    },
+    {
+      "heading": "Consent and management",
+      "body": [
+        "If non-essential cookies are enabled, there must be a prior and granular consent system.",
+        "The previous audit detected a cookie banner and an inherited policy, but it did not confirm active Analytics in the reviewed HTML sample."
+      ]
+    }
+  ],
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Pending full legal review before publication."
+}

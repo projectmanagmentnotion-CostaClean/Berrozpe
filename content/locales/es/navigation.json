@@ -1,0 +1,29 @@
+{
+  "locale": "es",
+  "items": [
+    { "id": "home", "label": "Inicio", "href": "/" },
+    { "id": "services", "label": "Servicios", "href": "/servicios/" },
+    { "id": "about", "label": "Sobre nosotros", "href": "/sobre-nosotros/" },
+    { "id": "contact", "label": "Contacto", "href": "/contacto/" },
+    { "id": "language", "label": "Idioma", "href": null }
+  ],
+  "ui": {
+    "serviceLink": "Ver servicio",
+    "serviceEyebrow": "Servicio",
+    "legalEyebrow": "Legal",
+    "legalSection": "Legal",
+    "updatedAtLabel": "Última actualización declarada",
+    "includesTitle": "Incluye",
+    "benefitsTitle": "Puntos clave",
+    "processTitle": "Proceso descrito",
+    "faqsTitle": "Preguntas frecuentes",
+    "relatedServicesTitle": "Servicios relacionados",
+    "contactDetailsTitle": "Datos de contacto",
+    "detectedEmailsLabel": "Emails detectados",
+    "pendingConfirmationLabel": "Pendiente de confirmación",
+    "mobileLabel": "Móvil",
+    "landlineLabel": "Teléfono/fax",
+    "scheduleLabel": "Horario",
+    "addressLabel": "Dirección"
+  }
+}

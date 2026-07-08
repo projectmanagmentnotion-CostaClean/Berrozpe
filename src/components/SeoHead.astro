@@ -1,5 +1,5 @@
 ---
-import { getSiteSettings } from '../lib/content';
+import { getSeoData, getSiteSettings } from '../lib/content';
 
 interface Props {
   title?: string;
@@ -16,6 +16,7 @@ const {
 } = Astro.props;
 
 const site = getSiteSettings();
+const seo = getSeoData();
 const resolvedTitle = title ?? site.defaultTitle;
 const resolvedDescription = description ?? site.defaultDescription;
 const canonicalUrl = new URL(path, site.siteUrl).toString();
@@ -52,5 +53,9 @@ const localBusinessSchema = {
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={resolvedTitle} />
 <meta name="twitter:description" content={resolvedDescription} />
+{Object.entries(seo.localeAlternates).map(([localeCode, href]) => (
+  <link rel="alternate" hreflang={localeCode} href={href} />
+))}
+<link rel="alternate" hreflang="x-default" href={seo.localeAlternates[seo.defaultLocale] ?? site.siteUrl} />
 {noIndex && <meta name="robots" content="noindex, nofollow" />}
 <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />

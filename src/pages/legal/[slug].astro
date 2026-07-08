@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLegalPage, getLegalPages } from '../../lib/content';
+import { getLegalPage, getLegalPages, getNavigation } from '../../lib/content';
 
 export function getStaticPaths() {
   return getLegalPages().map((page) => ({
@@ -10,18 +10,19 @@ export function getStaticPaths() {
 
 const { slug } = Astro.params;
 const page = slug ? getLegalPage(slug) : undefined;
+const navigation = getNavigation();
 
 if (!page) {
   throw new Error(`Legal page not found: ${slug}`);
 }
 ---
 
-<BaseLayout title={`${page.title} | Instal Berrozpe`} description={page.intro} path={`/legal/${page.slug}/`}>
+<BaseLayout title={page.seoTitle} description={page.seoDescription} path={`/legal/${page.slug}/`}>
   <section class="mx-auto max-w-4xl px-6 py-16 md:py-24" data-animate>
-    <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Legal</p>
+    <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{navigation.ui.legalEyebrow}</p>
     <h1 class="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">{page.title}</h1>
     <p class="mt-6 text-base leading-8 text-slate-300">{page.intro}</p>
-    <p class="mt-4 text-sm text-slate-400">Ultima actualizacion declarada: {page.updatedAt}</p>
+    <p class="mt-4 text-sm text-slate-400">{page.updatedAtLabel}: {page.updatedAtValue}</p>
 
     <div class="mt-10 space-y-10">
       {page.sections.map((section) => (
@@ -33,5 +34,11 @@ if (!page) {
         </section>
       ))}
     </div>
+
+    {page.pendingLegalReview && (
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-7 text-slate-300">
+        {page.pendingReviewNote}
+      </div>
+    )}
   </section>
 </BaseLayout>

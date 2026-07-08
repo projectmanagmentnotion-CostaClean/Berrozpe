@@ -1,0 +1,12 @@
+---
+import BulletSection from '../components/BulletSection.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getHomeCollection, getSeoData } from '../lib/content';
+
+const home = getHomeCollection();
+const seo = getSeoData();
+---
+
+<BaseLayout title={seo.titles.about} description={seo.descriptions.about} path="/sobre-nosotros/">
+  <BulletSection section={home.whyChooseUs} />
+</BaseLayout>
