@@ -1,0 +1,20 @@
+---
+interface Props {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  body?: string;
+  className?: string;
+}
+
+const { id, eyebrow, title, body, className = '' } = Astro.props;
+---
+
+<section id={id} class={`mx-auto max-w-6xl px-6 py-16 md:py-24 ${className}`} data-animate>
+  <div class="max-w-3xl space-y-4">
+    {eyebrow && <p class="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{eyebrow}</p>}
+    <h2 class="text-3xl font-semibold tracking-tight text-white md:text-5xl">{title}</h2>
+    {body && <p class="text-base leading-8 text-slate-300 md:text-lg">{body}</p>}
+  </div>
+  <slot />
+</section>

@@ -1,0 +1,8 @@
+{
+  "sectionId": "contact-cta",
+  "eyebrow": "Contacto",
+  "title": "Canales de contacto pendientes de completar",
+  "body": "Introduce telefono, email y datos locales reales en `content/site/settings.json` para activar esta seccion con informacion definitiva.",
+  "primaryCtaLabel": "Telefono",
+  "secondaryCtaLabel": "Email"
+}

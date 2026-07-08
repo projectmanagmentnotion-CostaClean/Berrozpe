@@ -1,0 +1,10 @@
+{
+  "sectionId": "hero",
+  "eyebrow": "Base tecnica",
+  "title": "Nueva web estatica preparada para contenido real validado",
+  "body": "Este proyecto deja lista una base moderna, minimalista y rapida para publicar contenido definitivo sin reescribir componentes ni estructura.",
+  "primaryCtaLabel": "Ver servicios",
+  "primaryCtaHref": "/servicios/",
+  "secondaryCtaLabel": "Ir a contacto",
+  "secondaryCtaHref": "#contacto"
+}

@@ -1,0 +1,56 @@
+---
+import { getSiteSettings } from '../lib/content';
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description,
+  path = '/',
+  noIndex = false,
+} = Astro.props;
+
+const site = getSiteSettings();
+const resolvedTitle = title ?? site.defaultTitle;
+const resolvedDescription = description ?? site.defaultDescription;
+const canonicalUrl = new URL(path, site.siteUrl).toString();
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${site.siteUrl}/#localbusiness`,
+  name: site.businessName,
+  url: site.siteUrl,
+  telephone: site.primaryPhone || undefined,
+  email: site.primaryEmail || undefined,
+  address: site.addressLine || site.locality || site.postalCode ? {
+    '@type': 'PostalAddress',
+    streetAddress: site.addressLine || undefined,
+    addressLocality: site.locality || undefined,
+    addressRegion: site.region || undefined,
+    postalCode: site.postalCode || undefined,
+    addressCountry: site.countryCode || undefined,
+  } : undefined,
+  areaServed: site.coverageArea.length > 0 ? site.coverageArea : undefined,
+};
+---
+
+<title>{resolvedTitle}</title>
+<meta name="description" content={resolvedDescription} />
+<link rel="canonical" href={canonicalUrl} />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content={site.locale} />
+<meta property="og:site_name" content={site.brandName} />
+<meta property="og:title" content={resolvedTitle} />
+<meta property="og:description" content={resolvedDescription} />
+<meta property="og:url" content={canonicalUrl} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={resolvedTitle} />
+<meta name="twitter:description" content={resolvedDescription} />
+{noIndex && <meta name="robots" content="noindex, nofollow" />}
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />

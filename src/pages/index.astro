@@ -1,0 +1,22 @@
+---
+import BulletSection from '../components/BulletSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ServicesPreview from '../components/ServicesPreview.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getHomeSection, getPublishedServices, getSiteSettings } from '../lib/content';
+
+const site = getSiteSettings();
+const hero = getHomeSection('hero');
+const servicesOverview = getHomeSection('services-overview');
+const processSection = getHomeSection('process');
+const contactSection = getHomeSection('contact-cta');
+const services = getPublishedServices();
+---
+
+<BaseLayout title={site.defaultTitle} description={site.defaultDescription} path="/">
+  <HeroSection section={hero} />
+  <ServicesPreview section={servicesOverview} services={services} />
+  <BulletSection section={processSection} />
+  <ContactSection section={contactSection} />
+</BaseLayout>

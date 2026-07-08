@@ -1,0 +1,55 @@
+---
+import SeoHead from '../components/SeoHead.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+  noIndex?: boolean;
+}
+
+const { title, description, path, noIndex = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <SeoHead title={title} description={description} path={path} noIndex={noIndex} />
+  </head>
+  <body class="bg-slate-950 text-white antialiased">
+    <div class="relative isolate min-h-screen overflow-hidden">
+      <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.16),_transparent_55%)]"></div>
+      <SiteHeader />
+      <main>
+        <slot />
+      </main>
+      <SiteFooter />
+    </div>
+
+    <script>
+      import gsap from 'gsap';
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!prefersReducedMotion) {
+        gsap.fromTo(
+          '[data-animate]',
+          { opacity: 0, y: 28 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.12,
+            ease: 'power2.out',
+          },
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "sectionId": "services-overview",
+  "eyebrow": "Servicios",
+  "title": "Cada servicio vive en su propio archivo",
+  "body": "La arquitectura queda preparada para publicar fichas individuales desde contenido estructurado, sin copy embebido dentro del frontend.",
+  "items": [
+    "No hay servicios publicados todavia. Usa `/content/services` para dar de alta cada servicio real con su propio archivo."
+  ]
+}

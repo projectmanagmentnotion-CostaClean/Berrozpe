@@ -1,0 +1,25 @@
+---
+import type { HomeSection } from '../data/types';
+import { getSiteSettings } from '../lib/content';
+import SectionShell from './SectionShell.astro';
+
+interface Props {
+  section: HomeSection;
+}
+
+const { section } = Astro.props;
+const site = getSiteSettings();
+---
+
+<SectionShell id="contacto" eyebrow={section.eyebrow} title={section.title} body={section.body}>
+  <div class="mt-10 grid gap-4 md:grid-cols-2">
+    <a class="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-300/50" href={`tel:${site.primaryPhone}`}>
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">{section.primaryCtaLabel}</p>
+      <p class="mt-3 text-lg font-semibold text-white">{site.primaryPhone || 'Pendiente de definir'}</p>
+    </a>
+    <a class="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-300/50" href={`mailto:${site.primaryEmail}`}>
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">{section.secondaryCtaLabel}</p>
+      <p class="mt-3 text-lg font-semibold text-white">{site.primaryEmail || 'Pendiente de definir'}</p>
+    </a>
+  </div>
+</SectionShell>

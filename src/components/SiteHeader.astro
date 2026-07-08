@@ -1,0 +1,29 @@
+---
+import { getSiteSettings } from '../lib/content';
+
+const site = getSiteSettings();
+
+const navItems = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/servicios/' },
+  { label: 'Contacto', href: '#contacto' },
+];
+---
+
+<header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a class="text-sm font-semibold uppercase tracking-[0.24em] text-white" href="/">
+      {site.brandName}
+    </a>
+
+    <nav aria-label="Principal">
+      <ul class="flex items-center gap-6 text-sm text-slate-200">
+        {navItems.map((item) => (
+          <li>
+            <a class="transition hover:text-white" href={item.href}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
