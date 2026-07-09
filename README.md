@@ -68,5 +68,6 @@ npm run preview
 - [Arquitectura de información](./docs/03_INFORMATION_ARCHITECTURE.md)
 - [Redirecciones](./docs/04_REDIRECTS.md)
 - [Inventario de assets](./docs/05_ASSET_INVENTORY.md)
+- [Documento maestro de contenido, SEO y estructura](./docs/CONTENT_SEO_STRUCTURE_MASTER.md)
 - [SEO local y hreflang](./docs/SEO_LOCAL.md)
 - [Legales RGPD y cookies](./docs/LEGAL_RGPD_COOKIES.md)

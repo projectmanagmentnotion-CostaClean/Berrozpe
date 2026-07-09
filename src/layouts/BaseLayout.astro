@@ -3,6 +3,7 @@ import SeoHead from '../components/SeoHead.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import type { AlternateLink, Locale } from '../lib/content';
+import animationsUrl from '../scripts/animations.ts?url';
 import '../styles/global.css';
 
 interface Props {
@@ -41,6 +42,7 @@ const {
       xDefaultPath={xDefaultPath}
       noIndex={noIndex}
     />
+    <script type="module" src={animationsUrl}></script>
   </head>
   <body>
     <div class="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
