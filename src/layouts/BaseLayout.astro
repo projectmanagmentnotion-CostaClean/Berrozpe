@@ -14,6 +14,7 @@ interface Props {
   alternates: AlternateLink[];
   xDefaultPath?: string;
   noIndex?: boolean;
+  ogImagePath?: string;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   alternates,
   xDefaultPath,
   noIndex = false,
+  ogImagePath,
 } = Astro.props;
 ---
 
@@ -41,7 +43,11 @@ const {
       alternates={alternates}
       xDefaultPath={xDefaultPath}
       noIndex={noIndex}
+      ogImagePath={ogImagePath}
     />
+    <script>
+      import '../scripts/animations.ts';
+    </script>
     <script>
       import '../scripts/cookie-consent.ts';
     </script>

@@ -199,6 +199,11 @@ Paginas estaticas:
 
 - Debe seguir derivandose del mismo titulo, descripcion y canonical localizados
 - No introducir claims o assets OG no auditados
+- Activos actuales:
+  - `/og/default.png`
+  - `/og/services.png`
+  - `/og/contact.png`
+- Estado actual: composiciones corporativas temporales sin fotografia real verificada
 
 ## I. Redirecciones
 
@@ -276,13 +281,19 @@ Fuente principal:
 
 - `docs/05_ASSET_INVENTORY.md`
 
-Assets reales detectados:
+Assets legacy detectados:
 
 - Logos de marca
 - Banderas de idioma heredadas
 - Visuales de home y servicios en WordPress
 - Fotos corporativas y de fachada
 - Video de portada del selector legacy
+
+Assets actualmente activos en la nueva web:
+
+- Visuales SVG temporales por seccion y servicio
+- OG corporativos temporales
+- Inventario sincronizado en `content/shared/visuals.json`
 
 Pendientes de optimizacion:
 
@@ -306,6 +317,7 @@ Alt text:
 
 - Debe definirse por asset reutilizado
 - No inventar alt comerciales que afirmen servicios no confirmados
+- Los placeholders actuales se describen como visual temporal o composicion corporativa temporal
 
 ## L. Diseno
 
@@ -344,12 +356,18 @@ Hooks disponibles:
 - `data-animate="stagger"`
 - `data-animate="line"`
 - `data-animate="cta"`
+- `data-animate="image-reveal"`
+- `data-animate="visual-panel"`
+- `data-animate="soft-parallax"`
 - `data-animate-group`
 
 Animaciones aplicadas:
 
 - `heroIntro`
 - `revealOnScroll`
+- `imageReveal`
+- `visualPanels`
+- `parallaxSoft`
 - `staggerGroup`
 - `lineReveal`
 - `ctaMotion`

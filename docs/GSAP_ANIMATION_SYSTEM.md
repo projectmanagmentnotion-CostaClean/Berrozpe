@@ -8,8 +8,12 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 
 - [src/lib/animations/index.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/index.ts)
 - [src/lib/animations/reducedMotion.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/reducedMotion.ts)
+- [src/lib/animations/scrollTrigger.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/scrollTrigger.ts)
 - [src/lib/animations/heroIntro.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/heroIntro.ts)
 - [src/lib/animations/revealOnScroll.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/revealOnScroll.ts)
+- [src/lib/animations/imageReveal.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/imageReveal.ts)
+- [src/lib/animations/visualPanels.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/visualPanels.ts)
+- [src/lib/animations/parallaxSoft.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/parallaxSoft.ts)
 - [src/lib/animations/staggerGroup.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/staggerGroup.ts)
 - [src/lib/animations/lineReveal.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/lineReveal.ts)
 - [src/lib/animations/ctaMotion.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/animations/ctaMotion.ts)
@@ -25,6 +29,9 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - CTA: `data-animate="cta"`
 - Elemento escalonado: `data-animate="stagger"`
 - Grupo de escalonado: `data-animate-group`
+- Reveal de visual grande: `data-animate="image-reveal"`
+- Panel sobre visual: `data-animate="visual-panel"`
+- Parallax suave: `data-animate="soft-parallax"`
 - Menu movil: `details[data-mobile-menu]` y `[data-mobile-menu-panel]`
 
 ## Comportamiento implementado
@@ -60,6 +67,24 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - Reveal del bloque CTA.
 - Microinteraccion ligera en enlaces y botones internos.
 
+### `imageReveal`
+
+- Reveal suave para visuales grandes.
+- `clip-path` editorial ligero.
+- `opacity` y desplazamiento corto.
+- `once: true` para evitar retriggers innecesarios.
+
+### `visualPanels`
+
+- Entrada suave del panel de texto superpuesto sobre visuales.
+- Pensado para `VisualAsset`.
+
+### `parallaxSoft`
+
+- Desplazamiento vertical leve y `scale` sutil.
+- Desactivado en viewport compacto.
+- No se aplica con `prefers-reduced-motion`.
+
 ### `mobileMenuMotion`
 
 - Apertura y cierre del panel del menu movil.
@@ -80,7 +105,14 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - `reducedMotion.ts` protege el build estatico y el runtime.
 - Si no hay DOM o `matchMedia`, el sistema reduce movimiento por defecto.
 - Si el usuario pide menos movimiento, GSAP no se inicializa.
+- En mobile no se aplica `soft-parallax`.
 - El contenido sigue visible sin estados previos ocultos.
+
+## ScrollTrigger
+
+- Registro centralizado en `scrollTrigger.ts`.
+- No se registran triggers duplicados gracias a los marcadores `data-motion-ready`.
+- Tras la inicializacion se ejecuta `ScrollTrigger.refresh()`.
 
 ## Reglas de uso
 
@@ -99,3 +131,4 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - Verificar selector de idioma en home y detalle de servicio.
 - Verificar que las paginas sin hooks no lanzan errores.
 - Verificar reduced motion y fallback sin JS.
+- Verificar visualmente en `390x844`, `430x932`, `768x1024`, `1366x768`, `1440x900` y `1920x1080`.

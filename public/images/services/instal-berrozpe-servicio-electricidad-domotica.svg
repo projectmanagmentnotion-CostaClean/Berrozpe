@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Visual corporativo temporal de electricidad y domotica</title>
+  <desc id="desc">Composicion abstracta temporal para el servicio de electricidad y domotica.</desc>
+  <rect width="1400" height="1000" fill="#f7fbff"/>
+  <circle cx="1160" cy="220" r="220" fill="#045cb4" opacity=".12"/>
+  <circle cx="230" cy="820" r="260" fill="#ff7700" opacity=".12"/>
+  <rect x="110" y="100" width="1180" height="800" rx="42" fill="#ffffff" stroke="#045cb4" stroke-opacity=".1"/>
+  <g transform="translate(200 190)">
+    <rect width="420" height="420" rx="36" fill="#1e293b"/>
+    <path d="M190 90 120 250h98l-42 104 130-170h-96l44-94z" fill="#ff7700"/>
+    <circle cx="340" cy="120" r="18" fill="#f9fafb" opacity=".72"/>
+    <circle cx="356" cy="194" r="12" fill="#f9fafb" opacity=".42"/>
+  </g>
+  <g transform="translate(690 210)">
+    <rect width="470" height="170" rx="30" fill="#045cb4" opacity=".92"/>
+    <rect y="230" width="470" height="250" rx="30" fill="#ff7700" opacity=".88"/>
+    <rect y="530" width="330" height="18" rx="9" fill="#1e293b" opacity=".7"/>
+    <rect y="566" width="280" height="14" rx="7" fill="#1e293b" opacity=".3"/>
+  </g>
+</svg>

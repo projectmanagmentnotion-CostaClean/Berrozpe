@@ -188,6 +188,35 @@ export interface RedirectData {
   }>;
 }
 
+export interface VisualAssetEntry {
+  path: string;
+  width: number;
+  height: number;
+  alt: string;
+  temporary: boolean;
+}
+
+export interface SharedVisuals {
+  home: {
+    hero: VisualAssetEntry;
+    trust: VisualAssetEntry;
+    process: VisualAssetEntry;
+    contact: VisualAssetEntry;
+  };
+  about: {
+    hero: VisualAssetEntry;
+  };
+  contact: {
+    hero: VisualAssetEntry;
+  };
+  services: Record<string, VisualAssetEntry>;
+  og: {
+    default: string;
+    services: string;
+    contact: string;
+  };
+}
+
 export interface ListBlock {
   title: string;
   items: string[];

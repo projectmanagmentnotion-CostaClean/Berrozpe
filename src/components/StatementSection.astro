@@ -1,9 +1,10 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { getSharedContact } from '../lib/content';
+import { getPageVisual, getSharedContact } from '../lib/content';
 import Badge from './Badge.astro';
 import Container from './Container.astro';
+import VisualAsset from './VisualAsset.astro';
 
 interface Props {
   locale: Locale;
@@ -13,24 +14,28 @@ interface Props {
 const { locale, section } = Astro.props;
 const contact = getSharedContact();
 const localityLine = `${contact.address.locality} · ${contact.address.region}`;
+const visual = getPageVisual('homeTrust');
 ---
 
 <section class="py-16 sm:py-20" data-animate="line">
   <Container>
-    <div class="rounded-[2.25rem] border border-[var(--color-border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))] p-7 sm:p-10">
-      <div class="flex flex-wrap items-center gap-3">
-        <Badge text={section.eyebrow} />
-        <Badge text={localityLine} />
-        <Badge text={locale.toUpperCase()} />
+    <div class="grid gap-5 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
+      <div class="rounded-[2.25rem] border border-[var(--color-border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))] p-7 sm:p-10">
+        <div class="flex flex-wrap items-center gap-3">
+          <Badge text={section.eyebrow} />
+          <Badge text={localityLine} />
+          <Badge text={locale.toUpperCase()} />
+        </div>
+        <div class="mt-6 grid gap-6">
+          <h2 class="max-w-4xl font-[var(--font-display)] text-3xl font-semibold leading-[1] tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl lg:text-6xl">
+            {section.title}
+          </h2>
+          <p class="max-w-xl text-base leading-8 text-[var(--color-text-muted)]">
+            {section.body}
+          </p>
+        </div>
       </div>
-      <div class="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-        <h2 class="max-w-4xl font-[var(--font-display)] text-3xl font-semibold leading-[1] tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl lg:text-6xl">
-          {section.title}
-        </h2>
-        <p class="max-w-xl text-base leading-8 text-[var(--color-text-muted)]">
-          {section.body}
-        </p>
-      </div>
+      <VisualAsset asset={visual} eyebrow={localityLine} title={section.eyebrow} body={section.body} compact={true} />
     </div>
   </Container>
 </section>

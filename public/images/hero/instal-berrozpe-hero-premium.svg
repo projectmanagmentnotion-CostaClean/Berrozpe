@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Visual corporativo temporal de hero</title>
+  <desc id="desc">Composicion corporativa temporal con paleta de Instal Berrozpe para la portada.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9fafb"/>
+      <stop offset="50%" stop-color="#eef4fb"/>
+      <stop offset="100%" stop-color="#fff3e7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#045cb4"/>
+      <stop offset="100%" stop-color="#ff7700"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <circle cx="1210" cy="260" r="250" fill="#045cb4" opacity=".08"/>
+  <circle cx="1340" cy="880" r="330" fill="#ff7700" opacity=".1"/>
+  <circle cx="330" cy="980" r="290" fill="#1e293b" opacity=".06"/>
+  <rect x="120" y="150" width="1360" height="900" rx="48" fill="#ffffff" opacity=".72" stroke="#045cb4" stroke-opacity=".12"/>
+  <path d="M260 780C410 620 560 520 820 500c190-14 350 62 520 236" fill="none" stroke="url(#accent)" stroke-width="22" stroke-linecap="round" opacity=".7"/>
+  <path d="M260 880C480 740 640 690 900 690c182 0 298 41 420 132" fill="none" stroke="#1e293b" stroke-width="6" stroke-linecap="round" opacity=".18"/>
+  <g transform="translate(250 280)">
+    <rect width="420" height="280" rx="32" fill="#1e293b"/>
+    <rect x="44" y="48" width="148" height="16" rx="8" fill="#f9fafb" opacity=".7"/>
+    <rect x="44" y="96" width="230" height="22" rx="11" fill="#f9fafb"/>
+    <rect x="44" y="136" width="188" height="22" rx="11" fill="#f9fafb" opacity=".82"/>
+    <rect x="44" y="200" width="138" height="44" rx="22" fill="#ff7700"/>
+  </g>
+  <g transform="translate(840 260)">
+    <rect width="470" height="520" rx="40" fill="#ffffff" stroke="#1e293b" stroke-opacity=".1"/>
+    <rect x="54" y="54" width="362" height="220" rx="28" fill="url(#accent)" opacity=".92"/>
+    <rect x="54" y="314" width="238" height="18" rx="9" fill="#1e293b" opacity=".82"/>
+    <rect x="54" y="356" width="320" height="14" rx="7" fill="#1e293b" opacity=".34"/>
+    <rect x="54" y="388" width="280" height="14" rx="7" fill="#1e293b" opacity=".24"/>
+    <rect x="54" y="440" width="154" height="36" rx="18" fill="#045cb4" opacity=".94"/>
+  </g>
+</svg>

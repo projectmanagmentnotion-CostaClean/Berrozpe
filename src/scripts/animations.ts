@@ -17,6 +17,7 @@ function bootAnimations(): void {
   }
 
   window.__berrozpeAnimationsBooted__ = true;
+  document.documentElement.dataset.animationsBooted = 'true';
   initAnimationSystem(document);
 }
 

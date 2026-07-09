@@ -1,37 +1,44 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { getNavigation, getRouteCatalog, getSharedContact } from '../lib/content';
+import { getNavigation, getPageVisual, getRouteCatalog, getSharedContact } from '../lib/content';
 import Button from './Button.astro';
 import Card from './Card.astro';
 import ContactForm from './ContactForm.astro';
 import Section from './Section.astro';
+import VisualAsset from './VisualAsset.astro';
 
 interface Props {
   locale: Locale;
   section: HomeSection;
   number?: string;
   showForm?: boolean;
+  showHeading?: boolean;
 }
 
-const { locale, section, number, showForm = false } = Astro.props;
+const { locale, section, number, showForm = false, showHeading = true } = Astro.props;
 const contact = getSharedContact();
 const navigation = getNavigation(locale);
 const routes = getRouteCatalog(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
 const whatsappLink = contact.whatsAppUrl;
+const contactVisual = getPageVisual('contact');
 ---
 
 <Section
   id={section.sectionId}
-  eyebrow={section.eyebrow}
-  number={number}
-  title={section.title}
-  body={section.body}
+  eyebrow={showHeading ? section.eyebrow : undefined}
+  number={showHeading ? number : undefined}
+  title={showHeading ? section.title : undefined}
+  body={showHeading ? section.body : undefined}
   className="border-t border-[var(--color-border)]"
 >
-  <div class="mt-10 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]" data-animate-group="contact">
-    <Card className="space-y-8" data-animate="stagger">
+  <div class="mt-8">
+    <VisualAsset asset={contactVisual} eyebrow={section.eyebrow} title={section.title} body={section.body} className="min-h-[18rem] sm:min-h-[22rem] lg:min-h-[24rem]" />
+  </div>
+
+  <div class="mt-8 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]" data-animate-group="contact">
+    <Card className="space-y-8 bg-white/92" data-animate="stagger">
       <div class="grid gap-4 sm:grid-cols-2">
         <div>
           <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.mobileLabel}</p>
@@ -66,7 +73,7 @@ const whatsappLink = contact.whatsAppUrl;
       </div>
     </Card>
 
-    <Card className="space-y-6" data-animate="stagger">
+    <Card className="space-y-6 bg-white/92" data-animate="stagger">
       <div>
         <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.detectedEmailsLabel}</p>
         <div class="mt-4 space-y-2">

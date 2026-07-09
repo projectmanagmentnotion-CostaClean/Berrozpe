@@ -1,7 +1,9 @@
 ---
 import type { HomeSection } from '../data/types';
-import Section from './Section.astro';
+import { getPageVisual } from '../lib/content';
 import Card from './Card.astro';
+import Section from './Section.astro';
+import VisualAsset from './VisualAsset.astro';
 
 interface Props {
   section: HomeSection;
@@ -9,6 +11,7 @@ interface Props {
 }
 
 const { section, number } = Astro.props;
+const processVisual = getPageVisual('homeProcess');
 ---
 
 <Section
@@ -19,9 +22,12 @@ const { section, number } = Astro.props;
   body={section.body}
   className="border-t border-[var(--color-border)]"
 >
+  <div class="mt-10">
+    <VisualAsset asset={processVisual} eyebrow={section.eyebrow} title={section.title} body={section.body} compact={true} className="min-h-[20rem] sm:min-h-[24rem]" />
+  </div>
   <div class="mt-10 grid gap-5 lg:grid-cols-4" data-animate-group="process">
     {section.items?.map((item, index) => (
-      <Card className="space-y-8" data-animate="stagger">
+      <Card className="space-y-8 bg-white/92 backdrop-blur-sm" data-animate="stagger">
         <span class="text-sm font-medium text-[var(--color-text-soft)]">{String(index + 1).padStart(2, '0')}</span>
         <p class="text-base leading-8 text-[var(--color-text)]">{item}</p>
       </Card>

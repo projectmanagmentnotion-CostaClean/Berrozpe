@@ -1,0 +1,78 @@
+{
+  "home": {
+    "hero": {
+      "path": "/images/hero/instal-berrozpe-hero-premium.svg",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Composicion corporativa temporal de Instal Berrozpe para portada",
+      "temporary": true
+    },
+    "trust": {
+      "path": "/images/about/instal-berrozpe-fachada-corporativa-temporal.svg",
+      "width": 1600,
+      "height": 1100,
+      "alt": "Bloque visual corporativo temporal para confianza y empresa",
+      "temporary": true
+    },
+    "process": {
+      "path": "/images/hero/instal-berrozpe-proceso-editorial.svg",
+      "width": 1600,
+      "height": 960,
+      "alt": "Visual temporal del proceso de trabajo de Instal Berrozpe",
+      "temporary": true
+    },
+    "contact": {
+      "path": "/images/contact/instal-berrozpe-contacto-blanes.svg",
+      "width": 1600,
+      "height": 1100,
+      "alt": "Bloque visual temporal para la seccion de contacto de Instal Berrozpe",
+      "temporary": true
+    }
+  },
+  "about": {
+    "hero": {
+      "path": "/images/about/instal-berrozpe-fachada-corporativa-temporal.svg",
+      "width": 1600,
+      "height": 1100,
+      "alt": "Bloque visual corporativo temporal para la pagina sobre nosotros",
+      "temporary": true
+    }
+  },
+  "contact": {
+    "hero": {
+      "path": "/images/contact/instal-berrozpe-contacto-blanes.svg",
+      "width": 1600,
+      "height": 1100,
+      "alt": "Bloque visual temporal para la pagina de contacto",
+      "temporary": true
+    }
+  },
+  "services": {
+    "electricidad-y-domotica": {
+      "path": "/images/services/instal-berrozpe-servicio-electricidad-domotica.svg",
+      "width": 1400,
+      "height": 1000,
+      "alt": "Visual temporal del servicio de electricidad y domotica",
+      "temporary": true
+    },
+    "lampisteria-y-climatizacion": {
+      "path": "/images/services/instal-berrozpe-lampisteria-climatizacion.svg",
+      "width": 1400,
+      "height": 1000,
+      "alt": "Visual temporal del servicio de lampisteria y climatizacion",
+      "temporary": true
+    },
+    "alarmas-y-camaras": {
+      "path": "/images/services/instal-berrozpe-alarmas-camaras.svg",
+      "width": 1400,
+      "height": 1000,
+      "alt": "Visual temporal del servicio de alarmas y camaras",
+      "temporary": true
+    }
+  },
+  "og": {
+    "default": "/og/default.png",
+    "services": "/og/services.png",
+    "contact": "/og/contact.png"
+  }
+}

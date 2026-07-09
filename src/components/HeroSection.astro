@@ -1,8 +1,10 @@
 ---
 import type { HomeSection } from '../data/types';
+import { getPageVisual } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
 import EditorialLabel from './EditorialLabel.astro';
+import VisualAsset from './VisualAsset.astro';
 
 interface Props {
   section: HomeSection;
@@ -14,12 +16,13 @@ interface Props {
 }
 
 const { section, highlights = [] } = Astro.props;
+const heroVisual = getPageVisual('homeHero');
 ---
 
 <section class="relative overflow-hidden pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20" data-animate="hero">
   <Container size="wide">
-    <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-      <div class="space-y-7">
+    <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center xl:gap-14">
+      <div class="space-y-7 lg:pr-6">
         <EditorialLabel text={section.eyebrow} />
         <h1 class="max-w-5xl text-balance font-[var(--font-display)] text-[clamp(3rem,8vw,7.75rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-[var(--color-text)]">
           {section.title}
@@ -41,17 +44,27 @@ const { section, highlights = [] } = Astro.props;
         </div>
       </div>
 
-      {highlights.length > 0 && (
-        <div class="grid gap-4 sm:grid-cols-2" data-animate-group="hero-cards">
-          {highlights.map((highlight) => (
-            <div class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6" data-animate="stagger">
-              <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{highlight.label}</p>
-              <p class="mt-4 font-[var(--font-display)] text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)]">{highlight.value}</p>
-              {highlight.description && <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">{highlight.description}</p>}
-            </div>
-          ))}
-        </div>
-      )}
+      <div class="space-y-4" data-animate-group="hero-cards">
+        <VisualAsset
+          asset={heroVisual}
+          eyebrow={section.eyebrow}
+          title={section.primaryCtaLabel}
+          body={section.body}
+          className="min-h-[28rem] sm:min-h-[34rem] xl:min-h-[42rem]"
+          priority={true}
+        />
+        {highlights.length > 0 && (
+          <div class="grid gap-4 sm:grid-cols-2">
+            {highlights.map((highlight) => (
+              <div class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_18px_40px_rgba(2,6,23,0.08)]" data-animate="stagger">
+                <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{highlight.label}</p>
+                <p class="mt-4 font-[var(--font-display)] text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)]">{highlight.value}</p>
+                {highlight.description && <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">{highlight.description}</p>}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   </Container>
 </section>

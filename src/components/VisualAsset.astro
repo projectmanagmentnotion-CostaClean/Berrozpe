@@ -1,0 +1,56 @@
+---
+import type { VisualAssetEntry } from '../data/types';
+
+interface Props {
+  asset: VisualAssetEntry;
+  title?: string;
+  body?: string;
+  eyebrow?: string;
+  className?: string;
+  imageClassName?: string;
+  compact?: boolean;
+  priority?: boolean;
+}
+
+const {
+  asset,
+  title,
+  body,
+  eyebrow,
+  className = '',
+  imageClassName = '',
+  compact = false,
+  priority = false,
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    'group relative overflow-hidden rounded-[2.5rem] border border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.56))] shadow-[0_28px_90px_rgba(2,6,23,0.16)]',
+    compact ? 'min-h-[18rem]' : 'min-h-[24rem] sm:min-h-[28rem] lg:min-h-[36rem]',
+    className,
+  ]}
+  data-animate="image-reveal"
+>
+  <img
+    src={asset.path}
+    width={asset.width}
+    height={asset.height}
+    alt={asset.alt}
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    class:list={[
+      'absolute inset-0 h-full w-full object-cover object-center',
+      imageClassName,
+    ]}
+    data-animate="soft-parallax"
+  />
+  <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(249,250,251,0.08),rgba(249,250,251,0.82)_82%,rgba(249,250,251,0.96))]"></div>
+  <div class="absolute inset-x-0 bottom-0 p-5 sm:p-7 lg:p-9">
+    <div class="max-w-2xl rounded-[2rem] border border-white/50 bg-white/74 p-5 shadow-[0_18px_40px_rgba(2,6,23,0.08)] backdrop-blur-md" data-animate="visual-panel">
+      {eyebrow && <p class="text-[0.72rem] uppercase tracking-[0.24em] text-[var(--color-text-soft)]">{eyebrow}</p>}
+      {title && <p class="mt-3 font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:text-3xl">{title}</p>}
+      {body && <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)] sm:text-base">{body}</p>}
+    </div>
+  </div>
+</div>

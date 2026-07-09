@@ -2,6 +2,7 @@ import sharedSite from '../../content/shared/site.json';
 import sharedContact from '../../content/shared/contact.json';
 import sharedServicesIndex from '../../content/shared/services-index.json';
 import sharedRedirects from '../../content/shared/redirects.json';
+import sharedVisuals from '../../content/shared/visuals.json';
 import esNavigation from '../../content/locales/es/navigation.json';
 import caNavigation from '../../content/locales/ca/navigation.json';
 import enNavigation from '../../content/locales/en/navigation.json';
@@ -61,6 +62,7 @@ import type {
   SeoData,
   ServiceEntry,
   SharedContact,
+  SharedVisuals,
   SiteSettings,
 } from '../data/types';
 
@@ -90,6 +92,7 @@ const siteData = normalizeImportedContent(sharedSite);
 const contactData = normalizeImportedContent(sharedContact);
 const servicesIndexData = normalizeImportedContent(sharedServicesIndex);
 const redirectsData = normalizeImportedContent(sharedRedirects);
+const visualsData = normalizeImportedContent(sharedVisuals);
 
 export const LOCALES = siteData.supportedLocales as Locale[];
 export type Locale = (typeof LOCALES)[number];
@@ -129,6 +132,8 @@ export interface RouteCatalog {
   legal: Record<LegalPageId, string>;
   servicesById: Record<ServiceId, string>;
 }
+
+export type OgImageKind = 'default' | 'services' | 'contact';
 
 const navigationByLocale: Record<Locale, NavigationData> = {
   es: normalizeImportedContent(esNavigation),
@@ -293,6 +298,10 @@ export function getSharedContact(): SharedContact {
 
 export function getRedirectData(): RedirectData {
   return redirectsData;
+}
+
+export function getSharedVisuals(): SharedVisuals {
+  return visualsData;
 }
 
 export function getNavigation(locale?: string): NavigationData {
@@ -464,4 +473,40 @@ export function getLanguageSwitcherLinksForService(serviceId: string): Alternate
 
 export function getCanonicalUrl(path: string): string {
   return buildAbsoluteUrl(path);
+}
+
+export function getServiceVisual(serviceId: string) {
+  return visualsData.services[serviceId] ?? visualsData.home.hero;
+}
+
+export function getPageVisual(pageId: StaticPageId | 'homeHero' | 'homeTrust' | 'homeProcess' | 'homeContact') {
+  if (pageId === 'homeHero') {
+    return visualsData.home.hero;
+  }
+
+  if (pageId === 'homeTrust') {
+    return visualsData.home.trust;
+  }
+
+  if (pageId === 'homeProcess') {
+    return visualsData.home.process;
+  }
+
+  if (pageId === 'homeContact') {
+    return visualsData.home.contact;
+  }
+
+  if (pageId === 'about') {
+    return visualsData.about.hero;
+  }
+
+  if (pageId === 'contact') {
+    return visualsData.contact.hero;
+  }
+
+  return visualsData.home.hero;
+}
+
+export function getOgImagePath(kind: OgImageKind = 'default'): string {
+  return visualsData.og[kind];
 }

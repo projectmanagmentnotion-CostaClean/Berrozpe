@@ -10,6 +10,7 @@ interface Props {
   alternates: AlternateLink[];
   xDefaultPath?: string;
   noIndex?: boolean;
+  ogImagePath?: string;
 }
 
 const {
@@ -20,12 +21,14 @@ const {
   alternates,
   xDefaultPath,
   noIndex = false,
+  ogImagePath,
 } = Astro.props;
 
 const site = getSiteSettings(locale);
 const resolvedTitle = title ?? site.defaultTitle;
 const resolvedDescription = description ?? site.defaultDescription;
 const canonicalUrl = getCanonicalUrl(canonicalPath);
+const ogImageUrl = ogImagePath ? getCanonicalUrl(ogImagePath) : undefined;
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -56,9 +59,11 @@ const localBusinessSchema = {
 <meta property="og:title" content={resolvedTitle} />
 <meta property="og:description" content={resolvedDescription} />
 <meta property="og:url" content={canonicalUrl} />
+{ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={resolvedTitle} />
 <meta name="twitter:description" content={resolvedDescription} />
+{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
 {alternates.map((alternate) => (
   <link rel="alternate" hreflang={alternate.locale} href={getCanonicalUrl(alternate.href)} />
 ))}

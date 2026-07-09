@@ -65,6 +65,23 @@ summary::-webkit-details-marker {
   transform-origin: center top;
 }
 
+[data-animate="image-reveal"] {
+  will-change: transform, opacity;
+}
+
+[data-animate="soft-parallax"] {
+  will-change: transform;
+}
+
+[data-animate="visual-panel"] {
+  will-change: transform, opacity;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .text-balance {
   text-wrap: balance;
 }

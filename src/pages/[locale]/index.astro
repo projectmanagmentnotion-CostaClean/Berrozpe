@@ -11,6 +11,7 @@ import {
   getAllowedLocales,
   getHomeCollection,
   getLanguageSwitcherLinksForPage,
+  getOgImagePath,
   getPublishedServices,
   getRouteCatalog,
   getSeoData,
@@ -57,6 +58,7 @@ const heroHighlights = [
   description={seo.descriptions.home}
   canonicalPath={routes.home}
   alternates={getLanguageSwitcherLinksForPage('home')}
+  ogImagePath={getOgImagePath('default')}
 >
   <HeroSection section={home.hero} highlights={heroHighlights} />
   <StatementSection locale={locale} section={home.whyChooseUs} />

@@ -1,6 +1,6 @@
 ---
 import type { Locale, LocalizedServiceEntry } from '../lib/content';
-import { getNavigation, getServiceRouteById } from '../lib/content';
+import { getNavigation, getServiceRouteById, getServiceVisual } from '../lib/content';
 import Badge from './Badge.astro';
 import Button from './Button.astro';
 import Card from './Card.astro';
@@ -14,9 +14,21 @@ interface Props {
 const { locale, service, index } = Astro.props;
 const navigation = getNavigation(locale);
 const href = getServiceRouteById(service.serviceId, locale) ?? '#';
+const visual = getServiceVisual(service.serviceId);
 ---
 
-<Card className="flex h-full flex-col justify-between" data-animate="stagger">
+<Card className="flex h-full flex-col justify-between gap-6 bg-white/92" data-animate="stagger">
+  <div class="overflow-hidden rounded-[1.6rem] border border-[var(--color-border)] bg-white/70" data-animate="image-reveal">
+    <img
+      src={visual.path}
+      width={visual.width}
+      height={visual.height}
+      alt={visual.alt}
+      loading="lazy"
+      class="h-56 w-full object-cover object-center"
+      data-animate="soft-parallax"
+    />
+  </div>
   <div class="space-y-5">
     <div class="flex items-center justify-between gap-4">
       <Badge text={`${String(index + 1).padStart(2, '0')}`} />
@@ -30,7 +42,7 @@ const href = getServiceRouteById(service.serviceId, locale) ?? '#';
     </div>
   </div>
 
-  <div class="mt-8">
+  <div class="mt-auto">
     <Button href={href} variant="secondary">
       {navigation.ui.serviceLink}
     </Button>

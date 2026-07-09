@@ -11,6 +11,7 @@
 
 - Paginas estaticas: `content/locales/{locale}/seo.json`
 - Servicios equivalentes: `content/shared/services-index.json`
+- Visuales y OG temporales: `content/shared/visuals.json`
 - Helpers SEO: [src/lib/content.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/content.ts)
 - Head comun: [src/components/SeoHead.astro](/C:/Users/USUARIO/Documents/Berrozpe/src/components/SeoHead.astro)
 
@@ -50,3 +51,14 @@ Los detalles de servicio no se hardcodean en `seo.json`; salen de `services-inde
 - Antiguedad/experiencia exacta
 - Certificaciones
 - Garantias
+
+## Open Graph actual
+
+- Home, sobre nosotros y legales: `/og/default.png`
+- Servicios indice y detalle: `/og/services.png`
+- Contacto: `/og/contact.png`
+
+Estado:
+
+- OG corporativos temporales, sin fotos reales no verificadas.
+- `SeoHead.astro` ya emite `og:title`, `og:description`, `og:image`, `canonical`, `hreflang` y `x-default`.

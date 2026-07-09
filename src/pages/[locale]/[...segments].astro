@@ -2,13 +2,13 @@
 import BigTextBlock from '../../components/BigTextBlock.astro';
 import ContactSection from '../../components/ContactSection.astro';
 import Container from '../../components/Container.astro';
-import FAQSection from '../../components/FAQSection.astro';
 import ProcessSection from '../../components/ProcessSection.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import StatementSection from '../../components/StatementSection.astro';
+import VisualAsset from '../../components/VisualAsset.astro';
 import WhyChooseUs from '../../components/WhyChooseUs.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import type { LegalPageId, Locale, LocalizedLegalPage, LocalizedServiceEntry, ServiceId } from '../../lib/content';
+import type { LegalPageId, Locale, ServiceId } from '../../lib/content';
 import {
   getAllowedLocales,
   getHomeCollection,
@@ -17,12 +17,15 @@ import {
   getLegalPageById,
   getLegalPages,
   getNavigation,
+  getOgImagePath,
+  getPageVisual,
   getPathWithoutLocalePrefix,
   getPublishedServices,
   getRouteCatalog,
   getSeoData,
   getServiceById,
   getServiceRouteById,
+  getServiceVisual,
 } from '../../lib/content';
 
 type PageKind = 'services-index' | 'service-detail' | 'about' | 'contact' | 'legal';
@@ -132,6 +135,7 @@ if (kind === 'legal' && !legalPage) {
     ? getLanguageSwitcherLinksForService(serviceId)
     : getLanguageSwitcherLinksForPage((legalPageId ?? (kind === 'services-index' ? 'services' : kind)) as LegalPageId | 'services' | 'about' | 'contact')}
   xDefaultPath={kind === 'service-detail' && serviceId ? getServiceRouteById(serviceId, 'es') : undefined}
+  ogImagePath={kind === 'contact' ? getOgImagePath('contact') : kind === 'service-detail' || kind === 'services-index' ? getOgImagePath('services') : getOgImagePath('default')}
 >
   {kind === 'services-index' && (
     <section class="border-t border-[var(--color-border)] py-16 sm:py-20 lg:py-28" data-animate="reveal">
@@ -166,6 +170,17 @@ if (kind === 'legal' && !legalPage) {
           />
         </Container>
       </section>
+      <section class="pb-2">
+        <Container>
+          <VisualAsset
+            asset={getPageVisual('about')}
+            eyebrow={home.whyChooseUs.eyebrow}
+            title={home.whyChooseUs.title}
+            body={home.whyChooseUs.body}
+            className="min-h-[24rem] sm:min-h-[30rem]"
+          />
+        </Container>
+      </section>
       <StatementSection locale={locale} section={home.whyChooseUs} />
       <WhyChooseUs section={home.whyChooseUs} number="02" />
       <ContactSection locale={locale} section={home.contactCta} number="03" />
@@ -174,7 +189,7 @@ if (kind === 'legal' && !legalPage) {
 
   {kind === 'contact' && (
     <>
-      <section class="py-16 sm:py-20 lg:py-28" data-animate="hero">
+      <section class="pb-8 pt-16 sm:pb-10 sm:pt-20 lg:pb-12 lg:pt-24" data-animate="hero">
         <Container>
           <BigTextBlock
             eyebrow={home.contactCta.eyebrow}
@@ -185,23 +200,33 @@ if (kind === 'legal' && !legalPage) {
           />
         </Container>
       </section>
-      <ContactSection locale={locale} section={home.contactCta} number="02" showForm={true} />
+      <ContactSection locale={locale} section={home.contactCta} number="02" showForm={true} showHeading={false} />
     </>
   )}
 
   {kind === 'service-detail' && service && (
     <>
       <section class="py-16 sm:py-20 lg:py-28" data-animate="hero">
-        <Container size="narrow">
-          <div class="space-y-8">
-            <BigTextBlock
+        <Container size="wide">
+          <div class="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div class="space-y-8">
+              <BigTextBlock
+                eyebrow={navigation.ui.serviceEyebrow}
+                number="01"
+                title={service.heroTitle}
+                body={service.intro}
+                titleClassName="max-w-4xl"
+              />
+              <p class="max-w-3xl text-pretty text-lg leading-8 text-[var(--color-text-muted)]">{service.summary}</p>
+            </div>
+            <VisualAsset
+              asset={getServiceVisual(service.serviceId)}
               eyebrow={navigation.ui.serviceEyebrow}
-              number="01"
-              title={service.heroTitle}
-              body={service.intro}
-              titleClassName="max-w-4xl"
+              title={service.shortTitle}
+              body={service.summary}
+              className="min-h-[26rem] sm:min-h-[32rem] xl:min-h-[38rem]"
+              priority={true}
             />
-            <p class="max-w-3xl text-pretty text-lg leading-8 text-[var(--color-text-muted)]">{service.summary}</p>
           </div>
         </Container>
       </section>
@@ -209,7 +234,7 @@ if (kind === 'legal' && !legalPage) {
       <section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
         <Container>
           <div class="grid gap-5 lg:grid-cols-2" data-animate-group="service-panels">
-            <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8" data-animate="stagger">
+            <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
               <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{service.includes.title}</p>
               <ul class="mt-6 space-y-3 text-base leading-8 text-[var(--color-text)]">
                 {service.includes.items.map((item) => (
@@ -218,7 +243,7 @@ if (kind === 'legal' && !legalPage) {
               </ul>
             </article>
 
-            <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8" data-animate="stagger">
+            <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
               <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{service.benefits.title}</p>
               <ul class="mt-6 space-y-3 text-base leading-8 text-[var(--color-text)]">
                 {service.benefits.items.map((item) => (
@@ -227,6 +252,19 @@ if (kind === 'legal' && !legalPage) {
               </ul>
             </article>
           </div>
+        </Container>
+      </section>
+
+      <section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
+        <Container>
+          <VisualAsset
+            asset={getServiceVisual(service.serviceId)}
+            eyebrow={navigation.ui.benefitsTitle}
+            title={service.benefits.title}
+            body={service.benefits.items.join(' ')}
+            compact={true}
+            className="min-h-[20rem] sm:min-h-[24rem]"
+          />
         </Container>
       </section>
 
@@ -248,7 +286,7 @@ if (kind === 'legal' && !legalPage) {
           </div>
           <div class="mt-10 grid gap-4 lg:grid-cols-3" data-animate-group="service-faqs">
             {service.faqs.items.map((item) => (
-              <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8" data-animate="stagger">
+              <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
                 <h2 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">{item.question}</h2>
                 <p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">{item.answer}</p>
               </article>
@@ -317,7 +355,7 @@ if (kind === 'legal' && !legalPage) {
 
           <div class="space-y-6" data-animate-group="legal-sections">
             {legalPage.sections.map((section) => (
-              <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8" data-animate="stagger">
+              <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
                 <h2 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">{section.heading}</h2>
                 <div class="mt-4 space-y-4">
                   {section.body.map((paragraph) => (

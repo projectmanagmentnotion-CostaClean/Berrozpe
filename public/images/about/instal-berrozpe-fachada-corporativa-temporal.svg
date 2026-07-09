@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Visual corporativo temporal de empresa y fachada</title>
+  <desc id="desc">Panel corporativo temporal para sobre nosotros mientras faltan imagenes reales locales.</desc>
+  <rect width="1600" height="1100" fill="#f8fafc"/>
+  <rect x="130" y="120" width="1340" height="860" rx="48" fill="#ffffff" stroke="#1e293b" stroke-opacity=".08"/>
+  <circle cx="1260" cy="250" r="250" fill="#ff7700" opacity=".11"/>
+  <circle cx="280" cy="870" r="270" fill="#045cb4" opacity=".12"/>
+  <g transform="translate(220 240)">
+    <rect width="520" height="440" rx="36" fill="#1e293b"/>
+    <rect x="58" y="64" width="404" height="220" rx="26" fill="#f9fafb" opacity=".12"/>
+    <rect x="58" y="320" width="230" height="18" rx="9" fill="#f9fafb" opacity=".78"/>
+    <rect x="58" y="356" width="300" height="14" rx="7" fill="#f9fafb" opacity=".38"/>
+  </g>
+  <g transform="translate(820 220)">
+    <rect width="500" height="180" rx="32" fill="#045cb4"/>
+    <rect y="240" width="500" height="260" rx="32" fill="#ffffff" stroke="#045cb4" stroke-opacity=".12"/>
+    <path d="M90 130h320" stroke="#ff7700" stroke-width="14" stroke-linecap="round"/>
+    <path d="M70 350h360" stroke="#1e293b" stroke-width="16" stroke-linecap="round" opacity=".68"/>
+    <path d="M70 398h300" stroke="#1e293b" stroke-width="10" stroke-linecap="round" opacity=".24"/>
+  </g>
+</svg>

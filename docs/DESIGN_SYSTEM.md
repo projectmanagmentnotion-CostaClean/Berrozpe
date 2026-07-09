@@ -72,8 +72,25 @@ Definidos en [src/styles/global.css](/C:/Users/USUARIO/Documents/Berrozpe/src/st
 - ContactCTA
 - FAQSection
 - ContactSection
+- VisualAsset
 
 Todas consumen `content/` o props, sin copy comercial embebido.
+
+## Sistema visual del sprint
+
+- Cada bloque principal puede apoyarse en un visual grande por seccion.
+- Los visuales actuales salen de `content/shared/visuals.json`.
+- La pieza comun para renderizarlos es [src/components/VisualAsset.astro](/C:/Users/USUARIO/Documents/Berrozpe/src/components/VisualAsset.astro).
+- Si no existe fotografia real confirmada, se usa un placeholder corporativo temporal documentado.
+- Los `alt` de estos visuales describen el asset como composicion temporal, sin afirmar trabajos reales no verificados.
+
+## Composicion premium aplicada
+
+- Home hero a dos columnas con visual grande editorial.
+- Servicios con cards mas visuales y portada individual por servicio.
+- Sobre nosotros con bloque visual amplio previo al contenido.
+- Contacto con visual corporativo, datos estructurados y formulario separado.
+- CTA final con bloque amplio y soporte visual.
 
 ## Responsive
 

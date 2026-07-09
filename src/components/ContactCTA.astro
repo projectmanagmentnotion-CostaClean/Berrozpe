@@ -1,10 +1,11 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { getNavigation, getSharedContact } from '../lib/content';
+import { getNavigation, getPageVisual, getSharedContact } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
 import EditorialLabel from './EditorialLabel.astro';
+import VisualAsset from './VisualAsset.astro';
 
 interface Props {
   locale: Locale;
@@ -16,13 +17,14 @@ const contact = getSharedContact();
 const navigation = getNavigation(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
 const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp')?.label ?? 'WhatsApp';
+const contactVisual = getPageVisual('homeContact');
 ---
 
 <section class="py-16 sm:py-20 lg:py-28" data-animate="cta">
   <Container>
     <div class="rounded-[2.5rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-6 py-10 sm:px-10 sm:py-12">
       <EditorialLabel text={section.eyebrow} />
-      <div class="mt-6 grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+      <div class="mt-6 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div class="space-y-5">
           <h2 class="font-[var(--font-display)] text-4xl font-semibold leading-[0.95] tracking-[-0.04em] text-[var(--color-text)] sm:text-5xl lg:text-7xl">
             {section.title}
@@ -30,6 +32,7 @@ const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp
           <p class="max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">
             {section.body}
           </p>
+          <VisualAsset asset={contactVisual} eyebrow={section.eyebrow} title={section.title} body={section.body} compact={true} className="min-h-[18rem] sm:min-h-[22rem]" />
         </div>
 
         <div class="space-y-6">

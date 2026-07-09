@@ -1,7 +1,7 @@
 ---
 import type { HomeSection } from '../data/types';
-import Section from './Section.astro';
 import Card from './Card.astro';
+import Section from './Section.astro';
 
 interface Props {
   section: HomeSection;
@@ -21,7 +21,7 @@ const { section, number } = Astro.props;
 >
   <div class="mt-10 grid gap-4 lg:grid-cols-3" data-animate-group="faq">
     {section.items?.map((item) => (
-      <Card className="h-full" data-animate="stagger">
+      <Card className="h-full bg-white/92" data-animate="stagger">
         <p class="text-base leading-8 text-[var(--color-text)]">{item}</p>
       </Card>
     ))}
