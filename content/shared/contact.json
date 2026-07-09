@@ -26,7 +26,7 @@
     "david@instalberrozpe.com",
     "comercial@instalberrozpe.com"
   ],
-  "primaryEmail": null,
+  "primaryEmail": "david@instalberrozpe.com",
   "whatsAppUrl": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%20quiero%20informacion%20😁",
   "socialLinks": [
     {
@@ -41,7 +41,6 @@
     }
   ],
   "pendingConfirmation": [
-    "Confirmar qué email debe ser el principal entre david@instalberrozpe.com y comercial@instalberrozpe.com.",
     "Confirmar si el teléfono fijo debe seguir mostrándose como teléfono/fax en la nueva web."
   ]
 }

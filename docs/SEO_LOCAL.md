@@ -1,22 +1,22 @@
 # SEO Local
 
-## Estado técnico actual
+## Estado tecnico actual
 
-- Canonical por página apuntando a su propia URL localizada.
+- Canonical por pagina apuntando a su propia URL localizada.
 - `hreflang` completo en `es`, `ca`, `en`, `de` y `x-default`.
-- Selector de idioma enlazando a la página equivalente, no siempre a la home.
-- Sitemap estático generado por Astro con las URLs finales de los cuatro idiomas.
+- Selector de idioma enlazando a la pagina equivalente, no siempre a la home.
+- Sitemap estatico generado por Astro con las URLs finales de los cuatro idiomas.
 
 ## Fuente de verdad
 
-- Páginas estáticas: `content/locales/{locale}/seo.json`
+- Paginas estaticas: `content/locales/{locale}/seo.json`
 - Servicios equivalentes: `content/shared/services-index.json`
 - Helpers SEO: [src/lib/content.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/content.ts)
-- Head común: [src/components/SeoHead.astro](/C:/Users/USUARIO/Documents/Berrozpe/src/components/SeoHead.astro)
+- Head comun: [src/components/SeoHead.astro](/C:/Users/USUARIO/Documents/Berrozpe/src/components/SeoHead.astro)
 
 ## Hreflang
 
-Los grupos estáticos definidos son:
+Los grupos estaticos definidos son:
 
 - `home`
 - `services`
@@ -29,24 +29,24 @@ Los grupos estáticos definidos son:
 
 Los detalles de servicio no se hardcodean en `seo.json`; salen de `services-index.json` mediante `serviceId`.
 
-## Política de raíz
+## Politica de raiz
 
-- `/` existe solo como redirección controlada a `/es/`.
-- `x-default` resuelve a la URL española equivalente.
-- El sitemap incluye la raíz técnica y todas las rutas finales localizadas.
+- `/` existe solo como redireccion controlada a `/es/`.
+- `x-default` resuelve a la URL espanola equivalente.
+- El sitemap incluye la raiz tecnica y todas las rutas finales localizadas.
 
 ## Datos locales confirmados reutilizables
 
 - Marca: `Instal Berrozpe`
 - Localidad: `Blanes`
-- Región: `Girona`
-- Dirección auditada: `C/ Antiga nº 68, Baixos, 17300 Blanes (Girona)`
-- Teléfonos auditados: `676 04 33 89` y `872 986 161`
+- Region: `Girona`
+- Direccion auditada: `C/ Antiga nº 68, Baixos, 17300 Blanes (Girona)`
+- Telefonos auditados: `676 04 33 89` y `872 986 161`
+- Email principal confirmado: `david@instalberrozpe.com`
 
-## Datos todavía pendientes
+## Datos todavia pendientes
 
-- `primaryEmail`
 - Cobertura exacta por municipios o comarcas
-- Antigüedad/experiencia exacta
+- Antiguedad/experiencia exacta
 - Certificaciones
-- Garantías
+- Garantias

@@ -29,7 +29,7 @@
     "items": [
       "Three main services confirmed.",
       "Address, mobile, phone/fax and opening hours detected on the current site.",
-      "Primary email pending confirmation.",
+      "Primary email confirmed: david@instalberrozpe.com.",
       "Exact geographic coverage still pending definition."
     ]
   },
@@ -49,7 +49,7 @@
     "sectionId": "contact-cta",
     "eyebrow": "Contact",
     "title": "Partially confirmed contact data",
-    "body": "Address, phones and opening hours are confirmed. The primary email still needs editorial validation.",
+    "body": "Address, phones, opening hours and the primary email are confirmed.",
     "primaryCtaLabel": "Mobile",
     "secondaryCtaLabel": "Detected emails"
   },

@@ -29,7 +29,7 @@
     "items": [
       "Tres serveis principals confirmats.",
       "Adreça, mòbil, telèfon/fax i horari detectats a la web actual.",
-      "Email principal pendent de confirmació.",
+      "Email principal confirmat: david@instalberrozpe.com.",
       "Cobertura geogràfica exacta pendent de definir."
     ]
   },
@@ -49,7 +49,7 @@
     "sectionId": "contact-cta",
     "eyebrow": "Contacte",
     "title": "Contacte confirmat parcialment",
-    "body": "L'adreça, els telèfons i l'horari estan confirmats. L'email principal continua pendent de validació editorial.",
+    "body": "L'adreça, els telèfons, l'horari i l'email principal estan confirmats.",
     "primaryCtaLabel": "Mòbil",
     "secondaryCtaLabel": "Emails detectats"
   },

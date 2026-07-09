@@ -29,7 +29,7 @@
     "items": [
       "Drei Hauptleistungen bestätigt.",
       "Adresse, Mobilnummer, Telefon/Fax und Öffnungszeiten auf der aktuellen Website erkannt.",
-      "Haupt-E-Mail noch nicht bestätigt.",
+      "Haupt-E-Mail bestätigt: david@instalberrozpe.com.",
       "Genaue geografische Abdeckung noch offen."
     ]
   },
@@ -49,7 +49,7 @@
     "sectionId": "contact-cta",
     "eyebrow": "Kontakt",
     "title": "Kontaktdaten teilweise bestätigt",
-    "body": "Adresse, Telefonnummern und Öffnungszeiten sind bestätigt. Die Haupt-E-Mail benötigt noch redaktionelle Validierung.",
+    "body": "Adresse, Telefonnummern, Öffnungszeiten und die Haupt-E-Mail sind bestätigt.",
     "primaryCtaLabel": "Mobil",
     "secondaryCtaLabel": "Erkannte E-Mails"
   },
