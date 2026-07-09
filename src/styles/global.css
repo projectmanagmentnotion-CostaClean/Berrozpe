@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --color-bg: #08111e;
-  --color-bg-elevated: rgba(10, 19, 33, 0.92);
-  --color-surface: rgba(255, 255, 255, 0.035);
-  --color-border: rgba(197, 213, 236, 0.14);
-  --color-border-strong: rgba(197, 213, 236, 0.3);
-  --color-text: #f6f8fb;
-  --color-text-muted: rgba(238, 243, 252, 0.78);
-  --color-text-soft: rgba(214, 224, 238, 0.56);
-  --color-accent: #d8f0ff;
-  --color-accent-soft: #edf8ff;
-  --color-ink: #07111f;
-  --color-header: rgba(8, 17, 30, 0.78);
+  color-scheme: light;
+  --color-bg: #f9fafb;
+  --color-bg-elevated: rgba(255, 255, 255, 0.92);
+  --color-surface: rgba(255, 255, 255, 0.88);
+  --color-border: rgba(148, 163, 184, 0.26);
+  --color-border-strong: rgba(4, 92, 180, 0.28);
+  --color-text: #1e293b;
+  --color-text-muted: rgba(51, 65, 85, 0.82);
+  --color-text-soft: rgba(51, 65, 85, 0.62);
+  --color-accent: #ff7700;
+  --color-accent-soft: #ff8f2b;
+  --color-secondary: #045cb4;
+  --color-secondary-soft: #0b6ed0;
+  --color-ink: #ffffff;
+  --color-header: rgba(249, 250, 251, 0.88);
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "URW Palladio L", serif;
   --font-body: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
 }
@@ -26,7 +28,11 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: var(--font-body);
-  background: var(--color-bg);
+  background:
+    radial-gradient(circle at top left, rgba(255, 119, 0, 0.08), transparent 24rem),
+    radial-gradient(circle at top right, rgba(4, 92, 180, 0.08), transparent 28rem),
+    var(--color-bg);
+  color: var(--color-text);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -51,7 +57,7 @@ summary::-webkit-details-marker {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
 }
 
