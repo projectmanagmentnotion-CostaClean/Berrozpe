@@ -4,6 +4,7 @@ import ConversionLinkBlock from '../../components/ConversionLinkBlock.astro';
 import FAQSection from '../../components/FAQSection.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ProcessSection from '../../components/ProcessSection.astro';
+import ReviewsSection from '../../components/ReviewsSection.astro';
 import ServicesPreview from '../../components/ServicesPreview.astro';
 import StatementSection from '../../components/StatementSection.astro';
 import WhyChooseUs from '../../components/WhyChooseUs.astro';
@@ -14,6 +15,7 @@ import {
   getInternalLinks,
   getInternalLinksContent,
   getLanguageSwitcherLinksForPage,
+  getLocalBusinessSchema,
   getOgImagePath,
   getPublishedServices,
   getRouteCatalog,
@@ -64,6 +66,7 @@ const heroHighlights = [
   canonicalPath={routes.home}
   alternates={getLanguageSwitcherLinksForPage('home')}
   ogImagePath={getOgImagePath('default')}
+  schema={getLocalBusinessSchema(locale, { path: routes.home, includeAggregateRating: true })}
 >
   <HeroSection section={home.hero} highlights={heroHighlights} />
   <StatementSection locale={locale} section={home.whyChooseUs} />
@@ -95,6 +98,7 @@ const heroHighlights = [
   />
   <ProcessSection section={home.process} number="03" />
   <WhyChooseUs section={home.whyChooseUs} number="04" />
+  <ReviewsSection locale={locale} number="05" />
   <ContactCTA locale={locale} section={home.contactCta} />
-  <FAQSection section={home.faqs} number="05" />
+  <FAQSection section={home.faqs} number="06" />
 </BaseLayout>

@@ -38,6 +38,13 @@ La salida final queda en `dist/`.
 - Si JavaScript esta activo, el formulario envia por `fetch` y recibe JSON.
 - Si JavaScript falla, el navegador puede enviar el `POST` al handler y este redirige a la pagina de contacto localizada con `?status=success` o `?status=error`.
 
+Pruebas obligatorias antes de produccion:
+
+- confirmar recepcion real en `david@instalberrozpe.com`
+- revisar carpeta de spam
+- confirmar si `mail()` funciona correctamente en SiteGround
+- preparar SMTP si `mail()` no entrega de forma fiable
+
 ## Verificaciones recomendadas
 
 - Carga del home y de las 4 paginas de contacto.
@@ -47,6 +54,10 @@ La salida final queda en `dist/`.
 - Selector de idioma intacto en contacto y en detalle de servicio.
 - `dist/form-handler.php` presente tras la build.
 - El formulario muestra exito y error sin introducir cookies opcionales nuevas.
+- WhatsApp abre con mensaje prellenado correcto en cada idioma.
+- Google Maps abre la direccion confirmada.
+- El bloque de reseñas muestra `4,9` y `67 reseñas`.
+- El boton de reseña abre `https://g.page/r/CagAPRsZ3RSuEBM/review`.
 - Los assets OG y visuales existen en `dist/`.
 - Los enlaces internos llevan al idioma correcto.
 - ScrollTrigger reversible no deja bloques invisibles al subir y bajar.
@@ -68,3 +79,4 @@ La salida final queda en `dist/`.
 - Probar el formulario con JS activo y fallback sin JS.
 - Probar el banner y modal de cookies en al menos `es` y `en`.
 - Probar ScrollTrigger en desktop y mobile.
+- Usar [STAGING_SITEGROUND_CHECKLIST.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/STAGING_SITEGROUND_CHECKLIST.md) antes de subir a produccion.

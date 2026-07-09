@@ -1,0 +1,100 @@
+---
+import type { Locale } from '../lib/content';
+import { buildWhatsAppUrl, getNavigation, getRouteCatalog, getWhatsAppContent } from '../lib/content';
+import Button from './Button.astro';
+
+interface Props {
+  locale: Locale;
+  variant?: 'floating' | 'inline' | 'large';
+  message?: string;
+  className?: string;
+}
+
+const { locale, variant = 'inline', message, className = '' } = Astro.props;
+const content = getWhatsAppContent(locale);
+const navigation = getNavigation(locale);
+const routes = getRouteCatalog(locale);
+const href = buildWhatsAppUrl(locale, message);
+const contactLabel = navigation.items.find((item) => item.id === 'contact')?.label ?? 'Contact';
+---
+
+{variant === 'floating' && (
+  <>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={content.ariaLabel}
+      class:list={[
+        'berrozpe-whatsapp-floating group fixed right-4 z-30 inline-flex min-h-14 items-center gap-3 rounded-full border border-[var(--color-secondary)] bg-[var(--color-secondary)] px-4 py-3 text-sm font-semibold text-white shadow-[0_20px_45px_rgba(4,92,180,0.28)] transition hover:bg-[var(--color-secondary-soft)] sm:right-5 sm:px-5',
+        className,
+      ]}
+      data-whatsapp-floating
+    >
+      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white/18 text-lg" aria-hidden="true">W</span>
+      <span class="hidden sm:inline">{content.floatingText}</span>
+    </a>
+    <script is:inline>
+      const consentSelector = '[data-cookie-consent-root]';
+      const floatingSelector = '[data-whatsapp-floating]';
+      const defaultOffset = 16;
+
+      const syncWhatsAppOffset = () => {
+        const floating = document.querySelector(floatingSelector);
+        if (!(floating instanceof HTMLElement)) return;
+
+        const consent = document.querySelector(consentSelector);
+        let offset = defaultOffset;
+
+        if (consent instanceof HTMLElement && !consent.hasAttribute('hidden')) {
+          const styles = window.getComputedStyle(consent);
+          if (styles.display !== 'none' && styles.visibility !== 'hidden') {
+            offset += consent.getBoundingClientRect().height + 12;
+          }
+        }
+
+        floating.style.bottom = `${offset}px`;
+      };
+
+      const bootWhatsAppFloating = () => {
+        syncWhatsAppOffset();
+        const consent = document.querySelector(consentSelector);
+        if (consent instanceof HTMLElement) {
+          const observer = new MutationObserver(syncWhatsAppOffset);
+          observer.observe(consent, { attributes: true, childList: true, subtree: true });
+          window.addEventListener('resize', syncWhatsAppOffset, { passive: true });
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bootWhatsAppFloating, { once: true });
+      } else {
+        bootWhatsAppFloating();
+      }
+    </script>
+  </>
+)}
+
+{variant === 'inline' && (
+  <Button href={href} variant="secondary" target="_blank" rel="noopener noreferrer" className={className}>
+    {content.label}
+  </Button>
+)}
+
+{variant === 'large' && (
+  <article class:list={['rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 sm:p-8', className]}>
+    <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{content.shortLabel}</p>
+    <h2 class="mt-4 font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:text-3xl">
+      {content.sectionTitle}
+    </h2>
+    <p class="mt-4 max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">{content.sectionDescription}</p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <Button href={href} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
+        {content.label}
+      </Button>
+      <Button href={routes.contact} variant="ghost" size="lg">
+        {contactLabel}
+      </Button>
+    </div>
+  </article>
+)}

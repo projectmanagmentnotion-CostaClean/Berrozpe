@@ -66,6 +66,7 @@
 - Enlace a privacidad presente en el consentimiento
 - `form-handler.php` generado en `dist/`
 - Validacion backend y frontend intactas tras el sprint
+- Destinatario confirmado: `david@instalberrozpe.com`
 
 ## GSAP reversible
 
@@ -88,6 +89,15 @@
 - Multidioma:
   - sin saltos accidentales entre idiomas durante QA
 
+## Conversion local cerrada
+
+- WhatsApp visible en layout, header, home, contacto, detalle de servicio y footer
+- Google Maps integrado como enlace externo sin iframe
+- Reseñas Google Business visibles en home y contacto: `4,9` y `67 reseñas`
+- Boton para dejar reseña activo
+- Sin reseñas escritas inventadas
+- Sin `Review` schema individual
+
 ## Assets
 
 - Placeholders corporativos temporales documentados
@@ -105,14 +115,9 @@
   - `1440x900`
   - `1920x1080`
 - Resultado:
-  - sin overflow horizontal detectado
-  - header usable
-  - menu movil usable
-  - selector de idioma usable
-  - CTAs visibles
-  - bloques visuales sin deformacion apreciable
-  - formulario usable en contacto
-  - enlaces internos visibles
+  - build y HTML final verificados
+  - no se detecto overflow en la salida validada
+  - bloqueo actual: el navegador integrado no alcanza `localhost` desde su sandbox y Chrome headless local no esta dejando capturas persistentes en este entorno, asi que la validacion visual automatizada queda pendiente de comprobacion manual final en navegador real antes de staging
 
 ## Lighthouse
 
@@ -128,6 +133,7 @@
 - Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
 - Ejecutar Lighthouse real en staging
 - Probar `mail()` en el hosting de SiteGround
+- Ejecutar una pasada visual manual final en navegador real antes de staging
 
 ## Checklist staging
 

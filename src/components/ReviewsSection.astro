@@ -1,0 +1,142 @@
+---
+import type { Locale } from '../lib/content';
+import { getReviewsContent, getSharedReviews } from '../lib/content';
+import Button from './Button.astro';
+import Card from './Card.astro';
+import Section from './Section.astro';
+
+interface Props {
+  locale: Locale;
+  number?: string;
+  compact?: boolean;
+  className?: string;
+  id?: string;
+}
+
+const { locale, number, compact = false, className = '', id } = Astro.props;
+const content = getReviewsContent(locale);
+const reviews = getSharedReviews();
+const fullStars = Math.floor(reviews.aggregateRating.ratingValue);
+const hasHalfStar = reviews.aggregateRating.ratingValue - fullStars >= 0.5;
+const starItems = Array.from({ length: 5 }, (_, index) => {
+  if (index < fullStars) {
+    return 'full';
+  }
+
+  if (index === fullStars && hasHalfStar) {
+    return 'half';
+  }
+
+  return 'empty';
+});
+---
+
+{compact ? (
+  <div id={id} class:list={['grid gap-5 lg:grid-cols-[1.1fr_0.9fr]', className]} data-animate-group="reviews">
+    <Card className="bg-white/92" data-animate="stagger">
+      <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{reviews.googleBusinessName}</p>
+      <h2 class="mt-4 font-[var(--font-display)] text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl">
+        {content.title}
+      </h2>
+      <p class="mt-4 max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">{content.intro}</p>
+
+      <div class="mt-6 flex flex-wrap items-center gap-4">
+        <div class="flex items-center gap-1 text-2xl text-[var(--color-accent)]" aria-hidden="true">
+          {starItems.map((star) => (
+            <span>{star === 'empty' ? '☆' : '★'}</span>
+          ))}
+        </div>
+        <div class="space-y-1">
+          <p class="text-lg font-semibold text-[var(--color-text)]">{content.ratingLabel}</p>
+          <p class="text-sm text-[var(--color-text-muted)]">{content.reviewCountLabel}</p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-sm leading-7 text-[var(--color-text-soft)]">{content.trustNote}</p>
+    </Card>
+
+    <Card className="bg-white/92" data-animate="stagger">
+      <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{content.leaveReviewTitle}</p>
+      <p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">{content.leaveReviewText}</p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <Button href={reviews.reviewRequestUrl} variant="primary" target="_blank" rel="noopener noreferrer">
+          {content.leaveReviewButton}
+        </Button>
+        {reviews.googleBusinessUrl && (
+          <Button href={reviews.googleBusinessUrl} variant="secondary" target="_blank" rel="noopener noreferrer">
+            {content.viewProfileButton}
+          </Button>
+        )}
+      </div>
+
+      {reviews.reviews.length > 0 ? (
+        <div class="mt-6 space-y-4">
+          {reviews.reviews.map((review) => (
+            <article class="rounded-[1.5rem] border border-[var(--color-border)] bg-white/55 p-5">
+              <p class="text-sm font-semibold text-[var(--color-text)]">{review.author}</p>
+              <p class="mt-3 text-base leading-8 text-[var(--color-text-muted)]">{review.reviewBody}</p>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <p class="mt-6 text-sm leading-7 text-[var(--color-text-soft)]">{content.noReviewsFallback}</p>
+      )}
+    </Card>
+  </div>
+) : (
+  <Section id={id} number={number} eyebrow={reviews.googleBusinessName} title={content.title} body={content.intro} className="border-t border-[var(--color-border)]">
+    <div class:list={['mt-8 grid gap-5 lg:grid-cols-[0.95fr_1.05fr]', className]} data-animate-group="reviews">
+      <Card className="bg-white/92" data-animate="stagger">
+        <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{reviews.googleBusinessName}</p>
+        <h2 class="mt-4 font-[var(--font-display)] text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl">
+          {content.title}
+        </h2>
+        <p class="mt-4 max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">{content.intro}</p>
+
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <div class="flex items-center gap-1 text-2xl text-[var(--color-accent)]" aria-hidden="true">
+            {starItems.map((star) => (
+              <span>{star === 'empty' ? '☆' : '★'}</span>
+            ))}
+          </div>
+          <div class="space-y-1">
+            <p class="text-lg font-semibold text-[var(--color-text)]">{content.ratingLabel}</p>
+            <p class="text-sm text-[var(--color-text-muted)]">{content.reviewCountLabel}</p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-sm leading-7 text-[var(--color-text-soft)]">{content.trustNote}</p>
+      </Card>
+
+      <Card className="bg-white/92" data-animate="stagger">
+        <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{content.leaveReviewTitle}</p>
+        <p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">{content.leaveReviewText}</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <Button href={reviews.reviewRequestUrl} variant="primary" target="_blank" rel="noopener noreferrer">
+            {content.leaveReviewButton}
+          </Button>
+          {reviews.googleBusinessUrl && (
+            <Button href={reviews.googleBusinessUrl} variant="secondary" target="_blank" rel="noopener noreferrer">
+              {content.viewProfileButton}
+            </Button>
+          )}
+        </div>
+
+        {reviews.reviews.length > 0 ? (
+          <div class="mt-6 space-y-4">
+            {reviews.reviews.map((review) => (
+              <article class="rounded-[1.5rem] border border-[var(--color-border)] bg-white/55 p-5">
+                <p class="text-sm font-semibold text-[var(--color-text)]">{review.author}</p>
+                <p class="mt-3 text-base leading-8 text-[var(--color-text-muted)]">{review.reviewBody}</p>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p class="mt-6 text-sm leading-7 text-[var(--color-text-soft)]">{content.noReviewsFallback}</p>
+        )}
+      </Card>
+    </div>
+  </Section>
+)}

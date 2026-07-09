@@ -1,6 +1,6 @@
 ---
 import type { AlternateLink, Locale } from '../lib/content';
-import { getNavigation, getRouteCatalog, getSiteSettings } from '../lib/content';
+import { buildWhatsAppUrl, getNavigation, getRouteCatalog, getSiteSettings, getWhatsAppContent } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
@@ -16,6 +16,8 @@ const site = getSiteSettings(locale);
 const navigation = getNavigation(locale);
 const routes = getRouteCatalog(locale);
 const contactLabel = navigation.items.find((item) => item.id === 'contact')?.label ?? 'Contact';
+const whatsAppContent = getWhatsAppContent(locale);
+const whatsAppHref = buildWhatsAppUrl(locale);
 ---
 
 <header class="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[color:var(--color-header)] backdrop-blur-xl">
@@ -39,6 +41,9 @@ const contactLabel = navigation.items.find((item) => item.id === 'contact')?.lab
 
       <div class="hidden items-center gap-3 lg:flex">
         <LanguageSwitcher currentLocale={locale} links={languageLinks} label={navigation.items.find((item) => item.id === 'language')?.label ?? 'Language'} />
+        <Button href={whatsAppHref} variant="secondary" target="_blank" rel="noopener noreferrer">
+          {whatsAppContent.shortLabel}
+        </Button>
         <Button href={routes.contact} variant="primary">
           {contactLabel}
         </Button>

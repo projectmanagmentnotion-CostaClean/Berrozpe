@@ -1,0 +1,10 @@
+{
+  "locale": "es",
+  "label": "Hablar por WhatsApp",
+  "shortLabel": "WhatsApp",
+  "ariaLabel": "Hablar con Instal Berrozpe por WhatsApp",
+  "message": "Hola Instal Berrozpe, me interesan vuestros servicios.",
+  "floatingText": "WhatsApp",
+  "sectionTitle": "Prefieres WhatsApp para una primera consulta?",
+  "sectionDescription": "Es una via rapida para explicar la necesidad, compartir contexto y decidir si conviene pasar a formulario o llamada."
+}

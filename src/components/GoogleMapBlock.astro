@@ -1,0 +1,36 @@
+---
+import type { Locale } from '../lib/content';
+import { getMapContent, getSharedContact } from '../lib/content';
+import Button from './Button.astro';
+import Card from './Card.astro';
+
+interface Props {
+  locale: Locale;
+  className?: string;
+}
+
+const { locale, className = '' } = Astro.props;
+const content = getMapContent(locale);
+const contact = getSharedContact();
+---
+
+<Card className={className}>
+  <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{content.addressLabel}</p>
+  <h2 class="mt-4 font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">
+    {content.title}
+  </h2>
+  <p class="mt-4 max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">{content.description}</p>
+  <div class="mt-6 rounded-[1.5rem] border border-[var(--color-border)] bg-white/60 p-5">
+    <div class="space-y-1 text-base leading-7 text-[var(--color-text)]">
+      {contact.address.displayLines.map((line) => <p>{line}</p>)}
+    </div>
+  </div>
+  <p class="mt-4 text-sm leading-7 text-[var(--color-text-soft)]">{content.privacyNotice}</p>
+  {contact.googleMapsUrl && (
+    <div class="mt-6">
+      <Button href={contact.googleMapsUrl} variant="secondary" target="_blank" rel="noopener noreferrer">
+        {content.openMapLabel}
+      </Button>
+    </div>
+  )}
+</Card>

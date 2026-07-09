@@ -3,6 +3,7 @@ import sharedContact from '../../content/shared/contact.json';
 import sharedServicesIndex from '../../content/shared/services-index.json';
 import sharedRedirects from '../../content/shared/redirects.json';
 import sharedVisuals from '../../content/shared/visuals.json';
+import sharedReviews from '../../content/shared/reviews.json';
 import esNavigation from '../../content/locales/es/navigation.json';
 import caNavigation from '../../content/locales/ca/navigation.json';
 import enNavigation from '../../content/locales/en/navigation.json';
@@ -15,6 +16,18 @@ import esContactForm from '../../content/locales/es/contact.json';
 import caContactForm from '../../content/locales/ca/contact.json';
 import enContactForm from '../../content/locales/en/contact.json';
 import deContactForm from '../../content/locales/de/contact.json';
+import esWhatsApp from '../../content/locales/es/whatsapp.json';
+import caWhatsApp from '../../content/locales/ca/whatsapp.json';
+import enWhatsApp from '../../content/locales/en/whatsapp.json';
+import deWhatsApp from '../../content/locales/de/whatsapp.json';
+import esMap from '../../content/locales/es/map.json';
+import caMap from '../../content/locales/ca/map.json';
+import enMap from '../../content/locales/en/map.json';
+import deMap from '../../content/locales/de/map.json';
+import esReviews from '../../content/locales/es/reviews.json';
+import caReviews from '../../content/locales/ca/reviews.json';
+import enReviews from '../../content/locales/en/reviews.json';
+import deReviews from '../../content/locales/de/reviews.json';
 import esCookieConsent from '../../content/locales/es/cookie-consent.json';
 import caCookieConsent from '../../content/locales/ca/cookie-consent.json';
 import enCookieConsent from '../../content/locales/en/cookie-consent.json';
@@ -71,6 +84,10 @@ import type {
   SharedVisuals,
   SiteSettings,
   InternalLinksContent,
+  MapContent,
+  ReviewsContent,
+  SharedReviews,
+  WhatsAppContent,
 } from '../data/types';
 
 function normalizeImportedContent<T>(value: T): T {
@@ -100,6 +117,7 @@ const contactData = normalizeImportedContent(sharedContact);
 const servicesIndexData = normalizeImportedContent(sharedServicesIndex);
 const redirectsData = normalizeImportedContent(sharedRedirects);
 const visualsData = normalizeImportedContent(sharedVisuals);
+const reviewsData = normalizeImportedContent(sharedReviews);
 const internalLinksData = normalizeImportedContent(sharedInternalLinks);
 
 export const LOCALES = siteData.supportedLocales as Locale[];
@@ -163,6 +181,27 @@ const contactFormByLocale: Record<Locale, ContactFormContent> = {
   ca: normalizeImportedContent(caContactForm),
   en: normalizeImportedContent(enContactForm),
   de: normalizeImportedContent(deContactForm),
+};
+
+const whatsAppByLocale: Record<Locale, WhatsAppContent> = {
+  es: normalizeImportedContent(esWhatsApp),
+  ca: normalizeImportedContent(caWhatsApp),
+  en: normalizeImportedContent(enWhatsApp),
+  de: normalizeImportedContent(deWhatsApp),
+};
+
+const mapByLocale: Record<Locale, MapContent> = {
+  es: normalizeImportedContent(esMap),
+  ca: normalizeImportedContent(caMap),
+  en: normalizeImportedContent(enMap),
+  de: normalizeImportedContent(deMap),
+};
+
+const reviewsByLocale: Record<Locale, ReviewsContent> = {
+  es: normalizeImportedContent(esReviews),
+  ca: normalizeImportedContent(caReviews),
+  en: normalizeImportedContent(enReviews),
+  de: normalizeImportedContent(deReviews),
 };
 
 const seoByLocale: Record<Locale, SeoData> = {
@@ -303,7 +342,7 @@ export function getSiteSettings(locale?: string): SiteSettings {
     countryCode: contactData.address.countryCode,
     postalCode: contactData.address.postalCode,
     addressLine: contactData.address.streetAddress,
-    coverageArea: [],
+    coverageArea: contactData.serviceArea ?? [],
     socialLinks: contactData.socialLinks,
   };
 }
@@ -318,6 +357,10 @@ export function getRedirectData(): RedirectData {
 
 export function getSharedVisuals(): SharedVisuals {
   return visualsData;
+}
+
+export function getSharedReviews(): SharedReviews {
+  return reviewsData;
 }
 
 export function getSharedInternalLinks(): SharedInternalLinks {
@@ -344,8 +387,27 @@ export function getContactFormContent(locale?: string): ContactFormContent {
   return contactFormByLocale[resolveLocale(locale)];
 }
 
+export function getWhatsAppContent(locale?: string): WhatsAppContent {
+  return whatsAppByLocale[resolveLocale(locale)];
+}
+
+export function getMapContent(locale?: string): MapContent {
+  return mapByLocale[resolveLocale(locale)];
+}
+
+export function getReviewsContent(locale?: string): ReviewsContent {
+  return reviewsByLocale[resolveLocale(locale)];
+}
+
 export function getInternalLinksContent(locale?: string): InternalLinksContent {
   return internalLinksByLocale[resolveLocale(locale)];
+}
+
+export function buildWhatsAppUrl(locale?: string, customMessage?: string): string {
+  const resolvedLocale = resolveLocale(locale);
+  const baseMessage = customMessage ?? getWhatsAppContent(resolvedLocale).message;
+  const normalizedNumber = contactData.phones.whatsappE164.replace(/[^\d]/g, '');
+  return `https://wa.me/${normalizedNumber}?text=${encodeURIComponent(baseMessage)}`;
 }
 
 export function getHomeSections(locale?: string): HomeSection[] {
@@ -497,6 +559,48 @@ export function getLanguageSwitcherLinksForService(serviceId: string): Alternate
 
 export function getCanonicalUrl(path: string): string {
   return buildAbsoluteUrl(path);
+}
+
+export function getLocalBusinessSchema(
+  locale?: string,
+  options?: {
+    path?: string;
+    includeAggregateRating?: boolean;
+  },
+) {
+  const resolvedLocale = resolveLocale(locale);
+  const site = getSiteSettings(resolvedLocale);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${site.siteUrl}/#localbusiness`,
+    name: reviewsData.googleBusinessName || site.businessName,
+    url: options?.path ? getCanonicalUrl(options.path) : site.siteUrl,
+    telephone: site.primaryPhone || undefined,
+    email: site.primaryEmail || undefined,
+    address: site.addressLine || site.locality || site.postalCode
+      ? {
+          '@type': 'PostalAddress',
+          streetAddress: site.addressLine || undefined,
+          addressLocality: site.locality || undefined,
+          addressRegion: site.region || undefined,
+          postalCode: site.postalCode || undefined,
+          addressCountry: site.countryCode || undefined,
+        }
+      : undefined,
+    areaServed: site.coverageArea.length > 0 ? site.coverageArea : undefined,
+    knowsLanguage: site.supportedLocales,
+    sameAs: site.socialLinks.map((entry) => entry.url),
+    aggregateRating: options?.includeAggregateRating
+      ? {
+          '@type': 'AggregateRating',
+          ratingValue: reviewsData.aggregateRating.ratingValue,
+          reviewCount: reviewsData.aggregateRating.reviewCount,
+          bestRating: reviewsData.aggregateRating.bestRating,
+        }
+      : undefined,
+  };
 }
 
 export function getLocalizedPath(locale: Locale, target: RoutePageId | ServiceId): string {

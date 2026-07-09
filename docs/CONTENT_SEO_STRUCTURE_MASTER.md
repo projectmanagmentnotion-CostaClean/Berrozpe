@@ -26,7 +26,7 @@ Estos tres servicios existen como fuente de verdad en `content/shared/services-i
 
 Fuente de verdad: `content/shared/contact.json`
 
-- Direccion confirmada: `C/ Antiga nº 68, Baixos`, `17300 Blanes (Girona)`
+- Direccion confirmada final: `Carrer de l'Antiga, 68`, `17300 Blanes (Girona)`
 - Telefonos confirmados:
   - Movil: `676 04 33 89`
   - Fijo / telefono-fax detectado: `872 986 161`
@@ -40,6 +40,7 @@ Fuente de verdad: `content/shared/contact.json`
   - `comercial@instalberrozpe.com`
 - `primaryEmail`: `david@instalberrozpe.com`
 - WhatsApp derivado: `https://wa.me/34676043389?...`
+- URL de Google Maps: `https://www.google.com/maps/search/?api=1&query=Carrer%20de%20l%27Antiga%2C%2068%2C%2017300%20Blanes%2C%20Girona`
 - Destinatario del formulario RGPD / handler PHP: `david@instalberrozpe.com`
 
 Pendiente:
@@ -244,7 +245,13 @@ Paginas estaticas:
 ### Schema previsto o implementado
 
 - El layout ya expone SEO comun y datos del sitio desde `src/lib/content.ts`
+- `LocalBusiness` implementado desde `getLocalBusinessSchema(...)`
+- `aggregateRating` visible y permitido solo en home y contacto
+- Datos de valoracion confirmados:
+  - `4.9`
+  - `67 reseñas`
 - No debe inventarse schema legal, certificaciones o areas de cobertura no confirmadas
+- No debe emitirse `Review` schema individual mientras no existan reseñas reales cargadas
 
 ### Open Graph
 
@@ -468,6 +475,7 @@ Reduced motion:
 - Revisar internal linking multidioma
 - Revisar copy final en `es`, `ca`, `en` y `de`
 - Revisar formulario/contacto
+- Revisar WhatsApp, mapa y bloque de reseñas
 - Revisar legales con validacion externa
 - Confirmar SSL en SiteGround
 - Ejecutar backup previo en SiteGround
@@ -493,12 +501,15 @@ Reduced motion:
   - descubre los tres servicios
   - refuerza confianza hacia sobre nosotros
   - deriva a contacto
+  - muestra reseñas agregadas visibles
+  - incorpora CTA grande de WhatsApp
 - Servicios indice:
   - distribuye al detalle de cada servicio
   - enlaza a contacto
   - enlaza a sobre nosotros
 - Servicio detalle:
   - CTA a contacto
+  - CTA a WhatsApp
   - enlace al indice de servicios
   - enlace a sobre nosotros
   - bloque de servicios relacionados
@@ -511,6 +522,9 @@ Reduced motion:
   - enlace a servicios para usuarios indecisos
   - enlace a sobre nosotros
   - llamada directa por telefono
+  - CTA grande de WhatsApp
+  - bloque de Google Maps
+  - bloque de reseñas y solicitud de reseña
 
 ## Q. Revision editorial final
 
@@ -521,3 +535,22 @@ Reduced motion:
 - Ajustes estructurales asociados:
   - `cta.title` y `cta.body` anadidos a cada servicio para separar conversion y notas internas
   - bloque de pendientes internos ocultado de la interfaz publica de contacto
+
+## R. WhatsApp, mapa y reseñas
+
+- Fuente de verdad compartida:
+  - `content/shared/contact.json`
+  - `content/shared/reviews.json`
+- Contenido localizado:
+  - `content/locales/{locale}/whatsapp.json`
+  - `content/locales/{locale}/map.json`
+  - `content/locales/{locale}/reviews.json`
+- Ubicaciones activas:
+  - layout flotante
+  - header desktop
+  - home
+  - contacto
+  - detalle de servicio
+  - footer
+- Regla UX:
+  - el CTA flotante no debe tapar banner de cookies ni formulario

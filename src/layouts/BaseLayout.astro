@@ -3,6 +3,7 @@ import SeoHead from '../components/SeoHead.astro';
 import CookieConsent from '../components/CookieConsent.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
 import type { AlternateLink, Locale } from '../lib/content';
 import '../styles/global.css';
 
@@ -15,6 +16,7 @@ interface Props {
   xDefaultPath?: string;
   noIndex?: boolean;
   ogImagePath?: string;
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 const {
@@ -26,6 +28,7 @@ const {
   xDefaultPath,
   noIndex = false,
   ogImagePath,
+  schema,
 } = Astro.props;
 ---
 
@@ -44,6 +47,7 @@ const {
       xDefaultPath={xDefaultPath}
       noIndex={noIndex}
       ogImagePath={ogImagePath}
+      schema={schema}
     />
     <script>
       import '../scripts/animations.ts';
@@ -62,6 +66,7 @@ const {
       </main>
       <SiteFooter locale={locale} />
       <CookieConsent locale={locale} />
+      <WhatsAppCTA locale={locale} variant="floating" />
     </div>
   </body>
 </html>

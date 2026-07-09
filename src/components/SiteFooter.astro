@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../lib/content';
 import {
+  buildWhatsAppUrl,
   getCookieConsentContent,
   getLanguageSwitcherLinksForPage,
   getLegalPages,
@@ -8,9 +9,12 @@ import {
   getNavigation,
   getPublishedServices,
   getRouteCatalog,
+  getSharedReviews,
   getServiceRouteById,
   getSharedContact,
   getSiteSettings,
+  getReviewsContent,
+  getWhatsAppContent,
 } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
@@ -31,7 +35,10 @@ const routes = getRouteCatalog(locale);
 const cookieConsent = getCookieConsentContent(locale);
 const languageLinks = getLanguageSwitcherLinksForPage('home');
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
-const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp')?.label ?? 'WhatsApp';
+const whatsAppContent = getWhatsAppContent(locale);
+const whatsAppHref = buildWhatsAppUrl(locale);
+const reviews = getSharedReviews();
+const reviewsContent = getReviewsContent(locale);
 ---
 
 <footer class="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-14 sm:py-16">
@@ -58,8 +65,11 @@ const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp
           <Button href={routes.contact} variant="primary">
             {navigation.items.find((item) => item.id === 'contact')?.label ?? 'Contact'}
           </Button>
-          <Button href={contact.whatsAppUrl} variant="secondary" target="_blank" rel="noreferrer">
-            {whatsAppLabel}
+          <Button href={whatsAppHref} variant="secondary" target="_blank" rel="noopener noreferrer">
+            {whatsAppContent.shortLabel}
+          </Button>
+          <Button href={reviews.reviewRequestUrl} variant="ghost" target="_blank" rel="noopener noreferrer">
+            {reviewsContent.leaveReviewButton}
           </Button>
           <button
             type="button"

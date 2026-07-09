@@ -7,7 +7,9 @@
         "alarmas-y-camaras"
       ],
       "trustPageId": "about",
-      "contactPageId": "contact"
+      "contactPageId": "contact",
+      "reviewPageId": "contact",
+      "mapPageId": "contact"
     },
     "services": {
       "serviceIds": [
@@ -16,7 +18,9 @@
         "alarmas-y-camaras"
       ],
       "trustPageId": "about",
-      "contactPageId": "contact"
+      "contactPageId": "contact",
+      "reviewPageId": "contact",
+      "mapPageId": "contact"
     },
     "about": {
       "serviceIds": [
@@ -25,7 +29,8 @@
         "alarmas-y-camaras"
       ],
       "featuredServiceId": "electricidad-y-domotica",
-      "contactPageId": "contact"
+      "contactPageId": "contact",
+      "reviewPageId": "contact"
     },
     "contact": {
       "serviceIds": [
@@ -33,7 +38,9 @@
         "lampisteria-y-climatizacion",
         "alarmas-y-camaras"
       ],
-      "trustPageId": "about"
+      "trustPageId": "about",
+      "reviewPageId": "contact",
+      "mapPageId": "contact"
     }
   },
   "services": {
@@ -44,7 +51,9 @@
       ],
       "trustPageId": "about",
       "servicesPageId": "services",
-      "contactPageId": "contact"
+      "contactPageId": "contact",
+      "reviewPageId": "contact",
+      "mapPageId": "contact"
     },
     "lampisteria-y-climatizacion": {
       "relatedServiceIds": [
@@ -53,7 +62,9 @@
       ],
       "trustPageId": "about",
       "servicesPageId": "services",
-      "contactPageId": "contact"
+      "contactPageId": "contact",
+      "reviewPageId": "contact",
+      "mapPageId": "contact"
     },
     "alarmas-y-camaras": {
       "relatedServiceIds": [
@@ -62,7 +73,9 @@
       ],
       "trustPageId": "about",
       "servicesPageId": "services",
-      "contactPageId": "contact"
+      "contactPageId": "contact",
+      "reviewPageId": "contact",
+      "mapPageId": "contact"
     }
   }
 }

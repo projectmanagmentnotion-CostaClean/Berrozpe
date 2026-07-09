@@ -50,6 +50,8 @@ export interface SharedContact {
     label: string;
     url: string;
   }>;
+  googleMapsUrl?: string;
+  serviceArea?: string[];
   pendingConfirmation: string[];
 }
 
@@ -223,20 +225,27 @@ export interface SharedInternalLinks {
       serviceIds: string[];
       trustPageId: string;
       contactPageId: string;
+      reviewPageId?: string;
+      mapPageId?: string;
     };
     services: {
       serviceIds: string[];
       trustPageId: string;
       contactPageId: string;
+      reviewPageId?: string;
+      mapPageId?: string;
     };
     about: {
       serviceIds: string[];
       featuredServiceId: string;
       contactPageId: string;
+      reviewPageId?: string;
     };
     contact: {
       serviceIds: string[];
       trustPageId: string;
+      reviewPageId?: string;
+      mapPageId?: string;
     };
   };
   services: Record<string, {
@@ -244,6 +253,8 @@ export interface SharedInternalLinks {
     trustPageId: string;
     servicesPageId: string;
     contactPageId: string;
+    reviewPageId?: string;
+    mapPageId?: string;
   }>;
 }
 
@@ -259,32 +270,94 @@ export interface InternalLinksContent {
     serviceListTitle: string;
     trustLabel: string;
     contactLabel: string;
+    whatsappLabel?: string;
+    reviewsLabel?: string;
   };
   servicesIndex: InternalLinksContentSection & {
     contactLabel: string;
     aboutLabel: string;
+    whatsappLabel?: string;
   };
   serviceDetail: {
     journey: InternalLinksContentSection & {
       contactLabel: string;
       servicesLabel: string;
       aboutLabel: string;
+      whatsappLabel?: string;
     };
     related: InternalLinksContentSection;
     faqCta: InternalLinksContentSection & {
       contactLabel: string;
+      whatsappLabel?: string;
     };
   };
   about: InternalLinksContentSection & {
     servicesLabel: string;
     contactLabel: string;
     featuredServiceLabel: string;
+    whatsappLabel?: string;
   };
   contact: InternalLinksContentSection & {
     servicesLabel: string;
     aboutLabel: string;
     phoneLabel: string;
+    whatsappLabel?: string;
+    reviewsLabel?: string;
+    mapLabel?: string;
   };
+}
+
+export interface WhatsAppContent {
+  locale: string;
+  label: string;
+  shortLabel: string;
+  ariaLabel: string;
+  message: string;
+  floatingText: string;
+  sectionTitle: string;
+  sectionDescription: string;
+}
+
+export interface MapContent {
+  locale: string;
+  title: string;
+  description: string;
+  addressLabel: string;
+  openMapLabel: string;
+  privacyNotice: string;
+}
+
+export interface SharedReviews {
+  googleBusinessName: string;
+  googleBusinessUrl: string | null;
+  reviewRequestUrl: string;
+  aggregateRating: {
+    ratingValue: number;
+    reviewCount: number;
+    bestRating: number;
+    source: string;
+  };
+  reviews: Array<{
+    author: string;
+    ratingValue: number;
+    reviewBody: string;
+    datePublished?: string;
+  }>;
+  pendingConfirmation: string[];
+}
+
+export interface ReviewsContent {
+  locale: string;
+  title: string;
+  intro: string;
+  ratingLabel: string;
+  reviewCountLabel: string;
+  leaveReviewTitle: string;
+  leaveReviewText: string;
+  leaveReviewButton: string;
+  viewProfileButton: string;
+  noReviewsFallback: string;
+  trustNote: string;
 }
 
 export interface ListBlock {

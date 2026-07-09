@@ -3,16 +3,20 @@ import BigTextBlock from '../../components/BigTextBlock.astro';
 import ContactSection from '../../components/ContactSection.astro';
 import ConversionLinkBlock from '../../components/ConversionLinkBlock.astro';
 import Container from '../../components/Container.astro';
+import GoogleMapBlock from '../../components/GoogleMapBlock.astro';
 import ProcessSection from '../../components/ProcessSection.astro';
 import RelatedServices from '../../components/RelatedServices.astro';
+import ReviewsSection from '../../components/ReviewsSection.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import StatementSection from '../../components/StatementSection.astro';
 import VisualAsset from '../../components/VisualAsset.astro';
+import WhatsAppCTA from '../../components/WhatsAppCTA.astro';
 import WhyChooseUs from '../../components/WhyChooseUs.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import type { LegalPageId, Locale, ServiceId } from '../../lib/content';
 import {
   getAllowedLocales,
+  buildWhatsAppUrl,
   getConversionLinks,
   getHomeCollection,
   getInternalLinks,
@@ -21,6 +25,7 @@ import {
   getLanguageSwitcherLinksForService,
   getLegalPageById,
   getLegalPages,
+  getLocalBusinessSchema,
   getNavigation,
   getOgImagePath,
   getPageVisual,
@@ -123,6 +128,7 @@ const aboutLinks = getInternalLinks(locale, 'about');
 const contactLinks = getInternalLinks(locale, 'contact');
 const serviceJourneyLinks = serviceId ? getConversionLinks(locale, 'service-detail', serviceId) : undefined;
 const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
+const whatsAppHref = buildWhatsAppUrl(locale);
 ---
 
 <BaseLayout
@@ -151,6 +157,11 @@ const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
     : getLanguageSwitcherLinksForPage((legalPageId ?? (kind === 'services-index' ? 'services' : kind)) as LegalPageId | 'services' | 'about' | 'contact')}
   xDefaultPath={kind === 'service-detail' && serviceId ? getServiceRouteById(serviceId, 'es') : undefined}
   ogImagePath={kind === 'contact' ? getOgImagePath('contact') : kind === 'service-detail' || kind === 'services-index' ? getOgImagePath('services') : getOgImagePath('default')}
+  schema={kind === 'home'
+    ? undefined
+    : kind === 'contact'
+      ? getLocalBusinessSchema(locale, { path: canonicalPath, includeAggregateRating: true })
+      : getLocalBusinessSchema(locale, { path: canonicalPath, includeAggregateRating: false })}
 >
   {kind === 'services-index' && (
     <section class="border-t border-[var(--color-border)] py-16 sm:py-20 lg:py-28" data-animate="reveal">
@@ -185,10 +196,17 @@ const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
           href: servicesIndexLinks.contactPath,
           variant: 'primary',
         },
+        ...(internalLinksContent.servicesIndex.whatsappLabel
+          ? [{
+              label: internalLinksContent.servicesIndex.whatsappLabel,
+              href: whatsAppHref,
+              variant: 'secondary' as const,
+            }]
+          : []),
         {
           label: internalLinksContent.servicesIndex.aboutLabel,
           href: servicesIndexLinks.trustPath,
-          variant: 'secondary',
+          variant: 'ghost',
         },
       ]}
     />
@@ -262,18 +280,33 @@ const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
         </Container>
       </section>
       <ContactSection locale={locale} section={home.contactCta} number="02" showForm={true} showHeading={false} />
+      <ReviewsSection id="reviews" locale={locale} number="03" compact={true} className="mt-8" />
+      <section class="pb-8 sm:pb-10 lg:pb-12">
+        <Container>
+          <div class="mt-5">
+            <GoogleMapBlock locale={locale} />
+          </div>
+        </Container>
+      </section>
       <ConversionLinkBlock
         locale={locale}
         eyebrow={internalLinksContent.contact.eyebrow}
         title={internalLinksContent.contact.title}
         body={internalLinksContent.contact.body}
-        number="03"
+        number="04"
         links={[
           ...(contactLinks.services ?? []).map((entry) => ({
             label: entry.shortTitle,
             href: getServiceRouteById(entry.serviceId, locale) ?? routes.services,
             variant: 'secondary' as const,
           })),
+          ...(internalLinksContent.contact.reviewsLabel
+            ? [{
+                label: internalLinksContent.contact.reviewsLabel,
+                href: '#reviews',
+                variant: 'ghost' as const,
+              }]
+            : []),
           {
             label: internalLinksContent.contact.aboutLabel,
             href: contactLinks.trustPath,
@@ -392,6 +425,13 @@ const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
             href: serviceJourneyLinks?.contactPath ?? routes.contact,
             variant: 'primary',
           },
+          ...(internalLinksContent.serviceDetail.faqCta.whatsappLabel
+            ? [{
+                label: internalLinksContent.serviceDetail.faqCta.whatsappLabel,
+                href: whatsAppHref,
+                variant: 'secondary' as const,
+              }]
+            : []),
         ]}
       />
 
@@ -416,10 +456,17 @@ const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
             href: serviceJourneyLinks?.contactPath ?? routes.contact,
             variant: 'primary',
           },
+          ...(internalLinksContent.serviceDetail.journey.whatsappLabel
+            ? [{
+                label: internalLinksContent.serviceDetail.journey.whatsappLabel,
+                href: whatsAppHref,
+                variant: 'secondary' as const,
+              }]
+            : []),
           {
             label: internalLinksContent.serviceDetail.journey.servicesLabel,
             href: serviceJourneyLinks?.servicesPath ?? routes.services,
-            variant: 'secondary',
+            variant: 'ghost',
           },
           {
             label: internalLinksContent.serviceDetail.journey.aboutLabel,
@@ -446,6 +493,9 @@ const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
               <a class="inline-flex min-h-12 items-center rounded-full border border-[var(--color-border)] px-6 py-3.5 text-sm font-medium text-[var(--color-text)] transition hover:border-[var(--color-border-strong)] hover:bg-white/5" href={service.cta.secondaryHref}>
                 {service.cta.secondaryLabel}
               </a>
+            </div>
+            <div class="mt-6">
+              <WhatsAppCTA locale={locale} variant="large" />
             </div>
           </div>
         </Container>

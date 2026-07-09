@@ -1,0 +1,8 @@
+{
+  "locale": "es",
+  "title": "Ubicacion de Instal Berrozpe en Blanes",
+  "description": "La direccion confirmada permite abrir la ubicacion directamente en Google Maps sin cargar contenido de terceros dentro de la web.",
+  "addressLabel": "Direccion confirmada",
+  "openMapLabel": "Abrir en Google Maps",
+  "privacyNotice": "El mapa se abre en Google Maps en una pestana externa para evitar cargas de terceros dentro de esta pagina."
+}

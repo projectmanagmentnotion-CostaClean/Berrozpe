@@ -95,3 +95,16 @@ Ningun idioma puede cerrar la revision legal antes que los demas si la fuente de
 
 - No hay scripts opcionales confirmados activos en esta base.
 - El sistema queda preparado para desbloquear scripts diferidos marcados con `data-cookie-category` solo despues del consentimiento correspondiente.
+
+## Google Maps y terceros
+
+- En esta fase no se carga iframe de Google Maps.
+- La web usa un bloque informativo con enlace externo a Google Maps.
+- Esto evita carga automatica de terceros y mantiene el consentimiento actual.
+
+## Conversion y datos confirmados
+
+- Email confirmado para formularios: `david@instalberrozpe.com`
+- WhatsApp confirmado: `676 04 33 89`
+- Las reseñas visibles usan solo la valoracion agregada `4,9` y `67 reseñas`
+- No hay testimonios escritos cargados ni `Review` schema individual

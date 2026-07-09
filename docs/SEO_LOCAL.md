@@ -41,7 +41,7 @@ Los detalles de servicio no se hardcodean en `seo.json`; salen de `services-inde
 - Marca: `Instal Berrozpe`
 - Localidad: `Blanes`
 - Region: `Girona`
-- Direccion auditada: `C/ Antiga nº 68, Baixos, 17300 Blanes (Girona)`
+- Direccion confirmada: `Carrer de l'Antiga, 68, 17300 Blanes, Girona`
 - Telefonos auditados: `676 04 33 89` y `872 986 161`
 - Email principal confirmado: `david@instalberrozpe.com`
 
@@ -62,6 +62,22 @@ Estado:
 
 - OG corporativos temporales, sin fotos reales no verificadas.
 - `SeoHead.astro` ya emite `og:title`, `og:description`, `og:image`, `canonical`, `hreflang` y `x-default`.
+
+## Schema local
+
+- `LocalBusiness` emitido desde `SeoHead.astro`
+- helper central: `getLocalBusinessSchema(...)`
+- `aggregateRating` visible y permitido en home y contacto
+- Datos usados:
+  - `ratingValue: 4.9`
+  - `reviewCount: 67`
+  - `bestRating: 5`
+- No se emite `Review` schema individual.
+
+## Descubrimiento
+
+- Documento operativo adicional:
+  - [DISCOVERY_AND_INDEXING.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/DISCOVERY_AND_INDEXING.md)
 
 ## Internal linking
 

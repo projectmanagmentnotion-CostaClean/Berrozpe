@@ -11,6 +11,7 @@ interface Props {
   xDefaultPath?: string;
   noIndex?: boolean;
   ogImagePath?: string;
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   xDefaultPath,
   noIndex = false,
   ogImagePath,
+  schema,
 } = Astro.props;
 
 const site = getSiteSettings(locale);
@@ -29,25 +31,6 @@ const resolvedTitle = title ?? site.defaultTitle;
 const resolvedDescription = description ?? site.defaultDescription;
 const canonicalUrl = getCanonicalUrl(canonicalPath);
 const ogImageUrl = ogImagePath ? getCanonicalUrl(ogImagePath) : undefined;
-
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': `${site.siteUrl}/#localbusiness`,
-  name: site.businessName,
-  url: site.siteUrl,
-  telephone: site.primaryPhone || undefined,
-  email: site.primaryEmail || undefined,
-  address: site.addressLine || site.locality || site.postalCode ? {
-    '@type': 'PostalAddress',
-    streetAddress: site.addressLine || undefined,
-    addressLocality: site.locality || undefined,
-    addressRegion: site.region || undefined,
-    postalCode: site.postalCode || undefined,
-    addressCountry: site.countryCode || undefined,
-  } : undefined,
-  areaServed: site.coverageArea.length > 0 ? site.coverageArea : undefined,
-};
 ---
 
 <title>{resolvedTitle}</title>
@@ -73,4 +56,4 @@ const localBusinessSchema = {
   href={getCanonicalUrl(xDefaultPath ?? alternates.find((alternate) => alternate.locale === DEFAULT_LOCALE)?.href ?? site.localeBasePath)}
 />
 {noIndex && <meta name="robots" content="noindex, nofollow" />}
-<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+{schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}

@@ -1,0 +1,13 @@
+{
+  "locale": "es",
+  "title": "Clientes que confian en Instal Berrozpe",
+  "intro": "Nuestro perfil de Google refleja la experiencia de clientes que ya han trabajado con nosotros en Blanes y alrededores.",
+  "ratingLabel": "4,9/5 en Google",
+  "reviewCountLabel": "67 reseñas",
+  "leaveReviewTitle": "Ya has trabajado con Instal Berrozpe?",
+  "leaveReviewText": "Tu reseña ayuda a otros clientes a elegir con confianza.",
+  "leaveReviewButton": "Dejar reseña en Google",
+  "viewProfileButton": "Ver perfil en Google",
+  "noReviewsFallback": "Pronto añadiremos reseñas reales destacadas de clientes.",
+  "trustNote": "Valoracion visible en el perfil de Google Business de Instal Berrozpe."
+}

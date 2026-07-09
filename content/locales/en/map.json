@@ -1,0 +1,8 @@
+{
+  "locale": "en",
+  "title": "Instal Berrozpe location in Blanes",
+  "description": "The confirmed address can be opened directly in Google Maps without loading third-party content inside the website.",
+  "addressLabel": "Confirmed address",
+  "openMapLabel": "Open in Google Maps",
+  "privacyNotice": "The map opens in Google Maps in a separate tab to avoid loading third-party content inside this page."
+}

@@ -1,12 +1,12 @@
 {
   "address": {
-    "streetAddress": "C/ Antiga nº 68, Baixos",
+    "streetAddress": "Carrer de l'Antiga, 68",
     "postalCode": "17300",
     "locality": "Blanes",
     "region": "Girona",
     "countryCode": "ES",
     "displayLines": [
-      "C/ Antiga nº 68, Baixos",
+      "Carrer de l'Antiga, 68",
       "17300 Blanes (Girona)"
     ],
     "confirmed": true
@@ -27,12 +27,12 @@
     "comercial@instalberrozpe.com"
   ],
   "primaryEmail": "david@instalberrozpe.com",
-  "whatsAppUrl": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%20quiero%20informacion%20😁",
+  "whatsAppUrl": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%2C%20me%20interesan%20vuestros%20servicios.",
   "socialLinks": [
     {
       "id": "whatsapp",
       "label": "WhatsApp",
-      "url": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%20quiero%20informacion%20😁"
+      "url": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%2C%20me%20interesan%20vuestros%20servicios."
     },
     {
       "id": "instagram",
@@ -40,7 +40,12 @@
       "url": "https://www.instagram.com/instalberrozpe/?hl=es"
     }
   ],
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Carrer%20de%20l%27Antiga%2C%2068%2C%2017300%20Blanes%2C%20Girona",
+  "serviceArea": [
+    "Blanes",
+    "areas cercanas"
+  ],
   "pendingConfirmation": [
-    "Confirmar si el teléfono fijo debe seguir mostrándose como teléfono/fax en la nueva web."
+    "Confirmar si el telefono fijo debe seguir mostrandose como telefono, fax o ambos en la nueva web."
   ]
 }
