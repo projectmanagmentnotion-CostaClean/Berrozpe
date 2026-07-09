@@ -3,8 +3,8 @@
   "hero": {
     "sectionId": "hero",
     "eyebrow": "Installations in Blanes and Girona",
-    "title": "Electrical, plumbing, climate control, alarms and cameras for homes and businesses",
-    "body": "Instal Berrozpe focuses on three clear technical service lines: electrical and home automation, plumbing and climate control, and alarms and cameras. Direct contact from Blanes by phone, WhatsApp, email or form.",
+    "title": "Electrical, plumbing, climate control, alarms and cameras for home and business",
+    "body": "Three clear lines of work: electrical and home automation, plumbing and climate control, and alarms and cameras. Direct contact from Blanes by phone, WhatsApp, email or form.",
     "primaryCtaLabel": "View services",
     "primaryCtaHref": "/en/services/",
     "secondaryCtaLabel": "Request a quote",
@@ -13,8 +13,8 @@
   "servicesOverview": {
     "sectionId": "services-overview",
     "eyebrow": "Services",
-    "title": "Three main services to solve technical installations with a clear scope",
-    "body": "The current offer is organised into three work areas that cover electrical installations, water and climate systems, and security solutions through one installation company in Blanes.",
+    "title": "Three main services for installations in Blanes",
+    "body": "The website is organised around three areas: electrical and home automation, plumbing and climate control, and alarms and cameras.",
     "items": [
       "Electrical and home automation",
       "Plumbing and climate control",
@@ -24,44 +24,44 @@
   "whyChooseUs": {
     "sectionId": "why-choose-us",
     "eyebrow": "About us",
-    "title": "A close technical company with direct contact and integrated service",
-    "body": "The current Instal Berrozpe base communicates a direct way of working: one contact point, connected technical services and support for both homes and businesses.",
+    "title": "Technical company with direct contact",
+    "body": "Instal Berrozpe works with three connected technical lines and a clear point of contact for home and business.",
     "items": [
-      "Three clearly defined service lines covering electrical work, water and climate systems, and security.",
-      "Direct contact by mobile, phone, WhatsApp, email and form from Blanes.",
-      "Services presented for homes and businesses depending on the type of installation.",
-      "A clear route from the initial enquiry to the technical intervention."
+      "Three clearly defined technical services.",
+      "Direct contact by phone, WhatsApp, email and form.",
+      "Support for home and business.",
+      "Clear route from enquiry to technical work."
     ]
   },
   "process": {
     "sectionId": "process",
     "eyebrow": "Process",
-    "title": "A clear process from enquiry to intervention",
-    "body": "The website presents a simple flow: explain the need, review the right solution and move forward with the installation or technical work required.",
+    "title": "From first contact to intervention",
+    "body": "You explain the need, the right service is reviewed, and the work is coordinated.",
     "items": [
       "You explain the need by phone, WhatsApp or form.",
-      "The most suitable service line is reviewed for the home or business.",
-      "The installation or technical intervention is coordinated.",
-      "The follow-up channel stays open to resolve the enquiry."
+      "The most suitable service is reviewed.",
+      "The installation or technical work is coordinated.",
+      "Follow-up stays open after the first enquiry."
     ]
   },
   "contactCta": {
     "sectionId": "contact-cta",
     "eyebrow": "Contact",
-    "title": "Talk to Instal Berrozpe and explain your installation with the right context",
-    "body": "You can get in touch for electrical and home automation, plumbing and climate control, or alarms and cameras. The entry point can be phone, WhatsApp, email or form.",
-    "primaryCtaLabel": "Direct mobile",
-    "secondaryCtaLabel": "Primary email"
+    "title": "Talk to Instal Berrozpe",
+    "body": "Direct contact for electrical and home automation, plumbing and climate control, or alarms and cameras.",
+    "primaryCtaLabel": "Direct phone",
+    "secondaryCtaLabel": "Main email"
   },
   "faqs": {
     "sectionId": "faqs",
     "eyebrow": "Frequently asked questions",
-    "title": "Common questions before requesting information or a quote",
-    "body": "These answers help visitors identify the right service and prepare a clearer enquiry from the first contact.",
+    "title": "Common questions before contacting us",
+    "body": "Short answers to guide the enquiry.",
     "items": [
-      "Instal Berrozpe works on projects for homes and businesses.",
-      "An enquiry can be sent by form, phone, email or WhatsApp.",
-      "If you are not sure which service fits best, the contact page is the best starting point."
+      "The company works for homes and businesses.",
+      "You can contact us by form, phone, email or WhatsApp.",
+      "If you are unsure about the right service, contact is the best starting point."
     ]
   }
 }

@@ -43,7 +43,6 @@ const schedule = contact.schedule[locale] ?? contact.schedule.es;
         <h2 class="max-w-3xl font-[var(--font-display)] text-2xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--color-text)] sm:text-3xl lg:text-4xl">
           {home.contactCta.title}
         </h2>
-        <p class="max-w-2xl text-base leading-7 text-[var(--color-text-muted)]">{home.contactCta.body}</p>
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="space-y-2 text-base text-[var(--color-text-muted)]">
             {contact.address.displayLines.map((line) => <p>{line}</p>)}

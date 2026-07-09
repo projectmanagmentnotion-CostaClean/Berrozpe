@@ -1,7 +1,7 @@
 {
   "locale": "en",
   "title": "Request information or a quote",
-  "intro": "Write to Instal Berrozpe about electrical and home automation, plumbing and climate control, or alarms and cameras. The clearer the enquiry, the easier it is to guide it from the first contact.",
+  "intro": "Write your enquiry and the service you need.",
   "fields": {
     "name": {
       "label": "Name",

@@ -6,7 +6,6 @@ import HeroSection from '../../components/HeroSection.astro';
 import ProcessSection from '../../components/ProcessSection.astro';
 import ReviewsSection from '../../components/ReviewsSection.astro';
 import ServicesPreview from '../../components/ServicesPreview.astro';
-import StatementSection from '../../components/StatementSection.astro';
 import WhyChooseUs from '../../components/WhyChooseUs.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import {
@@ -69,7 +68,6 @@ const heroHighlights = [
   schema={getLocalBusinessSchema(locale, { path: routes.home, includeAggregateRating: true })}
 >
   <HeroSection section={home.hero} highlights={heroHighlights} />
-  <StatementSection locale={locale} section={home.whyChooseUs} />
   <ServicesPreview locale={locale} section={home.servicesOverview} services={services} />
   <ConversionLinkBlock
     locale={locale}

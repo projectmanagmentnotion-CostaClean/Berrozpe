@@ -67,6 +67,7 @@
 - Contacto queda mas directo y elimina mensajes internos visibles.
 - El enlazado interno mantiene la misma estructura comercial en los cuatro idiomas.
 - Los titles y meta descriptions se han reescrito para evitar duplicacion y reforzar SEO local/general.
+- La pasada final recorta exceso verbal en home, contacto, mapa, WhatsApp, reseñas y footer.
 
 ## Comprobacion visual
 
@@ -94,6 +95,7 @@
   - formulario de contacto intacto
   - servicios relacionados presentes en detalle
   - el aleman no rompe el layout en mobile
+  - contacto prioriza ubicacion y vias de contacto antes que reseñas
 
 ## Pendientes
 
@@ -104,4 +106,5 @@
 ## Estado final
 
 - `Listo para staging tecnico`
+- `Copy final compactado y sincronizado en los cuatro idiomas`
 - `No listo para produccion legal` hasta cerrar la revision juridica externa.

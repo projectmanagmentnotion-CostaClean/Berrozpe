@@ -1,7 +1,7 @@
 {
   "locale": "es",
   "title": "Solicita informacion o presupuesto",
-  "intro": "Escribe a Instal Berrozpe para electricidad y domótica, lampistería y climatización, o alarmas y cámaras. Cuanto mas clara sea la consulta, mas facil sera orientarla desde el primer contacto.",
+  "intro": "Escribe tu consulta y el servicio que necesitas.",
   "fields": {
     "name": {
       "label": "Nombre",

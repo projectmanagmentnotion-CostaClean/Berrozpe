@@ -2,54 +2,54 @@
   "locale": "de",
   "home": {
     "eyebrow": "Empfohlener Weg",
-    "title": "Beginnen Sie mit der passenden Leistung und kommen Sie zu einer klareren Anfrage",
-    "body": "Wenn Sie bereits wissen, welche technische Linie Sie benötigen, gehen Sie direkt zur Leistung. Wenn Sie noch vergleichen, prüfen Sie erst das Unternehmen oder wechseln Sie mit mehr Kontext zum Kontakt.",
-    "serviceListTitle": "Hauptleistung",
+    "title": "Beginnen Sie mit der passenden Leistung",
+    "body": "Wenn Sie bereits wissen, was Sie brauchen, offnen Sie die Leistung. Wenn nicht, gehen Sie zu Kontakt oder sehen Sie sich zuerst das Unternehmen an.",
+    "serviceListTitle": "Leistung",
     "trustLabel": "Unternehmen ansehen",
     "contactLabel": "Orientierung anfragen"
   },
   "servicesIndex": {
-    "eyebrow": "Nächster Schritt",
-    "title": "Leistungen vergleichen und den passenden Kontaktweg wählen",
-    "body": "Jede Karte fasst eine konkrete technische Linie zusammen. Wenn Sie den Bedarf lieber direkt schildern möchten, können Sie zum Kontakt wechseln oder zuerst das Unternehmen ansehen.",
+    "eyebrow": "Nachster Schritt",
+    "title": "Leistungen vergleichen und Kontaktweg wahlen",
+    "body": "Jede Seite fasst einen Technikbereich zusammen. Wenn Sie mochten, gehen Sie direkt zu Kontakt.",
     "contactLabel": "Angebot anfragen",
-    "aboutLabel": "Über uns"
+    "aboutLabel": "Uber uns"
   },
   "serviceDetail": {
     "journey": {
-      "eyebrow": "Nächster Schritt",
-      "title": "Machen Sie aus diesem Bedarf eine gezielte Anfrage",
-      "body": "Sie können den Fall über den Kontakt schildern, zum Leistungsindex zurückkehren oder das Unternehmen ansehen, bevor Sie den nächsten Schritt wählen.",
+      "eyebrow": "Nachster Schritt",
+      "title": "Machen Sie aus diesem Bedarf eine klare Anfrage",
+      "body": "Sie konnen zu Kontakt gehen, zur Ubersicht zuruckkehren oder zuerst das Unternehmen ansehen.",
       "contactLabel": "Angebot anfragen",
       "servicesLabel": "Alle Leistungen ansehen",
-      "aboutLabel": "Unternehmen kennenlernen"
+      "aboutLabel": "Unternehmen ansehen"
     },
     "related": {
       "eyebrow": "Verwandte Leistungen",
-      "title": "Lösungen, die oft zusammen mit dieser Leistung geprüft werden",
-      "body": "Diese Verknüpfungen helfen dabei, technische Anforderungen zu verbinden, die häufig in derselben Anfrage auftauchen."
+      "title": "Leistungen, die oft zusammen angefragt werden",
+      "body": "Verwandte Optionen fur verbundene technische Anforderungen."
     },
     "faqCta": {
       "eyebrow": "Anfrage",
-      "title": "Wenn Sie eine genauere Einschätzung brauchen, ist Kontakt der nächste Schritt",
-      "body": "Wenn die Antwort vom Raum, von der bestehenden Installation oder von einer Kombination mehrerer Leistungen abhängt, ist es am besten, den Fall per Telefon, WhatsApp oder Formular zu schildern.",
-      "contactLabel": "Zum Kontakt"
+      "title": "Wenn Sie eine genauere Prufung brauchen, gehen Sie zu Kontakt",
+      "body": "Wenn die Antwort vom Objekt oder von mehreren Leistungen abhangt, erklaren Sie den Fall am besten per Telefon, WhatsApp oder Formular.",
+      "contactLabel": "Zu Kontakt"
     }
   },
   "about": {
-    "eyebrow": "Nächster Schritt",
-    "title": "Nach dem Unternehmenskontext führt der natürliche Weg zu Leistung und Kontakt",
-    "body": "Sobald Sie den Ansatz von Instal Berrozpe verstanden haben, können Sie die passende Leistung öffnen oder direkt schreiben, um den Bedarf zu schildern.",
+    "eyebrow": "Nachster Schritt",
+    "title": "Nach dem Unternehmensuberblick folgt Leistung oder Kontakt",
+    "body": "Sie konnen die passende Leistung offnen oder direkt schreiben und den Bedarf erklaren.",
     "servicesLabel": "Leistungen ansehen",
-    "contactLabel": "Zum Kontakt",
-    "featuredServiceLabel": "Empfohlene Leistung"
+    "contactLabel": "Zu Kontakt",
+    "featuredServiceLabel": "Ausgewahlte Leistung"
   },
   "contact": {
     "eyebrow": "Vor dem Schreiben",
-    "title": "Wenn Sie noch zwischen Leistungen unsicher sind, finden Sie hier einen schnellen Weg",
-    "body": "Sie können die drei bestätigten Leistungen ansehen, mehr über das Unternehmen erfahren oder direkt anrufen, wenn Sie die erste Frage lieber telefonisch klären möchten.",
+    "title": "Wenn Sie noch zwischen Leistungen schwanken, ist dies der schnelle Weg",
+    "body": "Leistungen ansehen, das Unternehmen kennenlernen oder direkt anrufen.",
     "servicesLabel": "Leistungen ansehen",
-    "aboutLabel": "Über uns",
+    "aboutLabel": "Uber uns",
     "phoneLabel": "Jetzt anrufen"
   }
 }

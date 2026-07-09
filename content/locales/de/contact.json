@@ -1,7 +1,7 @@
 {
   "locale": "de",
   "title": "Informationen oder Angebot anfragen",
-  "intro": "Schreiben Sie Instal Berrozpe zu Elektro und Smart Home, Sanitär und Klimatechnik oder Alarmanlagen und Kameras. Je klarer die Anfrage, desto einfacher lässt sie sich vom ersten Kontakt an einordnen.",
+  "intro": "Schreiben Sie Ihre Anfrage und die gewunschte Leistung.",
   "fields": {
     "name": {
       "label": "Name",

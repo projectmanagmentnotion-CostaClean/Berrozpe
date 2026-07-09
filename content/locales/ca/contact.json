@@ -1,7 +1,7 @@
 {
   "locale": "ca",
   "title": "Demana informacio o pressupost",
-  "intro": "Escriu a Instal Berrozpe per electricitat i domotica, lampisteria i climatitzacio, o alarmes i cameras. Com mes clara sigui la consulta, mes facil sera orientar-la des del primer contacte.",
+  "intro": "Escriu la teva consulta i el servei que necessites.",
   "fields": {
     "name": {
       "label": "Nom",

@@ -2,44 +2,44 @@
   "locale": "es",
   "home": {
     "eyebrow": "Recorrido recomendado",
-    "title": "Empieza por el servicio adecuado y avanza con una consulta mas clara",
-    "body": "Si ya sabes que linea tecnica necesitas, entra en el servicio. Si aun estas comparando opciones, revisa la empresa o pasa a contacto para plantear el caso con contexto.",
-    "serviceListTitle": "Servicio principal",
+    "title": "Empieza por el servicio adecuado",
+    "body": "Si ya sabes que necesitas, entra en el servicio. Si no, pasa a contacto o revisa la empresa.",
+    "serviceListTitle": "Servicio",
     "trustLabel": "Conocer la empresa",
     "contactLabel": "Pedir orientacion"
   },
   "servicesIndex": {
     "eyebrow": "Siguiente paso",
-    "title": "Compara servicios y elige la via de contacto que mejor encaje",
-    "body": "Cada ficha resume una linea tecnica concreta. Si prefieres explicar directamente la necesidad, puedes pasar a contacto o revisar primero la presentacion de la empresa.",
+    "title": "Compara servicios y elige como contactar",
+    "body": "Cada ficha resume una linea tecnica. Si prefieres explicar el caso, pasa a contacto.",
     "contactLabel": "Solicitar presupuesto",
     "aboutLabel": "Ver sobre nosotros"
   },
   "serviceDetail": {
     "journey": {
       "eyebrow": "Siguiente paso",
-      "title": "Convierte esta necesidad en una consulta bien enfocada",
-      "body": "Puedes explicar el caso por contacto, volver al indice para comparar servicios o revisar la empresa antes de decidir el siguiente paso.",
+      "title": "Convierte esta necesidad en una consulta clara",
+      "body": "Puedes ir a contacto, volver al indice o revisar la empresa antes de decidir.",
       "contactLabel": "Solicitar presupuesto",
       "servicesLabel": "Ver todos los servicios",
       "aboutLabel": "Conocer la empresa"
     },
     "related": {
       "eyebrow": "Servicios relacionados",
-      "title": "Soluciones que suelen revisarse junto a este servicio",
-      "body": "Estas relaciones ayudan a enlazar necesidades tecnicas que a menudo se plantean en una misma consulta."
+      "title": "Servicios que suelen consultarse juntos",
+      "body": "Relacionados para resolver necesidades tecnicas conectadas."
     },
     "faqCta": {
       "eyebrow": "Consulta",
-      "title": "Si necesitas una valoracion mas precisa, el siguiente paso es contacto",
-      "body": "Cuando la respuesta depende del espacio, de la instalacion existente o de una combinacion de servicios, conviene explicar el caso por telefono, WhatsApp o formulario.",
+      "title": "Si necesitas una valoracion mas precisa, pasa a contacto",
+      "body": "Cuando el caso depende del espacio o de varios servicios, conviene explicarlo por telefono, WhatsApp o formulario.",
       "contactLabel": "Ir a contacto"
     }
   },
   "about": {
     "eyebrow": "Siguiente paso",
-    "title": "Despues del contexto de empresa, el recorrido natural pasa por servicio y contacto",
-    "body": "Una vez entendido el enfoque de Instal Berrozpe, puedes entrar en el servicio que mejor encaje o escribir directamente para plantear la necesidad.",
+    "title": "Despues de conocer la empresa, el siguiente paso es servicio o contacto",
+    "body": "Puedes entrar en el servicio que mejor encaje o escribir directamente para explicar la necesidad.",
     "servicesLabel": "Ver servicios",
     "contactLabel": "Ir a contacto",
     "featuredServiceLabel": "Servicio destacado"
@@ -47,7 +47,7 @@
   "contact": {
     "eyebrow": "Antes de escribir",
     "title": "Si aun dudas entre servicios, aqui tienes una ruta rapida",
-    "body": "Puedes revisar los tres servicios confirmados, conocer mejor la empresa o llamar directamente si prefieres resolver la primera duda por telefono.",
+    "body": "Revisa los servicios, conoce mejor la empresa o llama directamente.",
     "servicesLabel": "Ver servicios",
     "aboutLabel": "Ver sobre nosotros",
     "phoneLabel": "Llamar ahora"

@@ -7,7 +7,7 @@
 ## Commit auditado
 
 - Base auditada: `73bbe13`
-- Estado validado: working tree posterior con ajustes de conversion local, WhatsApp y Google Maps
+- Estado validado: working tree posterior con ajustes finales de copy, conversion local, WhatsApp y Google Maps
 
 ## Build
 
@@ -116,7 +116,9 @@
   - `1920x1080`
 - Estado:
   - build y HTML final verificados
-  - el siguiente paso es comprobacion manual real en navegador para confirmar que mapa, WhatsApp y banner de cookies no colisionan en esos viewports
+  - comprobacion responsive ejecutada en navegador sobre las rutas criticas pedidas
+  - sin overflow horizontal detectado
+  - `hreflang`, canonical, WhatsApp, Google Maps y preferencias de cookies presentes en las comprobaciones realizadas
 
 ## Pendientes
 
@@ -125,4 +127,3 @@
 - Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
 - Ejecutar Lighthouse real en staging
 - Probar `mail()` en el hosting de SiteGround
-- Ejecutar una pasada visual manual final en navegador real antes de staging

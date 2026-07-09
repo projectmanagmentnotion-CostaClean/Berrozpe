@@ -1,7 +1,7 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { getNavigation, getPageVisual, getSharedContact, getWhatsAppContent } from '../lib/content';
+import { getNavigation, getPageVisual, getSharedContact } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
 import EditorialLabel from './EditorialLabel.astro';
@@ -18,7 +18,7 @@ const { locale, section } = Astro.props;
 const contact = getSharedContact();
 const navigation = getNavigation(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
-const whatsAppContent = getWhatsAppContent(locale);
+const primaryEmail = contact.primaryEmail ?? contact.emailsDetected[0] ?? '';
 const contactVisual = getPageVisual('homeContact');
 ---
 
@@ -34,7 +34,7 @@ const contactVisual = getPageVisual('homeContact');
           <p class="max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">
             {section.body}
           </p>
-          <VisualAsset asset={contactVisual} eyebrow={section.eyebrow} title={section.title} body={section.body} compact={true} className="min-h-[18rem] sm:min-h-[22rem]" />
+          <VisualAsset asset={contactVisual} eyebrow={section.eyebrow} title={section.title} body={section.body} compact={true} className="min-h-[16rem] sm:min-h-[20rem]" />
         </div>
 
         <div class="space-y-5">
@@ -44,8 +44,8 @@ const contactVisual = getPageVisual('homeContact');
               <p class="mt-3 text-lg font-medium text-[var(--color-text)]">{contact.phones.mobile}</p>
             </div>
             <div class="rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.02] p-5">
-              <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{whatsAppContent.shortLabel}</p>
-              <p class="mt-3 text-lg font-medium text-[var(--color-text)]">{contact.phones.mobile}</p>
+              <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{section.secondaryCtaLabel}</p>
+              <p class="mt-3 text-lg font-medium text-[var(--color-text)] break-all">{primaryEmail}</p>
             </div>
           </div>
 

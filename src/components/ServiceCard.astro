@@ -25,7 +25,7 @@ const visual = getServiceVisual(service.serviceId);
       height={visual.height}
       alt={visual.alt}
       loading="lazy"
-      class="h-48 w-full object-cover object-center sm:h-52"
+      class="h-44 w-full object-cover object-center sm:h-48"
       data-animate="soft-parallax"
     />
   </div>
@@ -34,8 +34,8 @@ const visual = getServiceVisual(service.serviceId);
       <Badge text={`${String(index + 1).padStart(2, '0')}`} />
     </div>
     <div class="space-y-2">
-      <h3 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:text-[2rem]">
-        {service.title}
+      <h3 class="overflow-hidden font-[var(--font-display)] text-[1.85rem] font-semibold tracking-[-0.03em] text-[var(--color-text)] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] sm:text-[2rem]">
+        {service.shortTitle}
       </h3>
       <p class="overflow-hidden text-base leading-7 text-[var(--color-text-muted)] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
         {service.summary}

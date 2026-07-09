@@ -8,7 +8,6 @@ import ProcessSection from '../../components/ProcessSection.astro';
 import RelatedServices from '../../components/RelatedServices.astro';
 import ReviewsSection from '../../components/ReviewsSection.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
-import StatementSection from '../../components/StatementSection.astro';
 import VisualAsset from '../../components/VisualAsset.astro';
 import WhatsAppCTA from '../../components/WhatsAppCTA.astro';
 import WhyChooseUs from '../../components/WhyChooseUs.astro';
@@ -236,7 +235,6 @@ const whatsAppHref = buildWhatsAppUrl(locale);
           />
         </Container>
       </section>
-      <StatementSection locale={locale} section={home.whyChooseUs} />
       <WhyChooseUs section={home.whyChooseUs} number="02" />
       <ConversionLinkBlock
         locale={locale}
@@ -280,7 +278,6 @@ const whatsAppHref = buildWhatsAppUrl(locale);
         </Container>
       </section>
       <ContactSection locale={locale} section={home.contactCta} number="02" showForm={true} showHeading={false} />
-      <ReviewsSection id="reviews" locale={locale} number="03" compact={true} className="mt-8" />
       <section class="pb-8 sm:pb-10 lg:pb-12">
         <Container>
           <div class="mt-5">
@@ -288,6 +285,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
           </div>
         </Container>
       </section>
+      <ReviewsSection id="reviews" locale={locale} number="03" compact={true} className="mt-8" />
       <ConversionLinkBlock
         locale={locale}
         eyebrow={internalLinksContent.contact.eyebrow}
@@ -327,16 +325,15 @@ const whatsAppHref = buildWhatsAppUrl(locale);
       <section class="py-16 sm:py-20 lg:py-28" data-animate="hero">
         <Container size="wide">
           <div class="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-            <div class="space-y-8">
-              <BigTextBlock
-                eyebrow={navigation.ui.serviceEyebrow}
-                number="01"
-                title={service.heroTitle}
-                body={service.intro}
-                titleClassName="max-w-4xl"
-              />
-              <p class="max-w-3xl text-pretty text-lg leading-8 text-[var(--color-text-muted)]">{service.summary}</p>
-            </div>
+          <div class="space-y-8">
+            <BigTextBlock
+              eyebrow={navigation.ui.serviceEyebrow}
+              number="01"
+              title={service.heroTitle}
+              body={service.intro}
+              titleClassName="max-w-4xl"
+            />
+          </div>
             <VisualAsset
               asset={getServiceVisual(service.serviceId)}
               eyebrow={navigation.ui.serviceEyebrow}

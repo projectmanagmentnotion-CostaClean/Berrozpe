@@ -1,53 +1,53 @@
 {
   "locale": "en",
   "home": {
-    "eyebrow": "Recommended path",
-    "title": "Start with the right service and move into a clearer enquiry",
-    "body": "If you already know which technical line you need, go straight into the service. If you are still comparing options, review the company or move to contact with more context.",
-    "serviceListTitle": "Main service",
+    "eyebrow": "Recommended route",
+    "title": "Start with the right service",
+    "body": "If you already know what you need, open the service. If not, go to contact or review the company first.",
+    "serviceListTitle": "Service",
     "trustLabel": "About the company",
-    "contactLabel": "Get guidance"
+    "contactLabel": "Request guidance"
   },
   "servicesIndex": {
     "eyebrow": "Next step",
-    "title": "Compare services and choose the contact route that fits best",
-    "body": "Each card summarises one technical line. If you prefer to explain the need directly, you can move to contact or review the company first.",
+    "title": "Compare services and choose how to contact us",
+    "body": "Each page summarises one technical line. If you prefer, go straight to contact.",
     "contactLabel": "Request a quote",
     "aboutLabel": "About us"
   },
   "serviceDetail": {
     "journey": {
       "eyebrow": "Next step",
-      "title": "Turn this need into a well-focused enquiry",
-      "body": "You can explain the case through contact, return to the service index to compare options or review the company before deciding the next step.",
+      "title": "Turn this need into a clear enquiry",
+      "body": "You can go to contact, return to the index or review the company before deciding.",
       "contactLabel": "Request a quote",
       "servicesLabel": "View all services",
-      "aboutLabel": "Learn about the company"
+      "aboutLabel": "About the company"
     },
     "related": {
       "eyebrow": "Related services",
-      "title": "Solutions that are often reviewed together with this service",
-      "body": "These links help connect technical needs that are often raised within the same enquiry."
+      "title": "Services often reviewed together",
+      "body": "Related options for connected technical needs."
     },
     "faqCta": {
       "eyebrow": "Enquiry",
-      "title": "If you need a more precise assessment, contact is the next step",
-      "body": "When the answer depends on the space, the existing installation or a combination of services, the best approach is to explain the case by phone, WhatsApp or form.",
+      "title": "If you need a more precise review, go to contact",
+      "body": "When the answer depends on the space or on several services, it is best to explain the case by phone, WhatsApp or form.",
       "contactLabel": "Go to contact"
     }
   },
   "about": {
     "eyebrow": "Next step",
-    "title": "After the company context, the natural route moves to service and contact",
-    "body": "Once you understand the Instal Berrozpe approach, you can enter the most relevant service or write directly to explain the need.",
+    "title": "After the company overview, the next step is service or contact",
+    "body": "You can open the most relevant service or write directly to explain the need.",
     "servicesLabel": "View services",
     "contactLabel": "Go to contact",
     "featuredServiceLabel": "Featured service"
   },
   "contact": {
-    "eyebrow": "Before you write",
-    "title": "If you are still unsure between services, here is a quick route",
-    "body": "You can review the three confirmed services, learn more about the company or call directly if you prefer to solve the first doubt by phone.",
+    "eyebrow": "Before writing",
+    "title": "If you are still deciding between services, here is a quick route",
+    "body": "Review the services, learn more about the company or call directly.",
     "servicesLabel": "View services",
     "aboutLabel": "About us",
     "phoneLabel": "Call now"

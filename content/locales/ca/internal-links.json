@@ -2,44 +2,44 @@
   "locale": "ca",
   "home": {
     "eyebrow": "Recorregut recomanat",
-    "title": "Comenca pel servei adequat i avanca amb una consulta mes clara",
-    "body": "Si ja saps quina linea tecnica necessites, entra al servei. Si encara estàs comparant opcions, revisa l'empresa o passa a contacte per plantejar el cas amb context.",
-    "serviceListTitle": "Servei principal",
+    "title": "Comenca pel servei adequat",
+    "body": "Si ja saps que necessites, entra al servei. Si no, passa a contacte o revisa l'empresa.",
+    "serviceListTitle": "Servei",
     "trustLabel": "Coneixer l'empresa",
     "contactLabel": "Demanar orientacio"
   },
   "servicesIndex": {
     "eyebrow": "Seguent pas",
-    "title": "Compara serveis i tria la via de contacte que millor encaixi",
-    "body": "Cada fitxa resumeix una linea tecnica concreta. Si prefereixes explicar directament la necessitat, pots passar a contacte o revisar primer la presentacio de l'empresa.",
+    "title": "Compara serveis i tria com contactar",
+    "body": "Cada fitxa resumeix una linia tecnica. Si prefereixes explicar el cas, passa a contacte.",
     "contactLabel": "Demanar pressupost",
     "aboutLabel": "Veure sobre nosaltres"
   },
   "serviceDetail": {
     "journey": {
       "eyebrow": "Seguent pas",
-      "title": "Converteix aquesta necessitat en una consulta ben enfocada",
-      "body": "Pots explicar el cas per contacte, tornar a l'index per comparar serveis o revisar l'empresa abans de decidir el seguent pas.",
+      "title": "Converteix aquesta necessitat en una consulta clara",
+      "body": "Pots anar a contacte, tornar a l'index o revisar l'empresa abans de decidir.",
       "contactLabel": "Demanar pressupost",
       "servicesLabel": "Veure tots els serveis",
       "aboutLabel": "Coneixer l'empresa"
     },
     "related": {
       "eyebrow": "Serveis relacionats",
-      "title": "Solucions que sovint es revisen junt amb aquest servei",
-      "body": "Aquestes relacions ajuden a enllacar necessitats tecniques que sovint es plantegen en una mateixa consulta."
+      "title": "Serveis que sovint es consulten junts",
+      "body": "Relacionats per resoldre necessitats tecniques connectades."
     },
     "faqCta": {
       "eyebrow": "Consulta",
-      "title": "Si necessites una valoracio mes precisa, el pas seguent es contacte",
-      "body": "Quan la resposta depen de l'espai, de la instal·lacio existent o d'una combinacio de serveis, convé explicar el cas per telefon, WhatsApp o formulari.",
+      "title": "Si necessites una valoracio mes precisa, passa a contacte",
+      "body": "Quan el cas depen de l'espai o de diversos serveis, convé explicar-lo per telefon, WhatsApp o formulari.",
       "contactLabel": "Anar a contacte"
     }
   },
   "about": {
     "eyebrow": "Seguent pas",
-    "title": "Despres del context d'empresa, el recorregut natural passa per servei i contacte",
-    "body": "Un cop entes l'enfocament d'Instal Berrozpe, pots entrar al servei que millor encaixi o escriure directament per plantejar la necessitat.",
+    "title": "Despres de coneixer l'empresa, el seguent pas es servei o contacte",
+    "body": "Pots entrar al servei que millor encaixi o escriure directament per explicar la necessitat.",
     "servicesLabel": "Veure serveis",
     "contactLabel": "Anar a contacte",
     "featuredServiceLabel": "Servei destacat"
@@ -47,7 +47,7 @@
   "contact": {
     "eyebrow": "Abans d'escriure",
     "title": "Si encara dubtes entre serveis, aqui tens una ruta rapida",
-    "body": "Pots revisar els tres serveis confirmats, coneixer millor l'empresa o trucar directament si prefereixes resoldre el primer dubte per telefon.",
+    "body": "Revisa els serveis, coneix millor l'empresa o truca directament.",
     "servicesLabel": "Veure serveis",
     "aboutLabel": "Veure sobre nosaltres",
     "phoneLabel": "Trucar ara"

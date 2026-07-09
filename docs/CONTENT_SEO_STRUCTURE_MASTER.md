@@ -167,7 +167,10 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
   - legales basicos en SEO
 - Estado:
   - copy comercial y SEO sincronizado en los cuatro idiomas
+  - home, contacto y bloques de conversion recortados para eliminar texto redundante
   - CTA final de servicio separada del bloque de pendientes internos
+  - contacto publico limpiado de resumen legal visible y mensajes internos
+  - footer, reseñas, WhatsApp, mapa e internal linking compactados para priorizar conversion
   - contacto publico limpiado de mensajes internos de validacion
 - Pendientes editoriales:
   - revision legal definitiva de legales
@@ -571,3 +574,19 @@ Reduced motion:
   - iframe vivo pendiente hasta disponer de una integracion segura y una categoria real de terceros si llega a activarse
 - Regla UX:
   - el CTA flotante no debe tapar banner de cookies ni formulario
+  - el bloque de mapa en contacto debe aparecer antes que reseñas
+
+## S. Polish final pre-staging
+
+- Fecha de cierre: `2026-07-09`
+- Ajustes aplicados:
+  - eliminada la duplicacion del bloque editorial principal en home y sobre nosotros
+  - acortadas las intros de home, contacto, WhatsApp, mapa, reseñas e internal linking en `es`, `ca`, `en` y `de`
+  - reducida densidad visual de cards de servicios, footer, CTA de contacto y bloque de mapa
+  - el email principal confirmado pasa a ocupar la segunda via de contacto destacada
+  - el detalle de servicio elimina resumen repetido bajo hero
+- Validacion:
+  - `npm run build` correcto
+  - 45 paginas generadas
+  - `sitemap-index.xml`, `sitemap-0.xml`, `robots.txt`, `.htaccess` y `form-handler.php` presentes en `dist/`
+  - sin script de `lint` en `package.json`

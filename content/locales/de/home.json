@@ -3,8 +3,8 @@
   "hero": {
     "sectionId": "hero",
     "eyebrow": "Installationen in Blanes und Girona",
-    "title": "Elektro, Sanitär, Klimatechnik, Alarmanlagen und Kameras für Privat- und Gewerbeobjekte",
-    "body": "Instal Berrozpe konzentriert sich auf drei klare technische Leistungsbereiche: Elektro und Smart Home, Sanitär und Klimatechnik sowie Alarmanlagen und Kameras. Direkter Kontakt aus Blanes per Telefon, WhatsApp, E-Mail oder Formular.",
+    "title": "Elektro, Sanitaar, Klimatechnik, Alarmanlagen und Kameras fur Haus und Betrieb",
+    "body": "Drei klare Bereiche: Elektro und Smart Home, Sanitaar und Klimatechnik sowie Alarmanlagen und Kameras. Direkter Kontakt aus Blanes per Telefon, WhatsApp, E-Mail oder Formular.",
     "primaryCtaLabel": "Leistungen ansehen",
     "primaryCtaHref": "/de/dienstleistungen/",
     "secondaryCtaLabel": "Angebot anfragen",
@@ -13,55 +13,55 @@
   "servicesOverview": {
     "sectionId": "services-overview",
     "eyebrow": "Leistungen",
-    "title": "Drei Hauptleistungen für technische Installationen mit klarer Einordnung",
-    "body": "Das aktuelle Angebot ist in drei Arbeitsbereiche gegliedert, die Elektroinstallationen, Wasser- und Klimatechnik sowie Sicherheitssysteme über ein einziges Installationsunternehmen in Blanes abdecken.",
+    "title": "Drei Hauptleistungen fur Installationen in Blanes",
+    "body": "Die Website ist auf drei Bereiche aufgebaut: Elektro und Smart Home, Sanitaar und Klimatechnik sowie Alarmanlagen und Kameras.",
     "items": [
       "Elektro und Smart Home",
-      "Sanitär und Klimatechnik",
+      "Sanitaar und Klimatechnik",
       "Alarmanlagen und Kameras"
     ]
   },
   "whyChooseUs": {
     "sectionId": "why-choose-us",
-    "eyebrow": "Über uns",
-    "title": "Nahes Technikunternehmen mit direktem Kontakt und integriertem Service",
-    "body": "Die aktuelle Basis von Instal Berrozpe vermittelt eine direkte Arbeitsweise: ein Ansprechpartner, miteinander verbundene technische Leistungen und Betreuung für private wie gewerbliche Projekte.",
+    "eyebrow": "Uber uns",
+    "title": "Technisches Unternehmen mit direktem Kontakt",
+    "body": "Instal Berrozpe arbeitet mit drei verbundenen Technikbereichen und einem klaren Kontaktpunkt fur Haus und Betrieb.",
     "items": [
-      "Drei klar definierte Leistungsbereiche für Elektro, Wasser und Klimatechnik sowie Sicherheit.",
-      "Direkter Kontakt per Mobiltelefon, Telefon, WhatsApp, E-Mail und Formular aus Blanes.",
-      "Leistungen für Privat- und Gewerbeobjekte je nach Art der Installation.",
-      "Ein klarer Weg von der ersten Anfrage bis zum technischen Einsatz."
+      "Drei klar definierte Technikbereiche.",
+      "Direkter Kontakt per Telefon, WhatsApp, E-Mail und Formular.",
+      "Betreuung fur Haus und Betrieb.",
+      "Klarer Weg von der Anfrage bis zur technischen Ausfuhrung."
     ]
   },
   "process": {
     "sectionId": "process",
     "eyebrow": "Ablauf",
-    "title": "Ein klarer Ablauf von der Anfrage bis zur Umsetzung",
-    "body": "Die Website zeigt einen einfachen Ablauf: Bedarf erklären, passende Lösung prüfen und anschließend die Installation oder technische Maßnahme koordinieren.",
+    "title": "Vom ersten Kontakt bis zum Einsatz",
+    "body": "Sie schildern den Bedarf, die passende Leistung wird gepruft und der Einsatz wird koordiniert.",
     "items": [
-      "Sie erklären den Bedarf per Telefon, WhatsApp oder Formular.",
-      "Die passende Leistungsrichtung für Privat- oder Gewerbeobjekte wird geprüft.",
-      "Die Installation oder technische Maßnahme wird koordiniert.",
-      "Der Kommunikationskanal bleibt für Rückfragen und weitere Klärung offen."
+      "Sie schildern den Bedarf per Telefon, WhatsApp oder Formular.",
+      "Die passende Leistung wird gepruft.",
+      "Die Installation oder der technische Einsatz wird koordiniert.",
+      "Die Nachverfolgung bleibt nach der ersten Anfrage offen."
     ]
   },
   "contactCta": {
     "sectionId": "contact-cta",
     "eyebrow": "Kontakt",
-    "title": "Sprechen Sie mit Instal Berrozpe und schildern Sie Ihre Installation mit dem richtigen Kontext",
-    "body": "Sie können Kontakt aufnehmen für Elektro und Smart Home, Sanitär und Klimatechnik oder Alarmanlagen und Kameras. Der Einstieg kann per Telefon, WhatsApp, E-Mail oder Formular erfolgen.",
-    "primaryCtaLabel": "Direktes Mobiltelefon",
+    "title": "Sprechen Sie mit Instal Berrozpe",
+    "body": "Direkter Kontakt fur Elektro und Smart Home, Sanitaar und Klimatechnik oder Alarmanlagen und Kameras.",
+    "primaryCtaLabel": "Direktes Telefon",
     "secondaryCtaLabel": "Haupt-E-Mail"
   },
   "faqs": {
     "sectionId": "faqs",
-    "eyebrow": "Häufige Fragen",
-    "title": "Typische Fragen vor einer Informations- oder Angebotsanfrage",
-    "body": "Diese Antworten helfen dabei, die passende Leistung einzuordnen und eine klarere Anfrage schon beim ersten Kontakt vorzubereiten.",
+    "eyebrow": "Haufige Fragen",
+    "title": "Haufige Fragen vor der Kontaktaufnahme",
+    "body": "Kurze Antworten zur Orientierung.",
     "items": [
-      "Instal Berrozpe arbeitet für private und gewerbliche Projekte.",
-      "Anfragen können per Formular, Telefon, E-Mail oder WhatsApp gesendet werden.",
-      "Wenn nicht klar ist, welche Leistung am besten passt, ist die Kontaktseite der beste Einstieg."
+      "Das Unternehmen arbeitet fur Haus und Betrieb.",
+      "Kontakt ist per Formular, Telefon, E-Mail oder WhatsApp moglich.",
+      "Wenn Sie zwischen Leistungen zweifeln, ist Kontakt der beste Einstieg."
     ]
   }
 }
