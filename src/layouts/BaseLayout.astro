@@ -42,9 +42,10 @@ const {
       noIndex={noIndex}
     />
   </head>
-  <body class="bg-slate-950 text-white antialiased">
-    <div class="relative isolate min-h-screen overflow-hidden">
-      <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.16),_transparent_55%)]"></div>
+  <body>
+    <div class="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+      <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(150,190,255,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.06),transparent_22%)]"></div>
+      <div class="pointer-events-none fixed inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:32px_32px] [mask-image:linear-gradient(to_bottom,black,transparent_70%)]"></div>
       <SiteHeader locale={locale} languageLinks={alternates} />
       <main>
         <slot />

@@ -1,0 +1,64 @@
+---
+import type { AlternateLink, Locale } from '../lib/content';
+import type { NavigationData } from '../data/types';
+import Button from './Button.astro';
+
+interface Props {
+  locale: Locale;
+  navigation: NavigationData;
+  languageLinks: AlternateLink[];
+  contactHref: string;
+  contactLabel: string;
+}
+
+const { locale, navigation, languageLinks, contactHref, contactLabel } = Astro.props;
+---
+
+<details class="group lg:hidden">
+  <summary class="flex min-h-11 cursor-pointer list-none items-center justify-center rounded-full border border-[var(--color-border)] px-4 text-sm font-medium text-[var(--color-text)] transition hover:border-[var(--color-border-strong)] hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]">
+    <span class="group-open:hidden">Menu</span>
+    <span class="hidden group-open:inline">Close</span>
+  </summary>
+
+  <div class="absolute inset-x-5 top-[calc(100%+0.75rem)] rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 shadow-[0_24px_80px_rgba(2,6,23,0.48)]">
+    <nav aria-label="Mobile">
+      <ul class="space-y-3 text-lg text-[var(--color-text)]">
+        {navigation.items.filter((item) => item.id !== 'language').map((item) => (
+          <li>
+            <a class:list={['block rounded-2xl px-4 py-3 transition hover:bg-white/5', item.id === 'contact' && 'font-medium']} href={item.href ?? '#'} data-locale={locale}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="mt-5 border-t border-[var(--color-border)] pt-5">
+      <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.items.find((item) => item.id === 'language')?.label}</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        {languageLinks.map((link) => (
+          <a
+            aria-current={link.locale === locale ? 'page' : undefined}
+            class:list={[
+              'inline-flex min-h-11 items-center rounded-full border px-4 text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg-elevated)]',
+              link.locale === locale
+                ? 'border-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-ink)]'
+                : 'border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-text)]',
+            ]}
+            href={link.href}
+            hreflang={link.locale}
+            lang={link.locale}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <Button href={contactHref} variant="primary" size="lg" className="w-full">
+        {contactLabel}
+      </Button>
+    </div>
+  </div>
+</details>

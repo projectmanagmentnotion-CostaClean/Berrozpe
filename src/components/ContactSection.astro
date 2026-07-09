@@ -1,36 +1,92 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { getSharedContact, getSiteSettings } from '../lib/content';
-import SectionShell from './SectionShell.astro';
+import { getNavigation, getSharedContact } from '../lib/content';
+import Button from './Button.astro';
+import Card from './Card.astro';
+import Section from './Section.astro';
 
 interface Props {
   locale: Locale;
   section: HomeSection;
+  number?: string;
 }
 
-const { locale, section } = Astro.props;
-const site = getSiteSettings(locale);
+const { locale, section, number } = Astro.props;
 const contact = getSharedContact();
+const navigation = getNavigation(locale);
+const schedule = contact.schedule[locale] ?? contact.schedule.es;
+const whatsappLink = contact.whatsAppUrl;
 ---
 
-<SectionShell id="contacto" eyebrow={section.eyebrow} title={section.title} body={section.body}>
-  <div class="mt-10 grid gap-4 md:grid-cols-2">
-    <a class="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-300/50" href={`tel:${site.primaryPhone}`}>
-      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">{section.primaryCtaLabel}</p>
-      <p class="mt-3 text-lg font-semibold text-white">{site.primaryPhone}</p>
-    </a>
-    <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
-      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">{section.secondaryCtaLabel}</p>
-      {site.primaryEmail ? (
-        <a class="mt-3 block text-lg font-semibold text-white" href={`mailto:${site.primaryEmail}`}>{site.primaryEmail}</a>
-      ) : (
-        <div class="mt-3 space-y-2">
-          {contact.emailsDetected.map((email) => (
-            <a class="block text-base font-semibold text-white" href={`mailto:${email}`}>{email}</a>
-          ))}
+<Section
+  id={section.sectionId}
+  eyebrow={section.eyebrow}
+  number={number}
+  title={section.title}
+  body={section.body}
+  className="border-t border-[var(--color-border)]"
+>
+  <div class="mt-10 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]" data-animate-group="contact">
+    <Card className="space-y-8" data-animate="stagger">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.mobileLabel}</p>
+          <a class="mt-3 block text-xl font-medium text-[var(--color-text)]" href={`tel:${contact.phones.mobile}`}>{contact.phones.mobile}</a>
+        </div>
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.landlineLabel}</p>
+          <a class="mt-3 block text-xl font-medium text-[var(--color-text)]" href={`tel:${contact.phones.landline}`}>{contact.phones.landline}</a>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.addressLabel}</p>
+          <div class="mt-3 space-y-1 text-base leading-7 text-[var(--color-text)]">
+            {contact.address.displayLines.map((line) => <p>{line}</p>)}
+          </div>
+        </div>
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.scheduleLabel}</p>
+          <p class="mt-3 text-base leading-7 text-[var(--color-text)]">{schedule}</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <Button href={`tel:${contact.phones.mobile}`} variant="primary" size="lg">
+          {contact.phones.mobile}
+        </Button>
+        <Button href={whatsappLink} variant="secondary" size="lg" target="_blank" rel="noreferrer">
+          WhatsApp
+        </Button>
+      </div>
+    </Card>
+
+    <Card className="space-y-6" data-animate="stagger">
+      <div>
+        <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.detectedEmailsLabel}</p>
+        <div class="mt-4 space-y-2">
+          {contact.primaryEmail ? (
+            <a class="block text-lg font-medium text-[var(--color-text)]" href={`mailto:${contact.primaryEmail}`}>{contact.primaryEmail}</a>
+          ) : (
+            contact.emailsDetected.map((email) => (
+              <a class="block text-lg font-medium text-[var(--color-text)]" href={`mailto:${email}`}>{email}</a>
+            ))
+          )}
+        </div>
+      </div>
+
+      {contact.pendingConfirmation.length > 0 && (
+        <div class="rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.02] p-5">
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.pendingConfirmationLabel}</p>
+          <ul class="mt-4 space-y-2 text-sm leading-7 text-[var(--color-text-muted)]">
+            {contact.pendingConfirmation.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
         </div>
       )}
-    </div>
+    </Card>
   </div>
-</SectionShell>
+</Section>

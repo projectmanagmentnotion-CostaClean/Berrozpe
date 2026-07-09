@@ -1,0 +1,44 @@
+---
+interface Props {
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'md' | 'lg';
+  className?: string;
+  target?: string;
+  rel?: string;
+}
+
+const {
+  href,
+  type = 'button',
+  variant = 'primary',
+  size = 'md',
+  className = '',
+  target,
+  rel,
+} = Astro.props;
+
+const variantClass = {
+  primary: 'border-transparent bg-[var(--color-accent)] text-[var(--color-ink)] hover:bg-[var(--color-accent-soft)]',
+  secondary: 'border-[var(--color-border)] bg-transparent text-[var(--color-text)] hover:border-[var(--color-border-strong)] hover:bg-white/5',
+  ghost: 'border-transparent bg-transparent text-[var(--color-text-muted)] hover:text-[var(--color-text)]',
+}[variant];
+
+const sizeClass = {
+  md: 'min-h-11 px-5 py-3 text-sm',
+  lg: 'min-h-12 px-6 py-3.5 text-sm sm:text-base',
+}[size];
+
+const sharedClass = `inline-flex items-center justify-center rounded-full border font-medium tracking-[0.01em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] ${variantClass} ${sizeClass} ${className}`;
+---
+
+{href ? (
+  <a class={sharedClass} href={href} target={target} rel={rel}>
+    <slot />
+  </a>
+) : (
+  <button class={sharedClass} type={type}>
+    <slot />
+  </button>
+)}

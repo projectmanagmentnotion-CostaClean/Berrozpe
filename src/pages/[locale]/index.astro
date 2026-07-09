@@ -1,8 +1,11 @@
 ---
-import BulletSection from '../../components/BulletSection.astro';
-import ContactSection from '../../components/ContactSection.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import FAQSection from '../../components/FAQSection.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import ProcessSection from '../../components/ProcessSection.astro';
 import ServicesPreview from '../../components/ServicesPreview.astro';
+import StatementSection from '../../components/StatementSection.astro';
+import WhyChooseUs from '../../components/WhyChooseUs.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import {
   getAllowedLocales,
@@ -11,6 +14,7 @@ import {
   getPublishedServices,
   getRouteCatalog,
   getSeoData,
+  getSiteSettings,
   isLocale,
   type Locale,
 } from '../../lib/content';
@@ -32,6 +36,19 @@ const home = getHomeCollection(locale);
 const services = getPublishedServices(locale);
 const seo = getSeoData(locale);
 const routes = getRouteCatalog(locale);
+const site = getSiteSettings(locale);
+const heroHighlights = [
+  {
+    label: home.servicesOverview.eyebrow,
+    value: String(services.length).padStart(2, '0'),
+    description: home.servicesOverview.items?.join(' · '),
+  },
+  {
+    label: home.hero.eyebrow,
+    value: String(site.supportedLocales.length).padStart(2, '0'),
+    description: site.supportedLocales.map((entry) => entry.toUpperCase()).join(' · '),
+  },
+];
 ---
 
 <BaseLayout
@@ -41,8 +58,11 @@ const routes = getRouteCatalog(locale);
   canonicalPath={routes.home}
   alternates={getLanguageSwitcherLinksForPage('home')}
 >
-  <HeroSection section={home.hero} />
+  <HeroSection section={home.hero} highlights={heroHighlights} />
+  <StatementSection locale={locale} section={home.whyChooseUs} />
   <ServicesPreview locale={locale} section={home.servicesOverview} services={services} />
-  <BulletSection section={home.process} />
-  <ContactSection locale={locale} section={home.contactCta} />
+  <ProcessSection section={home.process} number="02" />
+  <WhyChooseUs section={home.whyChooseUs} number="03" />
+  <ContactCTA locale={locale} section={home.contactCta} />
+  <FAQSection section={home.faqs} number="04" />
 </BaseLayout>

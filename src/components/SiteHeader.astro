@@ -1,7 +1,10 @@
 ---
 import type { AlternateLink, Locale } from '../lib/content';
-import { getNavigation, getSiteSettings } from '../lib/content';
+import { getNavigation, getRouteCatalog, getSiteSettings } from '../lib/content';
+import Button from './Button.astro';
+import Container from './Container.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import MobileMenu from './MobileMenu.astro';
 
 interface Props {
   locale: Locale;
@@ -11,33 +14,48 @@ interface Props {
 const { locale, languageLinks } = Astro.props;
 const site = getSiteSettings(locale);
 const navigation = getNavigation(locale);
+const routes = getRouteCatalog(locale);
+const contactLabel = navigation.items.find((item) => item.id === 'contact')?.label ?? 'Contact';
 ---
 
-<header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4 lg:flex-row lg:items-center lg:justify-between">
-    <div class="flex items-center justify-between gap-4">
-      <a class="text-sm font-semibold uppercase tracking-[0.24em] text-white" href={site.localeBasePath}>
+<header class="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[color:var(--color-header)] backdrop-blur-xl">
+  <Container className="relative">
+    <div class="flex min-h-20 items-center justify-between gap-4">
+      <a class="flex min-h-11 items-center text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-text)]" href={site.localeBasePath}>
         {site.brandName}
       </a>
-      <div class="lg:hidden">
-        <LanguageSwitcher currentLocale={locale} links={languageLinks} label={navigation.items.find((item) => item.id === 'language')?.label ?? 'Language'} />
-      </div>
-    </div>
 
-    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
-      <nav aria-label="Principal">
-        <ul class="flex flex-wrap items-center gap-4 text-sm text-slate-200 lg:justify-end">
+      <nav aria-label="Principal" class="hidden xl:block">
+        <ul class="flex items-center gap-7 text-sm text-[var(--color-text-muted)]">
           {navigation.items.filter((item) => item.id !== 'language').map((item) => (
             <li>
-              <a class="transition hover:text-white" href={item.href ?? site.localeBasePath}>{item.label}</a>
+              <a class="inline-flex min-h-11 items-center transition hover:text-[var(--color-text)]" href={item.href ?? site.localeBasePath}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
       </nav>
 
-      <div class="hidden lg:block">
+      <div class="hidden items-center gap-3 lg:flex">
         <LanguageSwitcher currentLocale={locale} links={languageLinks} label={navigation.items.find((item) => item.id === 'language')?.label ?? 'Language'} />
+        <Button href={routes.contact} variant="primary">
+          {contactLabel}
+        </Button>
+      </div>
+
+      <div class="flex items-center gap-3 lg:hidden">
+        <Button href={routes.contact} variant="secondary" className="hidden sm:inline-flex">
+          {contactLabel}
+        </Button>
+        <MobileMenu
+          locale={locale}
+          navigation={navigation}
+          languageLinks={languageLinks}
+          contactHref={routes.contact}
+          contactLabel={contactLabel}
+        />
       </div>
     </div>
-  </div>
+  </Container>
 </header>

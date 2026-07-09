@@ -19,7 +19,7 @@ const { section, number } = Astro.props;
   body={section.body}
   className="border-t border-[var(--color-border)]"
 >
-  <div class="mt-10 grid gap-5 md:grid-cols-2" data-animate-group="bullet-list">
+  <div class="mt-10 grid gap-4 lg:grid-cols-3" data-animate-group="faq">
     {section.items?.map((item) => (
       <Card className="h-full" data-animate="stagger">
         <p class="text-base leading-8 text-[var(--color-text)]">{item}</p>

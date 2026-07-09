@@ -1,0 +1,38 @@
+---
+import type { Locale, LocalizedServiceEntry } from '../lib/content';
+import { getNavigation, getServiceRouteById } from '../lib/content';
+import Badge from './Badge.astro';
+import Button from './Button.astro';
+import Card from './Card.astro';
+
+interface Props {
+  locale: Locale;
+  service: LocalizedServiceEntry;
+  index: number;
+}
+
+const { locale, service, index } = Astro.props;
+const navigation = getNavigation(locale);
+const href = getServiceRouteById(service.serviceId, locale) ?? '#';
+---
+
+<Card className="flex h-full flex-col justify-between" data-animate="stagger">
+  <div class="space-y-5">
+    <div class="flex items-center justify-between gap-4">
+      <Badge text={`${String(index + 1).padStart(2, '0')}`} />
+      <span class="text-sm text-[var(--color-text-soft)]">{service.shortTitle}</span>
+    </div>
+    <div class="space-y-3">
+      <h3 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:text-3xl">
+        {service.heroTitle}
+      </h3>
+      <p class="text-base leading-8 text-[var(--color-text-muted)]">{service.summary}</p>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <Button href={href} variant="secondary">
+      {navigation.ui.serviceLink}
+    </Button>
+  </div>
+</Card>

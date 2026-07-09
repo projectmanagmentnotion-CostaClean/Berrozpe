@@ -54,12 +54,39 @@ import type {
   SiteSettings,
 } from '../data/types';
 
-export const LOCALES = sharedSite.supportedLocales as Locale[];
+function normalizeImportedContent<T>(value: T): T {
+  if (typeof value === 'string') {
+    if (!/[ÃÂð]/.test(value)) {
+      return value;
+    }
+
+    return Buffer.from(value, 'latin1').toString('utf8') as T;
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((entry) => normalizeImportedContent(entry)) as T;
+  }
+
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(
+      Object.entries(value).map(([key, entry]) => [key, normalizeImportedContent(entry)]),
+    ) as T;
+  }
+
+  return value;
+}
+
+const siteData = normalizeImportedContent(sharedSite);
+const contactData = normalizeImportedContent(sharedContact);
+const servicesIndexData = normalizeImportedContent(sharedServicesIndex);
+const redirectsData = normalizeImportedContent(sharedRedirects);
+
+export const LOCALES = siteData.supportedLocales as Locale[];
 export type Locale = (typeof LOCALES)[number];
 
-export const DEFAULT_LOCALE = sharedSite.defaultLocale as Locale;
+export const DEFAULT_LOCALE = siteData.defaultLocale as Locale;
 
-export const SERVICE_IDS = sharedServicesIndex.services.map((service) => service.serviceId) as ServiceId[];
+export const SERVICE_IDS = servicesIndexData.services.map((service) => service.serviceId) as ServiceId[];
 export type ServiceId = (typeof SERVICE_IDS)[number];
 
 export const LEGAL_PAGE_IDS = ['legalNotice', 'privacy', 'cookies', 'terms'] as const;
@@ -94,73 +121,73 @@ export interface RouteCatalog {
 }
 
 const navigationByLocale: Record<Locale, NavigationData> = {
-  es: esNavigation,
-  ca: caNavigation,
-  en: enNavigation,
-  de: deNavigation,
+  es: normalizeImportedContent(esNavigation),
+  ca: normalizeImportedContent(caNavigation),
+  en: normalizeImportedContent(enNavigation),
+  de: normalizeImportedContent(deNavigation),
 };
 
 const homeByLocale: Record<Locale, HomeCollection> = {
-  es: esHome,
-  ca: caHome,
-  en: enHome,
-  de: deHome,
+  es: normalizeImportedContent(esHome),
+  ca: normalizeImportedContent(caHome),
+  en: normalizeImportedContent(enHome),
+  de: normalizeImportedContent(deHome),
 };
 
 const seoByLocale: Record<Locale, SeoData> = {
-  es: esSeo,
-  ca: caSeo,
-  en: enSeo,
-  de: deSeo,
+  es: normalizeImportedContent(esSeo),
+  ca: normalizeImportedContent(caSeo),
+  en: normalizeImportedContent(enSeo),
+  de: normalizeImportedContent(deSeo),
 };
 
 const servicesByLocale: Record<Locale, LocalizedServiceEntry[]> = {
   es: [
-    { serviceId: 'electricidad-y-domotica', ...esElectricidadYDomotica },
-    { serviceId: 'lampisteria-y-climatizacion', ...esLampisteriaYClimatizacion },
-    { serviceId: 'alarmas-y-camaras', ...esAlarmasYCamaras },
+    { serviceId: 'electricidad-y-domotica', ...normalizeImportedContent(esElectricidadYDomotica) },
+    { serviceId: 'lampisteria-y-climatizacion', ...normalizeImportedContent(esLampisteriaYClimatizacion) },
+    { serviceId: 'alarmas-y-camaras', ...normalizeImportedContent(esAlarmasYCamaras) },
   ],
   ca: [
-    { serviceId: 'electricidad-y-domotica', ...caElectricitatIDomotica },
-    { serviceId: 'lampisteria-y-climatizacion', ...caLampisteriaIClimatitzacio },
-    { serviceId: 'alarmas-y-camaras', ...caAlarmesICameres },
+    { serviceId: 'electricidad-y-domotica', ...normalizeImportedContent(caElectricitatIDomotica) },
+    { serviceId: 'lampisteria-y-climatizacion', ...normalizeImportedContent(caLampisteriaIClimatitzacio) },
+    { serviceId: 'alarmas-y-camaras', ...normalizeImportedContent(caAlarmesICameres) },
   ],
   en: [
-    { serviceId: 'electricidad-y-domotica', ...enElectricityAndHomeAutomation },
-    { serviceId: 'lampisteria-y-climatizacion', ...enPlumbingAndClimateControl },
-    { serviceId: 'alarmas-y-camaras', ...enAlarmsAndCameras },
+    { serviceId: 'electricidad-y-domotica', ...normalizeImportedContent(enElectricityAndHomeAutomation) },
+    { serviceId: 'lampisteria-y-climatizacion', ...normalizeImportedContent(enPlumbingAndClimateControl) },
+    { serviceId: 'alarmas-y-camaras', ...normalizeImportedContent(enAlarmsAndCameras) },
   ],
   de: [
-    { serviceId: 'electricidad-y-domotica', ...deElektrizitaetUndSmartHome },
-    { serviceId: 'lampisteria-y-climatizacion', ...deSanitaerUndKlimatechnik },
-    { serviceId: 'alarmas-y-camaras', ...deAlarmanlagenUndKameras },
+    { serviceId: 'electricidad-y-domotica', ...normalizeImportedContent(deElektrizitaetUndSmartHome) },
+    { serviceId: 'lampisteria-y-climatizacion', ...normalizeImportedContent(deSanitaerUndKlimatechnik) },
+    { serviceId: 'alarmas-y-camaras', ...normalizeImportedContent(deAlarmanlagenUndKameras) },
   ],
 };
 
 const legalPagesByLocale: Record<Locale, LocalizedLegalPage[]> = {
   es: [
-    { pageId: 'legalNotice', ...esLegalNotice },
-    { pageId: 'privacy', ...esPrivacy },
-    { pageId: 'cookies', ...esCookies },
-    { pageId: 'terms', ...esTerms },
+    { pageId: 'legalNotice', ...normalizeImportedContent(esLegalNotice) },
+    { pageId: 'privacy', ...normalizeImportedContent(esPrivacy) },
+    { pageId: 'cookies', ...normalizeImportedContent(esCookies) },
+    { pageId: 'terms', ...normalizeImportedContent(esTerms) },
   ],
   ca: [
-    { pageId: 'legalNotice', ...caLegalNotice },
-    { pageId: 'privacy', ...caPrivacy },
-    { pageId: 'cookies', ...caCookies },
-    { pageId: 'terms', ...caTerms },
+    { pageId: 'legalNotice', ...normalizeImportedContent(caLegalNotice) },
+    { pageId: 'privacy', ...normalizeImportedContent(caPrivacy) },
+    { pageId: 'cookies', ...normalizeImportedContent(caCookies) },
+    { pageId: 'terms', ...normalizeImportedContent(caTerms) },
   ],
   en: [
-    { pageId: 'legalNotice', ...enLegalNotice },
-    { pageId: 'privacy', ...enPrivacy },
-    { pageId: 'cookies', ...enCookies },
-    { pageId: 'terms', ...enTerms },
+    { pageId: 'legalNotice', ...normalizeImportedContent(enLegalNotice) },
+    { pageId: 'privacy', ...normalizeImportedContent(enPrivacy) },
+    { pageId: 'cookies', ...normalizeImportedContent(enCookies) },
+    { pageId: 'terms', ...normalizeImportedContent(enTerms) },
   ],
   de: [
-    { pageId: 'legalNotice', ...deLegalNotice },
-    { pageId: 'privacy', ...dePrivacy },
-    { pageId: 'cookies', ...deCookies },
-    { pageId: 'terms', ...deTerms },
+    { pageId: 'legalNotice', ...normalizeImportedContent(deLegalNotice) },
+    { pageId: 'privacy', ...normalizeImportedContent(dePrivacy) },
+    { pageId: 'cookies', ...normalizeImportedContent(deCookies) },
+    { pageId: 'terms', ...normalizeImportedContent(deTerms) },
   ],
 };
 
@@ -169,7 +196,7 @@ function resolveLocale(locale?: string): Locale {
 }
 
 function buildAbsoluteUrl(path: string): string {
-  return new URL(path, sharedSite.siteUrl).toString();
+  return new URL(path, siteData.siteUrl).toString();
 }
 
 function toPathname(href: string): string {
@@ -204,7 +231,7 @@ export function getAllowedLocales(): Locale[] {
 
 export function getLocaleLabel(locale: string): string {
   const resolvedLocale = resolveLocale(locale);
-  return sharedSite.localeLabels[resolvedLocale] ?? resolvedLocale.toUpperCase();
+  return siteData.localeLabels[resolvedLocale] ?? resolvedLocale.toUpperCase();
 }
 
 export function getSiteSettings(locale?: string): SiteSettings {
@@ -212,36 +239,36 @@ export function getSiteSettings(locale?: string): SiteSettings {
   const seo = getSeoData(resolvedLocale);
 
   return {
-    brandName: sharedSite.brandName,
-    siteUrl: sharedSite.siteUrl,
+    brandName: siteData.brandName,
+    siteUrl: siteData.siteUrl,
     locale: resolvedLocale,
-    localeBasePath: sharedSite.localeBasePaths[resolvedLocale],
+    localeBasePath: siteData.localeBasePaths[resolvedLocale],
     localeLabel: getLocaleLabel(resolvedLocale),
     defaultLocale: DEFAULT_LOCALE,
     supportedLocales: getAllowedLocales(),
     defaultTitle: seo.titles.home,
-    titleTemplate: `%s | ${sharedSite.brandName}`,
+    titleTemplate: `%s | ${siteData.brandName}`,
     defaultDescription: seo.descriptions.home,
-    businessName: sharedSite.brandName,
+    businessName: siteData.brandName,
     legalName: null,
-    primaryPhone: sharedContact.phones.mobile,
-    primaryEmail: sharedContact.primaryEmail,
-    locality: sharedContact.address.locality,
-    region: sharedContact.address.region,
-    countryCode: sharedContact.address.countryCode,
-    postalCode: sharedContact.address.postalCode,
-    addressLine: sharedContact.address.streetAddress,
+    primaryPhone: contactData.phones.mobile,
+    primaryEmail: contactData.primaryEmail,
+    locality: contactData.address.locality,
+    region: contactData.address.region,
+    countryCode: contactData.address.countryCode,
+    postalCode: contactData.address.postalCode,
+    addressLine: contactData.address.streetAddress,
     coverageArea: [],
-    socialLinks: sharedContact.socialLinks,
+    socialLinks: contactData.socialLinks,
   };
 }
 
 export function getSharedContact(): SharedContact {
-  return sharedContact;
+  return contactData;
 }
 
 export function getRedirectData(): RedirectData {
-  return sharedRedirects;
+  return redirectsData;
 }
 
 export function getNavigation(locale?: string): NavigationData {
@@ -287,7 +314,7 @@ export function getServiceBySlug(locale: string | undefined, slug: string): Loca
 
 export function getServiceRouteById(serviceId: string, locale?: string): string | undefined {
   const resolvedLocale = resolveLocale(locale);
-  const entry = sharedServicesIndex.services.find((service) => service.serviceId === serviceId);
+  const entry = servicesIndexData.services.find((service) => service.serviceId === serviceId);
 
   return entry?.locales?.[resolvedLocale]?.path;
 }
@@ -304,7 +331,7 @@ export function getServiceById(serviceId: string, locale?: string): LocalizedSer
 }
 
 export function getServiceAlternates(serviceId: string): Record<Locale, string> {
-  const entry = sharedServicesIndex.services.find((service) => service.serviceId === serviceId);
+  const entry = servicesIndexData.services.find((service) => service.serviceId === serviceId);
 
   if (!entry) {
     throw new Error(`Missing service index entry for ${serviceId}`);
@@ -346,7 +373,7 @@ export function getAlternateLinks(paths: Partial<Record<Locale, string>>): Alter
   return LOCALES.map((locale) => ({
     locale,
     label: locale.toUpperCase(),
-    href: paths[locale] ?? sharedSite.localeBasePaths[locale],
+    href: paths[locale] ?? siteData.localeBasePaths[locale],
   }));
 }
 

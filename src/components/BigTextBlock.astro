@@ -1,0 +1,35 @@
+---
+import EditorialLabel from './EditorialLabel.astro';
+import SectionNumber from './SectionNumber.astro';
+
+interface Props {
+  eyebrow?: string;
+  number?: string;
+  title: string;
+  body?: string;
+  align?: 'left' | 'center';
+  titleClassName?: string;
+}
+
+const {
+  eyebrow,
+  number,
+  title,
+  body,
+  align = 'left',
+  titleClassName = '',
+} = Astro.props;
+---
+
+<div class:list={['space-y-5', align === 'center' && 'mx-auto text-center']}>
+  {(eyebrow || number) && (
+    <div class:list={['flex flex-wrap items-center gap-4', align === 'center' && 'justify-center']}>
+      {number && <SectionNumber value={number} />}
+      {eyebrow && <EditorialLabel text={eyebrow} />}
+    </div>
+  )}
+  <h2 class:list={['max-w-5xl text-balance font-[var(--font-display)] text-4xl font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--color-text)] sm:text-5xl lg:text-7xl', titleClassName]}>
+    {title}
+  </h2>
+  {body && <p class="max-w-3xl text-pretty text-base leading-8 text-[var(--color-text-muted)] sm:text-lg">{body}</p>}
+</div>

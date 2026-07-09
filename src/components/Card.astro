@@ -1,0 +1,23 @@
+---
+interface Props {
+  as?: keyof HTMLElementTagNameMap;
+  className?: string;
+  padded?: boolean;
+}
+
+const {
+  as: Tag = 'article',
+  className = '',
+  padded = true,
+} = Astro.props;
+---
+
+<Tag
+  class:list={[
+    'rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_20px_80px_rgba(2,6,23,0.35)]',
+    padded && 'p-6 sm:p-8',
+    className,
+  ]}
+>
+  <slot />
+</Tag>
