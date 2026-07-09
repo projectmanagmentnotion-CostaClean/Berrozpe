@@ -63,6 +63,27 @@ Ningun idioma puede cerrar la revision legal antes que los demas si la fuente de
 - Integracion global en `src/layouts/BaseLayout.astro`
 - Enlace permanente de reapertura desde `src/components/SiteFooter.astro`
 
+## Formulario RGPD
+
+- Contenido multidioma del formulario en `content/locales/{locale}/contact.json`
+- Componentes:
+  - `src/components/ContactForm.astro`
+  - `src/components/FormField.astro`
+  - `src/components/PrivacyConsent.astro`
+- Validacion frontend progresiva en:
+  - `src/lib/forms/validation.ts`
+  - `src/scripts/contact-form.ts`
+- Validacion backend y envio en `public/form-handler.php`
+- Destinatario confirmado del handler: `david@instalberrozpe.com`
+
+## Reglas del formulario
+
+- El checkbox de privacidad es obligatorio y no va premarcado.
+- El formulario incluye honeypot oculto sin introducir cookies nuevas.
+- Solo se permiten los tres servicios confirmados.
+- El enlace legal del checkbox apunta a la politica de privacidad localizada.
+- El handler no publica datos fiscales no confirmados y no expone errores sensibles.
+
 ## Categorias actuales
 
 - `necessary`: activas siempre

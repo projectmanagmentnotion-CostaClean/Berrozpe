@@ -1,20 +1,23 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { getNavigation, getSharedContact } from '../lib/content';
+import { getNavigation, getRouteCatalog, getSharedContact } from '../lib/content';
 import Button from './Button.astro';
 import Card from './Card.astro';
+import ContactForm from './ContactForm.astro';
 import Section from './Section.astro';
 
 interface Props {
   locale: Locale;
   section: HomeSection;
   number?: string;
+  showForm?: boolean;
 }
 
-const { locale, section, number } = Astro.props;
+const { locale, section, number, showForm = false } = Astro.props;
 const contact = getSharedContact();
 const navigation = getNavigation(locale);
+const routes = getRouteCatalog(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
 const whatsappLink = contact.whatsAppUrl;
 ---
@@ -89,4 +92,10 @@ const whatsappLink = contact.whatsAppUrl;
       )}
     </Card>
   </div>
+
+  {showForm && (
+    <div class="mt-5" data-animate="stagger">
+      <ContactForm locale={locale} returnUrl={routes.contact} />
+    </div>
+  )}
 </Section>

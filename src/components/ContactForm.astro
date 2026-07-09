@@ -1,0 +1,147 @@
+---
+import type { ContactFormContent } from '../data/types';
+import type { Locale } from '../lib/content';
+import { getContactFormContent, getRouteCatalog } from '../lib/content';
+import FormField from './FormField.astro';
+import PrivacyConsent from './PrivacyConsent.astro';
+
+interface Props {
+  locale: Locale;
+  action?: string;
+  returnUrl: string;
+}
+
+const { locale, action = '/form-handler.php', returnUrl } = Astro.props;
+const content = getContactFormContent(locale);
+const routes = getRouteCatalog(locale);
+const statusRegionId = `contact-form-status-${locale}`;
+const privacyHref = routes.legal.privacy;
+const serviceOptions = [
+  { value: '', label: content.fields.service.placeholder },
+  ...content.serviceOptions,
+];
+---
+
+<article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.35)] sm:p-8">
+  <div class="space-y-3">
+    <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{content.title}</p>
+    <h2 class="font-[var(--font-display)] text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl">
+      {content.title}
+    </h2>
+    <p class="max-w-3xl text-base leading-8 text-[var(--color-text-muted)]">{content.intro}</p>
+  </div>
+
+  <div
+    id={statusRegionId}
+    class="mt-6 hidden rounded-[1.5rem] border px-4 py-3 text-sm leading-7"
+    aria-live="polite"
+    data-form-status
+    data-success-message={content.successMessage}
+    data-error-message={content.errorMessage}
+  ></div>
+
+  <form
+    class="mt-8 space-y-5"
+    method="post"
+    action={action}
+    novalidate
+    data-contact-form
+    data-locale={locale}
+    data-success-message={content.successMessage}
+    data-error-message={content.errorMessage}
+    data-sending-label={content.sendingLabel}
+    data-submit-label={content.submitLabel}
+    data-validation-messages={JSON.stringify(content.validationMessages)}
+    data-status-region={statusRegionId}
+  >
+    <input type="hidden" name="locale" value={locale} />
+    <input type="hidden" name="return_url" value={returnUrl} />
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      <FormField
+        id={`contact-name-${locale}`}
+        name="name"
+        label={content.fields.name.label}
+        type="text"
+        placeholder={content.fields.name.placeholder}
+        autocomplete={content.fields.name.autocomplete}
+        required={true}
+      />
+      <FormField
+        id={`contact-email-${locale}`}
+        name="email"
+        label={content.fields.email.label}
+        type="email"
+        placeholder={content.fields.email.placeholder}
+        autocomplete={content.fields.email.autocomplete}
+        required={true}
+      />
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      <FormField
+        id={`contact-phone-${locale}`}
+        name="phone"
+        label={content.fields.phone.label}
+        type="tel"
+        placeholder={content.fields.phone.placeholder}
+        autocomplete={content.fields.phone.autocomplete}
+      />
+      <FormField
+        id={`contact-service-${locale}`}
+        name="service"
+        label={content.fields.service.label}
+        type="select"
+        options={serviceOptions}
+        required={true}
+      />
+    </div>
+
+    <FormField
+      id={`contact-message-${locale}`}
+      name="message"
+      label={content.fields.message.label}
+      type="textarea"
+      placeholder={content.fields.message.placeholder}
+      rows={content.fields.message.rows}
+      required={true}
+    />
+
+    <FormField
+      id={`contact-honeypot-${locale}`}
+      name="website"
+      label={content.honeypotLabel}
+      type="text"
+      autocomplete="off"
+      hiddenLabel={true}
+    />
+
+    <PrivacyConsent
+      id={`contact-privacy-${locale}`}
+      name="privacy"
+      label={content.fields.privacy.label}
+      prefix={content.privacyConsent.prefix}
+      linkLabel={content.privacyConsent.linkLabel}
+      suffix={content.privacyConsent.suffix}
+      href={privacyHref}
+    />
+
+    <div class="space-y-3 rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.03] p-5">
+      {content.legalSummary.map((paragraph) => (
+        <p class="text-sm leading-7 text-[var(--color-text-muted)]">{paragraph}</p>
+      ))}
+    </div>
+
+    <button
+      type="submit"
+      class="inline-flex min-h-12 items-center justify-center rounded-full border border-transparent bg-[var(--color-accent)] px-6 py-3.5 text-sm font-medium text-[var(--color-ink)] transition hover:bg-[var(--color-accent-soft)] disabled:cursor-wait disabled:opacity-70"
+      data-submit-button
+    >
+      {content.submitLabel}
+    </button>
+  </form>
+</article>
+
+<script>
+  import '../scripts/contact-form.ts';
+</script>

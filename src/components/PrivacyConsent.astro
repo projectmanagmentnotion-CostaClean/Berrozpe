@@ -1,0 +1,50 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  label: string;
+  prefix: string;
+  linkLabel: string;
+  suffix: string;
+  href: string;
+  errorId?: string;
+}
+
+const {
+  id,
+  name,
+  label,
+  prefix,
+  linkLabel,
+  suffix,
+  href,
+  errorId = `${id}-error`,
+} = Astro.props;
+---
+
+<div class="space-y-3" data-field-wrapper>
+  <label class="flex items-start gap-3 rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.6] p-4">
+    <input
+      id={id}
+      name={name}
+      type="checkbox"
+      value="1"
+      class="mt-1 h-5 w-5 rounded border-[var(--color-border-strong)] text-[var(--color-accent)] focus:ring-[var(--color-secondary)]"
+      aria-describedby={errorId}
+      data-field-input
+    />
+    <span class="space-y-2 text-sm leading-7 text-[var(--color-text-muted)]">
+      <span class="block font-medium text-[var(--color-text)]">{label}</span>
+      <span class="block">
+        {prefix}
+        {' '}
+        <a class="font-medium text-[var(--color-secondary)] underline underline-offset-4" href={href}>
+          {linkLabel}
+        </a>
+        {' '}
+        {suffix}
+      </span>
+    </span>
+  </label>
+  <p id={errorId} class="min-h-6 text-sm text-[var(--color-secondary)]" aria-live="polite" data-field-error></p>
+</div>

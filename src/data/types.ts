@@ -94,6 +94,92 @@ export interface SeoData {
   hreflang: Record<string, Record<string, string>>;
 }
 
+export interface ContactFieldContent {
+  label: string;
+  placeholder?: string;
+  autocomplete?: string;
+  rows?: number;
+}
+
+export interface ContactFormContent {
+  locale: string;
+  title: string;
+  intro: string;
+  fields: {
+    name: ContactFieldContent;
+    email: ContactFieldContent;
+    phone: ContactFieldContent;
+    service: ContactFieldContent;
+    message: ContactFieldContent;
+    privacy: ContactFieldContent;
+    honeypot: ContactFieldContent;
+  };
+  serviceOptions: Array<{
+    value: string;
+    label: string;
+  }>;
+  privacyConsent: {
+    prefix: string;
+    linkLabel: string;
+    suffix: string;
+  };
+  legalSummary: string[];
+  submitLabel: string;
+  sendingLabel: string;
+  successMessage: string;
+  errorMessage: string;
+  validationMessages: {
+    nameRequired: string;
+    emailRequired: string;
+    emailInvalid: string;
+    phoneInvalid: string;
+    serviceRequired: string;
+    messageRequired: string;
+    privacyRequired: string;
+    honeypotFilled: string;
+    genericError: string;
+  };
+  honeypotLabel: string;
+}
+
+export interface CookieConsentCategory {
+  key: string;
+  title: string;
+  description: string;
+  required?: boolean;
+  activeByDefault?: boolean;
+  pending?: boolean;
+}
+
+export interface CookieConsentContent {
+  locale: string;
+  storageKey: string;
+  version: string;
+  banner: {
+    title: string;
+    body: string;
+    acceptLabel: string;
+    rejectLabel: string;
+    configureLabel: string;
+    policyLabel: string;
+  };
+  modal: {
+    title: string;
+    body: string;
+    saveLabel: string;
+    acceptAllLabel: string;
+    rejectAllLabel: string;
+    closeLabel: string;
+  };
+  labels: {
+    alwaysActive: string;
+    preparedInactive: string;
+  };
+  categories: CookieConsentCategory[];
+  footerLinkLabel: string;
+  savedMessage: string;
+}
+
 export interface RedirectData {
   redirects: Array<{
     from: string;

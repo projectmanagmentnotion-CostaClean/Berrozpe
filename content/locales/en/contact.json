@@ -1,0 +1,76 @@
+{
+  "locale": "en",
+  "title": "Contact form",
+  "intro": "Use this form to request information about one of the three confirmed services. The request requires accepting the privacy policy before submission.",
+  "fields": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Your name",
+      "autocomplete": "name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "your@email.com",
+      "autocomplete": "email"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Your phone",
+      "autocomplete": "tel"
+    },
+    "service": {
+      "label": "Requested service",
+      "placeholder": "Select a service"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Describe your request",
+      "rows": 6
+    },
+    "privacy": {
+      "label": "I have read and accept the privacy policy."
+    },
+    "honeypot": {
+      "label": "Do not fill in this field"
+    }
+  },
+  "serviceOptions": [
+    {
+      "value": "electricidad-y-domotica",
+      "label": "Electricity and home automation"
+    },
+    {
+      "value": "lampisteria-y-climatizacion",
+      "label": "Plumbing and climate control"
+    },
+    {
+      "value": "alarmas-y-camaras",
+      "label": "Alarms and cameras"
+    }
+  ],
+  "privacyConsent": {
+    "prefix": "You must accept the",
+    "linkLabel": "privacy policy",
+    "suffix": "before sending the form."
+  },
+  "legalSummary": [
+    "The form sends the request to david@instalberrozpe.com as the confirmed primary email.",
+    "The final tax identity and final legal text are still pending external legal review."
+  ],
+  "submitLabel": "Send request",
+  "sendingLabel": "Sending...",
+  "successMessage": "Your request has been sent successfully.",
+  "errorMessage": "The form could not be sent. Check the fields and try again.",
+  "validationMessages": {
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Enter a valid email address.",
+    "phoneInvalid": "Enter a valid phone number or leave the field empty.",
+    "serviceRequired": "Select a service.",
+    "messageRequired": "Message is required.",
+    "privacyRequired": "You must accept the privacy policy.",
+    "honeypotFilled": "The submission could not be validated.",
+    "genericError": "The form could not be processed."
+  },
+  "honeypotLabel": "Do not fill in this field"
+}

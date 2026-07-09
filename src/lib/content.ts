@@ -10,6 +10,14 @@ import esHome from '../../content/locales/es/home.json';
 import caHome from '../../content/locales/ca/home.json';
 import enHome from '../../content/locales/en/home.json';
 import deHome from '../../content/locales/de/home.json';
+import esContactForm from '../../content/locales/es/contact.json';
+import caContactForm from '../../content/locales/ca/contact.json';
+import enContactForm from '../../content/locales/en/contact.json';
+import deContactForm from '../../content/locales/de/contact.json';
+import esCookieConsent from '../../content/locales/es/cookie-consent.json';
+import caCookieConsent from '../../content/locales/ca/cookie-consent.json';
+import enCookieConsent from '../../content/locales/en/cookie-consent.json';
+import deCookieConsent from '../../content/locales/de/cookie-consent.json';
 import esSeo from '../../content/locales/es/seo.json';
 import caSeo from '../../content/locales/ca/seo.json';
 import enSeo from '../../content/locales/en/seo.json';
@@ -43,8 +51,10 @@ import deLegalNotice from '../../content/locales/de/legal/legal-notice.json';
 import deCookies from '../../content/locales/de/legal/cookies.json';
 import deTerms from '../../content/locales/de/legal/terms.json';
 import type {
+  ContactFormContent,
   HomeCollection,
   HomeSection,
+  CookieConsentContent,
   LegalPage,
   NavigationData,
   RedirectData,
@@ -134,11 +144,25 @@ const homeByLocale: Record<Locale, HomeCollection> = {
   de: normalizeImportedContent(deHome),
 };
 
+const contactFormByLocale: Record<Locale, ContactFormContent> = {
+  es: normalizeImportedContent(esContactForm),
+  ca: normalizeImportedContent(caContactForm),
+  en: normalizeImportedContent(enContactForm),
+  de: normalizeImportedContent(deContactForm),
+};
+
 const seoByLocale: Record<Locale, SeoData> = {
   es: normalizeImportedContent(esSeo),
   ca: normalizeImportedContent(caSeo),
   en: normalizeImportedContent(enSeo),
   de: normalizeImportedContent(deSeo),
+};
+
+const cookieConsentByLocale: Record<Locale, CookieConsentContent> = {
+  es: normalizeImportedContent(esCookieConsent),
+  ca: normalizeImportedContent(caCookieConsent),
+  en: normalizeImportedContent(enCookieConsent),
+  de: normalizeImportedContent(deCookieConsent),
 };
 
 const servicesByLocale: Record<Locale, LocalizedServiceEntry[]> = {
@@ -279,8 +303,16 @@ export function getSeoData(locale?: string): SeoData {
   return seoByLocale[resolveLocale(locale)];
 }
 
+export function getCookieConsentContent(locale?: string): CookieConsentContent {
+  return cookieConsentByLocale[resolveLocale(locale)];
+}
+
 export function getHomeCollection(locale?: string): HomeCollection {
   return homeByLocale[resolveLocale(locale)];
+}
+
+export function getContactFormContent(locale?: string): ContactFormContent {
+  return contactFormByLocale[resolveLocale(locale)];
 }
 
 export function getHomeSections(locale?: string): HomeSection[] {

@@ -40,6 +40,7 @@ Fuente de verdad: `content/shared/contact.json`
   - `comercial@instalberrozpe.com`
 - `primaryEmail`: `david@instalberrozpe.com`
 - WhatsApp derivado: `https://wa.me/34676043389?...`
+- Destinatario del formulario RGPD / handler PHP: `david@instalberrozpe.com`
 
 Pendiente:
 
@@ -231,6 +232,43 @@ Datos que faltan confirmar o revisar:
 - Identidad fiscal definitiva que deba mostrarse en la nueva web
 - Canal legal especifico para reclamaciones si difiere del email principal ya confirmado
 - Politica real de cookies y analitica de la nueva version
+
+## J.1 Formulario RGPD
+
+Fuente de verdad multidioma:
+
+- `content/locales/{locale}/contact.json`
+
+Campos activos:
+
+- nombre
+- email
+- telefono
+- servicio solicitado
+- mensaje
+- privacidad obligatoria
+- honeypot
+
+Validacion:
+
+- Frontend progresiva en `src/lib/forms/validation.ts` y `src/scripts/contact-form.ts`
+- Backend en `public/form-handler.php`
+
+Controles implementados:
+
+- honeypot oculto
+- privacidad obligatoria
+- email valido
+- telefono opcional con formato razonable
+- servicio limitado a los tres servicios confirmados
+- limites de longitud y saneado basico
+- respuesta JSON para JS activo y redirect con `?status=` para fallback sin JS
+
+Pendiente antes de produccion:
+
+- Validacion legal final del texto de privacidad
+- Confirmar si el hosting requiere una cabecera `From` distinta del email destinatario confirmado
+- Probar `mail()` en el entorno real de SiteGround
 
 ## K. Assets
 

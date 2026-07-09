@@ -1,0 +1,76 @@
+{
+  "locale": "de",
+  "title": "Kontaktformular",
+  "intro": "Nutze dieses Formular, um Informationen zu einer der drei bestätigten Leistungen anzufordern. Vor dem Absenden muss die Datenschutzerklärung akzeptiert werden.",
+  "fields": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Ihr Name",
+      "autocomplete": "name"
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "ihre@email.com",
+      "autocomplete": "email"
+    },
+    "phone": {
+      "label": "Telefon",
+      "placeholder": "Ihre Telefonnummer",
+      "autocomplete": "tel"
+    },
+    "service": {
+      "label": "Gewünschte Leistung",
+      "placeholder": "Leistung auswählen"
+    },
+    "message": {
+      "label": "Nachricht",
+      "placeholder": "Beschreiben Sie Ihre Anfrage",
+      "rows": 6
+    },
+    "privacy": {
+      "label": "Ich habe die Datenschutzerklärung gelesen und akzeptiere sie."
+    },
+    "honeypot": {
+      "label": "Dieses Feld nicht ausfüllen"
+    }
+  },
+  "serviceOptions": [
+    {
+      "value": "electricidad-y-domotica",
+      "label": "Elektrizität und Smart Home"
+    },
+    {
+      "value": "lampisteria-y-climatizacion",
+      "label": "Sanitär und Klimatechnik"
+    },
+    {
+      "value": "alarmas-y-camaras",
+      "label": "Alarmanlagen und Kameras"
+    }
+  ],
+  "privacyConsent": {
+    "prefix": "Sie müssen die",
+    "linkLabel": "Datenschutzerklärung",
+    "suffix": "akzeptieren, bevor das Formular gesendet werden kann."
+  },
+  "legalSummary": [
+    "Das Formular sendet die Anfrage an david@instalberrozpe.com als bestätigte Haupt-E-Mail.",
+    "Die endgültige steuerliche Identität und der endgültige Rechtstext warten weiterhin auf externe rechtliche Prüfung."
+  ],
+  "submitLabel": "Anfrage senden",
+  "sendingLabel": "Wird gesendet...",
+  "successMessage": "Ihre Anfrage wurde erfolgreich gesendet.",
+  "errorMessage": "Das Formular konnte nicht gesendet werden. Prüfen Sie die Felder und versuchen Sie es erneut.",
+  "validationMessages": {
+    "nameRequired": "Name ist erforderlich.",
+    "emailRequired": "E-Mail ist erforderlich.",
+    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "phoneInvalid": "Bitte geben Sie eine gültige Telefonnummer ein oder lassen Sie das Feld leer.",
+    "serviceRequired": "Bitte wählen Sie eine Leistung aus.",
+    "messageRequired": "Nachricht ist erforderlich.",
+    "privacyRequired": "Sie müssen die Datenschutzerklärung akzeptieren.",
+    "honeypotFilled": "Die Anfrage konnte nicht validiert werden.",
+    "genericError": "Das Formular konnte nicht verarbeitet werden."
+  },
+  "honeypotLabel": "Dieses Feld nicht ausfüllen"
+}

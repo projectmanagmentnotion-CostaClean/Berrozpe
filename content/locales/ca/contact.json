@@ -1,0 +1,76 @@
+{
+  "locale": "ca",
+  "title": "Formulari de contacte",
+  "intro": "Fes servir aquest formulari per sol·licitar informació sobre un dels tres serveis confirmats. La sol·licitud requereix acceptar la política de privacitat abans de l'enviament.",
+  "fields": {
+    "name": {
+      "label": "Nom",
+      "placeholder": "El teu nom",
+      "autocomplete": "name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "tu@email.com",
+      "autocomplete": "email"
+    },
+    "phone": {
+      "label": "Telèfon",
+      "placeholder": "El teu telèfon",
+      "autocomplete": "tel"
+    },
+    "service": {
+      "label": "Servei sol·licitat",
+      "placeholder": "Selecciona un servei"
+    },
+    "message": {
+      "label": "Missatge",
+      "placeholder": "Descriu la teva consulta",
+      "rows": 6
+    },
+    "privacy": {
+      "label": "He llegit i accepto la política de privacitat."
+    },
+    "honeypot": {
+      "label": "No emplenis aquest camp"
+    }
+  },
+  "serviceOptions": [
+    {
+      "value": "electricidad-y-domotica",
+      "label": "Electricitat i domòtica"
+    },
+    {
+      "value": "lampisteria-y-climatizacion",
+      "label": "Lampisteria i climatització"
+    },
+    {
+      "value": "alarmas-y-camaras",
+      "label": "Alarmes i càmeres"
+    }
+  ],
+  "privacyConsent": {
+    "prefix": "Has d'acceptar la",
+    "linkLabel": "política de privacitat",
+    "suffix": "per poder enviar el formulari."
+  },
+  "legalSummary": [
+    "El formulari envia la sol·licitud a david@instalberrozpe.com com a email principal confirmat.",
+    "La identitat fiscal definitiva i el text legal final continuen pendents de revisió jurídica externa."
+  ],
+  "submitLabel": "Enviar sol·licitud",
+  "sendingLabel": "Enviant...",
+  "successMessage": "La teva sol·licitud s'ha enviat correctament.",
+  "errorMessage": "No s'ha pogut enviar el formulari. Revisa els camps i torna-ho a provar.",
+  "validationMessages": {
+    "nameRequired": "El nom és obligatori.",
+    "emailRequired": "L'email és obligatori.",
+    "emailInvalid": "Introdueix un email vàlid.",
+    "phoneInvalid": "Introdueix un telèfon vàlid o deixa el camp buit.",
+    "serviceRequired": "Selecciona un servei.",
+    "messageRequired": "El missatge és obligatori.",
+    "privacyRequired": "Has d'acceptar la política de privacitat.",
+    "honeypotFilled": "No s'ha pogut validar l'enviament.",
+    "genericError": "No s'ha pogut processar el formulari."
+  },
+  "honeypotLabel": "No emplenis aquest camp"
+}
