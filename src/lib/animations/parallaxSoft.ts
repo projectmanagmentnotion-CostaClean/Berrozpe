@@ -28,6 +28,7 @@ export function parallaxSoft(root: ParentNode = document): void {
           start: 'top bottom',
           end: 'bottom top',
           scrub: 0.6,
+          invalidateOnRefresh: true,
         },
       },
     );

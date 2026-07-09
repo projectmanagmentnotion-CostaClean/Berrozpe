@@ -217,6 +217,76 @@ export interface SharedVisuals {
   };
 }
 
+export interface SharedInternalLinks {
+  pages: {
+    home: {
+      serviceIds: string[];
+      trustPageId: string;
+      contactPageId: string;
+    };
+    services: {
+      serviceIds: string[];
+      trustPageId: string;
+      contactPageId: string;
+    };
+    about: {
+      serviceIds: string[];
+      featuredServiceId: string;
+      contactPageId: string;
+    };
+    contact: {
+      serviceIds: string[];
+      trustPageId: string;
+    };
+  };
+  services: Record<string, {
+    relatedServiceIds: string[];
+    trustPageId: string;
+    servicesPageId: string;
+    contactPageId: string;
+  }>;
+}
+
+export interface InternalLinksContentSection {
+  eyebrow: string;
+  title: string;
+  body: string;
+}
+
+export interface InternalLinksContent {
+  locale: string;
+  home: InternalLinksContentSection & {
+    serviceListTitle: string;
+    trustLabel: string;
+    contactLabel: string;
+  };
+  servicesIndex: InternalLinksContentSection & {
+    contactLabel: string;
+    aboutLabel: string;
+  };
+  serviceDetail: {
+    journey: InternalLinksContentSection & {
+      contactLabel: string;
+      servicesLabel: string;
+      aboutLabel: string;
+    };
+    related: InternalLinksContentSection;
+    faqCta: InternalLinksContentSection & {
+      contactLabel: string;
+    };
+  };
+  about: InternalLinksContentSection & {
+    servicesLabel: string;
+    contactLabel: string;
+    featuredServiceLabel: string;
+  };
+  contact: InternalLinksContentSection & {
+    servicesLabel: string;
+    aboutLabel: string;
+    phoneLabel: string;
+  };
+}
+
 export interface ListBlock {
   title: string;
   items: string[];

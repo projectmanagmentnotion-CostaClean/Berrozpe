@@ -54,11 +54,13 @@ Pendiente:
 - `contact.json`: direccion, telefonos, horarios, emails detectados, redes y pendientes.
 - `services-index.json`: `serviceId` comun y slugs/rutas equivalentes por idioma.
 - `redirects.json`: redirects legacy hacia la nueva arboladura multidioma.
+- `internal-links.json`: relaciones estrategicas entre descubrimiento, confianza y conversion.
 
 ### `content/locales/es/`
 
 - `navigation.json`
 - `home.json`
+- `internal-links.json`
 - `seo.json`
 - `services/*.json`
 - `legal/*.json`
@@ -205,6 +207,21 @@ Paginas estaticas:
   - `/og/contact.png`
 - Estado actual: composiciones corporativas temporales sin fotografia real verificada
 
+### Internal linking
+
+- Fuente compartida de relaciones: `content/shared/internal-links.json`
+- Copy multidioma de enlace y conversion: `content/locales/{locale}/internal-links.json`
+- Helpers:
+  - `getInternalLinks(...)`
+  - `getRelatedServices(...)`
+  - `getConversionLinks(...)`
+  - `getLocalizedPath(...)`
+- Objetivos:
+  - descubrimiento de servicios
+  - conversion hacia contacto
+  - conexion entre servicios relacionados
+  - refuerzo de confianza hacia sobre nosotros
+
 ## I. Redirecciones
 
 - Fuente de verdad: `content/shared/redirects.json`
@@ -280,6 +297,7 @@ Pendiente antes de produccion:
 Fuente principal:
 
 - `docs/05_ASSET_INVENTORY.md`
+- `docs/ASSET_REQUIREMENTS.md`
 
 Assets legacy detectados:
 
@@ -294,6 +312,7 @@ Assets actualmente activos en la nueva web:
 - Visuales SVG temporales por seccion y servicio
 - OG corporativos temporales
 - Inventario sincronizado en `content/shared/visuals.json`
+- Guia obligatoria de reemplazo y entrega en `docs/ASSET_REQUIREMENTS.md`
 
 Pendientes de optimizacion:
 
@@ -385,6 +404,7 @@ Reduced motion:
 
 - Debe respetarse `prefers-reduced-motion`
 - Si JS falla o reduced motion esta activo, el contenido sigue visible
+- Las animaciones de scroll ahora se comportan en ida y vuelta salvo excepciones interactivas como el menu movil y el parallax suave por `scrub`
 
 ## N. Checklist antes de publicar
 
@@ -396,6 +416,7 @@ Reduced motion:
 - Revisar canonicals
 - Revisar redirects y `.htaccess`
 - Revisar selector de idioma
+- Revisar internal linking multidioma
 - Revisar formulario/contacto
 - Revisar legales con validacion externa
 - Confirmar SSL en SiteGround
@@ -415,3 +436,28 @@ Reduced motion:
   - marketing
 - No hay scripts opcionales confirmados cargandose antes del consentimiento
 - Enlace permanente para reabrir preferencias desde el footer
+
+## P. Rutas de conversion e internal linking
+
+- Home:
+  - descubre los tres servicios
+  - refuerza confianza hacia sobre nosotros
+  - deriva a contacto
+- Servicios indice:
+  - distribuye al detalle de cada servicio
+  - enlaza a contacto
+  - enlaza a sobre nosotros
+- Servicio detalle:
+  - CTA a contacto
+  - enlace al indice de servicios
+  - enlace a sobre nosotros
+  - bloque de servicios relacionados
+  - CTA contextual tras FAQ
+- Sobre nosotros:
+  - enlace a servicios
+  - enlace a contacto
+  - servicio destacado
+- Contacto:
+  - enlace a servicios para usuarios indecisos
+  - enlace a sobre nosotros
+  - llamada directa por telefono

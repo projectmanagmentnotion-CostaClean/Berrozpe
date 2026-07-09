@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getBidirectionalScrollTrigger } from './scrollTrigger';
 
 export function lineReveal(root: ParentNode = document): void {
   const labels = root.querySelectorAll<HTMLElement>('[data-animate="line"]');
@@ -24,11 +25,7 @@ export function lineReveal(root: ParentNode = document): void {
         scaleX: 1,
         duration: 0.55,
         ease: 'power2.out',
-        scrollTrigger: {
-          trigger: label,
-          start: 'top 90%',
-          once: true,
-        },
+        scrollTrigger: getBidirectionalScrollTrigger(label, 'top 90%'),
       },
     );
   });

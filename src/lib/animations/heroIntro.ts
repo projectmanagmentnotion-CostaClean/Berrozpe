@@ -1,16 +1,23 @@
 import { gsap } from 'gsap';
+import { getBidirectionalScrollTrigger } from './scrollTrigger';
 
 export function heroIntro(root: ParentNode = document): void {
   const heroes = root.querySelectorAll<HTMLElement>('[data-animate="hero"]');
 
   heroes.forEach((hero) => {
+    if (hero.dataset.motionReady === 'true') {
+      return;
+    }
+
+    hero.dataset.motionReady = 'true';
+
     const label = hero.querySelector<HTMLElement>('[data-animate="line"]');
     const title = hero.querySelector<HTMLElement>('h1, h2');
     const body = hero.querySelector<HTMLElement>('p');
     const cta = hero.querySelector<HTMLElement>('[data-animate="cta"]');
-    const staggerItems = Array.from(hero.querySelectorAll<HTMLElement>('[data-animate="stagger"]'));
 
     const timeline = gsap.timeline({
+      scrollTrigger: getBidirectionalScrollTrigger(hero, 'top 88%'),
       defaults: {
         duration: 0.72,
         ease: 'power3.out',
@@ -36,15 +43,6 @@ export function heroIntro(root: ParentNode = document): void {
 
     if (cta) {
       timeline.fromTo(cta, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0 }, 0.3);
-    }
-
-    if (staggerItems.length > 0) {
-      timeline.fromTo(
-        staggerItems,
-        { autoAlpha: 0, y: 24 },
-        { autoAlpha: 1, y: 0, stagger: 0.08, duration: 0.6 },
-        0.22,
-      );
     }
   });
 }

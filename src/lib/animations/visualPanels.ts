@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getBidirectionalScrollTrigger } from './scrollTrigger';
 
 export function visualPanels(root: ParentNode = document): void {
   const panels = root.querySelectorAll<HTMLElement>('[data-animate="visual-panel"]');
@@ -20,11 +21,7 @@ export function visualPanels(root: ParentNode = document): void {
         scale: 1,
         duration: 0.74,
         ease: 'power2.out',
-        scrollTrigger: {
-          trigger: panel,
-          start: 'top 88%',
-          once: true,
-        },
+        scrollTrigger: getBidirectionalScrollTrigger(panel, 'top 88%'),
       },
     );
   });

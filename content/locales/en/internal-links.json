@@ -1,0 +1,55 @@
+{
+  "locale": "en",
+  "home": {
+    "eyebrow": "Recommended path",
+    "title": "Start with the service that fits best and finish the enquiry with clear context",
+    "body": "If you already know what you need, go straight to the service. If you are still comparing options, review the company context as well or move to contact for guidance.",
+    "serviceListTitle": "Confirmed services",
+    "trustLabel": "View about us",
+    "contactLabel": "Ask for guidance"
+  },
+  "servicesIndex": {
+    "eyebrow": "Next step",
+    "title": "Compare the service and move toward a more precise enquiry",
+    "body": "Each card leads to a detailed page. If you prefer to explain the case directly, you can move to contact or review the company page before writing.",
+    "contactLabel": "Go to contact",
+    "aboutLabel": "View about us"
+  },
+  "serviceDetail": {
+    "journey": {
+      "eyebrow": "Enquiry path",
+      "title": "This service is often reviewed together with related needs and an early consultation",
+      "body": "You can return to the service index to compare, review the company page or go straight to contact to explain the case in more detail.",
+      "contactLabel": "Request a quote",
+      "servicesLabel": "View all services",
+      "aboutLabel": "Learn about the company"
+    },
+    "related": {
+      "eyebrow": "Related services",
+      "title": "Solutions often reviewed together with this service",
+      "body": "The audit of the current website connects these blocks as complementary services within the same technical need."
+    },
+    "faqCta": {
+      "eyebrow": "Next step",
+      "title": "Do you need a more precise assessment?",
+      "body": "If the answer depends on the space, the existing installation or a combination of services, the best next step is to send the enquiry through contact.",
+      "contactLabel": "Go to contact"
+    }
+  },
+  "about": {
+    "eyebrow": "Next step",
+    "title": "After the company context, the natural path moves to service and contact",
+    "body": "If you have already reviewed the audited company base, you can move into the confirmed services or write directly to explain the need.",
+    "servicesLabel": "View services",
+    "contactLabel": "Go to contact",
+    "featuredServiceLabel": "Featured service"
+  },
+  "contact": {
+    "eyebrow": "Before writing",
+    "title": "Not sure which service fits best?",
+    "body": "You can review the three confirmed services or return to the company page before sending the form. If you prefer to speak directly, you can also call.",
+    "servicesLabel": "View services",
+    "aboutLabel": "View about us",
+    "phoneLabel": "Call now"
+  }
+}

@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getBidirectionalScrollTrigger } from './scrollTrigger';
 
 function bindInteractiveMotion(container: HTMLElement): void {
   const controls = Array.from(container.querySelectorAll<HTMLElement>('a, button'));
@@ -41,11 +42,7 @@ export function ctaMotion(root: ParentNode = document): void {
         y: 0,
         duration: 0.64,
         ease: 'power2.out',
-        scrollTrigger: {
-          trigger: block,
-          start: 'top 84%',
-          once: true,
-        },
+        scrollTrigger: getBidirectionalScrollTrigger(block, 'top 84%'),
       },
     );
   });

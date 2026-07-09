@@ -1,8 +1,10 @@
 ---
 import BigTextBlock from '../../components/BigTextBlock.astro';
 import ContactSection from '../../components/ContactSection.astro';
+import ConversionLinkBlock from '../../components/ConversionLinkBlock.astro';
 import Container from '../../components/Container.astro';
 import ProcessSection from '../../components/ProcessSection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import StatementSection from '../../components/StatementSection.astro';
 import VisualAsset from '../../components/VisualAsset.astro';
@@ -11,7 +13,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import type { LegalPageId, Locale, ServiceId } from '../../lib/content';
 import {
   getAllowedLocales,
+  getConversionLinks,
   getHomeCollection,
+  getInternalLinks,
+  getInternalLinksContent,
   getLanguageSwitcherLinksForPage,
   getLanguageSwitcherLinksForService,
   getLegalPageById,
@@ -21,11 +26,13 @@ import {
   getPageVisual,
   getPathWithoutLocalePrefix,
   getPublishedServices,
+  getRelatedServices,
   getRouteCatalog,
   getSeoData,
   getServiceById,
   getServiceRouteById,
   getServiceVisual,
+  getSharedContact,
 } from '../../lib/content';
 
 type PageKind = 'services-index' | 'service-detail' | 'about' | 'contact' | 'legal';
@@ -95,8 +102,10 @@ const {
 
 const navigation = getNavigation(locale);
 const home = getHomeCollection(locale);
+const internalLinksContent = getInternalLinksContent(locale);
 const seo = getSeoData(locale);
 const services = getPublishedServices(locale);
+const routes = getRouteCatalog(locale);
 
 const service = kind === 'service-detail' && serviceId ? getServiceById(serviceId, locale) : undefined;
 const legalPage = kind === 'legal' && legalPageId ? getLegalPageById(legalPageId, locale) : undefined;
@@ -108,6 +117,12 @@ if (kind === 'service-detail' && !service) {
 if (kind === 'legal' && !legalPage) {
   throw new Error(`Legal page not found for ${legalPageId} (${locale})`);
 }
+
+const servicesIndexLinks = getInternalLinks(locale, 'services');
+const aboutLinks = getInternalLinks(locale, 'about');
+const contactLinks = getInternalLinks(locale, 'contact');
+const serviceJourneyLinks = serviceId ? getConversionLinks(locale, 'service-detail', serviceId) : undefined;
+const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
 ---
 
 <BaseLayout
@@ -157,6 +172,28 @@ if (kind === 'legal' && !legalPage) {
     </section>
   )}
 
+  {kind === 'services-index' && (
+    <ConversionLinkBlock
+      locale={locale}
+      eyebrow={internalLinksContent.servicesIndex.eyebrow}
+      title={internalLinksContent.servicesIndex.title}
+      body={internalLinksContent.servicesIndex.body}
+      number="02"
+      links={[
+        {
+          label: internalLinksContent.servicesIndex.contactLabel,
+          href: servicesIndexLinks.contactPath,
+          variant: 'primary',
+        },
+        {
+          label: internalLinksContent.servicesIndex.aboutLabel,
+          href: servicesIndexLinks.trustPath,
+          variant: 'secondary',
+        },
+      ]}
+    />
+  )}
+
   {kind === 'about' && (
     <>
       <section class="py-16 sm:py-20 lg:py-28" data-animate="hero">
@@ -183,7 +220,31 @@ if (kind === 'legal' && !legalPage) {
       </section>
       <StatementSection locale={locale} section={home.whyChooseUs} />
       <WhyChooseUs section={home.whyChooseUs} number="02" />
-      <ContactSection locale={locale} section={home.contactCta} number="03" />
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.about.eyebrow}
+        title={internalLinksContent.about.title}
+        body={internalLinksContent.about.body}
+        number="03"
+        links={[
+          ...(aboutLinks.featuredService ? [{
+            label: `${internalLinksContent.about.featuredServiceLabel}: ${aboutLinks.featuredService.shortTitle}`,
+            href: getServiceRouteById(aboutLinks.featuredService.serviceId, locale) ?? routes.services,
+            variant: 'secondary' as const,
+          }] : []),
+          {
+            label: internalLinksContent.about.servicesLabel,
+            href: routes.services,
+            variant: 'ghost' as const,
+          },
+          {
+            label: internalLinksContent.about.contactLabel,
+            href: aboutLinks.contactPath,
+            variant: 'primary' as const,
+          },
+        ]}
+      />
+      <ContactSection locale={locale} section={home.contactCta} number="04" />
     </>
   )}
 
@@ -201,6 +262,30 @@ if (kind === 'legal' && !legalPage) {
         </Container>
       </section>
       <ContactSection locale={locale} section={home.contactCta} number="02" showForm={true} showHeading={false} />
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.contact.eyebrow}
+        title={internalLinksContent.contact.title}
+        body={internalLinksContent.contact.body}
+        number="03"
+        links={[
+          ...(contactLinks.services ?? []).map((entry) => ({
+            label: entry.shortTitle,
+            href: getServiceRouteById(entry.serviceId, locale) ?? routes.services,
+            variant: 'secondary' as const,
+          })),
+          {
+            label: internalLinksContent.contact.aboutLabel,
+            href: contactLinks.trustPath,
+            variant: 'ghost' as const,
+          },
+          {
+            label: internalLinksContent.contact.phoneLabel,
+            href: `tel:${getSharedContact().phones.mobile}`,
+            variant: 'primary' as const,
+          },
+        ]}
+      />
     </>
   )}
 
@@ -295,32 +380,61 @@ if (kind === 'legal' && !legalPage) {
         </Container>
       </section>
 
-      <section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
-        <Container>
-          <div class="max-w-4xl">
-            <BigTextBlock eyebrow={navigation.ui.relatedServicesTitle} number="04" title={navigation.ui.relatedServicesTitle} />
-          </div>
-          <div class="mt-10 grid gap-5 lg:grid-cols-2" data-animate-group="related-services">
-            {service.relatedServices.map((relatedServiceId) => {
-              const relatedService = getServiceById(relatedServiceId, locale);
-              return relatedService ? (
-                <ServiceCard
-                  locale={locale}
-                  service={relatedService}
-                  index={service.relatedServices.indexOf(relatedServiceId)}
-                />
-              ) : null;
-            })}
-          </div>
-        </Container>
-      </section>
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.serviceDetail.faqCta.eyebrow}
+        title={internalLinksContent.serviceDetail.faqCta.title}
+        body={internalLinksContent.serviceDetail.faqCta.body}
+        number="04"
+        links={[
+          {
+            label: internalLinksContent.serviceDetail.faqCta.contactLabel,
+            href: serviceJourneyLinks?.contactPath ?? routes.contact,
+            variant: 'primary',
+          },
+        ]}
+      />
+
+      <RelatedServices
+        locale={locale}
+        eyebrow={internalLinksContent.serviceDetail.related.eyebrow}
+        title={internalLinksContent.serviceDetail.related.title}
+        body={internalLinksContent.serviceDetail.related.body}
+        number="05"
+        services={relatedServices}
+      />
+
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.serviceDetail.journey.eyebrow}
+        title={internalLinksContent.serviceDetail.journey.title}
+        body={internalLinksContent.serviceDetail.journey.body}
+        number="06"
+        links={[
+          {
+            label: internalLinksContent.serviceDetail.journey.contactLabel,
+            href: serviceJourneyLinks?.contactPath ?? routes.contact,
+            variant: 'primary',
+          },
+          {
+            label: internalLinksContent.serviceDetail.journey.servicesLabel,
+            href: serviceJourneyLinks?.servicesPath ?? routes.services,
+            variant: 'secondary',
+          },
+          {
+            label: internalLinksContent.serviceDetail.journey.aboutLabel,
+            href: serviceJourneyLinks?.aboutPath ?? routes.about,
+            variant: 'ghost',
+          },
+        ]}
+      />
 
       <section class="py-16 sm:py-20 lg:py-28" data-animate="cta">
         <Container>
           <div class="rounded-[2.5rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-6 py-10 sm:px-10 sm:py-12">
             <BigTextBlock
               eyebrow={navigation.ui.pendingConfirmationLabel}
-              number="05"
+              number="07"
               title={service.cta.label}
               body={service.pendingConfirmation.join(' ')}
               titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl"

@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getBidirectionalScrollTrigger } from './scrollTrigger';
 
 export function staggerGroup(root: ParentNode = document): void {
   const groups = root.querySelectorAll<HTMLElement>('[data-animate-group]');
@@ -26,11 +27,7 @@ export function staggerGroup(root: ParentNode = document): void {
         duration: 0.62,
         stagger: 0.1,
         ease: 'power2.out',
-        scrollTrigger: {
-          trigger: group,
-          start: 'top 82%',
-          once: true,
-        },
+        scrollTrigger: getBidirectionalScrollTrigger(group, 'top 82%'),
       },
     );
   });

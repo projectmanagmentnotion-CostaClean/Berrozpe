@@ -8,6 +8,10 @@ Inventario de assets detectados en la web actual y de los assets realmente integ
 - assets publicos ya activos en `public/`;
 - placeholders corporativos temporales mientras no existan fotos reales confirmadas.
 
+Guia obligatoria complementaria:
+
+- [ASSET_REQUIREMENTS.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/ASSET_REQUIREMENTS.md)
+
 ## Video detectado en portada actual
 
 | Asset | URL actual | Uso actual |

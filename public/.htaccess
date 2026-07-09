@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Root language handling
-RewriteRule ^$ /es/ [R=302,L]
+RewriteRule ^$ /es/ [R=301,L]
 
 # Legacy Spanish pages
 Redirect 301 /inicio/ /es/

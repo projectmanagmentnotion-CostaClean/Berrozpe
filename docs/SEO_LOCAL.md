@@ -62,3 +62,43 @@ Estado:
 
 - OG corporativos temporales, sin fotos reales no verificadas.
 - `SeoHead.astro` ya emite `og:title`, `og:description`, `og:image`, `canonical`, `hreflang` y `x-default`.
+
+## Internal linking
+
+### Fuente de verdad
+
+- Relaciones compartidas: `content/shared/internal-links.json`
+- Copy multidioma: `content/locales/{locale}/internal-links.json`
+- Helpers en [src/lib/content.ts](/C:/Users/USUARIO/Documents/Berrozpe/src/lib/content.ts)
+
+### Mapa por intencion
+
+- Descubrimiento:
+  - home hacia los tres servicios
+  - indice de servicios hacia cada detalle
+  - contacto hacia servicios para usuarios indecisos
+- Conversion:
+  - detalles de servicio hacia contacto
+  - FAQ hacia contacto
+  - home, servicios y sobre nosotros hacia contacto
+- Confianza:
+  - home hacia sobre nosotros
+  - servicios hacia sobre nosotros
+  - contacto hacia sobre nosotros
+- Relacion de servicios:
+  - electricidad y domotica <-> alarmas y camaras
+  - electricidad y domotica <-> lampisteria y climatizacion
+  - lampisteria y climatizacion <-> alarmas y camaras
+
+### Reglas de anchor text
+
+- Usar labels directos y comprensibles.
+- No prometer urgencia, descuentos ni resultados no confirmados.
+- Mantener anchors localizados en el idioma actual.
+- Reutilizar nombres reales de servicio cuando el objetivo sea navegacion directa.
+
+### Reglas multidioma
+
+- Ningun enlace interno puede sacar al usuario de su idioma actual.
+- Los servicios relacionados deben resolver por `serviceId`.
+- Los enlaces a paginas estaticas deben resolver por helper de rutas localizadas.

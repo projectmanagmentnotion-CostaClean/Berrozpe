@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getBidirectionalScrollTrigger } from './scrollTrigger';
 
 export function imageReveal(root: ParentNode = document): void {
   const elements = root.querySelectorAll<HTMLElement>('[data-animate="image-reveal"]');
@@ -20,11 +21,7 @@ export function imageReveal(root: ParentNode = document): void {
         clipPath: 'inset(0 0 0% 0 round 2rem)',
         duration: 0.9,
         ease: 'power2.out',
-        scrollTrigger: {
-          trigger: element,
-          start: 'top 84%',
-          once: true,
-        },
+        scrollTrigger: getBidirectionalScrollTrigger(element, 'top 84%'),
       },
     );
   });

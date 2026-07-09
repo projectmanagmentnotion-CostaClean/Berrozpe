@@ -1,0 +1,55 @@
+{
+  "locale": "ca",
+  "home": {
+    "eyebrow": "Recorregut recomanat",
+    "title": "Comen\u00e7a pel servei que encaixi millor i acaba la consulta amb context clar",
+    "body": "Si ja saps qu\u00e8 necessites, entra directament al servei. Si encara valores opcions, revisa tamb\u00e9 el context de l'empresa o passa a contacte per orientar-te.",
+    "serviceListTitle": "Serveis confirmats",
+    "trustLabel": "Veure sobre nosaltres",
+    "contactLabel": "Demanar orientaci\u00f3"
+  },
+  "servicesIndex": {
+    "eyebrow": "Pas seg\u00fcent",
+    "title": "Compara el servei i avan\u00e7a cap a una consulta m\u00e9s precisa",
+    "body": "Cada fitxa porta a una p\u00e0gina de detall. Si prefereixes explicar directament el cas, pots passar a contacte o revisar la presentaci\u00f3 de l'empresa abans d'escriure.",
+    "contactLabel": "Anar a contacte",
+    "aboutLabel": "Veure sobre nosaltres"
+  },
+  "serviceDetail": {
+    "journey": {
+      "eyebrow": "Ruta de consulta",
+      "title": "Aquest servei acostuma a combinar-se amb altres necessitats i amb una consulta pr\u00e8via",
+      "body": "Pots tornar a l'\u00edndex per comparar, revisar la presentaci\u00f3 de l'empresa o anar directament a contacte per explicar el cas amb m\u00e9s detall.",
+      "contactLabel": "Sol\u00b7licitar pressupost",
+      "servicesLabel": "Veure tots els serveis",
+      "aboutLabel": "Con\u00e8ixer l'empresa"
+    },
+    "related": {
+      "eyebrow": "Serveis relacionats",
+      "title": "Solucions que sovint es revisen juntament amb aquest servei",
+      "body": "L'auditoria de la web actual connecta aquests blocs com a serveis complementaris dins d'una mateixa necessitat t\u00e8cnica."
+    },
+    "faqCta": {
+      "eyebrow": "Pas seg\u00fcent",
+      "title": "Necessites una valoraci\u00f3 m\u00e9s precisa?",
+      "body": "Si la resposta dep\u00e8n de l'espai, de la instal\u00b7laci\u00f3 existent o d'una combinaci\u00f3 de serveis, el millor \u00e9s enviar la consulta per contacte.",
+      "contactLabel": "Anar a contacte"
+    }
+  },
+  "about": {
+    "eyebrow": "Pas seg\u00fcent",
+    "title": "Despr\u00e9s del context d'empresa, el recorregut natural passa per servei i contacte",
+    "body": "Si ja has revisat la base auditada de l'empresa, pots entrar als serveis confirmats o escriure directament per plantejar la necessitat.",
+    "servicesLabel": "Veure serveis",
+    "contactLabel": "Anar a contacte",
+    "featuredServiceLabel": "Servei destacat"
+  },
+  "contact": {
+    "eyebrow": "Abans d'escriure",
+    "title": "No tens clar quin servei encaixa millor?",
+    "body": "Pots revisar els tres serveis confirmats o tornar a la presentaci\u00f3 de l'empresa abans d'enviar el formulari. Si prefereixes parlar directament, tamb\u00e9 pots trucar.",
+    "servicesLabel": "Veure serveis",
+    "aboutLabel": "Veure sobre nosaltres",
+    "phoneLabel": "Trucar ara"
+  }
+}

@@ -1,5 +1,6 @@
 ---
 import ContactCTA from '../../components/ContactCTA.astro';
+import ConversionLinkBlock from '../../components/ConversionLinkBlock.astro';
 import FAQSection from '../../components/FAQSection.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ProcessSection from '../../components/ProcessSection.astro';
@@ -10,6 +11,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import {
   getAllowedLocales,
   getHomeCollection,
+  getInternalLinks,
+  getInternalLinksContent,
   getLanguageSwitcherLinksForPage,
   getOgImagePath,
   getPublishedServices,
@@ -38,6 +41,8 @@ const services = getPublishedServices(locale);
 const seo = getSeoData(locale);
 const routes = getRouteCatalog(locale);
 const site = getSiteSettings(locale);
+const internalLinksContent = getInternalLinksContent(locale);
+const homeLinks = getInternalLinks(locale, 'home');
 const heroHighlights = [
   {
     label: home.servicesOverview.eyebrow,
@@ -63,8 +68,33 @@ const heroHighlights = [
   <HeroSection section={home.hero} highlights={heroHighlights} />
   <StatementSection locale={locale} section={home.whyChooseUs} />
   <ServicesPreview locale={locale} section={home.servicesOverview} services={services} />
-  <ProcessSection section={home.process} number="02" />
-  <WhyChooseUs section={home.whyChooseUs} number="03" />
+  <ConversionLinkBlock
+    locale={locale}
+    eyebrow={internalLinksContent.home.eyebrow}
+    title={internalLinksContent.home.title}
+    body={internalLinksContent.home.body}
+    number="02"
+    links={[
+      ...(homeLinks.services ?? []).map((service) => ({
+        label: service.shortTitle,
+        href: routes.servicesById[service.serviceId],
+        description: internalLinksContent.home.serviceListTitle,
+        variant: 'secondary' as const,
+      })),
+      {
+        label: internalLinksContent.home.trustLabel,
+        href: homeLinks.trustPath,
+        variant: 'ghost' as const,
+      },
+      {
+        label: internalLinksContent.home.contactLabel,
+        href: homeLinks.contactPath,
+        variant: 'primary' as const,
+      },
+    ]}
+  />
+  <ProcessSection section={home.process} number="03" />
+  <WhyChooseUs section={home.whyChooseUs} number="04" />
   <ContactCTA locale={locale} section={home.contactCta} />
-  <FAQSection section={home.faqs} number="04" />
+  <FAQSection section={home.faqs} number="05" />
 </BaseLayout>

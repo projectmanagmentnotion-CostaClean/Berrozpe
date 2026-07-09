@@ -19,10 +19,15 @@ import esCookieConsent from '../../content/locales/es/cookie-consent.json';
 import caCookieConsent from '../../content/locales/ca/cookie-consent.json';
 import enCookieConsent from '../../content/locales/en/cookie-consent.json';
 import deCookieConsent from '../../content/locales/de/cookie-consent.json';
+import sharedInternalLinks from '../../content/shared/internal-links.json';
 import esSeo from '../../content/locales/es/seo.json';
 import caSeo from '../../content/locales/ca/seo.json';
 import enSeo from '../../content/locales/en/seo.json';
 import deSeo from '../../content/locales/de/seo.json';
+import esInternalLinks from '../../content/locales/es/internal-links.json';
+import caInternalLinks from '../../content/locales/ca/internal-links.json';
+import enInternalLinks from '../../content/locales/en/internal-links.json';
+import deInternalLinks from '../../content/locales/de/internal-links.json';
 import esElectricidadYDomotica from '../../content/locales/es/services/electricidad-y-domotica.json';
 import esLampisteriaYClimatizacion from '../../content/locales/es/services/lampisteria-y-climatizacion.json';
 import esAlarmasYCamaras from '../../content/locales/es/services/alarmas-y-camaras.json';
@@ -62,8 +67,10 @@ import type {
   SeoData,
   ServiceEntry,
   SharedContact,
+  SharedInternalLinks,
   SharedVisuals,
   SiteSettings,
+  InternalLinksContent,
 } from '../data/types';
 
 function normalizeImportedContent<T>(value: T): T {
@@ -93,6 +100,7 @@ const contactData = normalizeImportedContent(sharedContact);
 const servicesIndexData = normalizeImportedContent(sharedServicesIndex);
 const redirectsData = normalizeImportedContent(sharedRedirects);
 const visualsData = normalizeImportedContent(sharedVisuals);
+const internalLinksData = normalizeImportedContent(sharedInternalLinks);
 
 export const LOCALES = siteData.supportedLocales as Locale[];
 export type Locale = (typeof LOCALES)[number];
@@ -109,6 +117,7 @@ export const STATIC_PAGE_IDS = ['home', 'services', 'about', 'contact'] as const
 export type StaticPageId = (typeof STATIC_PAGE_IDS)[number];
 
 export type RoutePageId = StaticPageId | LegalPageId;
+export type InternalPageId = StaticPageId | 'legal';
 
 export interface AlternateLink {
   locale: Locale;
@@ -168,6 +177,13 @@ const cookieConsentByLocale: Record<Locale, CookieConsentContent> = {
   ca: normalizeImportedContent(caCookieConsent),
   en: normalizeImportedContent(enCookieConsent),
   de: normalizeImportedContent(deCookieConsent),
+};
+
+const internalLinksByLocale: Record<Locale, InternalLinksContent> = {
+  es: normalizeImportedContent(esInternalLinks),
+  ca: normalizeImportedContent(caInternalLinks),
+  en: normalizeImportedContent(enInternalLinks),
+  de: normalizeImportedContent(deInternalLinks),
 };
 
 const servicesByLocale: Record<Locale, LocalizedServiceEntry[]> = {
@@ -304,6 +320,10 @@ export function getSharedVisuals(): SharedVisuals {
   return visualsData;
 }
 
+export function getSharedInternalLinks(): SharedInternalLinks {
+  return internalLinksData;
+}
+
 export function getNavigation(locale?: string): NavigationData {
   return navigationByLocale[resolveLocale(locale)];
 }
@@ -322,6 +342,10 @@ export function getHomeCollection(locale?: string): HomeCollection {
 
 export function getContactFormContent(locale?: string): ContactFormContent {
   return contactFormByLocale[resolveLocale(locale)];
+}
+
+export function getInternalLinksContent(locale?: string): InternalLinksContent {
+  return internalLinksByLocale[resolveLocale(locale)];
 }
 
 export function getHomeSections(locale?: string): HomeSection[] {
@@ -473,6 +497,100 @@ export function getLanguageSwitcherLinksForService(serviceId: string): Alternate
 
 export function getCanonicalUrl(path: string): string {
   return buildAbsoluteUrl(path);
+}
+
+export function getLocalizedPath(locale: Locale, target: RoutePageId | ServiceId): string {
+  if (SERVICE_IDS.includes(target as ServiceId)) {
+    const path = getServiceRouteById(target, locale);
+
+    if (!path) {
+      throw new Error(`Missing localized service path for ${target} (${locale})`);
+    }
+
+    return path;
+  }
+
+  return getRouteCatalog(locale)[target as StaticPageId] ?? getRouteCatalog(locale).legal[target as LegalPageId];
+}
+
+export function getRelatedServices(locale: Locale, serviceId: ServiceId): LocalizedServiceEntry[] {
+  const relatedIds = internalLinksData.services[serviceId]?.relatedServiceIds ?? [];
+
+  return relatedIds
+    .map((relatedId) => getServiceById(relatedId, locale))
+    .filter((service): service is LocalizedServiceEntry => Boolean(service));
+}
+
+export function getInternalLinks(locale: Locale, pageType: InternalPageId, pageId?: ServiceId) {
+  const routes = getRouteCatalog(locale);
+
+  if (pageType === 'home') {
+    return {
+      services: internalLinksData.pages.home.serviceIds.map((serviceId) => getServiceById(serviceId, locale)).filter(Boolean),
+      trustPath: routes.about,
+      contactPath: routes.contact,
+    };
+  }
+
+  if (pageType === 'services') {
+    return {
+      services: internalLinksData.pages.services.serviceIds.map((serviceId) => getServiceById(serviceId, locale)).filter(Boolean),
+      trustPath: routes.about,
+      contactPath: routes.contact,
+    };
+  }
+
+  if (pageType === 'about') {
+    return {
+      services: internalLinksData.pages.about.serviceIds.map((serviceId) => getServiceById(serviceId, locale)).filter(Boolean),
+      featuredService: getServiceById(internalLinksData.pages.about.featuredServiceId, locale),
+      contactPath: routes.contact,
+    };
+  }
+
+  if (pageType === 'contact') {
+    return {
+      services: internalLinksData.pages.contact.serviceIds.map((serviceId) => getServiceById(serviceId, locale)).filter(Boolean),
+      trustPath: routes.about,
+      contactPath: routes.contact,
+    };
+  }
+
+  if (pageType === 'legal') {
+    return {
+      contactPath: routes.contact,
+    };
+  }
+
+  if (!pageId) {
+    throw new Error(`Missing serviceId for internal link resolution (${pageType})`);
+  }
+
+  return {
+    relatedServices: getRelatedServices(locale, pageId),
+    trustPath: routes.about,
+    contactPath: routes.contact,
+    servicesPath: routes.services,
+  };
+}
+
+export function getConversionLinks(locale: Locale, context: 'home' | 'services' | 'service-detail' | 'about' | 'contact', serviceId?: ServiceId) {
+  const routes = getRouteCatalog(locale);
+
+  if (context === 'service-detail' && serviceId) {
+    return {
+      contactPath: routes.contact,
+      servicesPath: routes.services,
+      aboutPath: routes.about,
+      relatedServices: getRelatedServices(locale, serviceId),
+    };
+  }
+
+  return {
+    contactPath: routes.contact,
+    servicesPath: routes.services,
+    aboutPath: routes.about,
+  };
 }
 
 export function getServiceVisual(serviceId: string) {

@@ -1,0 +1,68 @@
+{
+  "pages": {
+    "home": {
+      "serviceIds": [
+        "electricidad-y-domotica",
+        "lampisteria-y-climatizacion",
+        "alarmas-y-camaras"
+      ],
+      "trustPageId": "about",
+      "contactPageId": "contact"
+    },
+    "services": {
+      "serviceIds": [
+        "electricidad-y-domotica",
+        "lampisteria-y-climatizacion",
+        "alarmas-y-camaras"
+      ],
+      "trustPageId": "about",
+      "contactPageId": "contact"
+    },
+    "about": {
+      "serviceIds": [
+        "electricidad-y-domotica",
+        "lampisteria-y-climatizacion",
+        "alarmas-y-camaras"
+      ],
+      "featuredServiceId": "electricidad-y-domotica",
+      "contactPageId": "contact"
+    },
+    "contact": {
+      "serviceIds": [
+        "electricidad-y-domotica",
+        "lampisteria-y-climatizacion",
+        "alarmas-y-camaras"
+      ],
+      "trustPageId": "about"
+    }
+  },
+  "services": {
+    "electricidad-y-domotica": {
+      "relatedServiceIds": [
+        "lampisteria-y-climatizacion",
+        "alarmas-y-camaras"
+      ],
+      "trustPageId": "about",
+      "servicesPageId": "services",
+      "contactPageId": "contact"
+    },
+    "lampisteria-y-climatizacion": {
+      "relatedServiceIds": [
+        "electricidad-y-domotica",
+        "alarmas-y-camaras"
+      ],
+      "trustPageId": "about",
+      "servicesPageId": "services",
+      "contactPageId": "contact"
+    },
+    "alarmas-y-camaras": {
+      "relatedServiceIds": [
+        "electricidad-y-domotica",
+        "lampisteria-y-climatizacion"
+      ],
+      "trustPageId": "about",
+      "servicesPageId": "services",
+      "contactPageId": "contact"
+    }
+  }
+}

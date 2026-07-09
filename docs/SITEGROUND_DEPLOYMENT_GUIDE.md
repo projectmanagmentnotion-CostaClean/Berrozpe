@@ -15,6 +15,14 @@ La salida final queda en `dist/`.
 2. Subir el contenido de `dist/` al directorio publico del hosting.
 3. Mantener copia de seguridad del sitio anterior antes del reemplazo.
 
+## Flujo de staging recomendado
+
+1. Generar `dist/` local.
+2. Subir a un subdominio o carpeta de staging sin indexacion publica.
+3. Probar rutas principales en `es`, `ca`, `en` y `de`.
+4. Probar redirects definidos en [04_REDIRECTS.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/04_REDIRECTS.md).
+5. Validar cookies, formulario, ScrollTrigger e internal linking antes de tocar produccion.
+
 ## Handler PHP del formulario
 
 - `public/form-handler.php` se copia a `dist/form-handler.php` durante la build.
@@ -39,6 +47,10 @@ La salida final queda en `dist/`.
 - Selector de idioma intacto en contacto y en detalle de servicio.
 - `dist/form-handler.php` presente tras la build.
 - El formulario muestra exito y error sin introducir cookies opcionales nuevas.
+- Los assets OG y visuales existen en `dist/`.
+- Los enlaces internos llevan al idioma correcto.
+- ScrollTrigger reversible no deja bloques invisibles al subir y bajar.
+- El menu movil sigue usable con y sin JS.
 
 ## Checklist previo a produccion
 
@@ -46,3 +58,13 @@ La salida final queda en `dist/`.
 - Revisar SPF/DKIM/DMARC del dominio si se cambia el remitente tecnico.
 - Validar los textos legales finales antes de publicar.
 - Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos.
+- Sustituir los placeholders temporales definidos en [ASSET_REQUIREMENTS.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/ASSET_REQUIREMENTS.md) cuando existan assets reales aprobados.
+- Probar enlaces internos desde:
+  - home
+  - indice de servicios
+  - detalle de servicios
+  - sobre nosotros
+  - contacto
+- Probar el formulario con JS activo y fallback sin JS.
+- Probar el banner y modal de cookies en al menos `es` y `en`.
+- Probar ScrollTrigger en desktop y mobile.

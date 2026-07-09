@@ -1,0 +1,44 @@
+---
+import type { Locale } from '../lib/content';
+import BigTextBlock from './BigTextBlock.astro';
+import Button from './Button.astro';
+import Container from './Container.astro';
+
+interface LinkItem {
+  label: string;
+  href: string;
+  description?: string;
+  variant?: 'primary' | 'secondary' | 'ghost';
+}
+
+interface Props {
+  locale: Locale;
+  eyebrow: string;
+  title: string;
+  body: string;
+  links: LinkItem[];
+  number?: string;
+}
+
+const { eyebrow, title, body, links, number } = Astro.props;
+---
+
+<section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
+  <Container>
+    <div class="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+      <BigTextBlock eyebrow={eyebrow} number={number} title={title} body={body} titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl" />
+      <div class="grid gap-4 sm:grid-cols-2" data-animate-group="conversion-links">
+        {links.map((link) => (
+          <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-7" data-animate="stagger">
+            <div class="space-y-4">
+              <Button href={link.href} variant={link.variant ?? 'secondary'} size="lg">
+                {link.label}
+              </Button>
+              {link.description && <p class="text-sm leading-7 text-[var(--color-text-muted)]">{link.description}</p>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </Container>
+</section>

@@ -42,54 +42,60 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - Entrada principal del `h1` o `h2`.
 - Entrada del primer parrafo.
 - Entrada del bloque CTA si existe.
-- Escalonado de tarjetas hijas si el hero contiene items `stagger`.
+- Trigger reversible en ida y vuelta.
 
 ### `revealOnScroll`
 
 - `opacity` a `1`.
 - desplazamiento vertical a `0`.
 - duracion corta.
-- una sola vez por seccion.
+- reversible en ida y vuelta.
 
 ### `staggerGroup`
 
 - Anima grids y listas marcadas con `data-animate-group`.
 - Opera sobre hijos `data-animate="stagger"`.
 - Se usa en servicios, FAQ, legales, paneles y cards relacionadas.
+- reversible en ida y vuelta.
 
 ### `lineReveal`
 
 - Expande la linea horizontal de labels editoriales.
 - No depende del texto para funcionar.
+- reversible en ida y vuelta.
 
 ### `ctaMotion`
 
 - Reveal del bloque CTA.
 - Microinteraccion ligera en enlaces y botones internos.
+- reversible en ida y vuelta.
 
 ### `imageReveal`
 
 - Reveal suave para visuales grandes.
 - `clip-path` editorial ligero.
 - `opacity` y desplazamiento corto.
-- `once: true` para evitar retriggers innecesarios.
+- reversible en ida y vuelta.
 
 ### `visualPanels`
 
 - Entrada suave del panel de texto superpuesto sobre visuales.
 - Pensado para `VisualAsset`.
+- reversible en ida y vuelta.
 
 ### `parallaxSoft`
 
 - Desplazamiento vertical leve y `scale` sutil.
 - Desactivado en viewport compacto.
 - No se aplica con `prefers-reduced-motion`.
+- Bidireccional por `scrub`.
 
 ### `mobileMenuMotion`
 
 - Apertura y cierre del panel del menu movil.
 - Respeta el fallback nativo de `details/summary`.
 - No impide el uso del menu si no hay JS.
+- Excepcion: no usa ScrollTrigger porque es una interaccion manual, no de scroll.
 
 ## Integracion
 
@@ -113,6 +119,13 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - Registro centralizado en `scrollTrigger.ts`.
 - No se registran triggers duplicados gracias a los marcadores `data-motion-ready`.
 - Tras la inicializacion se ejecuta `ScrollTrigger.refresh()`.
+- Toggle bidireccional por defecto:
+  - `play reverse play reverse`
+- Parallax:
+  - usa `scrub`
+  - queda desactivado en mobile compacto
+- Menu movil:
+  - queda fuera del sistema bidireccional por ser interactivo
 
 ## Reglas de uso
 
@@ -121,6 +134,8 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - No crear dependencias de layout en la timeline.
 - Mantener duraciones cortas y consistentes.
 - Registrar nuevos hooks en este documento y en `src/lib/animations/`.
+- No revertir campos del formulario mientras el usuario interactua con ellos.
+- En mobile priorizar claridad y evitar parallax fuerte.
 
 ## Checklist QA
 
@@ -131,4 +146,6 @@ GSAP ya esta integrado como sistema centralizado y opcional. La capa de movimien
 - Verificar selector de idioma en home y detalle de servicio.
 - Verificar que las paginas sin hooks no lanzan errores.
 - Verificar reduced motion y fallback sin JS.
+- Verificar que la ida y vuelta no deja elementos bloqueados ni invisibles.
+- Verificar que el menu movil no queda atrapado.
 - Verificar visualmente en `390x844`, `430x932`, `768x1024`, `1366x768`, `1440x900` y `1920x1080`.
