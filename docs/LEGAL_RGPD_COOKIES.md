@@ -2,14 +2,22 @@
 
 ## Estado actual
 
-La base de contenido ya incluye placeholders legales sincronizados en:
+La base de contenido incluye placeholders legales sincronizados en:
 
 - `es`
 - `ca`
 - `en`
 - `de`
 
-## Páginas legales por idioma
+Tambien existe un sistema propio de consentimiento multidioma con:
+
+- banner global
+- modal de preferencias
+- almacenamiento propio en `localStorage` y cookie de primera parte
+- categorias necesarias siempre activas
+- categorias opcionales desactivadas por defecto
+
+## Paginas legales por idioma
 
 Cada idioma contiene:
 
@@ -20,24 +28,49 @@ Cada idioma contiene:
 
 ## Regla obligatoria
 
-Ningún idioma puede cerrar la revisión legal antes que los demás si la fuente de verdad sigue siendo común y pendiente.
+Ningun idioma puede cerrar la revision legal antes que los demas si la fuente de verdad sigue siendo comun y pendiente.
 
 ## Contenido permitido en esta fase
 
 - Estructura de secciones
-- Avisos de “pendiente de revisión legal”
-- Instrucciones para no reutilizar automáticamente datos fiscales o registrales
-- Notas de validación sobre cookies activas y consentimiento
+- Avisos de pendiente de revision legal
+- Instrucciones para no reutilizar automaticamente datos fiscales o registrales
+- Notas de validacion sobre cookies activas y consentimiento
+- Categorias opcionales preparadas pero inactivas mientras no haya scripts confirmados
 
 ## Contenido no permitido en esta fase
 
 - Publicar como definitivo un CIF/NIF no validado para la nueva web
-- Publicar razón social fiscal cerrada sin confirmación expresa
-- Dar por activa una analítica o cookie no comprobada en la nueva versión
-- Dar por definitivo un canal legal de contacto cuando el email principal sigue pendiente
+- Publicar razon social fiscal cerrada sin confirmacion expresa
+- Dar por activa una analitica o cookie no comprobada en la nueva version
+- Dar por definitivo un canal legal de contacto distinto del email principal sin validacion legal especifica
 
-## Relación con la auditoría
+## Relacion con la auditoria
 
-- La auditoría detectó términos y cookies heredados en la web actual.
-- No se detectó una política de privacidad visible publicada en el sitio auditado.
-- La nueva estructura evita arrastrar automáticamente esos textos como definitivos.
+- La auditoria detecto terminos y cookies heredados en la web actual.
+- No se detecto una politica de privacidad visible publicada en el sitio auditado.
+- La nueva estructura evita arrastrar automaticamente esos textos como definitivos.
+
+## Sistema de consentimiento implementado
+
+- Contenido multidioma en `content/locales/{locale}/cookie-consent.json`
+- Banner y modal en:
+  - `src/components/CookieConsent.astro`
+  - `src/components/CookiePreferencesModal.astro`
+- Logica de consentimiento en:
+  - `src/lib/cookies/consent.ts`
+  - `src/scripts/cookie-consent.ts`
+- Integracion global en `src/layouts/BaseLayout.astro`
+- Enlace permanente de reapertura desde `src/components/SiteFooter.astro`
+
+## Categorias actuales
+
+- `necessary`: activas siempre
+- `preferences`: preparada, sin herramientas confirmadas
+- `analytics`: preparada, sin herramientas confirmadas
+- `marketing`: preparada, sin herramientas confirmadas
+
+## Scripts bloqueados
+
+- No hay scripts opcionales confirmados activos en esta base.
+- El sistema queda preparado para desbloquear scripts diferidos marcados con `data-cookie-category` solo despues del consentimiento correspondiente.

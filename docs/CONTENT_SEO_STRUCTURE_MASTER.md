@@ -38,12 +38,11 @@ Fuente de verdad: `content/shared/contact.json`
 - Emails detectados:
   - `david@instalberrozpe.com`
   - `comercial@instalberrozpe.com`
-- `primaryEmail`: `null`
+- `primaryEmail`: `david@instalberrozpe.com`
 - WhatsApp derivado: `https://wa.me/34676043389?...`
 
 Pendiente:
 
-- Confirmar cual debe ser el email principal.
 - Confirmar si el numero `872 986 161` debe mostrarse como telefono, fax o ambos.
 
 ## E. Estructura multidioma
@@ -230,7 +229,7 @@ Estado:
 Datos que faltan confirmar o revisar:
 
 - Identidad fiscal definitiva que deba mostrarse en la nueva web
-- Canal legal principal de contacto si `primaryEmail` sigue a `null`
+- Canal legal especifico para reclamaciones si difiere del email principal ya confirmado
 - Politica real de cookies y analitica de la nueva version
 
 ## K. Assets
@@ -346,3 +345,17 @@ Reduced motion:
 - Confirmar SSL en SiteGround
 - Ejecutar backup previo en SiteGround
 - Alta y validacion en Search Console
+
+## O. Estado de cookies
+
+- Politica de cookies publicada por idioma en `content/locales/{locale}/legal/cookies.json`
+- Banner y modal multidioma con contenido en `content/locales/{locale}/cookie-consent.json`
+- Almacenamiento propio del consentimiento en `localStorage` y cookie de primera parte
+- Categorias activas:
+  - necesarias
+- Categorias preparadas pero inactivas:
+  - preferencias
+  - analiticas
+  - marketing
+- No hay scripts opcionales confirmados cargandose antes del consentimiento
+- Enlace permanente para reabrir preferencias desde el footer
