@@ -1,53 +1,53 @@
 {
   "slug": "electricity-and-home-automation",
   "locale": "en",
-  "title": "Electricity and home automation",
-  "shortTitle": "Electricity and automation",
-  "seoTitle": "Electricity and home automation | Instal Berrozpe",
-  "seoDescription": "Audited service with electricity, home automation, photovoltaic solar energy and energy advice within the current Instal Berrozpe website.",
-  "heroTitle": "Electricity and home automation",
-  "intro": "The current website groups this service as electricity and automation solutions for home or business.",
-  "summary": "It includes electrical installations, home automation, photovoltaic solar energy and energy advice according to the audited content.",
+  "title": "Electrical and home automation",
+  "shortTitle": "Electrical and home automation",
+  "seoTitle": "Electrical and home automation in Blanes | Instal Berrozpe",
+  "seoDescription": "Electrical and smart home installations in Blanes and Girona with Instal Berrozpe. Electrical work, automation, solar PV and energy advice.",
+  "heroTitle": "Electrical and home automation for installations and smart control",
+  "intro": "Service line focused on electrical installations and automation solutions for homes or businesses in Blanes and Girona.",
+  "summary": "Electrical installations, home automation, solar photovoltaic systems and energy advice within one technical line.",
   "includes": {
     "title": "Includes",
     "items": [
-      "Electrical installations.",
-      "Home automation.",
-      "Photovoltaic solar energy.",
-      "Energy advice."
+      "Electrical installations",
+      "Home automation",
+      "Solar photovoltaic systems",
+      "Energy advice"
     ]
   },
   "benefits": {
     "title": "Key points",
     "items": [
-      "Service described for home or business.",
-      "Current focus on comfort, security and energy efficiency.",
-      "Several solutions grouped inside one audited page."
+      "Makes it possible to handle electrical work and automation in the same enquiry.",
+      "Provides a useful technical line for homes or businesses depending on the need.",
+      "Also includes the solar PV and energy advice already present on the current website."
     ]
   },
   "process": {
-    "title": "Described process",
+    "title": "Service process",
     "items": [
-      "Initial contact to explain the need.",
-      "Advice on the most suitable solution.",
-      "Installation or service intervention.",
-      "Later support mentioned on the current website."
+      "You explain the electrical or automation need.",
+      "The solution that best fits the installation is reviewed.",
+      "The technical work or installation is coordinated.",
+      "The enquiry can be expanded if other service lines are involved."
     ]
   },
   "faqs": {
     "title": "Frequently asked questions",
     "items": [
       {
-        "question": "What is home automation and how can it help my property?",
-        "answer": "The current website describes it as a system to automate and control lighting, climate, appliances and security."
+        "question": "What does this service cover?",
+        "answer": "The current website groups electrical installations, home automation, solar photovoltaic systems and energy advice within the same service line."
       },
       {
-        "question": "Which security systems does the current website mention?",
-        "answer": "The website itself connects this service with alarms and CCTV cameras as part of its broader offer."
+        "question": "Is this only for residential projects?",
+        "answer": "No. The current presentation positions it for homes or businesses depending on the type of installation."
       },
       {
-        "question": "Why is energy advice included in this service?",
-        "answer": "The audited page presents it as a way to optimize consumption and reduce energy costs."
+        "question": "Can this enquiry be combined with other technical needs?",
+        "answer": "Yes. The current structure links this line with climate control, water systems and security whenever the case requires it."
       }
     ]
   },
@@ -56,13 +56,15 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "label": "Request information",
+    "title": "Tell us which electrical or smart home installation you need to review",
+    "body": "If you want to assess an installation, an automation setup or a solar PV related enquiry, you can write to Instal Berrozpe and explain the case clearly.",
+    "label": "Request a quote",
     "href": "/en/contact/",
-    "secondaryLabel": "View other services",
+    "secondaryLabel": "View services",
     "secondaryHref": "/en/services/"
   },
   "pendingConfirmation": [
-    "The mention of wifi-controlled equipment appears on the current website and needs editorial validation before becoming a main claim.",
-    "Coverage outside the local area is mentioned in general terms and requires geographic definition."
+    "Validate whether wifi control should appear as a primary commercial claim.",
+    "Define the final geographic coverage precisely before production."
   ]
 }

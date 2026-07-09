@@ -3,50 +3,50 @@
   "locale": "es",
   "title": "Alarmas y cámaras",
   "shortTitle": "Alarmas y cámaras",
-  "seoTitle": "Alarmas y cámaras | Instal Berrozpe",
-  "seoDescription": "Servicio auditado con alarmas y cámaras CCTV e IP dentro de la web actual de Instal Berrozpe.",
-  "heroTitle": "Alarmas y cámaras",
-  "intro": "La web actual presenta este servicio como una oferta de seguridad para hogar o negocio.",
-  "summary": "Se estructura en dos bloques principales: alarmas y cámaras CCTV e IP.",
+  "seoTitle": "Alarmas y cámaras en Blanes | Instal Berrozpe",
+  "seoDescription": "Alarmas y cámaras CCTV/IP en Blanes y Girona con Instal Berrozpe. Soluciones de seguridad para vivienda o negocio.",
+  "heroTitle": "Alarmas y cámaras para reforzar la seguridad en vivienda o negocio",
+  "intro": "Servicio enfocado a sistemas de seguridad con alarmas y camaras CCTV e IP para hogar o negocio.",
+  "summary": "Alarmas, camaras CCTV y camaras IP dentro de una misma linea de seguridad tecnica.",
   "includes": {
     "title": "Incluye",
     "items": [
-      "Alarmas.",
-      "Cámaras CCTV.",
-      "Cámaras IP."
+      "Alarmas",
+      "Camaras CCTV",
+      "Camaras IP"
     ]
   },
   "benefits": {
     "title": "Puntos clave",
     "items": [
-      "La web actual lo orienta a vivienda o negocio.",
-      "Se apoya en un enfoque de seguridad y supervisión remota.",
-      "Agrupa alarmas y cámaras dentro de una misma página auditada."
+      "Permite plantear seguridad y supervision dentro de un mismo servicio.",
+      "La estructura actual lo orienta a vivienda o negocio segun el contexto.",
+      "Puede conectarse con otras necesidades tecnicas como electricidad o domotica."
     ]
   },
   "process": {
-    "title": "Proceso descrito",
+    "title": "Proceso del servicio",
     "items": [
-      "Contacto para exponer la necesidad de seguridad.",
-      "Asesoramiento sobre la solución más adecuada.",
-      "Instalación del sistema de alarmas o cámaras.",
-      "Seguimiento posterior mencionado en la web actual."
+      "Explicas la necesidad de seguridad o supervision.",
+      "Se revisa el sistema que mejor encaja con el espacio y el uso previsto.",
+      "Se coordina la instalacion de alarmas o camaras.",
+      "Si hace falta combinar servicios, la consulta puede ampliarse."
     ]
   },
   "faqs": {
     "title": "Preguntas frecuentes",
     "items": [
       {
-        "question": "¿Qué menciona la web actual dentro de este servicio?",
-        "answer": "La auditoría confirma dos bloques: alarmas y cámaras CCTV e IP."
+        "question": "Que incluye este servicio?",
+        "answer": "La web actual diferencia alarmas, camaras CCTV y camaras IP dentro de la misma linea de seguridad."
       },
       {
-        "question": "¿Se puede consultar la imagen desde otro lugar?",
-        "answer": "La página actual indica acceso remoto para cámaras IP a través de internet."
+        "question": "Se menciona acceso remoto?",
+        "answer": "Si. La presentacion actual asocia las camaras IP con consulta de imagen a traves de internet."
       },
       {
-        "question": "¿Aparece alguna central receptora mencionada por nombre?",
-        "answer": "Sí. La web actual menciona a TECALSA en la sección de alarmas."
+        "question": "Puede combinarse con otros trabajos tecnicos?",
+        "answer": "Si. En muchos casos esta linea se relaciona con electricidad y domotica o con otras necesidades de la instalacion."
       }
     ]
   },
@@ -55,13 +55,15 @@
     "lampisteria-y-climatizacion"
   ],
   "cta": {
-    "label": "Solicitar información",
+    "title": "Explica que sistema de seguridad necesitas valorar y te orientaremos por la via adecuada",
+    "body": "Si quieres consultar alarmas, camaras CCTV o camaras IP para vivienda o negocio, puedes contactar y describir el caso con detalle desde el inicio.",
+    "label": "Solicitar presupuesto",
     "href": "/es/contacto/",
-    "secondaryLabel": "Ver otros servicios",
+    "secondaryLabel": "Ver servicios",
     "secondaryHref": "/es/servicios/"
   },
   "pendingConfirmation": [
-    "La mención a TECALSA aparece en la web actual y conviene confirmar si debe mantenerse.",
-    "La web actual habla de vigilancia constante y necesita validación antes de tratarse como promesa operativa cerrada."
+    "Confirmar si alguna referencia legacy a marcas o centrales receptoras debe mantenerse.",
+    "Validar cualquier promesa operativa adicional antes de produccion."
   ]
 }

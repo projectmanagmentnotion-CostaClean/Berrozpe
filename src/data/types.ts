@@ -316,6 +316,8 @@ export interface ServiceEntry {
   };
   relatedServices: string[];
   cta: {
+    title: string;
+    body: string;
     label: string;
     href: string;
     secondaryLabel: string;

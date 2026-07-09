@@ -4,6 +4,7 @@ import {
   getCookieConsentContent,
   getLanguageSwitcherLinksForPage,
   getLegalPages,
+  getHomeCollection,
   getNavigation,
   getPublishedServices,
   getRouteCatalog,
@@ -25,6 +26,7 @@ const contact = getSharedContact();
 const services = getPublishedServices(locale);
 const legalPages = getLegalPages(locale);
 const navigation = getNavigation(locale);
+const home = getHomeCollection(locale);
 const routes = getRouteCatalog(locale);
 const cookieConsent = getCookieConsentContent(locale);
 const languageLinks = getLanguageSwitcherLinksForPage('home');
@@ -38,8 +40,9 @@ const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp
       <div class="space-y-6">
         <p class="text-[0.72rem] uppercase tracking-[0.26em] text-[var(--color-text-soft)]">{site.brandName}</p>
         <h2 class="max-w-3xl font-[var(--font-display)] text-3xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl lg:text-5xl">
-          {site.defaultDescription}
+          {home.contactCta.title}
         </h2>
+        <p class="max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">{home.contactCta.body}</p>
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="space-y-2 text-base text-[var(--color-text-muted)]">
             {contact.address.displayLines.map((line) => <p>{line}</p>)}

@@ -8,21 +8,21 @@
     { "id": "language", "label": "Language", "href": null }
   ],
   "ui": {
-    "serviceLink": "View service",
+    "serviceLink": "View details",
     "serviceEyebrow": "Service",
     "legalEyebrow": "Legal",
     "legalSection": "Legal",
-    "updatedAtLabel": "Declared update status",
+    "updatedAtLabel": "Declared latest update",
     "includesTitle": "Includes",
     "benefitsTitle": "Key points",
-    "processTitle": "Described process",
+    "processTitle": "Process",
     "faqsTitle": "Frequently asked questions",
     "relatedServicesTitle": "Related services",
     "contactDetailsTitle": "Contact details",
-    "detectedEmailsLabel": "Detected emails",
+    "detectedEmailsLabel": "Primary email",
     "pendingConfirmationLabel": "Pending confirmation",
-    "mobileLabel": "Mobile",
-    "landlineLabel": "Phone/fax",
+    "mobileLabel": "Direct mobile",
+    "landlineLabel": "Phone / fax",
     "scheduleLabel": "Opening hours",
     "addressLabel": "Address"
   }

@@ -433,10 +433,10 @@ const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
         <Container>
           <div class="rounded-[2.5rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-6 py-10 sm:px-10 sm:py-12">
             <BigTextBlock
-              eyebrow={navigation.ui.pendingConfirmationLabel}
+              eyebrow={internalLinksContent.serviceDetail.journey.eyebrow}
               number="07"
-              title={service.cta.label}
-              body={service.pendingConfirmation.join(' ')}
+              title={service.cta.title}
+              body={service.cta.body}
               titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl"
             />
             <div class="mt-8 flex flex-wrap gap-3">

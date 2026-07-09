@@ -2,66 +2,66 @@
   "locale": "en",
   "hero": {
     "sectionId": "hero",
-    "eyebrow": "Synchronized content",
-    "title": "Multilingual base prepared from the audited live content",
-    "body": "The confirmed material currently supports a new website structure with three main services, public contact details and pending legal review.",
+    "eyebrow": "Installations in Blanes and Girona",
+    "title": "Electrical, plumbing, climate control, alarms and cameras for homes and businesses",
+    "body": "Instal Berrozpe focuses on three clear technical service lines: electrical and home automation, plumbing and climate control, and alarms and cameras. Direct contact from Blanes by phone, WhatsApp, email or form.",
     "primaryCtaLabel": "View services",
     "primaryCtaHref": "/en/services/",
-    "secondaryCtaLabel": "Go to contact",
+    "secondaryCtaLabel": "Request a quote",
     "secondaryCtaHref": "/en/contact/"
   },
   "servicesOverview": {
     "sectionId": "services-overview",
     "eyebrow": "Services",
-    "title": "Three main services confirmed",
-    "body": "The current audit confirms three service lines with their own pages on the existing website.",
+    "title": "Three main services to solve technical installations with a clear scope",
+    "body": "The current offer is organised into three work areas that cover electrical installations, water and climate systems, and security solutions through one installation company in Blanes.",
     "items": [
-      "Electricity and home automation.",
-      "Plumbing and climate control.",
-      "Alarms and cameras."
+      "Electrical and home automation",
+      "Plumbing and climate control",
+      "Alarms and cameras"
     ]
   },
   "whyChooseUs": {
     "sectionId": "why-choose-us",
     "eyebrow": "About us",
-    "title": "What is confirmed before the final redesign",
-    "body": "The new editorial base prioritizes audited data and removes promises that have not yet been validated.",
+    "title": "A close technical company with direct contact and integrated service",
+    "body": "The current Instal Berrozpe base communicates a direct way of working: one contact point, connected technical services and support for both homes and businesses.",
     "items": [
-      "Three main services confirmed.",
-      "Address, mobile, phone/fax and opening hours detected on the current site.",
-      "Primary email confirmed: david@instalberrozpe.com.",
-      "Exact geographic coverage still pending definition."
+      "Three clearly defined service lines covering electrical work, water and climate systems, and security.",
+      "Direct contact by mobile, phone, WhatsApp, email and form from Blanes.",
+      "Services presented for homes and businesses depending on the type of installation.",
+      "A clear route from the initial enquiry to the technical intervention."
     ]
   },
   "process": {
     "sectionId": "process",
     "eyebrow": "Process",
-    "title": "How the current site describes the service flow",
-    "body": "The current website repeats a pattern of contact, advice, intervention and later support.",
+    "title": "A clear process from enquiry to intervention",
+    "body": "The website presents a simple flow: explain the need, review the right solution and move forward with the installation or technical work required.",
     "items": [
-      "Contact request through form, phone, email or WhatsApp.",
-      "Advice for home or business depending on the service.",
-      "Installation or service intervention.",
-      "After-sales support mentioned on the current website."
+      "You explain the need by phone, WhatsApp or form.",
+      "The most suitable service line is reviewed for the home or business.",
+      "The installation or technical intervention is coordinated.",
+      "The follow-up channel stays open to resolve the enquiry."
     ]
   },
   "contactCta": {
     "sectionId": "contact-cta",
     "eyebrow": "Contact",
-    "title": "Partially confirmed contact data",
-    "body": "Address, phones, opening hours and the primary email are confirmed.",
-    "primaryCtaLabel": "Mobile",
-    "secondaryCtaLabel": "Detected emails"
+    "title": "Talk to Instal Berrozpe and explain your installation with the right context",
+    "body": "You can get in touch for electrical and home automation, plumbing and climate control, or alarms and cameras. The entry point can be phone, WhatsApp, email or form.",
+    "primaryCtaLabel": "Direct mobile",
+    "secondaryCtaLabel": "Primary email"
   },
   "faqs": {
     "sectionId": "faqs",
     "eyebrow": "Frequently asked questions",
-    "title": "Questions already published on the current site",
-    "body": "These answers rely on audited content and can be revised once final editorial validation exists.",
+    "title": "Common questions before requesting information or a quote",
+    "body": "These answers help visitors identify the right service and prepare a clearer enquiry from the first contact.",
     "items": [
-      "They work on residential and commercial projects.",
-      "A quote can be requested by form, phone or email.",
-      "The current website mentions a 24 to 48 business hour response time."
+      "Instal Berrozpe works on projects for homes and businesses.",
+      "An enquiry can be sent by form, phone, email or WhatsApp.",
+      "If you are not sure which service fits best, the contact page is the best starting point."
     ]
   }
 }

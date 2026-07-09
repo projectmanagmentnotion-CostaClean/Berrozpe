@@ -3,52 +3,52 @@
   "locale": "ca",
   "title": "Lampisteria i climatització",
   "shortTitle": "Lampisteria i climatització",
-  "seoTitle": "Lampisteria i climatització | Instal Berrozpe",
-  "seoDescription": "Servei auditat amb lampisteria, aire condicionat, calefacció, calderes i energia solar tèrmica a la web actual d'Instal Berrozpe.",
-  "heroTitle": "Lampisteria i climatització",
-  "intro": "La web actual presenta aquest servei com a solucions d'aigua i climatització per a llar o negoci.",
-  "summary": "Agrupa lampisteria, aire condicionat, calefacció, calderes i energia solar tèrmica segons l'auditoria de contingut.",
+  "seoTitle": "Lampisteria i climatització a Blanes | Instal Berrozpe",
+  "seoDescription": "Lampisteria i climatitzacio a Blanes i Girona amb Instal Berrozpe. Instal·lacions d'aigua, aire condicionat, calefaccio, calderes i energia solar termica.",
+  "heroTitle": "Lampisteria i climatitzacio per a aigua, confort termic i equips associats",
+  "intro": "Servei plantejat per a instal·lacions d'aigua i climatitzacio en llar o negoci, amb una linea tecnica que agrupa diverses necessitats habituals.",
+  "summary": "Lampisteria, aire condicionat, calefaccio, calderes i energia solar termica dins d'un mateix servei.",
   "includes": {
     "title": "Inclou",
     "items": [
-      "Lampisteria.",
-      "Aire condicionat.",
-      "Calefacció.",
-      "Calderes.",
-      "Energia solar tèrmica."
+      "Lampisteria",
+      "Aire condicionat",
+      "Calefaccio",
+      "Calderes",
+      "Energia solar termica"
     ]
   },
   "benefits": {
     "title": "Punts clau",
     "items": [
-      "Servei orientat a confort tèrmic i gestió de l'aigua.",
-      "La web actual el presenta per a habitatge o negoci.",
-      "Agrupa cinc subblocs dins d'una sola pàgina auditada."
+      "Permet tractar aigua i confort termic dins la mateixa consulta.",
+      "Serveix tant per a llar com per a negoci segons l'equip o la instal·lacio.",
+      "Agrupa una linea tecnica ampla sense obligar a repartir la necessitat entre diversos proveidors."
     ]
   },
   "process": {
-    "title": "Procés descrit",
+    "title": "Proces del servei",
     "items": [
-      "Contacte per explicar la necessitat d'aigua o climatització.",
-      "Assessorament sobre el sistema més adequat.",
-      "Instal·lació o actuació tècnica.",
-      "Seguiment posterior mencionat a la web actual."
+      "Expliques la necessitat d'aigua, climatitzacio o equip associat.",
+      "Es revisa la solucio mes adequada per a l'espai i l'us previst.",
+      "Es coordina la instal·lacio o l'actuacio tecnica corresponent.",
+      "Si el cas connecta amb altres linies, la consulta es pot unificar."
     ]
   },
   "faqs": {
-    "title": "Preguntes freqüents",
+    "title": "Preguntes frequents",
     "items": [
       {
-        "question": "Quines solucions inclou aquesta pàgina de servei?",
-        "answer": "L'auditoria detecta lampisteria, aire condicionat, calefacció, calderes i energia solar tèrmica."
+        "question": "Quines solucions agrupa aquesta pagina?",
+        "answer": "L'auditoria actual confirma lampisteria, aire condicionat, calefaccio, calderes i energia solar termica."
       },
       {
-        "question": "La web actual l'orienta a habitatge o negoci?",
-        "answer": "Sí. La redacció actual parla de llar o negoci en diverses seccions."
+        "question": "Es un servei pensat nomes per a habitatges?",
+        "answer": "No. La presentacio actual tambe l'orienta a negoci segons la necessitat tecnica."
       },
       {
-        "question": "Es menciona control per wifi en aquest servei?",
-        "answer": "Sí. La web actual ho esmenta per a alguns equips, però convé validar-ho abans d'usar-ho com a promesa comercial principal."
+        "question": "Puc consultar aigua i climatitzacio en un mateix missatge?",
+        "answer": "Si. Precisament aquesta linea esta plantejada per concentrar diverses necessitats relacionades amb confort termic i aigua."
       }
     ]
   },
@@ -57,13 +57,15 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "label": "Sol·licitar informació",
+    "title": "Planteja la teva consulta de lampisteria o climatitzacio amb el maxim context possible",
+    "body": "Si necessites revisar una instal·lacio d'aigua, aire condicionat, calefaccio, caldera o energia solar termica, pots contactar i explicar el cas des de l'inici.",
+    "label": "Demanar pressupost",
     "href": "/ca/contacte/",
-    "secondaryLabel": "Veure altres serveis",
+    "secondaryLabel": "Veure serveis",
     "secondaryHref": "/ca/serveis/"
   },
   "pendingConfirmation": [
-    "La menció a equips controlables per wifi apareix a la web actual i necessita validació editorial.",
-    "La cobertura fora de l'àrea local apareix esmentada de manera genèrica i requereix definició geogràfica."
+    "Validar si el control per wifi s'ha de destacar com a claim comercial principal.",
+    "Definir amb precisio la cobertura geografica final abans de produccio."
   ]
 }

@@ -8,21 +8,21 @@
     { "id": "language", "label": "Idioma", "href": null }
   ],
   "ui": {
-    "serviceLink": "Ver servicio",
+    "serviceLink": "Ver detalles",
     "serviceEyebrow": "Servicio",
     "legalEyebrow": "Legal",
     "legalSection": "Legal",
-    "updatedAtLabel": "Última actualización declarada",
+    "updatedAtLabel": "Ultima actualizacion declarada",
     "includesTitle": "Incluye",
     "benefitsTitle": "Puntos clave",
-    "processTitle": "Proceso descrito",
+    "processTitle": "Proceso",
     "faqsTitle": "Preguntas frecuentes",
     "relatedServicesTitle": "Servicios relacionados",
     "contactDetailsTitle": "Datos de contacto",
-    "detectedEmailsLabel": "Emails detectados",
-    "pendingConfirmationLabel": "Pendiente de confirmación",
-    "mobileLabel": "Móvil",
-    "landlineLabel": "Teléfono/fax",
+    "detectedEmailsLabel": "Email principal",
+    "pendingConfirmationLabel": "Pendiente de confirmacion",
+    "mobileLabel": "Móvil directo",
+    "landlineLabel": "Teléfono / fax",
     "scheduleLabel": "Horario",
     "addressLabel": "Dirección"
   }

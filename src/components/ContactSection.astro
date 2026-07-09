@@ -22,6 +22,7 @@ const navigation = getNavigation(locale);
 const routes = getRouteCatalog(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
 const whatsappLink = contact.whatsAppUrl;
+const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp')?.label ?? 'WhatsApp';
 const contactVisual = getPageVisual('contact');
 ---
 
@@ -68,7 +69,7 @@ const contactVisual = getPageVisual('contact');
           {contact.phones.mobile}
         </Button>
         <Button href={whatsappLink} variant="secondary" size="lg" target="_blank" rel="noreferrer">
-          WhatsApp
+          {whatsAppLabel}
         </Button>
       </div>
     </Card>
@@ -86,17 +87,6 @@ const contactVisual = getPageVisual('contact');
           )}
         </div>
       </div>
-
-      {contact.pendingConfirmation.length > 0 && (
-        <div class="rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.02] p-5">
-          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.pendingConfirmationLabel}</p>
-          <ul class="mt-4 space-y-2 text-sm leading-7 text-[var(--color-text-muted)]">
-            {contact.pendingConfirmation.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-        </div>
-      )}
     </Card>
   </div>
 

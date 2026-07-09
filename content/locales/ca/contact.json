@@ -1,7 +1,7 @@
 {
   "locale": "ca",
-  "title": "Formulari de contacte",
-  "intro": "Fes servir aquest formulari per sol·licitar informació sobre un dels tres serveis confirmats. La sol·licitud requereix acceptar la política de privacitat abans de l'enviament.",
+  "title": "Demana informacio o pressupost",
+  "intro": "Escriu a Instal Berrozpe per electricitat i domotica, lampisteria i climatitzacio, o alarmes i cameras. Com mes clara sigui la consulta, mes facil sera orientar-la des del primer contacte.",
   "fields": {
     "name": {
       "label": "Nom",
@@ -14,24 +14,24 @@
       "autocomplete": "email"
     },
     "phone": {
-      "label": "Telèfon",
-      "placeholder": "El teu telèfon",
+      "label": "Telefon",
+      "placeholder": "El teu telefon",
       "autocomplete": "tel"
     },
     "service": {
-      "label": "Servei sol·licitat",
+      "label": "Servei",
       "placeholder": "Selecciona un servei"
     },
     "message": {
       "label": "Missatge",
-      "placeholder": "Descriu la teva consulta",
+      "placeholder": "Explica breument que necessites",
       "rows": 6
     },
     "privacy": {
-      "label": "He llegit i accepto la política de privacitat."
+      "label": "He llegit i accepto la politica de privacitat."
     },
     "honeypot": {
-      "label": "No emplenis aquest camp"
+      "label": "No omplir aquest camp"
     }
   },
   "serviceOptions": [
@@ -50,27 +50,27 @@
   ],
   "privacyConsent": {
     "prefix": "Has d'acceptar la",
-    "linkLabel": "política de privacitat",
+    "linkLabel": "politica de privacitat",
     "suffix": "per poder enviar el formulari."
   },
   "legalSummary": [
-    "El formulari envia la sol·licitud a david@instalberrozpe.com com a email principal confirmat.",
-    "La identitat fiscal definitiva i el text legal final continuen pendents de revisió jurídica externa."
+    "Les sol·licituds del formulari s'envien a david@instalberrozpe.com com a email principal confirmat.",
+    "Els textos legals definitius continuen pendents de revisio juridica abans de produccio."
   ],
-  "submitLabel": "Enviar sol·licitud",
+  "submitLabel": "Enviar consulta",
   "sendingLabel": "Enviant...",
-  "successMessage": "La teva sol·licitud s'ha enviat correctament.",
+  "successMessage": "La teva consulta s'ha enviat correctament.",
   "errorMessage": "No s'ha pogut enviar el formulari. Revisa els camps i torna-ho a provar.",
   "validationMessages": {
-    "nameRequired": "El nom és obligatori.",
-    "emailRequired": "L'email és obligatori.",
-    "emailInvalid": "Introdueix un email vàlid.",
-    "phoneInvalid": "Introdueix un telèfon vàlid o deixa el camp buit.",
+    "nameRequired": "El nom es obligatori.",
+    "emailRequired": "L'email es obligatori.",
+    "emailInvalid": "Introdueix un email valid.",
+    "phoneInvalid": "Introdueix un telefon valid o deixa el camp buit.",
     "serviceRequired": "Selecciona un servei.",
-    "messageRequired": "El missatge és obligatori.",
-    "privacyRequired": "Has d'acceptar la política de privacitat.",
+    "messageRequired": "El missatge es obligatori.",
+    "privacyRequired": "Has d'acceptar la politica de privacitat.",
     "honeypotFilled": "No s'ha pogut validar l'enviament.",
     "genericError": "No s'ha pogut processar el formulari."
   },
-  "honeypotLabel": "No emplenis aquest camp"
+  "honeypotLabel": "No omplir aquest camp"
 }

@@ -3,50 +3,50 @@
   "locale": "de",
   "title": "Alarmanlagen und Kameras",
   "shortTitle": "Alarmanlagen und Kameras",
-  "seoTitle": "Alarmanlagen und Kameras | Instal Berrozpe",
-  "seoDescription": "Geprüfte Leistung mit Alarmanlagen sowie CCTV/IP-Kameras auf der aktuellen Website von Instal Berrozpe.",
-  "heroTitle": "Alarmanlagen und Kameras",
-  "intro": "Die aktuelle Website stellt diese Leistung als Sicherheitsangebot für Wohn- oder Geschäftsobjekte dar.",
-  "summary": "Sie ist in zwei Hauptblöcke gegliedert: Alarmanlagen sowie CCTV- und IP-Kameras.",
+  "seoTitle": "Alarmanlagen und Kameras in Blanes | Instal Berrozpe",
+  "seoDescription": "Alarmanlagen und CCTV/IP-Kameras in Blanes und Girona mit Instal Berrozpe. Sicherheitslösungen für Privat- oder Gewerbeobjekte.",
+  "heroTitle": "Alarmanlagen und Kameras zur Stärkung der Sicherheit in Privat- oder Gewerbeobjekten",
+  "intro": "Leistungsbereich für Sicherheitssysteme mit Alarmanlagen sowie CCTV- und IP-Kameras in Privat- oder Gewerbeobjekten.",
+  "summary": "Alarmanlagen, CCTV-Kameras und IP-Kameras innerhalb einer technischen Sicherheitslinie.",
   "includes": {
     "title": "Enthält",
     "items": [
-      "Alarmanlagen.",
-      "CCTV-Kameras.",
-      "IP-Kameras."
+      "Alarmanlagen",
+      "CCTV-Kameras",
+      "IP-Kameras"
     ]
   },
   "benefits": {
-    "title": "Kernaussagen",
+    "title": "Wichtige Punkte",
     "items": [
-      "Die aktuelle Website positioniert die Leistung für Wohn- oder Geschäftsobjekte.",
-      "Sie baut auf Sicherheit und Fernüberwachung als aktuelle Inhalte auf.",
-      "Alarmanlagen und Kameras sind in einer geprüften Seite zusammengefasst."
+      "Ermöglicht es, Sicherheit und Überwachung innerhalb derselben Leistungslinie zu behandeln.",
+      "Die aktuelle Struktur richtet sich je nach Kontext an Privat- oder Gewerbeobjekte.",
+      "Kann bei Bedarf natürlich mit Elektro- oder Smart-Home-Arbeiten verbunden werden."
     ]
   },
   "process": {
-    "title": "Beschriebener Ablauf",
+    "title": "Leistungsablauf",
     "items": [
-      "Kontakt zur Beschreibung des Sicherheitsbedarfs.",
-      "Beratung zur passenden Lösung.",
-      "Installation des Alarm- oder Kamerasystems.",
-      "Spätere Unterstützung wird auf der aktuellen Website erwähnt."
+      "Sie erklären den Bedarf an Sicherheit oder Überwachung.",
+      "Das System, das am besten zu Raum und Nutzung passt, wird geprüft.",
+      "Die Installation von Alarmanlagen oder Kameras wird koordiniert.",
+      "Wenn mehrere Leistungen kombiniert werden müssen, kann die Anfrage erweitert werden."
     ]
   },
   "faqs": {
     "title": "Häufige Fragen",
     "items": [
       {
-        "question": "Was nennt die aktuelle Website innerhalb dieser Leistung?",
-        "answer": "Die Prüfung bestätigt zwei Blöcke: Alarmanlagen sowie CCTV- und IP-Kameras."
+        "question": "Was ist in dieser Leistung enthalten?",
+        "answer": "Die aktuelle Website unterscheidet Alarmanlagen, CCTV-Kameras und IP-Kameras innerhalb derselben Sicherheitslinie."
       },
       {
-        "question": "Kann das Kamerabild aus der Ferne geprüft werden?",
-        "answer": "Die aktuelle Seite nennt einen Fernzugriff für IP-Kameras über das Internet."
+        "question": "Wird Fernzugriff erwähnt?",
+        "answer": "Ja. Die aktuelle Darstellung verbindet IP-Kameras mit dem Zugriff auf Bilder über das Internet."
       },
       {
-        "question": "Wird eine Leitstelle namentlich erwähnt?",
-        "answer": "Ja. Die aktuelle Website nennt TECALSA im Bereich der Alarmanlagen."
+        "question": "Kann das mit anderen technischen Arbeiten kombiniert werden?",
+        "answer": "Ja. In vielen Fällen steht diese Linie in Verbindung mit Elektro- und Smart-Home-Arbeiten oder mit anderen Installationsanforderungen."
       }
     ]
   },
@@ -55,13 +55,15 @@
     "lampisteria-y-climatizacion"
   ],
   "cta": {
-    "label": "Information anfordern",
+    "title": "Beschreiben Sie, welches Sicherheitssystem Sie prüfen möchten, und wir zeigen den passenden nächsten Schritt",
+    "body": "Wenn Sie Alarmanlagen, CCTV-Kameras oder IP-Kameras für ein Privat- oder Gewerbeobjekt besprechen möchten, können Sie Instal Berrozpe kontaktieren und den Fall direkt klar schildern.",
+    "label": "Angebot anfragen",
     "href": "/de/kontakt/",
-    "secondaryLabel": "Weitere Leistungen ansehen",
+    "secondaryLabel": "Leistungen ansehen",
     "secondaryHref": "/de/dienstleistungen/"
   },
   "pendingConfirmation": [
-    "Der Hinweis auf TECALSA erscheint auf der aktuellen Website und sollte vor einer Übernahme bestätigt werden.",
-    "Die aktuelle Website spricht von ständiger Überwachung und benötigt Validierung, bevor dies als feste operative Zusage verwendet wird."
+    "Prüfen, ob ältere Hinweise auf Marken oder Leitstellen beibehalten werden sollen.",
+    "Zusätzliche operative Versprechen vor der Produktion validieren."
   ]
 }

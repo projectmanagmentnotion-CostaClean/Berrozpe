@@ -102,3 +102,69 @@ Estado:
 - Ningun enlace interno puede sacar al usuario de su idioma actual.
 - Los servicios relacionados deben resolver por `serviceId`.
 - Los enlaces a paginas estaticas deben resolver por helper de rutas localizadas.
+
+## Estrategia final de copy SEO
+
+- Fecha de cierre editorial: `2026-07-09`
+- Idiomas cerrados: `es`, `ca`, `en`, `de`
+- Enfoque:
+  - home con lectura rapida de actividad, ubicacion, servicios y contacto
+  - servicios con resumen corto, alcance claro y CTA no agresiva
+  - contacto como punto de entrada para usuarios que aun dudan entre servicios
+  - sobre nosotros como bloque de confianza sin claims no auditados
+
+## Keywords finales por idioma
+
+- `es`
+  - instalaciones en Blanes
+  - instalaciones en Girona
+  - electricidad y domotica Blanes
+  - lampisteria y climatizacion Blanes
+  - alarmas y camaras Blanes
+  - empresa de instalaciones Blanes
+- `ca`
+  - instal·lacions a Blanes
+  - instal·lacions a Girona
+  - electricitat i domotica
+  - lampisteria i climatitzacio
+  - alarmes i cameras
+- `en`
+  - technical installations in Blanes
+  - installation company in Blanes/Girona
+  - electrical and home automation
+  - plumbing and climate control
+  - alarms and CCTV/IP cameras
+- `de`
+  - technische Installationen in Blanes
+  - Installationsfirma in Blanes/Girona
+  - Elektro und Smart Home
+  - Sanitär und Klimatechnik
+  - Alarmanlagen und Kameras
+
+## Reglas finales de anchors internos
+
+- Evitar anchors vagos como `click here`.
+- Priorizar intencion clara:
+  - ver servicios
+  - solicitar presupuesto
+  - conocer la empresa
+  - pedir orientacion
+  - ver servicios relacionados
+- Mantener la promesa moderada:
+  - sin urgencia falsa
+  - sin descuentos inventados
+  - sin resultados no confirmados
+
+## Titles y metas revisados
+
+- Home:
+  - titulo y descripcion localizados con foco en Blanes/Girona y empresa de instalaciones
+- Servicios:
+  - titulo propio por servicio con keyword principal y localidad
+  - descripcion propia por servicio sin duplicacion literal
+- Sobre nosotros:
+  - foco en empresa de instalaciones en Blanes
+- Contacto:
+  - foco en contacto directo y servicios principales
+- Legales:
+  - SEO basico, sin inventar datos fiscales ni responsables no confirmados

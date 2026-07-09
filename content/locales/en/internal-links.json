@@ -2,54 +2,54 @@
   "locale": "en",
   "home": {
     "eyebrow": "Recommended path",
-    "title": "Start with the service that fits best and finish the enquiry with clear context",
-    "body": "If you already know what you need, go straight to the service. If you are still comparing options, review the company context as well or move to contact for guidance.",
-    "serviceListTitle": "Confirmed services",
-    "trustLabel": "View about us",
-    "contactLabel": "Ask for guidance"
+    "title": "Start with the right service and move into a clearer enquiry",
+    "body": "If you already know which technical line you need, go straight into the service. If you are still comparing options, review the company or move to contact with more context.",
+    "serviceListTitle": "Main service",
+    "trustLabel": "About the company",
+    "contactLabel": "Get guidance"
   },
   "servicesIndex": {
     "eyebrow": "Next step",
-    "title": "Compare the service and move toward a more precise enquiry",
-    "body": "Each card leads to a detailed page. If you prefer to explain the case directly, you can move to contact or review the company page before writing.",
-    "contactLabel": "Go to contact",
-    "aboutLabel": "View about us"
+    "title": "Compare services and choose the contact route that fits best",
+    "body": "Each card summarises one technical line. If you prefer to explain the need directly, you can move to contact or review the company first.",
+    "contactLabel": "Request a quote",
+    "aboutLabel": "About us"
   },
   "serviceDetail": {
     "journey": {
-      "eyebrow": "Enquiry path",
-      "title": "This service is often reviewed together with related needs and an early consultation",
-      "body": "You can return to the service index to compare, review the company page or go straight to contact to explain the case in more detail.",
+      "eyebrow": "Next step",
+      "title": "Turn this need into a well-focused enquiry",
+      "body": "You can explain the case through contact, return to the service index to compare options or review the company before deciding the next step.",
       "contactLabel": "Request a quote",
       "servicesLabel": "View all services",
       "aboutLabel": "Learn about the company"
     },
     "related": {
       "eyebrow": "Related services",
-      "title": "Solutions often reviewed together with this service",
-      "body": "The audit of the current website connects these blocks as complementary services within the same technical need."
+      "title": "Solutions that are often reviewed together with this service",
+      "body": "These links help connect technical needs that are often raised within the same enquiry."
     },
     "faqCta": {
-      "eyebrow": "Next step",
-      "title": "Do you need a more precise assessment?",
-      "body": "If the answer depends on the space, the existing installation or a combination of services, the best next step is to send the enquiry through contact.",
+      "eyebrow": "Enquiry",
+      "title": "If you need a more precise assessment, contact is the next step",
+      "body": "When the answer depends on the space, the existing installation or a combination of services, the best approach is to explain the case by phone, WhatsApp or form.",
       "contactLabel": "Go to contact"
     }
   },
   "about": {
     "eyebrow": "Next step",
-    "title": "After the company context, the natural path moves to service and contact",
-    "body": "If you have already reviewed the audited company base, you can move into the confirmed services or write directly to explain the need.",
+    "title": "After the company context, the natural route moves to service and contact",
+    "body": "Once you understand the Instal Berrozpe approach, you can enter the most relevant service or write directly to explain the need.",
     "servicesLabel": "View services",
     "contactLabel": "Go to contact",
     "featuredServiceLabel": "Featured service"
   },
   "contact": {
-    "eyebrow": "Before writing",
-    "title": "Not sure which service fits best?",
-    "body": "You can review the three confirmed services or return to the company page before sending the form. If you prefer to speak directly, you can also call.",
+    "eyebrow": "Before you write",
+    "title": "If you are still unsure between services, here is a quick route",
+    "body": "You can review the three confirmed services, learn more about the company or call directly if you prefer to solve the first doubt by phone.",
     "servicesLabel": "View services",
-    "aboutLabel": "View about us",
+    "aboutLabel": "About us",
     "phoneLabel": "Call now"
   }
 }

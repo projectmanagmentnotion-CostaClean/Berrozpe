@@ -1,53 +1,53 @@
 {
   "slug": "elektrizitaet-und-smart-home",
   "locale": "de",
-  "title": "Elektrizität und Smart Home",
-  "shortTitle": "Elektrizität und Smart Home",
-  "seoTitle": "Elektrizität und Smart Home | Instal Berrozpe",
-  "seoDescription": "Geprüfte Leistung mit Elektrizität, Smart Home, Photovoltaik und Energieberatung auf der aktuellen Website von Instal Berrozpe.",
-  "heroTitle": "Elektrizität und Smart Home",
-  "intro": "Die aktuelle Website bündelt diese Leistung als Lösungen für Elektrizität und Automatisierung für Wohn- oder Geschäftsobjekte.",
-  "summary": "Enthalten sind elektrische Installationen, Smart Home, Photovoltaik und Energieberatung laut geprüften Inhalten.",
+  "title": "Elektro und Smart Home",
+  "shortTitle": "Elektro und Smart Home",
+  "seoTitle": "Elektro und Smart Home in Blanes | Instal Berrozpe",
+  "seoDescription": "Elektroinstallationen und Smart Home in Blanes und Girona mit Instal Berrozpe. Elektroarbeiten, Automatisierung, Photovoltaik und Energieberatung.",
+  "heroTitle": "Elektro und Smart Home für Installationen und intelligente Steuerung",
+  "intro": "Leistungsbereich für Elektroinstallationen und Automatisierungslösungen in Privat- oder Gewerbeobjekten in Blanes und Girona.",
+  "summary": "Elektroinstallationen, Smart Home, Photovoltaik und Energieberatung innerhalb einer technischen Linie.",
   "includes": {
     "title": "Enthält",
     "items": [
-      "Elektrische Installationen.",
-      "Smart Home.",
-      "Photovoltaik.",
-      "Energieberatung."
+      "Elektroinstallationen",
+      "Smart Home",
+      "Photovoltaik",
+      "Energieberatung"
     ]
   },
   "benefits": {
-    "title": "Kernaussagen",
+    "title": "Wichtige Punkte",
     "items": [
-      "Leistung für Wohn- oder Geschäftsobjekte beschrieben.",
-      "Aktueller Fokus auf Komfort, Sicherheit und Energieeffizienz.",
-      "Mehrere Lösungen innerhalb einer geprüften Seite gebündelt."
+      "Ermöglicht es, Elektroarbeiten und Automatisierung in derselben Anfrage zu behandeln.",
+      "Bietet eine sinnvolle technische Linie für Privat- oder Gewerbeobjekte je nach Bedarf.",
+      "Umfasst auch Photovoltaik und Energieberatung, die bereits auf der aktuellen Website erscheinen."
     ]
   },
   "process": {
-    "title": "Beschriebener Ablauf",
+    "title": "Leistungsablauf",
     "items": [
-      "Erstkontakt zur Erläuterung des Bedarfs.",
-      "Beratung zur passenden Lösung.",
-      "Installation oder Durchführung der Leistung.",
-      "Spätere Unterstützung wird auf der aktuellen Website erwähnt."
+      "Sie erklären den elektrischen oder automatisierungsbezogenen Bedarf.",
+      "Die am besten passende Lösung für die Installation wird geprüft.",
+      "Die technische Maßnahme oder Installation wird koordiniert.",
+      "Die Anfrage kann erweitert werden, wenn weitere Leistungsbereiche beteiligt sind."
     ]
   },
   "faqs": {
     "title": "Häufige Fragen",
     "items": [
       {
-        "question": "Was ist Smart Home laut aktueller Website?",
-        "answer": "Die aktuelle Website beschreibt es als System zur Automatisierung und Steuerung von Licht, Klima, Geräten und Sicherheit."
+        "question": "Was umfasst diese Leistung?",
+        "answer": "Die aktuelle Website bündelt Elektroinstallationen, Smart Home, Photovoltaik und Energieberatung innerhalb derselben Leistungslinie."
       },
       {
-        "question": "Welche Sicherheitssysteme werden auf der aktuellen Website erwähnt?",
-        "answer": "Die Website verknüpft diese Leistung mit Alarmanlagen und CCTV-Kameras als Teil des Gesamtangebots."
+        "question": "Ist das nur für Wohnobjekte gedacht?",
+        "answer": "Nein. Die aktuelle Darstellung richtet sich je nach Art der Installation an Privat- und Gewerbeobjekte."
       },
       {
-        "question": "Warum ist Energieberatung in dieser Leistung enthalten?",
-        "answer": "Die geprüfte Seite stellt sie als Möglichkeit dar, den Verbrauch zu optimieren und Energiekosten zu senken."
+        "question": "Kann diese Anfrage mit anderen technischen Themen kombiniert werden?",
+        "answer": "Ja. Die aktuelle Struktur verbindet diese Linie bei Bedarf mit Klimatechnik, Wasserinstallationen und Sicherheit."
       }
     ]
   },
@@ -56,13 +56,15 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "label": "Information anfordern",
+    "title": "Schildern Sie, welche Elektro- oder Smart-Home-Installation Sie prüfen möchten",
+    "body": "Wenn Sie eine Installation, eine Automatisierung oder eine Photovoltaik-bezogene Anfrage prüfen möchten, können Sie Instal Berrozpe schreiben und den Fall klar beschreiben.",
+    "label": "Angebot anfragen",
     "href": "/de/kontakt/",
-    "secondaryLabel": "Weitere Leistungen ansehen",
+    "secondaryLabel": "Leistungen ansehen",
     "secondaryHref": "/de/dienstleistungen/"
   },
   "pendingConfirmation": [
-    "Der Hinweis auf per WLAN steuerbare Geräte erscheint auf der aktuellen Website und benötigt redaktionelle Validierung, bevor er als Hauptaussage genutzt wird.",
-    "Die Abdeckung außerhalb des lokalen Gebiets wird allgemein erwähnt und benötigt eine geografische Definition."
+    "Prüfen, ob WLAN-Steuerung als zentrales Leistungsversprechen hervorgehoben werden soll.",
+    "Die endgültige geografische Abdeckung vor der Produktion präzise festlegen."
   ]
 }

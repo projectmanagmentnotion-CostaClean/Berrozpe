@@ -1,7 +1,7 @@
 {
   "locale": "de",
-  "title": "Kontaktformular",
-  "intro": "Nutze dieses Formular, um Informationen zu einer der drei bestätigten Leistungen anzufordern. Vor dem Absenden muss die Datenschutzerklärung akzeptiert werden.",
+  "title": "Informationen oder Angebot anfragen",
+  "intro": "Schreiben Sie Instal Berrozpe zu Elektro und Smart Home, Sanitär und Klimatechnik oder Alarmanlagen und Kameras. Je klarer die Anfrage, desto einfacher lässt sie sich vom ersten Kontakt an einordnen.",
   "fields": {
     "name": {
       "label": "Name",
@@ -10,7 +10,7 @@
     },
     "email": {
       "label": "E-Mail",
-      "placeholder": "ihre@email.com",
+      "placeholder": "ihre@email.de",
       "autocomplete": "email"
     },
     "phone": {
@@ -19,12 +19,12 @@
       "autocomplete": "tel"
     },
     "service": {
-      "label": "Gewünschte Leistung",
+      "label": "Leistung",
       "placeholder": "Leistung auswählen"
     },
     "message": {
       "label": "Nachricht",
-      "placeholder": "Beschreiben Sie Ihre Anfrage",
+      "placeholder": "Beschreiben Sie kurz, was Sie benötigen",
       "rows": 6
     },
     "privacy": {
@@ -37,7 +37,7 @@
   "serviceOptions": [
     {
       "value": "electricidad-y-domotica",
-      "label": "Elektrizität und Smart Home"
+      "label": "Elektro und Smart Home"
     },
     {
       "value": "lampisteria-y-climatizacion",
@@ -54,22 +54,22 @@
     "suffix": "akzeptieren, bevor das Formular gesendet werden kann."
   },
   "legalSummary": [
-    "Das Formular sendet die Anfrage an david@instalberrozpe.com als bestätigte Haupt-E-Mail.",
-    "Die endgültige steuerliche Identität und der endgültige Rechtstext warten weiterhin auf externe rechtliche Prüfung."
+    "Formularanfragen werden an david@instalberrozpe.com als bestätigte Haupt-E-Mail gesendet.",
+    "Die endgültigen Rechtstexte warten weiterhin auf die rechtliche Prüfung vor der Produktion."
   ],
   "submitLabel": "Anfrage senden",
   "sendingLabel": "Wird gesendet...",
   "successMessage": "Ihre Anfrage wurde erfolgreich gesendet.",
-  "errorMessage": "Das Formular konnte nicht gesendet werden. Prüfen Sie die Felder und versuchen Sie es erneut.",
+  "errorMessage": "Das Formular konnte nicht gesendet werden. Bitte prüfen Sie die Felder und versuchen Sie es erneut.",
   "validationMessages": {
-    "nameRequired": "Name ist erforderlich.",
-    "emailRequired": "E-Mail ist erforderlich.",
+    "nameRequired": "Der Name ist erforderlich.",
+    "emailRequired": "Die E-Mail ist erforderlich.",
     "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "phoneInvalid": "Bitte geben Sie eine gültige Telefonnummer ein oder lassen Sie das Feld leer.",
     "serviceRequired": "Bitte wählen Sie eine Leistung aus.",
-    "messageRequired": "Nachricht ist erforderlich.",
+    "messageRequired": "Die Nachricht ist erforderlich.",
     "privacyRequired": "Sie müssen die Datenschutzerklärung akzeptieren.",
-    "honeypotFilled": "Die Anfrage konnte nicht validiert werden.",
+    "honeypotFilled": "Die Übermittlung konnte nicht validiert werden.",
     "genericError": "Das Formular konnte nicht verarbeitet werden."
   },
   "honeypotLabel": "Dieses Feld nicht ausfüllen"

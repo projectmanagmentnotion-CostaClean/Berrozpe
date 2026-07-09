@@ -3,50 +3,50 @@
   "locale": "en",
   "title": "Alarms and cameras",
   "shortTitle": "Alarms and cameras",
-  "seoTitle": "Alarms and cameras | Instal Berrozpe",
-  "seoDescription": "Audited service with alarms and CCTV/IP cameras within the current Instal Berrozpe website.",
-  "heroTitle": "Alarms and cameras",
-  "intro": "The current website presents this service as a security offer for home or business.",
-  "summary": "It is structured around two main blocks: alarms and CCTV/IP cameras.",
+  "seoTitle": "Alarms and CCTV/IP cameras in Blanes | Instal Berrozpe",
+  "seoDescription": "Alarms and CCTV/IP cameras in Blanes and Girona with Instal Berrozpe. Security solutions for homes or businesses.",
+  "heroTitle": "Alarms and cameras to strengthen security in homes or businesses",
+  "intro": "Service line focused on security systems with alarms and CCTV/IP cameras for homes or businesses.",
+  "summary": "Alarms, CCTV cameras and IP cameras within one technical security line.",
   "includes": {
     "title": "Includes",
     "items": [
-      "Alarms.",
-      "CCTV cameras.",
-      "IP cameras."
+      "Alarms",
+      "CCTV cameras",
+      "IP cameras"
     ]
   },
   "benefits": {
     "title": "Key points",
     "items": [
-      "The current website positions it for home or business.",
-      "It relies on a security and remote supervision angle.",
-      "Alarms and cameras grouped into one audited page."
+      "Makes it possible to address security and supervision within one service line.",
+      "The current structure positions it for homes or businesses depending on context.",
+      "It can connect naturally with electrical work or home automation when required."
     ]
   },
   "process": {
-    "title": "Described process",
+    "title": "Service process",
     "items": [
-      "Contact to explain the security need.",
-      "Advice on the most suitable solution.",
-      "Installation of the alarm or camera system.",
-      "Follow-up support mentioned on the current website."
+      "You explain the security or supervision need.",
+      "The system that best fits the space and expected use is reviewed.",
+      "The alarm or camera installation is coordinated.",
+      "If services need to be combined, the enquiry can be expanded."
     ]
   },
   "faqs": {
     "title": "Frequently asked questions",
     "items": [
       {
-        "question": "What does the current website mention inside this service?",
-        "answer": "The audit confirms two blocks: alarms and CCTV/IP cameras."
+        "question": "What is included in this service?",
+        "answer": "The current website separates alarms, CCTV cameras and IP cameras within the same security service line."
       },
       {
-        "question": "Can the camera feed be checked remotely?",
-        "answer": "The current page mentions remote access for IP cameras through the internet."
+        "question": "Is remote access mentioned?",
+        "answer": "Yes. The current presentation associates IP cameras with image access through the internet."
       },
       {
-        "question": "Is any receiving center mentioned by name?",
-        "answer": "Yes. The current website mentions TECALSA in the alarms section."
+        "question": "Can this be combined with other technical work?",
+        "answer": "Yes. In many cases this line is related to electrical and home automation work or to other installation needs."
       }
     ]
   },
@@ -55,13 +55,15 @@
     "lampisteria-y-climatizacion"
   ],
   "cta": {
-    "label": "Request information",
+    "title": "Tell us which security system you need to assess and we will guide you to the right next step",
+    "body": "If you want to discuss alarms, CCTV cameras or IP cameras for a home or business, you can contact Instal Berrozpe and describe the case clearly from the start.",
+    "label": "Request a quote",
     "href": "/en/contact/",
-    "secondaryLabel": "View other services",
+    "secondaryLabel": "View services",
     "secondaryHref": "/en/services/"
   },
   "pendingConfirmation": [
-    "The reference to TECALSA appears on the current website and should be confirmed before being kept.",
-    "The current website speaks about constant monitoring and needs validation before it is treated as a closed operational promise."
+    "Confirm whether any legacy reference to brands or monitoring stations should remain.",
+    "Validate any additional operational promise before production."
   ]
 }

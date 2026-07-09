@@ -153,6 +153,55 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
 
 ## H. SEO
 
+### Estado de copy final
+
+- Cierre editorial realizado: `2026-07-09`
+- Idiomas revisados: `es`, `ca`, `en`, `de`
+- Paginas revisadas:
+  - home
+  - indice de servicios
+  - detalle de los 3 servicios
+  - sobre nosotros
+  - contacto
+  - legales basicos en SEO
+- Estado:
+  - copy comercial y SEO sincronizado en los cuatro idiomas
+  - CTA final de servicio separada del bloque de pendientes internos
+  - contacto publico limpiado de mensajes internos de validacion
+- Pendientes editoriales:
+  - revision legal definitiva de legales
+  - confirmacion final sobre si `872 986 161` debe mostrarse como telefono, fax o ambos
+
+### Keywords principales por idioma
+
+- `es`
+  - instalaciones en Blanes
+  - instalaciones en Girona
+  - electricidad y domotica Blanes
+  - lampisteria y climatizacion Blanes
+  - alarmas y camaras Blanes
+  - camaras CCTV/IP Blanes
+  - empresa de instalaciones Blanes
+- `ca`
+  - instal·lacions a Blanes
+  - instal·lacions a Girona
+  - electricitat i domotica
+  - lampisteria i climatitzacio
+  - alarmes i cameras
+  - cameras CCTV/IP
+- `en`
+  - technical installations in Blanes
+  - installation company in Blanes
+  - electrical and home automation
+  - plumbing and climate control
+  - alarms and CCTV/IP cameras
+- `de`
+  - technische Installationen in Blanes
+  - Installationsfirma in Blanes
+  - Elektro und Smart Home
+  - Sanitär und Klimatechnik
+  - Alarmanlagen und Kameras
+
 ### Titles por tipo de pagina
 
 - Home: desde `content/locales/{locale}/seo.json`
@@ -417,6 +466,7 @@ Reduced motion:
 - Revisar redirects y `.htaccess`
 - Revisar selector de idioma
 - Revisar internal linking multidioma
+- Revisar copy final en `es`, `ca`, `en` y `de`
 - Revisar formulario/contacto
 - Revisar legales con validacion externa
 - Confirmar SSL en SiteGround
@@ -461,3 +511,13 @@ Reduced motion:
   - enlace a servicios para usuarios indecisos
   - enlace a sobre nosotros
   - llamada directa por telefono
+
+## Q. Revision editorial final
+
+- Documento de cierre:
+  - `docs/COPY_SEO_FINAL_REVIEW.md`
+- Objetivo cumplido en esta fase:
+  - cerrar el copy visible de produccion sin inventar servicios, certificaciones, garantias, anos ni cobertura no confirmada
+- Ajustes estructurales asociados:
+  - `cta.title` y `cta.body` anadidos a cada servicio para separar conversion y notas internas
+  - bloque de pendientes internos ocultado de la interfaz publica de contacto

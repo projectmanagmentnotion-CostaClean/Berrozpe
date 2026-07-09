@@ -1,7 +1,7 @@
 {
   "locale": "en",
-  "title": "Contact form",
-  "intro": "Use this form to request information about one of the three confirmed services. The request requires accepting the privacy policy before submission.",
+  "title": "Request information or a quote",
+  "intro": "Write to Instal Berrozpe about electrical and home automation, plumbing and climate control, or alarms and cameras. The clearer the enquiry, the easier it is to guide it from the first contact.",
   "fields": {
     "name": {
       "label": "Name",
@@ -15,16 +15,16 @@
     },
     "phone": {
       "label": "Phone",
-      "placeholder": "Your phone",
+      "placeholder": "Your phone number",
       "autocomplete": "tel"
     },
     "service": {
-      "label": "Requested service",
+      "label": "Service",
       "placeholder": "Select a service"
     },
     "message": {
       "label": "Message",
-      "placeholder": "Describe your request",
+      "placeholder": "Briefly explain what you need",
       "rows": 6
     },
     "privacy": {
@@ -37,7 +37,7 @@
   "serviceOptions": [
     {
       "value": "electricidad-y-domotica",
-      "label": "Electricity and home automation"
+      "label": "Electrical and home automation"
     },
     {
       "value": "lampisteria-y-climatizacion",
@@ -54,13 +54,13 @@
     "suffix": "before sending the form."
   },
   "legalSummary": [
-    "The form sends the request to david@instalberrozpe.com as the confirmed primary email.",
-    "The final tax identity and final legal text are still pending external legal review."
+    "Form enquiries are sent to david@instalberrozpe.com as the confirmed primary email.",
+    "Final legal texts are still pending legal review before production."
   ],
-  "submitLabel": "Send request",
+  "submitLabel": "Send enquiry",
   "sendingLabel": "Sending...",
-  "successMessage": "Your request has been sent successfully.",
-  "errorMessage": "The form could not be sent. Check the fields and try again.",
+  "successMessage": "Your enquiry has been sent successfully.",
+  "errorMessage": "The form could not be sent. Review the fields and try again.",
   "validationMessages": {
     "nameRequired": "Name is required.",
     "emailRequired": "Email is required.",

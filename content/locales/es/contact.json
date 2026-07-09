@@ -1,7 +1,7 @@
 {
   "locale": "es",
-  "title": "Formulario de contacto",
-  "intro": "Usa este formulario para solicitar información sobre uno de los tres servicios confirmados. La solicitud requiere aceptar la política de privacidad antes del envío.",
+  "title": "Solicita informacion o presupuesto",
+  "intro": "Escribe a Instal Berrozpe para electricidad y domótica, lampistería y climatización, o alarmas y cámaras. Cuanto mas clara sea la consulta, mas facil sera orientarla desde el primer contacto.",
   "fields": {
     "name": {
       "label": "Nombre",
@@ -19,16 +19,16 @@
       "autocomplete": "tel"
     },
     "service": {
-      "label": "Servicio solicitado",
+      "label": "Servicio",
       "placeholder": "Selecciona un servicio"
     },
     "message": {
       "label": "Mensaje",
-      "placeholder": "Describe tu consulta",
+      "placeholder": "Explica brevemente que necesitas",
       "rows": 6
     },
     "privacy": {
-      "label": "He leído y acepto la política de privacidad."
+      "label": "He leido y acepto la politica de privacidad."
     },
     "honeypot": {
       "label": "No rellenar este campo"
@@ -50,26 +50,26 @@
   ],
   "privacyConsent": {
     "prefix": "Debes aceptar la",
-    "linkLabel": "política de privacidad",
+    "linkLabel": "politica de privacidad",
     "suffix": "para poder enviar el formulario."
   },
   "legalSummary": [
-    "El formulario envía la solicitud a david@instalberrozpe.com como email principal confirmado.",
-    "La identidad fiscal definitiva y el texto legal final siguen pendientes de revisión jurídica externa."
+    "Las solicitudes del formulario se envian a david@instalberrozpe.com como email principal confirmado.",
+    "Los textos legales definitivos siguen pendientes de revision juridica antes de produccion."
   ],
-  "submitLabel": "Enviar solicitud",
+  "submitLabel": "Enviar consulta",
   "sendingLabel": "Enviando...",
-  "successMessage": "Tu solicitud se ha enviado correctamente.",
-  "errorMessage": "No se ha podido enviar el formulario. Revisa los campos e inténtalo de nuevo.",
+  "successMessage": "Tu consulta se ha enviado correctamente.",
+  "errorMessage": "No se ha podido enviar el formulario. Revisa los campos e intentalo de nuevo.",
   "validationMessages": {
     "nameRequired": "El nombre es obligatorio.",
     "emailRequired": "El email es obligatorio.",
-    "emailInvalid": "Introduce un email válido.",
-    "phoneInvalid": "Introduce un teléfono válido o deja el campo vacío.",
+    "emailInvalid": "Introduce un email valido.",
+    "phoneInvalid": "Introduce un telefono valido o deja el campo vacio.",
     "serviceRequired": "Selecciona un servicio.",
     "messageRequired": "El mensaje es obligatorio.",
-    "privacyRequired": "Debes aceptar la política de privacidad.",
-    "honeypotFilled": "No se ha podido validar el envío.",
+    "privacyRequired": "Debes aceptar la politica de privacidad.",
+    "honeypotFilled": "No se ha podido validar el envio.",
     "genericError": "No se ha podido procesar el formulario."
   },
   "honeypotLabel": "No rellenar este campo"

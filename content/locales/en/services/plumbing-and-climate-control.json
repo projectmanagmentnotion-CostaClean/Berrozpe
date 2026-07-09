@@ -2,53 +2,53 @@
   "slug": "plumbing-and-climate-control",
   "locale": "en",
   "title": "Plumbing and climate control",
-  "shortTitle": "Plumbing and climate",
-  "seoTitle": "Plumbing and climate control | Instal Berrozpe",
-  "seoDescription": "Audited service with plumbing, air conditioning, heating, boilers and solar thermal energy on the current Instal Berrozpe website.",
-  "heroTitle": "Plumbing and climate control",
-  "intro": "The current website presents this service as water and climate solutions for home or business.",
-  "summary": "It groups plumbing, air conditioning, heating, boilers and solar thermal energy according to the content audit.",
+  "shortTitle": "Plumbing and climate control",
+  "seoTitle": "Plumbing and climate control in Blanes | Instal Berrozpe",
+  "seoDescription": "Plumbing and climate control in Blanes and Girona with Instal Berrozpe. Water installations, air conditioning, heating, boilers and solar thermal systems.",
+  "heroTitle": "Plumbing and climate control for water systems, thermal comfort and related equipment",
+  "intro": "Service line designed for water and climate installations in homes or businesses, bringing together several common technical needs.",
+  "summary": "Plumbing, air conditioning, heating, boilers and solar thermal systems within one service.",
   "includes": {
     "title": "Includes",
     "items": [
-      "Plumbing.",
-      "Air conditioning.",
-      "Heating.",
-      "Boilers.",
-      "Solar thermal energy."
+      "Plumbing",
+      "Air conditioning",
+      "Heating",
+      "Boilers",
+      "Solar thermal systems"
     ]
   },
   "benefits": {
     "title": "Key points",
     "items": [
-      "Service focused on thermal comfort and water management.",
-      "The current website presents it for home or business.",
-      "Five sub-blocks grouped in one audited page."
+      "Makes it possible to address water systems and thermal comfort within the same enquiry.",
+      "Useful for homes or businesses depending on the equipment or installation.",
+      "Brings a broad technical line together without splitting the need across several providers."
     ]
   },
   "process": {
-    "title": "Described process",
+    "title": "Service process",
     "items": [
-      "Contact to explain the water or climate need.",
-      "Advice on the most suitable system.",
-      "Installation or technical intervention.",
-      "Follow-up support mentioned on the current website."
+      "You explain the water, climate control or related equipment need.",
+      "The most suitable solution is reviewed for the space and expected use.",
+      "The installation or technical work is coordinated.",
+      "If the case connects with other lines, the enquiry can be unified."
     ]
   },
   "faqs": {
     "title": "Frequently asked questions",
     "items": [
       {
-        "question": "Which solutions are included in this service page?",
-        "answer": "The audit detects plumbing, air conditioning, heating, boilers and solar thermal energy."
+        "question": "What does this page include?",
+        "answer": "The current audit confirms plumbing, air conditioning, heating, boilers and solar thermal systems."
       },
       {
-        "question": "Does the current website position it for home or business?",
-        "answer": "Yes. The current wording refers to home or business in several sections."
+        "question": "Is this only aimed at residential use?",
+        "answer": "No. The current presentation also positions it for businesses depending on the technical need."
       },
       {
-        "question": "Is wifi control mentioned in this service?",
-        "answer": "Yes. The current website mentions it for some equipment, but it should be validated before being used as a main commercial promise."
+        "question": "Can I ask about water and climate control in the same message?",
+        "answer": "Yes. This line is designed precisely to bring together several needs related to thermal comfort and water systems."
       }
     ]
   },
@@ -57,13 +57,15 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "label": "Request information",
+    "title": "Explain your plumbing or climate control enquiry with as much context as possible",
+    "body": "If you need to review a water installation, air conditioning, heating, boiler or solar thermal related case, you can contact Instal Berrozpe and explain it from the start.",
+    "label": "Request a quote",
     "href": "/en/contact/",
-    "secondaryLabel": "View other services",
+    "secondaryLabel": "View services",
     "secondaryHref": "/en/services/"
   },
   "pendingConfirmation": [
-    "The mention of wifi-controlled equipment appears on the current website and needs editorial validation.",
-    "Coverage outside the local area is mentioned in general terms and requires geographic definition."
+    "Validate whether wifi control should appear as a primary commercial claim.",
+    "Define the final geographic coverage precisely before production."
   ]
 }

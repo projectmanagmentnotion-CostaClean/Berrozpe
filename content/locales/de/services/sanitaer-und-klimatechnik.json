@@ -2,53 +2,53 @@
   "slug": "sanitaer-und-klimatechnik",
   "locale": "de",
   "title": "Sanitär und Klimatechnik",
-  "shortTitle": "Sanitär und Klima",
-  "seoTitle": "Sanitär und Klimatechnik | Instal Berrozpe",
-  "seoDescription": "Geprüfte Leistung mit Sanitär, Klimaanlage, Heizung, Kesseln und Solarthermie auf der aktuellen Website von Instal Berrozpe.",
-  "heroTitle": "Sanitär und Klimatechnik",
-  "intro": "Die aktuelle Website beschreibt diese Leistung als Wasser- und Klimalösungen für Wohn- oder Geschäftsobjekte.",
-  "summary": "Gebündelt werden Sanitär, Klimaanlage, Heizung, Kessel und Solarthermie laut Inhaltsprüfung.",
+  "shortTitle": "Sanitär und Klimatechnik",
+  "seoTitle": "Sanitär und Klimatechnik in Blanes | Instal Berrozpe",
+  "seoDescription": "Sanitär und Klimatechnik in Blanes und Girona mit Instal Berrozpe. Wasserinstallationen, Klimaanlagen, Heizung, Kessel und Solarthermie.",
+  "heroTitle": "Sanitär und Klimatechnik für Wasser, thermischen Komfort und zugehörige Anlagen",
+  "intro": "Leistungsbereich für Wasser- und Klimatechnik in Privat- oder Gewerbeobjekten, der mehrere häufige technische Anforderungen bündelt.",
+  "summary": "Sanitär, Klimaanlagen, Heizung, Kessel und Solarthermie innerhalb einer Leistung.",
   "includes": {
     "title": "Enthält",
     "items": [
-      "Sanitär.",
-      "Klimaanlage.",
-      "Heizung.",
-      "Kessel.",
-      "Solarthermie."
+      "Sanitär",
+      "Klimaanlagen",
+      "Heizung",
+      "Kessel",
+      "Solarthermie"
     ]
   },
   "benefits": {
-    "title": "Kernaussagen",
+    "title": "Wichtige Punkte",
     "items": [
-      "Leistung mit Fokus auf thermischen Komfort und Wassermanagement.",
-      "Die aktuelle Website beschreibt sie für Wohn- oder Geschäftsobjekte.",
-      "Fünf Unterbereiche innerhalb einer geprüften Seite gebündelt."
+      "Ermöglicht es, Wasserinstallationen und thermischen Komfort innerhalb derselben Anfrage zu behandeln.",
+      "Geeignet für Privat- oder Gewerbeobjekte je nach Anlage oder Installation.",
+      "Bündelt eine breite technische Linie, ohne den Bedarf auf mehrere Anbieter aufzuteilen."
     ]
   },
   "process": {
-    "title": "Beschriebener Ablauf",
+    "title": "Leistungsablauf",
     "items": [
-      "Kontakt zur Beschreibung des Wasser- oder Klimabedarfs.",
-      "Beratung zum passenden System.",
-      "Installation oder technischer Einsatz.",
-      "Spätere Begleitung wird auf der aktuellen Website erwähnt."
+      "Sie erklären den Bedarf rund um Wasser, Klimatechnik oder zugehörige Anlagen.",
+      "Die passendste Lösung für Raum und geplante Nutzung wird geprüft.",
+      "Die Installation oder technische Maßnahme wird koordiniert.",
+      "Wenn der Fall mit anderen Bereichen verbunden ist, kann die Anfrage gebündelt werden."
     ]
   },
   "faqs": {
     "title": "Häufige Fragen",
     "items": [
       {
-        "question": "Welche Lösungen umfasst diese Leistungsseite?",
-        "answer": "Die Prüfung erkennt Sanitär, Klimaanlage, Heizung, Kessel und Solarthermie."
+        "question": "Welche Lösungen umfasst diese Seite?",
+        "answer": "Die aktuelle Prüfung bestätigt Sanitär, Klimaanlagen, Heizung, Kessel und Solarthermie."
       },
       {
-        "question": "Wird die Leistung für Wohn- oder Geschäftsobjekte beschrieben?",
-        "answer": "Ja. Die aktuelle Formulierung nennt in mehreren Abschnitten Wohn- oder Geschäftsobjekte."
+        "question": "Ist das nur für Wohnobjekte gedacht?",
+        "answer": "Nein. Die aktuelle Darstellung richtet sich je nach technischem Bedarf auch an Gewerbeobjekte."
       },
       {
-        "question": "Wird WLAN-Steuerung in dieser Leistung erwähnt?",
-        "answer": "Ja. Die aktuelle Website nennt dies für bestimmte Geräte, aber vor einer kommerziellen Nutzung als Hauptversprechen sollte es validiert werden."
+        "question": "Kann ich Wasser und Klimatechnik in derselben Nachricht anfragen?",
+        "answer": "Ja. Genau dafür ist diese Linie gedacht: mehrere Anforderungen rund um thermischen Komfort und Wasser in einer Anfrage zu bündeln."
       }
     ]
   },
@@ -57,13 +57,15 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "label": "Information anfordern",
+    "title": "Schildern Sie Ihre Sanitär- oder Klimatechnik-Anfrage mit möglichst viel Kontext",
+    "body": "Wenn Sie eine Wasserinstallation, Klimaanlage, Heizung, einen Kessel oder ein Solarthermie-Thema prüfen möchten, können Sie Instal Berrozpe kontaktieren und den Fall von Anfang an erklären.",
+    "label": "Angebot anfragen",
     "href": "/de/kontakt/",
-    "secondaryLabel": "Weitere Leistungen ansehen",
+    "secondaryLabel": "Leistungen ansehen",
     "secondaryHref": "/de/dienstleistungen/"
   },
   "pendingConfirmation": [
-    "Der Hinweis auf per WLAN steuerbare Geräte erscheint auf der aktuellen Website und benötigt redaktionelle Validierung.",
-    "Die Abdeckung außerhalb des lokalen Gebiets wird allgemein erwähnt und benötigt eine geografische Definition."
+    "Prüfen, ob WLAN-Steuerung als zentrales Leistungsversprechen hervorgehoben werden soll.",
+    "Die endgültige geografische Abdeckung vor der Produktion präzise festlegen."
   ]
 }

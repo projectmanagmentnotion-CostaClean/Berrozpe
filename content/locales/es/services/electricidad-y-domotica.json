@@ -3,51 +3,51 @@
   "locale": "es",
   "title": "Electricidad y domótica",
   "shortTitle": "Electricidad y domótica",
-  "seoTitle": "Electricidad y domótica | Instal Berrozpe",
-  "seoDescription": "Servicio auditado con electricidad, domótica, energía solar fotovoltaica y asesoría energética dentro de la web actual de Instal Berrozpe.",
-  "heroTitle": "Electricidad y domótica",
-  "intro": "La web actual agrupa este servicio como soluciones de electricidad y automatización para hogar o negocio.",
-  "summary": "Incluye instalaciones eléctricas, domótica, energía solar fotovoltaica y asesoría energética según el contenido auditado.",
+  "seoTitle": "Electricidad y domótica en Blanes | Instal Berrozpe",
+  "seoDescription": "Electricidad y domotica en Blanes y Girona con Instal Berrozpe. Instalaciones electricas, automatizacion, energia solar fotovoltaica y asesoria energetica.",
+  "heroTitle": "Electricidad y domótica para instalaciones y automatización",
+  "intro": "Servicio orientado a instalaciones electricas y soluciones de automatizacion para vivienda o negocio en Blanes y Girona.",
+  "summary": "Instalaciones electricas, domotica, energia solar fotovoltaica y asesoria energetica dentro de una misma linea tecnica.",
   "includes": {
     "title": "Incluye",
     "items": [
-      "Instalaciones eléctricas.",
-      "Domótica.",
-      "Energía solar fotovoltaica.",
-      "Asesoría energética."
+      "Instalaciones electricas",
+      "Domotica",
+      "Energia solar fotovoltaica",
+      "Asesoria energetica"
     ]
   },
   "benefits": {
     "title": "Puntos clave",
     "items": [
-      "Servicio planteado para hogar o negocio.",
-      "Enfoque actual en comodidad, seguridad y eficiencia energética.",
-      "Agrupa varias soluciones dentro de una misma página auditada."
+      "Permite tratar instalacion electrica y automatizacion en una misma consulta.",
+      "Aporta una linea tecnica util para vivienda o negocio segun la necesidad.",
+      "Integra tambien la parte de energia solar fotovoltaica y asesoria energetica presente en la web actual."
     ]
   },
   "process": {
-    "title": "Proceso descrito",
+    "title": "Proceso del servicio",
     "items": [
-      "Toma de contacto para explicar la necesidad.",
-      "Asesoramiento sobre la solución más adecuada.",
-      "Instalación o intervención del servicio.",
-      "Soporte posterior mencionado en la web actual."
+      "Explicas la necesidad electrica o de automatizacion.",
+      "Se revisa el tipo de solucion que mejor encaja con la instalacion.",
+      "Se coordina la actuacion tecnica o la instalacion prevista.",
+      "La consulta puede ampliarse si intervienen otras lineas de servicio."
     ]
   },
   "faqs": {
     "title": "Preguntas frecuentes",
     "items": [
       {
-        "question": "¿Qué es la domótica y cómo puede beneficiar mi hogar?",
-        "answer": "La web actual la describe como un sistema para automatizar y controlar iluminación, clima, electrodomésticos y seguridad."
+        "question": "Que abarca este servicio?",
+        "answer": "La web actual agrupa instalaciones electricas, domotica, energia solar fotovoltaica y asesoria energetica dentro de la misma linea."
       },
       {
-        "question": "¿Qué sistemas de seguridad menciona la web actual?",
-        "answer": "La propia web enlaza este servicio con alarmas y cámaras CCTV como parte de su propuesta global."
+        "question": "Es un servicio solo para vivienda?",
+        "answer": "No. La presentacion actual lo plantea para hogar o negocio segun el tipo de instalacion."
       },
       {
-        "question": "¿Por qué aparece la asesoría energética dentro de este servicio?",
-        "answer": "La página auditada la presenta como una ayuda para optimizar el consumo y reducir costes energéticos."
+        "question": "Puedo combinar esta consulta con otras necesidades tecnicas?",
+        "answer": "Si. La estructura actual de la empresa conecta esta linea con climatizacion, agua y seguridad cuando el caso lo requiere."
       }
     ]
   },
@@ -56,13 +56,15 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "label": "Solicitar información",
+    "title": "Cuéntanos la instalacion electrica o de domotica que necesitas revisar",
+    "body": "Si quieres valorar una instalacion, una automatizacion o una consulta relacionada con energia solar fotovoltaica, puedes escribir a Instal Berrozpe y concretar el caso.",
+    "label": "Solicitar presupuesto",
     "href": "/es/contacto/",
-    "secondaryLabel": "Ver otros servicios",
+    "secondaryLabel": "Ver servicios",
     "secondaryHref": "/es/servicios/"
   },
   "pendingConfirmation": [
-    "La mención a equipos controlables por wifi aparece en la web actual y necesita validación editorial antes de convertirse en claim principal.",
-    "La cobertura fuera del área local aparece mencionada de forma genérica y requiere definición geográfica."
+    "Validar si el control por wifi debe destacarse como claim comercial principal.",
+    "Definir con precision la cobertura geografica final antes de produccion."
   ]
 }

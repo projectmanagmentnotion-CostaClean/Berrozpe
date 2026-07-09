@@ -3,50 +3,50 @@
   "locale": "ca",
   "title": "Alarmes i càmeres",
   "shortTitle": "Alarmes i càmeres",
-  "seoTitle": "Alarmes i càmeres | Instal Berrozpe",
-  "seoDescription": "Servei auditat amb alarmes i càmeres CCTV i IP dins la web actual d'Instal Berrozpe.",
-  "heroTitle": "Alarmes i càmeres",
-  "intro": "La web actual presenta aquest servei com una oferta de seguretat per a llar o negoci.",
-  "summary": "S'estructura en dos blocs principals: alarmes i càmeres CCTV i IP.",
+  "seoTitle": "Alarmes i càmeres a Blanes | Instal Berrozpe",
+  "seoDescription": "Alarmes i cameras CCTV/IP a Blanes i Girona amb Instal Berrozpe. Solucions de seguretat per a llar o negoci.",
+  "heroTitle": "Alarmes i cameras per reforcar la seguretat a llar o negoci",
+  "intro": "Servei enfocat a sistemes de seguretat amb alarmes i cameras CCTV i IP per a llar o negoci.",
+  "summary": "Alarmes, cameras CCTV i cameras IP dins d'una mateixa linea de seguretat tecnica.",
   "includes": {
     "title": "Inclou",
     "items": [
-      "Alarmes.",
-      "Càmeres CCTV.",
-      "Càmeres IP."
+      "Alarmes",
+      "Camaras CCTV",
+      "Camaras IP"
     ]
   },
   "benefits": {
     "title": "Punts clau",
     "items": [
-      "La web actual l'orienta a habitatge o negoci.",
-      "Es recolza en un enfocament de seguretat i supervisió remota.",
-      "Agrupa alarmes i càmeres dins d'una mateixa pàgina auditada."
+      "Permet plantejar seguretat i supervisio dins d'un mateix servei.",
+      "L'estructura actual l'orienta a llar o negoci segons el context.",
+      "Es pot connectar amb altres necessitats tecniques com electricitat o domotica."
     ]
   },
   "process": {
-    "title": "Procés descrit",
+    "title": "Proces del servei",
     "items": [
-      "Contacte per exposar la necessitat de seguretat.",
-      "Assessorament sobre la solució més adequada.",
-      "Instal·lació del sistema d'alarmes o càmeres.",
-      "Seguiment posterior mencionat a la web actual."
+      "Expliques la necessitat de seguretat o supervisio.",
+      "Es revisa el sistema que millor encaixa amb l'espai i l'us previst.",
+      "Es coordina la instal·lacio d'alarmes o cameras.",
+      "Si cal combinar serveis, la consulta es pot ampliar."
     ]
   },
   "faqs": {
-    "title": "Preguntes freqüents",
+    "title": "Preguntes frequents",
     "items": [
       {
-        "question": "Què es menciona a la web actual dins d'aquest servei?",
-        "answer": "L'auditoria confirma dos blocs: alarmes i càmeres CCTV i IP."
+        "question": "Que inclou aquest servei?",
+        "answer": "La web actual diferencia alarmes, cameras CCTV i cameras IP dins la mateixa linea de seguretat."
       },
       {
-        "question": "Es pot consultar la imatge des d'un altre lloc?",
-        "answer": "La pàgina actual indica accés remot per a càmeres IP a través d'internet."
+        "question": "S'hi menciona acces remot?",
+        "answer": "Si. La presentacio actual associa les cameras IP amb la consulta d'imatge a traves d'internet."
       },
       {
-        "question": "Apareix alguna central receptora esmentada pel seu nom?",
-        "answer": "Sí. La web actual esmenta TECALSA a la secció d'alarmes."
+        "question": "Es pot combinar amb altres treballs tecnics?",
+        "answer": "Si. En molts casos aquesta linea es relaciona amb electricitat i domotica o amb altres necessitats de la instal·lacio."
       }
     ]
   },
@@ -55,13 +55,15 @@
     "lampisteria-y-climatizacion"
   ],
   "cta": {
-    "label": "Sol·licitar informació",
+    "title": "Explica quin sistema de seguretat necessites valorar i t'orientarem per la via adequada",
+    "body": "Si vols consultar alarmes, cameras CCTV o cameras IP per a llar o negoci, pots contactar i descriure el cas amb detall des de l'inici.",
+    "label": "Demanar pressupost",
     "href": "/ca/contacte/",
-    "secondaryLabel": "Veure altres serveis",
+    "secondaryLabel": "Veure serveis",
     "secondaryHref": "/ca/serveis/"
   },
   "pendingConfirmation": [
-    "La menció a TECALSA apareix a la web actual i convé confirmar si s'ha de mantenir.",
-    "La web actual parla de vigilància constant i necessita validació abans de tractar-se com a promesa operativa tancada."
+    "Confirmar si alguna referencia legacy a marques o centrals receptores s'ha de mantenir.",
+    "Validar qualsevol promesa operativa addicional abans de produccio."
   ]
 }
