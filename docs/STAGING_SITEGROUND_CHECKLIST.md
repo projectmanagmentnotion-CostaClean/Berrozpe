@@ -10,9 +10,9 @@
 
 - Probar envio real del formulario hacia `david@instalberrozpe.com`
 - Revisar spam
-- confirmar si SiteGround acepta `mail()`
-- valorar SMTP si `mail()` falla
-- verificar fallback sin JS
+- Confirmar si SiteGround acepta `mail()`
+- Valorar SMTP si `mail()` falla
+- Verificar fallback sin JS
 
 ## WhatsApp
 
@@ -21,12 +21,16 @@
 - Verificar que no tapa el banner de cookies
 - Verificar que no tapa el formulario
 
-## Mapa y reseñas
+## Mapa y resenas
 
 - Verificar boton de Google Maps con la direccion confirmada
-- Verificar reseñas visibles `4,9` y `67 reseñas`
-- Verificar boton `Dejar reseña en Google`
-- Confirmar que no aparecen reseñas escritas inventadas
+- Verificar bloque compacto de mapa en home
+- Verificar bloque completo de mapa en contacto
+- Verificar enlace de ubicacion en footer
+- Confirmar que no se carga iframe de Google Maps antes del consentimiento
+- Verificar resenas visibles `4,9` y `67 resenas`
+- Verificar boton `Dejar resena en Google`
+- Confirmar que no aparecen resenas escritas inventadas
 
 ## SEO
 

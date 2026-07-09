@@ -7,7 +7,7 @@
 ## Commit auditado
 
 - Base auditada: `73bbe13`
-- Estado validado: working tree del sprint 8 antes del commit final
+- Estado validado: working tree posterior con ajustes de conversion local, WhatsApp y Google Maps
 
 ## Build
 
@@ -24,7 +24,9 @@
 - Sitemap:
   - `dist/sitemap-index.xml` presente
   - `dist/sitemap-0.xml` contiene URLs `es`, `ca`, `en` y `de`
-- Handler:
+- Archivos tecnicos:
+  - `dist/robots.txt` presente
+  - `dist/.htaccess` presente
   - `dist/form-handler.php` presente
 
 ## Rutas revisadas
@@ -32,13 +34,11 @@
 - `/es/`
 - `/es/servicios/`
 - `/es/servicios/electricidad-y-domotica/`
-- `/es/servicios/lampisteria-y-climatizacion/`
-- `/es/servicios/alarmas-y-camaras/`
 - `/es/sobre-nosotros/`
 - `/es/contacto/`
-- `/ca/`
-- `/en/`
-- `/de/`
+- `/ca/contacte/`
+- `/en/contact/`
+- `/de/kontakt/`
 
 ## SEO
 
@@ -59,6 +59,7 @@
 - Banner presente
 - Modal de preferencias disponible
 - Sin scripts opcionales confirmados activos antes del consentimiento
+- Google Maps sin iframe vivo ni carga automatica de terceros
 
 ## Formulario
 
@@ -80,22 +81,21 @@
 
 - Home con bloque de recorrido recomendado
 - Indice de servicios con bloque de paso siguiente
-- Detalles de servicio con:
-  - CTA contextual tras FAQ
-  - servicios relacionados
-  - bloque de ruta de consulta
+- Detalles de servicio con CTA contextual tras FAQ y servicios relacionados
 - Sobre nosotros con rutas a servicio y contacto
 - Contacto con servicios, sobre nosotros y llamada directa
-- Multidioma:
-  - sin saltos accidentales entre idiomas durante QA
+- Multidioma sin saltos accidentales entre idiomas durante QA
 
 ## Conversion local cerrada
 
 - WhatsApp visible en layout, header, home, contacto, detalle de servicio y footer
-- Google Maps integrado como enlace externo sin iframe
-- Reseñas Google Business visibles en home y contacto: `4,9` y `67 reseñas`
-- Boton para dejar reseña activo
-- Sin reseñas escritas inventadas
+- Google Maps integrado sin iframe vivo:
+  - bloque compacto en home
+  - bloque completo con fallback visual en contacto
+  - enlace simple en footer
+- Resenas Google Business visibles en home y contacto: `4,9` y `67 resenas`
+- Boton para dejar resena activo
+- Sin resenas escritas inventadas
 - Sin `Review` schema individual
 
 ## Assets
@@ -106,7 +106,7 @@
 
 ## QA visual
 
-- Tama\u00f1os revisados:
+- Tamano objetivo:
   - `360x740`
   - `390x844`
   - `430x932`
@@ -114,17 +114,9 @@
   - `1366x768`
   - `1440x900`
   - `1920x1080`
-- Resultado:
-  - build y HTML final verificados
-  - no se detecto overflow en la salida validada
-  - bloqueo actual: el navegador integrado no alcanza `localhost` desde su sandbox y Chrome headless local no esta dejando capturas persistentes en este entorno, asi que la validacion visual automatizada queda pendiente de comprobacion manual final en navegador real antes de staging
-
-## Lighthouse
-
 - Estado:
-  - pendiente para staging
-- Motivo:
-  - no hay automatizacion de Lighthouse integrada en el proyecto actual
+  - build y HTML final verificados
+  - el siguiente paso es comprobacion manual real en navegador para confirmar que mapa, WhatsApp y banner de cookies no colisionan en esos viewports
 
 ## Pendientes
 
@@ -134,20 +126,3 @@
 - Ejecutar Lighthouse real en staging
 - Probar `mail()` en el hosting de SiteGround
 - Ejecutar una pasada visual manual final en navegador real antes de staging
-
-## Checklist staging
-
-- Subir `dist/` a staging
-- Probar redirects legacy
-- Probar formulario con JS y sin JS
-- Probar cookies en `es` y `en`
-- Probar internal links en home, servicios, about y contacto
-- Probar ScrollTrigger en desktop y mobile
-
-## Checklist produccion
-
-- Backup previo del sitio anterior
-- Subida limpia de `dist/`
-- Verificacion de canonical y `hreflang`
-- Verificacion de assets finales
-- Alta / validacion en Search Console

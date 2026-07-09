@@ -24,11 +24,10 @@ const serviceOptions = [
 
 <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.35)] sm:p-8">
   <div class="space-y-3">
-    <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{content.title}</p>
     <h2 class="font-[var(--font-display)] text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl">
       {content.title}
     </h2>
-    <p class="max-w-3xl text-base leading-8 text-[var(--color-text-muted)]">{content.intro}</p>
+    <p class="max-w-3xl text-base leading-7 text-[var(--color-text-muted)]">{content.intro}</p>
   </div>
 
   <div
@@ -126,15 +125,15 @@ const serviceOptions = [
       href={privacyHref}
     />
 
-    <div class="space-y-3 rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.03] p-5">
+    <div class="space-y-2 rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.03] p-4">
       {content.legalSummary.map((paragraph) => (
-        <p class="text-sm leading-7 text-[var(--color-text-muted)]">{paragraph}</p>
+        <p class="text-sm leading-6 text-[var(--color-text-muted)]">{paragraph}</p>
       ))}
     </div>
 
     <button
       type="submit"
-      class="inline-flex min-h-12 items-center justify-center rounded-full border border-transparent bg-[var(--color-accent)] px-6 py-3.5 text-sm font-medium text-[var(--color-ink)] transition hover:bg-[var(--color-accent-soft)] disabled:cursor-wait disabled:opacity-70"
+      class="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-transparent bg-[var(--color-accent)] px-6 py-3.5 text-sm font-medium text-[var(--color-ink)] transition hover:bg-[var(--color-accent-soft)] disabled:cursor-wait disabled:opacity-70 sm:w-auto"
       data-submit-button
     >
       {content.submitLabel}

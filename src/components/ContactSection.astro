@@ -1,11 +1,10 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { buildWhatsAppUrl, getNavigation, getPageVisual, getRouteCatalog, getSharedContact, getWhatsAppContent } from '../lib/content';
+import { getNavigation, getPageVisual, getRouteCatalog, getSharedContact } from '../lib/content';
 import Button from './Button.astro';
 import Card from './Card.astro';
 import ContactForm from './ContactForm.astro';
-import GoogleMapBlock from './GoogleMapBlock.astro';
 import Section from './Section.astro';
 import VisualAsset from './VisualAsset.astro';
 import WhatsAppCTA from './WhatsAppCTA.astro';
@@ -23,8 +22,6 @@ const contact = getSharedContact();
 const navigation = getNavigation(locale);
 const routes = getRouteCatalog(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
-const whatsAppContent = getWhatsAppContent(locale);
-const whatsappLink = buildWhatsAppUrl(locale);
 const contactVisual = getPageVisual('contact');
 ---
 
@@ -70,9 +67,7 @@ const contactVisual = getPageVisual('contact');
         <Button href={`tel:${contact.phones.mobile}`} variant="primary" size="lg">
           {contact.phones.mobile}
         </Button>
-        <Button href={whatsappLink} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
-          {whatsAppContent.label}
-        </Button>
+        <WhatsAppCTA locale={locale} variant="inline" className="min-h-12 px-6 py-3.5 text-sm sm:text-base" />
       </div>
     </Card>
 
@@ -92,14 +87,13 @@ const contactVisual = getPageVisual('contact');
     </Card>
   </div>
 
-  <div class="mt-5 grid gap-5 lg:grid-cols-[0.95fr_1.05fr]" data-animate-group="contact-support">
-    <WhatsAppCTA locale={locale} variant="large" className="bg-white/92" />
-    <GoogleMapBlock locale={locale} className="bg-white/92" />
-  </div>
-
   {showForm && (
     <div class="mt-5" data-animate="stagger">
       <ContactForm locale={locale} returnUrl={routes.contact} />
     </div>
   )}
+
+  <div class="mt-5" data-animate-group="contact-support">
+    <WhatsAppCTA locale={locale} variant="large" className="bg-white/92" />
+  </div>
 </Section>

@@ -17,28 +17,29 @@ const href = getServiceRouteById(service.serviceId, locale) ?? '#';
 const visual = getServiceVisual(service.serviceId);
 ---
 
-<Card className="flex h-full flex-col justify-between gap-6 bg-white/92" data-animate="stagger">
-  <div class="overflow-hidden rounded-[1.6rem] border border-[var(--color-border)] bg-white/70" data-animate="image-reveal">
+<Card className="flex h-full flex-col justify-between gap-5 bg-white/92" data-animate="stagger">
+  <div class="overflow-hidden rounded-[1.4rem] border border-[var(--color-border)] bg-white/70" data-animate="image-reveal">
     <img
       src={visual.path}
       width={visual.width}
       height={visual.height}
       alt={visual.alt}
       loading="lazy"
-      class="h-56 w-full object-cover object-center"
+      class="h-48 w-full object-cover object-center sm:h-52"
       data-animate="soft-parallax"
     />
   </div>
-  <div class="space-y-5">
-    <div class="flex items-center justify-between gap-4">
+  <div class="space-y-4">
+    <div class="flex items-center gap-4">
       <Badge text={`${String(index + 1).padStart(2, '0')}`} />
-      <span class="text-sm text-[var(--color-text-soft)]">{service.shortTitle}</span>
     </div>
-    <div class="space-y-3">
-      <h3 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:text-3xl">
-        {service.heroTitle}
+    <div class="space-y-2">
+      <h3 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:text-[2rem]">
+        {service.title}
       </h3>
-      <p class="text-base leading-8 text-[var(--color-text-muted)]">{service.summary}</p>
+      <p class="overflow-hidden text-base leading-7 text-[var(--color-text-muted)] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
+        {service.summary}
+      </p>
     </div>
   </div>
 

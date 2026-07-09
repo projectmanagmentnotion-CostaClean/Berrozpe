@@ -44,6 +44,10 @@ Los detalles de servicio no se hardcodean en `seo.json`; salen de `services-inde
 - Direccion confirmada: `Carrer de l'Antiga, 68, 17300 Blanes, Girona`
 - Telefonos auditados: `676 04 33 89` y `872 986 161`
 - Email principal confirmado: `david@instalberrozpe.com`
+- Google Maps:
+  - URL externa confirmada en `content/shared/contact.json`
+  - bloque local visible en home y contacto
+  - enlace simple en footer
 
 ## Datos todavia pendientes
 
@@ -73,6 +77,9 @@ Estado:
   - `reviewCount: 67`
   - `bestRating: 5`
 - No se emite `Review` schema individual.
+- No se anaden coordenadas no confirmadas.
+- No se fuerza `GeoCoordinates`.
+- La presencia del mapa se resuelve con direccion textual y enlace verificado a Google Maps.
 
 ## Descubrimiento
 
@@ -139,11 +146,11 @@ Estado:
   - alarmas y camaras Blanes
   - empresa de instalaciones Blanes
 - `ca`
-  - instal·lacions a Blanes
-  - instal·lacions a Girona
+  - installacions a Blanes
+  - installacions a Girona
   - electricitat i domotica
   - lampisteria i climatitzacio
-  - alarmes i cameras
+  - alarmes i cameres
 - `en`
   - technical installations in Blanes
   - installation company in Blanes/Girona
@@ -154,7 +161,7 @@ Estado:
   - technische Installationen in Blanes
   - Installationsfirma in Blanes/Girona
   - Elektro und Smart Home
-  - Sanitär und Klimatechnik
+  - Sanitaar und Klimatechnik
   - Alarmanlagen und Kameras
 
 ## Reglas finales de anchors internos

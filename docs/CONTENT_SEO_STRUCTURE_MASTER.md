@@ -494,6 +494,12 @@ Reduced motion:
   - marketing
 - No hay scripts opcionales confirmados cargandose antes del consentimiento
 - Enlace permanente para reabrir preferencias desde el footer
+- Google Maps sigue integrado como acceso externo verificado:
+  - sin iframe vivo en HTML inicial
+  - sin carga automatica de terceros
+  - con fallback visual en contacto
+  - con enlace compacto en home
+  - con enlace simple en footer
 
 ## P. Rutas de conversion e internal linking
 
@@ -552,5 +558,16 @@ Reduced motion:
   - contacto
   - detalle de servicio
   - footer
+- Mapa:
+  - `src/components/GoogleMapBlock.astro`
+  - `variant="compact"` en home
+  - `variant="full"` en contacto
+  - `variant="footer"` en footer
+  - sin mapa vivo en servicios
+- Estado del mapa:
+  - URL externa confirmada desde `content/shared/contact.json`
+  - direccion textual confirmada: `Carrer de l'Antiga, 68, 17300 Blanes, Girona`
+  - sin `embedUrl` ni API key en frontend
+  - iframe vivo pendiente hasta disponer de una integracion segura y una categoria real de terceros si llega a activarse
 - Regla UX:
   - el CTA flotante no debe tapar banner de cookies ni formulario

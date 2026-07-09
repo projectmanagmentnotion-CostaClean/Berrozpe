@@ -1,7 +1,6 @@
 ---
 import type { Locale } from '../lib/content';
 import {
-  buildWhatsAppUrl,
   getCookieConsentContent,
   getLanguageSwitcherLinksForPage,
   getLegalPages,
@@ -9,16 +8,15 @@ import {
   getNavigation,
   getPublishedServices,
   getRouteCatalog,
-  getSharedReviews,
   getServiceRouteById,
   getSharedContact,
   getSiteSettings,
-  getReviewsContent,
-  getWhatsAppContent,
 } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
+import GoogleMapBlock from './GoogleMapBlock.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import WhatsAppCTA from './WhatsAppCTA.astro';
 
 interface Props {
   locale: Locale;
@@ -35,21 +33,17 @@ const routes = getRouteCatalog(locale);
 const cookieConsent = getCookieConsentContent(locale);
 const languageLinks = getLanguageSwitcherLinksForPage('home');
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
-const whatsAppContent = getWhatsAppContent(locale);
-const whatsAppHref = buildWhatsAppUrl(locale);
-const reviews = getSharedReviews();
-const reviewsContent = getReviewsContent(locale);
 ---
 
 <footer class="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-14 sm:py-16">
   <Container>
     <div class="grid gap-10 xl:grid-cols-[1.15fr_0.85fr]">
-      <div class="space-y-6">
+      <div class="space-y-5">
         <p class="text-[0.72rem] uppercase tracking-[0.26em] text-[var(--color-text-soft)]">{site.brandName}</p>
-        <h2 class="max-w-3xl font-[var(--font-display)] text-3xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl lg:text-5xl">
+        <h2 class="max-w-3xl font-[var(--font-display)] text-2xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--color-text)] sm:text-3xl lg:text-4xl">
           {home.contactCta.title}
         </h2>
-        <p class="max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">{home.contactCta.body}</p>
+        <p class="max-w-2xl text-base leading-7 text-[var(--color-text-muted)]">{home.contactCta.body}</p>
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="space-y-2 text-base text-[var(--color-text-muted)]">
             {contact.address.displayLines.map((line) => <p>{line}</p>)}
@@ -65,12 +59,8 @@ const reviewsContent = getReviewsContent(locale);
           <Button href={routes.contact} variant="primary">
             {navigation.items.find((item) => item.id === 'contact')?.label ?? 'Contact'}
           </Button>
-          <Button href={whatsAppHref} variant="secondary" target="_blank" rel="noopener noreferrer">
-            {whatsAppContent.shortLabel}
-          </Button>
-          <Button href={reviews.reviewRequestUrl} variant="ghost" target="_blank" rel="noopener noreferrer">
-            {reviewsContent.leaveReviewButton}
-          </Button>
+          <WhatsAppCTA locale={locale} variant="inline" labelMode="short" />
+          <GoogleMapBlock locale={locale} variant="footer" />
           <button
             type="button"
             class="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-border)] px-5 py-3 text-sm font-medium text-[var(--color-text)] transition hover:border-[var(--color-border-strong)] hover:bg-white/5"

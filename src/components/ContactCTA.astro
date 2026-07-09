@@ -1,10 +1,11 @@
 ---
 import type { HomeSection } from '../data/types';
 import type { Locale } from '../lib/content';
-import { buildWhatsAppUrl, getNavigation, getPageVisual, getSharedContact, getWhatsAppContent } from '../lib/content';
+import { getNavigation, getPageVisual, getSharedContact, getWhatsAppContent } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
 import EditorialLabel from './EditorialLabel.astro';
+import GoogleMapBlock from './GoogleMapBlock.astro';
 import VisualAsset from './VisualAsset.astro';
 import WhatsAppCTA from './WhatsAppCTA.astro';
 
@@ -18,7 +19,6 @@ const contact = getSharedContact();
 const navigation = getNavigation(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
 const whatsAppContent = getWhatsAppContent(locale);
-const whatsAppHref = buildWhatsAppUrl(locale);
 const contactVisual = getPageVisual('homeContact');
 ---
 
@@ -37,7 +37,7 @@ const contactVisual = getPageVisual('homeContact');
           <VisualAsset asset={contactVisual} eyebrow={section.eyebrow} title={section.title} body={section.body} compact={true} className="min-h-[18rem] sm:min-h-[22rem]" />
         </div>
 
-        <div class="space-y-6">
+        <div class="space-y-5">
           <div class="grid gap-4 sm:grid-cols-2">
             <div class="rounded-[1.5rem] border border-[var(--color-border)] bg-white/[0.02] p-5">
               <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{section.primaryCtaLabel}</p>
@@ -58,12 +58,10 @@ const contactVisual = getPageVisual('homeContact');
             <Button href={`tel:${contact.phones.mobile}`} variant="primary" size="lg">
               {contact.phones.mobile}
             </Button>
-            <Button href={whatsAppHref} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
-              {whatsAppContent.label}
-            </Button>
+            <WhatsAppCTA locale={locale} variant="inline" className="min-h-12 px-6 py-3.5 text-sm sm:text-base" />
           </div>
 
-          <WhatsAppCTA locale={locale} variant="large" className="border-white/60 bg-white/[0.04]" />
+          <GoogleMapBlock locale={locale} variant="compact" className="bg-white/92" />
         </div>
       </div>
     </div>

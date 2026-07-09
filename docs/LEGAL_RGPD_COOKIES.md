@@ -99,12 +99,16 @@ Ningun idioma puede cerrar la revision legal antes que los demas si la fuente de
 ## Google Maps y terceros
 
 - En esta fase no se carga iframe de Google Maps.
-- La web usa un bloque informativo con enlace externo a Google Maps.
+- La web usa:
+  - bloque completo con fallback visual y enlace externo en contacto
+  - bloque compacto con enlace externo en home
+  - enlace simple en footer
 - Esto evita carga automatica de terceros y mantiene el consentimiento actual.
+- Si en una fase futura se activa un mapa vivo, debera revisarse si procede una categoria opcional especifica para terceros/mapas.
 
 ## Conversion y datos confirmados
 
 - Email confirmado para formularios: `david@instalberrozpe.com`
 - WhatsApp confirmado: `676 04 33 89`
-- Las reseñas visibles usan solo la valoracion agregada `4,9` y `67 reseñas`
+- Las resenas visibles usan solo la valoracion agregada `4,9` y `67 resenas`
 - No hay testimonios escritos cargados ni `Review` schema individual

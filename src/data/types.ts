@@ -321,10 +321,17 @@ export interface WhatsAppContent {
 export interface MapContent {
   locale: string;
   title: string;
+  subtitle: string;
   description: string;
   addressLabel: string;
+  address: string;
   openMapLabel: string;
+  loadMapLabel: string;
+  mapConsentTitle: string;
+  mapConsentText: string;
   privacyNotice: string;
+  fallbackText: string;
+  footerLinkLabel: string;
 }
 
 export interface SharedReviews {
