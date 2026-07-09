@@ -18,8 +18,8 @@
     {
       "heading": "Einwilligung und Verwaltung",
       "body": [
-        "Wenn nicht notwendige Cookies aktiviert werden, muss ein vorheriges und granuläres Einwilligungssystem vorhanden sein.",
-        "Die vorherige Prüfung erkannte ein Cookie-Banner und eine geerbte Richtlinie, bestätigte jedoch kein aktives Analytics in der geprüften HTML-Stichprobe."
+        "Nicht notwendige Kategorien werden über ein vorheriges, granuläres Einwilligungssystem verwaltet, das von jeder Seite aus geändert werden kann.",
+        "Die vorherige Prüfung erkannte ein Cookie-Banner und eine geerbte Richtlinie, bestätigte jedoch kein aktives Analytics in der geprüften HTML-Stichprobe. In dieser Basis bleiben optionale Kategorien vorbereitet, aber bis zu einer neuen Validierung inaktiv."
       ]
     }
   ],

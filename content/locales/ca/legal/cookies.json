@@ -18,8 +18,8 @@
     {
       "heading": "Consentiment i gestió",
       "body": [
-        "Si s'activen cookies no necessàries, haurà d'existir un sistema de consentiment previ i granular.",
-        "L'auditoria anterior va detectar banner de cookies i una política heretada, però no va confirmar Analytics actiu a la mostra HTML revisada."
+        "Les categories no necessàries es gestionen mitjançant un sistema de consentiment previ, granular i modificable des de qualsevol pàgina.",
+        "L'auditoria anterior va detectar banner de cookies i una política heretada, però no va confirmar Analytics actiu a la mostra HTML revisada. En aquesta base, les categories opcionals queden preparades però inactives fins a una nova validació."
       ]
     }
   ],

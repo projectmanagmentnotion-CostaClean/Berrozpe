@@ -18,8 +18,8 @@
     {
       "heading": "Consentimiento y gestión",
       "body": [
-        "Si se activan cookies no necesarias, deberá existir un sistema de consentimiento previo y granular.",
-        "La auditoría anterior detectó banner de cookies y una política heredada, pero no confirmó Analytics activo en la muestra HTML revisada."
+        "Las categorías no necesarias se gestionan mediante un sistema de consentimiento previo, granular y modificable desde cualquier página.",
+        "La auditoría anterior detectó banner de cookies y una política heredada, pero no confirmó Analytics activo en la muestra HTML revisada. En esta base, las categorías opcionales quedan preparadas pero inactivas hasta nueva validación."
       ]
     }
   ],

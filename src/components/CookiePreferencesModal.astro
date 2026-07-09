@@ -1,0 +1,84 @@
+---
+import type { CookieConsentContent } from '../data/types';
+
+interface Props {
+  content: CookieConsentContent;
+}
+
+const { content } = Astro.props;
+---
+
+<div
+  class="fixed inset-0 z-50 hidden items-end justify-center bg-[rgba(30,41,59,0.42)] p-4 sm:items-center"
+  data-cookie-modal
+  hidden
+>
+  <div class="w-full max-w-3xl rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 shadow-[0_30px_100px_rgba(2,6,23,0.28)] sm:p-8">
+    <div class="flex items-start justify-between gap-4">
+      <div class="space-y-3">
+        <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{content.banner.title}</p>
+        <h2 class="font-[var(--font-display)] text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl">
+          {content.modal.title}
+        </h2>
+        <p class="max-w-2xl text-base leading-8 text-[var(--color-text-muted)]">{content.modal.body}</p>
+      </div>
+      <button
+        type="button"
+        class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-text)] transition hover:border-[var(--color-border-strong)]"
+        data-cookie-close
+        aria-label={content.modal.closeLabel}
+      >
+        ×
+      </button>
+    </div>
+
+    <form class="mt-8 space-y-4" data-cookie-form>
+      {content.categories.map((category) => (
+        <fieldset class="rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+          <label class="flex items-start gap-4">
+            <input
+              type="checkbox"
+              name={`cookie-${category.key}`}
+              value="1"
+              class="mt-1 h-5 w-5 rounded border-[var(--color-border-strong)] text-[var(--color-accent)] focus:ring-[var(--color-secondary)]"
+              data-cookie-category={category.key}
+              checked={category.required || category.activeByDefault}
+              disabled={category.required}
+            />
+            <span class="space-y-2">
+                <span class="block text-lg font-medium text-[var(--color-text)]">
+                {category.title}
+                {category.required && <span class="ml-2 text-sm font-normal text-[var(--color-text-soft)]">({content.labels.alwaysActive})</span>}
+                {category.pending && !category.required && <span class="ml-2 text-sm font-normal text-[var(--color-text-soft)]">({content.labels.preparedInactive})</span>}
+              </span>
+              <span class="block text-sm leading-7 text-[var(--color-text-muted)]">{category.description}</span>
+            </span>
+          </label>
+        </fieldset>
+      ))}
+
+      <div class="flex flex-wrap gap-3 pt-2">
+        <button
+          type="button"
+          class="inline-flex min-h-12 items-center rounded-full border border-transparent bg-[var(--color-accent)] px-6 py-3.5 text-sm font-medium text-[var(--color-ink)] transition hover:bg-[var(--color-accent-soft)]"
+          data-cookie-accept-all
+        >
+          {content.modal.acceptAllLabel}
+        </button>
+        <button
+          type="button"
+          class="inline-flex min-h-12 items-center rounded-full border border-[var(--color-border)] px-6 py-3.5 text-sm font-medium text-[var(--color-text)] transition hover:border-[var(--color-border-strong)]"
+          data-cookie-reject-all
+        >
+          {content.modal.rejectAllLabel}
+        </button>
+        <button
+          type="submit"
+          class="inline-flex min-h-12 items-center rounded-full border border-[var(--color-secondary)] px-6 py-3.5 text-sm font-medium text-[var(--color-secondary)] transition hover:bg-[rgba(4,92,180,0.08)]"
+        >
+          {content.modal.saveLabel}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

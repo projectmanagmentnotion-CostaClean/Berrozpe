@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../lib/content';
 import {
+  getCookieConsentContent,
   getLanguageSwitcherLinksForPage,
   getLegalPages,
   getNavigation,
@@ -25,6 +26,7 @@ const services = getPublishedServices(locale);
 const legalPages = getLegalPages(locale);
 const navigation = getNavigation(locale);
 const routes = getRouteCatalog(locale);
+const cookieConsent = getCookieConsentContent(locale);
 const languageLinks = getLanguageSwitcherLinksForPage('home');
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
 const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp')?.label ?? 'WhatsApp';
@@ -56,6 +58,13 @@ const whatsAppLabel = contact.socialLinks.find((entry) => entry.id === 'whatsapp
           <Button href={contact.whatsAppUrl} variant="secondary" target="_blank" rel="noreferrer">
             {whatsAppLabel}
           </Button>
+          <button
+            type="button"
+            class="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-border)] px-5 py-3 text-sm font-medium text-[var(--color-text)] transition hover:border-[var(--color-border-strong)] hover:bg-white/5"
+            data-open-cookie-preferences
+          >
+            {cookieConsent.footerLinkLabel}
+          </button>
         </div>
       </div>
 

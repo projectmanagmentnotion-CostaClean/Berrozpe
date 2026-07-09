@@ -1,0 +1,54 @@
+{
+  "locale": "ca",
+  "storageKey": "berrozpe-cookie-consent",
+  "version": "2026-07",
+  "banner": {
+    "title": "Preferències de cookies",
+    "body": "Fem servir cookies necessàries per al funcionament del lloc. Les categories opcionals només s'activaran si dones el teu consentiment.",
+    "acceptLabel": "Acceptar-ho tot",
+    "rejectLabel": "Rebutjar opcionals",
+    "configureLabel": "Configurar",
+    "policyLabel": "Veure política de cookies"
+  },
+  "modal": {
+    "title": "Configurar cookies",
+    "body": "Pots acceptar o rebutjar les categories opcionals. Les cookies necessàries continuen actives per garantir funcions bàsiques del lloc.",
+    "saveLabel": "Desar preferències",
+    "acceptAllLabel": "Acceptar-ho tot",
+    "rejectAllLabel": "Rebutjar opcionals",
+    "closeLabel": "Tancar"
+  },
+  "labels": {
+    "alwaysActive": "Sempre activa",
+    "preparedInactive": "Preparada, no activa per defecte"
+  },
+  "categories": [
+    {
+      "key": "necessary",
+      "title": "Necessàries",
+      "description": "Cookies tècniques per recordar la teva preferència de consentiment i mantenir funcions bàsiques del lloc.",
+      "required": true,
+      "activeByDefault": true
+    },
+    {
+      "key": "preferences",
+      "title": "Preferències",
+      "description": "Categoria preparada per a ajustos d'experiència que no siguin imprescindibles. Actualment no hi ha eines confirmades en aquesta categoria.",
+      "pending": true
+    },
+    {
+      "key": "analytics",
+      "title": "Analítiques",
+      "description": "Categoria preparada per a mesura i estadístiques. No s'activarà cap eina analítica fins que existeixi una integració real confirmada.",
+      "pending": true
+    },
+    {
+      "key": "marketing",
+      "title": "Màrqueting",
+      "description": "Categoria preparada per a publicitat o píxels de tercers. Actualment no hi ha scripts de màrqueting confirmats.",
+      "pending": true
+    }
+  ],
+  "footerLinkLabel": "Preferències de cookies",
+  "savedMessage": "Les teves preferències de cookies s'han desat."
+}

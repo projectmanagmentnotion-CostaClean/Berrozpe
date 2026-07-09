@@ -1,0 +1,54 @@
+{
+  "locale": "en",
+  "storageKey": "berrozpe-cookie-consent",
+  "version": "2026-07",
+  "banner": {
+    "title": "Cookie preferences",
+    "body": "We use necessary cookies for the site to work. Optional categories will only be enabled if you give consent.",
+    "acceptLabel": "Accept all",
+    "rejectLabel": "Reject optional",
+    "configureLabel": "Configure",
+    "policyLabel": "View cookie policy"
+  },
+  "modal": {
+    "title": "Configure cookies",
+    "body": "You can accept or reject optional categories. Necessary cookies remain active to guarantee the site's basic functions.",
+    "saveLabel": "Save preferences",
+    "acceptAllLabel": "Accept all",
+    "rejectAllLabel": "Reject optional",
+    "closeLabel": "Close"
+  },
+  "labels": {
+    "alwaysActive": "Always active",
+    "preparedInactive": "Prepared, inactive by default"
+  },
+  "categories": [
+    {
+      "key": "necessary",
+      "title": "Necessary",
+      "description": "Technical cookies used to remember your consent choice and keep the site's basic functions available.",
+      "required": true,
+      "activeByDefault": true
+    },
+    {
+      "key": "preferences",
+      "title": "Preferences",
+      "description": "Category prepared for non-essential experience settings. There are currently no confirmed tools in this category.",
+      "pending": true
+    },
+    {
+      "key": "analytics",
+      "title": "Analytics",
+      "description": "Category prepared for measurement and statistics. No analytics tool will be enabled until a real integration is confirmed.",
+      "pending": true
+    },
+    {
+      "key": "marketing",
+      "title": "Marketing",
+      "description": "Category prepared for advertising or third-party pixels. There are currently no confirmed marketing scripts.",
+      "pending": true
+    }
+  ],
+  "footerLinkLabel": "Cookie preferences",
+  "savedMessage": "Your cookie preferences have been saved."
+}

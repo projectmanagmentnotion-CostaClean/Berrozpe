@@ -18,8 +18,8 @@
     {
       "heading": "Consent and management",
       "body": [
-        "If non-essential cookies are enabled, there must be a prior and granular consent system.",
-        "The previous audit detected a cookie banner and an inherited policy, but it did not confirm active Analytics in the reviewed HTML sample."
+        "Non-essential categories are managed through a prior, granular consent system that can be changed from any page.",
+        "The previous audit detected a cookie banner and an inherited policy, but it did not confirm active Analytics in the reviewed HTML sample. In this codebase, optional categories remain prepared but inactive until further validation."
       ]
     }
   ],
