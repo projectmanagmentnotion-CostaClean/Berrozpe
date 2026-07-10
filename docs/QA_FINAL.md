@@ -10,6 +10,7 @@
 - Base auditada: `73bbe13`
 - Estado validado: working tree posterior con ajustes finales de copy, conversion local, WhatsApp y Google Maps
 - Ultimo commit validado para pre-staging SiteGround: `3bb759a`
+- HEAD actual al cerrar el QA real de staging: `0c48a55`
 
 ## Build
 
@@ -19,6 +20,8 @@
   - no existe script de `lint` en `package.json`
 - Paquete de staging local:
   - `dist/qa-artifacts/staging-dist-3bb759a.zip`
+- Staging real validado:
+  - `https://staging.instalberrozpe.com`
 
 ## Paginas generadas
 
@@ -46,7 +49,7 @@
 
 ## SEO
 
-- Canonical correcto por pagina localizada
+- Canonical correcto por pagina localizada en la version final publicada
 - `hreflang` completo:
   - `es`
   - `ca`
@@ -57,6 +60,9 @@
   - `/og/default.png`
   - `/og/services.png`
   - `/og/contact.png`
+- Nota staging:
+  - el entorno `staging.instalberrozpe.com` mantiene canonical y hreflang apuntando a `https://instalberrozpe.com`
+  - el staging queda bloqueado por `robots.txt` con `Disallow: /`, por eso Lighthouse SEO baja en ese entorno
 
 ## Cookies
 
@@ -64,6 +70,10 @@
 - Modal de preferencias disponible
 - Sin scripts opcionales confirmados activos antes del consentimiento
 - Google Maps sin iframe vivo ni carga automatica de terceros
+- En staging real:
+  - reapertura desde footer validada
+  - rechazo y persistencia tras recarga validados
+  - categorias opcionales no premarcadas
 
 ## Formulario
 
@@ -72,6 +82,11 @@
 - `form-handler.php` generado en `dist/`
 - Validacion backend y frontend intactas tras el sprint
 - Destinatario confirmado: `david@instalberrozpe.com`
+- En staging real:
+  - PHP activo
+  - POST valido devuelve exito
+  - validaciones negativas devuelven `422`
+  - falta comprobacion manual de recepcion real en inbox o spam
 
 ## GSAP reversible
 
@@ -123,13 +138,39 @@
   - comprobacion responsive ejecutada en navegador sobre las rutas criticas pedidas
   - sin overflow horizontal detectado
   - `hreflang`, canonical, WhatsApp, Google Maps y preferencias de cookies presentes en las comprobaciones realizadas
+  - staging real revisado en `es`, `ca`, `en` y `de`
 
 ## Pendientes
 
 - Sustituir placeholders temporales cuando existan assets reales aprobados
 - Validar legal definitivo antes de produccion
 - Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
-- Ejecutar Lighthouse real en staging
-- Probar `mail()` en el hosting de SiteGround
-- Provisionar staging real de SiteGround con SSL y proteccion temporal
-- Validar `.htaccess` y formulario en Apache/PHP real
+- Confirmar recepcion real del formulario en bandeja o spam
+- Revisar si `areaServed` debe omitir `areas cercanas`
+
+## SiteGround staging real
+
+- URL:
+  - `https://staging.instalberrozpe.com`
+- Estado:
+  - creado como subdominio separado de produccion
+  - ZIP `staging-dist-3bb759a.zip` subido y extraido
+  - raiz publica corregida sin carpeta `dist/`
+  - SSL operativo
+  - `robots.txt` temporal con `Disallow: /`
+- Resultado QA:
+  - `/` redirige a `/es/`
+  - `.htaccess` no rompe assets, sitemap, robots ni PHP
+  - sitemap y robots accesibles
+  - formulario responde correctamente
+  - WhatsApp, cookies, Google Maps y resenas visibles
+  - Lighthouse real:
+    - `/es/`: `97 / 96 / 100 / 66`
+    - `/es/contacto/`: `99 / 96 / 100 / 69`
+    - `/es/servicios/electricidad-y-domotica/`: `97 / 96 / 100 / 69`
+  - SEO de Lighthouse penalizado por bloqueo temporal de indexacion del staging
+
+## Cierre
+
+- Estado general:
+  - staging real validado, no apto para produccion todavia

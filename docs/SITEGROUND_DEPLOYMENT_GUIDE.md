@@ -30,6 +30,9 @@ Estado previo ya disponible en local:
   - `dist/qa-artifacts/staging-dist-3bb759a.zip`
 - Commit base validado:
   - `3bb759a`
+- Resultado de staging real ya ejecutado:
+  - `https://staging.instalberrozpe.com`
+  - `robots.txt` temporal con `Disallow: /`
 
 ## Handler PHP del formulario
 
@@ -56,6 +59,15 @@ Pruebas obligatorias antes de produccion:
   - Astro preview no ejecuta PHP
   - las pruebas reales del handler deben hacerse en SiteGround o en un Apache/PHP equivalente
 
+Resultado real actual en staging SiteGround:
+
+- `HEAD /form-handler.php`: `405 Method Not Allowed`
+- cabecera `X-Httpd-Modphp: 1` presente
+- POST valido: `200 OK`
+- validaciones negativas: `422`
+- `mail()` devuelve exito desde el handler
+- entrega final en inbox o spam: pendiente de comprobacion manual
+
 ## Verificaciones recomendadas
 
 - Carga del home y de las 4 paginas de contacto.
@@ -67,8 +79,8 @@ Pruebas obligatorias antes de produccion:
 - El formulario muestra exito y error sin introducir cookies opcionales nuevas.
 - WhatsApp abre con mensaje prellenado correcto en cada idioma.
 - Google Maps abre la direccion confirmada.
-- El bloque de reseñas muestra `4,9` y `67 reseñas`.
-- El boton de reseña abre `https://g.page/r/CagAPRsZ3RSuEBM/review`.
+- El bloque de resenas muestra `4,9` y `67 resenas`.
+- El boton de resena abre `https://g.page/r/CagAPRsZ3RSuEBM/review`.
 - Los assets OG y visuales existen en `dist/`.
 - Los enlaces internos llevan al idioma correcto.
 - ScrollTrigger reversible no deja bloques invisibles al subir y bajar.
@@ -77,6 +89,12 @@ Pruebas obligatorias antes de produccion:
   - `/es/`: `98 / 96 / 100 / 100`
   - `/es/contacto/`: `98 / 96 / 100 / 100`
   - `/es/servicios/electricidad-y-domotica/`: `98 / 96 / 100 / 100`
+- Lighthouse real en staging:
+  - `/es/`: `97 / 96 / 100 / 66`
+  - `/es/contacto/`: `99 / 96 / 100 / 69`
+  - `/es/servicios/electricidad-y-domotica/`: `97 / 96 / 100 / 69`
+- Nota:
+  - la bajada de SEO en staging corresponde al `Disallow: /` temporal del staging, no a un fallo de la version final pensada para produccion
 - Incidencia conocida:
   - el runner de Lighthouse en Windows puede cerrar con error `EPERM` al borrar su temporal aunque el JSON se haya generado correctamente
 
@@ -97,3 +115,4 @@ Pruebas obligatorias antes de produccion:
 - Probar el banner y modal de cookies en al menos `es` y `en`.
 - Probar ScrollTrigger en desktop y mobile.
 - Usar [STAGING_SITEGROUND_CHECKLIST.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/STAGING_SITEGROUND_CHECKLIST.md) antes de subir a produccion.
+- Mantener el staging no indexable hasta terminar QA y aprobar la publicacion.

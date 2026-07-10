@@ -4,27 +4,31 @@
 
 - Ultima validacion local equivalente: `2026-07-10`
 - Commit base revisado: `3bb759a`
-- SiteGround staging real: pendiente de provision
+- SiteGround staging real: `https://staging.instalberrozpe.com`
 - Paquete local listo:
   - `dist/qa-artifacts/staging-dist-3bb759a.zip`
+- Estado de indexacion del staging:
+  - `robots.txt` temporal con `Disallow: /`
 
 ## Build
 
 - Ejecutar `npm run build`
 - Confirmar 45 paginas generadas
 - Confirmar presencia de `dist/form-handler.php`, `dist/.htaccess`, `dist/robots.txt`, `dist/sitemap-index.xml` y `dist/sitemap-0.xml`
-- Confirmado en la validacion local del `2026-07-10`
+- Confirmado en la build usada para el paquete `3bb759a`
 
 ## Contacto y conversion
 
-- Probar envio real del formulario hacia `david@instalberrozpe.com`
-- Revisar spam
-- Confirmar si SiteGround acepta `mail()`
-- Valorar SMTP si `mail()` falla
-- Verificar fallback sin JS
+- Envio visual real ejecutado en staging:
+  - respuesta de exito visible en navegador
+- Handler PHP real validado:
+  - `405` en `HEAD`
+  - `200` en `POST` valido
+  - `422` en validaciones negativas
 - Estado actual:
-  - pendiente de SiteGround real
-  - `php` no disponible en local y Astro preview no ejecuta el handler
+  - `mail()` devuelve exito desde el handler
+  - recepcion final en inbox de `david@instalberrozpe.com` pendiente de comprobacion manual
+  - si no llega, no publicar produccion y preparar SMTP
 
 ## WhatsApp
 
@@ -32,6 +36,10 @@
 - Verificar boton flotante visible
 - Verificar que no tapa el banner de cookies
 - Verificar que no tapa el formulario
+- Estado actual:
+  - validado en `es`, `ca`, `en` y `de`
+  - numero correcto: `34676043389`
+  - sin colision grave detectada en la revision responsive realizada
 
 ## Mapa y resenas
 
@@ -43,6 +51,10 @@
 - Verificar resenas visibles `4,9` y `67 resenas`
 - Verificar boton `Dejar resena en Google`
 - Confirmar que no aparecen resenas escritas inventadas
+- Estado actual:
+  - validado en staging
+  - sin iframe
+  - resenas agregadas y link de Google Review correctos
 
 ## SEO
 
@@ -50,9 +62,12 @@
 - Verificar `hreflang`
 - Verificar sitemap y `robots.txt`
 - Verificar ausencia de `Review` schema individual
-- Estado local actual:
-  - `canonical` y `hreflang` correctos en preview
-  - sitemap y robots correctos sin URLs localhost
+- Estado actual en staging:
+  - `canonical` y `hreflang` presentes y apuntando a dominio de produccion
+  - sitemap accesible y sin localhost
+  - `robots.txt` del staging bloqueando indexacion temporal
+  - schema `LocalBusiness` con `aggregateRating` correcto
+  - revisar `areaServed` con `areas cercanas`
 
 ## Cookies
 
@@ -60,6 +75,8 @@
 - Rechazo tan facil como aceptacion
 - Modal configurable
 - Enlace permanente para reabrir preferencias
-- Estado local actual:
-  - banner y controles presentes
-  - validacion final de persistencia en staging real pendiente
+- Estado actual:
+  - banner, modal y reapertura validados en staging real
+  - opcionales no premarcadas
+  - persistencia confirmada tras recarga
+  - sin iframe de terceros

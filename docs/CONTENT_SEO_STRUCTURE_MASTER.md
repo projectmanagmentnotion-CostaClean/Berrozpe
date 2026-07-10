@@ -170,11 +170,12 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
   - home, contacto y bloques de conversion recortados para eliminar texto redundante
   - CTA final de servicio separada del bloque de pendientes internos
   - contacto publico limpiado de resumen legal visible y mensajes internos
-  - footer, reseñas, WhatsApp, mapa e internal linking compactados para priorizar conversion
+  - footer, resenas, WhatsApp, mapa e internal linking compactados para priorizar conversion
   - contacto publico limpiado de mensajes internos de validacion
 - Pendientes editoriales:
   - revision legal definitiva de legales
   - confirmacion final sobre si `872 986 161` debe mostrarse como telefono, fax o ambos
+  - revisar si `areaServed` debe omitir `areas cercanas`
 
 ### Keywords principales por idioma
 
@@ -187,8 +188,8 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
   - camaras CCTV/IP Blanes
   - empresa de instalaciones Blanes
 - `ca`
-  - instal·lacions a Blanes
-  - instal·lacions a Girona
+  - installacions a Blanes
+  - installacions a Girona
   - electricitat i domotica
   - lampisteria i climatitzacio
   - alarmes i cameras
@@ -222,7 +223,7 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
 
 ### Canonicals
 
-- Cada pagina apunta a su propia URL localizada
+- Cada pagina apunta a su propia URL localizada de produccion
 - Implementacion comun en `src/components/SeoHead.astro`
 
 ### Hreflang
@@ -252,9 +253,11 @@ Paginas estaticas:
 - `aggregateRating` visible y permitido solo en home y contacto
 - Datos de valoracion confirmados:
   - `4.9`
-  - `67 reseñas`
+  - `67 resenas`
 - No debe inventarse schema legal, certificaciones o areas de cobertura no confirmadas
-- No debe emitirse `Review` schema individual mientras no existan reseñas reales cargadas
+- No debe emitirse `Review` schema individual mientras no existan resenas reales cargadas
+- Observacion real en staging:
+  - `areaServed` actual incluye `Blanes` y `areas cercanas`
 
 ### Open Graph
 
@@ -349,7 +352,7 @@ Pendiente antes de produccion:
 
 - Validacion legal final del texto de privacidad
 - Confirmar si el hosting requiere una cabecera `From` distinta del email destinatario confirmado
-- Probar `mail()` en el entorno real de SiteGround
+- Confirmar recepcion real del correo en inbox o spam desde SiteGround
 
 ## K. Assets
 
@@ -478,7 +481,7 @@ Reduced motion:
 - Revisar internal linking multidioma
 - Revisar copy final en `es`, `ca`, `en` y `de`
 - Revisar formulario/contacto
-- Revisar WhatsApp, mapa y bloque de reseñas
+- Revisar WhatsApp, mapa y bloque de resenas
 - Revisar legales con validacion externa
 - Confirmar SSL en SiteGround
 - Ejecutar backup previo en SiteGround
@@ -502,12 +505,38 @@ Reduced motion:
   - `canonical` y `hreflang` correctos
   - sin overflow horizontal en los breakpoints criticos revisados
   - sitemap y robots correctos
-  - WhatsApp, mapa, cookies y reseñas visibles
-- Bloqueos reales:
-  - staging SiteGround aun no provisionado
-  - `mail()` no validado
-  - `.htaccess` no validado en Apache real
-  - redirects legacy pendientes de prueba real
+  - WhatsApp, mapa, cookies y resenas visibles
+
+## N.2 Estado staging SiteGround real
+
+- Fecha: `2026-07-10`
+- URL:
+  - `https://staging.instalberrozpe.com`
+- Separacion respecto a produccion:
+  - staging creado como subdominio independiente
+  - sin tocar `public_html` principal de `instalberrozpe.com`
+- Paquete desplegado:
+  - `dist/qa-artifacts/staging-dist-3bb759a.zip`
+- Estado de indexacion temporal:
+  - `robots.txt` del staging ajustado a `User-agent: *` + `Disallow: /`
+- Validaciones reales cerradas:
+  - `/` redirige a `/es/`
+  - rutas `es`, `ca`, `en` y `de` cargan
+  - `.htaccess` sirve assets, sitemap, robots y PHP sin error `500`
+  - redirects legacy validados:
+    - `/alarmas-y-camaras-2/` -> `/es/servicios/alarmas-y-camaras/`
+    - `/contact/` -> `/en/contact/`
+    - `/inici/` -> `/ca/`
+  - `form-handler.php` ejecuta PHP real
+  - `mail()` devuelve exito a nivel de handler
+  - cookies, Google Maps, WhatsApp y resenas visibles en staging
+  - no hay iframe de terceros cargado por defecto
+- Matiz SEO de staging:
+  - canonical y `hreflang` del HTML siguen apuntando a `https://instalberrozpe.com`
+  - Lighthouse SEO baja en staging porque la pagina esta bloqueada temporalmente para indexacion
+- Pendientes:
+  - confirmar recepcion real del correo en inbox o spam
+  - revisar si `areaServed` debe mantener `areas cercanas`
 
 ## O. Estado de cookies
 
@@ -528,6 +557,9 @@ Reduced motion:
   - con fallback visual en contacto
   - con enlace compacto en home
   - con enlace simple en footer
+- Validacion real en staging:
+  - rechazo persistente tras recarga
+  - opcionales no premarcadas
 
 ## P. Rutas de conversion e internal linking
 
@@ -535,7 +567,7 @@ Reduced motion:
   - descubre los tres servicios
   - refuerza confianza hacia sobre nosotros
   - deriva a contacto
-  - muestra reseñas agregadas visibles
+  - muestra resenas agregadas visibles
   - incorpora CTA grande de WhatsApp
 - Servicios indice:
   - distribuye al detalle de cada servicio
@@ -558,7 +590,7 @@ Reduced motion:
   - llamada directa por telefono
   - CTA grande de WhatsApp
   - bloque de Google Maps
-  - bloque de reseñas y solicitud de reseña
+  - bloque de resenas y solicitud de resena
 
 ## Q. Revision editorial final
 
@@ -570,7 +602,7 @@ Reduced motion:
   - `cta.title` y `cta.body` anadidos a cada servicio para separar conversion y notas internas
   - bloque de pendientes internos ocultado de la interfaz publica de contacto
 
-## R. WhatsApp, mapa y reseñas
+## R. WhatsApp, mapa y resenas
 
 - Fuente de verdad compartida:
   - `content/shared/contact.json`
@@ -599,14 +631,14 @@ Reduced motion:
   - iframe vivo pendiente hasta disponer de una integracion segura y una categoria real de terceros si llega a activarse
 - Regla UX:
   - el CTA flotante no debe tapar banner de cookies ni formulario
-  - el bloque de mapa en contacto debe aparecer antes que reseñas
+  - el bloque de mapa en contacto debe aparecer antes que resenas
 
 ## S. Polish final pre-staging
 
 - Fecha de cierre: `2026-07-09`
 - Ajustes aplicados:
   - eliminada la duplicacion del bloque editorial principal en home y sobre nosotros
-  - acortadas las intros de home, contacto, WhatsApp, mapa, reseñas e internal linking en `es`, `ca`, `en` y `de`
+  - acortadas las intros de home, contacto, WhatsApp, mapa, resenas e internal linking en `es`, `ca`, `en` y `de`
   - reducida densidad visual de cards de servicios, footer, CTA de contacto y bloque de mapa
   - el email principal confirmado pasa a ocupar la segunda via de contacto destacada
   - el detalle de servicio elimina resumen repetido bajo hero
