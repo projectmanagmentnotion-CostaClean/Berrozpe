@@ -27,12 +27,18 @@ Dejar la web estatica preparada para descubrimiento por Google, Bing y crawlers 
 - `Allow: /`
 - referencia a sitemap de produccion
 - Publicado y respondiendo `200 OK` en produccion
+- Sin `Disallow: /`
 
 ## Produccion real
 
 - `https://instalberrozpe.com/` redirige a `https://instalberrozpe.com/es/`
 - la raiz publica actual ya sirve la build estatica nueva
 - `canonical`, `hreflang` y sitemap quedan activos sobre el dominio final
+- sitemap sin URLs `localhost`
+- sitemap sin URLs de staging
+- WordPress antiguo retirado de `public_html`
+- backup previo realizado y mantenido
+- formulario de produccion confirmado con recepcion real en `david@instalberrozpe.com`
 
 ## Internal Linking
 
@@ -58,6 +64,7 @@ Dejar la web estatica preparada para descubrimiento por Google, Bing y crawlers 
 - Enviar sitemap a Google Search Console
 - Enviar sitemap a Bing Webmaster Tools
 - revisar cobertura e indexacion tras publicacion
+- monitorizar indexacion durante los proximos dias
 
 ## Nota sobre motores IA
 

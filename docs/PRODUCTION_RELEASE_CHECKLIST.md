@@ -64,11 +64,25 @@
     - `robots.txt`
     - `.htaccess`
     - `form-handler.php`
+  - formulario validado con recepcion real:
+    - fecha `2026-07-10`
+    - destinatario `david@instalberrozpe.com`
+    - asunto `[Instal Berrozpe][ES] Nuevo formulario de contacto`
+    - `mail()` operativo en produccion
+  - QA responsive final completada en dominio real:
+    - breakpoints `390x844`, `430x932`, `768x1024`, `1366x768`, `1440x900`
+    - sin overflow horizontal en las rutas revisadas
+  - SEO final comprobado:
+    - `robots.txt` permite indexacion con `Allow: /`
+    - sin `Disallow: /`
+    - sin URLs `localhost`
+    - sin URLs de staging en sitemap
 
 ## Post publicacion
 
-- Repetir o confirmar visualmente la llegada del correo en `david@instalberrozpe.com`
 - Alta o revision en Search Console
 - Alta o revision en Bing Webmaster Tools
 - Revisar indexacion inicial y 404
-- Verificar responsive final en una pasada manual completa si se quiere cerrar QA visual exhaustivo de produccion
+- Monitorizar cobertura e indexacion durante los proximos dias
+- Opcional:
+  - valorar SMTP autenticado solo si se busca mejorar entregabilidad futura

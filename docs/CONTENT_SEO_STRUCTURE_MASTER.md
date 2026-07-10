@@ -169,7 +169,7 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
   - footer, resenas, WhatsApp, mapa e internal linking compactados para priorizar conversion
   - contacto publico limpiado de mensajes internos de validacion
 - Pendientes editoriales:
-  - repetir una prueba de formulario tras publicar en produccion
+  - sin bloqueos editoriales de publicacion
 
 ### Keywords principales por idioma
 
@@ -358,7 +358,7 @@ Controles implementados:
 
 Pendiente antes de produccion:
 
-- Repetir o confirmar visualmente la llegada del correo tras la publicacion final en `instalberrozpe.com`
+- resuelto en produccion el `2026-07-10` con recepcion real en `david@instalberrozpe.com`
 
 ## K. Assets
 
@@ -542,7 +542,7 @@ Reduced motion:
   - canonical y `hreflang` del HTML siguen apuntando a `https://instalberrozpe.com`
   - Lighthouse SEO baja en staging porque la pagina esta bloqueada temporalmente para indexacion
 - Pendientes:
-  - repetir una prueba de formulario tras publicar la version final
+  - pendiente historico resuelto tras la publicacion final del `2026-07-10`
 
 ## N.3 Estado produccion SiteGround real
 
@@ -573,8 +573,21 @@ Reduced motion:
   - sitemap localizado operativo con `44` URLs indexables
 - Estado del formulario:
   - destinatario configurado: `david@instalberrozpe.com`
-  - handler validado a nivel de servidor y `mail()` sin error visible
-  - pendiente solo la confirmacion visual externa de llegada a bandeja en produccion si se quiere cierre end-to-end completo
+  - handler validado a nivel de servidor
+  - recepcion real confirmada en produccion el `2026-07-10`
+  - `mail()` confirmado como funcional en produccion
+  - bloqueo del formulario resuelto
+- QA responsive final:
+  - produccion revisada en `10` rutas clave y `5` breakpoints
+  - sin overflow horizontal detectado en `50` comprobaciones
+  - home alemana validada sin rotura de layout
+- SEO tecnico final:
+  - `robots.txt` publicado con `Allow: /`
+  - sin `Disallow: /`
+  - `sitemap-index.xml` y `sitemap-0.xml` responden `200 OK`
+  - sitemap sin localhost ni staging
+  - WordPress legacy retirado de `public_html`
+  - backup previo mantenido
 
 ## O. Estado de cookies
 

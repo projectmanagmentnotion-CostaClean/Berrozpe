@@ -107,12 +107,20 @@
 
 - Destinatario configurado:
   - `david@instalberrozpe.com`
-- En esta sesion:
-  - no se ha podido verificar de forma independiente la bandeja de entrada de produccion
-  - por tanto queda confirmada la respuesta correcta del handler, pero no la recepcion final en inbox desde herramientas propias de esta sesion
+- Confirmacion visual externa recibida:
+  - fecha: `2026-07-10`
+  - asunto: `[Instal Berrozpe][ES] Nuevo formulario de contacto`
+  - remitente visible: `Instal Berrozpe a traves de gmadm1019.siteground.biz`
+  - idioma: `es`
+  - servicio: `Electricidad y domotica`
+  - nombre: `Prueba produccion release`
+  - email: `comercial@instalberrozpe.com`
+  - telefono: `676000000`
+  - mensaje: `Prueba final produccion SiteGround QA-2026-07-10T1518Z`
 - Estado operativo:
-  - no hay bloqueo tecnico visible en servidor
-  - falta solo la confirmacion externa de bandeja para cerrar la trazabilidad end-to-end en produccion
+  - el correo de produccion fue recibido correctamente en `david@instalberrozpe.com`
+  - `mail()` queda confirmado como funcional en produccion
+  - el bloqueo del formulario queda resuelto
 
 ## Validacion funcional observada
 
@@ -125,7 +133,32 @@
 ## Alcance de la QA visual de produccion
 
 - Se verifico que la version de produccion ya sirve el HTML final correcto y las rutas principales responden.
-- No se ha completado en esta sesion una matriz manual exhaustiva de todos los breakpoints pedidos sobre produccion.
+- Revision responsive final completada en dominio real con:
+  - paginas:
+    - `/es/`
+    - `/es/servicios/`
+    - `/es/servicios/electricidad-y-domotica/`
+    - `/es/servicios/lampisteria-y-climatizacion/`
+    - `/es/servicios/alarmas-y-camaras/`
+    - `/es/sobre-nosotros/`
+    - `/es/contacto/`
+    - `/ca/`
+    - `/en/`
+    - `/de/`
+  - breakpoints:
+    - `390x844`
+    - `430x932`
+    - `768x1024`
+    - `1366x768`
+    - `1440x900`
+- Resultado:
+  - sin overflow horizontal en los `50` casos revisados
+  - header y footer presentes
+  - selector de idioma visible y usable
+  - WhatsApp visible sin invadir la lectura principal
+  - banner de cookies presente y no bloqueante tras rechazar opcionales
+  - contacto, mapa y CTA visibles en las rutas revisadas
+  - la home alemana no rompe el layout en movil ni en desktop
 
 ## Estado final
 
@@ -133,6 +166,11 @@
 - WordPress legacy retirado de `public_html`
 - SEO tecnico base operativo
 - Handler PHP operativo
-- Pendientes reales antes de cerrar la publicacion al `100%`:
-  - confirmacion visual de llegada del correo de produccion en `david@instalberrozpe.com`
-  - pasada manual responsive final si se quiere cerrar QA visual exhaustivo en dominio real
+- Formulario de produccion validado con recepcion real
+- Backup previo mantenido
+- Proyecto publicado y cerrado a nivel tecnico
+- Pendientes post-lanzamiento:
+  - enviar sitemap a Google Search Console si aun no se ha hecho
+  - monitorizar indexacion durante los proximos dias
+  - revisar Search Console por errores de cobertura o rastreo
+  - SMTP autenticado solo como mejora opcional futura

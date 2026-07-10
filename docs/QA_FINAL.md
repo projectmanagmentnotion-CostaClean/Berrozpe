@@ -94,6 +94,14 @@
   - asunto confirmado:
     - `[Instal Berrozpe][ES] Nuevo formulario de contacto`
   - mail() queda validado en staging real
+- En produccion real:
+  - prueba tecnica `QA-2026-07-10T1518Z` con `200 OK`
+  - recepcion final confirmada en `david@instalberrozpe.com`
+  - remitente visible:
+    - `Instal Berrozpe a traves de gmadm1019.siteground.biz`
+  - asunto confirmado:
+    - `[Instal Berrozpe][ES] Nuevo formulario de contacto`
+  - mail() queda validado tambien en produccion
 
 ## GSAP reversible
 
@@ -146,11 +154,33 @@
   - sin overflow horizontal detectado
   - `hreflang`, canonical, WhatsApp, Google Maps y preferencias de cookies presentes en las comprobaciones realizadas
   - staging real revisado en `es`, `ca`, `en` y `de`
+  - produccion real revisada en:
+    - `/es/`
+    - `/es/servicios/`
+    - `/es/servicios/electricidad-y-domotica/`
+    - `/es/servicios/lampisteria-y-climatizacion/`
+    - `/es/servicios/alarmas-y-camaras/`
+    - `/es/sobre-nosotros/`
+    - `/es/contacto/`
+    - `/ca/`
+    - `/en/`
+    - `/de/`
+  - breakpoints finales en produccion:
+    - `390x844`
+    - `430x932`
+    - `768x1024`
+    - `1366x768`
+    - `1440x900`
+  - resultado final:
+    - sin overflow horizontal en `50` comprobaciones
+    - home alemana sin rotura de layout
+    - header, footer, selector de idioma y CTA visibles
 
 ## Pendientes
 
 - Sustituir placeholders temporales cuando existan assets reales aprobados
-- Repetir una prueba de formulario tras publicar
+- Enviar sitemap a Search Console si aun no se ha hecho
+- Monitorizar indexacion inicial y cobertura
 
 ## SiteGround staging real
 
@@ -188,5 +218,7 @@
   - `/` redirige a `/es/`
   - `robots.txt`, `sitemap-index.xml` y `sitemap-0.xml` activos
   - `form-handler.php` operativo en PHP real y con `POST` valido `200 OK`
-- Pendiente real post-publicacion:
-  - confirmar visualmente la llegada del correo de produccion en `david@instalberrozpe.com`
+  - formulario validado con recepcion real en `david@instalberrozpe.com`
+  - `mail()` funcional en produccion
+  - QA responsive final completada en dominio real
+  - WordPress legacy retirado y backup previo mantenido

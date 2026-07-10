@@ -149,5 +149,10 @@ Validacion real de produccion:
 Matiz importante:
 
 - En esta sesion se ha confirmado la operatividad tecnica del handler en produccion.
-- La recepcion final en bandeja de `david@instalberrozpe.com` sigue requiriendo confirmacion visual externa si se quiere cerrar la trazabilidad end-to-end de produccion.
+- La recepcion final en bandeja ya quedo confirmada externamente:
+  - fecha `2026-07-10`
+  - destinatario `david@instalberrozpe.com`
+  - asunto `[Instal Berrozpe][ES] Nuevo formulario de contacto`
+  - remitente visible `Instal Berrozpe a traves de gmadm1019.siteground.biz`
+- `mail()` queda validado en produccion.
 - SMTP autenticado sigue siendo una mejora futura opcional, no un bloqueo tecnico actual.
