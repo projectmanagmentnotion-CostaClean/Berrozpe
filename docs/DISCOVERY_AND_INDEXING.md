@@ -16,7 +16,9 @@ Dejar la web estatica preparada para descubrimiento por Google, Bing y crawlers 
 ## Sitemap
 
 - URL prevista: `https://instalberrozpe.com/sitemap-index.xml`
-- Incluye las 45 paginas generadas
+- Publicado y respondiendo `200 OK` en produccion
+- La build genera `45` paginas contando la raiz tecnica `/`
+- El sitemap localizado expone `44` URLs indexables reales
 - No incluye staging
 
 ## Robots
@@ -24,6 +26,13 @@ Dejar la web estatica preparada para descubrimiento por Google, Bing y crawlers 
 - `User-agent: *`
 - `Allow: /`
 - referencia a sitemap de produccion
+- Publicado y respondiendo `200 OK` en produccion
+
+## Produccion real
+
+- `https://instalberrozpe.com/` redirige a `https://instalberrozpe.com/es/`
+- la raiz publica actual ya sirve la build estatica nueva
+- `canonical`, `hreflang` y sitemap quedan activos sobre el dominio final
 
 ## Internal Linking
 

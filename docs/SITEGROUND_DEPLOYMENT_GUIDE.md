@@ -119,3 +119,35 @@ Resultado real confirmado en staging SiteGround:
 - Probar el banner y modal de cookies en al menos `es` y `en`.
 - Probar ScrollTrigger en desktop y mobile.
 - Usar [STAGING_SITEGROUND_CHECKLIST.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/STAGING_SITEGROUND_CHECKLIST.md) antes de subir a produccion.
+
+## Produccion real ejecutada
+
+- Fecha:
+  - `2026-07-10`
+- ZIP publicado:
+  - `production-dist-f978e0e.zip`
+- Backup legacy mantenido:
+  - `public_html-backup-2026-07-10-prelaunch.zip.zip`
+
+Flujo real aplicado en SiteGround:
+
+1. Se subio el ZIP a `public_html`.
+2. SiteGround lo extrajo inicialmente dentro de `production-dist-f978e0e/`.
+3. Se movio el contenido de esa carpeta a la raiz real de `public_html`.
+4. Se eliminaron los artefactos WordPress legacy de la raiz publica.
+5. La raiz final de `public_html` quedo sirviendo directamente la build estatica.
+
+Validacion real de produccion:
+
+- `/` redirige a `/es/`
+- `/es/` responde `200 OK`
+- `robots.txt`, `sitemap-index.xml` y `sitemap-0.xml` responden `200 OK`
+- `form-handler.php` responde `405` por `GET`
+- `form-handler.php` responde `200 OK` por `POST`
+- PHP real operativo con `X-Httpd-Modphp: 1`
+
+Matiz importante:
+
+- En esta sesion se ha confirmado la operatividad tecnica del handler en produccion.
+- La recepcion final en bandeja de `david@instalberrozpe.com` sigue requiriendo confirmacion visual externa si se quiere cerrar la trazabilidad end-to-end de produccion.
+- SMTP autenticado sigue siendo una mejora futura opcional, no un bloqueo tecnico actual.

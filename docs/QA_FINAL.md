@@ -178,7 +178,15 @@
 ## Cierre
 
 - Estado general:
-  - staging real validado y apto para publicacion
+  - staging real validado
+  - produccion publicada en `https://instalberrozpe.com`
 - Legal:
   - revision legal autorizada por cliente el `2026-07-10`
   - datos fiscales confirmados y aplicados en contenido y SEO
+- Produccion real:
+  - `public_html` ya sirve la build estatica nueva
+  - `/` redirige a `/es/`
+  - `robots.txt`, `sitemap-index.xml` y `sitemap-0.xml` activos
+  - `form-handler.php` operativo en PHP real y con `POST` valido `200 OK`
+- Pendiente real post-publicacion:
+  - confirmar visualmente la llegada del correo de produccion en `david@instalberrozpe.com`

@@ -7,7 +7,7 @@
 - Tipo de web: Astro estatico
 - Build de salida: `dist/`
 - Idiomas activos: `es`, `ca`, `en`, `de`
-- Estado: base final cerrada en repositorio, pendiente solo publicacion en produccion
+- Estado: base final publicada en produccion el `2026-07-10`
 
 ## B. Servicios reales confirmados
 
@@ -358,8 +358,7 @@ Controles implementados:
 
 Pendiente antes de produccion:
 
-- Confirmar si el hosting requiere una cabecera `From` distinta del email destinatario confirmado
-- Repetir una prueba de formulario tras publicar la version final
+- Repetir o confirmar visualmente la llegada del correo tras la publicacion final en `instalberrozpe.com`
 
 ## K. Assets
 
@@ -544,6 +543,38 @@ Reduced motion:
   - Lighthouse SEO baja en staging porque la pagina esta bloqueada temporalmente para indexacion
 - Pendientes:
   - repetir una prueba de formulario tras publicar la version final
+
+## N.3 Estado produccion SiteGround real
+
+- Fecha:
+  - `2026-07-10`
+- Dominio:
+  - `https://instalberrozpe.com`
+- Build publicada:
+  - `f978e0e`
+- ZIP usado:
+  - `production-dist-f978e0e.zip`
+- Backup legacy mantenido:
+  - `public_html-backup-2026-07-10-prelaunch.zip.zip`
+- Resultado real:
+  - el ZIP se extrajo en SiteGround
+  - el contenido se movio a la raiz real de `public_html`
+  - WordPress legacy fue retirado de `public_html`
+  - la raiz publica final sirve directamente `index.html`, carpetas localizadas, `_astro`, sitemap, `robots.txt`, `.htaccess` y `form-handler.php`
+- Validaciones tecnicas cerradas:
+  - `/` -> `301` a `/es/`
+  - `/es/` -> `200 OK`
+  - `robots.txt` -> `200 OK`
+  - `sitemap-index.xml` -> `200 OK`
+  - `sitemap-0.xml` -> `200 OK`
+  - `form-handler.php` por `GET` -> `405`
+  - `form-handler.php` por `POST` -> `200 OK`
+  - `canonical` y `hreflang` correctos en las paginas localizadas revisadas
+  - sitemap localizado operativo con `44` URLs indexables
+- Estado del formulario:
+  - destinatario configurado: `david@instalberrozpe.com`
+  - handler validado a nivel de servidor y `mail()` sin error visible
+  - pendiente solo la confirmacion visual externa de llegada a bandeja en produccion si se quiere cierre end-to-end completo
 
 ## O. Estado de cookies
 
