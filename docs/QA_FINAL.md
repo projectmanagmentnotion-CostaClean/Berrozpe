@@ -150,8 +150,6 @@
 ## Pendientes
 
 - Sustituir placeholders temporales cuando existan assets reales aprobados
-- Validar legal definitivo antes de produccion
-- Revisar si `areaServed` debe omitir `areas cercanas`
 - Repetir una prueba de formulario tras publicar
 
 ## SiteGround staging real
@@ -180,4 +178,7 @@
 ## Cierre
 
 - Estado general:
-  - staging real validado y apto para publicacion tras revision legal final
+  - staging real validado y apto para publicacion
+- Legal:
+  - revision legal autorizada por cliente el `2026-07-10`
+  - datos fiscales confirmados y aplicados en contenido y SEO

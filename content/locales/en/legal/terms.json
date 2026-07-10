@@ -3,26 +3,34 @@
   "locale": "en",
   "title": "Terms and conditions",
   "seoTitle": "Terms and conditions | Instal Berrozpe",
-  "seoDescription": "Multilingual terms and conditions template pending legal review.",
-  "updatedAtLabel": "Review status",
-  "updatedAtValue": "Pending legal review",
-  "intro": "This template replaces the inherited terms and requires legal review before it can be considered final.",
+  "seoDescription": "Informational terms and conditions of Instal Berrozpe for using the website and requesting quotes.",
+  "updatedAtLabel": "Last updated",
+  "updatedAtValue": "2026-07-10",
+  "intro": "These terms govern the informational use of the website and the sending of contact or quote requests.",
   "sections": [
     {
-      "heading": "Scope of the website and information",
+      "heading": "Purpose of the website",
       "body": [
-        "Clarify whether the website only presents services or also includes contracting, booking or binding quotation flows.",
-        "Avoid automatically carrying over returns or sales conditions if they do not apply to the new version."
+        "The website is for information purposes and acts as a contact channel to learn about Instal Berrozpe services.",
+        "The information published does not by itself constitute a binding offer or an automatic contracting of services."
       ]
     },
     {
-      "heading": "Contact and complaints",
+      "heading": "Requests and quotes",
       "body": [
-        "Use david@instalberrozpe.com as the confirmed contact channel unless legal review defines a different specific channel.",
-        "Review company and responsible-party details before final publication."
+        "Each enquiry, quote or job must be confirmed individually between Instal Berrozpe and the interested person.",
+        "Timing, technical conditions, availability and price will be specified according to the type of work requested."
+      ]
+    },
+    {
+      "heading": "Liability and external links",
+      "body": [
+        "Instal Berrozpe will aim to keep website information clear and up to date, but may change it whenever necessary.",
+        "The website may include external links for information purposes. Instal Berrozpe does not assume direct responsibility for content or services outside its own domain.",
+        "Any issue related to this website will be interpreted in accordance with applicable law."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Pending full legal review before publication."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

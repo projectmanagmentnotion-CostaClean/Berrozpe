@@ -3,26 +3,37 @@
   "locale": "de",
   "title": "Impressum",
   "seoTitle": "Impressum | Instal Berrozpe",
-  "seoDescription": "Mehrsprachige Impressumsvorlage mit ausstehender rechtlicher Prüfung.",
-  "updatedAtLabel": "Prüfstatus",
-  "updatedAtValue": "Rechtliche Prüfung ausstehend",
-  "intro": "Dieses Impressum ist eine mehrsprachige technische Basis und benötigt vor der Veröffentlichung eine rechtliche Freigabe.",
+  "seoDescription": "Rechtliche Angaben und Kontaktdaten von Instal Berrozpe S.L. fuer die informative Nutzung von instalberrozpe.com.",
+  "updatedAtLabel": "Letzte Aktualisierung",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Dieses Impressum regelt den Zugang zur Website instalberrozpe.com und ihre informative Nutzung.",
   "sections": [
     {
-      "heading": "Inhaberschaft der Website",
+      "heading": "Betreiber der Website",
       "body": [
-        "Nur Angaben zum Inhaber ergänzen, die für die neue Website bestätigt wurden.",
-        "Steuerdaten der alten Website nicht ohne ausdrückliche Bestätigung automatisch übernehmen."
+        "Betreiber dieser Website ist Instal Berrozpe S.L. mit der Steuernummer B55326813.",
+        "Rechtliche und steuerliche Anschrift: Antiga 68 bajos de Blanes. Oeffentliche Referenzadresse: Carrer de l'Antiga, 68, 17300 Blanes, Girona, Spanien.",
+        "Kontakt- und Datenschutz-E-Mail: david@instalberrozpe.com. Festnetz: 872 986 161. Mobil und WhatsApp: 676 04 33 89.",
+        "Domain: instalberrozpe.com."
       ]
     },
     {
-      "heading": "Nutzungsbedingungen",
+      "heading": "Nutzung der Website",
       "body": [
-        "Zugangs-, Nutzungs- und Haftungsbedingungen entsprechend dem tatsächlichen Umfang der veröffentlichten Website definieren.",
-        "Externe Links, Formulare und Drittressourcen prüfen, bevor der endgültige Text festgelegt wird."
+        "Die Website dient der Information und Kontaktaufnahme zu den Leistungen von Instal Berrozpe.",
+        "Nutzende verpflichten sich, die Website und ihre Formulare rechtmaessig, verantwortungsvoll und ohne Schaeden fuer die Website oder Dritte zu verwenden.",
+        "Externe Links dienen, soweit vorhanden, nur als Hinweis. Instal Berrozpe kontrolliert Inhalte Dritter nicht dauerhaft."
+      ]
+    },
+    {
+      "heading": "Urheberrechte und Haftung",
+      "body": [
+        "Texte, Bilder, Logos, Design und weitere Inhalte der Website sind nach geltendem Recht geschuetzt und duerfen, soweit erforderlich, nicht ohne Genehmigung weiterverwendet werden.",
+        "Instal Berrozpe kann Inhalte der Website aktualisieren, wenn dies fuer ihre Richtigkeit und Nuetzlichkeit erforderlich ist.",
+        "Eine ununterbrochene Verfuegbarkeit der Website wird nicht garantiert, auch wenn angemessene Massnahmen fuer einen ordnungsgemaessen Betrieb getroffen werden."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Vor der Veröffentlichung ist eine vollständige rechtliche Prüfung erforderlich."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

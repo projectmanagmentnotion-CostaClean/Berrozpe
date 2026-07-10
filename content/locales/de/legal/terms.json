@@ -1,28 +1,36 @@
 {
   "slug": "allgemeine-geschaeftsbedingungen",
   "locale": "de",
-  "title": "Allgemeine Geschäftsbedingungen",
-  "seoTitle": "Allgemeine Geschäftsbedingungen | Instal Berrozpe",
-  "seoDescription": "Mehrsprachige AGB-Vorlage mit ausstehender rechtlicher Prüfung.",
-  "updatedAtLabel": "Prüfstatus",
-  "updatedAtValue": "Rechtliche Prüfung ausstehend",
-  "intro": "Diese Vorlage ersetzt die geerbten Bedingungen und benötigt eine rechtliche Prüfung, bevor sie als endgültig gelten kann.",
+  "title": "Allgemeine Geschaeftsbedingungen",
+  "seoTitle": "Allgemeine Geschaeftsbedingungen | Instal Berrozpe",
+  "seoDescription": "Informationsbezogene Geschaeftsbedingungen von Instal Berrozpe fuer die Nutzung der Website und Angebotsanfragen.",
+  "updatedAtLabel": "Letzte Aktualisierung",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Diese Bedingungen regeln die informative Nutzung der Website sowie das Senden von Kontakt- oder Angebotsanfragen.",
   "sections": [
     {
-      "heading": "Umfang der Website und der Informationen",
+      "heading": "Zweck der Website",
       "body": [
-        "Klarstellen, ob die Website nur Leistungen darstellt oder auch Vertragsabschlüsse, Buchungen oder verbindliche Angebotsprozesse enthält.",
-        "Rückgabe- oder Verkaufsbedingungen nicht automatisch übernehmen, wenn sie auf die neue Version nicht zutreffen."
+        "Die Website dient Informationszwecken und als Kontaktkanal, um die Leistungen von Instal Berrozpe kennenzulernen.",
+        "Die veroeffentlichten Informationen stellen fuer sich genommen weder ein verbindliches Angebot noch einen automatischen Vertragsabschluss dar."
       ]
     },
     {
-      "heading": "Kontakt und Beschwerden",
+      "heading": "Anfragen und Angebote",
       "body": [
-        "david@instalberrozpe.com als bestätigten Kontaktkanal verwenden, solange die rechtliche Prüfung keinen anderen spezifischen Kanal festlegt.",
-        "Unternehmens- und Verantwortlichkeitsdaten vor der finalen Veröffentlichung prüfen."
+        "Jede Anfrage, jedes Angebot und jeder Auftrag muss individuell zwischen Instal Berrozpe und der interessierten Person bestaetigt werden.",
+        "Fristen, technische Bedingungen, Verfuegbarkeit und Preis werden je nach angefragter Leistung konkret festgelegt."
+      ]
+    },
+    {
+      "heading": "Haftung und externe Links",
+      "body": [
+        "Instal Berrozpe bemueht sich um klare und aktuelle Informationen auf der Website, kann diese jedoch bei Bedarf aendern.",
+        "Die Website kann externe Links zu Informationszwecken enthalten. Instal Berrozpe uebernimmt keine direkte Verantwortung fuer Inhalte oder Dienste ausserhalb der eigenen Domain.",
+        "Alle Fragen im Zusammenhang mit dieser Website werden nach dem anwendbaren Recht ausgelegt."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Vor der Veröffentlichung ist eine vollständige rechtliche Prüfung erforderlich."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

@@ -3,26 +3,40 @@
   "locale": "en",
   "title": "Cookie policy",
   "seoTitle": "Cookie policy | Instal Berrozpe",
-  "seoDescription": "Multilingual cookie policy template pending legal review.",
-  "updatedAtLabel": "Review status",
-  "updatedAtValue": "Pending legal review",
-  "intro": "This cookie policy must be aligned with the cookies that are actually active on the future website before publication.",
+  "seoDescription": "Cookie policy of Instal Berrozpe and operation of the website's multilingual consent system.",
+  "updatedAtLabel": "Last updated",
+  "updatedAtValue": "2026-07-10",
+  "intro": "This website uses only the cookies required for its operation and a consent system for optional categories, which are currently inactive by default.",
   "sections": [
     {
-      "heading": "Cookies actually in use",
+      "heading": "Necessary cookies",
       "body": [
-        "Document only technical, analytics or third-party cookies that really exist in production.",
-        "Do not automatically inherit text from the previous site without checking active scripts and services."
+        "Necessary cookies enable basic technical functions, such as remembering consent preferences and keeping the website working properly.",
+        "These cookies may remain active without prior consent because they are required to provide the service requested by the user."
       ]
     },
     {
-      "heading": "Consent and management",
+      "heading": "Optional categories and consent",
       "body": [
-        "Non-essential categories are managed through a prior, granular consent system that can be changed from any page.",
-        "The previous audit detected a cookie banner and an inherited policy, but it did not confirm active Analytics in the reviewed HTML sample. In this codebase, optional categories remain prepared but inactive until further validation."
+        "The website is prepared for optional categories such as preferences, analytics or marketing, but none of them are enabled by default or loaded before the relevant consent is given.",
+        "If optional tools are added in the future, they will only run after explicit acceptance of the corresponding category."
+      ]
+    },
+    {
+      "heading": "Managing preferences",
+      "body": [
+        "Users can accept, reject or configure cookies from the initial banner.",
+        "Preferences can be reopened at any time from the permanent link in the footer."
+      ]
+    },
+    {
+      "heading": "Google Maps and third parties",
+      "body": [
+        "The website does not load a live Google Maps iframe by default.",
+        "Location blocks work through text-based address information and an external link, avoiding unnecessary third-party loading before consent."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Pending full legal review before publication."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

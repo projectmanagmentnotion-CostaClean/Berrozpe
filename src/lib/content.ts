@@ -334,7 +334,8 @@ export function getSiteSettings(locale?: string): SiteSettings {
     titleTemplate: `%s | ${siteData.brandName}`,
     defaultDescription: seo.descriptions.home,
     businessName: siteData.brandName,
-    legalName: null,
+    legalName: contactData.legal?.legalName ?? null,
+    taxId: contactData.legal?.taxId ?? null,
     primaryPhone: contactData.phones.mobile,
     primaryEmail: contactData.primaryEmail,
     locality: contactData.address.locality,
@@ -575,9 +576,11 @@ export function getLocalBusinessSchema(
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${site.siteUrl}/#localbusiness`,
-    name: reviewsData.googleBusinessName || site.businessName,
+    name: site.businessName,
+    legalName: site.legalName || undefined,
+    taxID: site.taxId || undefined,
     url: options?.path ? getCanonicalUrl(options.path) : site.siteUrl,
-    telephone: site.primaryPhone || undefined,
+    telephone: contactData.phones.landline || site.primaryPhone || undefined,
     email: site.primaryEmail || undefined,
     address: site.addressLine || site.locality || site.postalCode
       ? {

@@ -1,7 +1,7 @@
 {
   "locale": "de",
   "title": "Informationen oder Angebot anfragen",
-  "intro": "Schreiben Sie Ihre Anfrage und die gewunschte Leistung.",
+  "intro": "Schreiben Sie Ihre Anfrage und die gewuenschte Leistung.",
   "fields": {
     "name": {
       "label": "Name",
@@ -20,18 +20,18 @@
     },
     "service": {
       "label": "Leistung",
-      "placeholder": "Leistung auswählen"
+      "placeholder": "Leistung auswaehlen"
     },
     "message": {
       "label": "Nachricht",
-      "placeholder": "Beschreiben Sie kurz, was Sie benötigen",
+      "placeholder": "Beschreiben Sie kurz, was Sie benoetigen",
       "rows": 6
     },
     "privacy": {
-      "label": "Ich habe die Datenschutzerklärung gelesen und akzeptiere sie."
+      "label": "Ich habe die Datenschutzerklaerung gelesen und akzeptiere sie."
     },
     "honeypot": {
-      "label": "Dieses Feld nicht ausfüllen"
+      "label": "Dieses Feld nicht ausfuellen"
     }
   },
   "serviceOptions": [
@@ -41,7 +41,7 @@
     },
     {
       "value": "lampisteria-y-climatizacion",
-      "label": "Sanitär und Klimatechnik"
+      "label": "Sanitaer und Klimatechnik"
     },
     {
       "value": "alarmas-y-camaras",
@@ -49,28 +49,28 @@
     }
   ],
   "privacyConsent": {
-    "prefix": "Sie müssen die",
-    "linkLabel": "Datenschutzerklärung",
+    "prefix": "Sie muessen die",
+    "linkLabel": "Datenschutzerklaerung",
     "suffix": "akzeptieren, bevor das Formular gesendet werden kann."
   },
   "legalSummary": [
-    "Formularanfragen werden an david@instalberrozpe.com als bestätigte Haupt-E-Mail gesendet.",
-    "Die endgültigen Rechtstexte warten weiterhin auf die rechtliche Prüfung vor der Produktion."
+    "Ihre Daten werden verwendet, um Ihre Anfrage per Formular, E-Mail, Telefon oder WhatsApp zu beantworten.",
+    "Verantwortlich fuer die Verarbeitung ist Instal Berrozpe S.L.; weitere Informationen finden Sie in der Datenschutzerklaerung."
   ],
   "submitLabel": "Anfrage senden",
   "sendingLabel": "Wird gesendet...",
   "successMessage": "Ihre Anfrage wurde erfolgreich gesendet.",
-  "errorMessage": "Das Formular konnte nicht gesendet werden. Bitte prüfen Sie die Felder und versuchen Sie es erneut.",
+  "errorMessage": "Das Formular konnte nicht gesendet werden. Bitte pruefen Sie die Felder und versuchen Sie es erneut.",
   "validationMessages": {
     "nameRequired": "Der Name ist erforderlich.",
     "emailRequired": "Die E-Mail ist erforderlich.",
-    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-    "phoneInvalid": "Bitte geben Sie eine gültige Telefonnummer ein oder lassen Sie das Feld leer.",
-    "serviceRequired": "Bitte wählen Sie eine Leistung aus.",
+    "emailInvalid": "Bitte geben Sie eine gueltige E-Mail-Adresse ein.",
+    "phoneInvalid": "Bitte geben Sie eine gueltige Telefonnummer ein oder lassen Sie das Feld leer.",
+    "serviceRequired": "Bitte waehlen Sie eine Leistung aus.",
     "messageRequired": "Die Nachricht ist erforderlich.",
-    "privacyRequired": "Sie müssen die Datenschutzerklärung akzeptieren.",
-    "honeypotFilled": "Die Übermittlung konnte nicht validiert werden.",
+    "privacyRequired": "Sie muessen die Datenschutzerklaerung akzeptieren.",
+    "honeypotFilled": "Die Uebermittlung konnte nicht validiert werden.",
     "genericError": "Das Formular konnte nicht verarbeitet werden."
   },
-  "honeypotLabel": "Dieses Feld nicht ausfüllen"
+  "honeypotLabel": "Dieses Feld nicht ausfuellen"
 }

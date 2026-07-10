@@ -1,28 +1,42 @@
 {
   "slug": "cookies",
   "locale": "de",
-  "title": "Cookie-Richtlinie",
-  "seoTitle": "Cookie-Richtlinie | Instal Berrozpe",
-  "seoDescription": "Mehrsprachige Cookie-Vorlage mit ausstehender rechtlicher Prüfung.",
-  "updatedAtLabel": "Prüfstatus",
-  "updatedAtValue": "Rechtliche Prüfung ausstehend",
-  "intro": "Diese Cookie-Richtlinie muss vor der Veröffentlichung an die tatsächlich aktiven Cookies der künftigen Website angepasst werden.",
+  "title": "Cookies",
+  "seoTitle": "Cookies | Instal Berrozpe",
+  "seoDescription": "Cookie-Richtlinie von Instal Berrozpe und Funktionsweise des mehrsprachigen Einwilligungssystems der Website.",
+  "updatedAtLabel": "Letzte Aktualisierung",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Diese Website verwendet nur die fuer ihren Betrieb notwendigen Cookies sowie ein Einwilligungssystem fuer optionale Kategorien, die derzeit standardmaessig inaktiv sind.",
   "sections": [
     {
-      "heading": "Tatsächlich eingesetzte Cookies",
+      "heading": "Notwendige Cookies",
       "body": [
-        "Nur technische, analytische oder Drittanbieter-Cookies dokumentieren, die in Produktion wirklich vorhanden sind.",
-        "Texte der alten Website nicht automatisch übernehmen, ohne aktive Skripte und Dienste zu prüfen."
+        "Notwendige Cookies ermoeglichen grundlegende technische Funktionen, etwa das Speichern der Einwilligungseinstellungen und den ordnungsgemaessen Betrieb der Website.",
+        "Diese Cookies duerfen ohne vorherige Einwilligung aktiv bleiben, weil sie fuer den von der nutzenden Person angeforderten Dienst erforderlich sind."
       ]
     },
     {
-      "heading": "Einwilligung und Verwaltung",
+      "heading": "Optionale Kategorien und Einwilligung",
       "body": [
-        "Nicht notwendige Kategorien werden über ein vorheriges, granuläres Einwilligungssystem verwaltet, das von jeder Seite aus geändert werden kann.",
-        "Die vorherige Prüfung erkannte ein Cookie-Banner und eine geerbte Richtlinie, bestätigte jedoch kein aktives Analytics in der geprüften HTML-Stichprobe. In dieser Basis bleiben optionale Kategorien vorbereitet, aber bis zu einer neuen Validierung inaktiv."
+        "Die Website ist fuer optionale Kategorien wie Praeferenzen, Analyse oder Marketing vorbereitet, aber keine davon ist standardmaessig aktiv oder wird vor der entsprechenden Einwilligung geladen.",
+        "Falls in Zukunft optionale Werkzeuge hinzugefuegt werden, werden sie erst nach ausdruecklicher Zustimmung zur jeweiligen Kategorie ausgefuehrt."
+      ]
+    },
+    {
+      "heading": "Verwaltung der Einstellungen",
+      "body": [
+        "Nutzende koennen Cookies ueber das erste Banner akzeptieren, ablehnen oder konfigurieren.",
+        "Die Einstellungen lassen sich jederzeit ueber den permanenten Link im Footer erneut oeffnen."
+      ]
+    },
+    {
+      "heading": "Google Maps und Drittanbieter",
+      "body": [
+        "Die Website laedt standardmaessig kein aktives Google-Maps-iframe.",
+        "Standortbloecke arbeiten mit Textadresse und externem Link und vermeiden so unnoetige Drittanbieter-Ladevorgaenge vor der Einwilligung."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Vor der Veröffentlichung ist eine vollständige rechtliche Prüfung erforderlich."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

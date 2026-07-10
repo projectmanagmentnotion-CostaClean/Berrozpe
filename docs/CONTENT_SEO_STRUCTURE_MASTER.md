@@ -7,7 +7,7 @@
 - Tipo de web: Astro estatico
 - Build de salida: `dist/`
 - Idiomas activos: `es`, `ca`, `en`, `de`
-- Estado: renovacion en repositorio, sin tocar produccion
+- Estado: base final cerrada en repositorio, pendiente solo publicacion en produccion
 
 ## B. Servicios reales confirmados
 
@@ -169,8 +169,7 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
   - footer, resenas, WhatsApp, mapa e internal linking compactados para priorizar conversion
   - contacto publico limpiado de mensajes internos de validacion
 - Pendientes editoriales:
-  - revision legal definitiva de legales
-  - revisar si `areaServed` debe omitir `areas cercanas`
+  - repetir una prueba de formulario tras publicar en produccion
 
 ### Keywords principales por idioma
 
@@ -246,13 +245,19 @@ Paginas estaticas:
 - El layout ya expone SEO comun y datos del sitio desde `src/lib/content.ts`
 - `LocalBusiness` implementado desde `getLocalBusinessSchema(...)`
 - `aggregateRating` visible y permitido solo en home y contacto
+- nombre legal soportado en schema:
+  - `Instal Berrozpe S.L.`
+- `taxID` soportado en schema:
+  - `B55326813`
 - Datos de valoracion confirmados:
   - `4.9`
   - `67 resenas`
 - No debe inventarse schema legal, certificaciones o areas de cobertura no confirmadas
 - No debe emitirse `Review` schema individual mientras no existan resenas reales cargadas
-- Observacion real en staging:
-  - `areaServed` actual incluye `Blanes` y `areas cercanas`
+- `areaServed` conservador en schema:
+  - `Blanes`
+  - `Arenys`
+  - `Lloret de Mar`
 
 ### Open Graph
 
@@ -303,14 +308,22 @@ Legales sincronizados en los 4 idiomas:
 
 Estado:
 
-- Estructura creada como placeholder sincronizado
-- Pendiente de revision legal antes de publicar
+- legales sincronizados y cerrados para `es`, `ca`, `en` y `de`
+- revision legal autorizada por cliente el `2026-07-10`
+- datos fiscales aplicados en contenido y soporte SEO compartido
 
-Datos que faltan confirmar o revisar:
+Datos aplicados:
 
-- Identidad fiscal definitiva que deba mostrarse en la nueva web
-- Canal legal especifico para reclamaciones si difiere del email principal ya confirmado
-- Politica real de cookies y analitica de la nueva version
+- razon social:
+  - `Instal Berrozpe S.L.`
+- CIF/NIF:
+  - `B55326813`
+- domicilio legal:
+  - `Antiga 68 bajos de Blanes`
+- direccion publica normalizada:
+  - `Carrer de l'Antiga, 68, 17300 Blanes, Girona`
+- email legal y de privacidad:
+  - `david@instalberrozpe.com`
 
 ## J.1 Formulario RGPD
 
@@ -345,7 +358,6 @@ Controles implementados:
 
 Pendiente antes de produccion:
 
-- Validacion legal final del texto de privacidad
 - Confirmar si el hosting requiere una cabecera `From` distinta del email destinatario confirmado
 - Repetir una prueba de formulario tras publicar la version final
 
@@ -531,7 +543,6 @@ Reduced motion:
   - canonical y `hreflang` del HTML siguen apuntando a `https://instalberrozpe.com`
   - Lighthouse SEO baja en staging porque la pagina esta bloqueada temporalmente para indexacion
 - Pendientes:
-  - revisar si `areaServed` debe mantener `areas cercanas`
   - repetir una prueba de formulario tras publicar la version final
 
 ## O. Estado de cookies

@@ -49,9 +49,22 @@ Los detalles de servicio no se hardcodean en `seo.json`; salen de `services-inde
   - bloque local visible en home y contacto
   - enlace simple en footer
 
+## Datos confirmados para schema y SEO local
+
+- Razon social: `Instal Berrozpe S.L.`
+- CIF/NIF: `B55326813`
+- `LocalBusiness.name`: `Instal Berrozpe`
+- `LocalBusiness.legalName`: `Instal Berrozpe S.L.`
+- `LocalBusiness.taxID`: `B55326813`
+- `telephone` del schema: `872 986 161`
+- `email` del schema: `david@instalberrozpe.com`
+- `areaServed` conservador:
+  - `Blanes`
+  - `Arenys`
+  - `Lloret de Mar`
+
 ## Datos todavia pendientes
 
-- Cobertura exacta por municipios o comarcas
 - Antiguedad/experiencia exacta
 - Certificaciones
 - Garantias
@@ -80,6 +93,7 @@ Estado:
 - No se anaden coordenadas no confirmadas.
 - No se fuerza `GeoCoordinates`.
 - La presencia del mapa se resuelve con direccion textual y enlace verificado a Google Maps.
+- El schema ya soporta `legalName` y `taxID` con datos confirmados por cliente.
 
 ## Descubrimiento
 
@@ -190,4 +204,4 @@ Estado:
 - Contacto:
   - foco en contacto directo y servicios principales
 - Legales:
-  - SEO basico, sin inventar datos fiscales ni responsables no confirmados
+  - SEO basico definitivo con datos fiscales confirmados

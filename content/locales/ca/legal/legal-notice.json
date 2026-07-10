@@ -1,28 +1,39 @@
 {
   "slug": "avis-legal",
   "locale": "ca",
-  "title": "Avís legal",
-  "seoTitle": "Avís legal | Instal Berrozpe",
-  "seoDescription": "Plantilla multilingüe d'avís legal pendent de revisió jurídica.",
-  "updatedAtLabel": "Estat de revisió",
-  "updatedAtValue": "Pendent de revisió legal",
-  "intro": "Aquest avís legal és una base tècnica multilingüe i requereix validació jurídica abans de publicar-se.",
+  "title": "Avis legal",
+  "seoTitle": "Avis legal | Instal Berrozpe",
+  "seoDescription": "Dades legals i de contacte d'Instal Berrozpe S.L. per a l'us informatiu d'instalberrozpe.com.",
+  "updatedAtLabel": "Ultima actualitzacio",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Aquest avis legal regula l'acces i l'us informatiu del web instalberrozpe.com.",
   "sections": [
     {
-      "heading": "Titularitat del lloc",
+      "heading": "Titular del lloc web",
       "body": [
-        "Afegir només les dades del titular que hagin estat confirmades per a la nova web.",
-        "No reutilitzar automàticament dades fiscals del lloc anterior sense confirmació expressa."
+        "El titular d'aquest web es Instal Berrozpe S.L., amb CIF/NIF B55326813.",
+        "Domicili legal i fiscal: Antiga 68 baixos de Blanes. Adreca publica de referencia: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
+        "Email de contacte i privacitat: david@instalberrozpe.com. Telefon fix: 872 986 161. Mobil i WhatsApp: 676 04 33 89.",
+        "Domini web: instalberrozpe.com."
       ]
     },
     {
-      "heading": "Condicions d'ús",
+      "heading": "Us del lloc web",
       "body": [
-        "Definir condicions d'accés, ús i responsabilitat segons l'abast real del lloc publicat.",
-        "Revisar enllaços externs, formularis i recursos de tercers abans de fixar el text final."
+        "El web te una finalitat informativa i de contacte sobre els serveis d'Instal Berrozpe.",
+        "La persona usuaria es compromet a utilitzar el web i els seus formularis de manera licita, responsable i sense causar danys al lloc ni a tercers.",
+        "Els enllacos externs, si existeixen, s'ofereixen nomes com a referencia. Instal Berrozpe no controla de manera permanent el contingut de webs de tercers."
+      ]
+    },
+    {
+      "heading": "Propietat intellectual i responsabilitat",
+      "body": [
+        "Els textos, imatges, logotips, disseny i la resta de continguts del web estan protegits per la normativa aplicable i no es poden reutilitzar sense autoritzacio quan correspongui.",
+        "Instal Berrozpe pot actualitzar el contingut del web quan ho consideri necessari per mantenir-lo correcte i util.",
+        "No es garanteix la disponibilitat ininterrompuda del lloc, tot i que s'adoptaran mesures raonables per al seu bon funcionament."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Pendent de revisió legal completa abans de la publicació."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

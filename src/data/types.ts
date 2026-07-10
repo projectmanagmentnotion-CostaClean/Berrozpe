@@ -11,6 +11,7 @@ export interface SiteSettings {
   defaultDescription: string;
   businessName: string;
   legalName: string | null;
+  taxId: string | null;
   primaryPhone: string;
   primaryEmail: string | null;
   locality: string;
@@ -27,6 +28,12 @@ export interface SiteSettings {
 }
 
 export interface SharedContact {
+  legal?: {
+    legalName: string;
+    taxId: string;
+    legalAddress: string;
+    website?: string;
+  };
   address: {
     streetAddress: string;
     postalCode: string;

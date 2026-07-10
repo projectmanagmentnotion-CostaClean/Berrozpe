@@ -1,28 +1,42 @@
 {
   "slug": "politica-de-cookies",
   "locale": "es",
-  "title": "Política de cookies",
-  "seoTitle": "Política de cookies | Instal Berrozpe",
-  "seoDescription": "Plantilla multidioma de política de cookies pendiente de revisión jurídica.",
-  "updatedAtLabel": "Estado de revisión",
-  "updatedAtValue": "Pendiente de revisión legal",
-  "intro": "Esta política de cookies debe ajustarse a las cookies realmente activas en la futura web antes de publicarse.",
+  "title": "Politica de cookies",
+  "seoTitle": "Politica de cookies | Instal Berrozpe",
+  "seoDescription": "Politica de cookies de Instal Berrozpe y funcionamiento del consentimiento multidioma de la web.",
+  "updatedAtLabel": "Ultima actualizacion",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Esta web utiliza solo las cookies necesarias para su funcionamiento y un sistema de consentimiento para categorias opcionales, actualmente no activas por defecto.",
   "sections": [
     {
-      "heading": "Cookies realmente implantadas",
+      "heading": "Cookies necesarias",
       "body": [
-        "Documentar solo cookies técnicas, analíticas o de terceros que existan de verdad en producción.",
-        "No heredar de forma automática textos del sitio anterior sin comprobar scripts y servicios activos."
+        "Las cookies necesarias permiten funciones tecnicas basicas, como recordar la preferencia de consentimiento y garantizar el funcionamiento del sitio.",
+        "Estas cookies pueden mantenerse activas sin consentimiento previo porque son necesarias para prestar el servicio solicitado por la persona usuaria."
       ]
     },
     {
-      "heading": "Consentimiento y gestión",
+      "heading": "Categorias opcionales y consentimiento",
       "body": [
-        "Las categorías no necesarias se gestionan mediante un sistema de consentimiento previo, granular y modificable desde cualquier página.",
-        "La auditoría anterior detectó banner de cookies y una política heredada, pero no confirmó Analytics activo en la muestra HTML revisada. En esta base, las categorías opcionales quedan preparadas pero inactivas hasta nueva validación."
+        "La web esta preparada para categorias opcionales como preferencias, analitica o marketing, pero ninguna se activa por defecto ni se carga antes del consentimiento correspondiente.",
+        "Si en el futuro se incorporan herramientas opcionales, solo se ejecutaran despues de la aceptacion expresa de la categoria correspondiente."
+      ]
+    },
+    {
+      "heading": "Gestion de preferencias",
+      "body": [
+        "La persona usuaria puede aceptar, rechazar o configurar las cookies desde el banner inicial.",
+        "Las preferencias pueden reabrirse en cualquier momento desde el enlace permanente del pie de pagina."
+      ]
+    },
+    {
+      "heading": "Google Maps y terceros",
+      "body": [
+        "La web no carga un iframe vivo de Google Maps por defecto.",
+        "Los bloques de ubicacion funcionan mediante direccion textual y enlace externo, evitando cargas innecesarias de terceros antes del consentimiento."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Pendiente de revisión legal completa antes de publicación."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

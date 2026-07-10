@@ -2,7 +2,7 @@
 
 ## Estado actual
 
-La base de contenido incluye placeholders legales sincronizados en:
+La base de contenido legal esta cerrada y sincronizada en:
 
 - `es`
 - `ca`
@@ -26,30 +26,27 @@ Cada idioma contiene:
 - `cookies`
 - `terms`
 
+## Cierre legal confirmado
+
+- Revision legal autorizada por cliente: `2026-07-10`
+- Razon social confirmada: `Instal Berrozpe S.L.`
+- CIF/NIF confirmado: `B55326813`
+- Domicilio legal y fiscal confirmado: `Antiga 68 bajos de Blanes`
+- Direccion publica normalizada: `Carrer de l'Antiga, 68, 17300 Blanes, Girona`
+- Email legal, privacidad y formularios: `david@instalberrozpe.com`
+- Telefono fijo confirmado: `872 986 161`
+- Movil y WhatsApp confirmados: `676 04 33 89`
+
 ## Regla obligatoria
 
-Ningun idioma puede cerrar la revision legal antes que los demas si la fuente de verdad sigue siendo comun y pendiente.
+Ningun idioma puede quedar desincronizado respecto a los otros tres cuando se actualicen datos legales, textos de privacidad o politica de cookies.
 
-## Contenido permitido en esta fase
+## Alcance legal publicado
 
-- Estructura de secciones
-- Avisos de pendiente de revision legal
-- Instrucciones para no reutilizar automaticamente datos fiscales o registrales
-- Notas de validacion sobre cookies activas y consentimiento
-- Categorias opcionales preparadas pero inactivas mientras no haya scripts confirmados
-
-## Contenido no permitido en esta fase
-
-- Publicar como definitivo un CIF/NIF no validado para la nueva web
-- Publicar razon social fiscal cerrada sin confirmacion expresa
-- Dar por activa una analitica o cookie no comprobada en la nueva version
-- Dar por definitivo un canal legal de contacto distinto del email principal sin validacion legal especifica
-
-## Relacion con la auditoria
-
-- La auditoria detecto terminos y cookies heredados en la web actual.
-- No se detecto una politica de privacidad visible publicada en el sitio auditado.
-- La nueva estructura evita arrastrar automaticamente esos textos como definitivos.
+- Aviso legal con titularidad, datos fiscales, contacto y uso informativo del sitio.
+- Politica de privacidad con responsable, finalidad, base legal, conservacion y derechos.
+- Politica de cookies alineada con el sistema real de consentimiento.
+- Terminos y condiciones prudentes, sin precios cerrados ni garantias inventadas.
 
 ## Sistema de consentimiento implementado
 
@@ -95,6 +92,13 @@ Ningun idioma puede cerrar la revision legal antes que los demas si la fuente de
 
 - No hay scripts opcionales confirmados activos en esta base.
 - El sistema queda preparado para desbloquear scripts diferidos marcados con `data-cookie-category` solo despues del consentimiento correspondiente.
+
+## Estado de publicacion
+
+- Bloqueo legal resuelto.
+- Web apta para produccion a nivel legal y RGPD.
+- Pendiente post-publicacion:
+  - repetir una prueba real del formulario en `instalberrozpe.com`
 
 ## Google Maps y terceros
 

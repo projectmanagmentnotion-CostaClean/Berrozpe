@@ -1,35 +1,45 @@
 {
   "slug": "politica-de-privacidad",
   "locale": "es",
-  "title": "Política de privacidad",
-  "seoTitle": "Política de privacidad | Instal Berrozpe",
-  "seoDescription": "Plantilla multidioma de política de privacidad pendiente de revisión jurídica.",
-  "updatedAtLabel": "Estado de revisión",
-  "updatedAtValue": "Pendiente de revisión legal",
-  "intro": "Esta plantilla multidioma existe solo como base técnica. No debe publicarse como texto jurídico definitivo sin revisión legal.",
+  "title": "Politica de privacidad",
+  "seoTitle": "Politica de privacidad | Instal Berrozpe",
+  "seoDescription": "Politica de privacidad de Instal Berrozpe S.L. para solicitudes recibidas por formulario, email, telefono o WhatsApp.",
+  "updatedAtLabel": "Ultima actualizacion",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Esta politica explica como trata Instal Berrozpe S.L. los datos personales recibidos a traves de esta web y de sus canales de contacto.",
   "sections": [
     {
       "heading": "Responsable del tratamiento",
       "body": [
-        "Completar únicamente con los datos jurídicos confirmados por la propiedad del sitio.",
-        "No insertar razón social fiscal, NIF o datos registrales si no han sido validados para esta nueva versión."
+        "Responsable: Instal Berrozpe S.L.",
+        "CIF/NIF: B55326813.",
+        "Domicilio legal y fiscal: Antiga 68 bajos de Blanes. Direccion publica de referencia: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
+        "Email de contacto y privacidad: david@instalberrozpe.com."
       ]
     },
     {
-      "heading": "Finalidades y bases jurídicas",
+      "heading": "Finalidad y base legal",
       "body": [
-        "Enumerar únicamente finalidades reales y activas en la versión publicada.",
-        "Alinear las bases jurídicas con los formularios, canales de contacto y servicios que finalmente se publiquen."
+        "Los datos se utilizan para atender solicitudes recibidas por formulario, email, telefono o WhatsApp, responder consultas y gestionar el contacto solicitado por la persona usuaria.",
+        "La base legal es el consentimiento de la persona usuaria al enviar su consulta y el interes legitimo de Instal Berrozpe en responder a solicitudes relacionadas con su actividad profesional.",
+        "No se utilizaran los datos para finalidades distintas de las aqui indicadas ni se venderan a terceros."
+      ]
+    },
+    {
+      "heading": "Conservacion y destinatarios",
+      "body": [
+        "Los datos se conservaran durante el tiempo necesario para atender la solicitud y durante los plazos exigidos por la normativa aplicable cuando corresponda.",
+        "Con caracter general, no se comunicaran datos a terceros salvo obligacion legal o cuando resulte necesario para la correcta gestion tecnica del servicio."
       ]
     },
     {
       "heading": "Derechos de las personas usuarias",
       "body": [
-        "Definir el canal real para ejercer acceso, rectificación, supresión, oposición, limitación y portabilidad.",
-        "Revisar también la política de conservación y posibles cesiones antes de publicación."
+        "Puedes solicitar el acceso, la rectificacion, la supresion, la oposicion, la limitacion del tratamiento y la portabilidad de tus datos cuando sea aplicable.",
+        "Para ejercer estos derechos, escribe a david@instalberrozpe.com indicando tu solicitud y los datos necesarios para identificarte."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Pendiente de revisión legal completa antes de publicación."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

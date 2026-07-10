@@ -4,7 +4,12 @@
 
 - Backup del sitio anterior
 - Export local de `dist/`
-- Confirmar version final de legales
+- Legales finales cerrados y sincronizados en `es`, `ca`, `en` y `de`
+- Datos fiscales confirmados:
+  - `Instal Berrozpe S.L.`
+  - `B55326813`
+  - `Antiga 68 bajos de Blanes`
+- `areaServed` de schema ajustado a `Blanes`, `Arenys` y `Lloret de Mar`
 - Confirmar pruebas del formulario en staging
 
 ## Subida
@@ -25,6 +30,7 @@
 
 ## Post publicacion
 
+- Repetir prueba real del formulario en produccion
 - Alta o revision en Search Console
 - Alta o revision en Bing Webmaster Tools
 - Revisar indexacion inicial y 404

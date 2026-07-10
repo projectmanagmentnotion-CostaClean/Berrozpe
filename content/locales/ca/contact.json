@@ -37,15 +37,15 @@
   "serviceOptions": [
     {
       "value": "electricidad-y-domotica",
-      "label": "Electricitat i domòtica"
+      "label": "Electricitat i domotica"
     },
     {
       "value": "lampisteria-y-climatizacion",
-      "label": "Lampisteria i climatització"
+      "label": "Lampisteria i climatitzacio"
     },
     {
       "value": "alarmas-y-camaras",
-      "label": "Alarmes i càmeres"
+      "label": "Alarmes i cameres"
     }
   ],
   "privacyConsent": {
@@ -54,8 +54,8 @@
     "suffix": "per poder enviar el formulari."
   },
   "legalSummary": [
-    "Les sol·licituds del formulari s'envien a david@instalberrozpe.com com a email principal confirmat.",
-    "Els textos legals definitius continuen pendents de revisio juridica abans de produccio."
+    "Les teves dades s'utilitzaran per respondre la teva sollicitud per formulari, email, telefon o WhatsApp.",
+    "El responsable del tractament es Instal Berrozpe S.L. i pots ampliar la informacio a la politica de privacitat."
   ],
   "submitLabel": "Enviar consulta",
   "sendingLabel": "Enviant...",

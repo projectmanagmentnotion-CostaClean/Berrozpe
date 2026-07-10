@@ -3,26 +3,37 @@
   "locale": "en",
   "title": "Legal notice",
   "seoTitle": "Legal notice | Instal Berrozpe",
-  "seoDescription": "Multilingual legal notice template pending legal review.",
-  "updatedAtLabel": "Review status",
-  "updatedAtValue": "Pending legal review",
-  "intro": "This legal notice is a multilingual technical base and requires legal validation before publication.",
+  "seoDescription": "Legal and contact details for Instal Berrozpe S.L. for the informational use of instalberrozpe.com.",
+  "updatedAtLabel": "Last updated",
+  "updatedAtValue": "2026-07-10",
+  "intro": "This legal notice governs access to and informational use of the instalberrozpe.com website.",
   "sections": [
     {
-      "heading": "Website ownership",
+      "heading": "Website owner",
       "body": [
-        "Add only owner details that have been confirmed for the new website.",
-        "Do not automatically reuse tax data from the previous site without explicit confirmation."
+        "This website is owned by Instal Berrozpe S.L., tax ID B55326813.",
+        "Legal and tax address: Antiga 68 bajos de Blanes. Public reference address: Carrer de l'Antiga, 68, 17300 Blanes, Girona, Spain.",
+        "Contact and privacy email: david@instalberrozpe.com. Landline: 872 986 161. Mobile and WhatsApp: 676 04 33 89.",
+        "Website domain: instalberrozpe.com."
       ]
     },
     {
-      "heading": "Terms of use",
+      "heading": "Use of the website",
       "body": [
-        "Define access, use and liability conditions according to the real scope of the published website.",
-        "Review external links, forms and third-party resources before fixing the final text."
+        "The website is intended for information and contact regarding Instal Berrozpe services.",
+        "Users agree to use the website and its forms lawfully, responsibly and without causing damage to the site or to third parties.",
+        "External links, where available, are provided only for reference. Instal Berrozpe does not permanently control third-party content."
+      ]
+    },
+    {
+      "heading": "Intellectual property and liability",
+      "body": [
+        "Texts, images, logos, design and other website content are protected under applicable law and may not be reused without authorisation where required.",
+        "Instal Berrozpe may update website content whenever necessary to keep it accurate and useful.",
+        "Continuous availability of the website is not guaranteed, although reasonable measures will be taken to keep it operating correctly."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Pending full legal review before publication."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }

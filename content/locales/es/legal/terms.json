@@ -1,28 +1,36 @@
 {
   "slug": "terminos-y-condiciones",
   "locale": "es",
-  "title": "Términos y condiciones",
-  "seoTitle": "Términos y condiciones | Instal Berrozpe",
-  "seoDescription": "Plantilla multidioma de términos y condiciones pendiente de revisión jurídica.",
-  "updatedAtLabel": "Estado de revisión",
-  "updatedAtValue": "Pendiente de revisión legal",
-  "intro": "Esta plantilla sustituye a los términos heredados y requiere revisión jurídica antes de considerarse definitiva.",
+  "title": "Terminos y condiciones",
+  "seoTitle": "Terminos y condiciones | Instal Berrozpe",
+  "seoDescription": "Terminos y condiciones informativos de Instal Berrozpe para el uso del sitio y la solicitud de presupuestos.",
+  "updatedAtLabel": "Ultima actualizacion",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Estos terminos regulan el uso informativo de la web y el envio de solicitudes de contacto o presupuesto.",
   "sections": [
     {
-      "heading": "Alcance del sitio y de la información",
+      "heading": "Finalidad del sitio",
       "body": [
-        "Aclarar si la web actúa solo como presentación de servicios o si incorpora contratación, reservas o presupuestos vinculantes.",
-        "Evitar trasladar automáticamente condiciones de devoluciones o venta si no aplican a la nueva versión."
+        "La web tiene caracter informativo y sirve como canal de contacto para conocer los servicios de Instal Berrozpe.",
+        "La informacion publicada no constituye por si sola una oferta vinculante ni una contratacion automatica de servicios."
       ]
     },
     {
-      "heading": "Contacto y reclamaciones",
+      "heading": "Solicitudes y presupuestos",
       "body": [
-        "Usar david@instalberrozpe.com como canal confirmado de contacto mientras la revisión legal no indique otro canal específico.",
-        "Revisar los datos de empresa y responsable antes de publicación final."
+        "Cada solicitud, presupuesto o trabajo debe confirmarse de forma individual entre Instal Berrozpe y la persona interesada.",
+        "Los plazos, condiciones tecnicas, disponibilidad y precio se concretaran segun el tipo de trabajo solicitado."
+      ]
+    },
+    {
+      "heading": "Responsabilidad y enlaces",
+      "body": [
+        "Instal Berrozpe procurara que la informacion de la web sea clara y actualizada, pero puede modificarla cuando resulte necesario.",
+        "La web puede incluir enlaces externos de caracter informativo. Instal Berrozpe no asume responsabilidad directa por contenidos o servicios ajenos al propio dominio.",
+        "Cualquier cuestion relacionada con esta web se interpretara conforme a la normativa aplicable."
       ]
     }
   ],
-  "pendingLegalReview": true,
-  "pendingReviewNote": "Pendiente de revisión legal completa antes de publicación."
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
 }
