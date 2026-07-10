@@ -9,6 +9,8 @@
   - `dist/qa-artifacts/staging-dist-3bb759a.zip`
 - Estado de indexacion del staging:
   - `robots.txt` temporal con `Disallow: /`
+- Estado general:
+  - staging apto para produccion
 
 ## Build
 
@@ -26,13 +28,15 @@
   - `200` en `POST` valido
   - `422` en validaciones negativas
 - Estado actual:
-  - `mail()` devuelve exito desde el handler
-  - nueva prueba directa final:
+  - `mail()` funciona en staging
+  - pruebas directas finales:
     - `2026-07-10 10:57:27 GMT`
     - `2026-07-10 11:00:44 GMT`
     - ambas con `200 OK`
-  - recepcion final en inbox de `david@instalberrozpe.com` sigue sin confirmacion verificable
-  - si no llega, no publicar produccion y preparar SMTP
+  - recepcion final confirmada en Gmail de `david@instalberrozpe.com`
+  - llegaron dos correos de prueba
+  - revision de spam deja de ser bloqueo
+  - SMTP queda como mejora futura opcional, no requisito para publicar
 
 ## WhatsApp
 

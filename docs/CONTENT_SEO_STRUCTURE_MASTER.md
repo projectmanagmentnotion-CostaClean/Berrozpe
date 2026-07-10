@@ -29,7 +29,7 @@ Fuente de verdad: `content/shared/contact.json`
 - Direccion confirmada final: `Carrer de l'Antiga, 68`, `17300 Blanes (Girona)`
 - Telefonos confirmados:
   - Movil: `676 04 33 89`
-  - Fijo / telefono-fax detectado: `872 986 161`
+  - Fijo correcto: `872 986 161`
 - Horario confirmado:
   - ES: `Lunes - Viernes 8:00 a 18:00`
   - CA: `Dilluns a Divendres de 8:00 a 18:00`
@@ -42,10 +42,6 @@ Fuente de verdad: `content/shared/contact.json`
 - WhatsApp derivado: `https://wa.me/34676043389?...`
 - URL de Google Maps: `https://www.google.com/maps/search/?api=1&query=Carrer%20de%20l%27Antiga%2C%2068%2C%2017300%20Blanes%2C%20Girona`
 - Destinatario del formulario RGPD / handler PHP: `david@instalberrozpe.com`
-
-Pendiente:
-
-- Confirmar si el numero `872 986 161` debe mostrarse como telefono, fax o ambos.
 
 ## E. Estructura multidioma
 
@@ -174,7 +170,6 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
   - contacto publico limpiado de mensajes internos de validacion
 - Pendientes editoriales:
   - revision legal definitiva de legales
-  - confirmacion final sobre si `872 986 161` debe mostrarse como telefono, fax o ambos
   - revisar si `areaServed` debe omitir `areas cercanas`
 
 ### Keywords principales por idioma
@@ -352,7 +347,7 @@ Pendiente antes de produccion:
 
 - Validacion legal final del texto de privacidad
 - Confirmar si el hosting requiere una cabecera `From` distinta del email destinatario confirmado
-- Confirmar recepcion real del correo en inbox o spam desde SiteGround
+- Repetir una prueba de formulario tras publicar la version final
 
 ## K. Assets
 
@@ -525,18 +520,19 @@ Reduced motion:
   - `.htaccess` sirve assets, sitemap, robots y PHP sin error `500`
   - redirects legacy validados:
     - `/alarmas-y-camaras-2/` -> `/es/servicios/alarmas-y-camaras/`
-    - `/contact/` -> `/en/contact/`
-    - `/inici/` -> `/ca/`
+  - `/contact/` -> `/en/contact/`
+  - `/inici/` -> `/ca/`
   - `form-handler.php` ejecuta PHP real
   - `mail()` devuelve exito a nivel de handler
+  - recepcion real confirmada en `david@instalberrozpe.com`
   - cookies, Google Maps, WhatsApp y resenas visibles en staging
   - no hay iframe de terceros cargado por defecto
 - Matiz SEO de staging:
   - canonical y `hreflang` del HTML siguen apuntando a `https://instalberrozpe.com`
   - Lighthouse SEO baja en staging porque la pagina esta bloqueada temporalmente para indexacion
 - Pendientes:
-  - confirmar recepcion real del correo en inbox o spam
   - revisar si `areaServed` debe mantener `areas cercanas`
+  - repetir una prueba de formulario tras publicar la version final
 
 ## O. Estado de cookies
 

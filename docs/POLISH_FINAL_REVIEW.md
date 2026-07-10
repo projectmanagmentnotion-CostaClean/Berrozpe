@@ -69,7 +69,7 @@
 ## Pendientes
 
 - revision legal definitiva antes de produccion
-- confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
+- `872 986 161` confirmado como telefono fijo correcto
 - Lighthouse final en staging
 - prueba real de `mail()` en SiteGround
 

@@ -45,7 +45,5 @@
     "Blanes",
     "areas cercanas"
   ],
-  "pendingConfirmation": [
-    "Confirmar si el telefono fijo debe seguir mostrandose como telefono, fax o ambos en la nueva web."
-  ]
+  "pendingConfirmation": []
 }

@@ -21,9 +21,9 @@
     "contactDetailsTitle": "Dades de contacte",
     "detectedEmailsLabel": "Email principal",
     "pendingConfirmationLabel": "Pendent de confirmacio",
-    "mobileLabel": "Mòbil directe",
-    "landlineLabel": "Telefon / fax",
+    "mobileLabel": "Mobil directe",
+    "landlineLabel": "Telefon fix",
     "scheduleLabel": "Horari",
-    "addressLabel": "Adreça"
+    "addressLabel": "Adreca"
   }
 }

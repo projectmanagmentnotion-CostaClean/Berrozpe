@@ -86,11 +86,14 @@
   - PHP activo
   - POST valido devuelve exito
   - validaciones negativas devuelven `422`
-  - nuevas pruebas directas finales:
+  - pruebas directas finales:
     - `2026-07-10 10:57:27 GMT`
     - `2026-07-10 11:00:44 GMT`
     - ambas con `200 OK`
-  - la recepcion real en inbox o spam sigue sin confirmacion verificable
+  - correo recibido correctamente en Gmail
+  - asunto confirmado:
+    - `[Instal Berrozpe][ES] Nuevo formulario de contacto`
+  - mail() queda validado en staging real
 
 ## GSAP reversible
 
@@ -148,10 +151,8 @@
 
 - Sustituir placeholders temporales cuando existan assets reales aprobados
 - Validar legal definitivo antes de produccion
-- Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
-- Confirmar recepcion real del formulario en bandeja o spam
-- Si sigue sin confirmacion, aplicar el plan de [SMTP_CONTACT_FORM_PLAN.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/SMTP_CONTACT_FORM_PLAN.md)
 - Revisar si `areaServed` debe omitir `areas cercanas`
+- Repetir una prueba de formulario tras publicar
 
 ## SiteGround staging real
 
@@ -168,7 +169,7 @@
   - `.htaccess` no rompe assets, sitemap, robots ni PHP
   - sitemap y robots accesibles
   - formulario responde correctamente
-  - `mail()` responde con exito a nivel de handler, pero no hay confirmacion verificable de recepcion final
+  - correo recibido correctamente
   - WhatsApp, cookies, Google Maps y resenas visibles
   - Lighthouse real:
     - `/es/`: `97 / 96 / 100 / 66`
@@ -179,4 +180,4 @@
 ## Cierre
 
 - Estado general:
-  - staging real validado, no apto para produccion todavia
+  - staging real validado y apto para publicacion tras revision legal final

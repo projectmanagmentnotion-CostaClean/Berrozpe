@@ -49,34 +49,21 @@ Estado previo ya disponible en local:
 - Si JavaScript esta activo, el formulario envia por `fetch` y recibe JSON.
 - Si JavaScript falla, el navegador puede enviar el `POST` al handler y este redirige a la pagina de contacto localizada con `?status=success` o `?status=error`.
 
-Pruebas obligatorias antes de produccion:
-
-- confirmar recepcion real en `david@instalberrozpe.com`
-- revisar carpeta de spam
-- confirmar si `mail()` funciona correctamente en SiteGround
-- preparar SMTP si `mail()` no entrega de forma fiable
-- Nota:
-  - Astro preview no ejecuta PHP
-  - las pruebas reales del handler deben hacerse en SiteGround o en un Apache/PHP equivalente
-
-Resultado real actual en staging SiteGround:
+Resultado real confirmado en staging SiteGround:
 
 - `HEAD /form-handler.php`: `405 Method Not Allowed`
 - cabecera `X-Httpd-Modphp: 1` presente
 - POST valido: `200 OK`
 - validaciones negativas: `422`
-- `mail()` devuelve exito desde el handler
-- pruebas directas finales adicionales:
+- `mail()` funciona en staging
+- pruebas directas finales:
   - `2026-07-10 10:57:27 GMT`
   - `2026-07-10 11:00:44 GMT`
   - ambas con `200 OK`
-- entrega final en inbox o spam: sigue sin confirmacion verificable
-
-Si la recepcion no puede confirmarse con logs o buzón:
-
-- no publicar produccion
-- priorizar SMTP autenticado sobre `mail()`
-- revisar [SMTP_CONTACT_FORM_PLAN.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/SMTP_CONTACT_FORM_PLAN.md)
+- recepcion final confirmada:
+  - destinatario `david@instalberrozpe.com`
+  - dos correos recibidos en Gmail
+  - asunto recibido: `[Instal Berrozpe][ES] Nuevo formulario de contacto`
 
 ## Verificaciones recomendadas
 
@@ -108,12 +95,19 @@ Si la recepcion no puede confirmarse con logs o buzón:
 - Incidencia conocida:
   - el runner de Lighthouse en Windows puede cerrar con error `EPERM` al borrar su temporal aunque el JSON se haya generado correctamente
 
+## Recomendacion para produccion
+
+- Repetir una prueba real del formulario justo despues de publicar.
+- Si la entrega sigue siendo estable:
+  - mantener `mail()` como solucion valida
+- Si aparece baja entregabilidad, spam o inconsistencias:
+  - aplicar [SMTP_CONTACT_FORM_PLAN.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/SMTP_CONTACT_FORM_PLAN.md) como mejora futura opcional
+
 ## Checklist previo a produccion
 
-- Confirmar que `mail()` funciona en el hosting SiteGround del proyecto.
+- Confirmar que `mail()` sigue funcionando tras publicar.
 - Revisar SPF/DKIM/DMARC del dominio si se cambia el remitente tecnico.
 - Validar los textos legales finales antes de publicar.
-- Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos.
 - Sustituir los placeholders temporales definidos en [ASSET_REQUIREMENTS.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/ASSET_REQUIREMENTS.md) cuando existan assets reales aprobados.
 - Probar enlaces internos desde:
   - home
@@ -125,4 +119,3 @@ Si la recepcion no puede confirmarse con logs o buzón:
 - Probar el banner y modal de cookies en al menos `es` y `en`.
 - Probar ScrollTrigger en desktop y mobile.
 - Usar [STAGING_SITEGROUND_CHECKLIST.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/STAGING_SITEGROUND_CHECKLIST.md) antes de subir a produccion.
-- Mantener el staging no indexable hasta terminar QA y aprobar la publicacion.

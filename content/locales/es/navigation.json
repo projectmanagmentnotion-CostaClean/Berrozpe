@@ -21,9 +21,9 @@
     "contactDetailsTitle": "Datos de contacto",
     "detectedEmailsLabel": "Email principal",
     "pendingConfirmationLabel": "Pendiente de confirmacion",
-    "mobileLabel": "Móvil directo",
-    "landlineLabel": "Teléfono / fax",
+    "mobileLabel": "Movil directo",
+    "landlineLabel": "Telefono fijo",
     "scheduleLabel": "Horario",
-    "addressLabel": "Dirección"
+    "addressLabel": "Direccion"
   }
 }

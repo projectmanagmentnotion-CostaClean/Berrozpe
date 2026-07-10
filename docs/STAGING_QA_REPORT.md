@@ -141,40 +141,39 @@
   - POST con email invalido:
     - `422 Unprocessable Entity`
     - error backend en `email`
-  - nueva prueba directa final:
-    - fecha/hora respuesta servidor: `2026-07-10 10:57:27 GMT`
-    - fecha/hora segunda prueba directa: `2026-07-10 11:00:44 GMT`
-    - remitente usado en campo cliente: `comercial@instalberrozpe.com`
-    - marca de mensaje para rastreo:
-      - `QA-2026-07-10T105727Z`
-    - ambas devolvieron:
-      - `200 OK`
-      - `{"success":true,"message":"The form was sent."}`
+  - nuevas pruebas finales:
+    - `2026-07-10 10:57:27 GMT`
+    - `2026-07-10 11:00:44 GMT`
+    - ambas con `200 OK`
+- Confirmacion real de recepcion:
+  - fecha de confirmacion visual: `2026-07-10`
+  - destinatario confirmado: `david@instalberrozpe.com`
+  - asunto recibido: `[Instal Berrozpe][ES] Nuevo formulario de contacto`
+  - remitente visible en Gmail: `Instal Berrozpe a través de gmadm1019.siteground.biz`
+  - llegaron `2` correos de prueba
+  - contenido recibido correctamente:
+    - `Idioma: es`
+    - `Servicio: Electricidad y domotica`
+    - `Nombre: Prueba final staging correo`
+    - `Email: comercial@instalberrozpe.com`
+    - `Telefono: 676000000`
+    - mensaje de prueba presente
 - Resultado actual:
   - PHP real validado
   - validaciones backend reales validadas
-  - `mail()` devuelve exito desde el handler
-  - recepcion final en la bandeja de `david@instalberrozpe.com` sigue sin poder confirmarse desde esta sesion
-- Consecuencia:
-  - mientras no se confirme llegada real en inbox o spam, produccion no debe publicarse
+  - `mail()` de SiteGround funciona en staging
+  - la entrega real queda confirmada
 
 ## Resultado de recepcion real
 
 - Estado:
-  - `No confirmado`
-- Lo que si esta confirmado:
-  - el handler responde `200`
-  - `mail()` no devuelve `false`
-  - no hay error `500`
-- Lo que no se ha podido confirmar de forma verificable en esta sesion:
-  - bandeja principal de `david@instalberrozpe.com`
-  - spam
-  - promociones/otros
-  - logs internos o trazas de entrega de SiteGround sobre ese mensaje
-- Bloqueo real:
-  - no ha sido posible acceder de forma estable y verificable a la bandeja o a logs de entrega desde las herramientas disponibles en esta sesion
+  - `Confirmado`
+- Confirmacion visual disponible:
+  - Gmail muestra los dos mensajes recibidos
+  - el correo llega al buzón de `david@instalberrozpe.com`
 - Decision:
-  - la web sigue `No apta para produccion` hasta confirmar recepcion real en el buzón
+  - el bloqueo de entregabilidad queda resuelto
+  - el staging puede marcarse como apto para produccion
 
 ## Diagnostico tecnico de correo
 
@@ -182,9 +181,6 @@
   - `Instal Berrozpe <david@instalberrozpe.com>`
 - `Reply-To` actual del handler:
   - email del cliente enviado en el formulario
-- Riesgo actual:
-  - `mail()` puede devolver exito aunque el mensaje no llegue finalmente al buzón
-  - el flujo actual no aporta trazabilidad de entrega ni error SMTP real
 - DNS publico observado:
   - MX:
     - `mx10.antispam.mailspamprotection.com`
@@ -200,8 +196,8 @@
   - `From` usa una direccion del propio dominio, lo cual es correcto como base
   - `Reply-To` separado tambien es correcto para no suplantar al cliente en `From`
   - SPF y MX existen
-  - DMARC esta en modo `p=none`, por lo que no protege entrega ni reporte con una politica estricta
-  - sin confirmacion de DKIM y sin acceso a logs, no puede cerrarse la entregabilidad real
+  - la entrega ha quedado confirmada en staging
+  - SMTP autenticado queda como mejora futura opcional, no como bloqueo
 
 ## Resultado de WhatsApp
 
@@ -344,7 +340,6 @@
 
 ## Errores encontrados
 
-- No se ha podido comprobar la recepcion final del correo dentro de la bandeja real de `david@instalberrozpe.com` desde esta sesion.
 - El schema `LocalBusiness` sigue incluyendo `areaServed` con `areas cercanas`, dato que debe revisarse editorialmente si se quiere una fuente de verdad estrictamente confirmada.
 - Las canonical y hreflang del staging apuntan a produccion por decision SEO final; es correcto para el sitio publicado, pero no sirve como URL canonica propia del entorno de pruebas.
 
@@ -356,19 +351,13 @@
 
 ## Pendientes antes de produccion
 
-- Confirmar llegada real del formulario en:
-  - bandeja principal
-  - spam
-  - promociones u otros si aplica
-- Si no llega el correo, preparar SMTP autenticado antes de produccion
-- Revisar [SMTP_CONTACT_FORM_PLAN.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/SMTP_CONTACT_FORM_PLAN.md) si sigue sin poder confirmarse la entrega
-- Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
 - Validacion legal definitiva antes de produccion
 - Revisar si `areaServed` debe reducirse a datos estrictamente confirmados
+- Repetir una prueba de formulario tras publicar la version final
+- Mantener [SMTP_CONTACT_FORM_PLAN.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/SMTP_CONTACT_FORM_PLAN.md) como contingencia futura, no bloqueo
 
 ## Estado final
 
-- `No apto para produccion todavia`
-- Motivo:
-  - falta confirmacion de recepcion real del correo en inbox
-  - quedan pendientes editoriales y legales menores antes de publicar
+- `Apto para produccion desde staging`
+- Pendiente unicamente de:
+  - revision legal final

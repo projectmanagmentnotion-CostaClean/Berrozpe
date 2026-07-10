@@ -100,7 +100,7 @@
 ## Pendientes
 
 - Revision legal definitiva de las paginas legales.
-- Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos.
+- `872 986 161` confirmado como telefono fijo correcto.
 - Ejecutar Lighthouse real en staging.
 
 ## Estado final

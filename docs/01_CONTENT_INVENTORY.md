@@ -103,7 +103,7 @@ Estos items aparecen como bloques internos de paginas reales, pero no como pagin
 ### Contenido de contacto
 
 - Hay formulario WPForms.
-- Se publican direccion, horario, movil, telefono/fax y email.
+- Se publican direccion, horario, movil, telefono fijo y email.
 - Se enlaza a WhatsApp e Instagram.
 
 ## Datos de contacto detectados
@@ -117,7 +117,7 @@ Estos items aparecen como bloques internos de paginas reales, pero no como pagin
 | Direccion | `C/ Antiga nº 68, Baixos de Blanes (Girona)` | Confirmado en contacto |
 | Direccion con CP | `C/ Antiga n°68 baixos, 17300 Blanes (Girona)` | Confirmado en terminos |
 | Movil | `676 04 33 89` | Confirmado |
-| Telefono/fax | `872 986 161` | Confirmado |
+| Telefono fijo | `872 986 161` | Confirmado |
 | Horario ES | `Lunes - Viernes 8:00 a 18:00` | Confirmado |
 | Horario CAT | `Dilluns a Divendres de 8:00 a 18:00` | Confirmado |
 | WhatsApp | `https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%20quiero%20informacion%20😁` | Confirmado |

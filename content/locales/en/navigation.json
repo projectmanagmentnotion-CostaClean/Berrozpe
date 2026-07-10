@@ -22,7 +22,7 @@
     "detectedEmailsLabel": "Primary email",
     "pendingConfirmationLabel": "Pending confirmation",
     "mobileLabel": "Direct mobile",
-    "landlineLabel": "Phone / fax",
+    "landlineLabel": "Landline",
     "scheduleLabel": "Opening hours",
     "addressLabel": "Address"
   }

@@ -1,34 +1,35 @@
 # SMTP Contact Form Plan
 
-## Problema detectado
+## Estado actual
+
+- Este documento pasa a ser un plan de contingencia y mejora futura.
+- No bloquea la publicacion.
+- `mail()` ya quedo validado en staging real con entrega confirmada a `david@instalberrozpe.com`.
+
+## Situacion confirmada
 
 - El formulario de staging en SiteGround devuelve `200 OK`.
 - `mail()` no devuelve `false`.
 - No hay error `500` en el handler.
-- Aun asi, la entrega real a `david@instalberrozpe.com` no ha podido confirmarse de forma verificable desde esta sesion.
-- Con este estado, no es seguro publicar produccion apoyandose solo en `mail()`.
+- La entrega real fue confirmada visualmente en Gmail:
+  - destinatario: `david@instalberrozpe.com`
+  - asunto: `[Instal Berrozpe][ES] Nuevo formulario de contacto`
+  - llegaron dos correos de prueba
 
-## Lectura tecnica
+## Cuando aplicar este plan
 
-- El handler actual usa:
-  - `From: Instal Berrozpe <david@instalberrozpe.com>`
-  - `Reply-To: {email del cliente}`
-- Esto es razonable como punto de partida.
-- El problema no es de validacion HTTP ni de respuesta PHP.
-- El problema es de trazabilidad y confianza de entrega:
-  - `mail()` puede aceptar la llamada local y aun asi no garantizar inbox final
-  - el flujo actual no expone logs SMTP ni identificador de entrega
+- Solo si en produccion aparece alguno de estos sintomas:
+  - baja entregabilidad
+  - mensajes en spam de forma recurrente
+  - inconsistencias entre `mail()` y la recepcion real
+  - necesidad de mayor trazabilidad tecnica
 
-## Opcion recomendada
+## Opcion recomendada si hiciera falta
 
 - Sustituir el envio por `mail()` por SMTP autenticado del propio dominio en SiteGround.
 - Mantener:
   - `Reply-To` con el email del cliente
   - destinatario final `david@instalberrozpe.com`
-- Beneficio:
-  - trazabilidad mas clara
-  - menor dependencia del wrapper local de `mail()`
-  - comportamiento mas predecible en produccion
 
 ## Cuenta remitente recomendada del dominio
 
@@ -53,7 +54,7 @@
   - `Reply-To`: email saneado del cliente
   - `Content-Type: text/plain; charset=UTF-8`
 
-## Cambios recomendados en codigo
+## Cambios recomendados en codigo si se activa
 
 - Mantener todas las validaciones actuales:
   - privacidad
@@ -81,7 +82,7 @@
 - Si no se protege bien la configuracion:
   - puede exponerse una credencial sensible
 
-## Pasos antes de produccion
+## Pasos si se necesitara en el futuro
 
 1. Confirmar qué cuenta remitente del dominio se va a usar.
 2. Obtener desde SiteGround la configuracion exacta de `Mail Configuration`.
@@ -93,4 +94,4 @@
    - recepcion en bandeja principal o spam
    - remitente correcto
    - `Reply-To` correcto
-7. Solo entonces reconsiderar el estado de produccion.
+7. Solo entonces sustituir `mail()` en produccion.
