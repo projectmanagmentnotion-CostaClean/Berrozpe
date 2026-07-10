@@ -27,7 +27,11 @@
   - `422` en validaciones negativas
 - Estado actual:
   - `mail()` devuelve exito desde el handler
-  - recepcion final en inbox de `david@instalberrozpe.com` pendiente de comprobacion manual
+  - nueva prueba directa final:
+    - `2026-07-10 10:57:27 GMT`
+    - `2026-07-10 11:00:44 GMT`
+    - ambas con `200 OK`
+  - recepcion final en inbox de `david@instalberrozpe.com` sigue sin confirmacion verificable
   - si no llega, no publicar produccion y preparar SMTP
 
 ## WhatsApp

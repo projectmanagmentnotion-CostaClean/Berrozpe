@@ -141,13 +141,67 @@
   - POST con email invalido:
     - `422 Unprocessable Entity`
     - error backend en `email`
+  - nueva prueba directa final:
+    - fecha/hora respuesta servidor: `2026-07-10 10:57:27 GMT`
+    - fecha/hora segunda prueba directa: `2026-07-10 11:00:44 GMT`
+    - remitente usado en campo cliente: `comercial@instalberrozpe.com`
+    - marca de mensaje para rastreo:
+      - `QA-2026-07-10T105727Z`
+    - ambas devolvieron:
+      - `200 OK`
+      - `{"success":true,"message":"The form was sent."}`
 - Resultado actual:
   - PHP real validado
   - validaciones backend reales validadas
   - `mail()` devuelve exito desde el handler
-  - recepcion final en la bandeja de `david@instalberrozpe.com` sigue pendiente de comprobacion manual fuera de esta sesion
+  - recepcion final en la bandeja de `david@instalberrozpe.com` sigue sin poder confirmarse desde esta sesion
 - Consecuencia:
   - mientras no se confirme llegada real en inbox o spam, produccion no debe publicarse
+
+## Resultado de recepcion real
+
+- Estado:
+  - `No confirmado`
+- Lo que si esta confirmado:
+  - el handler responde `200`
+  - `mail()` no devuelve `false`
+  - no hay error `500`
+- Lo que no se ha podido confirmar de forma verificable en esta sesion:
+  - bandeja principal de `david@instalberrozpe.com`
+  - spam
+  - promociones/otros
+  - logs internos o trazas de entrega de SiteGround sobre ese mensaje
+- Bloqueo real:
+  - no ha sido posible acceder de forma estable y verificable a la bandeja o a logs de entrega desde las herramientas disponibles en esta sesion
+- Decision:
+  - la web sigue `No apta para produccion` hasta confirmar recepcion real en el buzón
+
+## Diagnostico tecnico de correo
+
+- `From` actual del handler:
+  - `Instal Berrozpe <david@instalberrozpe.com>`
+- `Reply-To` actual del handler:
+  - email del cliente enviado en el formulario
+- Riesgo actual:
+  - `mail()` puede devolver exito aunque el mensaje no llegue finalmente al buzón
+  - el flujo actual no aporta trazabilidad de entrega ni error SMTP real
+- DNS publico observado:
+  - MX:
+    - `mx10.antispam.mailspamprotection.com`
+    - `mx20.antispam.mailspamprotection.com`
+    - `mx30.antispam.mailspamprotection.com`
+  - SPF:
+    - `v=spf1 +a +mx +ip4:34.175.144.49 include:instalberrozpe.com.spf.auto.dnssmarthost.net ~all`
+  - DMARC:
+    - `v=DMARC1; p=none; aspf=r; adkim=r;`
+  - DKIM:
+    - no se ha podido confirmar el selector publico desde esta sesion
+- Lectura tecnica:
+  - `From` usa una direccion del propio dominio, lo cual es correcto como base
+  - `Reply-To` separado tambien es correcto para no suplantar al cliente en `From`
+  - SPF y MX existen
+  - DMARC esta en modo `p=none`, por lo que no protege entrega ni reporte con una politica estricta
+  - sin confirmacion de DKIM y sin acceso a logs, no puede cerrarse la entregabilidad real
 
 ## Resultado de WhatsApp
 
@@ -307,6 +361,7 @@
   - spam
   - promociones u otros si aplica
 - Si no llega el correo, preparar SMTP autenticado antes de produccion
+- Revisar [SMTP_CONTACT_FORM_PLAN.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/SMTP_CONTACT_FORM_PLAN.md) si sigue sin poder confirmarse la entrega
 - Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
 - Validacion legal definitiva antes de produccion
 - Revisar si `areaServed` debe reducirse a datos estrictamente confirmados

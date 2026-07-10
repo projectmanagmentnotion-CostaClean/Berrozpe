@@ -66,7 +66,17 @@ Resultado real actual en staging SiteGround:
 - POST valido: `200 OK`
 - validaciones negativas: `422`
 - `mail()` devuelve exito desde el handler
-- entrega final en inbox o spam: pendiente de comprobacion manual
+- pruebas directas finales adicionales:
+  - `2026-07-10 10:57:27 GMT`
+  - `2026-07-10 11:00:44 GMT`
+  - ambas con `200 OK`
+- entrega final en inbox o spam: sigue sin confirmacion verificable
+
+Si la recepcion no puede confirmarse con logs o buzón:
+
+- no publicar produccion
+- priorizar SMTP autenticado sobre `mail()`
+- revisar [SMTP_CONTACT_FORM_PLAN.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/SMTP_CONTACT_FORM_PLAN.md)
 
 ## Verificaciones recomendadas
 
