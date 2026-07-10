@@ -3,11 +3,13 @@
 ## Fecha
 
 - `2026-07-09`
+- `2026-07-10`
 
 ## Commit auditado
 
 - Base auditada: `73bbe13`
 - Estado validado: working tree posterior con ajustes finales de copy, conversion local, WhatsApp y Google Maps
+- Ultimo commit validado para pre-staging SiteGround: `3bb759a`
 
 ## Build
 
@@ -15,6 +17,8 @@
 - Resultado: correcto
 - Lint:
   - no existe script de `lint` en `package.json`
+- Paquete de staging local:
+  - `dist/qa-artifacts/staging-dist-3bb759a.zip`
 
 ## Paginas generadas
 
@@ -127,3 +131,5 @@
 - Confirmar si `872 986 161` debe mostrarse como telefono, fax o ambos
 - Ejecutar Lighthouse real en staging
 - Probar `mail()` en el hosting de SiteGround
+- Provisionar staging real de SiteGround con SSL y proteccion temporal
+- Validar `.htaccess` y formulario en Apache/PHP real

@@ -1,10 +1,19 @@
 # Staging SiteGround Checklist
 
+## Estado actual
+
+- Ultima validacion local equivalente: `2026-07-10`
+- Commit base revisado: `3bb759a`
+- SiteGround staging real: pendiente de provision
+- Paquete local listo:
+  - `dist/qa-artifacts/staging-dist-3bb759a.zip`
+
 ## Build
 
 - Ejecutar `npm run build`
 - Confirmar 45 paginas generadas
 - Confirmar presencia de `dist/form-handler.php`, `dist/.htaccess`, `dist/robots.txt`, `dist/sitemap-index.xml` y `dist/sitemap-0.xml`
+- Confirmado en la validacion local del `2026-07-10`
 
 ## Contacto y conversion
 
@@ -13,6 +22,9 @@
 - Confirmar si SiteGround acepta `mail()`
 - Valorar SMTP si `mail()` falla
 - Verificar fallback sin JS
+- Estado actual:
+  - pendiente de SiteGround real
+  - `php` no disponible en local y Astro preview no ejecuta el handler
 
 ## WhatsApp
 
@@ -38,6 +50,9 @@
 - Verificar `hreflang`
 - Verificar sitemap y `robots.txt`
 - Verificar ausencia de `Review` schema individual
+- Estado local actual:
+  - `canonical` y `hreflang` correctos en preview
+  - sitemap y robots correctos sin URLs localhost
 
 ## Cookies
 
@@ -45,3 +60,6 @@
 - Rechazo tan facil como aceptacion
 - Modal configurable
 - Enlace permanente para reabrir preferencias
+- Estado local actual:
+  - banner y controles presentes
+  - validacion final de persistencia en staging real pendiente

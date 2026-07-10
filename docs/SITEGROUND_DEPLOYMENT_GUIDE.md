@@ -23,6 +23,14 @@ La salida final queda en `dist/`.
 4. Probar redirects definidos en [04_REDIRECTS.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/04_REDIRECTS.md).
 5. Validar cookies, formulario, ScrollTrigger e internal linking antes de tocar produccion.
 
+Estado previo ya disponible en local:
+
+- Build final verificado el `2026-07-10`
+- Paquete listo para subida:
+  - `dist/qa-artifacts/staging-dist-3bb759a.zip`
+- Commit base validado:
+  - `3bb759a`
+
 ## Handler PHP del formulario
 
 - `public/form-handler.php` se copia a `dist/form-handler.php` durante la build.
@@ -44,6 +52,9 @@ Pruebas obligatorias antes de produccion:
 - revisar carpeta de spam
 - confirmar si `mail()` funciona correctamente en SiteGround
 - preparar SMTP si `mail()` no entrega de forma fiable
+- Nota:
+  - Astro preview no ejecuta PHP
+  - las pruebas reales del handler deben hacerse en SiteGround o en un Apache/PHP equivalente
 
 ## Verificaciones recomendadas
 
@@ -62,6 +73,12 @@ Pruebas obligatorias antes de produccion:
 - Los enlaces internos llevan al idioma correcto.
 - ScrollTrigger reversible no deja bloques invisibles al subir y bajar.
 - El menu movil sigue usable con y sin JS.
+- Lighthouse local ya ejecutado sobre preview:
+  - `/es/`: `98 / 96 / 100 / 100`
+  - `/es/contacto/`: `98 / 96 / 100 / 100`
+  - `/es/servicios/electricidad-y-domotica/`: `98 / 96 / 100 / 100`
+- Incidencia conocida:
+  - el runner de Lighthouse en Windows puede cerrar con error `EPERM` al borrar su temporal aunque el JSON se haya generado correctamente
 
 ## Checklist previo a produccion
 

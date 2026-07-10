@@ -484,6 +484,31 @@ Reduced motion:
 - Ejecutar backup previo en SiteGround
 - Alta y validacion en Search Console
 
+## N.1 Estado pre-staging SiteGround
+
+- Fecha: `2026-07-10`
+- Commit verificado:
+  - `3bb759a`
+- Build final:
+  - correcto
+  - 45 paginas generadas
+  - sin script de `lint` en `package.json`
+- Paquete listo para subida:
+  - `dist/qa-artifacts/staging-dist-3bb759a.zip`
+- Validacion local equivalente realizada en:
+  - `http://127.0.0.1:4323`
+- Resultado local:
+  - rutas principales cargan
+  - `canonical` y `hreflang` correctos
+  - sin overflow horizontal en los breakpoints criticos revisados
+  - sitemap y robots correctos
+  - WhatsApp, mapa, cookies y reseñas visibles
+- Bloqueos reales:
+  - staging SiteGround aun no provisionado
+  - `mail()` no validado
+  - `.htaccess` no validado en Apache real
+  - redirects legacy pendientes de prueba real
+
 ## O. Estado de cookies
 
 - Politica de cookies publicada por idioma en `content/locales/{locale}/legal/cookies.json`
