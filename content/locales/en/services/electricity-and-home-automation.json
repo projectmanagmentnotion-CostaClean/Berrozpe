@@ -5,9 +5,9 @@
   "shortTitle": "Electrical and home automation",
   "seoTitle": "Electrical and home automation in Blanes | Instal Berrozpe",
   "seoDescription": "Electrical and smart home installations in Blanes and Girona with Instal Berrozpe. Electrical work, automation, solar PV and energy advice.",
-  "heroTitle": "Electrical and home automation for installations and smart control",
-  "intro": "Service line focused on electrical installations and automation solutions for homes or businesses in Blanes and Girona.",
-  "summary": "Electrical installations, home automation, solar photovoltaic systems and energy advice within one technical line.",
+  "heroTitle": "Electrical and home automation for homes and businesses",
+  "intro": "Electrical installations and automation for homes or businesses in Blanes and Girona.",
+  "summary": "Electrical installations, home automation, solar photovoltaic systems and energy advice in one technical line.",
   "includes": {
     "title": "Includes",
     "items": [
@@ -56,8 +56,8 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "title": "Tell us which electrical or smart home installation you need to review",
-    "body": "If you want to assess an installation, an automation setup or a solar PV related enquiry, you can write to Instal Berrozpe and explain the case clearly.",
+    "title": "Tell us what you need in electrical or home automation",
+    "body": "If you need an installation, automation work or a related enquiry, write to us and we will guide you.",
     "label": "Request a quote",
     "href": "/en/contact/",
     "secondaryLabel": "View services",

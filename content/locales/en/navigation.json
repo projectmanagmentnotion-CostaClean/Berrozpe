@@ -8,7 +8,7 @@
     { "id": "language", "label": "Language", "href": null }
   ],
   "ui": {
-    "serviceLink": "View details",
+    "serviceLink": "View service",
     "serviceEyebrow": "Service",
     "legalEyebrow": "Legal",
     "legalSection": "Legal",

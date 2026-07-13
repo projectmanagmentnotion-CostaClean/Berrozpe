@@ -3,8 +3,8 @@
   "hero": {
     "sectionId": "hero",
     "eyebrow": "Installacions a Blanes i Girona",
-    "title": "Electricitat, lampisteria, climatitzacio, alarmes i cameres per a llar i negoci",
-    "body": "Tres linies clares: electricitat i domotica, lampisteria i climatitzacio, i alarmes i cameres. Contacte directe des de Blanes per telefon, WhatsApp, email o formulari.",
+    "title": "Installacions per a llar i negoci a Blanes",
+    "body": "Electricitat i domotica, lampisteria i climatitzacio, alarmes i cameres. Contacte directe per telefon, WhatsApp, email o formulari.",
     "primaryCtaLabel": "Veure serveis",
     "primaryCtaHref": "/ca/serveis/",
     "secondaryCtaLabel": "Demanar pressupost",
@@ -13,8 +13,8 @@
   "servicesOverview": {
     "sectionId": "services-overview",
     "eyebrow": "Serveis",
-    "title": "Tres serveis principals per a installacions a Blanes",
-    "body": "La web s'organitza en tres arees: electricitat i domotica, lampisteria i climatitzacio, i alarmes i cameres.",
+    "title": "Tres serveis clars per comencar",
+    "body": "Tria la linia que encaixa millor amb la teva consulta i t'orientem des d'aqui.",
     "items": [
       "Electricitat i domotica",
       "Lampisteria i climatitzacio",
@@ -24,32 +24,30 @@
   "whyChooseUs": {
     "sectionId": "why-choose-us",
     "eyebrow": "Sobre nosaltres",
-    "title": "Empresa tecnica propera i contacte directe",
-    "body": "Instal Berrozpe treballa amb tres linies tecniques connectades i un contacte clar per a llar i negoci.",
+    "title": "Servei tecnic clar i tracte directe",
+    "body": "Tres arees connectades i contacte directe des de Blanes per a llar i negoci.",
     "items": [
-      "Tres linies tecniques ben definides.",
+      "Tres arees tecniques ben definides.",
       "Contacte directe per telefon, WhatsApp, email i formulari.",
-      "Atencio per a llar i negoci.",
-      "Recorregut clar des de la consulta fins a l'actuacio."
+      "Atencio per a llar i negoci."
     ]
   },
   "process": {
     "sectionId": "process",
     "eyebrow": "Proces",
-    "title": "Del primer contacte a la intervencio",
-    "body": "Expliques la necessitat, es revisa el servei adequat i es coordina l'actuacio.",
+    "title": "Com treballem",
+    "body": "Ens expliques que necessites i veiem amb tu el seguent pas.",
     "items": [
       "Expliques la necessitat per telefon, WhatsApp o formulari.",
-      "Es revisa el servei que millor encaixa.",
-      "Es coordina la installacio o l'actuacio tecnica.",
-      "Queda obert el seguiment de la consulta."
+      "Revisem el servei que millor encaixa.",
+      "Coordinem l'actuacio o el pressupost."
     ]
   },
   "contactCta": {
     "sectionId": "contact-cta",
     "eyebrow": "Contacte",
-    "title": "Parla amb Instal Berrozpe",
-    "body": "Contacte directe per a electricitat i domotica, lampisteria i climatitzacio, o alarmes i cameres.",
+    "title": "Contacta amb Instal Berrozpe",
+    "body": "Truca'ns, escriu-nos per WhatsApp o envia el formulari.",
     "primaryCtaLabel": "Telefon directe",
     "secondaryCtaLabel": "Email principal"
   },

@@ -2,17 +2,18 @@
   "locale": "ca",
   "home": {
     "eyebrow": "Recorregut recomanat",
-    "title": "Comenca pel servei adequat",
-    "body": "Si ja saps que necessites, entra al servei. Si no, passa a contacte o revisa l'empresa.",
+    "title": "Tria servei o passa a contacte",
+    "body": "Si ja saps que necessites, entra al servei. Si no, t'orientem des de contacte.",
     "serviceListTitle": "Servei",
     "trustLabel": "Coneixer l'empresa",
-    "contactLabel": "Demanar orientacio"
+    "contactLabel": "Contactar"
   },
   "servicesIndex": {
     "eyebrow": "Seguent pas",
-    "title": "Compara serveis i tria com contactar",
-    "body": "Cada fitxa resumeix una linia tecnica. Si prefereixes explicar el cas, passa a contacte.",
+    "title": "Tres serveis i una manera clara de contactar",
+    "body": "Cada fitxa resumeix una linia tecnica. Si prefereixes explicar el cas directament, passa a contacte o WhatsApp.",
     "contactLabel": "Demanar pressupost",
+    "whatsappLabel": "Parlar per WhatsApp",
     "aboutLabel": "Veure sobre nosaltres"
   },
   "serviceDetail": {
@@ -33,7 +34,8 @@
       "eyebrow": "Consulta",
       "title": "Si necessites una valoracio mes precisa, passa a contacte",
       "body": "Quan el cas depen de l'espai o de diversos serveis, convé explicar-lo per telefon, WhatsApp o formulari.",
-      "contactLabel": "Anar a contacte"
+      "contactLabel": "Anar a contacte",
+      "whatsappLabel": "Parlar per WhatsApp"
     }
   },
   "about": {
@@ -47,9 +49,10 @@
   "contact": {
     "eyebrow": "Abans d'escriure",
     "title": "Si encara dubtes entre serveis, aqui tens una ruta rapida",
-    "body": "Revisa els serveis, coneix millor l'empresa o truca directament.",
+    "body": "Revisa els serveis, coneix millor l'empresa, mira les ressenyes o truca directament.",
     "servicesLabel": "Veure serveis",
     "aboutLabel": "Veure sobre nosaltres",
-    "phoneLabel": "Trucar ara"
+    "phoneLabel": "Trucar ara",
+    "reviewsLabel": "Veure ressenyes"
   }
 }

@@ -2,17 +2,18 @@
   "locale": "en",
   "home": {
     "eyebrow": "Recommended route",
-    "title": "Start with the right service",
-    "body": "If you already know what you need, open the service. If not, go to contact or review the company first.",
+    "title": "Choose a service or go to contact",
+    "body": "If you already know what you need, open the service. If not, we can guide you from the contact page.",
     "serviceListTitle": "Service",
     "trustLabel": "About the company",
-    "contactLabel": "Request guidance"
+    "contactLabel": "Contact us"
   },
   "servicesIndex": {
     "eyebrow": "Next step",
-    "title": "Compare services and choose how to contact us",
-    "body": "Each page summarises one technical line. If you prefer, go straight to contact.",
+    "title": "Three services and a clear way to contact us",
+    "body": "Each page summarises one technical line. If you prefer to explain the case directly, go to contact or WhatsApp.",
     "contactLabel": "Request a quote",
+    "whatsappLabel": "Talk on WhatsApp",
     "aboutLabel": "About us"
   },
   "serviceDetail": {
@@ -33,7 +34,8 @@
       "eyebrow": "Enquiry",
       "title": "If you need a more precise review, go to contact",
       "body": "When the answer depends on the space or on several services, it is best to explain the case by phone, WhatsApp or form.",
-      "contactLabel": "Go to contact"
+      "contactLabel": "Go to contact",
+      "whatsappLabel": "Talk on WhatsApp"
     }
   },
   "about": {
@@ -47,9 +49,10 @@
   "contact": {
     "eyebrow": "Before writing",
     "title": "If you are still deciding between services, here is a quick route",
-    "body": "Review the services, learn more about the company or call directly.",
+    "body": "Review the services, learn more about the company, check the reviews or call directly.",
     "servicesLabel": "View services",
     "aboutLabel": "About us",
-    "phoneLabel": "Call now"
+    "phoneLabel": "Call now",
+    "reviewsLabel": "View reviews"
   }
 }

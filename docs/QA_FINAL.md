@@ -1,5 +1,18 @@
 # QA Final
 
+## Addendum 2026-07-13
+
+- Sprint final de copy y usabilidad ejecutado sobre la base publicada.
+- Home compactada para lectura mas rapida y sin FAQ redundante.
+- Detalle de servicio sin bloque visual repetido de beneficios.
+- `BigTextBlock` ajustado para emitir `h1` real en paginas principales no-home.
+- CTA de cards, contacto y bloques de conversion afinados en `es`, `ca`, `en` y `de`.
+- Validacion local nueva:
+  - `npm run build` correcto
+  - `45` paginas generadas
+  - sin overflow horizontal en `390x844` y `1440x900` para `/es/`, `/es/servicios/`, `/es/servicios/electricidad-y-domotica/`, `/es/contacto/`, `/ca/`, `/en/` y `/de/`
+  - `h1` presente en servicios, contacto, detalle de servicio y legales tras el ajuste
+
 ## Fecha
 
 - `2026-07-09`

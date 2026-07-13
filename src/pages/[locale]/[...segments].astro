@@ -171,6 +171,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
             number="01"
             title={navigation.items.find((item) => item.id === 'services')?.label ?? home.servicesOverview.title}
             body={home.servicesOverview.body}
+            headingTag="h1"
           />
         </div>
         <div class="mt-10 grid gap-5 lg:grid-cols-3" data-animate-group="services-index">
@@ -221,6 +222,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
             title={navigation.items.find((item) => item.id === 'about')?.label ?? home.whyChooseUs.title}
             body={home.whyChooseUs.body}
             titleClassName="max-w-4xl"
+            headingTag="h1"
           />
         </Container>
       </section>
@@ -274,6 +276,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
             title={navigation.items.find((item) => item.id === 'contact')?.label ?? home.contactCta.title}
             body={home.contactCta.body}
             titleClassName="max-w-4xl"
+            headingTag="h1"
           />
         </Container>
       </section>
@@ -332,6 +335,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
               title={service.heroTitle}
               body={service.intro}
               titleClassName="max-w-4xl"
+              headingTag="h1"
             />
           </div>
             <VisualAsset
@@ -367,19 +371,6 @@ const whatsAppHref = buildWhatsAppUrl(locale);
               </ul>
             </article>
           </div>
-        </Container>
-      </section>
-
-      <section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
-        <Container>
-          <VisualAsset
-            asset={getServiceVisual(service.serviceId)}
-            eyebrow={navigation.ui.benefitsTitle}
-            title={service.benefits.title}
-            body={service.benefits.items.join(' ')}
-            compact={true}
-            className="min-h-[20rem] sm:min-h-[24rem]"
-          />
         </Container>
       </section>
 
@@ -479,10 +470,10 @@ const whatsAppHref = buildWhatsAppUrl(locale);
             <BigTextBlock
               eyebrow={internalLinksContent.serviceDetail.journey.eyebrow}
               number="07"
-              title={service.cta.title}
-              body={service.cta.body}
-              titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl"
-            />
+            title={service.cta.title}
+            body={service.cta.body}
+            titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl"
+          />
             <div class="mt-8 flex flex-wrap gap-3">
               <a class="inline-flex min-h-12 items-center rounded-full border border-transparent bg-[var(--color-accent)] px-6 py-3.5 text-sm font-medium text-[var(--color-ink)] transition hover:bg-[var(--color-accent-soft)]" href={service.cta.href}>
                 {service.cta.label}
@@ -510,6 +501,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
             title={legalPage.title}
             body={legalPage.intro}
             titleClassName="max-w-4xl"
+            headingTag="h1"
           />
 
           <p class="text-sm uppercase tracking-[0.18em] text-[var(--color-text-soft)]">{legalPage.updatedAtLabel}: {legalPage.updatedAtValue}</p>

@@ -2,17 +2,18 @@
   "locale": "es",
   "home": {
     "eyebrow": "Recorrido recomendado",
-    "title": "Empieza por el servicio adecuado",
-    "body": "Si ya sabes que necesitas, entra en el servicio. Si no, pasa a contacto o revisa la empresa.",
+    "title": "Elige servicio o pasa a contacto",
+    "body": "Si ya sabes que necesitas, entra en el servicio. Si no, te orientamos desde contacto.",
     "serviceListTitle": "Servicio",
     "trustLabel": "Conocer la empresa",
-    "contactLabel": "Pedir orientacion"
+    "contactLabel": "Contactar"
   },
   "servicesIndex": {
     "eyebrow": "Siguiente paso",
-    "title": "Compara servicios y elige como contactar",
-    "body": "Cada ficha resume una linea tecnica. Si prefieres explicar el caso, pasa a contacto.",
+    "title": "Tres servicios y una forma clara de contactar",
+    "body": "Cada ficha resume una linea tecnica. Si prefieres explicar el caso directamente, pasa a contacto o WhatsApp.",
     "contactLabel": "Solicitar presupuesto",
+    "whatsappLabel": "Hablar por WhatsApp",
     "aboutLabel": "Ver sobre nosotros"
   },
   "serviceDetail": {
@@ -33,7 +34,8 @@
       "eyebrow": "Consulta",
       "title": "Si necesitas una valoracion mas precisa, pasa a contacto",
       "body": "Cuando el caso depende del espacio o de varios servicios, conviene explicarlo por telefono, WhatsApp o formulario.",
-      "contactLabel": "Ir a contacto"
+      "contactLabel": "Ir a contacto",
+      "whatsappLabel": "Hablar por WhatsApp"
     }
   },
   "about": {
@@ -47,9 +49,10 @@
   "contact": {
     "eyebrow": "Antes de escribir",
     "title": "Si aun dudas entre servicios, aqui tienes una ruta rapida",
-    "body": "Revisa los servicios, conoce mejor la empresa o llama directamente.",
+    "body": "Revisa los servicios, conoce mejor la empresa, mira las resenas o llama directamente.",
     "servicesLabel": "Ver servicios",
     "aboutLabel": "Ver sobre nosotros",
-    "phoneLabel": "Llamar ahora"
+    "phoneLabel": "Llamar ahora",
+    "reviewsLabel": "Ver resenas"
   }
 }

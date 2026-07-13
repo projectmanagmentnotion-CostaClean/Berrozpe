@@ -2,17 +2,18 @@
   "locale": "de",
   "home": {
     "eyebrow": "Empfohlener Weg",
-    "title": "Beginnen Sie mit der passenden Leistung",
-    "body": "Wenn Sie bereits wissen, was Sie brauchen, offnen Sie die Leistung. Wenn nicht, gehen Sie zu Kontakt oder sehen Sie sich zuerst das Unternehmen an.",
+    "title": "Leistung wahlen oder zu Kontakt gehen",
+    "body": "Wenn Sie bereits wissen, was Sie brauchen, offnen Sie die Leistung. Wenn nicht, fuhren wir Sie uber Kontakt weiter.",
     "serviceListTitle": "Leistung",
     "trustLabel": "Unternehmen ansehen",
-    "contactLabel": "Orientierung anfragen"
+    "contactLabel": "Kontakt"
   },
   "servicesIndex": {
     "eyebrow": "Nachster Schritt",
-    "title": "Leistungen vergleichen und Kontaktweg wahlen",
-    "body": "Jede Seite fasst einen Technikbereich zusammen. Wenn Sie mochten, gehen Sie direkt zu Kontakt.",
+    "title": "Drei Leistungen und ein klarer Kontaktweg",
+    "body": "Jede Seite fasst einen Technikbereich zusammen. Wenn Sie den Fall direkt erklaren mochten, gehen Sie zu Kontakt oder WhatsApp.",
     "contactLabel": "Angebot anfragen",
+    "whatsappLabel": "Per WhatsApp schreiben",
     "aboutLabel": "Uber uns"
   },
   "serviceDetail": {
@@ -33,7 +34,8 @@
       "eyebrow": "Anfrage",
       "title": "Wenn Sie eine genauere Prufung brauchen, gehen Sie zu Kontakt",
       "body": "Wenn die Antwort vom Objekt oder von mehreren Leistungen abhangt, erklaren Sie den Fall am besten per Telefon, WhatsApp oder Formular.",
-      "contactLabel": "Zu Kontakt"
+      "contactLabel": "Zu Kontakt",
+      "whatsappLabel": "Per WhatsApp schreiben"
     }
   },
   "about": {
@@ -47,9 +49,10 @@
   "contact": {
     "eyebrow": "Vor dem Schreiben",
     "title": "Wenn Sie noch zwischen Leistungen schwanken, ist dies der schnelle Weg",
-    "body": "Leistungen ansehen, das Unternehmen kennenlernen oder direkt anrufen.",
+    "body": "Leistungen ansehen, das Unternehmen kennenlernen, Bewertungen ansehen oder direkt anrufen.",
     "servicesLabel": "Leistungen ansehen",
     "aboutLabel": "Uber uns",
-    "phoneLabel": "Jetzt anrufen"
+    "phoneLabel": "Jetzt anrufen",
+    "reviewsLabel": "Bewertungen ansehen"
   }
 }

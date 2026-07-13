@@ -171,6 +171,20 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
 - Pendientes editoriales:
   - sin bloqueos editoriales de publicacion
 
+### Addendum de copy y UX final `2026-07-13`
+
+- Home compactada de nuevo para acelerar lectura y reducir repeticion.
+- FAQ del home eliminada de la interfaz publica.
+- Detalle de servicio sin bloque visual duplicado de beneficios.
+- CTAs revisadas en `es`, `ca`, `en` y `de` con labels mas directos.
+- Paginas principales no-home:
+  - servicios indice
+  - detalle de servicio
+  - sobre nosotros
+  - contacto
+  - legales
+- ahora emiten `h1` real desde `src/components/BigTextBlock.astro`
+
 ### Keywords principales por idioma
 
 - `es`

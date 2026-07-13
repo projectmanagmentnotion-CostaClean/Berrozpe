@@ -9,6 +9,7 @@ interface Props {
   body?: string;
   align?: 'left' | 'center';
   titleClassName?: string;
+  headingTag?: 'h1' | 'h2' | 'h3';
 }
 
 const {
@@ -18,7 +19,9 @@ const {
   body,
   align = 'left',
   titleClassName = '',
+  headingTag = 'h2',
 } = Astro.props;
+
 ---
 
 <div class:list={['space-y-5', align === 'center' && 'mx-auto text-center']}>
@@ -28,8 +31,18 @@ const {
       {eyebrow && <EditorialLabel text={eyebrow} />}
     </div>
   )}
-  <h2 class:list={['max-w-5xl text-balance font-[var(--font-display)] text-4xl font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--color-text)] sm:text-5xl lg:text-7xl', titleClassName]}>
-    {title}
-  </h2>
+  {headingTag === 'h1' ? (
+    <h1 class:list={['max-w-5xl text-balance font-[var(--font-display)] text-4xl font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--color-text)] sm:text-5xl lg:text-7xl', titleClassName]}>
+      {title}
+    </h1>
+  ) : headingTag === 'h3' ? (
+    <h3 class:list={['max-w-5xl text-balance font-[var(--font-display)] text-4xl font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--color-text)] sm:text-5xl lg:text-7xl', titleClassName]}>
+      {title}
+    </h3>
+  ) : (
+    <h2 class:list={['max-w-5xl text-balance font-[var(--font-display)] text-4xl font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--color-text)] sm:text-5xl lg:text-7xl', titleClassName]}>
+      {title}
+    </h2>
+  )}
   {body && <p class="max-w-3xl text-pretty text-base leading-8 text-[var(--color-text-muted)] sm:text-lg">{body}</p>}
 </div>

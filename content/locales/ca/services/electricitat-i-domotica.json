@@ -5,9 +5,9 @@
   "shortTitle": "Electricitat i domòtica",
   "seoTitle": "Electricitat i domòtica a Blanes | Instal Berrozpe",
   "seoDescription": "Electricitat i domotica a Blanes i Girona amb Instal Berrozpe. Instal·lacions electriques, automatitzacio, energia solar fotovoltaica i assessoria energetica.",
-  "heroTitle": "Electricitat i domotica per a instal·lacions i automatitzacio",
-  "intro": "Servei orientat a instal·lacions electriques i solucions d'automatitzacio per a llar o negoci a Blanes i Girona.",
-  "summary": "Instal·lacions electriques, domotica, energia solar fotovoltaica i assessoria energetica dins d'una mateixa linea tecnica.",
+  "heroTitle": "Electricitat i domotica per a llar i negoci",
+  "intro": "Instal?lacions electriques i automatitzacio per a llar o negoci a Blanes i Girona.",
+  "summary": "Instal?lacions electriques, domotica, energia solar fotovoltaica i assessoria energetica en una mateixa linia tecnica.",
   "includes": {
     "title": "Inclou",
     "items": [
@@ -56,8 +56,8 @@
     "alarmas-y-camaras"
   ],
   "cta": {
-    "title": "Explica'ns quina instal·lacio electrica o de domotica necessites revisar",
-    "body": "Si vols valorar una instal·lacio, una automatitzacio o una consulta relacionada amb energia solar fotovoltaica, pots escriure a Instal Berrozpe i concretar el cas.",
+    "title": "Explica'ns que necessites en electricitat o domotica",
+    "body": "Si necessites una instal?lacio, una automatitzacio o una consulta relacionada, escriu-nos i t'orientem.",
     "label": "Demanar pressupost",
     "href": "/ca/contacte/",
     "secondaryLabel": "Veure serveis",

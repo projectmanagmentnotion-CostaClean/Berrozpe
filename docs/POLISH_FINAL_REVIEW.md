@@ -1,5 +1,12 @@
 # Polish Final Review
 
+## Addendum 2026-07-13
+
+- Eliminada la FAQ del home por ruido editorial.
+- Eliminado el visual duplicado en detalle de servicio.
+- Conversores intermedios reforzados con WhatsApp y acceso a resenas cuando aporta decision.
+- Footer mantiene la misma estructura, pero con CTA principal mas limpia y coherente con el nuevo tono.
+
 ## Fecha
 
 - `2026-07-09`

@@ -1,5 +1,17 @@
 # Copy SEO Final Review
 
+## Addendum 2026-07-13
+
+- Home recortada otra vez para priorizar actividad, ubicacion, servicios y contacto en el primer recorrido.
+- Titulares y cierres de servicio rehechos con tono mas natural en los cuatro idiomas.
+- CTA internos mas concretos:
+  - `Ver servicio`
+  - `Contactar`
+  - `Hablar por WhatsApp`
+  - `Ver resenas`
+- Correccion semantica SEO:
+  - paginas principales no-home pasan a emitir `h1` real
+
 ## Fecha
 
 - `2026-07-09`
