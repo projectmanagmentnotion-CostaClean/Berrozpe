@@ -1,5 +1,23 @@
 # SEO Local
 
+## Addendum crawl y descubrimiento `2026-07-13`
+
+- produccion actual comprobada con:
+  - `robots.txt` abierto a indexacion
+  - `sitemap-index.xml` correcto
+  - `sitemap-0.xml` sin `localhost`, sin `staging` y sin URLs legacy de WordPress
+  - `sitemap_index.xml` legacy devolviendo `404`
+- repo ajustado para el siguiente deploy con:
+  - `public/llms.txt`
+  - redirect legacy `/sitemap_index.xml` -> `/sitemap-index.xml`
+  - `Button.astro` endurecido para aplicar `noopener noreferrer` por defecto en externos con `target="_blank"`
+  - fallback HTML de `/` cambiado a `noindex, follow` para evitar `nofollow` interno innecesario
+- auditoria automatizada de `dist/`:
+  - `45` paginas generadas
+  - `0` enlaces internos rotos
+  - `0` paginas indexables con `nofollow`
+  - `0` enlaces externos con falta de `noopener noreferrer`
+
 ## Estado tecnico actual
 
 - Canonical por pagina apuntando a su propia URL localizada.
@@ -99,6 +117,8 @@ Estado:
 
 - Documento operativo adicional:
   - [DISCOVERY_AND_INDEXING.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/DISCOVERY_AND_INDEXING.md)
+- Auditoria detallada de crawl e IA:
+  - [CRAWL_LINKS_AI_AUDIT.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/CRAWL_LINKS_AI_AUDIT.md)
 
 ## Internal linking
 

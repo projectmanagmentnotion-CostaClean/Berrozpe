@@ -31,10 +31,11 @@ const sizeClass = {
 }[size];
 
 const sharedClass = `inline-flex items-center justify-center rounded-full border font-medium tracking-[0.01em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] ${variantClass} ${sizeClass} ${className}`;
+const resolvedRel = target === '_blank' ? rel ?? 'noopener noreferrer' : rel;
 ---
 
 {href ? (
-  <a class={sharedClass} href={href} target={target} rel={rel}>
+  <a class={sharedClass} href={href} target={target} rel={resolvedRel}>
     <slot />
   </a>
 ) : (

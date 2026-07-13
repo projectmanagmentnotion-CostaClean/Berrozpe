@@ -11,9 +11,11 @@
 - Addendum final:
   - deploy de logo y assets finales ejecutado en produccion el `2026-07-13`
   - hotfix visual del hero CTA desplegado y validado en produccion el `2026-07-13`
+  - auditoria crawl, enlaces, follow/nofollow e IA cerrada en repo el `2026-07-13`
   - build publicada sigue generando `45` paginas
   - `/` mantiene redireccion tecnica a `/es/`
   - `robots.txt` publico permite indexacion
+  - `llms.txt` preparado en repo para siguiente deploy
 
 ## B. Servicios reales confirmados
 
@@ -153,6 +155,9 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
 - Ruta tecnica adicional: `/` con redireccion a `/es/`
 - Total generado en build actual: 45 paginas
 - Idiomas incluidos: `es`, `ca`, `en`, `de`
+- Estado legacy a `2026-07-13`:
+  - `https://instalberrozpe.com/sitemap_index.xml` responde `404`
+  - se deja preparado en `public/.htaccess` un redirect futuro a `/sitemap-index.xml` para consolidacion cuando se despliegue la siguiente revision
 
 ## H. SEO
 
@@ -239,6 +244,7 @@ Todas las rutas definitivas estan reflejadas en `docs/02_SITEMAP.md`.
 
 - Cada pagina apunta a su propia URL localizada de produccion
 - Implementacion comun en `src/components/SeoHead.astro`
+- La raiz tecnica `/` conserva fallback HTML de redireccion con `noindex, follow`
 
 ### Hreflang
 
@@ -289,6 +295,19 @@ Paginas estaticas:
   - `/og/contact.png`
 - Estado actual: PNG aprobados optimizados desde la carpeta real del cliente
 
+### Descubrimiento IA
+
+- `public/llms.txt` anadido en repo el `2026-07-13`
+- contenido factual:
+  - empresa
+  - servicios reales
+  - contacto
+  - idiomas
+  - sitemap
+- estado:
+  - generado en `dist/llms.txt`
+  - pendiente de despliegue
+
 ### Branding y favicons en produccion
 
 - Logo principal publicado:
@@ -321,6 +340,12 @@ Paginas estaticas:
   - conversion hacia contacto
   - conexion entre servicios relacionados
   - refuerzo de confianza hacia sobre nosotros
+- Auditoria automatizada de `dist/` cerrada el `2026-07-13`:
+  - `0` enlaces internos rotos
+  - `0` referencias a `localhost`
+  - `0` referencias a `staging`
+  - `0` paginas indexables con `nofollow`
+  - `0` enlaces externos con falta de `noopener noreferrer`
 
 ## I. Redirecciones
 

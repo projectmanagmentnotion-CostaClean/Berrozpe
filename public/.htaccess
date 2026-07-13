@@ -2,6 +2,7 @@ RewriteEngine On
 
 # Root language handling
 RewriteRule ^$ /es/ [R=301,L]
+Redirect 301 /sitemap_index.xml /sitemap-index.xml
 
 # Legacy Spanish pages
 Redirect 301 /inicio/ /es/

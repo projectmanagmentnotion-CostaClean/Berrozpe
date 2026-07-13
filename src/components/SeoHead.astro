@@ -62,5 +62,5 @@ const ogImageUrl = ogImagePath ? getCanonicalUrl(ogImagePath) : undefined;
   hreflang="x-default"
   href={getCanonicalUrl(xDefaultPath ?? alternates.find((alternate) => alternate.locale === DEFAULT_LOCALE)?.href ?? site.localeBasePath)}
 />
-{noIndex && <meta name="robots" content="noindex, nofollow" />}
+{noIndex && <meta name="robots" content="noindex, follow" />}
 {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}

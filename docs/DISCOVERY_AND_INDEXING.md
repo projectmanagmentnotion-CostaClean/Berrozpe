@@ -1,5 +1,28 @@
 # Discovery And Indexing
 
+## Addendum `2026-07-13`
+
+- auditoria de crawl, enlaces y descubrimiento IA ejecutada sin deploy
+- produccion actual comprobada:
+  - `/` -> `301` a `/es/`
+  - `robots.txt` -> `200 OK`
+  - `sitemap-index.xml` -> `200 OK`
+  - `sitemap-0.xml` -> `200 OK`
+  - `sitemap_index.xml` legacy -> `404 Not Found`
+- la build nueva deja preparado:
+  - `public/llms.txt`
+  - redirect legacy en `public/.htaccess`:
+    - `/sitemap_index.xml` -> `/sitemap-index.xml`
+- auditoria automatizada sobre `dist/`:
+  - `45` paginas generadas
+  - `0` enlaces internos rotos
+  - `0` referencias a `localhost`
+  - `0` referencias a `staging`
+  - `0` enlaces externos con falta de `noopener noreferrer`
+- siguiente paso operativo tras el proximo deploy:
+  - alta o importacion de propiedad en Bing Webmaster Tools
+  - envio de `https://instalberrozpe.com/sitemap-index.xml`
+
 ## Objetivo
 
 Dejar la web estatica preparada para descubrimiento por Google, Bing y crawlers generales sin prometer indexacion garantizada.
@@ -70,4 +93,4 @@ Dejar la web estatica preparada para descubrimiento por Google, Bing y crawlers 
 
 No existe garantia de indexacion o citacion por motores IA.
 
-La base queda preparada para lectura por crawlers mediante HTML estatico, sitemap, `robots.txt`, `canonical`, `hreflang`, schema, Open Graph y enlaces internos consistentes.
+La base queda preparada para lectura por crawlers mediante HTML estatico, sitemap, `robots.txt`, `canonical`, `hreflang`, schema, Open Graph, enlaces internos consistentes y `llms.txt` preparado en repo para el siguiente despliegue.

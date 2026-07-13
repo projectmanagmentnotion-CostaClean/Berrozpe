@@ -1,5 +1,41 @@
 # QA Final
 
+## Addendum crawl links AI audit `2026-07-13`
+
+- alcance:
+  - auditoria de rastreo, enlazado, follow/nofollow, `llms.txt` y preparacion para Bing
+  - sin deploy
+- produccion actual comprobada:
+  - `/` -> `301` a `/es/`
+  - `robots.txt` -> `200 OK`
+  - `sitemap-index.xml` -> `200 OK`
+  - `sitemap-0.xml` -> `200 OK`
+  - `sitemap_index.xml` -> `404 Not Found`
+  - rutas minimas `es`, `ca`, `en`, `de` y paginas clave -> `200 OK`
+- build local nueva:
+  - `npm run build` correcto
+  - `45` paginas generadas
+  - `dist/llms.txt` presente
+  - `dist/robots.txt` presente
+  - `dist/sitemap-index.xml` presente
+  - `dist/sitemap-0.xml` presente
+  - `dist/form-handler.php` presente
+  - `dist/.htaccess` presente
+  - sin `localhost`
+  - sin `staging`
+- auditoria automatizada de `dist/`:
+  - `0` enlaces internos rotos
+  - `0` paginas indexables con `nofollow`
+  - `224` enlaces con `target="_blank"` revisados
+  - `0` enlaces externos sin `noopener noreferrer`
+- cambios dejados listos en repo:
+  - `public/llms.txt`
+  - redirect legacy `/sitemap_index.xml` -> `/sitemap-index.xml`
+  - `Button.astro` con `noopener noreferrer` por defecto en externos
+  - fallback HTML de `/` con `noindex, follow`
+- pendiente:
+  - desplegar estos cambios y revalidar `https://instalberrozpe.com/llms.txt` y el redirect del sitemap legacy en produccion
+
 ## Addendum hero CTA hotfix produccion `2026-07-13`
 
 - Hotfix desplegado:
