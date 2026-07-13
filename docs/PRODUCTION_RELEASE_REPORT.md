@@ -1,5 +1,42 @@
 # Production Release Report
 
+## Addendum hero CTA hotfix `2026-07-13`
+
+- Hotfix publicado en produccion:
+  - `production-dist-hero-cta-hotfix.zip`
+- Despliegue real:
+  - SiteGround extrajo primero dentro de `production-dist-hero-cta-hotfix/`
+  - el contenido se movio despues a la raiz real de `public_html`
+  - se sobrescribieron los archivos finales necesarios
+  - se eliminaron la carpeta temporal y el ZIP subido al terminar
+- Estructura final confirmada en `public_html`:
+  - `index.html`
+  - `es/`
+  - `ca/`
+  - `en/`
+  - `de/`
+  - `_astro/`
+  - `images/`
+  - `og/`
+  - `robots.txt`
+  - `sitemap-index.xml`
+  - `sitemap-0.xml`
+  - `.htaccess`
+  - `form-handler.php`
+  - favicons y `site.webmanifest` presentes
+- QA real posterior al hotfix:
+  - `/` redirige a `/es/`
+  - home, contacto, servicios, detalle de servicio, `ca`, `en` y `de` cargan correctamente
+  - CTA principal del hero visible en produccion
+  - formulario mantiene `action="/form-handler.php"`
+  - Google Maps sigue resolviendose segun la implementacion final por enlace externo
+  - sin `localhost`
+  - sin `staging`
+  - sin overflow horizontal en `390x844`, `430x932`, `1366x768` y `1440x900`
+  - aleman validado sin rotura de layout
+- Estado final:
+  - hotfix visual de CTA desplegado y validado en `https://instalberrozpe.com`
+
 ## Addendum final logo y assets `2026-07-13`
 
 - Build final validada de nuevo antes del despliegue:

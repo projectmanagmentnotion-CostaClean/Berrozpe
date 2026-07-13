@@ -1,5 +1,44 @@
 # QA Final
 
+## Addendum hero CTA hotfix produccion `2026-07-13`
+
+- Hotfix desplegado:
+  - `production-dist-hero-cta-hotfix.zip`
+- Despliegue real:
+  - contenido extraido en carpeta temporal y movido despues a la raiz real de `public_html`
+  - ZIP subido y carpeta temporal eliminados al cerrar la operacion
+- Rutas validadas en produccion:
+  - `/`
+  - `/es/`
+  - `/es/contacto/`
+  - `/es/servicios/`
+  - `/es/servicios/electricidad-y-domotica/`
+  - `/ca/`
+  - `/en/`
+  - `/de/`
+- Confirmaciones:
+  - `/` redirige a `/es/`
+  - CTA del hero visible en home publicada
+  - header usable
+  - selector de idioma usable
+  - WhatsApp visible
+  - formulario con `action="/form-handler.php"`
+  - Google Maps accesible segun implementacion final por enlace externo
+  - sin `localhost`
+  - sin `staging`
+  - sin errores visibles de assets en la comprobacion ejecutada
+- Responsive produccion:
+  - `390x844`
+  - `430x932`
+  - `1366x768`
+  - `1440x900`
+  - resultado:
+    - sin overflow horizontal
+    - CTA y header no rompen mobile
+    - WhatsApp no tapa acciones principales
+    - contacto usable
+    - home alemana sin rotura de layout
+
 ## Addendum deploy final produccion `2026-07-13`
 
 - Objetivo cerrado:

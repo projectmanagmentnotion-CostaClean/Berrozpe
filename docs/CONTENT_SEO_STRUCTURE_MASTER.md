@@ -10,6 +10,7 @@
 - Estado: base final publicada en produccion el `2026-07-10`
 - Addendum final:
   - deploy de logo y assets finales ejecutado en produccion el `2026-07-13`
+  - hotfix visual del hero CTA desplegado y validado en produccion el `2026-07-13`
   - build publicada sigue generando `45` paginas
   - `/` mantiene redireccion tecnica a `/es/`
   - `robots.txt` publico permite indexacion
@@ -304,6 +305,7 @@ Paginas estaticas:
 - Estado:
   - activos finales desplegados en produccion el `2026-07-13`
   - header con mayor presencia de marca validado sin romper navegacion, selector de idioma ni CTAs principales
+  - CTA principal del hero validada de nuevo en produccion tras el hotfix visual del `2026-07-13`
 
 ### Internal linking
 

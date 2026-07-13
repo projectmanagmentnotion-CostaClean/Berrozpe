@@ -1,5 +1,16 @@
 # Asset Replacement Report
 
+## Addendum hero CTA hotfix `2026-07-13`
+
+- Hotfix publicado en produccion:
+  - `production-dist-hero-cta-hotfix.zip`
+- Alcance del hotfix:
+  - ajuste visual del CTA principal del hero
+  - sin sustitucion adicional de imagenes, branding ni favicons
+- Estado:
+  - assets finales previos se mantienen
+  - hotfix visual validado en produccion sin overflow horizontal en los breakpoints revisados
+
 ## Addendum deploy final a produccion
 
 - Fecha de despliegue final:
