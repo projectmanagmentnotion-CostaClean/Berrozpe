@@ -361,6 +361,10 @@ export function getSharedVisuals(): SharedVisuals {
   return visualsData;
 }
 
+export function getBrandVisuals() {
+  return visualsData.branding.logo;
+}
+
 export function getSharedReviews(): SharedReviews {
   return reviewsData;
 }

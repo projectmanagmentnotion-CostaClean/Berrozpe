@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../lib/content';
 import {
+  getBrandVisuals,
   getCookieConsentContent,
   getLanguageSwitcherLinksForPage,
   getLegalPages,
@@ -24,6 +25,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const site = getSiteSettings(locale);
+const brandLogo = getBrandVisuals();
 const contact = getSharedContact();
 const services = getPublishedServices(locale);
 const legalPages = getLegalPages(locale);
@@ -39,7 +41,19 @@ const schedule = contact.schedule[locale] ?? contact.schedule.es;
   <Container>
     <div class="grid gap-10 xl:grid-cols-[1.15fr_0.85fr]">
       <div class="space-y-5">
-        <p class="text-[0.72rem] uppercase tracking-[0.26em] text-[var(--color-text-soft)]">{site.brandName}</p>
+        <a class="inline-flex items-center" href={site.localeBasePath} aria-label={brandLogo.alt}>
+          <img
+            src={brandLogo.path}
+            width={brandLogo.width}
+            height={brandLogo.height}
+            alt={brandLogo.alt}
+            class="berrozpe-footer-logo h-auto w-[clamp(9.5rem,20vw,13.5rem)] object-contain"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';"
+          />
+          <span class="hidden text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[var(--color-text-soft)]">
+            {site.brandName}
+          </span>
+        </a>
         <h2 class="max-w-3xl font-[var(--font-display)] text-2xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--color-text)] sm:text-3xl lg:text-4xl">
           {home.contactCta.title}
         </h2>

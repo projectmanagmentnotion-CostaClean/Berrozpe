@@ -1,6 +1,6 @@
 ---
 import type { AlternateLink, Locale } from '../lib/content';
-import { getNavigation, getRouteCatalog, getSiteSettings } from '../lib/content';
+import { getBrandVisuals, getNavigation, getRouteCatalog, getSiteSettings } from '../lib/content';
 import Button from './Button.astro';
 import Container from './Container.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
@@ -14,6 +14,7 @@ interface Props {
 
 const { locale, languageLinks } = Astro.props;
 const site = getSiteSettings(locale);
+const brandLogo = getBrandVisuals();
 const navigation = getNavigation(locale);
 const routes = getRouteCatalog(locale);
 const contactLabel = navigation.items.find((item) => item.id === 'contact')?.label ?? 'Contact';
@@ -22,8 +23,18 @@ const contactLabel = navigation.items.find((item) => item.id === 'contact')?.lab
 <header class="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[color:var(--color-header)] backdrop-blur-xl">
   <Container className="relative">
     <div class="flex min-h-20 items-center justify-between gap-4">
-      <a class="flex min-h-11 items-center text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-text)]" href={site.localeBasePath}>
-        {site.brandName}
+      <a class="flex min-h-11 shrink-0 items-center" href={site.localeBasePath} aria-label={brandLogo.alt}>
+        <img
+          src={brandLogo.path}
+          width={brandLogo.width}
+          height={brandLogo.height}
+          alt={brandLogo.alt}
+          class="berrozpe-site-logo h-auto w-[clamp(11rem,25vw,16rem)] object-contain"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';"
+        />
+        <span class="hidden text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-text)]">
+          {site.brandName}
+        </span>
       </a>
 
       <nav aria-label="Principal" class="hidden xl:block">

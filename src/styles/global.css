@@ -82,6 +82,14 @@ img {
   max-width: 100%;
 }
 
+.berrozpe-site-logo {
+  max-height: 3.9rem;
+}
+
+.berrozpe-footer-logo {
+  max-height: 3.2rem;
+}
+
 .text-balance {
   text-wrap: balance;
 }

@@ -2,14 +2,14 @@
   "locale": "es",
   "title": "Encuentranos en Blanes",
   "subtitle": "Instal Berrozpe",
-  "description": "Direccion confirmada en Blanes y acceso directo a Google Maps.",
+  "description": "Direccion confirmada en Blanes con mapa visible y acceso directo a Google Maps.",
   "addressLabel": "Direccion",
   "address": "Carrer de l'Antiga, 68, 17300 Blanes, Girona",
   "openMapLabel": "Abrir en Google Maps",
-  "loadMapLabel": "Cargar mapa",
   "mapConsentTitle": "Ubicacion",
-  "mapConsentText": "Google Maps se abre solo si sales a la ficha externa.",
-  "privacyNotice": "No cargamos el mapa dentro de la web.",
-  "fallbackText": "Abre la ubicacion para calcular la ruta.",
-  "footerLinkLabel": "Ver ubicacion"
+  "mapConsentText": "Mapa visible de Google Maps para ubicar el local y planificar la llegada.",
+  "privacyNotice": "El iframe puede cargar recursos de Google cuando se visualiza esta seccion.",
+  "fallbackText": "Si prefieres abrir la ruta completa en otra pestana, usa el boton de Google Maps.",
+  "footerLinkLabel": "Ver ubicacion",
+  "iframeTitle": "Mapa de Instal Berrozpe en Blanes"
 }

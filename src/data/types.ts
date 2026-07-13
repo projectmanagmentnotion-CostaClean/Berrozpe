@@ -216,6 +216,20 @@ export interface VisualAssetEntry {
 }
 
 export interface SharedVisuals {
+  branding: {
+    logo: {
+      path: string;
+      alt: string;
+      width: number;
+      height: number;
+      mobileWidth?: number;
+      mobileHeight?: number;
+      iconPath: string;
+      iconAlt: string;
+      status?: 'temporary' | 'real' | 'approved';
+      notes?: string;
+    };
+  };
   home: {
     hero: VisualAssetEntry;
     trust: VisualAssetEntry;
@@ -343,12 +357,12 @@ export interface MapContent {
   addressLabel: string;
   address: string;
   openMapLabel: string;
-  loadMapLabel: string;
   mapConsentTitle: string;
   mapConsentText: string;
   privacyNotice: string;
   fallbackText: string;
   footerLinkLabel: string;
+  iframeTitle: string;
 }
 
 export interface SharedReviews {

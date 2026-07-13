@@ -1,4 +1,18 @@
 {
+  "branding": {
+    "logo": {
+      "path": "/branding/logo-instal-berrozpe.svg",
+      "alt": "Logo de Instal Berrozpe",
+      "width": 421,
+      "height": 196,
+      "mobileWidth": 180,
+      "mobileHeight": 84,
+      "iconPath": "/branding/icon-instal-berrozpe.svg",
+      "iconAlt": "Isotipo de Instal Berrozpe",
+      "status": "approved",
+      "notes": "Logo vectorial real aplicado en header, footer y paquete de iconos."
+    }
+  },
   "home": {
     "hero": {
       "path": "/images/hero/instal-berrozpe-hero-instalaciones-blanes.webp",
