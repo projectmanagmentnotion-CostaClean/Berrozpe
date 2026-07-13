@@ -15,6 +15,12 @@ export function heroIntro(root: ParentNode = document): void {
     const title = hero.querySelector<HTMLElement>('h1, h2');
     const body = hero.querySelector<HTMLElement>('p');
     const cta = hero.querySelector<HTMLElement>('[data-animate="cta"]');
+    const introElements = [label, title, body, cta].filter(Boolean) as HTMLElement[];
+
+    if (hero.getBoundingClientRect().top < window.innerHeight * 0.92) {
+      gsap.set(introElements, { autoAlpha: 1, y: 0 });
+      return;
+    }
 
     const timeline = gsap.timeline({
       scrollTrigger: getBidirectionalScrollTrigger(hero, 'top 88%'),

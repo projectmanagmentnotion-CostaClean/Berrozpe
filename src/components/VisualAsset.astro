@@ -10,6 +10,7 @@ interface Props {
   imageClassName?: string;
   compact?: boolean;
   priority?: boolean;
+  showOverlayContent?: boolean;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   imageClassName = '',
   compact = false,
   priority = false,
+  showOverlayContent = true,
 } = Astro.props;
 ---
 
@@ -55,12 +57,21 @@ const {
       data-animate="soft-parallax"
     />
   </picture>
-  <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(249,250,251,0.08),rgba(249,250,251,0.82)_82%,rgba(249,250,251,0.96))]"></div>
-  <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 lg:p-8">
-    <div class="max-w-xl rounded-[1.75rem] border border-white/50 bg-white/78 p-4 shadow-[0_18px_40px_rgba(2,6,23,0.08)] backdrop-blur-md sm:p-5" data-animate="visual-panel">
-      {eyebrow && <p class="text-[0.72rem] uppercase tracking-[0.24em] text-[var(--color-text-soft)]">{eyebrow}</p>}
-      {title && <p class="mt-2 font-[var(--font-display)] text-xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:mt-3 sm:text-2xl">{title}</p>}
-      {body && <p class="mt-2 hidden text-sm leading-6 text-[var(--color-text-muted)] sm:block">{body}</p>}
+  <div
+    class:list={[
+      'absolute inset-0',
+      showOverlayContent
+        ? 'bg-[linear-gradient(180deg,rgba(249,250,251,0.08),rgba(249,250,251,0.82)_82%,rgba(249,250,251,0.96))]'
+        : 'bg-[linear-gradient(180deg,rgba(249,250,251,0.04),rgba(249,250,251,0.12)_55%,rgba(249,250,251,0.38))]',
+    ]}
+  ></div>
+  {showOverlayContent && (
+    <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 lg:p-8">
+      <div class="max-w-xl rounded-[1.75rem] border border-white/50 bg-white/78 p-4 shadow-[0_18px_40px_rgba(2,6,23,0.08)] backdrop-blur-md sm:p-5" data-animate="visual-panel">
+        {eyebrow && <p class="text-[0.72rem] uppercase tracking-[0.24em] text-[var(--color-text-soft)]">{eyebrow}</p>}
+        {title && <p class="mt-2 font-[var(--font-display)] text-xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:mt-3 sm:text-2xl">{title}</p>}
+        {body && <p class="mt-2 hidden text-sm leading-6 text-[var(--color-text-muted)] sm:block">{body}</p>}
+      </div>
     </div>
-  </div>
+  )}
 </div>

@@ -26,6 +26,8 @@ export function ctaMotion(root: ParentNode = document): void {
   const blocks = root.querySelectorAll<HTMLElement>('[data-animate="cta"]');
 
   blocks.forEach((block) => {
+    const insideHero = block.closest('[data-animate="hero"]');
+
     if (block.dataset.motionReady === 'true') {
       bindInteractiveMotion(block);
       return;
@@ -33,6 +35,10 @@ export function ctaMotion(root: ParentNode = document): void {
 
     block.dataset.motionReady = 'true';
     bindInteractiveMotion(block);
+
+    if (insideHero) {
+      return;
+    }
 
     gsap.fromTo(
       block,
