@@ -1,5 +1,62 @@
 # Production Release Report
 
+## Addendum final logo y assets `2026-07-13`
+
+- Build final validada de nuevo antes del despliegue:
+  - `npm run build` correcto
+  - `45` paginas generadas
+- ZIP final desplegado en produccion:
+  - `production-dist-final-logo-assets.zip`
+- Backup rapido creado en `public_html` antes de reemplazar:
+  - `public_html-backup-2026-07-13-final-logo-assets.zip.zip`
+- Despliegue real:
+  - SiteGround extrajo primero dentro de `production-dist-final-logo-assets/`
+  - el contenido se movio a la raiz real de `public_html`
+  - no quedo carpeta `dist/` ni `qa-artifacts/` en produccion
+  - se elimino el ZIP subido y la carpeta temporal tras el movimiento
+- Estructura final confirmada en produccion:
+  - `index.html`
+  - `es/`
+  - `ca/`
+  - `en/`
+  - `de/`
+  - `_astro/`
+  - `images/`
+  - `og/`
+  - `robots.txt`
+  - `sitemap-index.xml`
+  - `sitemap-0.xml`
+  - `.htaccess`
+  - `form-handler.php`
+  - `favicon.ico`
+  - `favicon.svg`
+  - `apple-touch-icon.png`
+  - `android-chrome-192x192.png`
+  - `android-chrome-512x512.png`
+  - `site.webmanifest`
+- Cache:
+  - purga manual ejecutada en SiteGround SuperCacher para `instalberrozpe.com`
+- Verificacion tecnica real posterior al deploy:
+  - `/` sigue redirigiendo a `/es/`
+  - `robots.txt`, `sitemap-index.xml` y `sitemap-0.xml` responden `200 OK`
+  - `curl` sobre `https://instalberrozpe.com/es/` confirmo el HTML nuevo servido desde produccion
+  - el HTML publicado incluye el logo SVG `/branding/logo-instal-berrozpe.svg`
+  - el `h1` publicado en `/es/` coincide con la version final validada
+- QA funcional en produccion:
+  - logo principal visible con mayor presencia de marca
+  - header equilibrado sin romper nav, idioma ni CTAs
+  - footer acompasado con logo ligeramente mayor
+  - formulario mantiene `action="/form-handler.php"`
+  - WhatsApp visible
+  - mapa visible en contacto
+  - sin `localhost`
+  - sin `staging`
+  - sin overflow horizontal en los breakpoints revisados
+  - home alemana sin rotura de layout
+- Nota operativa:
+  - algunas lecturas iniciales en navegador mostraron HTML antiguo por cache
+  - el estado real quedo confirmado por purga de cache, URLs con cache-buster y respuesta directa del servidor con `curl`
+
 ## Fecha
 
 - `2026-07-10`

@@ -1,5 +1,63 @@
 # QA Final
 
+## Addendum deploy final produccion `2026-07-13`
+
+- Objetivo cerrado:
+  - deploy final de logo mas grande, favicon/assets corregidos y QA de produccion sobre `https://instalberrozpe.com`
+- Build final:
+  - `npm run build` correcto
+  - `45` paginas generadas
+- Backup previo en SiteGround:
+  - `public_html-backup-2026-07-13-final-logo-assets.zip.zip`
+- ZIP subido y desplegado:
+  - `production-dist-final-logo-assets.zip`
+- Validacion de archivos publicados:
+  - `index.html`, `es/`, `ca/`, `en/`, `de/`, `_astro/`, `images/`, `og/`
+  - `robots.txt`, `sitemap-index.xml`, `sitemap-0.xml`
+  - `.htaccess`, `form-handler.php`
+  - `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`
+  - `android-chrome-192x192.png`, `android-chrome-512x512.png`, `site.webmanifest`
+- Validacion HTTP real:
+  - `https://instalberrozpe.com/` redirige a `/es/`
+  - `https://instalberrozpe.com/robots.txt` responde `200 OK` y permite indexacion
+  - `https://instalberrozpe.com/sitemap-index.xml` responde `200 OK`
+  - `https://instalberrozpe.com/sitemap-0.xml` responde `200 OK`
+- Validacion funcional real en produccion:
+  - paginas revisadas:
+    - `/es/`
+    - `/es/contacto/`
+    - `/es/servicios/`
+    - `/es/servicios/electricidad-y-domotica/`
+    - `/ca/`
+    - `/en/`
+    - `/de/`
+  - logo header visible y mas grande
+  - header usable sin romper navegacion
+  - selector de idioma usable
+  - WhatsApp visible
+  - formulario mantiene `action="/form-handler.php"`
+  - mapa visible en contacto
+  - sin `localhost`
+  - sin `staging`
+  - sin error `500`
+  - sin `404` de assets en las comprobaciones ejecutadas
+- Responsive produccion:
+  - breakpoints revisados:
+    - `390x844`
+    - `430x932`
+    - `1366x768`
+    - `1440x900`
+  - resultado:
+    - sin overflow horizontal
+    - logo no rompe mobile
+    - header usable
+    - WhatsApp no tapa acciones principales
+    - contacto y mapa usables
+    - aleman sin rotura de layout
+- Nota de verificacion:
+  - el servidor sirvio el HTML nuevo en `/es/` segun respuesta directa con `curl`
+  - una vista antigua detectada al inicio quedo atribuida a cache y no a un fallo de despliegue
+
 ## Addendum 2026-07-13
 
 - Sprint final de copy y usabilidad ejecutado sobre la base publicada.
@@ -232,6 +290,7 @@
 - Estado general:
   - staging real validado
   - produccion publicada en `https://instalberrozpe.com`
+  - deploy final logo/assets completado el `2026-07-13`
 - Legal:
   - revision legal autorizada por cliente el `2026-07-10`
   - datos fiscales confirmados y aplicados en contenido y SEO
@@ -244,3 +303,6 @@
   - `mail()` funcional en produccion
   - QA responsive final completada en dominio real
   - WordPress legacy retirado y backup previo mantenido
+  - backup final adicional creado:
+    - `public_html-backup-2026-07-13-final-logo-assets.zip.zip`
+  - favicon y assets finales desplegados

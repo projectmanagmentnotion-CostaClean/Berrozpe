@@ -1,5 +1,33 @@
 # Asset Replacement Report
 
+## Addendum deploy final a produccion
+
+- Fecha de despliegue final:
+  - `2026-07-13`
+- ZIP final usado en produccion:
+  - `production-dist-final-logo-assets.zip`
+- Backup previo creado en SiteGround:
+  - `public_html-backup-2026-07-13-final-logo-assets.zip.zip`
+- Alcance publicado:
+  - logo principal de header con mayor presencia visual
+  - ajuste acompanante del logo en footer
+  - `favicon.ico`
+  - `favicon.svg`
+  - `apple-touch-icon.png`
+  - `android-chrome-192x192.png`
+  - `android-chrome-512x512.png`
+  - `site.webmanifest`
+  - OG y assets finales dentro del `dist/` publicado
+- Verificacion posterior al deploy:
+  - `https://instalberrozpe.com/es/` sirve el HTML nuevo confirmado por respuesta directa del servidor
+  - `robots.txt`, `sitemap-index.xml` y `sitemap-0.xml` responden `200 OK`
+  - sin carpeta `dist/` ni `qa-artifacts/` en la raiz real de `public_html`
+  - cache dinamica purgada en SiteGround tras el reemplazo
+- Estado final:
+  - assets finales publicados en produccion
+  - favicon y branding sincronizados con la version validada
+  - QA responsive de produccion completada sin overflow horizontal en los breakpoints revisados
+
 ## Fecha
 
 - `2026-07-13`

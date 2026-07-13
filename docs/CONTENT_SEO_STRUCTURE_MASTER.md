@@ -8,6 +8,11 @@
 - Build de salida: `dist/`
 - Idiomas activos: `es`, `ca`, `en`, `de`
 - Estado: base final publicada en produccion el `2026-07-10`
+- Addendum final:
+  - deploy de logo y assets finales ejecutado en produccion el `2026-07-13`
+  - build publicada sigue generando `45` paginas
+  - `/` mantiene redireccion tecnica a `/es/`
+  - `robots.txt` publico permite indexacion
 
 ## B. Servicios reales confirmados
 
@@ -282,6 +287,23 @@ Paginas estaticas:
   - `/og/services.png`
   - `/og/contact.png`
 - Estado actual: PNG aprobados optimizados desde la carpeta real del cliente
+
+### Branding y favicons en produccion
+
+- Logo principal publicado:
+  - `/branding/logo-instal-berrozpe.svg`
+- Icono de marca publicado:
+  - `/branding/icon-instal-berrozpe.svg`
+- Favicons publicados:
+  - `/favicon.ico`
+  - `/favicon.svg`
+  - `/apple-touch-icon.png`
+  - `/android-chrome-192x192.png`
+  - `/android-chrome-512x512.png`
+  - `/site.webmanifest`
+- Estado:
+  - activos finales desplegados en produccion el `2026-07-13`
+  - header con mayor presencia de marca validado sin romper navegacion, selector de idioma ni CTAs principales
 
 ### Internal linking
 
