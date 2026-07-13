@@ -19,7 +19,7 @@ const contact = getSharedContact();
 const navigation = getNavigation(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
 const primaryEmail = contact.primaryEmail ?? contact.emailsDetected[0] ?? '';
-const contactVisual = getPageVisual('homeContact');
+const contactVisual = getPageVisual('homeContact', locale);
 ---
 
 <section class="py-16 sm:py-20 lg:py-28" data-animate="cta">

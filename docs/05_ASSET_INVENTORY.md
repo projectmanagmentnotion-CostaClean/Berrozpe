@@ -6,7 +6,7 @@ Inventario de assets detectados en la web actual y de los assets realmente integ
 
 - assets legacy detectados pero todavia no migrados;
 - assets publicos ya activos en `public/`;
-- placeholders corporativos temporales mientras no existan fotos reales confirmadas.
+- placeholders corporativos temporales solo como referencia legacy mientras no existan fotos reales confirmadas.
 
 Guia obligatoria complementaria:
 
@@ -88,40 +88,46 @@ Guia obligatoria complementaria:
 
 Estado:
 
-- La estructura ya existe y esta preparada para recibir originales verificados.
-- Por ahora solo contiene archivos `README.md` operativos; no se han copiado fotos reales nuevas sin auditoria adicional.
+- La estructura ya existe y ya contiene los originales aprobados copiados desde `C:\Users\USUARIO\Desktop\instal berrozpe`.
+- El editable `instal berrozpe.cdr` se mantiene fuera del repo publico por peso y por no ser necesario para la salida estatica.
 
 ## Assets publicos activos en la nueva web
 
-### Visuales corporativos temporales
+### Visuales reales activos
 
 | Asset | Ruta publica | Uso | Estado |
 | --- | --- | --- | --- |
-| Hero premium temporal | `/images/hero/instal-berrozpe-hero-premium.svg` | Home hero | Temporal |
-| Proceso editorial temporal | `/images/hero/instal-berrozpe-proceso-editorial.svg` | Home proceso | Temporal |
-| Fachada corporativa temporal | `/images/about/instal-berrozpe-fachada-corporativa-temporal.svg` | Home confianza / Sobre nosotros | Temporal |
-| Contacto corporativo temporal | `/images/contact/instal-berrozpe-contacto-blanes.svg` | Home CTA / Contacto | Temporal |
-| Servicio electricidad y domotica | `/images/services/instal-berrozpe-servicio-electricidad-domotica.svg` | Cards y detalle de servicio | Temporal |
-| Servicio lampisteria y climatizacion | `/images/services/instal-berrozpe-lampisteria-climatizacion.svg` | Cards y detalle de servicio | Temporal |
-| Servicio alarmas y camaras | `/images/services/instal-berrozpe-alarmas-camaras.svg` | Cards y detalle de servicio | Temporal |
+| Hero instalaciones Blanes | `/images/hero/instal-berrozpe-hero-instalaciones-blanes.webp` | Home hero | Real aprobado |
+| Hero instalaciones Blanes mobile | `/images/hero/instal-berrozpe-hero-instalaciones-blanes-mobile.webp` | Home hero mobile | Real aprobado |
+| Proceso editorial real | `/images/hero/instal-berrozpe-proceso-editorial-real.webp` | Home proceso | Real aprobado |
+| Fachada Blanes | `/images/about/instal-berrozpe-fachada-blanes.webp` | Home confianza / Sobre nosotros | Real aprobado |
+| Fachada Blanes mobile | `/images/about/instal-berrozpe-fachada-blanes-mobile.webp` | Variantes mobile | Real aprobado |
+| Contacto equipo Blanes | `/images/contact/instal-berrozpe-contacto-equipo-blanes.webp` | Home CTA / Contacto | Real aprobado |
+| Contacto equipo Blanes mobile | `/images/contact/instal-berrozpe-contacto-equipo-blanes-mobile.webp` | Variantes mobile | Real aprobado |
+| Electricidad y domotica detalle | `/images/services/instal-berrozpe-electricidad-domotica-blanes.webp` | Detalle de servicio | Real aprobado |
+| Electricidad y domotica card | `/images/services/instal-berrozpe-electricidad-domotica-blanes-card.webp` | Cards y mobile | Real aprobado |
+| Lampisteria y climatizacion detalle | `/images/services/instal-berrozpe-lampisteria-climatizacion-blanes.webp` | Detalle de servicio | Real aprobado |
+| Lampisteria y climatizacion card | `/images/services/instal-berrozpe-lampisteria-climatizacion-blanes-card.webp` | Cards y mobile | Real aprobado |
+| Alarmas y camaras detalle | `/images/services/instal-berrozpe-alarmas-camaras-cctv-blanes.webp` | Detalle de servicio | Real aprobado |
+| Alarmas y camaras card | `/images/services/instal-berrozpe-alarmas-camaras-cctv-blanes-card.webp` | Cards y mobile | Real aprobado |
 
 Regla aplicada:
 
 - No se han usado fotos stock ni se han presentado placeholders como trabajos reales.
-- Todos los visuales temporales estan inventariados tambien en `content/shared/visuals.json`.
+- Todos los visuales activos estan inventariados en `content/shared/visuals.json`.
 
 ### Open Graph activos
 
 | Asset | Ruta publica | Uso | Estado |
 | --- | --- | --- | --- |
-| OG default | `/og/default.png` | Home, sobre nosotros y legales | Temporal |
-| OG services | `/og/services.png` | Indice y detalle de servicios | Temporal |
-| OG contact | `/og/contact.png` | Contacto | Temporal |
+| OG default | `/og/default.png` | Home, sobre nosotros y legales | Real aprobado |
+| OG services | `/og/services.png` | Indice y detalle de servicios | Real aprobado |
+| OG contact | `/og/contact.png` | Contacto | Real aprobado |
 
 Nota:
 
-- Se estan sirviendo como PNG temporal por no existir todavia originales finales verificados para OG.
-- Queda pendiente exportar version final en WebP si se aprueba una canalizacion de conversion reproducible dentro del proyecto.
+- Se sirven como PNG optimizado aprobado por compatibilidad social.
+- No se ha generado variante WebP porque el requerimiento de compatibilidad ya queda cubierto con PNG optimizado.
 
 ## Assets a revisar antes de reutilizar
 
@@ -132,13 +138,11 @@ Nota:
 
 ## Pendientes
 
-- Confirmar si se van a reutilizar fotos reales de fachada, flota o equipo desde la web actual.
-- Exportar versiones optimizadas finales si se aprueban fotos reales verificadas.
-- Sustituir los placeholders SVG actuales cuando exista material propio confirmado.
-- Evaluar exporte final de Open Graph en WebP.
+- Decidir si se eliminan del repo los SVG temporales legacy no referenciados.
+- Evaluar una segunda fase para incorporar galeria visible de equipo o flota si se necesitara.
 
 ## Recomendacion operativa
 
-1. Descargar originales utiles a `assets-source/`.
+1. Mantener los originales aprobados en `assets-source/`.
 2. Seleccionar solo activos realmente necesarios para la nueva arquitectura.
-3. Generar versiones optimizadas finales para `public/` cuando se apruebe el diseno, el copy y la autenticidad del asset.
+3. Regenerar derivados optimizados solo si cambia el origen aprobado.

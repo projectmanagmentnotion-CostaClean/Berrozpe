@@ -82,6 +82,7 @@
 ## Estado final
 
 - Ajustes de copy y usabilidad aplicados en repo.
+- Base preparada para usar assets reales aprobados sin hardcodear copy dentro de componentes.
 - Listo para commit y push.
 
 ## Pendientes

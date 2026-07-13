@@ -1,73 +1,187 @@
 {
   "home": {
     "hero": {
-      "path": "/images/hero/instal-berrozpe-hero-premium.svg",
-      "width": 1600,
-      "height": 1200,
-      "alt": "Composicion corporativa temporal de Instal Berrozpe para portada",
-      "temporary": true
+      "path": "/images/hero/instal-berrozpe-hero-instalaciones-blanes.webp",
+      "width": 1920,
+      "height": 1076,
+      "mobilePath": "/images/hero/instal-berrozpe-hero-instalaciones-blanes-mobile.webp",
+      "mobileWidth": 1080,
+      "mobileHeight": 1350,
+      "alt": "Instalacion electrica de Instal Berrozpe en Blanes",
+      "localizedAlt": {
+        "es": "Instalacion electrica de Instal Berrozpe en Blanes",
+        "ca": "Instal.lacio electrica d'Instal Berrozpe a Blanes",
+        "en": "Electrical installation by Instal Berrozpe in Blanes",
+        "de": "Elektroinstallation von Instal Berrozpe in Blanes"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "home-hero",
+      "notes": "Desktop y mobile reales optimizados desde la carpeta fuente aprobada."
     },
     "trust": {
-      "path": "/images/about/instal-berrozpe-fachada-corporativa-temporal.svg",
+      "path": "/images/about/instal-berrozpe-fachada-blanes.webp",
       "width": 1600,
-      "height": 1100,
-      "alt": "Bloque visual corporativo temporal para confianza y empresa",
-      "temporary": true
+      "height": 1000,
+      "mobilePath": "/images/about/instal-berrozpe-fachada-blanes-mobile.webp",
+      "mobileWidth": 900,
+      "mobileHeight": 1100,
+      "alt": "Fachada de Instal Berrozpe en Blanes",
+      "localizedAlt": {
+        "es": "Fachada de Instal Berrozpe en Blanes",
+        "ca": "Façana d'Instal Berrozpe a Blanes",
+        "en": "Instal Berrozpe facade in Blanes",
+        "de": "Fassade von Instal Berrozpe in Blanes"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "home-trust-about",
+      "notes": "Se usa para confianza en home y portada de sobre nosotros."
     },
     "process": {
-      "path": "/images/hero/instal-berrozpe-proceso-editorial.svg",
+      "path": "/images/hero/instal-berrozpe-proceso-editorial-real.webp",
       "width": 1600,
-      "height": 960,
-      "alt": "Visual temporal del proceso de trabajo de Instal Berrozpe",
-      "temporary": true
+      "height": 1000,
+      "alt": "Trabajo de lampisteria y climatizacion de Instal Berrozpe",
+      "localizedAlt": {
+        "es": "Trabajo de lampisteria y climatizacion de Instal Berrozpe",
+        "ca": "Treball de lampisteria i climatitzacio d'Instal Berrozpe",
+        "en": "Plumbing and climate control work by Instal Berrozpe",
+        "de": "Sanitaer- und Klimatechnikarbeit von Instal Berrozpe"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "home-process",
+      "notes": "Imagen real horizontal para la seccion de proceso."
     },
     "contact": {
-      "path": "/images/contact/instal-berrozpe-contacto-blanes.svg",
+      "path": "/images/contact/instal-berrozpe-contacto-equipo-blanes.webp",
       "width": 1600,
-      "height": 1100,
-      "alt": "Bloque visual temporal para la seccion de contacto de Instal Berrozpe",
-      "temporary": true
+      "height": 1000,
+      "mobilePath": "/images/contact/instal-berrozpe-contacto-equipo-blanes-mobile.webp",
+      "mobileWidth": 900,
+      "mobileHeight": 1100,
+      "alt": "Equipo y vehiculos de Instal Berrozpe en Blanes",
+      "localizedAlt": {
+        "es": "Equipo y vehiculos de Instal Berrozpe en Blanes",
+        "ca": "Equip i vehicles d'Instal Berrozpe a Blanes",
+        "en": "Instal Berrozpe team and vehicles in Blanes",
+        "de": "Team und Fahrzeuge von Instal Berrozpe in Blanes"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "home-contact",
+      "notes": "Desktop con equipo y flota; mobile centrado con variante vertical optimizada."
     }
   },
   "about": {
     "hero": {
-      "path": "/images/about/instal-berrozpe-fachada-corporativa-temporal.svg",
+      "path": "/images/about/instal-berrozpe-fachada-blanes.webp",
       "width": 1600,
-      "height": 1100,
-      "alt": "Bloque visual corporativo temporal para la pagina sobre nosotros",
-      "temporary": true
+      "height": 1000,
+      "mobilePath": "/images/about/instal-berrozpe-fachada-blanes-mobile.webp",
+      "mobileWidth": 900,
+      "mobileHeight": 1100,
+      "alt": "Fachada de Instal Berrozpe en Blanes",
+      "localizedAlt": {
+        "es": "Fachada de Instal Berrozpe en Blanes",
+        "ca": "Façana d'Instal Berrozpe a Blanes",
+        "en": "Instal Berrozpe facade in Blanes",
+        "de": "Fassade von Instal Berrozpe in Blanes"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "about-hero",
+      "notes": "Mismo asset real que el bloque de confianza de home."
     }
   },
   "contact": {
     "hero": {
-      "path": "/images/contact/instal-berrozpe-contacto-blanes.svg",
+      "path": "/images/contact/instal-berrozpe-contacto-equipo-blanes.webp",
       "width": 1600,
-      "height": 1100,
-      "alt": "Bloque visual temporal para la pagina de contacto",
-      "temporary": true
+      "height": 1000,
+      "mobilePath": "/images/contact/instal-berrozpe-contacto-equipo-blanes-mobile.webp",
+      "mobileWidth": 900,
+      "mobileHeight": 1100,
+      "alt": "Equipo y vehiculos de Instal Berrozpe en Blanes",
+      "localizedAlt": {
+        "es": "Equipo y vehiculos de Instal Berrozpe en Blanes",
+        "ca": "Equip i vehicles d'Instal Berrozpe a Blanes",
+        "en": "Instal Berrozpe team and vehicles in Blanes",
+        "de": "Team und Fahrzeuge von Instal Berrozpe in Blanes"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "contact-hero",
+      "notes": "La variante mobile usa un recorte vertical optimizado."
     }
   },
   "services": {
     "electricidad-y-domotica": {
-      "path": "/images/services/instal-berrozpe-servicio-electricidad-domotica.svg",
-      "width": 1400,
-      "height": 1000,
-      "alt": "Visual temporal del servicio de electricidad y domotica",
-      "temporary": true
+      "path": "/images/services/instal-berrozpe-electricidad-domotica-blanes.webp",
+      "width": 1600,
+      "height": 917,
+      "mobilePath": "/images/services/instal-berrozpe-electricidad-domotica-blanes-card.webp",
+      "mobileWidth": 900,
+      "mobileHeight": 675,
+      "cardPath": "/images/services/instal-berrozpe-electricidad-domotica-blanes-card.webp",
+      "cardWidth": 900,
+      "cardHeight": 675,
+      "alt": "Instalacion electrica y domotica de Instal Berrozpe",
+      "localizedAlt": {
+        "es": "Instalacion electrica y domotica de Instal Berrozpe",
+        "ca": "Instal.lacio electrica i domotica d'Instal Berrozpe",
+        "en": "Electrical and home automation installation by Instal Berrozpe",
+        "de": "Elektro- und Smart-Home-Installation von Instal Berrozpe"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "service-detail-and-card",
+      "notes": "Detalle real horizontal con variante ligera para cards y mobile."
     },
     "lampisteria-y-climatizacion": {
-      "path": "/images/services/instal-berrozpe-lampisteria-climatizacion.svg",
-      "width": 1400,
-      "height": 1000,
-      "alt": "Visual temporal del servicio de lampisteria y climatizacion",
-      "temporary": true
+      "path": "/images/services/instal-berrozpe-lampisteria-climatizacion-blanes.webp",
+      "width": 1600,
+      "height": 917,
+      "mobilePath": "/images/services/instal-berrozpe-lampisteria-climatizacion-blanes-card.webp",
+      "mobileWidth": 900,
+      "mobileHeight": 675,
+      "cardPath": "/images/services/instal-berrozpe-lampisteria-climatizacion-blanes-card.webp",
+      "cardWidth": 900,
+      "cardHeight": 675,
+      "alt": "Servicio de lampisteria y climatizacion de Instal Berrozpe",
+      "localizedAlt": {
+        "es": "Servicio de lampisteria y climatizacion de Instal Berrozpe",
+        "ca": "Servei de lampisteria i climatitzacio d'Instal Berrozpe",
+        "en": "Plumbing and climate control service by Instal Berrozpe",
+        "de": "Sanitaer- und Klimatechnikservice von Instal Berrozpe"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "service-detail-and-card",
+      "notes": "Se reutiliza la card como variante mobile por encuadre y peso."
     },
     "alarmas-y-camaras": {
-      "path": "/images/services/instal-berrozpe-alarmas-camaras.svg",
-      "width": 1400,
-      "height": 1000,
-      "alt": "Visual temporal del servicio de alarmas y camaras",
-      "temporary": true
+      "path": "/images/services/instal-berrozpe-alarmas-camaras-cctv-blanes.webp",
+      "width": 1600,
+      "height": 917,
+      "mobilePath": "/images/services/instal-berrozpe-alarmas-camaras-cctv-blanes-card.webp",
+      "mobileWidth": 900,
+      "mobileHeight": 675,
+      "cardPath": "/images/services/instal-berrozpe-alarmas-camaras-cctv-blanes-card.webp",
+      "cardWidth": 900,
+      "cardHeight": 675,
+      "alt": "Camaras de seguridad y alarmas instaladas por Instal Berrozpe",
+      "localizedAlt": {
+        "es": "Camaras de seguridad y alarmas instaladas por Instal Berrozpe",
+        "ca": "Cameres de seguretat i alarmes instal.lades per Instal Berrozpe",
+        "en": "Security cameras and alarms installed by Instal Berrozpe",
+        "de": "Sicherheitskameras und Alarmanlagen von Instal Berrozpe"
+      },
+      "temporary": false,
+      "status": "approved",
+      "usage": "service-detail-and-card",
+      "notes": "El original fuente de card tenia un typo en nombre; la salida publica queda normalizada."
     }
   },
   "og": {

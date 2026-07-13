@@ -3,15 +3,10 @@
 ## A. Resumen
 
 - Assets ya existentes:
-  - placeholders corporativos temporales en `public/images/`
-  - OG temporales en `public/og/`
+  - branding vectorial real en `public/branding/` y `public/favicon.svg`
+  - fotografias reales optimizadas en `public/images/`
+  - OG aprobados en `public/og/`
   - inventario legacy auditado de la web actual en [05_ASSET_INVENTORY.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/05_ASSET_INVENTORY.md)
-- Assets temporales:
-  - hero
-  - visuales de servicios
-  - visuales de sobre nosotros
-  - visual de contacto
-  - OG en PNG
 - Assets obligatorios antes de produccion:
   - logo vectorial validado
   - favicon definitivo
@@ -77,7 +72,7 @@
   - `public/og/default.png`
   - `public/og/services.png`
   - `public/og/contact.png`
-  - son PNG temporales
+  - son PNG aprobados optimizados
 
 ## E. Hero
 
@@ -257,16 +252,16 @@
 - una imagen real util por cada servicio confirmado
 - permiso claro para usar cada asset
 
-### Assets que deben reemplazarse antes de produccion
+### Assets que ya se han reemplazado en la base publicada
 
-- hero temporal actual
-- visuales temporales de servicios
-- visual temporal de sobre nosotros
-- visual temporal de contacto
-- OG PNG temporales si se aprueba una version final
+- hero real desktop y mobile
+- visuales reales de servicios para detalle y cards
+- visual real de sobre nosotros / confianza
+- visual real de contacto
+- OG PNG aprobados
 
 ### Assets que pueden mantenerse temporalmente
 
-- placeholders corporativos para secciones secundarias
+- placeholders corporativos legacy no referenciados mientras no se limpie el repositorio
 - OG comunes si no hay suficiente material real
 - iconografia simple mientras no exista sistema final de iconos

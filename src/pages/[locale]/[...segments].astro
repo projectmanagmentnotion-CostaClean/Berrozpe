@@ -228,8 +228,8 @@ const whatsAppHref = buildWhatsAppUrl(locale);
       </section>
       <section class="pb-2">
         <Container>
-          <VisualAsset
-            asset={getPageVisual('about')}
+            <VisualAsset
+            asset={getPageVisual('about', locale)}
             eyebrow={home.whyChooseUs.eyebrow}
             title={home.whyChooseUs.title}
             body={home.whyChooseUs.body}
@@ -339,7 +339,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
             />
           </div>
             <VisualAsset
-              asset={getServiceVisual(service.serviceId)}
+              asset={getServiceVisual(service.serviceId, locale)}
               eyebrow={navigation.ui.serviceEyebrow}
               title={service.shortTitle}
               body={service.summary}
@@ -375,6 +375,7 @@ const whatsAppHref = buildWhatsAppUrl(locale);
       </section>
 
       <ProcessSection
+        locale={locale}
         section={{
           sectionId: 'service-process',
           eyebrow: navigation.ui.processTitle,

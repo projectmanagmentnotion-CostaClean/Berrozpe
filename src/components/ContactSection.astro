@@ -22,7 +22,7 @@ const contact = getSharedContact();
 const navigation = getNavigation(locale);
 const routes = getRouteCatalog(locale);
 const schedule = contact.schedule[locale] ?? contact.schedule.es;
-const contactVisual = getPageVisual('contact');
+const contactVisual = getPageVisual('contact', locale);
 ---
 
 <Section

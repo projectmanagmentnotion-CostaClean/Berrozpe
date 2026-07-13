@@ -13,6 +13,15 @@
   - sin overflow horizontal en `390x844` y `1440x900` para `/es/`, `/es/servicios/`, `/es/servicios/electricidad-y-domotica/`, `/es/contacto/`, `/ca/`, `/en/` y `/de/`
   - `h1` presente en servicios, contacto, detalle de servicio y legales tras el ajuste
 
+## Addendum assets reales 2026-07-13
+
+- `content/shared/visuals.json` ya no referencia placeholders publicos.
+- Hero, confianza, proceso, contacto y los tres servicios usan fotografia real optimizada.
+- `VisualAsset.astro` ahora admite variante mobile sin depender de JS.
+- `ServiceCard.astro` usa variante card dedicada cuando existe.
+- `SeoHead.astro` expone `favicon.svg` y `favicon.ico`.
+- Documentacion de sustitucion cerrada en [ASSET_REPLACEMENT_REPORT.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/ASSET_REPLACEMENT_REPORT.md).
+
 ## Fecha
 
 - `2026-07-09`
@@ -147,9 +156,9 @@
 
 ## Assets
 
-- Placeholders corporativos temporales documentados
-- OG temporales presentes
-- Guia de entrega creada en [ASSET_REQUIREMENTS.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/ASSET_REQUIREMENTS.md)
+- Assets reales aprobados conectados desde `public/images/`
+- OG aprobados presentes en `public/og/`
+- Guia de entrega actualizada en [ASSET_REQUIREMENTS.md](/C:/Users/USUARIO/Documents/Berrozpe/docs/ASSET_REQUIREMENTS.md)
 
 ## QA visual
 
@@ -191,9 +200,9 @@
 
 ## Pendientes
 
-- Sustituir placeholders temporales cuando existan assets reales aprobados
 - Enviar sitemap a Search Console si aun no se ha hecho
 - Monitorizar indexacion inicial y cobertura
+- Decidir si se eliminan del repo los SVG temporales legacy ya no referenciados
 
 ## SiteGround staging real
 

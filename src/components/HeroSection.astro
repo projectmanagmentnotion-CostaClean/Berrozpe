@@ -7,6 +7,7 @@ import EditorialLabel from './EditorialLabel.astro';
 import VisualAsset from './VisualAsset.astro';
 
 interface Props {
+  locale: import('../lib/content').Locale;
   section: HomeSection;
   highlights?: Array<{
     label: string;
@@ -15,8 +16,8 @@ interface Props {
   }>;
 }
 
-const { section, highlights = [] } = Astro.props;
-const heroVisual = getPageVisual('homeHero');
+const { locale, section, highlights = [] } = Astro.props;
+const heroVisual = getPageVisual('homeHero', locale);
 ---
 
 <section class="relative overflow-hidden pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20" data-animate="hero">

@@ -281,7 +281,7 @@ Paginas estaticas:
   - `/og/default.png`
   - `/og/services.png`
   - `/og/contact.png`
-- Estado actual: composiciones corporativas temporales sin fotografia real verificada
+- Estado actual: PNG aprobados optimizados desde la carpeta real del cliente
 
 ### Internal linking
 
@@ -391,10 +391,12 @@ Assets legacy detectados:
 
 Assets actualmente activos en la nueva web:
 
-- Visuales SVG temporales por seccion y servicio
-- OG corporativos temporales
+- Visuales reales optimizados por seccion y servicio
+- Variantes mobile y card definidas desde `content/shared/visuals.json`
+- OG aprobados
 - Inventario sincronizado en `content/shared/visuals.json`
 - Guia obligatoria de reemplazo y entrega en `docs/ASSET_REQUIREMENTS.md`
+- Informe operativo de sustitucion en `docs/ASSET_REPLACEMENT_REPORT.md`
 
 Pendientes de optimizacion:
 
@@ -418,7 +420,7 @@ Alt text:
 
 - Debe definirse por asset reutilizado
 - No inventar alt comerciales que afirmen servicios no confirmados
-- Los placeholders actuales se describen como visual temporal o composicion corporativa temporal
+- Las variantes localizadas de `alt` se resuelven desde `content/shared/visuals.json`
 
 ## L. Diseno
 

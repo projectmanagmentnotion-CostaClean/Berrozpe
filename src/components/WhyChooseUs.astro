@@ -6,12 +6,13 @@ import Section from './Section.astro';
 import VisualAsset from './VisualAsset.astro';
 
 interface Props {
+  locale: import('../lib/content').Locale;
   section: HomeSection;
   number?: string;
 }
 
-const { section, number } = Astro.props;
-const trustVisual = getPageVisual('homeTrust');
+const { locale, section, number } = Astro.props;
+const trustVisual = getPageVisual('homeTrust', locale);
 ---
 
 <Section

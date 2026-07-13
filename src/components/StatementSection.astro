@@ -14,7 +14,7 @@ interface Props {
 const { locale, section } = Astro.props;
 const contact = getSharedContact();
 const localityLine = `${contact.address.locality} · ${contact.address.region}`;
-const visual = getPageVisual('homeTrust');
+const visual = getPageVisual('homeTrust', locale);
 ---
 
 <section class="py-16 sm:py-20" data-animate="line">

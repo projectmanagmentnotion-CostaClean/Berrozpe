@@ -202,6 +202,16 @@ export interface VisualAssetEntry {
   width: number;
   height: number;
   alt: string;
+  localizedAlt?: Partial<Record<'es' | 'ca' | 'en' | 'de', string>>;
+  mobilePath?: string;
+  mobileWidth?: number;
+  mobileHeight?: number;
+  cardPath?: string;
+  cardWidth?: number;
+  cardHeight?: number;
+  status?: 'temporary' | 'real' | 'approved';
+  usage?: string;
+  notes?: string;
   temporary: boolean;
 }
 

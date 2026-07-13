@@ -14,15 +14,18 @@ interface Props {
 const { locale, service, index } = Astro.props;
 const navigation = getNavigation(locale);
 const href = getServiceRouteById(service.serviceId, locale) ?? '#';
-const visual = getServiceVisual(service.serviceId);
+const visual = getServiceVisual(service.serviceId, locale);
+const cardPath = visual.cardPath ?? visual.path;
+const cardWidth = visual.cardWidth ?? visual.width;
+const cardHeight = visual.cardHeight ?? visual.height;
 ---
 
 <Card className="flex h-full flex-col justify-between gap-5 bg-white/92" data-animate="stagger">
   <div class="overflow-hidden rounded-[1.4rem] border border-[var(--color-border)] bg-white/70" data-animate="image-reveal">
     <img
-      src={visual.path}
-      width={visual.width}
-      height={visual.height}
+      src={cardPath}
+      width={cardWidth}
+      height={cardHeight}
       alt={visual.alt}
       loading="lazy"
       class="h-44 w-full object-cover object-center sm:h-48"

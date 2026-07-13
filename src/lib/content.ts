@@ -87,6 +87,7 @@ import type {
   MapContent,
   ReviewsContent,
   SharedReviews,
+  VisualAssetEntry,
   WhatsAppContent,
 } from '../data/types';
 
@@ -700,36 +701,46 @@ export function getConversionLinks(locale: Locale, context: 'home' | 'services' 
   };
 }
 
-export function getServiceVisual(serviceId: string) {
-  return visualsData.services[serviceId] ?? visualsData.home.hero;
+function resolveVisualAsset(asset: VisualAssetEntry, locale?: string): VisualAssetEntry {
+  const resolvedLocale = resolveLocale(locale);
+  const localizedAlt = asset.localizedAlt?.[resolvedLocale];
+
+  return {
+    ...asset,
+    alt: localizedAlt ?? asset.alt,
+  };
 }
 
-export function getPageVisual(pageId: StaticPageId | 'homeHero' | 'homeTrust' | 'homeProcess' | 'homeContact') {
+export function getServiceVisual(serviceId: string, locale?: string) {
+  return resolveVisualAsset(visualsData.services[serviceId] ?? visualsData.home.hero, locale);
+}
+
+export function getPageVisual(pageId: StaticPageId | 'homeHero' | 'homeTrust' | 'homeProcess' | 'homeContact', locale?: string) {
   if (pageId === 'homeHero') {
-    return visualsData.home.hero;
+    return resolveVisualAsset(visualsData.home.hero, locale);
   }
 
   if (pageId === 'homeTrust') {
-    return visualsData.home.trust;
+    return resolveVisualAsset(visualsData.home.trust, locale);
   }
 
   if (pageId === 'homeProcess') {
-    return visualsData.home.process;
+    return resolveVisualAsset(visualsData.home.process, locale);
   }
 
   if (pageId === 'homeContact') {
-    return visualsData.home.contact;
+    return resolveVisualAsset(visualsData.home.contact, locale);
   }
 
   if (pageId === 'about') {
-    return visualsData.about.hero;
+    return resolveVisualAsset(visualsData.about.hero, locale);
   }
 
   if (pageId === 'contact') {
-    return visualsData.contact.hero;
+    return resolveVisualAsset(visualsData.contact.hero, locale);
   }
 
-  return visualsData.home.hero;
+  return resolveVisualAsset(visualsData.home.hero, locale);
 }
 
 export function getOgImagePath(kind: OgImageKind = 'default'): string {
