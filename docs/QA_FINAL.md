@@ -1,5 +1,49 @@
 # QA Final
 
+## Addendum deploy SEO crawl IA `2026-07-13`
+
+- Objetivo cerrado:
+  - publicar `llms.txt`
+  - activar redirect legacy `/sitemap_index.xml` -> `/sitemap-index.xml`
+  - validar produccion tras el Sprint 14
+- Commit desplegado:
+  - `235978c`
+- Backup previo:
+  - `public_html-backup-2026-07-13-seo-crawl-ai.zip.zip`
+- Deploy real:
+  - ZIP `production-dist-seo-crawl-ai.zip` subido a `public_html`
+  - carpeta temporal de extraccion creada por SiteGround y eliminada despues
+  - ZIP subido eliminado al cerrar la operacion
+- Validacion HTTP real:
+  - `/` -> `301` a `/es/`
+  - `/llms.txt` -> `200 OK`
+  - `/robots.txt` -> `200 OK`
+  - `/sitemap-index.xml` -> `200 OK`
+  - `/sitemap-0.xml` -> `200 OK`
+  - `/sitemap_index.xml` -> `301` a `/sitemap-index.xml`
+- Validacion funcional real:
+  - `/es/`, `/es/contacto/`, `/es/servicios/` y `/de/` cargan correctamente
+  - logo visible
+  - CTA hero visible en home
+  - WhatsApp visible
+  - formulario mantiene `action="/form-handler.php"`
+  - Google Maps usable
+  - sin `localhost`
+  - sin `staging`
+  - sin `500`
+- Responsive produccion:
+  - `390x844`
+  - `430x932`
+  - `1366x768`
+  - `1440x900`
+  - resultado:
+    - sin overflow horizontal
+    - header usable
+    - home alemana sin rotura de layout
+    - contacto usable
+    - WhatsApp visible
+    - mapa usable
+
 ## Addendum crawl links AI audit `2026-07-13`
 
 - alcance:
@@ -29,12 +73,14 @@
   - `224` enlaces con `target="_blank"` revisados
   - `0` enlaces externos sin `noopener noreferrer`
 - cambios dejados listos en repo:
+- cambios ya publicados en produccion:
   - `public/llms.txt`
   - redirect legacy `/sitemap_index.xml` -> `/sitemap-index.xml`
   - `Button.astro` con `noopener noreferrer` por defecto en externos
   - fallback HTML de `/` con `noindex, follow`
-- pendiente:
-  - desplegar estos cambios y revalidar `https://instalberrozpe.com/llms.txt` y el redirect del sitemap legacy en produccion
+- validacion post deploy:
+  - `https://instalberrozpe.com/llms.txt` responde `200 OK`
+  - `https://instalberrozpe.com/sitemap_index.xml` redirige correctamente a `https://instalberrozpe.com/sitemap-index.xml`
 
 ## Addendum hero CTA hotfix produccion `2026-07-13`
 

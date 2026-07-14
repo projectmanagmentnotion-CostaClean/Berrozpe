@@ -1,5 +1,48 @@
 # Production Release Report
 
+## Addendum SEO crawl IA deploy `2026-07-13`
+
+- Deploy real ejecutado en produccion para los ajustes SEO/crawl/IA del Sprint 14.1.
+- Commit desplegado:
+  - `235978c`
+- Build validada antes del deploy:
+  - `npm run build` correcto
+  - `45` paginas generadas
+- Backup previo creado en `public_html`:
+  - `public_html-backup-2026-07-13-seo-crawl-ai.zip.zip`
+- ZIP subido:
+  - `production-dist-seo-crawl-ai.zip`
+- Incidencia operativa durante el deploy:
+  - SiteGround extrajo primero dentro de `production-dist-seo-crawl-ai/`
+  - no fue necesario mover contenido desde esa carpeta para cerrar el objetivo SEO
+  - se publicaron directamente en raiz los dos cambios faltantes:
+    - `llms.txt`
+    - redirect legacy de `/sitemap_index.xml`
+- Limpieza final en `public_html`:
+  - carpeta temporal `production-dist-seo-crawl-ai/` eliminada
+  - ZIP `production-dist-seo-crawl-ai.zip` eliminado
+  - sin carpeta `dist/`
+  - sin carpeta `qa-artifacts/`
+- Validacion HTTP real posterior:
+  - `/` -> `301` a `/es/`
+  - `/llms.txt` -> `200 OK`
+  - `/robots.txt` -> `200 OK`
+  - `/sitemap-index.xml` -> `200 OK`
+  - `/sitemap-0.xml` -> `200 OK`
+  - `/sitemap_index.xml` -> `301` a `/sitemap-index.xml`
+- QA funcional real:
+  - logo visible
+  - CTA hero visible en home
+  - WhatsApp visible
+  - formulario mantiene `action="/form-handler.php"`
+  - Google Maps usable
+  - sin `localhost`
+  - sin `staging`
+  - sin `500`
+  - sin overflow horizontal en `390x844`, `430x932`, `1366x768` y `1440x900`
+- Estado final:
+  - deploy SEO/crawl/IA completado y validado en `https://instalberrozpe.com`
+
 ## Addendum hero CTA hotfix `2026-07-13`
 
 - Hotfix publicado en produccion:

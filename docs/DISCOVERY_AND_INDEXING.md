@@ -1,5 +1,23 @@
 # Discovery And Indexing
 
+## Addendum deploy `2026-07-13`
+
+- deploy SEO/crawl/IA ejecutado en produccion
+- commit desplegado:
+  - `235978c`
+- `llms.txt` publicado en:
+  - `https://instalberrozpe.com/llms.txt`
+- redirect legacy activo:
+  - `https://instalberrozpe.com/sitemap_index.xml` -> `https://instalberrozpe.com/sitemap-index.xml`
+- backup previo creado:
+  - `public_html-backup-2026-07-13-seo-crawl-ai.zip.zip`
+- validacion real:
+  - `/` -> `301` a `/es/`
+  - `/robots.txt` -> `200 OK`
+  - `/sitemap-index.xml` -> `200 OK`
+  - `/sitemap-0.xml` -> `200 OK`
+  - `/llms.txt` -> `200 OK`
+
 ## Addendum `2026-07-13`
 
 - auditoria de crawl, enlaces y descubrimiento IA ejecutada sin deploy
@@ -9,7 +27,7 @@
   - `sitemap-index.xml` -> `200 OK`
   - `sitemap-0.xml` -> `200 OK`
   - `sitemap_index.xml` legacy -> `404 Not Found`
-- la build nueva deja preparado:
+- la build nueva dejo preparados y luego publicados:
   - `public/llms.txt`
   - redirect legacy en `public/.htaccess`:
     - `/sitemap_index.xml` -> `/sitemap-index.xml`
@@ -19,7 +37,7 @@
   - `0` referencias a `localhost`
   - `0` referencias a `staging`
   - `0` enlaces externos con falta de `noopener noreferrer`
-- siguiente paso operativo tras el proximo deploy:
+- siguiente paso operativo:
   - alta o importacion de propiedad en Bing Webmaster Tools
   - envio de `https://instalberrozpe.com/sitemap-index.xml`
 
@@ -93,4 +111,4 @@ Dejar la web estatica preparada para descubrimiento por Google, Bing y crawlers 
 
 No existe garantia de indexacion o citacion por motores IA.
 
-La base queda preparada para lectura por crawlers mediante HTML estatico, sitemap, `robots.txt`, `canonical`, `hreflang`, schema, Open Graph, enlaces internos consistentes y `llms.txt` preparado en repo para el siguiente despliegue.
+La base queda preparada para lectura por crawlers mediante HTML estatico, sitemap, `robots.txt`, `canonical`, `hreflang`, schema, Open Graph, enlaces internos consistentes y `llms.txt` ya publicado en produccion.

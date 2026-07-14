@@ -4,6 +4,24 @@
 
 - `2026-07-13`
 
+## Addendum deploy `2026-07-13`
+
+- Deploy SEO/crawl/IA realizado en produccion.
+- Commit desplegado:
+  - `235978c`
+- Backup creado:
+  - `public_html-backup-2026-07-13-seo-crawl-ai.zip.zip`
+- Publicado:
+  - `https://instalberrozpe.com/llms.txt`
+- Redirect legacy validado:
+  - `https://instalberrozpe.com/sitemap_index.xml` -> `https://instalberrozpe.com/sitemap-index.xml`
+- Produccion validada:
+  - `/` -> `301` a `/es/`
+  - `/robots.txt` -> `200 OK`
+  - `/sitemap-index.xml` -> `200 OK`
+  - `/sitemap-0.xml` -> `200 OK`
+  - `/llms.txt` -> `200 OK`
+
 ## Alcance
 
 - auditoria tecnica de rastreo, enlazado, follow/nofollow, canonical, hreflang, schema y descubrimiento para motores de busqueda y crawlers IA
@@ -35,13 +53,10 @@
 
 ### Sitemap antiguo WordPress
 
-- `https://instalberrozpe.com/sitemap_index.xml` responde `404 Not Found`
+- `https://instalberrozpe.com/sitemap_index.xml` responde `301 Moved Permanently`
 - conclusion:
-  - no existe sitemap antiguo vivo en produccion
-  - sigue siendo recomendable retirarlo de Google Search Console si sigue dado de alta historicamente
-  - en repo queda preparado un redirect legacy seguro:
-    - `/sitemap_index.xml` -> `/sitemap-index.xml`
-  - ese redirect aun no esta publicado porque este sprint no hace deploy
+  - el path legacy ya queda consolidado hacia el sitemap correcto
+  - sigue siendo recomendable retirar el sitemap legacy de Search Console si sigue dado de alta historicamente
 
 ### Rutas minimas comprobadas en produccion
 
@@ -209,8 +224,8 @@
 - contenido:
   - informacion factual de empresa, servicios, contacto, idiomas y sitemap
 - estado:
-  - preparado en repo
-  - no publicado todavia porque este sprint no hace deploy
+  - publicado en produccion
+  - validado con `200 OK`
 
 ## Bing Webmaster Tools
 
@@ -230,9 +245,5 @@
 
 ## Pendientes
 
-- desplegar estos ajustes a produccion en un sprint posterior
 - retirar `sitemap_index.xml` de Search Console si sigue cargado historicamente
 - enviar o revalidar `sitemap-index.xml` tambien en Bing Webmaster Tools
-- comprobar en produccion, tras deploy, que:
-  - `https://instalberrozpe.com/llms.txt` responde `200 OK`
-  - `https://instalberrozpe.com/sitemap_index.xml` pasa a redirigir a `https://instalberrozpe.com/sitemap-index.xml`
