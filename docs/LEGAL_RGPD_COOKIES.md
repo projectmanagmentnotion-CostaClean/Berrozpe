@@ -70,7 +70,7 @@ Ningun idioma puede quedar desincronizado respecto a los otros tres cuando se ac
 - Validacion frontend progresiva en:
   - `src/lib/forms/validation.ts`
   - `src/scripts/contact-form.ts`
-- Validacion backend y envio en `public/form-handler.php`
+- Validacion backend y envio en `api/contact.ts` mediante Resend (la activacion requiere revisar el proveedor y actualizar la informacion de privacidad aplicable)
 - Destinatario confirmado del handler: `david@instalberrozpe.com`
 
 ## Reglas del formulario
@@ -116,3 +116,4 @@ Ningun idioma puede quedar desincronizado respecto a los otros tres cuando se ac
 - WhatsApp confirmado: `676 04 33 89`
 - Las resenas visibles usan solo la valoracion agregada `4,9` y `67 resenas`
 - No hay testimonios escritos cargados ni `Review` schema individual
+

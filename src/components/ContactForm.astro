@@ -11,7 +11,7 @@ interface Props {
   returnUrl: string;
 }
 
-const { locale, action = '/form-handler.php', returnUrl } = Astro.props;
+const { locale, action = '/api/contact', returnUrl } = Astro.props;
 const content = getContactFormContent(locale);
 const routes = getRouteCatalog(locale);
 const statusRegionId = `contact-form-status-${locale}`;
@@ -55,6 +55,7 @@ const serviceOptions = [
   >
     <input type="hidden" name="locale" value={locale} />
     <input type="hidden" name="return_url" value={returnUrl} />
+    <input type="hidden" name="form_started_at" value="" />
 
     <div class="grid gap-5 sm:grid-cols-2">
       <FormField
@@ -138,3 +139,4 @@ const serviceOptions = [
 <script>
   import '../scripts/contact-form.ts';
 </script>
+

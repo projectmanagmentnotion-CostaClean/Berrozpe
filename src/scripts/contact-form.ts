@@ -181,6 +181,10 @@ function setupContactForms(): void {
   forms.forEach((form) => {
     applyStatusFromQuery(form);
     clearFieldErrors(form);
+    const startedAt = form.elements.namedItem('form_started_at');
+    if (startedAt instanceof HTMLInputElement) {
+      startedAt.value = String(Date.now());
+    }
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -194,3 +198,4 @@ if (document.readyState === 'loading') {
 } else {
   setupContactForms();
 }
+

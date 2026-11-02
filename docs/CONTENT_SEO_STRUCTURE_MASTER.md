@@ -3,7 +3,7 @@
 ## A. Resumen del proyecto
 
 - Dominio: `instalberrozpe.com`
-- Hosting previsto: SiteGround
+- Hosting objetivo: Vercel Pro (proyecto independiente; migración en preparación)
 - Tipo de web: Astro estatico
 - Build de salida: `dist/`
 - Idiomas activos: `es`, `ca`, `en`, `de`
@@ -407,7 +407,7 @@ Campos activos:
 Validacion:
 
 - Frontend progresiva en `src/lib/forms/validation.ts` y `src/scripts/contact-form.ts`
-- Backend en `public/form-handler.php`
+- Backend Vercel en `api/contact.ts`, con envío HTTPS a Resend
 
 Controles implementados:
 
@@ -418,10 +418,23 @@ Controles implementados:
 - servicio limitado a los tres servicios confirmados
 - limites de longitud y saneado basico
 - respuesta JSON para JS activo y redirect con `?status=` para fallback sin JS
+- API key y remitente se configuran solo como variables de entorno Vercel
+- honeypot, validación de origen, campo de tiempo mínimo y limitación por instancia
 
 Pendiente antes de produccion:
 
-- resuelto en produccion el `2026-07-10` con recepcion real en `david@instalberrozpe.com`
+- envío SiteGround confirmado históricamente el `2026-07-10`
+- nuevo envío en Vercel pendiente de credenciales Resend y verificación de dominio remitente
+
+## T. Migración a Vercel (2026-11-02)
+
+- Rama canónica: `master`; GitHub declara `main` como predeterminada, por lo que el proyecto Vercel debe fijar explícitamente `master` como Production Branch.
+- Build estática Astro: `npm run build` → `dist/` (45 páginas).
+- `vercel.json` conserva redirecciones legacy y `/` → `/es/`.
+- El antiguo `public/form-handler.php` se sustituye por `api/contact.ts`; no se publica código PHP ni se usa `mail()`.
+- El handler envía solicitudes por Resend API. Variables necesarias en Vercel: `RESEND_API_KEY` (secreto), `RESEND_FROM_EMAIL` (remitente de dominio verificado) y `CONTACT_TO_EMAIL` (destino `david@instalberrozpe.com`).
+- El dominio y los registros DNS del correo no deben cambiarse durante la migración. La verificación del remitente requiere DNS propios de Resend; esos registros deberán revisarse para no duplicar ni sustituir SPF y añadirse por una persona autorizada.
+- La sesión Vercel comprobada el `2026-11-02` todavía informa plan Hobby; no crear ni desplegar en ese equipo.
 
 ## K. Assets
 
@@ -763,3 +776,4 @@ Reduced motion:
   - 45 paginas generadas
   - `sitemap-index.xml`, `sitemap-0.xml`, `robots.txt`, `.htaccess` y `form-handler.php` presentes en `dist/`
   - sin script de `lint` en `package.json`
+

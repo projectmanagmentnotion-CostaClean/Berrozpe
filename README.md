@@ -1,6 +1,6 @@
 # Instal Berrozpe
 
-Base técnica de la nueva web estática de `instalberrozpe.com`, preparada para desplegar `dist/` en SiteGround.
+Base técnica de la web estática de `instalberrozpe.com`, preparada para desplegar `dist/` en Vercel.
 
 ## Stack
 
@@ -16,7 +16,7 @@ Base técnica de la nueva web estática de `instalberrozpe.com`, preparada para 
 - Los datos compartidos viven en `content/shared/`.
 - Los textos traducibles viven en `content/locales/{locale}/`.
 - Los componentes no incluyen copy comercial hardcodeado.
-- La build es estática y el despliegue se hace subiendo solo `/dist`.
+- La build es estática y genera `/dist`; Vercel publica ese directorio y ejecuta `api/contact.ts` como función para el formulario.
 
 ## Scripts
 
@@ -57,7 +57,8 @@ npm run preview
 3. Mantener los 4 idiomas sincronizados en estructura y contenido base.
 4. Revisar placeholders legales antes de publicar.
 5. Ejecutar `npm run build`.
-6. Subir el contenido de `/dist` al hosting de SiteGround cuando exista validación de despliegue.
+6. Desplegar desde la rama canónica `master` en el proyecto Vercel Pro independiente.
+7. Configurar los secretos del formulario en Vercel siguiendo [despliegue Vercel](./docs/deployment-vercel.md).
 
 ## Documentación
 
@@ -71,3 +72,5 @@ npm run preview
 - [Documento maestro de contenido, SEO y estructura](./docs/CONTENT_SEO_STRUCTURE_MASTER.md)
 - [SEO local y hreflang](./docs/SEO_LOCAL.md)
 - [Legales RGPD y cookies](./docs/LEGAL_RGPD_COOKIES.md)
+- [Despliegue Vercel y formulario](./docs/deployment-vercel.md)
+
