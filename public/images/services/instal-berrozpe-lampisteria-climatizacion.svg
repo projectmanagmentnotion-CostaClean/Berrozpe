@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Visual corporativo temporal de lampisteria y climatizacion</title>
+  <desc id="desc">Composicion abstracta temporal para el servicio de lampisteria y climatizacion.</desc>
+  <rect width="1400" height="1000" fill="#fbfcfe"/>
+  <circle cx="1080" cy="180" r="210" fill="#ff7700" opacity=".12"/>
+  <circle cx="300" cy="860" r="250" fill="#045cb4" opacity=".12"/>
+  <rect x="110" y="100" width="1180" height="800" rx="42" fill="#ffffff" stroke="#1e293b" stroke-opacity=".08"/>
+  <g transform="translate(190 180)">
+    <rect width="440" height="460" rx="40" fill="#045cb4"/>
+    <circle cx="220" cy="230" r="114" fill="#f9fafb" opacity=".92"/>
+    <path d="M220 130c20 58 72 76 72 132 0 40-32 72-72 72s-72-32-72-72c0-56 52-74 72-132z" fill="#ff7700"/>
+  </g>
+  <g transform="translate(700 220)">
+    <rect width="470" height="190" rx="34" fill="#1e293b"/>
+    <rect y="240" width="470" height="190" rx="34" fill="#ffffff" stroke="#045cb4" stroke-opacity=".12"/>
+    <rect y="490" width="310" height="18" rx="9" fill="#1e293b" opacity=".74"/>
+    <rect y="526" width="250" height="14" rx="7" fill="#1e293b" opacity=".34"/>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "locale": "de",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Installationen in Blanes und Girona",
+    "title": "Installationen fur Haus und Betrieb in Blanes",
+    "body": "Elektro und Smart Home, Sanitaar und Klimatechnik sowie Alarmanlagen und Kameras. Direkter Kontakt per Telefon, WhatsApp, E-Mail oder Formular.",
+    "primaryCtaLabel": "Leistungen ansehen",
+    "primaryCtaHref": "/de/dienstleistungen/",
+    "secondaryCtaLabel": "Angebot anfragen",
+    "secondaryCtaHref": "/de/kontakt/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Leistungen",
+    "title": "Drei klare Leistungen fur den Einstieg",
+    "body": "Wahlen Sie den Bereich, der am besten zu Ihrer Anfrage passt, und wir fuhren Sie von dort weiter.",
+    "items": [
+      "Elektro und Smart Home",
+      "Sanitaar und Klimatechnik",
+      "Alarmanlagen und Kameras"
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "Uber uns",
+    "title": "Klarer technischer Service und direkter Kontakt",
+    "body": "Drei verbundene Bereiche und direkter Kontakt aus Blanes fur Haus und Betrieb.",
+    "items": [
+      "Drei klar definierte Technikbereiche.",
+      "Direkter Kontakt per Telefon, WhatsApp, E-Mail und Formular.",
+      "Betreuung fur Haus und Betrieb."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Ablauf",
+    "title": "So arbeiten wir",
+    "body": "Sie schildern Ihren Bedarf und wir besprechen mit Ihnen den nachsten Schritt.",
+    "items": [
+      "Sie schildern den Bedarf per Telefon, WhatsApp oder Formular.",
+      "Wir prufen die passende Leistung.",
+      "Wir koordinieren den Einsatz oder das Angebot."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Kontakt",
+    "title": "Kontaktieren Sie Instal Berrozpe",
+    "body": "Rufen Sie uns an, schreiben Sie per WhatsApp oder nutzen Sie das Formular.",
+    "primaryCtaLabel": "Direktes Telefon",
+    "secondaryCtaLabel": "Haupt-E-Mail"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Haufige Fragen",
+    "title": "Haufige Fragen vor der Kontaktaufnahme",
+    "body": "Kurze Antworten zur Orientierung.",
+    "items": [
+      "Das Unternehmen arbeitet fur Haus und Betrieb.",
+      "Kontakt ist per Formular, Telefon, E-Mail oder WhatsApp moglich.",
+      "Wenn Sie zwischen Leistungen zweifeln, ist Kontakt der beste Einstieg."
+    ]
+  }
+}

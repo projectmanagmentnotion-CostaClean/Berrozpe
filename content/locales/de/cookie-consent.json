@@ -1,0 +1,54 @@
+{
+  "locale": "de",
+  "storageKey": "berrozpe-cookie-consent",
+  "version": "2026-07",
+  "banner": {
+    "title": "Cookie-Einstellungen",
+    "body": "Wir verwenden notwendige Cookies für die grundlegende Funktion der Website. Optionale Kategorien werden nur mit deiner Einwilligung aktiviert.",
+    "acceptLabel": "Alles akzeptieren",
+    "rejectLabel": "Optionale ablehnen",
+    "configureLabel": "Konfigurieren",
+    "policyLabel": "Cookie-Richtlinie ansehen"
+  },
+  "modal": {
+    "title": "Cookies konfigurieren",
+    "body": "Du kannst optionale Kategorien akzeptieren oder ablehnen. Notwendige Cookies bleiben aktiv, um die Grundfunktionen der Website sicherzustellen.",
+    "saveLabel": "Einstellungen speichern",
+    "acceptAllLabel": "Alles akzeptieren",
+    "rejectAllLabel": "Optionale ablehnen",
+    "closeLabel": "Schließen"
+  },
+  "labels": {
+    "alwaysActive": "Immer aktiv",
+    "preparedInactive": "Vorbereitet, standardmäßig inaktiv"
+  },
+  "categories": [
+    {
+      "key": "necessary",
+      "title": "Notwendig",
+      "description": "Technische Cookies, um deine Einwilligung zu speichern und die Grundfunktionen der Website bereitzustellen.",
+      "required": true,
+      "activeByDefault": true
+    },
+    {
+      "key": "preferences",
+      "title": "Präferenzen",
+      "description": "Kategorie für nicht notwendige Komforteinstellungen. Derzeit sind in dieser Kategorie keine bestätigten Werkzeuge aktiv.",
+      "pending": true
+    },
+    {
+      "key": "analytics",
+      "title": "Analyse",
+      "description": "Kategorie für Messung und Statistik. Es wird kein Analysewerkzeug aktiviert, solange keine reale Integration bestätigt ist.",
+      "pending": true
+    },
+    {
+      "key": "marketing",
+      "title": "Marketing",
+      "description": "Kategorie für Werbung oder Drittanbieter-Pixel. Aktuell sind keine Marketing-Skripte bestätigt.",
+      "pending": true
+    }
+  ],
+  "footerLinkLabel": "Cookie-Einstellungen",
+  "savedMessage": "Deine Cookie-Einstellungen wurden gespeichert."
+}

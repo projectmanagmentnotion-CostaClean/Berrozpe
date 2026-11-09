@@ -1,0 +1,42 @@
+{
+  "slug": "cookie-policy",
+  "locale": "en",
+  "title": "Cookie policy",
+  "seoTitle": "Cookie policy | Instal Berrozpe",
+  "seoDescription": "Cookie policy of Instal Berrozpe and operation of the website's multilingual consent system.",
+  "updatedAtLabel": "Last updated",
+  "updatedAtValue": "2026-07-10",
+  "intro": "This website uses only the cookies required for its operation and a consent system for optional categories, which are currently inactive by default.",
+  "sections": [
+    {
+      "heading": "Necessary cookies",
+      "body": [
+        "Necessary cookies enable basic technical functions, such as remembering consent preferences and keeping the website working properly.",
+        "These cookies may remain active without prior consent because they are required to provide the service requested by the user."
+      ]
+    },
+    {
+      "heading": "Optional categories and consent",
+      "body": [
+        "The website is prepared for optional categories such as preferences, analytics or marketing, but none of them are enabled by default or loaded before the relevant consent is given.",
+        "If optional tools are added in the future, they will only run after explicit acceptance of the corresponding category."
+      ]
+    },
+    {
+      "heading": "Managing preferences",
+      "body": [
+        "Users can accept, reject or configure cookies from the initial banner.",
+        "Preferences can be reopened at any time from the permanent link in the footer."
+      ]
+    },
+    {
+      "heading": "Google Maps and third parties",
+      "body": [
+        "The website does not load a live Google Maps iframe by default.",
+        "Location blocks work through text-based address information and an external link, avoiding unnecessary third-party loading before consent."
+      ]
+    }
+  ],
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
+}

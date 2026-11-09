@@ -1,0 +1,58 @@
+{
+  "locale": "de",
+  "home": {
+    "eyebrow": "Empfohlener Weg",
+    "title": "Leistung wahlen oder zu Kontakt gehen",
+    "body": "Wenn Sie bereits wissen, was Sie brauchen, offnen Sie die Leistung. Wenn nicht, fuhren wir Sie uber Kontakt weiter.",
+    "serviceListTitle": "Leistung",
+    "trustLabel": "Unternehmen ansehen",
+    "contactLabel": "Kontakt"
+  },
+  "servicesIndex": {
+    "eyebrow": "Nachster Schritt",
+    "title": "Drei Leistungen und ein klarer Kontaktweg",
+    "body": "Jede Seite fasst einen Technikbereich zusammen. Wenn Sie den Fall direkt erklaren mochten, gehen Sie zu Kontakt oder WhatsApp.",
+    "contactLabel": "Angebot anfragen",
+    "whatsappLabel": "Per WhatsApp schreiben",
+    "aboutLabel": "Uber uns"
+  },
+  "serviceDetail": {
+    "journey": {
+      "eyebrow": "Nachster Schritt",
+      "title": "Machen Sie aus diesem Bedarf eine klare Anfrage",
+      "body": "Sie konnen zu Kontakt gehen, zur Ubersicht zuruckkehren oder zuerst das Unternehmen ansehen.",
+      "contactLabel": "Angebot anfragen",
+      "servicesLabel": "Alle Leistungen ansehen",
+      "aboutLabel": "Unternehmen ansehen"
+    },
+    "related": {
+      "eyebrow": "Verwandte Leistungen",
+      "title": "Leistungen, die oft zusammen angefragt werden",
+      "body": "Verwandte Optionen fur verbundene technische Anforderungen."
+    },
+    "faqCta": {
+      "eyebrow": "Anfrage",
+      "title": "Wenn Sie eine genauere Prufung brauchen, gehen Sie zu Kontakt",
+      "body": "Wenn die Antwort vom Objekt oder von mehreren Leistungen abhangt, erklaren Sie den Fall am besten per Telefon, WhatsApp oder Formular.",
+      "contactLabel": "Zu Kontakt",
+      "whatsappLabel": "Per WhatsApp schreiben"
+    }
+  },
+  "about": {
+    "eyebrow": "Nachster Schritt",
+    "title": "Nach dem Unternehmensuberblick folgt Leistung oder Kontakt",
+    "body": "Sie konnen die passende Leistung offnen oder direkt schreiben und den Bedarf erklaren.",
+    "servicesLabel": "Leistungen ansehen",
+    "contactLabel": "Zu Kontakt",
+    "featuredServiceLabel": "Ausgewahlte Leistung"
+  },
+  "contact": {
+    "eyebrow": "Vor dem Schreiben",
+    "title": "Wenn Sie noch zwischen Leistungen schwanken, ist dies der schnelle Weg",
+    "body": "Leistungen ansehen, das Unternehmen kennenlernen, Bewertungen ansehen oder direkt anrufen.",
+    "servicesLabel": "Leistungen ansehen",
+    "aboutLabel": "Uber uns",
+    "phoneLabel": "Jetzt anrufen",
+    "reviewsLabel": "Bewertungen ansehen"
+  }
+}

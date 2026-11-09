@@ -1,0 +1,45 @@
+{
+  "slug": "privacy-policy",
+  "locale": "en",
+  "title": "Privacy policy",
+  "seoTitle": "Privacy policy | Instal Berrozpe",
+  "seoDescription": "Privacy policy of Instal Berrozpe S.L. for enquiries received by form, email, phone or WhatsApp.",
+  "updatedAtLabel": "Last updated",
+  "updatedAtValue": "2026-07-10",
+  "intro": "This policy explains how Instal Berrozpe S.L. handles personal data received through this website and its contact channels.",
+  "sections": [
+    {
+      "heading": "Data controller",
+      "body": [
+        "Controller: Instal Berrozpe S.L.",
+        "Tax ID: B55326813.",
+        "Legal and tax address: Antiga 68 bajos de Blanes. Public reference address: Carrer de l'Antiga, 68, 17300 Blanes, Girona, Spain.",
+        "Contact and privacy email: david@instalberrozpe.com."
+      ]
+    },
+    {
+      "heading": "Purpose and legal basis",
+      "body": [
+        "Data is used to handle enquiries received by form, email, phone or WhatsApp, to answer questions and to manage the contact requested by the user.",
+        "The legal basis is the user's consent when sending an enquiry and Instal Berrozpe's legitimate interest in answering requests related to its professional activity.",
+        "Data will not be used for purposes other than those described here and will not be sold to third parties."
+      ]
+    },
+    {
+      "heading": "Retention and recipients",
+      "body": [
+        "Data will be kept for as long as necessary to handle the enquiry and for any additional period required by applicable law.",
+        "As a general rule, data will not be disclosed to third parties unless there is a legal obligation or it is necessary for the technical operation of the service."
+      ]
+    },
+    {
+      "heading": "Your rights",
+      "body": [
+        "You may request access, rectification, deletion, objection, restriction of processing and data portability where applicable.",
+        "To exercise these rights, write to david@instalberrozpe.com and explain your request together with the information needed to identify you."
+      ]
+    }
+  ],
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
+}

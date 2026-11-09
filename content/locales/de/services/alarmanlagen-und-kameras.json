@@ -1,0 +1,69 @@
+{
+  "slug": "alarmanlagen-und-kameras",
+  "locale": "de",
+  "title": "Alarmanlagen und Kameras",
+  "shortTitle": "Alarmanlagen und Kameras",
+  "seoTitle": "Alarmanlagen und Kameras in Blanes | Instal Berrozpe",
+  "seoDescription": "Alarmanlagen und CCTV/IP-Kameras in Blanes und Girona mit Instal Berrozpe. Sicherheitslösungen für Privat- oder Gewerbeobjekte.",
+  "heroTitle": "Alarmanlagen und Kameras fur Haus und Betrieb",
+  "intro": "Sicherheitssysteme mit Alarmanlagen sowie CCTV- und IP-Kameras in Privat- oder Gewerbeobjekten.",
+  "summary": "Alarmanlagen, CCTV-Kameras und IP-Kameras innerhalb einer technischen Sicherheitslinie.",
+  "includes": {
+    "title": "Enthält",
+    "items": [
+      "Alarmanlagen",
+      "CCTV-Kameras",
+      "IP-Kameras"
+    ]
+  },
+  "benefits": {
+    "title": "Wichtige Punkte",
+    "items": [
+      "Ermöglicht es, Sicherheit und Überwachung innerhalb derselben Leistungslinie zu behandeln.",
+      "Die aktuelle Struktur richtet sich je nach Kontext an Privat- oder Gewerbeobjekte.",
+      "Kann bei Bedarf natürlich mit Elektro- oder Smart-Home-Arbeiten verbunden werden."
+    ]
+  },
+  "process": {
+    "title": "Leistungsablauf",
+    "items": [
+      "Sie erklären den Bedarf an Sicherheit oder Überwachung.",
+      "Das System, das am besten zu Raum und Nutzung passt, wird geprüft.",
+      "Die Installation von Alarmanlagen oder Kameras wird koordiniert.",
+      "Wenn mehrere Leistungen kombiniert werden müssen, kann die Anfrage erweitert werden."
+    ]
+  },
+  "faqs": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Was ist in dieser Leistung enthalten?",
+        "answer": "Die aktuelle Website unterscheidet Alarmanlagen, CCTV-Kameras und IP-Kameras innerhalb derselben Sicherheitslinie."
+      },
+      {
+        "question": "Wird Fernzugriff erwähnt?",
+        "answer": "Ja. Die aktuelle Darstellung verbindet IP-Kameras mit dem Zugriff auf Bilder über das Internet."
+      },
+      {
+        "question": "Kann das mit anderen technischen Arbeiten kombiniert werden?",
+        "answer": "Ja. In vielen Fällen steht diese Linie in Verbindung mit Elektro- und Smart-Home-Arbeiten oder mit anderen Installationsanforderungen."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "lampisteria-y-climatizacion"
+  ],
+  "cta": {
+    "title": "Sagen Sie uns, was Sie bei Alarmanlagen oder Kameras brauchen",
+    "body": "Wenn Sie ein Sicherheitssystem fur Haus oder Betrieb prufen mochten, schreiben Sie uns und wir orientieren Sie.",
+    "label": "Angebot anfragen",
+    "href": "/de/kontakt/",
+    "secondaryLabel": "Leistungen ansehen",
+    "secondaryHref": "/de/dienstleistungen/"
+  },
+  "pendingConfirmation": [
+    "Prüfen, ob ältere Hinweise auf Marken oder Leitstellen beibehalten werden sollen.",
+    "Zusätzliche operative Versprechen vor der Produktion validieren."
+  ]
+}

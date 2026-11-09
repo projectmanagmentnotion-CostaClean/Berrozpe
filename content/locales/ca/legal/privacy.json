@@ -1,0 +1,45 @@
+{
+  "slug": "politica-de-privacitat",
+  "locale": "ca",
+  "title": "Politica de privacitat",
+  "seoTitle": "Politica de privacitat | Instal Berrozpe",
+  "seoDescription": "Politica de privacitat d'Instal Berrozpe S.L. per a sollicituds rebudes per formulari, email, telefon o WhatsApp.",
+  "updatedAtLabel": "Ultima actualitzacio",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Aquesta politica explica com tracta Instal Berrozpe S.L. les dades personals rebudes a traves d'aquest web i dels seus canals de contacte.",
+  "sections": [
+    {
+      "heading": "Responsable del tractament",
+      "body": [
+        "Responsable: Instal Berrozpe S.L.",
+        "CIF/NIF: B55326813.",
+        "Domicili legal i fiscal: Antiga 68 baixos de Blanes. Adreca publica de referencia: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
+        "Email de contacte i privacitat: david@instalberrozpe.com."
+      ]
+    },
+    {
+      "heading": "Finalitat i base legal",
+      "body": [
+        "Les dades s'utilitzen per atendre sollicituds rebudes per formulari, email, telefon o WhatsApp, respondre consultes i gestionar el contacte demanat per la persona usuaria.",
+        "La base legal es el consentiment de la persona usuaria en enviar la seva consulta i l'interes legitim d'Instal Berrozpe a respondre sollicituds relacionades amb la seva activitat professional.",
+        "No s'utilitzaran les dades per a finalitats diferents de les indicades ni es vendran a tercers."
+      ]
+    },
+    {
+      "heading": "Conservacio i destinataris",
+      "body": [
+        "Les dades es conservaran durant el temps necessari per atendre la sollicitud i durant els terminis exigits per la normativa aplicable quan correspongui.",
+        "Amb caracter general, no es comunicaran dades a tercers excepte obligacio legal o quan sigui necessari per a la correcta gestio tecnica del servei."
+      ]
+    },
+    {
+      "heading": "Drets de les persones usuaries",
+      "body": [
+        "Pots sollicitar l'acces, la rectificacio, la supressio, l'oposicio, la limitacio del tractament i la portabilitat de les teves dades quan sigui aplicable.",
+        "Per exercir aquests drets, escriu a david@instalberrozpe.com indicant la teva sollicitud i les dades necessaries per identificar-te."
+      ]
+    }
+  ],
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
+}

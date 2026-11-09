@@ -1,0 +1,71 @@
+{
+  "slug": "lampisteria-y-climatizacion",
+  "locale": "es",
+  "title": "Lampistería y climatización",
+  "shortTitle": "Lampistería y climatización",
+  "seoTitle": "Lampistería y climatización en Blanes | Instal Berrozpe",
+  "seoDescription": "Lampisteria y climatizacion en Blanes y Girona con Instal Berrozpe. Instalaciones de agua, aire acondicionado, calefaccion, calderas y energia solar termica.",
+  "heroTitle": "Lampisteria y climatizacion para vivienda y negocio",
+  "intro": "Instalaciones de agua y climatizacion para hogar o negocio en Blanes y Girona.",
+  "summary": "Lampisteria, aire acondicionado, calefaccion, calderas y energia solar termica en un mismo servicio.",
+  "includes": {
+    "title": "Incluye",
+    "items": [
+      "Lampisteria",
+      "Aire acondicionado",
+      "Calefaccion",
+      "Calderas",
+      "Energia solar termica"
+    ]
+  },
+  "benefits": {
+    "title": "Puntos clave",
+    "items": [
+      "Permite tratar agua y confort termico dentro de la misma consulta.",
+      "Sirve tanto para vivienda como para negocio segun el equipo o la instalacion.",
+      "Agrupa una linea tecnica amplia sin obligar a repartir la necesidad entre varios proveedores."
+    ]
+  },
+  "process": {
+    "title": "Proceso del servicio",
+    "items": [
+      "Explicas la necesidad de agua, climatizacion o equipo asociado.",
+      "Se revisa la solucion mas adecuada para el espacio y el uso previsto.",
+      "Se coordina la instalacion o la actuacion tecnica correspondiente.",
+      "Si el caso conecta con otras lineas, la consulta puede unificarse."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "Que soluciones agrupa esta pagina?",
+        "answer": "La auditoria actual confirma lampisteria, aire acondicionado, calefaccion, calderas y energia solar termica."
+      },
+      {
+        "question": "Es un servicio pensado solo para vivienda?",
+        "answer": "No. La presentacion actual tambien lo orienta a negocio segun la necesidad tecnica."
+      },
+      {
+        "question": "Puedo consultar agua y climatizacion en un mismo mensaje?",
+        "answer": "Si. Precisamente esta linea esta planteada para concentrar varias necesidades relacionadas con confort termico y agua."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "title": "Cuentanos que necesitas en lampisteria o climatizacion",
+    "body": "Si necesitas revisar agua, aire acondicionado, calefaccion o caldera, escribenos y vemos contigo el siguiente paso.",
+    "label": "Solicitar presupuesto",
+    "href": "/es/contacto/",
+    "secondaryLabel": "Ver servicios",
+    "secondaryHref": "/es/servicios/"
+  },
+  "pendingConfirmation": [
+    "Validar si el control por wifi debe destacarse como claim comercial principal.",
+    "Definir con precision la cobertura geografica final antes de produccion."
+  ]
+}

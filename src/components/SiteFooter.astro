@@ -1,0 +1,121 @@
+---
+import type { Locale } from '../lib/content';
+import {
+  getBrandVisuals,
+  getCookieConsentContent,
+  getLanguageSwitcherLinksForPage,
+  getLegalPages,
+  getHomeCollection,
+  getNavigation,
+  getPublishedServices,
+  getRouteCatalog,
+  getServiceRouteById,
+  getSharedContact,
+  getSiteSettings,
+} from '../lib/content';
+import Button from './Button.astro';
+import Container from './Container.astro';
+import GoogleMapBlock from './GoogleMapBlock.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import WhatsAppCTA from './WhatsAppCTA.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const site = getSiteSettings(locale);
+const brandLogo = getBrandVisuals();
+const contact = getSharedContact();
+const services = getPublishedServices(locale);
+const legalPages = getLegalPages(locale);
+const navigation = getNavigation(locale);
+const home = getHomeCollection(locale);
+const routes = getRouteCatalog(locale);
+const cookieConsent = getCookieConsentContent(locale);
+const languageLinks = getLanguageSwitcherLinksForPage('home');
+const schedule = contact.schedule[locale] ?? contact.schedule.es;
+---
+
+<footer class="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-14 sm:py-16">
+  <Container>
+    <div class="grid gap-10 xl:grid-cols-[1.15fr_0.85fr]">
+      <div class="space-y-5">
+        <a class="inline-flex items-center" href={site.localeBasePath} aria-label={brandLogo.alt}>
+          <img
+            src={brandLogo.path}
+            width={brandLogo.width}
+            height={brandLogo.height}
+            alt={brandLogo.alt}
+            class="berrozpe-footer-logo h-auto w-[clamp(9.5rem,20vw,13.5rem)] object-contain"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';"
+          />
+          <span class="hidden text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[var(--color-text-soft)]">
+            {site.brandName}
+          </span>
+        </a>
+        <h2 class="max-w-3xl font-[var(--font-display)] text-2xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--color-text)] sm:text-3xl lg:text-4xl">
+          {home.contactCta.title}
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="space-y-2 text-base text-[var(--color-text-muted)]">
+            {contact.address.displayLines.map((line) => <p>{line}</p>)}
+            <p>{schedule}</p>
+          </div>
+          <div class="space-y-2 text-base text-[var(--color-text-muted)]">
+            <p>{contact.phones.mobile}</p>
+            <p>{contact.phones.landline}</p>
+            {contact.primaryEmail ? <p>{contact.primaryEmail}</p> : contact.emailsDetected.map((email) => <p>{email}</p>)}
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <Button href={routes.contact} variant="primary">
+            {navigation.items.find((item) => item.id === 'contact')?.label ?? 'Contact'}
+          </Button>
+          <WhatsAppCTA locale={locale} variant="inline" labelMode="short" />
+          <GoogleMapBlock locale={locale} variant="footer" />
+          <button
+            type="button"
+            class="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-border)] px-5 py-3 text-sm font-medium text-[var(--color-text)] transition hover:border-[var(--color-border-strong)] hover:bg-white/5"
+            data-open-cookie-preferences
+          >
+            {cookieConsent.footerLinkLabel}
+          </button>
+        </div>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2">
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.items.find((item) => item.id === 'services')?.label}</p>
+          <ul class="mt-4 space-y-3 text-sm text-[var(--color-text-muted)]">
+            {services.map((service) => (
+              <li>
+                <a class="transition hover:text-[var(--color-text)]" href={getServiceRouteById(service.serviceId, locale) ?? routes.services}>
+                  {service.shortTitle}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.legalSection}</p>
+          <ul class="mt-4 space-y-3 text-sm text-[var(--color-text-muted)]">
+            {legalPages.map((page) => (
+              <li>
+                <a class="transition hover:text-[var(--color-text)]" href={`/${locale}/${page.slug}/`}>{page.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="sm:col-span-2">
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.items.find((item) => item.id === 'language')?.label}</p>
+          <div class="mt-4">
+            <LanguageSwitcher currentLocale={locale} links={languageLinks} label={navigation.items.find((item) => item.id === 'language')?.label ?? 'Language'} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</footer>

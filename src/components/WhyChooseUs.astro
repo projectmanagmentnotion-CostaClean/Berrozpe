@@ -1,0 +1,44 @@
+---
+import type { HomeSection } from '../data/types';
+import { getPageVisual } from '../lib/content';
+import Card from './Card.astro';
+import Section from './Section.astro';
+import VisualAsset from './VisualAsset.astro';
+
+interface Props {
+  locale: import('../lib/content').Locale;
+  section: HomeSection;
+  number?: string;
+}
+
+const { locale, section, number } = Astro.props;
+const trustVisual = getPageVisual('homeTrust', locale);
+---
+
+<Section
+  id={section.sectionId}
+  eyebrow={section.eyebrow}
+  number={number}
+  title={section.title}
+  body={section.body}
+  className="border-t border-[var(--color-border)]"
+>
+  <div class="mt-10">
+    <VisualAsset
+      asset={trustVisual}
+      eyebrow={section.eyebrow}
+      title={section.title}
+      body={section.body}
+      compact={true}
+      className="min-h-[22rem] sm:min-h-[26rem]"
+      showOverlayContent={false}
+    />
+  </div>
+  <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3" data-animate-group="why-choose-us">
+    {section.items?.map((item) => (
+      <Card className="min-h-[10rem] bg-white/92" data-animate="stagger">
+        <p class="max-w-[24ch] text-lg leading-8 text-[var(--color-text)]">{item}</p>
+      </Card>
+    ))}
+  </div>
+</Section>

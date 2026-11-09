@@ -1,0 +1,69 @@
+{
+  "slug": "alarmes-i-cameres",
+  "locale": "ca",
+  "title": "Alarmes i càmeres",
+  "shortTitle": "Alarmes i càmeres",
+  "seoTitle": "Alarmes i càmeres a Blanes | Instal Berrozpe",
+  "seoDescription": "Alarmes i cameras CCTV/IP a Blanes i Girona amb Instal Berrozpe. Solucions de seguretat per a llar o negoci.",
+  "heroTitle": "Alarmes i cameres per a llar i negoci",
+  "intro": "Sistemes de seguretat amb alarmes i cameres CCTV i IP per a llar o negoci.",
+  "summary": "Alarmes, cameres CCTV i cameres IP en una mateixa linia de seguretat tecnica.",
+  "includes": {
+    "title": "Inclou",
+    "items": [
+      "Alarmes",
+      "Camaras CCTV",
+      "Camaras IP"
+    ]
+  },
+  "benefits": {
+    "title": "Punts clau",
+    "items": [
+      "Permet plantejar seguretat i supervisio dins d'un mateix servei.",
+      "L'estructura actual l'orienta a llar o negoci segons el context.",
+      "Es pot connectar amb altres necessitats tecniques com electricitat o domotica."
+    ]
+  },
+  "process": {
+    "title": "Proces del servei",
+    "items": [
+      "Expliques la necessitat de seguretat o supervisio.",
+      "Es revisa el sistema que millor encaixa amb l'espai i l'us previst.",
+      "Es coordina la instal·lacio d'alarmes o cameras.",
+      "Si cal combinar serveis, la consulta es pot ampliar."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntes frequents",
+    "items": [
+      {
+        "question": "Que inclou aquest servei?",
+        "answer": "La web actual diferencia alarmes, cameras CCTV i cameras IP dins la mateixa linea de seguretat."
+      },
+      {
+        "question": "S'hi menciona acces remot?",
+        "answer": "Si. La presentacio actual associa les cameras IP amb la consulta d'imatge a traves d'internet."
+      },
+      {
+        "question": "Es pot combinar amb altres treballs tecnics?",
+        "answer": "Si. En molts casos aquesta linea es relaciona amb electricitat i domotica o amb altres necessitats de la instal·lacio."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "lampisteria-y-climatizacion"
+  ],
+  "cta": {
+    "title": "Explica'ns que necessites en alarmes o cameres",
+    "body": "Si vols valorar un sistema de seguretat per a llar o negoci, escriu-nos i t'orientem.",
+    "label": "Demanar pressupost",
+    "href": "/ca/contacte/",
+    "secondaryLabel": "Veure serveis",
+    "secondaryHref": "/ca/serveis/"
+  },
+  "pendingConfirmation": [
+    "Confirmar si alguna referencia legacy a marques o centrals receptores s'ha de mantenir.",
+    "Validar qualsevol promesa operativa addicional abans de produccio."
+  ]
+}

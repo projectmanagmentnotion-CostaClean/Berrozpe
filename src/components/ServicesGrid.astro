@@ -1,0 +1,31 @@
+---
+import type { Locale, LocalizedServiceEntry } from '../lib/content';
+import Section from './Section.astro';
+import ServiceCard from './ServiceCard.astro';
+import type { HomeSection } from '../data/types';
+
+interface Props {
+  locale: Locale;
+  section: HomeSection;
+  services: LocalizedServiceEntry[];
+  number?: string;
+}
+
+const { locale, section, services, number } = Astro.props;
+---
+
+<Section
+  id={section.sectionId}
+  eyebrow={section.eyebrow}
+  number={number}
+  title={section.title}
+  body={section.body}
+  className="border-t border-[var(--color-border)]"
+  animate="reveal"
+>
+  <div class="mt-10 grid gap-5 lg:grid-cols-3" data-animate-group="services">
+    {services.map((service, index) => (
+      <ServiceCard locale={locale} service={service} index={index} />
+    ))}
+  </div>
+</Section>

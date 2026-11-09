@@ -1,0 +1,80 @@
+{
+  "locale": "es",
+  "defaultLocale": "es",
+  "localeAlternates": {
+    "es": "https://instalberrozpe.com/es/",
+    "ca": "https://instalberrozpe.com/ca/",
+    "en": "https://instalberrozpe.com/en/",
+    "de": "https://instalberrozpe.com/de/"
+  },
+  "titles": {
+    "home": "Instal Berrozpe | Instalaciones en Blanes y Girona",
+    "services": "Servicios de instalaciones en Blanes | Instal Berrozpe",
+    "about": "Empresa de instalaciones en Blanes | Instal Berrozpe",
+    "contact": "Contacto Instal Berrozpe | Blanes",
+    "legalNotice": "Aviso legal | Instal Berrozpe",
+    "privacy": "Politica de privacidad | Instal Berrozpe",
+    "cookies": "Politica de cookies | Instal Berrozpe",
+    "terms": "Terminos y condiciones | Instal Berrozpe"
+  },
+  "descriptions": {
+    "home": "Empresa de instalaciones en Blanes y Girona. Electricidad y domotica, lampisteria y climatizacion, y alarmas y camaras con contacto directo desde Blanes.",
+    "services": "Servicios de Instal Berrozpe en Blanes: electricidad y domotica, lampisteria y climatizacion, y alarmas y camaras para hogar o negocio.",
+    "about": "Conoce a Instal Berrozpe, empresa de instalaciones en Blanes con servicios tecnicos para electricidad, climatizacion, agua y seguridad.",
+    "contact": "Contacta con Instal Berrozpe en Blanes por telefono, WhatsApp, email o formulario para instalaciones, climatizacion, alarmas y camaras.",
+    "legalNotice": "Datos legales y de contacto de Instal Berrozpe S.L. para el uso informativo de instalberrozpe.com.",
+    "privacy": "Politica de privacidad de Instal Berrozpe S.L. para solicitudes recibidas por formulario, email, telefono o WhatsApp.",
+    "cookies": "Politica de cookies de Instal Berrozpe y funcionamiento del consentimiento multidioma de la web.",
+    "terms": "Terminos y condiciones informativos de Instal Berrozpe para el uso del sitio y la solicitud de presupuestos."
+  },
+  "hreflang": {
+    "home": {
+      "es": "https://instalberrozpe.com/es/",
+      "ca": "https://instalberrozpe.com/ca/",
+      "en": "https://instalberrozpe.com/en/",
+      "de": "https://instalberrozpe.com/de/"
+    },
+    "services": {
+      "es": "https://instalberrozpe.com/es/servicios/",
+      "ca": "https://instalberrozpe.com/ca/serveis/",
+      "en": "https://instalberrozpe.com/en/services/",
+      "de": "https://instalberrozpe.com/de/dienstleistungen/"
+    },
+    "about": {
+      "es": "https://instalberrozpe.com/es/sobre-nosotros/",
+      "ca": "https://instalberrozpe.com/ca/sobre-nosaltres/",
+      "en": "https://instalberrozpe.com/en/about-us/",
+      "de": "https://instalberrozpe.com/de/ueber-uns/"
+    },
+    "contact": {
+      "es": "https://instalberrozpe.com/es/contacto/",
+      "ca": "https://instalberrozpe.com/ca/contacte/",
+      "en": "https://instalberrozpe.com/en/contact/",
+      "de": "https://instalberrozpe.com/de/kontakt/"
+    },
+    "legalNotice": {
+      "es": "https://instalberrozpe.com/es/aviso-legal/",
+      "ca": "https://instalberrozpe.com/ca/avis-legal/",
+      "en": "https://instalberrozpe.com/en/legal-notice/",
+      "de": "https://instalberrozpe.com/de/impressum/"
+    },
+    "privacy": {
+      "es": "https://instalberrozpe.com/es/politica-de-privacidad/",
+      "ca": "https://instalberrozpe.com/ca/politica-de-privacitat/",
+      "en": "https://instalberrozpe.com/en/privacy-policy/",
+      "de": "https://instalberrozpe.com/de/datenschutz/"
+    },
+    "cookies": {
+      "es": "https://instalberrozpe.com/es/politica-de-cookies/",
+      "ca": "https://instalberrozpe.com/ca/politica-de-cookies/",
+      "en": "https://instalberrozpe.com/en/cookie-policy/",
+      "de": "https://instalberrozpe.com/de/cookies/"
+    },
+    "terms": {
+      "es": "https://instalberrozpe.com/es/terminos-y-condiciones/",
+      "ca": "https://instalberrozpe.com/ca/termes-i-condicions/",
+      "en": "https://instalberrozpe.com/en/terms-and-conditions/",
+      "de": "https://instalberrozpe.com/de/allgemeine-geschaeftsbedingungen/"
+    }
+  }
+}

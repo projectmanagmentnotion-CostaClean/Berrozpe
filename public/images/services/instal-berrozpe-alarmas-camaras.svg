@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Visual corporativo temporal de alarmas y camaras</title>
+  <desc id="desc">Composicion abstracta temporal para el servicio de alarmas y camaras.</desc>
+  <rect width="1400" height="1000" fill="#f9fafb"/>
+  <circle cx="1180" cy="200" r="210" fill="#045cb4" opacity=".14"/>
+  <circle cx="250" cy="850" r="250" fill="#ff7700" opacity=".12"/>
+  <rect x="110" y="100" width="1180" height="800" rx="42" fill="#ffffff" stroke="#1e293b" stroke-opacity=".08"/>
+  <g transform="translate(180 190)">
+    <rect width="450" height="400" rx="40" fill="#1e293b"/>
+    <circle cx="225" cy="200" r="118" fill="#f9fafb" opacity=".12" stroke="#f9fafb" stroke-width="10" stroke-opacity=".5"/>
+    <circle cx="225" cy="200" r="62" fill="#045cb4"/>
+    <circle cx="225" cy="200" r="22" fill="#ff7700"/>
+  </g>
+  <g transform="translate(720 210)">
+    <rect width="430" height="220" rx="34" fill="#ff7700"/>
+    <rect x="40" y="50" width="350" height="120" rx="24" fill="#f9fafb" opacity=".2"/>
+    <rect y="290" width="430" height="220" rx="34" fill="#045cb4"/>
+    <rect y="570" width="300" height="18" rx="9" fill="#1e293b" opacity=".74"/>
+    <rect y="606" width="250" height="14" rx="7" fill="#1e293b" opacity=".32"/>
+  </g>
+</svg>

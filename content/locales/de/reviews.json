@@ -1,0 +1,13 @@
+{
+  "locale": "de",
+  "title": "Sichtbare Bewertung bei Google",
+  "intro": "Offentliches Profil von Instal Berrozpe bei Google Business.",
+  "ratingLabel": "4,9/5 bei Google",
+  "reviewCountLabel": "67 Bewertungen",
+  "leaveReviewTitle": "Haben Sie mit Instal Berrozpe gearbeitet?",
+  "leaveReviewText": "Ihre Bewertung hilft anderen Kunden.",
+  "leaveReviewButton": "Google-Bewertung abgeben",
+  "viewProfileButton": "Google-Profil ansehen",
+  "noReviewsFallback": "",
+  "trustNote": "Bewertung sichtbar bei Google Business."
+}

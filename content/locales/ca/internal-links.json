@@ -1,0 +1,58 @@
+{
+  "locale": "ca",
+  "home": {
+    "eyebrow": "Recorregut recomanat",
+    "title": "Tria servei o passa a contacte",
+    "body": "Si ja saps que necessites, entra al servei. Si no, t'orientem des de contacte.",
+    "serviceListTitle": "Servei",
+    "trustLabel": "Coneixer l'empresa",
+    "contactLabel": "Contactar"
+  },
+  "servicesIndex": {
+    "eyebrow": "Seguent pas",
+    "title": "Tres serveis i una manera clara de contactar",
+    "body": "Cada fitxa resumeix una linia tecnica. Si prefereixes explicar el cas directament, passa a contacte o WhatsApp.",
+    "contactLabel": "Demanar pressupost",
+    "whatsappLabel": "Parlar per WhatsApp",
+    "aboutLabel": "Veure sobre nosaltres"
+  },
+  "serviceDetail": {
+    "journey": {
+      "eyebrow": "Seguent pas",
+      "title": "Converteix aquesta necessitat en una consulta clara",
+      "body": "Pots anar a contacte, tornar a l'index o revisar l'empresa abans de decidir.",
+      "contactLabel": "Demanar pressupost",
+      "servicesLabel": "Veure tots els serveis",
+      "aboutLabel": "Coneixer l'empresa"
+    },
+    "related": {
+      "eyebrow": "Serveis relacionats",
+      "title": "Serveis que sovint es consulten junts",
+      "body": "Relacionats per resoldre necessitats tecniques connectades."
+    },
+    "faqCta": {
+      "eyebrow": "Consulta",
+      "title": "Si necessites una valoracio mes precisa, passa a contacte",
+      "body": "Quan el cas depen de l'espai o de diversos serveis, convé explicar-lo per telefon, WhatsApp o formulari.",
+      "contactLabel": "Anar a contacte",
+      "whatsappLabel": "Parlar per WhatsApp"
+    }
+  },
+  "about": {
+    "eyebrow": "Seguent pas",
+    "title": "Despres de coneixer l'empresa, el seguent pas es servei o contacte",
+    "body": "Pots entrar al servei que millor encaixi o escriure directament per explicar la necessitat.",
+    "servicesLabel": "Veure serveis",
+    "contactLabel": "Anar a contacte",
+    "featuredServiceLabel": "Servei destacat"
+  },
+  "contact": {
+    "eyebrow": "Abans d'escriure",
+    "title": "Si encara dubtes entre serveis, aqui tens una ruta rapida",
+    "body": "Revisa els serveis, coneix millor l'empresa, mira les ressenyes o truca directament.",
+    "servicesLabel": "Veure serveis",
+    "aboutLabel": "Veure sobre nosaltres",
+    "phoneLabel": "Trucar ara",
+    "reviewsLabel": "Veure ressenyes"
+  }
+}

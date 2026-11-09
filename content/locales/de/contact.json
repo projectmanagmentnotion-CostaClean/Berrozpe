@@ -1,0 +1,76 @@
+{
+  "locale": "de",
+  "title": "Informationen oder Angebot anfragen",
+  "intro": "Schreiben Sie Ihre Anfrage und die gewuenschte Leistung.",
+  "fields": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Ihr Name",
+      "autocomplete": "name"
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "ihre@email.de",
+      "autocomplete": "email"
+    },
+    "phone": {
+      "label": "Telefon",
+      "placeholder": "Ihre Telefonnummer",
+      "autocomplete": "tel"
+    },
+    "service": {
+      "label": "Leistung",
+      "placeholder": "Leistung auswaehlen"
+    },
+    "message": {
+      "label": "Nachricht",
+      "placeholder": "Beschreiben Sie kurz, was Sie benoetigen",
+      "rows": 6
+    },
+    "privacy": {
+      "label": "Ich habe die Datenschutzerklaerung gelesen und akzeptiere sie."
+    },
+    "honeypot": {
+      "label": "Dieses Feld nicht ausfuellen"
+    }
+  },
+  "serviceOptions": [
+    {
+      "value": "electricidad-y-domotica",
+      "label": "Elektro und Smart Home"
+    },
+    {
+      "value": "lampisteria-y-climatizacion",
+      "label": "Sanitaer und Klimatechnik"
+    },
+    {
+      "value": "alarmas-y-camaras",
+      "label": "Alarmanlagen und Kameras"
+    }
+  ],
+  "privacyConsent": {
+    "prefix": "Sie muessen die",
+    "linkLabel": "Datenschutzerklaerung",
+    "suffix": "akzeptieren, bevor das Formular gesendet werden kann."
+  },
+  "legalSummary": [
+    "Ihre Daten werden verwendet, um Ihre Anfrage per Formular, E-Mail, Telefon oder WhatsApp zu beantworten.",
+    "Verantwortlich fuer die Verarbeitung ist Instal Berrozpe S.L.; weitere Informationen finden Sie in der Datenschutzerklaerung."
+  ],
+  "submitLabel": "Anfrage senden",
+  "sendingLabel": "Wird gesendet...",
+  "successMessage": "Ihre Anfrage wurde erfolgreich gesendet.",
+  "errorMessage": "Das Formular konnte nicht gesendet werden. Bitte pruefen Sie die Felder und versuchen Sie es erneut.",
+  "validationMessages": {
+    "nameRequired": "Der Name ist erforderlich.",
+    "emailRequired": "Die E-Mail ist erforderlich.",
+    "emailInvalid": "Bitte geben Sie eine gueltige E-Mail-Adresse ein.",
+    "phoneInvalid": "Bitte geben Sie eine gueltige Telefonnummer ein oder lassen Sie das Feld leer.",
+    "serviceRequired": "Bitte waehlen Sie eine Leistung aus.",
+    "messageRequired": "Die Nachricht ist erforderlich.",
+    "privacyRequired": "Sie muessen die Datenschutzerklaerung akzeptieren.",
+    "honeypotFilled": "Die Uebermittlung konnte nicht validiert werden.",
+    "genericError": "Das Formular konnte nicht verarbeitet werden."
+  },
+  "honeypotLabel": "Dieses Feld nicht ausfuellen"
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "plumbing-and-climate-control",
+  "locale": "en",
+  "title": "Plumbing and climate control",
+  "shortTitle": "Plumbing and climate control",
+  "seoTitle": "Plumbing and climate control in Blanes | Instal Berrozpe",
+  "seoDescription": "Plumbing and climate control in Blanes and Girona with Instal Berrozpe. Water installations, air conditioning, heating, boilers and solar thermal systems.",
+  "heroTitle": "Plumbing and climate control for homes and businesses",
+  "intro": "Water and climate installations for homes or businesses in Blanes and Girona.",
+  "summary": "Plumbing, air conditioning, heating, boilers and solar thermal systems in one service.",
+  "includes": {
+    "title": "Includes",
+    "items": [
+      "Plumbing",
+      "Air conditioning",
+      "Heating",
+      "Boilers",
+      "Solar thermal systems"
+    ]
+  },
+  "benefits": {
+    "title": "Key points",
+    "items": [
+      "Makes it possible to address water systems and thermal comfort within the same enquiry.",
+      "Useful for homes or businesses depending on the equipment or installation.",
+      "Brings a broad technical line together without splitting the need across several providers."
+    ]
+  },
+  "process": {
+    "title": "Service process",
+    "items": [
+      "You explain the water, climate control or related equipment need.",
+      "The most suitable solution is reviewed for the space and expected use.",
+      "The installation or technical work is coordinated.",
+      "If the case connects with other lines, the enquiry can be unified."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What does this page include?",
+        "answer": "The current audit confirms plumbing, air conditioning, heating, boilers and solar thermal systems."
+      },
+      {
+        "question": "Is this only aimed at residential use?",
+        "answer": "No. The current presentation also positions it for businesses depending on the technical need."
+      },
+      {
+        "question": "Can I ask about water and climate control in the same message?",
+        "answer": "Yes. This line is designed precisely to bring together several needs related to thermal comfort and water systems."
+      }
+    ]
+  },
+  "relatedServices": [
+    "electricidad-y-domotica",
+    "alarmas-y-camaras"
+  ],
+  "cta": {
+    "title": "Tell us what you need in plumbing or climate control",
+    "body": "If you need to review water, air conditioning, heating or a boiler, write to us and we will review the next step with you.",
+    "label": "Request a quote",
+    "href": "/en/contact/",
+    "secondaryLabel": "View services",
+    "secondaryHref": "/en/services/"
+  },
+  "pendingConfirmation": [
+    "Validate whether wifi control should appear as a primary commercial claim.",
+    "Define the final geographic coverage precisely before production."
+  ]
+}

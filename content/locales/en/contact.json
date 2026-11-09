@@ -1,0 +1,76 @@
+{
+  "locale": "en",
+  "title": "Request information or a quote",
+  "intro": "Write your enquiry and the service you need.",
+  "fields": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Your name",
+      "autocomplete": "name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "your@email.com",
+      "autocomplete": "email"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Your phone number",
+      "autocomplete": "tel"
+    },
+    "service": {
+      "label": "Service",
+      "placeholder": "Select a service"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Briefly explain what you need",
+      "rows": 6
+    },
+    "privacy": {
+      "label": "I have read and accept the privacy policy."
+    },
+    "honeypot": {
+      "label": "Do not fill in this field"
+    }
+  },
+  "serviceOptions": [
+    {
+      "value": "electricidad-y-domotica",
+      "label": "Electrical and home automation"
+    },
+    {
+      "value": "lampisteria-y-climatizacion",
+      "label": "Plumbing and climate control"
+    },
+    {
+      "value": "alarmas-y-camaras",
+      "label": "Alarms and cameras"
+    }
+  ],
+  "privacyConsent": {
+    "prefix": "You must accept the",
+    "linkLabel": "privacy policy",
+    "suffix": "before sending the form."
+  },
+  "legalSummary": [
+    "Your data will be used to answer your enquiry by form, email, phone or WhatsApp.",
+    "The data controller is Instal Berrozpe S.L. and you can read more in the privacy policy."
+  ],
+  "submitLabel": "Send enquiry",
+  "sendingLabel": "Sending...",
+  "successMessage": "Your enquiry has been sent successfully.",
+  "errorMessage": "The form could not be sent. Review the fields and try again.",
+  "validationMessages": {
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Enter a valid email address.",
+    "phoneInvalid": "Enter a valid phone number or leave the field empty.",
+    "serviceRequired": "Select a service.",
+    "messageRequired": "Message is required.",
+    "privacyRequired": "You must accept the privacy policy.",
+    "honeypotFilled": "The submission could not be validated.",
+    "genericError": "The form could not be processed."
+  },
+  "honeypotLabel": "Do not fill in this field"
+}

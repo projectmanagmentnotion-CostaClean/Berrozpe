@@ -1,0 +1,30 @@
+---
+import type { Locale, LocalizedServiceEntry } from '../lib/content';
+import BigTextBlock from './BigTextBlock.astro';
+import Container from './Container.astro';
+import ServiceCard from './ServiceCard.astro';
+
+interface Props {
+  locale: Locale;
+  eyebrow: string;
+  title: string;
+  body: string;
+  services: LocalizedServiceEntry[];
+  number?: string;
+}
+
+const { locale, eyebrow, title, body, services, number } = Astro.props;
+---
+
+<section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
+  <Container>
+    <div class="max-w-4xl">
+      <BigTextBlock eyebrow={eyebrow} number={number} title={title} body={body} titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl" />
+    </div>
+    <div class="mt-10 grid gap-5 lg:grid-cols-2" data-animate-group="related-services">
+      {services.map((service, index) => (
+        <ServiceCard locale={locale} service={service} index={index} />
+      ))}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,29 @@
+{
+  "locale": "es",
+  "items": [
+    { "id": "home", "label": "Inicio", "href": "/es/" },
+    { "id": "services", "label": "Servicios", "href": "/es/servicios/" },
+    { "id": "about", "label": "Sobre nosotros", "href": "/es/sobre-nosotros/" },
+    { "id": "contact", "label": "Contacto", "href": "/es/contacto/" },
+    { "id": "language", "label": "Idioma", "href": null }
+  ],
+  "ui": {
+    "serviceLink": "Ver servicio",
+    "serviceEyebrow": "Servicio",
+    "legalEyebrow": "Legal",
+    "legalSection": "Legal",
+    "updatedAtLabel": "Ultima actualizacion declarada",
+    "includesTitle": "Incluye",
+    "benefitsTitle": "Puntos clave",
+    "processTitle": "Proceso",
+    "faqsTitle": "Preguntas frecuentes",
+    "relatedServicesTitle": "Servicios relacionados",
+    "contactDetailsTitle": "Datos de contacto",
+    "detectedEmailsLabel": "Email principal",
+    "pendingConfirmationLabel": "Pendiente de confirmacion",
+    "mobileLabel": "Movil directo",
+    "landlineLabel": "Telefono fijo",
+    "scheduleLabel": "Horario",
+    "addressLabel": "Direccion"
+  }
+}

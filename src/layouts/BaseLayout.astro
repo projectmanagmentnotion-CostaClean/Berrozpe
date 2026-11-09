@@ -1,0 +1,72 @@
+---
+import SeoHead from '../components/SeoHead.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import type { AlternateLink, Locale } from '../lib/content';
+import '../styles/global.css';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  canonicalPath: string;
+  alternates: AlternateLink[];
+  xDefaultPath?: string;
+  noIndex?: boolean;
+  ogImagePath?: string;
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+const {
+  locale,
+  title,
+  description,
+  canonicalPath,
+  alternates,
+  xDefaultPath,
+  noIndex = false,
+  ogImagePath,
+  schema,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <SeoHead
+      locale={locale}
+      title={title}
+      description={description}
+      canonicalPath={canonicalPath}
+      alternates={alternates}
+      xDefaultPath={xDefaultPath}
+      noIndex={noIndex}
+      ogImagePath={ogImagePath}
+      schema={schema}
+    />
+    <script>
+      import '../scripts/animations.ts';
+    </script>
+    <script>
+      import '../scripts/cookie-consent.ts';
+    </script>
+  </head>
+  <body>
+    <div class="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+      <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(150,190,255,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.06),transparent_22%)]"></div>
+      <div class="pointer-events-none fixed inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:32px_32px] [mask-image:linear-gradient(to_bottom,black,transparent_70%)]"></div>
+      <SiteHeader locale={locale} languageLinks={alternates} />
+      <main>
+        <slot />
+      </main>
+      <SiteFooter locale={locale} />
+      <CookieConsent locale={locale} />
+      <WhatsAppCTA locale={locale} variant="floating" />
+    </div>
+  </body>
+</html>

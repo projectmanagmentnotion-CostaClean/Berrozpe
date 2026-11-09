@@ -1,0 +1,29 @@
+{
+  "locale": "ca",
+  "items": [
+    { "id": "home", "label": "Inici", "href": "/ca/" },
+    { "id": "services", "label": "Serveis", "href": "/ca/serveis/" },
+    { "id": "about", "label": "Sobre nosaltres", "href": "/ca/sobre-nosaltres/" },
+    { "id": "contact", "label": "Contacte", "href": "/ca/contacte/" },
+    { "id": "language", "label": "Idioma", "href": null }
+  ],
+  "ui": {
+    "serviceLink": "Veure servei",
+    "serviceEyebrow": "Servei",
+    "legalEyebrow": "Legal",
+    "legalSection": "Legal",
+    "updatedAtLabel": "Ultima actualitzacio declarada",
+    "includesTitle": "Inclou",
+    "benefitsTitle": "Punts clau",
+    "processTitle": "Proces",
+    "faqsTitle": "Preguntes frequents",
+    "relatedServicesTitle": "Serveis relacionats",
+    "contactDetailsTitle": "Dades de contacte",
+    "detectedEmailsLabel": "Email principal",
+    "pendingConfirmationLabel": "Pendent de confirmacio",
+    "mobileLabel": "Mobil directe",
+    "landlineLabel": "Telefon fix",
+    "scheduleLabel": "Horari",
+    "addressLabel": "Adreca"
+  }
+}

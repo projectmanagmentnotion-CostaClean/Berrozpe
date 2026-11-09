@@ -1,0 +1,66 @@
+---
+import type { HomeSection } from '../data/types';
+import { getPageVisual } from '../lib/content';
+import Button from './Button.astro';
+import Container from './Container.astro';
+import EditorialLabel from './EditorialLabel.astro';
+import VisualAsset from './VisualAsset.astro';
+
+interface Props {
+  locale: import('../lib/content').Locale;
+  section: HomeSection;
+  highlights?: Array<{
+    label: string;
+    value: string;
+    description?: string;
+  }>;
+}
+
+const { locale, section, highlights = [] } = Astro.props;
+const heroVisual = getPageVisual('homeHero', locale);
+---
+
+<section class="relative overflow-hidden pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20" data-animate="hero">
+  <Container size="wide">
+    <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center xl:gap-14">
+      <div class="lg:pr-6">
+        <div class="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/82 px-5 py-6 shadow-[0_20px_55px_rgba(2,6,23,0.08)] backdrop-blur-md sm:px-7 sm:py-8 lg:px-8 lg:py-9">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.92),transparent_56%)]"></div>
+          <div class="relative space-y-7">
+            <EditorialLabel text={section.eyebrow} />
+            <h1 class="max-w-5xl text-balance font-[var(--font-display)] text-[clamp(3rem,8vw,7.75rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-[var(--color-text)]">
+              {section.title}
+            </h1>
+            <p class="max-w-2xl text-pretty text-base leading-8 text-[var(--color-text-muted)] sm:text-lg">
+              {section.body}
+            </p>
+            <div class="flex flex-wrap gap-3" data-animate="cta">
+              {section.primaryCtaLabel && section.primaryCtaHref && (
+                <Button href={section.primaryCtaHref} variant="primary" size="lg">
+                  {section.primaryCtaLabel}
+                </Button>
+              )}
+              {section.secondaryCtaLabel && section.secondaryCtaHref && (
+                <Button href={section.secondaryCtaHref} variant="secondary" size="lg">
+                  {section.secondaryCtaLabel}
+                </Button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4" data-animate-group="hero-cards">
+        <VisualAsset
+          asset={heroVisual}
+          eyebrow={section.eyebrow}
+          title={section.primaryCtaLabel}
+          body={section.body}
+          className="min-h-[28rem] sm:min-h-[34rem] xl:min-h-[42rem]"
+          priority={true}
+          showOverlayContent={false}
+        />
+      </div>
+    </div>
+  </Container>
+</section>

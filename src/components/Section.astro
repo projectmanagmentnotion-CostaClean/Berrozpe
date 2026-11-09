@@ -1,0 +1,39 @@
+---
+import Container from './Container.astro';
+import BigTextBlock from './BigTextBlock.astro';
+
+interface Props {
+  id?: string;
+  eyebrow?: string;
+  number?: string;
+  title?: string;
+  body?: string;
+  size?: 'default' | 'wide' | 'narrow';
+  className?: string;
+  contentClassName?: string;
+  align?: 'left' | 'center';
+  animate?: string;
+}
+
+const {
+  id,
+  eyebrow,
+  number,
+  title,
+  body,
+  size = 'default',
+  className = '',
+  contentClassName = '',
+  align = 'left',
+  animate = 'reveal',
+} = Astro.props;
+---
+
+<section id={id} class:list={['py-16 sm:py-20 lg:py-28', className]} data-animate={animate}>
+  <Container size={size} className={contentClassName}>
+    {(title || body || eyebrow || number) && (
+      <BigTextBlock eyebrow={eyebrow} number={number} title={title ?? ''} body={body} align={align} />
+    )}
+    <slot />
+  </Container>
+</section>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Visual corporativo temporal de proceso</title>
+  <desc id="desc">Panel editorial temporal para explicar proceso y metodologia.</desc>
+  <rect width="1600" height="960" fill="#1e293b"/>
+  <circle cx="1330" cy="180" r="260" fill="#ff7700" opacity=".18"/>
+  <circle cx="260" cy="860" r="290" fill="#045cb4" opacity=".22"/>
+  <rect x="120" y="120" width="1360" height="720" rx="42" fill="#f9fafb" opacity=".08" stroke="#f9fafb" stroke-opacity=".14"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M240 640h240" stroke="#ff7700" stroke-width="16"/>
+    <path d="M600 500h240" stroke="#045cb4" stroke-width="16"/>
+    <path d="M960 380h240" stroke="#ff7700" stroke-width="16"/>
+    <path d="M1260 260h120" stroke="#045cb4" stroke-width="16"/>
+  </g>
+  <g fill="#f9fafb">
+    <circle cx="240" cy="640" r="32"/>
+    <circle cx="600" cy="500" r="32"/>
+    <circle cx="960" cy="380" r="32"/>
+    <circle cx="1260" cy="260" r="32"/>
+  </g>
+  <g fill="#f9fafb" opacity=".9">
+    <rect x="220" y="220" width="280" height="20" rx="10"/>
+    <rect x="220" y="270" width="210" height="16" rx="8" opacity=".65"/>
+    <rect x="220" y="300" width="340" height="16" rx="8" opacity=".4"/>
+  </g>
+</svg>

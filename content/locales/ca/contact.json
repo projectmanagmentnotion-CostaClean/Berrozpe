@@ -1,0 +1,76 @@
+{
+  "locale": "ca",
+  "title": "Demana informacio o pressupost",
+  "intro": "Escriu la teva consulta i el servei que necessites.",
+  "fields": {
+    "name": {
+      "label": "Nom",
+      "placeholder": "El teu nom",
+      "autocomplete": "name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "tu@email.com",
+      "autocomplete": "email"
+    },
+    "phone": {
+      "label": "Telefon",
+      "placeholder": "El teu telefon",
+      "autocomplete": "tel"
+    },
+    "service": {
+      "label": "Servei",
+      "placeholder": "Selecciona un servei"
+    },
+    "message": {
+      "label": "Missatge",
+      "placeholder": "Explica breument que necessites",
+      "rows": 6
+    },
+    "privacy": {
+      "label": "He llegit i accepto la politica de privacitat."
+    },
+    "honeypot": {
+      "label": "No omplir aquest camp"
+    }
+  },
+  "serviceOptions": [
+    {
+      "value": "electricidad-y-domotica",
+      "label": "Electricitat i domotica"
+    },
+    {
+      "value": "lampisteria-y-climatizacion",
+      "label": "Lampisteria i climatitzacio"
+    },
+    {
+      "value": "alarmas-y-camaras",
+      "label": "Alarmes i cameres"
+    }
+  ],
+  "privacyConsent": {
+    "prefix": "Has d'acceptar la",
+    "linkLabel": "politica de privacitat",
+    "suffix": "per poder enviar el formulari."
+  },
+  "legalSummary": [
+    "Les teves dades s'utilitzaran per respondre la teva sollicitud per formulari, email, telefon o WhatsApp.",
+    "El responsable del tractament es Instal Berrozpe S.L. i pots ampliar la informacio a la politica de privacitat."
+  ],
+  "submitLabel": "Enviar consulta",
+  "sendingLabel": "Enviant...",
+  "successMessage": "La teva consulta s'ha enviat correctament.",
+  "errorMessage": "No s'ha pogut enviar el formulari. Revisa els camps i torna-ho a provar.",
+  "validationMessages": {
+    "nameRequired": "El nom es obligatori.",
+    "emailRequired": "L'email es obligatori.",
+    "emailInvalid": "Introdueix un email valid.",
+    "phoneInvalid": "Introdueix un telefon valid o deixa el camp buit.",
+    "serviceRequired": "Selecciona un servei.",
+    "messageRequired": "El missatge es obligatori.",
+    "privacyRequired": "Has d'acceptar la politica de privacitat.",
+    "honeypotFilled": "No s'ha pogut validar l'enviament.",
+    "genericError": "No s'ha pogut processar el formulari."
+  },
+  "honeypotLabel": "No omplir aquest camp"
+}

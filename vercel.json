@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/", "destination": "/es/", "permanent": true },
+    { "source": "/sitemap_index.xml", "destination": "/sitemap-index.xml", "permanent": true },
+    { "source": "/inicio/", "destination": "/es/", "permanent": true },
+    { "source": "/servicios/", "destination": "/es/servicios/", "permanent": true },
+    { "source": "/home/", "destination": "/en/", "permanent": true },
+    { "source": "/inici/", "destination": "/ca/", "permanent": true },
+    { "source": "/electricidad-y-domotica/", "destination": "/es/servicios/electricidad-y-domotica/", "permanent": true },
+    { "source": "/electricity-and-home-automation/", "destination": "/en/services/electricity-and-home-automation/", "permanent": true },
+    { "source": "/electricitat-i-domotica/", "destination": "/ca/serveis/electricitat-i-domotica/", "permanent": true },
+    { "source": "/lampisteria-y-climatizacion/", "destination": "/es/servicios/lampisteria-y-climatizacion/", "permanent": true },
+    { "source": "/plumbing-and-climate/", "destination": "/en/services/plumbing-and-climate-control/", "permanent": true },
+    { "source": "/lampisteria-y-climatizacio/", "destination": "/ca/serveis/lampisteria-i-climatitzacio/", "permanent": true },
+    { "source": "/alarmas-y-camaras-2/", "destination": "/es/servicios/alarmas-y-camaras/", "permanent": true },
+    { "source": "/alarms-and-cameras/", "destination": "/en/services/alarms-and-cameras/", "permanent": true },
+    { "source": "/alarmes-i-cameres/", "destination": "/ca/serveis/alarmes-i-cameres/", "permanent": true },
+    { "source": "/sobre-nosotros/", "destination": "/es/sobre-nosotros/", "permanent": true },
+    { "source": "/about-us/", "destination": "/en/about-us/", "permanent": true },
+    { "source": "/sobre-nosaltres/", "destination": "/ca/sobre-nosaltres/", "permanent": true },
+    { "source": "/contacto/", "destination": "/es/contacto/", "permanent": true },
+    { "source": "/contact/", "destination": "/en/contact/", "permanent": true },
+    { "source": "/contacte/", "destination": "/ca/contacte/", "permanent": true },
+    { "source": "/aviso-legal/", "destination": "/es/aviso-legal/", "permanent": true },
+    { "source": "/politica-de-privacidad/", "destination": "/es/politica-de-privacidad/", "permanent": true },
+    { "source": "/politica-de-cookies/", "destination": "/es/politica-de-cookies/", "permanent": true },
+    { "source": "/terminos-y-condiciones/", "destination": "/es/terminos-y-condiciones/", "permanent": true },
+    { "source": "/terminos-y-condiciones-es/", "destination": "/es/terminos-y-condiciones/", "permanent": true },
+    { "source": "/terminos-y-condiciones-en/", "destination": "/en/terms-and-conditions/", "permanent": true },
+    { "source": "/terminos-y-condiciones-cat/", "destination": "/ca/termes-i-condicions/", "permanent": true },
+    { "source": "/mas-informacion-sobre-las-cookies/", "destination": "/es/politica-de-cookies/", "permanent": true }
+  ]
+}
+

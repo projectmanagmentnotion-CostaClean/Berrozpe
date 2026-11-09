@@ -1,0 +1,42 @@
+{
+  "slug": "politica-de-cookies",
+  "locale": "ca",
+  "title": "Politica de cookies",
+  "seoTitle": "Politica de cookies | Instal Berrozpe",
+  "seoDescription": "Politica de cookies d'Instal Berrozpe i funcionament del consentiment multilingue de la web.",
+  "updatedAtLabel": "Ultima actualitzacio",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Aquest web utilitza nomes les cookies necessaries per al seu funcionament i un sistema de consentiment per a categories opcionals, actualment no actives per defecte.",
+  "sections": [
+    {
+      "heading": "Cookies necessaries",
+      "body": [
+        "Les cookies necessaries permeten funcions tecniques basiques, com recordar la preferencia de consentiment i garantir el funcionament del lloc.",
+        "Aquestes cookies poden mantenir-se actives sense consentiment previ perque son necessaries per prestar el servei sollicitat per la persona usuaria."
+      ]
+    },
+    {
+      "heading": "Categories opcionals i consentiment",
+      "body": [
+        "El web esta preparat per a categories opcionals com preferencies, analitica o marketing, pero cap s'activa per defecte ni es carrega abans del consentiment corresponent.",
+        "Si en el futur s'incorporen eines opcionals, nomes s'executaran despres de l'acceptacio expressa de la categoria corresponent."
+      ]
+    },
+    {
+      "heading": "Gestio de preferencies",
+      "body": [
+        "La persona usuaria pot acceptar, rebutjar o configurar les cookies des del banner inicial.",
+        "Les preferencies es poden reobrir en qualsevol moment des de l'enllac permanent del peu de pagina."
+      ]
+    },
+    {
+      "heading": "Google Maps i tercers",
+      "body": [
+        "El web no carrega un iframe viu de Google Maps per defecte.",
+        "Els blocs d'ubicacio funcionen mitjancant adreca textual i enllac extern, evitant carregues innecessaries de tercers abans del consentiment."
+      ]
+    }
+  ],
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
+}

@@ -1,0 +1,87 @@
+---
+interface Option {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  id: string;
+  name: string;
+  label: string;
+  type?: 'text' | 'email' | 'tel' | 'select' | 'textarea' | 'hidden';
+  value?: string;
+  placeholder?: string;
+  autocomplete?: string;
+  required?: boolean;
+  options?: Option[];
+  rows?: number;
+  errorId?: string;
+  hiddenLabel?: boolean;
+}
+
+const {
+  id,
+  name,
+  label,
+  type = 'text',
+  value = '',
+  placeholder,
+  autocomplete,
+  required = false,
+  options = [],
+  rows = 5,
+  errorId = `${id}-error`,
+  hiddenLabel = false,
+} = Astro.props;
+
+const describedBy = errorId;
+const baseFieldClass = 'min-h-12 w-full rounded-[1.25rem] border border-[var(--color-border)] bg-white px-4 py-3 text-base text-[var(--color-text)] outline-none transition placeholder:text-[var(--color-text-soft)] focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[rgba(255,119,0,0.16)]';
+---
+
+<div class:list={['space-y-2', type === 'hidden' && 'sr-only']} data-field-wrapper>
+  <label class:list={['block text-sm font-medium text-[var(--color-text)]', hiddenLabel && 'sr-only']} for={id}>
+    {label}
+  </label>
+
+  {type === 'textarea' ? (
+    <textarea
+      id={id}
+      name={name}
+      rows={rows}
+      class={baseFieldClass}
+      placeholder={placeholder}
+      autocomplete={autocomplete}
+      required={required}
+      aria-describedby={describedBy}
+      data-field-input
+    >{value}</textarea>
+  ) : type === 'select' ? (
+    <select
+      id={id}
+      name={name}
+      class={baseFieldClass}
+      required={required}
+      aria-describedby={describedBy}
+      data-field-input
+    >
+      {options.map((option) => (
+        <option value={option.value} selected={option.value === value}>{option.label}</option>
+      ))}
+    </select>
+  ) : (
+    <input
+      id={id}
+      name={name}
+      type={type}
+      value={value}
+      class={baseFieldClass}
+      placeholder={placeholder}
+      autocomplete={autocomplete}
+      required={required}
+      aria-describedby={describedBy}
+      data-field-input
+    />
+  )}
+
+  <p id={errorId} class="min-h-6 text-sm text-[var(--color-secondary)]" aria-live="polite" data-field-error></p>
+</div>

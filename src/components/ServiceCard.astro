@@ -1,0 +1,54 @@
+---
+import type { Locale, LocalizedServiceEntry } from '../lib/content';
+import { getNavigation, getServiceRouteById, getServiceVisual } from '../lib/content';
+import Badge from './Badge.astro';
+import Button from './Button.astro';
+import Card from './Card.astro';
+
+interface Props {
+  locale: Locale;
+  service: LocalizedServiceEntry;
+  index: number;
+}
+
+const { locale, service, index } = Astro.props;
+const navigation = getNavigation(locale);
+const href = getServiceRouteById(service.serviceId, locale) ?? '#';
+const visual = getServiceVisual(service.serviceId, locale);
+const cardPath = visual.cardPath ?? visual.path;
+const cardWidth = visual.cardWidth ?? visual.width;
+const cardHeight = visual.cardHeight ?? visual.height;
+---
+
+<Card className="flex h-full flex-col justify-between gap-5 bg-white/92" data-animate="stagger">
+  <div class="overflow-hidden rounded-[1.4rem] border border-[var(--color-border)] bg-white/70" data-animate="image-reveal">
+    <img
+      src={cardPath}
+      width={cardWidth}
+      height={cardHeight}
+      alt={visual.alt}
+      loading="lazy"
+      class="h-44 w-full object-cover object-center sm:h-48"
+      data-animate="soft-parallax"
+    />
+  </div>
+  <div class="space-y-4">
+    <div class="flex items-center gap-4">
+      <Badge text={`${String(index + 1).padStart(2, '0')}`} />
+    </div>
+    <div class="space-y-2">
+      <h3 class="overflow-hidden font-[var(--font-display)] text-[1.85rem] font-semibold tracking-[-0.03em] text-[var(--color-text)] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] sm:text-[2rem]">
+        {service.shortTitle}
+      </h3>
+      <p class="overflow-hidden text-base leading-7 text-[var(--color-text-muted)] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
+        {service.summary}
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-auto">
+    <Button href={href} variant="secondary">
+      {navigation.ui.serviceLink}
+    </Button>
+  </div>
+</Card>

@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-bg: #f9fafb;
+  --color-bg-elevated: rgba(255, 255, 255, 0.92);
+  --color-surface: rgba(255, 255, 255, 0.88);
+  --color-border: rgba(148, 163, 184, 0.26);
+  --color-border-strong: rgba(4, 92, 180, 0.28);
+  --color-text: #1e293b;
+  --color-text-muted: rgba(51, 65, 85, 0.82);
+  --color-text-soft: rgba(51, 65, 85, 0.62);
+  --color-accent: #ff7700;
+  --color-accent-soft: #ff8f2b;
+  --color-secondary: #045cb4;
+  --color-secondary-soft: #0b6ed0;
+  --color-ink: #ffffff;
+  --color-header: rgba(249, 250, 251, 0.88);
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "URW Palladio L", serif;
+  --font-body: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at top left, rgba(255, 119, 0, 0.08), transparent 24rem),
+    radial-gradient(circle at top right, rgba(4, 92, 180, 0.08), transparent 28rem),
+    var(--color-bg);
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+button,
+summary {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+[data-animate-group] > * {
+  transform-origin: center top;
+}
+
+[data-animate="image-reveal"] {
+  will-change: transform, opacity;
+}
+
+[data-animate="soft-parallax"] {
+  will-change: transform;
+}
+
+[data-animate="visual-panel"] {
+  will-change: transform, opacity;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.berrozpe-site-logo {
+  max-height: 3.9rem;
+}
+
+.berrozpe-footer-logo {
+  max-height: 3.2rem;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}

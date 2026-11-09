@@ -1,0 +1,29 @@
+---
+import type { HomeSection } from '../data/types';
+import Section from './Section.astro';
+import Card from './Card.astro';
+
+interface Props {
+  section: HomeSection;
+  number?: string;
+}
+
+const { section, number } = Astro.props;
+---
+
+<Section
+  id={section.sectionId}
+  eyebrow={section.eyebrow}
+  number={number}
+  title={section.title}
+  body={section.body}
+  className="border-t border-[var(--color-border)]"
+>
+  <div class="mt-10 grid gap-5 md:grid-cols-2" data-animate-group="bullet-list">
+    {section.items?.map((item) => (
+      <Card className="h-full" data-animate="stagger">
+        <p class="text-base leading-8 text-[var(--color-text)]">{item}</p>
+      </Card>
+    ))}
+  </div>
+</Section>

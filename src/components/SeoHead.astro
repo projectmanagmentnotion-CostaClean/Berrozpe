@@ -1,0 +1,66 @@
+---
+import { DEFAULT_LOCALE, getCanonicalUrl, getSiteSettings } from '../lib/content';
+import type { AlternateLink, Locale } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  canonicalPath: string;
+  alternates: AlternateLink[];
+  xDefaultPath?: string;
+  noIndex?: boolean;
+  ogImagePath?: string;
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+const {
+  locale,
+  title,
+  description,
+  canonicalPath,
+  alternates,
+  xDefaultPath,
+  noIndex = false,
+  ogImagePath,
+  schema,
+} = Astro.props;
+
+const site = getSiteSettings(locale);
+const resolvedTitle = title ?? site.defaultTitle;
+const resolvedDescription = description ?? site.defaultDescription;
+const canonicalUrl = getCanonicalUrl(canonicalPath);
+const ogImageUrl = ogImagePath ? getCanonicalUrl(ogImagePath) : undefined;
+---
+
+<title>{resolvedTitle}</title>
+<meta name="description" content={resolvedDescription} />
+<link rel="canonical" href={canonicalUrl} />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#ff7700" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content={locale} />
+<meta property="og:site_name" content={site.brandName} />
+<meta property="og:title" content={resolvedTitle} />
+<meta property="og:description" content={resolvedDescription} />
+<meta property="og:url" content={canonicalUrl} />
+{ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={resolvedTitle} />
+<meta name="twitter:description" content={resolvedDescription} />
+{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+{alternates.map((alternate) => (
+  <link rel="alternate" hreflang={alternate.locale} href={getCanonicalUrl(alternate.href)} />
+))}
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href={getCanonicalUrl(xDefaultPath ?? alternates.find((alternate) => alternate.locale === DEFAULT_LOCALE)?.href ?? site.localeBasePath)}
+/>
+{noIndex && <meta name="robots" content="noindex, follow" />}
+{schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}

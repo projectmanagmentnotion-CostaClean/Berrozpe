@@ -1,0 +1,65 @@
+{
+  "locale": "ca",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Installacions a Blanes i Girona",
+    "title": "Installacions per a llar i negoci a Blanes",
+    "body": "Electricitat i domotica, lampisteria i climatitzacio, alarmes i cameres. Contacte directe per telefon, WhatsApp, email o formulari.",
+    "primaryCtaLabel": "Veure serveis",
+    "primaryCtaHref": "/ca/serveis/",
+    "secondaryCtaLabel": "Demanar pressupost",
+    "secondaryCtaHref": "/ca/contacte/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Serveis",
+    "title": "Tres serveis clars per comencar",
+    "body": "Tria la linia que encaixa millor amb la teva consulta i t'orientem des d'aqui.",
+    "items": [
+      "Electricitat i domotica",
+      "Lampisteria i climatitzacio",
+      "Alarmes i cameres"
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "Sobre nosaltres",
+    "title": "Servei tecnic clar i tracte directe",
+    "body": "Tres arees connectades i contacte directe des de Blanes per a llar i negoci.",
+    "items": [
+      "Tres arees tecniques ben definides.",
+      "Contacte directe per telefon, WhatsApp, email i formulari.",
+      "Atencio per a llar i negoci."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Proces",
+    "title": "Com treballem",
+    "body": "Ens expliques que necessites i veiem amb tu el seguent pas.",
+    "items": [
+      "Expliques la necessitat per telefon, WhatsApp o formulari.",
+      "Revisem el servei que millor encaixa.",
+      "Coordinem l'actuacio o el pressupost."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Contacte",
+    "title": "Contacta amb Instal Berrozpe",
+    "body": "Truca'ns, escriu-nos per WhatsApp o envia el formulari.",
+    "primaryCtaLabel": "Telefon directe",
+    "secondaryCtaLabel": "Email principal"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Preguntes frequents",
+    "title": "Dubtes habituals abans de contactar",
+    "body": "Respostes breus per orientar la consulta.",
+    "items": [
+      "Treballa per a llar i negoci.",
+      "Pots escriure per formulari, telefon, email o WhatsApp.",
+      "Si dubtes entre serveis, contacte es el millor punt d'entrada."
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+---
+import type { HomeSection } from '../data/types';
+import type { Locale } from '../lib/content';
+import { getNavigation, getPageVisual, getRouteCatalog, getSharedContact } from '../lib/content';
+import Button from './Button.astro';
+import Card from './Card.astro';
+import ContactForm from './ContactForm.astro';
+import Section from './Section.astro';
+import VisualAsset from './VisualAsset.astro';
+import WhatsAppCTA from './WhatsAppCTA.astro';
+
+interface Props {
+  locale: Locale;
+  section: HomeSection;
+  number?: string;
+  showForm?: boolean;
+  showHeading?: boolean;
+}
+
+const { locale, section, number, showForm = false, showHeading = true } = Astro.props;
+const contact = getSharedContact();
+const navigation = getNavigation(locale);
+const routes = getRouteCatalog(locale);
+const schedule = contact.schedule[locale] ?? contact.schedule.es;
+const contactVisual = getPageVisual('contact', locale);
+---
+
+<Section
+  id={section.sectionId}
+  eyebrow={showHeading ? section.eyebrow : undefined}
+  number={showHeading ? number : undefined}
+  title={showHeading ? section.title : undefined}
+  body={showHeading ? section.body : undefined}
+  className="border-t border-[var(--color-border)]"
+>
+  <div class="mt-8">
+    <VisualAsset asset={contactVisual} eyebrow={section.eyebrow} title={section.title} body={section.body} className="min-h-[16rem] sm:min-h-[20rem] lg:min-h-[22rem]" />
+  </div>
+
+  <div class="mt-8 grid gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:items-start" data-animate-group="contact">
+    <Card className="space-y-8 bg-white/92" data-animate="stagger">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.mobileLabel}</p>
+          <a class="mt-3 block text-xl font-medium text-[var(--color-text)]" href={`tel:${contact.phones.mobile}`}>{contact.phones.mobile}</a>
+        </div>
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.landlineLabel}</p>
+          <a class="mt-3 block text-xl font-medium text-[var(--color-text)]" href={`tel:${contact.phones.landline}`}>{contact.phones.landline}</a>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.addressLabel}</p>
+          <div class="mt-3 space-y-1 text-base leading-7 text-[var(--color-text)]">
+            {contact.address.displayLines.map((line) => <p>{line}</p>)}
+          </div>
+        </div>
+        <div>
+          <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.scheduleLabel}</p>
+          <p class="mt-3 text-base leading-7 text-[var(--color-text)]">{schedule}</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <Button href={`tel:${contact.phones.mobile}`} variant="primary" size="lg">
+          {contact.phones.mobile}
+        </Button>
+        <WhatsAppCTA locale={locale} variant="inline" className="min-h-12 px-6 py-3.5 text-sm sm:text-base" />
+      </div>
+    </Card>
+
+    <Card className="space-y-5 self-start bg-white/92" data-animate="stagger">
+      <div>
+        <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{navigation.ui.detectedEmailsLabel}</p>
+        <div class="mt-4 space-y-2">
+          {contact.primaryEmail ? (
+            <a class="block text-lg font-medium text-[var(--color-text)]" href={`mailto:${contact.primaryEmail}`}>{contact.primaryEmail}</a>
+          ) : (
+            contact.emailsDetected.map((email) => (
+              <a class="block text-lg font-medium text-[var(--color-text)]" href={`mailto:${email}`}>{email}</a>
+            ))
+          )}
+        </div>
+      </div>
+    </Card>
+  </div>
+
+  {showForm && (
+    <div class="mt-5" data-animate="stagger">
+      <ContactForm locale={locale} returnUrl={routes.contact} />
+    </div>
+  )}
+
+  <div class="mt-5" data-animate-group="contact-support">
+    <WhatsAppCTA locale={locale} variant="large" className="bg-white/92" />
+  </div>
+</Section>

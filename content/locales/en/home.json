@@ -1,0 +1,65 @@
+{
+  "locale": "en",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Installations in Blanes and Girona",
+    "title": "Installations for homes and businesses in Blanes",
+    "body": "Electrical and home automation, plumbing and climate control, alarms and cameras. Direct contact by phone, WhatsApp, email or form.",
+    "primaryCtaLabel": "View services",
+    "primaryCtaHref": "/en/services/",
+    "secondaryCtaLabel": "Request a quote",
+    "secondaryCtaHref": "/en/contact/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Services",
+    "title": "Three clear services to start with",
+    "body": "Choose the line that best matches your enquiry and we will guide you from there.",
+    "items": [
+      "Electrical and home automation",
+      "Plumbing and climate control",
+      "Alarms and cameras"
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "About us",
+    "title": "Clear technical service and direct contact",
+    "body": "Three connected areas and direct contact from Blanes for homes and businesses.",
+    "items": [
+      "Three clearly defined technical areas.",
+      "Direct contact by phone, WhatsApp, email and form.",
+      "Support for homes and businesses."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Process",
+    "title": "How we work",
+    "body": "Tell us what you need and we will review the next step with you.",
+    "items": [
+      "You explain the need by phone, WhatsApp or form.",
+      "We review the most suitable service.",
+      "We coordinate the work or the quote."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Contact",
+    "title": "Contact Instal Berrozpe",
+    "body": "Call us, send a WhatsApp message or use the form.",
+    "primaryCtaLabel": "Direct phone",
+    "secondaryCtaLabel": "Main email"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Frequently asked questions",
+    "title": "Common questions before contacting us",
+    "body": "Short answers to guide the enquiry.",
+    "items": [
+      "The company works for homes and businesses.",
+      "You can contact us by form, phone, email or WhatsApp.",
+      "If you are unsure about the right service, contact is the best starting point."
+    ]
+  }
+}

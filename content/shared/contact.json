@@ -1,0 +1,56 @@
+{
+  "legal": {
+    "legalName": "Instal Berrozpe S.L.",
+    "taxId": "B55326813",
+    "legalAddress": "Antiga 68 bajos de Blanes",
+    "website": "https://instalberrozpe.com"
+  },
+  "address": {
+    "streetAddress": "Carrer de l'Antiga, 68",
+    "postalCode": "17300",
+    "locality": "Blanes",
+    "region": "Girona",
+    "countryCode": "ES",
+    "displayLines": [
+      "Carrer de l'Antiga, 68",
+      "17300 Blanes (Girona)"
+    ],
+    "confirmed": true
+  },
+  "phones": {
+    "mobile": "676 04 33 89",
+    "landline": "872 986 161",
+    "whatsappE164": "+34676043389"
+  },
+  "schedule": {
+    "es": "Lunes - Viernes 8:00 a 18:00",
+    "ca": "Dilluns a Divendres de 8:00 a 18:00",
+    "en": "Monday - Friday 8:00 to 18:00",
+    "de": "Montag - Freitag 8:00 bis 18:00"
+  },
+  "emailsDetected": [
+    "david@instalberrozpe.com",
+    "comercial@instalberrozpe.com"
+  ],
+  "primaryEmail": "david@instalberrozpe.com",
+  "whatsAppUrl": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%2C%20me%20interesan%20vuestros%20servicios.",
+  "socialLinks": [
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp",
+      "url": "https://wa.me/34676043389?text=Hola%20Instal%20Berrozpe%2C%20me%20interesan%20vuestros%20servicios."
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/instalberrozpe/?hl=es"
+    }
+  ],
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Carrer%20de%20l%27Antiga%2C%2068%2C%2017300%20Blanes%2C%20Girona",
+  "serviceArea": [
+    "Blanes",
+    "Arenys",
+    "Lloret de Mar"
+  ],
+  "pendingConfirmation": []
+}

@@ -1,0 +1,54 @@
+{
+  "locale": "es",
+  "storageKey": "berrozpe-cookie-consent",
+  "version": "2026-07",
+  "banner": {
+    "title": "Preferencias de cookies",
+    "body": "Usamos cookies necesarias para el funcionamiento del sitio. Las categorías opcionales solo se activarán si das tu consentimiento.",
+    "acceptLabel": "Aceptar todo",
+    "rejectLabel": "Rechazar opcionales",
+    "configureLabel": "Configurar",
+    "policyLabel": "Ver política de cookies"
+  },
+  "modal": {
+    "title": "Configurar cookies",
+    "body": "Puedes aceptar o rechazar las categorías opcionales. Las cookies necesarias permanecen activas para garantizar funciones básicas del sitio.",
+    "saveLabel": "Guardar preferencias",
+    "acceptAllLabel": "Aceptar todo",
+    "rejectAllLabel": "Rechazar opcionales",
+    "closeLabel": "Cerrar"
+  },
+  "labels": {
+    "alwaysActive": "Siempre activa",
+    "preparedInactive": "Preparada, no activa por defecto"
+  },
+  "categories": [
+    {
+      "key": "necessary",
+      "title": "Necesarias",
+      "description": "Cookies técnicas para recordar tu preferencia de consentimiento y mantener funciones básicas del sitio.",
+      "required": true,
+      "activeByDefault": true
+    },
+    {
+      "key": "preferences",
+      "title": "Preferencias",
+      "description": "Categoría preparada para ajustes de experiencia que no sean imprescindibles. Actualmente no hay herramientas confirmadas en esta categoría.",
+      "pending": true
+    },
+    {
+      "key": "analytics",
+      "title": "Analíticas",
+      "description": "Categoría preparada para medición y estadísticas. No se activará ninguna herramienta analítica hasta que exista una integración real confirmada.",
+      "pending": true
+    },
+    {
+      "key": "marketing",
+      "title": "Marketing",
+      "description": "Categoría preparada para publicidad o píxeles de terceros. Actualmente no hay scripts de marketing confirmados.",
+      "pending": true
+    }
+  ],
+  "footerLinkLabel": "Preferencias de cookies",
+  "savedMessage": "Tus preferencias de cookies se han guardado."
+}

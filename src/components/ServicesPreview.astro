@@ -1,0 +1,15 @@
+---
+import type { LocalizedServiceEntry, Locale } from '../lib/content';
+import type { HomeSection } from '../data/types';
+import ServicesGrid from './ServicesGrid.astro';
+
+interface Props {
+  locale: Locale;
+  section: HomeSection;
+  services: LocalizedServiceEntry[];
+}
+
+const { locale, section, services } = Astro.props;
+---
+
+<ServicesGrid locale={locale} section={section} services={services} number="01" />

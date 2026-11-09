@@ -1,0 +1,65 @@
+{
+  "locale": "es",
+  "hero": {
+    "sectionId": "hero",
+    "eyebrow": "Instalaciones en Blanes y Girona",
+    "title": "Instalaciones para vivienda y negocio en Blanes",
+    "body": "Electricidad y domotica, lampisteria y climatizacion, alarmas y camaras. Contacto directo por telefono, WhatsApp, email o formulario.",
+    "primaryCtaLabel": "Ver servicios",
+    "primaryCtaHref": "/es/servicios/",
+    "secondaryCtaLabel": "Solicitar presupuesto",
+    "secondaryCtaHref": "/es/contacto/"
+  },
+  "servicesOverview": {
+    "sectionId": "services-overview",
+    "eyebrow": "Servicios",
+    "title": "Tres servicios claros para empezar",
+    "body": "Elige la linea que mejor encaja con tu consulta y te orientamos desde ahi.",
+    "items": [
+      "Electricidad y domotica",
+      "Lampisteria y climatizacion",
+      "Alarmas y camaras"
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "Sobre nosotros",
+    "title": "Servicio tecnico claro y trato directo",
+    "body": "Tres areas conectadas y contacto directo desde Blanes para vivienda y negocio.",
+    "items": [
+      "Tres areas tecnicas bien definidas.",
+      "Contacto directo por telefono, WhatsApp, email y formulario.",
+      "Atencion para vivienda y negocio."
+    ]
+  },
+  "process": {
+    "sectionId": "process",
+    "eyebrow": "Proceso",
+    "title": "Como trabajamos",
+    "body": "Nos cuentas que necesitas y vemos contigo el siguiente paso.",
+    "items": [
+      "Explicas la necesidad por telefono, WhatsApp o formulario.",
+      "Revisamos el servicio que mejor encaja.",
+      "Coordinamos la actuacion o el presupuesto."
+    ]
+  },
+  "contactCta": {
+    "sectionId": "contact-cta",
+    "eyebrow": "Contacto",
+    "title": "Contacta con Instal Berrozpe",
+    "body": "Llamanos, escribenos por WhatsApp o envia el formulario.",
+    "primaryCtaLabel": "Telefono directo",
+    "secondaryCtaLabel": "Email principal"
+  },
+  "faqs": {
+    "sectionId": "faqs",
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales antes de contactar",
+    "body": "Respuestas breves para orientar la consulta.",
+    "items": [
+      "Trabaja para vivienda y negocio.",
+      "Puedes escribir por formulario, telefono, email o WhatsApp.",
+      "Si dudas entre servicios, contacto es el mejor punto de entrada."
+    ]
+  }
+}

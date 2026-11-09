@@ -1,0 +1,76 @@
+{
+  "locale": "es",
+  "title": "Solicita informacion o presupuesto",
+  "intro": "Escribe tu consulta y el servicio que necesitas.",
+  "fields": {
+    "name": {
+      "label": "Nombre",
+      "placeholder": "Tu nombre",
+      "autocomplete": "name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "tu@email.com",
+      "autocomplete": "email"
+    },
+    "phone": {
+      "label": "Telefono",
+      "placeholder": "Tu telefono",
+      "autocomplete": "tel"
+    },
+    "service": {
+      "label": "Servicio",
+      "placeholder": "Selecciona un servicio"
+    },
+    "message": {
+      "label": "Mensaje",
+      "placeholder": "Explica brevemente que necesitas",
+      "rows": 6
+    },
+    "privacy": {
+      "label": "He leido y acepto la politica de privacidad."
+    },
+    "honeypot": {
+      "label": "No rellenar este campo"
+    }
+  },
+  "serviceOptions": [
+    {
+      "value": "electricidad-y-domotica",
+      "label": "Electricidad y domotica"
+    },
+    {
+      "value": "lampisteria-y-climatizacion",
+      "label": "Lampisteria y climatizacion"
+    },
+    {
+      "value": "alarmas-y-camaras",
+      "label": "Alarmas y camaras"
+    }
+  ],
+  "privacyConsent": {
+    "prefix": "Debes aceptar la",
+    "linkLabel": "politica de privacidad",
+    "suffix": "para poder enviar el formulario."
+  },
+  "legalSummary": [
+    "Tus datos se utilizaran para responder tu solicitud por formulario, email, telefono o WhatsApp.",
+    "El responsable del tratamiento es Instal Berrozpe S.L. y puedes ampliar informacion en la politica de privacidad."
+  ],
+  "submitLabel": "Enviar consulta",
+  "sendingLabel": "Enviando...",
+  "successMessage": "Tu consulta se ha enviado correctamente.",
+  "errorMessage": "No se ha podido enviar el formulario. Revisa los campos e intentalo de nuevo.",
+  "validationMessages": {
+    "nameRequired": "El nombre es obligatorio.",
+    "emailRequired": "El email es obligatorio.",
+    "emailInvalid": "Introduce un email valido.",
+    "phoneInvalid": "Introduce un telefono valido o deja el campo vacio.",
+    "serviceRequired": "Selecciona un servicio.",
+    "messageRequired": "El mensaje es obligatorio.",
+    "privacyRequired": "Debes aceptar la politica de privacidad.",
+    "honeypotFilled": "No se ha podido validar el envio.",
+    "genericError": "No se ha podido procesar el formulario."
+  },
+  "honeypotLabel": "No rellenar este campo"
+}

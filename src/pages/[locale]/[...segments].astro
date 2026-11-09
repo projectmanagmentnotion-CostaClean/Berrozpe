@@ -1,0 +1,532 @@
+---
+import BigTextBlock from '../../components/BigTextBlock.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import ConversionLinkBlock from '../../components/ConversionLinkBlock.astro';
+import Container from '../../components/Container.astro';
+import GoogleMapBlock from '../../components/GoogleMapBlock.astro';
+import ProcessSection from '../../components/ProcessSection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import ReviewsSection from '../../components/ReviewsSection.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import VisualAsset from '../../components/VisualAsset.astro';
+import WhatsAppCTA from '../../components/WhatsAppCTA.astro';
+import WhyChooseUs from '../../components/WhyChooseUs.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { LegalPageId, Locale, ServiceId } from '../../lib/content';
+import {
+  getAllowedLocales,
+  buildWhatsAppUrl,
+  getConversionLinks,
+  getHomeCollection,
+  getInternalLinks,
+  getInternalLinksContent,
+  getLanguageSwitcherLinksForPage,
+  getLanguageSwitcherLinksForService,
+  getLegalPageById,
+  getLegalPages,
+  getLocalBusinessSchema,
+  getNavigation,
+  getOgImagePath,
+  getPageVisual,
+  getPathWithoutLocalePrefix,
+  getPublishedServices,
+  getRelatedServices,
+  getRouteCatalog,
+  getSeoData,
+  getServiceById,
+  getServiceRouteById,
+  getServiceVisual,
+  getSharedContact,
+} from '../../lib/content';
+
+type PageKind = 'services-index' | 'service-detail' | 'about' | 'contact' | 'legal';
+
+interface PageProps {
+  locale: Locale;
+  kind: PageKind;
+  canonicalPath: string;
+  serviceId?: ServiceId;
+  legalPageId?: LegalPageId;
+}
+
+export function getStaticPaths() {
+  return getAllowedLocales().flatMap((locale) => {
+    const routes = getRouteCatalog(locale);
+    const services = getPublishedServices(locale);
+    const legalPages = getLegalPages(locale);
+
+    return [
+      {
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.services) },
+        props: { locale, kind: 'services-index', canonicalPath: routes.services },
+      },
+      {
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.about) },
+        props: { locale, kind: 'about', canonicalPath: routes.about },
+      },
+      {
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.contact) },
+        props: { locale, kind: 'contact', canonicalPath: routes.contact },
+      },
+      ...services.map((service) => ({
+        params: {
+          locale,
+          segments: getPathWithoutLocalePrefix(
+            locale,
+            getServiceRouteById(service.serviceId, locale) ?? routes.services,
+          ),
+        },
+        props: {
+          locale,
+          kind: 'service-detail',
+          canonicalPath: getServiceRouteById(service.serviceId, locale) ?? routes.services,
+          serviceId: service.serviceId,
+        },
+      })),
+      ...legalPages.map((page) => ({
+        params: { locale, segments: getPathWithoutLocalePrefix(locale, routes.legal[page.pageId]) },
+        props: {
+          locale,
+          kind: 'legal',
+          canonicalPath: routes.legal[page.pageId],
+          legalPageId: page.pageId,
+        },
+      })),
+    ];
+  });
+}
+
+const {
+  locale,
+  kind,
+  canonicalPath,
+  serviceId,
+  legalPageId,
+} = Astro.props as PageProps;
+
+const navigation = getNavigation(locale);
+const home = getHomeCollection(locale);
+const internalLinksContent = getInternalLinksContent(locale);
+const seo = getSeoData(locale);
+const services = getPublishedServices(locale);
+const routes = getRouteCatalog(locale);
+
+const service = kind === 'service-detail' && serviceId ? getServiceById(serviceId, locale) : undefined;
+const legalPage = kind === 'legal' && legalPageId ? getLegalPageById(legalPageId, locale) : undefined;
+
+if (kind === 'service-detail' && !service) {
+  throw new Error(`Service not found for ${serviceId} (${locale})`);
+}
+
+if (kind === 'legal' && !legalPage) {
+  throw new Error(`Legal page not found for ${legalPageId} (${locale})`);
+}
+
+const servicesIndexLinks = getInternalLinks(locale, 'services');
+const aboutLinks = getInternalLinks(locale, 'about');
+const contactLinks = getInternalLinks(locale, 'contact');
+const serviceJourneyLinks = serviceId ? getConversionLinks(locale, 'service-detail', serviceId) : undefined;
+const relatedServices = serviceId ? getRelatedServices(locale, serviceId) : [];
+const whatsAppHref = buildWhatsAppUrl(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  title={kind === 'services-index'
+    ? seo.titles.services
+    : kind === 'about'
+      ? seo.titles.about
+      : kind === 'contact'
+        ? seo.titles.contact
+        : kind === 'legal'
+          ? legalPage?.seoTitle
+          : service?.seoTitle}
+  description={kind === 'services-index'
+    ? seo.descriptions.services
+    : kind === 'about'
+      ? seo.descriptions.about
+      : kind === 'contact'
+        ? seo.descriptions.contact
+        : kind === 'legal'
+          ? legalPage?.seoDescription
+          : service?.seoDescription}
+  canonicalPath={canonicalPath}
+  alternates={kind === 'service-detail' && serviceId
+    ? getLanguageSwitcherLinksForService(serviceId)
+    : getLanguageSwitcherLinksForPage((legalPageId ?? (kind === 'services-index' ? 'services' : kind)) as LegalPageId | 'services' | 'about' | 'contact')}
+  xDefaultPath={kind === 'service-detail' && serviceId ? getServiceRouteById(serviceId, 'es') : undefined}
+  ogImagePath={kind === 'contact' ? getOgImagePath('contact') : kind === 'service-detail' || kind === 'services-index' ? getOgImagePath('services') : getOgImagePath('default')}
+  schema={kind === 'home'
+    ? undefined
+    : kind === 'contact'
+      ? getLocalBusinessSchema(locale, { path: canonicalPath, includeAggregateRating: true })
+      : getLocalBusinessSchema(locale, { path: canonicalPath, includeAggregateRating: false })}
+>
+  {kind === 'services-index' && (
+    <section class="border-t border-[var(--color-border)] py-16 sm:py-20 lg:py-28" data-animate="reveal">
+      <Container>
+        <div class="max-w-4xl">
+          <BigTextBlock
+            eyebrow={home.servicesOverview.eyebrow}
+            number="01"
+            title={navigation.items.find((item) => item.id === 'services')?.label ?? home.servicesOverview.title}
+            body={home.servicesOverview.body}
+            headingTag="h1"
+          />
+        </div>
+        <div class="mt-10 grid gap-5 lg:grid-cols-3" data-animate-group="services-index">
+          {services.map((entry, index) => (
+            <ServiceCard locale={locale} service={entry} index={index} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  )}
+
+  {kind === 'services-index' && (
+    <ConversionLinkBlock
+      locale={locale}
+      eyebrow={internalLinksContent.servicesIndex.eyebrow}
+      title={internalLinksContent.servicesIndex.title}
+      body={internalLinksContent.servicesIndex.body}
+      number="02"
+      links={[
+        {
+          label: internalLinksContent.servicesIndex.contactLabel,
+          href: servicesIndexLinks.contactPath,
+          variant: 'primary',
+        },
+        ...(internalLinksContent.servicesIndex.whatsappLabel
+          ? [{
+              label: internalLinksContent.servicesIndex.whatsappLabel,
+              href: whatsAppHref,
+              variant: 'secondary' as const,
+            }]
+          : []),
+        {
+          label: internalLinksContent.servicesIndex.aboutLabel,
+          href: servicesIndexLinks.trustPath,
+          variant: 'ghost',
+        },
+      ]}
+    />
+  )}
+
+  {kind === 'about' && (
+    <>
+      <section class="py-16 sm:py-20 lg:py-28" data-animate="hero">
+        <Container>
+          <BigTextBlock
+            eyebrow={home.whyChooseUs.eyebrow}
+            number="01"
+            title={navigation.items.find((item) => item.id === 'about')?.label ?? home.whyChooseUs.title}
+            body={home.whyChooseUs.body}
+            titleClassName="max-w-4xl"
+            headingTag="h1"
+          />
+        </Container>
+      </section>
+      <section class="pb-2">
+        <Container>
+            <VisualAsset
+            asset={getPageVisual('about', locale)}
+            eyebrow={home.whyChooseUs.eyebrow}
+            title={home.whyChooseUs.title}
+            body={home.whyChooseUs.body}
+            className="min-h-[24rem] sm:min-h-[30rem]"
+          />
+        </Container>
+      </section>
+      <WhyChooseUs section={home.whyChooseUs} number="02" />
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.about.eyebrow}
+        title={internalLinksContent.about.title}
+        body={internalLinksContent.about.body}
+        number="03"
+        links={[
+          ...(aboutLinks.featuredService ? [{
+            label: `${internalLinksContent.about.featuredServiceLabel}: ${aboutLinks.featuredService.shortTitle}`,
+            href: getServiceRouteById(aboutLinks.featuredService.serviceId, locale) ?? routes.services,
+            variant: 'secondary' as const,
+          }] : []),
+          {
+            label: internalLinksContent.about.servicesLabel,
+            href: routes.services,
+            variant: 'ghost' as const,
+          },
+          {
+            label: internalLinksContent.about.contactLabel,
+            href: aboutLinks.contactPath,
+            variant: 'primary' as const,
+          },
+        ]}
+      />
+      <ContactSection locale={locale} section={home.contactCta} number="04" />
+    </>
+  )}
+
+  {kind === 'contact' && (
+    <>
+      <section class="pb-8 pt-16 sm:pb-10 sm:pt-20 lg:pb-12 lg:pt-24" data-animate="hero">
+        <Container>
+          <BigTextBlock
+            eyebrow={home.contactCta.eyebrow}
+            number="01"
+            title={navigation.items.find((item) => item.id === 'contact')?.label ?? home.contactCta.title}
+            body={home.contactCta.body}
+            titleClassName="max-w-4xl"
+            headingTag="h1"
+          />
+        </Container>
+      </section>
+      <ContactSection locale={locale} section={home.contactCta} number="02" showForm={true} showHeading={false} />
+      <section class="pb-8 sm:pb-10 lg:pb-12">
+        <Container>
+          <div class="mt-5">
+            <GoogleMapBlock locale={locale} variant="full" className="bg-white/92" />
+          </div>
+        </Container>
+      </section>
+      <ReviewsSection id="reviews" locale={locale} number="03" compact={true} className="mt-8" />
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.contact.eyebrow}
+        title={internalLinksContent.contact.title}
+        body={internalLinksContent.contact.body}
+        number="04"
+        links={[
+          ...(contactLinks.services ?? []).map((entry) => ({
+            label: entry.shortTitle,
+            href: getServiceRouteById(entry.serviceId, locale) ?? routes.services,
+            variant: 'secondary' as const,
+          })),
+          ...(internalLinksContent.contact.reviewsLabel
+            ? [{
+                label: internalLinksContent.contact.reviewsLabel,
+                href: '#reviews',
+                variant: 'ghost' as const,
+              }]
+            : []),
+          {
+            label: internalLinksContent.contact.aboutLabel,
+            href: contactLinks.trustPath,
+            variant: 'ghost' as const,
+          },
+          {
+            label: internalLinksContent.contact.phoneLabel,
+            href: `tel:${getSharedContact().phones.mobile}`,
+            variant: 'primary' as const,
+          },
+        ]}
+      />
+    </>
+  )}
+
+  {kind === 'service-detail' && service && (
+    <>
+      <section class="py-16 sm:py-20 lg:py-28" data-animate="hero">
+        <Container size="wide">
+          <div class="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div class="space-y-8">
+            <BigTextBlock
+              eyebrow={navigation.ui.serviceEyebrow}
+              number="01"
+              title={service.heroTitle}
+              body={service.intro}
+              titleClassName="max-w-4xl"
+              headingTag="h1"
+            />
+          </div>
+            <VisualAsset
+              asset={getServiceVisual(service.serviceId, locale)}
+              eyebrow={navigation.ui.serviceEyebrow}
+              title={service.shortTitle}
+              body={service.summary}
+              className="min-h-[26rem] sm:min-h-[32rem] xl:min-h-[38rem]"
+              priority={true}
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
+        <Container>
+          <div class="grid gap-5 lg:grid-cols-2" data-animate-group="service-panels">
+            <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
+              <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{service.includes.title}</p>
+              <ul class="mt-6 space-y-3 text-base leading-8 text-[var(--color-text)]">
+                {service.includes.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+
+            <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
+              <p class="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-text-soft)]">{service.benefits.title}</p>
+              <ul class="mt-6 space-y-3 text-base leading-8 text-[var(--color-text)]">
+                {service.benefits.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </Container>
+      </section>
+
+      <ProcessSection
+        locale={locale}
+        section={{
+          sectionId: 'service-process',
+          eyebrow: navigation.ui.processTitle,
+          title: service.process.title,
+          body: service.intro,
+          items: service.process.items,
+        }}
+        number="02"
+      />
+
+      <section class="border-t border-[var(--color-border)] py-16 sm:py-20" data-animate="reveal">
+        <Container>
+          <div class="max-w-4xl">
+            <BigTextBlock eyebrow={navigation.ui.faqsTitle} number="03" title={service.faqs.title} />
+          </div>
+          <div class="mt-10 grid gap-4 lg:grid-cols-3" data-animate-group="service-faqs">
+            {service.faqs.items.map((item) => (
+              <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
+                <h2 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">{item.question}</h2>
+                <p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.serviceDetail.faqCta.eyebrow}
+        title={internalLinksContent.serviceDetail.faqCta.title}
+        body={internalLinksContent.serviceDetail.faqCta.body}
+        number="04"
+        links={[
+          {
+            label: internalLinksContent.serviceDetail.faqCta.contactLabel,
+            href: serviceJourneyLinks?.contactPath ?? routes.contact,
+            variant: 'primary',
+          },
+          ...(internalLinksContent.serviceDetail.faqCta.whatsappLabel
+            ? [{
+                label: internalLinksContent.serviceDetail.faqCta.whatsappLabel,
+                href: whatsAppHref,
+                variant: 'secondary' as const,
+              }]
+            : []),
+        ]}
+      />
+
+      <RelatedServices
+        locale={locale}
+        eyebrow={internalLinksContent.serviceDetail.related.eyebrow}
+        title={internalLinksContent.serviceDetail.related.title}
+        body={internalLinksContent.serviceDetail.related.body}
+        number="05"
+        services={relatedServices}
+      />
+
+      <ConversionLinkBlock
+        locale={locale}
+        eyebrow={internalLinksContent.serviceDetail.journey.eyebrow}
+        title={internalLinksContent.serviceDetail.journey.title}
+        body={internalLinksContent.serviceDetail.journey.body}
+        number="06"
+        links={[
+          {
+            label: internalLinksContent.serviceDetail.journey.contactLabel,
+            href: serviceJourneyLinks?.contactPath ?? routes.contact,
+            variant: 'primary',
+          },
+          ...(internalLinksContent.serviceDetail.journey.whatsappLabel
+            ? [{
+                label: internalLinksContent.serviceDetail.journey.whatsappLabel,
+                href: whatsAppHref,
+                variant: 'secondary' as const,
+              }]
+            : []),
+          {
+            label: internalLinksContent.serviceDetail.journey.servicesLabel,
+            href: serviceJourneyLinks?.servicesPath ?? routes.services,
+            variant: 'ghost',
+          },
+          {
+            label: internalLinksContent.serviceDetail.journey.aboutLabel,
+            href: serviceJourneyLinks?.aboutPath ?? routes.about,
+            variant: 'ghost',
+          },
+        ]}
+      />
+
+      <section class="py-16 sm:py-20 lg:py-28" data-animate="cta">
+        <Container>
+          <div class="rounded-[2.5rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-6 py-10 sm:px-10 sm:py-12">
+            <BigTextBlock
+              eyebrow={internalLinksContent.serviceDetail.journey.eyebrow}
+              number="07"
+            title={service.cta.title}
+            body={service.cta.body}
+            titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl"
+          />
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="inline-flex min-h-12 items-center rounded-full border border-transparent bg-[var(--color-accent)] px-6 py-3.5 text-sm font-medium text-[var(--color-ink)] transition hover:bg-[var(--color-accent-soft)]" href={service.cta.href}>
+                {service.cta.label}
+              </a>
+              <a class="inline-flex min-h-12 items-center rounded-full border border-[var(--color-border)] px-6 py-3.5 text-sm font-medium text-[var(--color-text)] transition hover:border-[var(--color-border-strong)] hover:bg-white/5" href={service.cta.secondaryHref}>
+                {service.cta.secondaryLabel}
+              </a>
+            </div>
+            <div class="mt-6">
+              <WhatsAppCTA locale={locale} variant="large" />
+            </div>
+          </div>
+        </Container>
+      </section>
+    </>
+  )}
+
+  {kind === 'legal' && legalPage && (
+    <section class="py-16 sm:py-20 lg:py-28" data-animate="reveal">
+      <Container size="narrow">
+        <div class="space-y-8">
+          <BigTextBlock
+            eyebrow={navigation.ui.legalEyebrow}
+            number="01"
+            title={legalPage.title}
+            body={legalPage.intro}
+            titleClassName="max-w-4xl"
+            headingTag="h1"
+          />
+
+          <p class="text-sm uppercase tracking-[0.18em] text-[var(--color-text-soft)]">{legalPage.updatedAtLabel}: {legalPage.updatedAtValue}</p>
+
+          <div class="space-y-6" data-animate-group="legal-sections">
+            {legalPage.sections.map((section) => (
+              <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-8" data-animate="stagger">
+                <h2 class="font-[var(--font-display)] text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">{section.heading}</h2>
+                <div class="mt-4 space-y-4">
+                  {section.body.map((paragraph) => (
+                    <p class="text-base leading-8 text-[var(--color-text-muted)]">{paragraph}</p>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {legalPage.pendingLegalReview && (
+            <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 text-sm leading-7 text-[var(--color-text-muted)]">
+              {legalPage.pendingReviewNote}
+            </article>
+          )}
+        </div>
+      </Container>
+    </section>
+  )}
+</BaseLayout>

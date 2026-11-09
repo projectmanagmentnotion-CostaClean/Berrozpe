@@ -1,0 +1,43 @@
+---
+import type { Locale } from '../lib/content';
+import BigTextBlock from './BigTextBlock.astro';
+import Button from './Button.astro';
+import Container from './Container.astro';
+
+interface LinkItem {
+  label: string;
+  href: string;
+  description?: string;
+  variant?: 'primary' | 'secondary' | 'ghost';
+}
+
+interface Props {
+  locale: Locale;
+  eyebrow: string;
+  title: string;
+  body: string;
+  links: LinkItem[];
+  number?: string;
+}
+
+const { eyebrow, title, body, links, number } = Astro.props;
+---
+
+<section class="border-t border-[var(--color-border)] py-14 sm:py-18" data-animate="reveal">
+  <Container>
+    <div class="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+      <BigTextBlock eyebrow={eyebrow} number={number} title={title} body={body} titleClassName="max-w-4xl text-3xl sm:text-4xl lg:text-5xl" />
+      <div class="grid auto-rows-fr gap-4 sm:grid-cols-2" data-animate-group="conversion-links">
+        {links.map((link) => (
+          <article class="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[0_20px_80px_rgba(2,6,23,0.12)] sm:p-6" data-animate="stagger">
+            <div>
+              <Button href={link.href} variant={link.variant ?? 'secondary'} size="lg">
+                {link.label}
+              </Button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </Container>
+</section>

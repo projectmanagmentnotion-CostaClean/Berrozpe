@@ -1,0 +1,13 @@
+{
+  "locale": "en",
+  "title": "Visible rating on Google",
+  "intro": "Public Instal Berrozpe profile on Google Business.",
+  "ratingLabel": "4.9/5 on Google",
+  "reviewCountLabel": "67 reviews",
+  "leaveReviewTitle": "Have you worked with Instal Berrozpe?",
+  "leaveReviewText": "Your review helps other clients.",
+  "leaveReviewButton": "Leave a Google review",
+  "viewProfileButton": "View Google profile",
+  "noReviewsFallback": "",
+  "trustNote": "Rating visible on Google Business."
+}

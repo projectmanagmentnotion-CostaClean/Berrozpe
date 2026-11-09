@@ -1,0 +1,42 @@
+{
+  "slug": "cookies",
+  "locale": "de",
+  "title": "Cookies",
+  "seoTitle": "Cookies | Instal Berrozpe",
+  "seoDescription": "Cookie-Richtlinie von Instal Berrozpe und Funktionsweise des mehrsprachigen Einwilligungssystems der Website.",
+  "updatedAtLabel": "Letzte Aktualisierung",
+  "updatedAtValue": "2026-07-10",
+  "intro": "Diese Website verwendet nur die fuer ihren Betrieb notwendigen Cookies sowie ein Einwilligungssystem fuer optionale Kategorien, die derzeit standardmaessig inaktiv sind.",
+  "sections": [
+    {
+      "heading": "Notwendige Cookies",
+      "body": [
+        "Notwendige Cookies ermoeglichen grundlegende technische Funktionen, etwa das Speichern der Einwilligungseinstellungen und den ordnungsgemaessen Betrieb der Website.",
+        "Diese Cookies duerfen ohne vorherige Einwilligung aktiv bleiben, weil sie fuer den von der nutzenden Person angeforderten Dienst erforderlich sind."
+      ]
+    },
+    {
+      "heading": "Optionale Kategorien und Einwilligung",
+      "body": [
+        "Die Website ist fuer optionale Kategorien wie Praeferenzen, Analyse oder Marketing vorbereitet, aber keine davon ist standardmaessig aktiv oder wird vor der entsprechenden Einwilligung geladen.",
+        "Falls in Zukunft optionale Werkzeuge hinzugefuegt werden, werden sie erst nach ausdruecklicher Zustimmung zur jeweiligen Kategorie ausgefuehrt."
+      ]
+    },
+    {
+      "heading": "Verwaltung der Einstellungen",
+      "body": [
+        "Nutzende koennen Cookies ueber das erste Banner akzeptieren, ablehnen oder konfigurieren.",
+        "Die Einstellungen lassen sich jederzeit ueber den permanenten Link im Footer erneut oeffnen."
+      ]
+    },
+    {
+      "heading": "Google Maps und Drittanbieter",
+      "body": [
+        "Die Website laedt standardmaessig kein aktives Google-Maps-iframe.",
+        "Standortbloecke arbeiten mit Textadresse und externem Link und vermeiden so unnoetige Drittanbieter-Ladevorgaenge vor der Einwilligung."
+      ]
+    }
+  ],
+  "pendingLegalReview": false,
+  "pendingReviewNote": ""
+}
