@@ -5,7 +5,7 @@
   "seoTitle": "Privacy policy | Instal Berrozpe",
   "seoDescription": "Privacy policy of Instal Berrozpe S.L. for enquiries received by form, email, phone or WhatsApp.",
   "updatedAtLabel": "Last updated",
-  "updatedAtValue": "2026-11-09",
+  "updatedAtValue": "2026-11-10",
   "intro": "This policy explains how Instal Berrozpe S.L. processes personal data received through this website and its contact channels.",
   "sections": [
     {
@@ -29,14 +29,14 @@
       "heading": "Service providers, recipients and transfers",
       "body": [
         "The website and the function that processes the form are hosted by Vercel, Inc. Resend, Inc. delivers the message as a transactional email service; it is then received in the company mailbox managed with Google Workspace. These providers process data for the stated functions.",
-        "Resend states that email data and logs are stored in the United States and retained for 30 days on its Free plan. Vercel may process data in the United States and other locations where it and its subprocessors operate. Google Workspace processes email according to the organisation's configuration.",
+        "Resend states that email data and logs are stored in the United States and retained for 30 days while the account is active. Vercel may process data in the United States and other locations where it and its subprocessors operate. Google Workspace processes email according to the organisation's configuration.",
         "International transfers, where they occur, must be covered by the data protection mechanisms and agreements in force with each provider, including Standard Contractual Clauses where applicable. The company should maintain those agreements and review each provider's subprocessor list."
       ]
     },
     {
       "heading": "Retention",
       "body": [
-        "Enquiries are kept while being handled and afterwards for the periods needed to meet legal or contractual responsibilities. Messages received in Google Workspace are retained under the account rules and applicable obligations. Resend retains email data and logs for 30 days on its Free plan."
+        "Enquiries are kept while being handled and afterwards for the periods needed to meet legal or contractual responsibilities. Messages received in Google Workspace are retained under the account rules and applicable obligations. Resend retains email data and logs for 30 days while the account is active."
       ]
     },
     {

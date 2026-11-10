@@ -5,7 +5,7 @@
   "seoTitle": "Datenschutzerklärung | Instal Berrozpe",
   "seoDescription": "Datenschutzerklärung von Instal Berrozpe S.L. für Anfragen per Formular, E-Mail, Telefon oder WhatsApp.",
   "updatedAtLabel": "Letzte Aktualisierung",
-  "updatedAtValue": "2026-11-09",
+  "updatedAtValue": "2026-11-10",
   "intro": "Diese Datenschutzerklärung erläutert, wie Instal Berrozpe S.L. personenbezogene Daten verarbeitet, die über diese Website und ihre Kontaktkanäle eingehen.",
   "sections": [
     {
@@ -29,14 +29,14 @@
       "heading": "Dienstleister, Empfänger und Übermittlungen",
       "body": [
         "Die Website und die Funktion zur Verarbeitung des Formulars werden von Vercel, Inc. gehostet. Resend, Inc. versendet die Nachricht als Transaktions-E-Mail-Dienst; anschließend geht sie im mit Google Workspace verwalteten Firmenpostfach ein. Diese Anbieter verarbeiten Daten für die genannten Aufgaben.",
-        "Resend gibt an, E-Mail-Daten und Protokolle in den Vereinigten Staaten zu speichern und sie im Free-Tarif 30 Tage aufzubewahren. Vercel kann Daten in den Vereinigten Staaten und an anderen Standorten verarbeiten, an denen Vercel und seine Unterauftragsverarbeiter tätig sind. Google Workspace verarbeitet E-Mails gemäß der Konfiguration der Organisation.",
+        "Resend gibt an, E-Mail-Daten und Protokolle in den Vereinigten Staaten zu speichern und sie 30 Tage aufzubewahren, solange das Konto aktiv ist. Vercel kann Daten in den Vereinigten Staaten und an anderen Standorten verarbeiten, an denen Vercel und seine Unterauftragsverarbeiter tätig sind. Google Workspace verarbeitet E-Mails gemäß der Konfiguration der Organisation.",
         "Internationale Übermittlungen müssen, soweit sie stattfinden, durch die jeweils geltenden Datenschutzmechanismen und Vereinbarungen mit den Anbietern abgesichert sein, gegebenenfalls einschließlich Standardvertragsklauseln. Das Unternehmen sollte diese Vereinbarungen aufrechterhalten und die Unterauftragsverarbeiterlisten der Anbieter prüfen."
       ]
     },
     {
       "heading": "Speicherdauer",
       "body": [
-        "Anfragen werden während ihrer Bearbeitung und anschließend so lange aufbewahrt, wie es zur Erfüllung gesetzlicher oder vertraglicher Pflichten erforderlich ist. In Google Workspace eingegangene Nachrichten unterliegen den Kontoeinstellungen und den geltenden Pflichten. Resend speichert E-Mail-Daten und Protokolle im Free-Tarif 30 Tage."
+        "Anfragen werden während ihrer Bearbeitung und anschließend so lange aufbewahrt, wie es zur Erfüllung gesetzlicher oder vertraglicher Pflichten erforderlich ist. In Google Workspace eingegangene Nachrichten unterliegen den Kontoeinstellungen und den geltenden Pflichten. Resend speichert E-Mail-Daten und Protokolle 30 Tage, solange das Konto aktiv ist."
       ]
     },
     {

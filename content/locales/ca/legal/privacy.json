@@ -5,7 +5,7 @@
   "seoTitle": "Política de privacitat | Instal Berrozpe",
   "seoDescription": "Politica de privacitat d'Instal Berrozpe S.L. per a sollicituds rebudes per formulari, email, telefon o WhatsApp.",
   "updatedAtLabel": "Última actualització",
-  "updatedAtValue": "2026-11-09",
+  "updatedAtValue": "2026-11-10",
   "intro": "Aquesta política explica com Instal Berrozpe S.L. tracta les dades personals rebudes a través del web i dels seus canals de contacte.",
   "sections": [
     {
@@ -29,14 +29,14 @@
       "heading": "Proveïdors, destinataris i transferències",
       "body": [
         "El web i la funció que processa el formulari estan allotjats a Vercel, Inc. Resend, Inc. lliura el missatge com a servei de correu transaccional; després es rep al correu corporatiu gestionat amb Google Workspace. Aquests proveïdors tracten dades per a les funcions indicades.",
-        "Resend informa que emmagatzema les dades del correu i els registres als Estats Units i que, en el pla gratuït, els conserva durant 30 dies. Vercel pot tractar dades als Estats Units i en altres ubicacions on operi amb els seus subencarregats. Google Workspace tracta el correu segons la configuració de l'organització.",
+        "Resend informa que emmagatzema les dades del correu i els registres als Estats Units i que les conserva durant 30 dies mentre el compte està actiu. Vercel pot tractar dades als Estats Units i en altres ubicacions on operi amb els seus subencarregats. Google Workspace tracta el correu segons la configuració de l'organització.",
         "Les transferències internacionals, quan es produeixin, han d'estar emparades pels mecanismes i acords de protecció de dades vigents amb cada proveïdor, incloses les clàusules contractuals tipus quan correspongui. L'empresa ha de mantenir aquests acords i revisar les llistes de subencarregats."
       ]
     },
     {
       "heading": "Conservació",
       "body": [
-        "La consulta es conserva mentre es tramita i, després, durant els terminis necessaris per atendre responsabilitats legals o contractuals. Els missatges rebuts a Google Workspace es conserven segons les regles del compte i les obligacions aplicables. Resend conserva les dades del correu i els registres durant 30 dies en el seu pla gratuït."
+        "La consulta es conserva mentre es tramita i, després, durant els terminis necessaris per atendre responsabilitats legals o contractuals. Els missatges rebuts a Google Workspace es conserven segons les regles del compte i les obligacions aplicables. Resend conserva les dades del correu i els registres durant 30 dies mentre el compte està actiu."
       ]
     },
     {

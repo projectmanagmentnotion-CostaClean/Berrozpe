@@ -127,6 +127,8 @@ Ningun idioma puede quedar desincronizado respecto a los otros tres cuando se ac
 
 ## Evidencia y validaciones pendientes — 2026-11-10
 
+- La política oficial de Resend confirma almacenamiento de datos de correo y registros en Estados Unidos y retención de 30 días en Free, Pro y Scale mientras la cuenta está activa: https://resend.com/security/gdpr/. Se actualizó el texto público multidioma para no atribuir un plan tarifario a una cuenta cuyo plan no se ha confirmado.
+- En Production se envió una prueba real el 2026-11-10 a `info@instalberrozpe.com`; Resend registró `POST /emails` con respuesta 200 y evento `Delivered`. No se encontró el mensaje en la búsqueda visible del buzón `david@instalberrozpe.com`; falta confirmar la entrega en la bandeja/alias de `info@`.
 - El BORME oficial de Girona de 2025 publica para INSTAL BERROZPE S.L. la pérdida del carácter unipersonal, inscripción 3.ª inscrita el 13/01/2025: https://www.boe.es/diario_borme/txt.php?id=BORME-A-2025-11-17&lang=es. El aviso legal no afirma actualmente que exista socio único; el pendiente pide a David confirmar titularidad, administración y domicilio vigentes.
 - El asiento inicial citado en los avisos legales corresponde a la inscripción 1.ª (17/07/2018), comprobada en el BORME oficial: https://www.boe.es/diario_borme/txt.php?id=BORME-A-2018-142-17.
 - En un origen local limpio y viewport `390 × 844` se verificó la aparición del banner, la equivalencia visual de aceptar/rechazar, la persistencia del rechazo tras recarga y la aceptación desde el panel de preferencias. No se probó una selección parcial ni retirar una aceptación previa; tampoco se repitió en escritorio.
