@@ -5,7 +5,7 @@
   "seoTitle": "Politica de cookies | Instal Berrozpe",
   "seoDescription": "Politica de cookies d'Instal Berrozpe i funcionament del consentiment multilingue de la web.",
   "updatedAtLabel": "Ultima actualitzacio",
-  "updatedAtValue": "2026-07-10",
+  "updatedAtValue": "2026-11-10",
   "intro": "Aquest web utilitza nomes les cookies necessaries per al seu funcionament i un sistema de consentiment per a categories opcionals, actualment no actives per defecte.",
   "sections": [
     {
@@ -32,7 +32,7 @@
     {
       "heading": "Google Maps i tercers",
       "body": [
-        "El web no carrega un iframe viu de Google Maps per defecte.",
+        "El web no carrega un iframe viu de Google Maps per defecte. El mapa interactiu només se sol·licita quan la persona usuària accepta la categoria «Mapa de Google» a les preferències o prem «Mostrar mapa de Google». Si retira aquest consentiment, s'elimina la càrrega de l'iframe.",
         "Els blocs d'ubicacio funcionen mitjancant adreca textual i enllac extern, evitant carregues innecessaries de tercers abans del consentiment."
       ]
     }

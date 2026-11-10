@@ -5,7 +5,7 @@
   "seoTitle": "Cookies | Instal Berrozpe",
   "seoDescription": "Cookie-Richtlinie von Instal Berrozpe und Funktionsweise des mehrsprachigen Einwilligungssystems der Website.",
   "updatedAtLabel": "Letzte Aktualisierung",
-  "updatedAtValue": "2026-07-10",
+  "updatedAtValue": "2026-11-10",
   "intro": "Diese Website verwendet nur die fuer ihren Betrieb notwendigen Cookies sowie ein Einwilligungssystem fuer optionale Kategorien, die derzeit standardmaessig inaktiv sind.",
   "sections": [
     {
@@ -32,7 +32,7 @@
     {
       "heading": "Google Maps und Drittanbieter",
       "body": [
-        "Die Website laedt standardmaessig kein aktives Google-Maps-iframe.",
+        "Die Website laedt standardmaessig kein aktives Google-Maps-iframe. Die interaktive Karte wird erst angefordert, wenn die nutzende Person der Kategorie „Google Maps“ in den Einstellungen zustimmt oder „Google-Karte anzeigen“ auswaehlt. Wird die Einwilligung widerrufen, wird das iframe aus der Seite entfernt.",
         "Standortbloecke arbeiten mit Textadresse und externem Link und vermeiden so unnoetige Drittanbieter-Ladevorgaenge vor der Einwilligung."
       ]
     }
