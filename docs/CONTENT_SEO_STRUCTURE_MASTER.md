@@ -756,11 +756,12 @@ Reduced motion:
 - Estado del mapa:
   - URL externa confirmada desde `content/shared/contact.json`
   - direccion textual confirmada: `Carrer de l'Antiga, 68, 17300 Blanes, Girona`
-  - sin `embedUrl` ni API key en frontend
-  - iframe vivo pendiente hasta disponer de una integracion segura y una categoria real de terceros si llega a activarse
+  - el iframe diferido usa el `googleMapsEmbedUrl` de `content/shared/contact.json`, sin API key
+  - `src/components/DeferredGoogleMap.astro` solo asigna `src` al iframe tras consentimiento especifico para Google Maps
 - Regla UX:
   - el CTA flotante no debe tapar banner de cookies ni formulario
   - el bloque de mapa en contacto debe aparecer antes que resenas
+  - retirar el consentimiento de Google Maps debe descargar el iframe y restaurar el marcador local
 
 ## S. Polish final pre-staging
 

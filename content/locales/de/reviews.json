@@ -3,11 +3,12 @@
   "title": "Sichtbare Bewertung bei Google",
   "intro": "Offentliches Profil von Instal Berrozpe bei Google Business.",
   "ratingLabel": "4,9/5 bei Google",
-  "reviewCountLabel": "67 Bewertungen",
+  "reviewCountLabel": "68 Rezensionen",
   "leaveReviewTitle": "Haben Sie mit Instal Berrozpe gearbeitet?",
   "leaveReviewText": "Ihre Bewertung hilft anderen Kunden.",
   "leaveReviewButton": "Google-Bewertung abgeben",
   "viewProfileButton": "Google-Profil ansehen",
-  "noReviewsFallback": "",
+  "noReviewsFallback": "Ausgewählte Bewertungen erscheinen hier, sobald echte und bestätigte Bewertungen aus dem Google-Profil hinzugefügt wurden.",
+  "reviewSourceLabel": "Google-Rezension",
   "trustNote": "Bewertung sichtbar bei Google Business."
 }

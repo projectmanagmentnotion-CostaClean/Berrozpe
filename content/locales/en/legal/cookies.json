@@ -5,7 +5,7 @@
   "seoTitle": "Cookie policy | Instal Berrozpe",
   "seoDescription": "Cookie policy of Instal Berrozpe and operation of the website's multilingual consent system.",
   "updatedAtLabel": "Last updated",
-  "updatedAtValue": "2026-07-10",
+  "updatedAtValue": "2026-11-10",
   "intro": "This website uses only the cookies required for its operation and a consent system for optional categories, which are currently inactive by default.",
   "sections": [
     {
@@ -32,7 +32,7 @@
     {
       "heading": "Google Maps and third parties",
       "body": [
-        "The website does not load a live Google Maps iframe by default.",
+        "The website does not load a live Google Maps iframe by default. The interactive map is requested only when the user accepts the “Google Maps” category in cookie preferences or selects “Show Google Map”. Withdrawing that consent removes the iframe from the page.",
         "Location blocks work through text-based address information and an external link, avoiding unnecessary third-party loading before consent."
       ]
     }

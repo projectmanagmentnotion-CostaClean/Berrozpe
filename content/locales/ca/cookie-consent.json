@@ -1,7 +1,7 @@
 {
   "locale": "ca",
   "storageKey": "berrozpe-cookie-consent",
-  "version": "2026-07",
+  "version": "2026-11-google-maps",
   "banner": {
     "title": "Preferències de cookies",
     "body": "Fem servir cookies necessàries per al funcionament del lloc. Les categories opcionals només s'activaran si dones el teu consentiment.",
@@ -33,8 +33,13 @@
     {
       "key": "preferences",
       "title": "Preferències",
-      "description": "Categoria preparada per a ajustos d'experiència que no siguin imprescindibles. Actualment no hi ha eines confirmades en aquesta categoria.",
+      "description": "Categoria preparada per a ajustos d’experiència que no siguin imprescindibles. Actualment no hi ha eines confirmades en aquesta categoria.",
       "pending": true
+    },
+    {
+      "key": "googleMaps",
+      "title": "Mapa de Google",
+      "description": "Permet sol·licitar el mapa interactiu a Google Maps. Només es carrega quan actives aquesta opció o prems «Mostrar mapa de Google»."
     },
     {
       "key": "analytics",

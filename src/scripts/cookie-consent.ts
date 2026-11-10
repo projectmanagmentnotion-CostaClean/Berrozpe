@@ -45,6 +45,30 @@ function readFormConsent(modal: HTMLElement, version: string): ConsentState {
   return buildConsentState(version, categories);
 }
 
+function syncDeferredGoogleMaps(consent: ConsentState): void {
+  document.querySelectorAll<HTMLElement>('[data-deferred-google-map]').forEach((map) => {
+    const category = map.dataset.mapCategory as ConsentCategory | undefined;
+    const iframe = map.querySelector<HTMLIFrameElement>('[data-map-embed]');
+    const placeholder = map.querySelector<HTMLElement>('[data-map-placeholder]');
+
+    if (!category || !iframe || !placeholder) {
+      return;
+    }
+
+    const allowed = Boolean(consent.categories[category]);
+    const embedUrl = iframe.dataset.src;
+
+    if (allowed && embedUrl && iframe.getAttribute('src') !== embedUrl) {
+      iframe.setAttribute('src', embedUrl);
+    } else if (!allowed) {
+      iframe.removeAttribute('src');
+    }
+
+    iframe.hidden = !allowed;
+    placeholder.hidden = allowed;
+  });
+}
+
 function setupCookieConsent(): void {
   if (window.__berrozpeCookieConsentBooted__) {
     return;
@@ -65,7 +89,8 @@ function setupCookieConsent(): void {
   const storageKey = root.dataset.cookieStorageKey ?? 'berrozpe-cookie-consent';
   const version = root.dataset.cookieVersion ?? '1';
   const savedMessage = root.dataset.cookieSavedMessage ?? '';
-  const initialConsent = getStoredConsent(storageKey) ?? getDefaultConsentState(version);
+  const storedConsent = getStoredConsent(storageKey);
+  const initialConsent = storedConsent?.version === version ? storedConsent : getDefaultConsentState(version);
 
   if (hasResolvedConsent(storageKey, version)) {
     banner.hidden = true;
@@ -74,6 +99,7 @@ function setupCookieConsent(): void {
 
   syncForm(modal, initialConsent);
   activateDeferredScripts(initialConsent);
+  syncDeferredGoogleMaps(initialConsent);
 
   const persistConsent = (consent: ConsentState) => {
     saveConsent(storageKey, consent);
@@ -82,6 +108,7 @@ function setupCookieConsent(): void {
     setModalOpen(modal, false);
     syncForm(modal, consent);
     activateDeferredScripts(consent);
+    syncDeferredGoogleMaps(consent);
 
     if (status && savedMessage) {
       status.textContent = savedMessage;
@@ -134,6 +161,14 @@ function setupCookieConsent(): void {
     });
   });
 
+  document.querySelectorAll<HTMLElement>('[data-consent-google-maps]').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const stored = getStoredConsent(storageKey);
+      const current = stored?.version === version ? stored : getDefaultConsentState(version);
+      persistConsent(buildConsentState(version, { ...current.categories, googleMaps: true }));
+    });
+  });
+
   window.addEventListener(OPEN_PREFERENCES_EVENT, () => {
     const stored = getStoredConsent(storageKey) ?? getDefaultConsentState(version);
     syncForm(modal, stored);
@@ -143,6 +178,7 @@ function setupCookieConsent(): void {
   window.addEventListener(CONSENT_EVENT, ((event: Event) => {
     const customEvent = event as CustomEvent<ConsentState>;
     activateDeferredScripts(customEvent.detail);
+    syncDeferredGoogleMaps(customEvent.detail);
   }) as EventListener);
 }
 
