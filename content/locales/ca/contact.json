@@ -27,11 +27,11 @@
       "placeholder": "Explica breument que necessites",
       "rows": 6
     },
-    "privacy": {
-      "label": "He llegit i accepto la politica de privacitat."
-    },
     "honeypot": {
       "label": "No omplir aquest camp"
+    },
+    "privacy": {
+      "label": "Confirmo que he llegit la informació de privacitat."
     }
   },
   "serviceOptions": [
@@ -48,14 +48,11 @@
       "label": "Alarmes i cameres"
     }
   ],
-  "privacyConsent": {
-    "prefix": "Has d'acceptar la",
-    "linkLabel": "politica de privacitat",
-    "suffix": "per poder enviar el formulari."
-  },
+  "privacyNoticeLinkLabel": "Llegeix la política de privacitat completa.",
   "legalSummary": [
-    "Les teves dades s'utilitzaran per respondre la teva sollicitud per formulari, email, telefon o WhatsApp.",
-    "El responsable del tractament es Instal Berrozpe S.L. i pots ampliar la informacio a la politica de privacitat."
+    "Responsable: Instal Berrozpe S.L. Utilitzarem les dades que facilitis per respondre la consulta i, si ho demanes, preparar un pressupost. La base jurídica és gestionar mesures precontractuals que sol·licitis o l’interès legítim a respondre consultes generals.",
+    "Vercel allotja el web i processa el formulari; Resend lliura el missatge i Google Workspace el rep al correu corporatiu. La política completa explica el tractament per aquests proveïdors i les possibles transferències internacionals.",
+    "La consulta es conserva mentre es gestiona i després durant els terminis legals aplicables. A Workspace, els missatges es mantenen fins que s’esborren manualment; actualment no hi ha cap regla de supressió automàtica configurada. Resend informa d’una conservació de 30 dies per a les dades del correu i els registres mentre el compte és actiu."
   ],
   "submitLabel": "Enviar consulta",
   "sendingLabel": "Enviant...",
@@ -68,9 +65,14 @@
     "phoneInvalid": "Introdueix un telefon valid o deixa el camp buit.",
     "serviceRequired": "Selecciona un servei.",
     "messageRequired": "El missatge es obligatori.",
-    "privacyRequired": "Has d'acceptar la politica de privacitat.",
     "honeypotFilled": "No s'ha pogut validar l'enviament.",
-    "genericError": "No s'ha pogut processar el formulari."
+    "genericError": "No s'ha pogut processar el formulari.",
+    "privacyRequired": "Confirma que has llegit la informació de privacitat."
   },
-  "honeypotLabel": "No omplir aquest camp"
+  "honeypotLabel": "No omplir aquest camp",
+  "privacyConsent": {
+    "prefix": "Consulta la",
+    "linkLabel": "política de privacitat",
+    "suffix": "abans d’enviar el formulari."
+  }
 }

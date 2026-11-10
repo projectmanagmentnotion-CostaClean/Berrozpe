@@ -27,11 +27,11 @@
       "placeholder": "Beschreiben Sie kurz, was Sie benoetigen",
       "rows": 6
     },
-    "privacy": {
-      "label": "Ich habe die Datenschutzerklaerung gelesen und akzeptiere sie."
-    },
     "honeypot": {
       "label": "Dieses Feld nicht ausfuellen"
+    },
+    "privacy": {
+      "label": "Ich bestätige, dass ich die Datenschutzhinweise gelesen habe."
     }
   },
   "serviceOptions": [
@@ -48,14 +48,11 @@
       "label": "Alarmanlagen und Kameras"
     }
   ],
-  "privacyConsent": {
-    "prefix": "Sie muessen die",
-    "linkLabel": "Datenschutzerklaerung",
-    "suffix": "akzeptieren, bevor das Formular gesendet werden kann."
-  },
+  "privacyNoticeLinkLabel": "Die vollständige Datenschutzerklärung lesen.",
   "legalSummary": [
-    "Ihre Daten werden verwendet, um Ihre Anfrage per Formular, E-Mail, Telefon oder WhatsApp zu beantworten.",
-    "Verantwortlich fuer die Verarbeitung ist Instal Berrozpe S.L.; weitere Informationen finden Sie in der Datenschutzerklaerung."
+    "Verantwortlicher: Instal Berrozpe S.L. Wir verwenden Ihre Angaben, um Ihre Anfrage zu beantworten und auf Wunsch ein Angebot zu erstellen. Rechtsgrundlage sind die von Ihnen angeforderten vorvertraglichen Maßnahmen oder unser berechtigtes Interesse an der Beantwortung allgemeiner Anfragen.",
+    "Vercel hostet die Website und verarbeitet das Formular; Resend stellt die Nachricht zu und Google Workspace empfängt sie im Firmenpostfach. Die vollständige Erklärung beschreibt die Verarbeitung durch diese Anbieter und mögliche internationale Übermittlungen.",
+    "Die Anfrage wird während der Bearbeitung und danach für die geltenden gesetzlichen Fristen gespeichert. In Workspace bleiben Nachrichten bis zur manuellen Löschung gespeichert; derzeit ist keine automatische Löschregel eingerichtet. Resend gibt an, E-Mail-Daten und Protokolle 30 Tage aufzubewahren, solange das Konto aktiv ist."
   ],
   "submitLabel": "Anfrage senden",
   "sendingLabel": "Wird gesendet...",
@@ -68,9 +65,14 @@
     "phoneInvalid": "Bitte geben Sie eine gueltige Telefonnummer ein oder lassen Sie das Feld leer.",
     "serviceRequired": "Bitte waehlen Sie eine Leistung aus.",
     "messageRequired": "Die Nachricht ist erforderlich.",
-    "privacyRequired": "Sie muessen die Datenschutzerklaerung akzeptieren.",
     "honeypotFilled": "Die Uebermittlung konnte nicht validiert werden.",
-    "genericError": "Das Formular konnte nicht verarbeitet werden."
+    "genericError": "Das Formular konnte nicht verarbeitet werden.",
+    "privacyRequired": "Bitte bestätigen Sie, dass Sie die Datenschutzhinweise gelesen haben."
   },
-  "honeypotLabel": "Dieses Feld nicht ausfuellen"
+  "honeypotLabel": "Dieses Feld nicht ausfuellen",
+  "privacyConsent": {
+    "prefix": "Lesen Sie die vollständige",
+    "linkLabel": "Datenschutzerklärung",
+    "suffix": "vor dem Absenden des Formulars."
+  }
 }

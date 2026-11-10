@@ -32,7 +32,9 @@
     { "source": "/terminos-y-condiciones-es/", "destination": "/es/terminos-y-condiciones/", "permanent": true },
     { "source": "/terminos-y-condiciones-en/", "destination": "/en/terms-and-conditions/", "permanent": true },
     { "source": "/terminos-y-condiciones-cat/", "destination": "/ca/termes-i-condicions/", "permanent": true },
-    { "source": "/mas-informacion-sobre-las-cookies/", "destination": "/es/politica-de-cookies/", "permanent": true }
+    { "source": "/mas-informacion-sobre-las-cookies/", "destination": "/es/politica-de-cookies/", "permanent": true },
+    { "source": "/home", "destination": "/en/", "permanent": true },
+    { "source": "/contacte", "destination": "/ca/contacte/", "permanent": true }
   ]
 }
 

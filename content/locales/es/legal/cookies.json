@@ -1,42 +1,35 @@
 {
   "slug": "politica-de-cookies",
   "locale": "es",
-  "title": "Politica de cookies",
-  "seoTitle": "Politica de cookies | Instal Berrozpe",
+  "title": "Política de cookies",
+  "seoTitle": "Política de cookies | Instal Berrozpe",
   "seoDescription": "Politica de cookies de Instal Berrozpe y funcionamiento del consentimiento multidioma de la web.",
-  "updatedAtLabel": "Ultima actualizacion",
+  "updatedAtLabel": "Última actualización",
   "updatedAtValue": "2026-11-10",
-  "intro": "Esta web utiliza solo las cookies necesarias para su funcionamiento y un sistema de consentimiento para categorias opcionales, actualmente no activas por defecto.",
+  "intro": "Este sitio usa almacenamiento técnico para guardar tu elección de cookies. No activa herramientas de análisis ni publicidad.",
   "sections": [
     {
-      "heading": "Cookies necesarias",
+      "heading": "Almacenamiento de preferencias",
       "body": [
-        "Las cookies necesarias permiten funciones tecnicas basicas, como recordar la preferencia de consentimiento y garantizar el funcionamiento del sitio.",
-        "Estas cookies pueden mantenerse activas sin consentimiento previo porque son necesarias para prestar el servicio solicitado por la persona usuaria."
+        "El código del sitio guarda la elección mediante la clave localStorage berrozpe-cookie-consent y la cookie berrozpe-cookie-consent-cookie. La cookie dura 180 días; localStorage se conserva hasta que la persona usuaria lo borre.",
+        "Esta preferencia técnica es necesaria para recordar si se aceptaron o rechazaron categorías opcionales."
       ]
     },
     {
-      "heading": "Categorias opcionales y consentimiento",
+      "heading": "Aceptar, rechazar y configurar",
       "body": [
-        "La web esta preparada para categorias opcionales como preferencias, analitica o marketing, pero ninguna se activa por defecto ni se carga antes del consentimiento correspondiente.",
-        "Si en el futuro se incorporan herramientas opcionales, solo se ejecutaran despues de la aceptacion expresa de la categoria correspondiente."
+        "El banner permite aceptar todas las categorías opcionales, rechazarlas o abrir la configuración. Las opciones de aceptar y rechazar se muestran al mismo nivel y con visibilidad equivalente.",
+        "La opción específica Google Maps controla la carga del mapa interactivo y permanece desactivada hasta que la persona usuaria la activa. Analítica y marketing siguen preparadas sin herramientas confirmadas."
       ]
     },
     {
-      "heading": "Gestion de preferencias",
+      "heading": "Google Maps y servicios externos",
       "body": [
-        "La persona usuaria puede aceptar, rechazar o configurar las cookies desde el banner inicial.",
-        "Las preferencias pueden reabrirse en cualquier momento desde el enlace permanente del pie de pagina."
-      ]
-    },
-    {
-      "heading": "Google Maps y terceros",
-      "body": [
-        "La web no carga un iframe vivo de Google Maps por defecto. El mapa interactivo solo se solicita cuando la persona usuaria acepta la categoria «Mapa de Google» en las preferencias o pulsa «Mostrar mapa de Google». Si retira ese consentimiento, se elimina la carga del iframe.",
-        "Los bloques de ubicacion funcionan mediante direccion textual y enlace externo, evitando cargas innecesarias de terceros antes del consentimiento."
+        "El mapa no se solicita antes de la autorización específica para Google Maps. Se puede activar con «Mostrar mapa de Google» o desde la configuración de cookies.",
+        "Al mostrar el mapa, el navegador se conecta directamente a Google Maps. Si se retira la autorización de Google Maps, el iframe se descarga; la dirección y el enlace externo siguen disponibles. La preferencia se puede cambiar desde el pie de página."
       ]
     }
   ],
-  "pendingLegalReview": false,
-  "pendingReviewNote": ""
+  "pendingLegalReview": true,
+  "pendingReviewNote": "La descripción de Google Maps coincide con el consentimiento específico implementado; queda pendiente la revisión jurídica final."
 }
