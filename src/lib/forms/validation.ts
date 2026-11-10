@@ -5,7 +5,6 @@ export interface ContactValidationMessages {
   phoneInvalid: string;
   serviceRequired: string;
   messageRequired: string;
-  privacyRequired: string;
   honeypotFilled: string;
   genericError: string;
 }
@@ -16,7 +15,6 @@ export interface ContactFormValues {
   phone: string;
   service: string;
   message: string;
-  privacy: boolean;
   website: string;
 }
 
@@ -32,7 +30,6 @@ export function normalizeContactFormValues(formData: FormData): ContactFormValue
     phone: String(formData.get('phone') ?? '').trim(),
     service: String(formData.get('service') ?? '').trim(),
     message: String(formData.get('message') ?? '').trim(),
-    privacy: formData.get('privacy') === '1' || formData.get('privacy') === 'on' || formData.get('privacy') === 'true',
     website: String(formData.get('website') ?? '').trim(),
   };
 }
@@ -63,10 +60,6 @@ export function validateContactFormValues(
 
   if (!values.message) {
     errors.message = messages.messageRequired;
-  }
-
-  if (!values.privacy) {
-    errors.privacy = messages.privacyRequired;
   }
 
   if (values.website) {

@@ -1,39 +1,40 @@
 {
   "slug": "avis-legal",
   "locale": "ca",
-  "title": "Avis legal",
-  "seoTitle": "Avis legal | Instal Berrozpe",
+  "title": "Avís legal",
+  "seoTitle": "Avís legal | Instal Berrozpe",
   "seoDescription": "Dades legals i de contacte d'Instal Berrozpe S.L. per a l'us informatiu d'instalberrozpe.com.",
-  "updatedAtLabel": "Ultima actualitzacio",
-  "updatedAtValue": "2026-07-10",
-  "intro": "Aquest avis legal regula l'acces i l'us informatiu del web instalberrozpe.com.",
+  "updatedAtLabel": "Última actualització",
+  "updatedAtValue": "2026-11-09",
+  "intro": "Aquest avís legal regula l'accés i l'ús informatiu del web instalberrozpe.com.",
   "sections": [
     {
       "heading": "Titular del lloc web",
       "body": [
-        "El titular d'aquest web es Instal Berrozpe S.L., amb CIF/NIF B55326813.",
-        "Domicili legal i fiscal: Antiga 68 baixos de Blanes. Adreca publica de referencia: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
-        "Email de contacte i privacitat: david@instalberrozpe.com. Telefon fix: 872 986 161. Mobil i WhatsApp: 676 04 33 89.",
+        "El titular d'aquest web és Instal Berrozpe S.L., amb CIF/NIF B55326813.",
+        "Inscripció inicial publicada al BORME: Registre Mercantil de Girona, tom 3212, foli 133, secció 8, full GI-64419, inscripció 1a (17/07/2018).",
+        "Domicili legal i fiscal: Antiga, 68, baixos, Blanes. Adreça pública: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
+        "Correu de contacte i privacitat: david@instalberrozpe.com. Telèfon fix: 872 986 161. Mòbil i WhatsApp: 676 04 33 89.",
         "Domini web: instalberrozpe.com."
       ]
     },
     {
-      "heading": "Us del lloc web",
+      "heading": "Ús del lloc web",
       "body": [
-        "El web te una finalitat informativa i de contacte sobre els serveis d'Instal Berrozpe.",
-        "La persona usuaria es compromet a utilitzar el web i els seus formularis de manera licita, responsable i sense causar danys al lloc ni a tercers.",
-        "Els enllacos externs, si existeixen, s'ofereixen nomes com a referencia. Instal Berrozpe no controla de manera permanent el contingut de webs de tercers."
+        "El web té una finalitat informativa i de contacte sobre els serveis d'Instal Berrozpe.",
+        "La persona usuària es compromet a utilitzar el web i els seus formularis de manera lícita i responsable, sense causar danys al lloc ni a tercers.",
+        "Els enllaços externs, si n'hi ha, s'ofereixen només com a referència. Instal Berrozpe no controla de manera permanent el contingut de webs de tercers."
       ]
     },
     {
-      "heading": "Propietat intellectual i responsabilitat",
+      "heading": "Propietat intel·lectual i responsabilitat",
       "body": [
-        "Els textos, imatges, logotips, disseny i la resta de continguts del web estan protegits per la normativa aplicable i no es poden reutilitzar sense autoritzacio quan correspongui.",
-        "Instal Berrozpe pot actualitzar el contingut del web quan ho consideri necessari per mantenir-lo correcte i util.",
+        "Els textos, imatges, logotips, disseny i la resta de continguts del web estan protegits per la normativa aplicable i no es poden reutilitzar sense autorització quan correspongui.",
+        "Instal Berrozpe pot actualitzar el contingut del web quan ho consideri necessari per mantenir-lo correcte i útil.",
         "No es garanteix la disponibilitat ininterrompuda del lloc, tot i que s'adoptaran mesures raonables per al seu bon funcionament."
       ]
     }
   ],
-  "pendingLegalReview": false,
-  "pendingReviewNote": ""
+  "pendingLegalReview": true,
+  "pendingReviewNote": "El BORME de 2025 publica la pèrdua del caràcter unipersonal (inscripció 3a, inscrita el 13/01/2025). David ha de confirmar la titularitat/administració i el domicili actuals abans de publicar."
 }

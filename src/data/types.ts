@@ -120,18 +120,13 @@ export interface ContactFormContent {
     phone: ContactFieldContent;
     service: ContactFieldContent;
     message: ContactFieldContent;
-    privacy: ContactFieldContent;
     honeypot: ContactFieldContent;
   };
   serviceOptions: Array<{
     value: string;
     label: string;
   }>;
-  privacyConsent: {
-    prefix: string;
-    linkLabel: string;
-    suffix: string;
-  };
+  privacyNoticeLinkLabel: string;
   legalSummary: string[];
   submitLabel: string;
   sendingLabel: string;
@@ -144,7 +139,6 @@ export interface ContactFormContent {
     phoneInvalid: string;
     serviceRequired: string;
     messageRequired: string;
-    privacyRequired: string;
     honeypotFilled: string;
     genericError: string;
   };

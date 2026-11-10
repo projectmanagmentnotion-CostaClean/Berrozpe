@@ -571,7 +571,6 @@ export function getLocalBusinessSchema(
   locale?: string,
   options?: {
     path?: string;
-    includeAggregateRating?: boolean;
   },
 ) {
   const resolvedLocale = resolveLocale(locale);
@@ -600,14 +599,6 @@ export function getLocalBusinessSchema(
     areaServed: site.coverageArea.length > 0 ? site.coverageArea : undefined,
     knowsLanguage: site.supportedLocales,
     sameAs: site.socialLinks.map((entry) => entry.url),
-    aggregateRating: options?.includeAggregateRating
-      ? {
-          '@type': 'AggregateRating',
-          ratingValue: reviewsData.aggregateRating.ratingValue,
-          reviewCount: reviewsData.aggregateRating.reviewCount,
-          bestRating: reviewsData.aggregateRating.bestRating,
-        }
-      : undefined,
   };
 }
 

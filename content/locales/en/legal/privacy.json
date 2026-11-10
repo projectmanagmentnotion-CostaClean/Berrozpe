@@ -5,41 +5,48 @@
   "seoTitle": "Privacy policy | Instal Berrozpe",
   "seoDescription": "Privacy policy of Instal Berrozpe S.L. for enquiries received by form, email, phone or WhatsApp.",
   "updatedAtLabel": "Last updated",
-  "updatedAtValue": "2026-07-10",
-  "intro": "This policy explains how Instal Berrozpe S.L. handles personal data received through this website and its contact channels.",
+  "updatedAtValue": "2026-11-09",
+  "intro": "This policy explains how Instal Berrozpe S.L. processes personal data received through this website and its contact channels.",
   "sections": [
     {
       "heading": "Data controller",
       "body": [
         "Controller: Instal Berrozpe S.L.",
         "Tax ID: B55326813.",
-        "Legal and tax address: Antiga 68 bajos de Blanes. Public reference address: Carrer de l'Antiga, 68, 17300 Blanes, Girona, Spain.",
+        "Legal and tax address: Antiga, 68, ground floor, Blanes. Public address: Carrer de l'Antiga, 68, 17300 Blanes, Girona, Spain.",
         "Contact and privacy email: david@instalberrozpe.com."
       ]
     },
     {
       "heading": "Purpose and legal basis",
       "body": [
-        "Data is used to handle enquiries received by form, email, phone or WhatsApp, to answer questions and to manage the contact requested by the user.",
-        "The legal basis is the user's consent when sending an enquiry and Instal Berrozpe's legitimate interest in answering requests related to its professional activity.",
-        "Data will not be used for purposes other than those described here and will not be sold to third parties."
+        "Details you provide (name, email, optional phone number, service and message) are used to answer enquiries and handle quote requests.",
+        "When you request a quote or information about a potential service, the legal basis is taking pre-contractual steps at your request (GDPR Article 6(1)(b)). For general enquiries, the basis is Instal Berrozpe S.L.'s legitimate interest in responding to communications (Article 6(1)(f)). You do not have to accept this policy to submit the form.",
+        "The data is not used for advertising and is not sold to third parties."
       ]
     },
     {
-      "heading": "Retention and recipients",
+      "heading": "Service providers, recipients and transfers",
       "body": [
-        "Data will be kept for as long as necessary to handle the enquiry and for any additional period required by applicable law.",
-        "As a general rule, data will not be disclosed to third parties unless there is a legal obligation or it is necessary for the technical operation of the service."
+        "The website and the function that processes the form are hosted by Vercel, Inc. Resend, Inc. delivers the message as a transactional email service; it is then received in the company mailbox managed with Google Workspace. These providers process data for the stated functions.",
+        "Resend states that email data and logs are stored in the United States and retained for 30 days on its Free plan. Vercel may process data in the United States and other locations where it and its subprocessors operate. Google Workspace processes email according to the organisation's configuration.",
+        "International transfers, where they occur, must be covered by the data protection mechanisms and agreements in force with each provider, including Standard Contractual Clauses where applicable. The company should maintain those agreements and review each provider's subprocessor list."
       ]
     },
     {
-      "heading": "Your rights",
+      "heading": "Retention",
       "body": [
-        "You may request access, rectification, deletion, objection, restriction of processing and data portability where applicable.",
-        "To exercise these rights, write to david@instalberrozpe.com and explain your request together with the information needed to identify you."
+        "Enquiries are kept while being handled and afterwards for the periods needed to meet legal or contractual responsibilities. Messages received in Google Workspace are retained under the account rules and applicable obligations. Resend retains email data and logs for 30 days on its Free plan."
+      ]
+    },
+    {
+      "heading": "Your rights and complaints",
+      "body": [
+        "Where applicable, you may request access, rectification, erasure, objection, restriction of processing and data portability by writing to david@instalberrozpe.com.",
+        "You may also lodge a complaint with the Spanish Data Protection Agency (AEPD) at https://www.aepd.es/."
       ]
     }
   ],
-  "pendingLegalReview": false,
-  "pendingReviewNote": ""
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Before publication, confirm the active Vercel, Resend and Google Workspace data-processing agreements, Workspace retention settings and current subprocessor lists."
 }

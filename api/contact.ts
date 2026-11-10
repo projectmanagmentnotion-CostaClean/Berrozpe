@@ -24,7 +24,6 @@ type FormValues = {
   phone: string;
   service: string;
   message: string;
-  privacy: string;
   website: string;
   formStartedAt: string;
 };
@@ -101,7 +100,6 @@ function readValues(data: FormData): FormValues {
     phone: safeText(data.get('phone'), 40),
     service: safeText(data.get('service'), 80),
     message: safeText(data.get('message'), 3000),
-    privacy: safeText(data.get('privacy'), 10),
     website: safeText(data.get('website'), 200),
     formStartedAt: safeText(data.get('form_started_at'), 20),
   };
@@ -115,7 +113,6 @@ function validate(values: FormValues, now: number): Record<string, string> {
   if (values.phone && !PHONE_PATTERN.test(values.phone)) errors.phone = 'Phone is invalid.';
   if (!ALLOWED_SERVICES.has(values.service)) errors.service = 'Service is required.';
   if (!values.message) errors.message = 'Message is required.';
-  if (!['1', 'on', 'true'].includes(values.privacy)) errors.privacy = 'Privacy consent is required.';
   if (values.website) errors.website = 'Validation failed.';
   if (values.formStartedAt) {
     const startedAt = Number(values.formStartedAt);

@@ -27,9 +27,6 @@
       "placeholder": "Briefly explain what you need",
       "rows": 6
     },
-    "privacy": {
-      "label": "I have read and accept the privacy policy."
-    },
     "honeypot": {
       "label": "Do not fill in this field"
     }
@@ -48,14 +45,11 @@
       "label": "Alarms and cameras"
     }
   ],
-  "privacyConsent": {
-    "prefix": "You must accept the",
-    "linkLabel": "privacy policy",
-    "suffix": "before sending the form."
-  },
+  "privacyNoticeLinkLabel": "Read the full privacy policy.",
   "legalSummary": [
-    "Your data will be used to answer your enquiry by form, email, phone or WhatsApp.",
-    "The data controller is Instal Berrozpe S.L. and you can read more in the privacy policy."
+    "Controller: Instal Berrozpe S.L. We will use the details you provide to answer your enquiry and, if requested, prepare a quote. The legal basis is taking pre-contractual steps you request or our legitimate interest in answering general enquiries.",
+    "The form is hosted and processed by Vercel, Resend sends the message, and Google Workspace receives it in the company mailbox. Some providers may process data outside the EEA; the full policy explains the applicable safeguards.",
+    "We will keep your enquiry while handling it and afterwards for applicable legal periods. Resend keeps email and log data for 30 days on its Free plan. You may exercise your rights and lodge a complaint with the Spanish Data Protection Agency (AEPD)."
   ],
   "submitLabel": "Send enquiry",
   "sendingLabel": "Sending...",
@@ -68,7 +62,6 @@
     "phoneInvalid": "Enter a valid phone number or leave the field empty.",
     "serviceRequired": "Select a service.",
     "messageRequired": "Message is required.",
-    "privacyRequired": "You must accept the privacy policy.",
     "honeypotFilled": "The submission could not be validated.",
     "genericError": "The form could not be processed."
   },

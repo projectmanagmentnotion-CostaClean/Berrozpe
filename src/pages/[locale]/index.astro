@@ -64,7 +64,7 @@ const heroHighlights = [
   canonicalPath={routes.home}
   alternates={getLanguageSwitcherLinksForPage('home')}
   ogImagePath={getOgImagePath('default')}
-  schema={getLocalBusinessSchema(locale, { path: routes.home, includeAggregateRating: true })}
+  schema={getLocalBusinessSchema(locale, { path: routes.home })}
 >
   <HeroSection locale={locale} section={home.hero} highlights={heroHighlights} />
   <ServicesPreview locale={locale} section={home.servicesOverview} services={services} />

@@ -27,9 +27,6 @@
       "placeholder": "Explica brevemente que necesitas",
       "rows": 6
     },
-    "privacy": {
-      "label": "He leido y acepto la politica de privacidad."
-    },
     "honeypot": {
       "label": "No rellenar este campo"
     }
@@ -48,14 +45,11 @@
       "label": "Alarmas y camaras"
     }
   ],
-  "privacyConsent": {
-    "prefix": "Debes aceptar la",
-    "linkLabel": "politica de privacidad",
-    "suffix": "para poder enviar el formulario."
-  },
+  "privacyNoticeLinkLabel": "Lee la política de privacidad completa.",
   "legalSummary": [
-    "Tus datos se utilizaran para responder tu solicitud por formulario, email, telefono o WhatsApp.",
-    "El responsable del tratamiento es Instal Berrozpe S.L. y puedes ampliar informacion en la politica de privacidad."
+    "Responsable: Instal Berrozpe S.L. Usaremos los datos que incluyas para responder a tu consulta y, si lo solicitas, preparar un presupuesto. La base jurídica será la gestión de medidas precontractuales que solicites o nuestro interés legítimo en responder consultas generales.",
+    "El formulario se aloja y procesa en Vercel, Resend envía el mensaje y Google Workspace lo recibe en el correo corporativo. Algunos proveedores pueden tratar datos fuera del Espacio Económico Europeo; la política completa explica las garantías aplicables.",
+    "Conservaremos la consulta mientras la gestionamos y después durante los plazos legales aplicables. Resend conserva emails y registros durante 30 días en su plan gratuito. Puedes ejercer tus derechos y reclamar ante la AEPD."
   ],
   "submitLabel": "Enviar consulta",
   "sendingLabel": "Enviando...",
@@ -68,7 +62,6 @@
     "phoneInvalid": "Introduce un telefono valido o deja el campo vacio.",
     "serviceRequired": "Selecciona un servicio.",
     "messageRequired": "El mensaje es obligatorio.",
-    "privacyRequired": "Debes aceptar la politica de privacidad.",
     "honeypotFilled": "No se ha podido validar el envio.",
     "genericError": "No se ha podido procesar el formulario."
   },

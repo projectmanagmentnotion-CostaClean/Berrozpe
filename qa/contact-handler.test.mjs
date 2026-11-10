@@ -10,7 +10,6 @@ const validFields = {
   phone: '676 04 33 89',
   service: 'electricidad-y-domotica',
   message: 'Test enquiry',
-  privacy: '1',
   website: '',
   form_started_at: String(Date.now() - 5000),
 };

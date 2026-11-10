@@ -1,42 +1,35 @@
 {
   "slug": "politica-de-cookies",
   "locale": "ca",
-  "title": "Politica de cookies",
-  "seoTitle": "Politica de cookies | Instal Berrozpe",
+  "title": "Política de galetes",
+  "seoTitle": "Política de galetes | Instal Berrozpe",
   "seoDescription": "Politica de cookies d'Instal Berrozpe i funcionament del consentiment multilingue de la web.",
-  "updatedAtLabel": "Ultima actualitzacio",
-  "updatedAtValue": "2026-07-10",
-  "intro": "Aquest web utilitza nomes les cookies necessaries per al seu funcionament i un sistema de consentiment per a categories opcionals, actualment no actives per defecte.",
+  "updatedAtLabel": "Última actualització",
+  "updatedAtValue": "2026-11-09",
+  "intro": "Aquest lloc utilitza emmagatzematge tècnic per recordar la teva elecció de galetes. No activa eines d'anàlisi ni publicitat.",
   "sections": [
     {
-      "heading": "Cookies necessaries",
+      "heading": "Emmagatzematge de preferències",
       "body": [
-        "Les cookies necessaries permeten funcions tecniques basiques, com recordar la preferencia de consentiment i garantir el funcionament del lloc.",
-        "Aquestes cookies poden mantenir-se actives sense consentiment previ perque son necessaries per prestar el servei sollicitat per la persona usuaria."
+        "El codi del lloc desa l'elecció mitjançant la clau localStorage berrozpe-cookie-consent i la galeta berrozpe-cookie-consent-cookie. La galeta dura 180 dies; localStorage es conserva fins que la persona usuària l'esborra.",
+        "Aquesta preferència tècnica és necessària per recordar si s'han acceptat o rebutjat categories opcionals."
       ]
     },
     {
-      "heading": "Categories opcionals i consentiment",
+      "heading": "Acceptar, rebutjar i configurar",
       "body": [
-        "El web esta preparat per a categories opcionals com preferencies, analitica o marketing, pero cap s'activa per defecte ni es carrega abans del consentiment corresponent.",
-        "Si en el futur s'incorporen eines opcionals, nomes s'executaran despres de l'acceptacio expressa de la categoria corresponent."
+        "El bàner permet acceptar totes les categories opcionals, rebutjar-les o obrir la configuració. Les opcions d'acceptar i rebutjar es mostren al mateix nivell i amb una visibilitat equivalent.",
+        "Les categories de preferències, analítica i màrqueting estan preparades, però no hi ha eines confirmades actives. El lloc no les desa com a actives per defecte."
       ]
     },
     {
-      "heading": "Gestio de preferencies",
+      "heading": "Google Maps i serveis externs",
       "body": [
-        "La persona usuaria pot acceptar, rebutjar o configurar les cookies des del banner inicial.",
-        "Les preferencies es poden reobrir en qualsevol moment des de l'enllac permanent del peu de pagina."
-      ]
-    },
-    {
-      "heading": "Google Maps i tercers",
-      "body": [
-        "El web no carrega un iframe viu de Google Maps per defecte.",
-        "Els blocs d'ubicacio funcionen mitjancant adreca textual i enllac extern, evitant carregues innecessaries de tercers abans del consentiment."
+        "La persona usuària pot reobrir les preferències des de l'enllaç permanent del peu de pàgina.",
+        "El lloc no carrega cap mapa incrustat ni fa sol·licituds a Google Maps en obrir la pàgina. Mostra l'adreça i un enllaç; Google Maps només s'obre si la persona usuària prem aquest enllaç."
       ]
     }
   ],
-  "pendingLegalReview": false,
-  "pendingReviewNote": ""
+  "pendingLegalReview": true,
+  "pendingReviewNote": "En un origen net ja s'han comprovat el bàner, la configuració i la persistència de l'elecció; falta revisar la captura completa de sol·licituds externes abans de publicar."
 }

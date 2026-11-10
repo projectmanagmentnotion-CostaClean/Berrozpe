@@ -117,12 +117,8 @@ const serviceOptions = [
     />
 
     <PrivacyConsent
-      id={`contact-privacy-${locale}`}
-      name="privacy"
-      label={content.fields.privacy.label}
-      prefix={content.privacyConsent.prefix}
-      linkLabel={content.privacyConsent.linkLabel}
-      suffix={content.privacyConsent.suffix}
+      summary={content.legalSummary}
+      linkLabel={content.privacyNoticeLinkLabel}
       href={privacyHref}
     />
 

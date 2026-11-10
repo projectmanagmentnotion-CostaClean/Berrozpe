@@ -159,8 +159,8 @@ const whatsAppHref = buildWhatsAppUrl(locale);
   schema={kind === 'home'
     ? undefined
     : kind === 'contact'
-      ? getLocalBusinessSchema(locale, { path: canonicalPath, includeAggregateRating: true })
-      : getLocalBusinessSchema(locale, { path: canonicalPath, includeAggregateRating: false })}
+      ? getLocalBusinessSchema(locale, { path: canonicalPath })
+      : getLocalBusinessSchema(locale, { path: canonicalPath })}
 >
   {kind === 'services-index' && (
     <section class="border-t border-[var(--color-border)] py-16 sm:py-20 lg:py-28" data-animate="reveal">

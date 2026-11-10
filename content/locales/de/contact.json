@@ -27,9 +27,6 @@
       "placeholder": "Beschreiben Sie kurz, was Sie benoetigen",
       "rows": 6
     },
-    "privacy": {
-      "label": "Ich habe die Datenschutzerklaerung gelesen und akzeptiere sie."
-    },
     "honeypot": {
       "label": "Dieses Feld nicht ausfuellen"
     }
@@ -48,14 +45,11 @@
       "label": "Alarmanlagen und Kameras"
     }
   ],
-  "privacyConsent": {
-    "prefix": "Sie muessen die",
-    "linkLabel": "Datenschutzerklaerung",
-    "suffix": "akzeptieren, bevor das Formular gesendet werden kann."
-  },
+  "privacyNoticeLinkLabel": "Die vollständige Datenschutzerklärung lesen.",
   "legalSummary": [
-    "Ihre Daten werden verwendet, um Ihre Anfrage per Formular, E-Mail, Telefon oder WhatsApp zu beantworten.",
-    "Verantwortlich fuer die Verarbeitung ist Instal Berrozpe S.L.; weitere Informationen finden Sie in der Datenschutzerklaerung."
+    "Verantwortlicher: Instal Berrozpe S.L. Wir verwenden Ihre Angaben, um Ihre Anfrage zu beantworten und auf Wunsch ein Angebot vorzubereiten. Rechtsgrundlage sind vorvertragliche Maßnahmen auf Ihre Anfrage oder unser berechtigtes Interesse an der Beantwortung allgemeiner Anfragen.",
+    "Das Formular wird bei Vercel gehostet und verarbeitet, Resend versendet die Nachricht und Google Workspace empfängt sie im Firmenpostfach. Einige Anbieter können Daten außerhalb des EWR verarbeiten; die vollständige Datenschutzerklärung erläutert die geltenden Garantien.",
+    "Wir speichern Ihre Anfrage während der Bearbeitung und danach gemäß den geltenden gesetzlichen Fristen. Resend speichert E-Mails und Protokolldaten im kostenlosen Tarif 30 Tage. Sie können Ihre Rechte ausüben und sich bei der spanischen Datenschutzbehörde AEPD beschweren."
   ],
   "submitLabel": "Anfrage senden",
   "sendingLabel": "Wird gesendet...",
@@ -68,7 +62,6 @@
     "phoneInvalid": "Bitte geben Sie eine gueltige Telefonnummer ein oder lassen Sie das Feld leer.",
     "serviceRequired": "Bitte waehlen Sie eine Leistung aus.",
     "messageRequired": "Die Nachricht ist erforderlich.",
-    "privacyRequired": "Sie muessen die Datenschutzerklaerung akzeptieren.",
     "honeypotFilled": "Die Uebermittlung konnte nicht validiert werden.",
     "genericError": "Das Formular konnte nicht verarbeitet werden."
   },

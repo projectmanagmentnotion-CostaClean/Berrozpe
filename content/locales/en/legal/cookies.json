@@ -5,38 +5,31 @@
   "seoTitle": "Cookie policy | Instal Berrozpe",
   "seoDescription": "Cookie policy of Instal Berrozpe and operation of the website's multilingual consent system.",
   "updatedAtLabel": "Last updated",
-  "updatedAtValue": "2026-07-10",
-  "intro": "This website uses only the cookies required for its operation and a consent system for optional categories, which are currently inactive by default.",
+  "updatedAtValue": "2026-11-09",
+  "intro": "This website uses technical storage to remember your cookie choice. It does not activate analytics or advertising tools.",
   "sections": [
     {
-      "heading": "Necessary cookies",
+      "heading": "Preference storage",
       "body": [
-        "Necessary cookies enable basic technical functions, such as remembering consent preferences and keeping the website working properly.",
-        "These cookies may remain active without prior consent because they are required to provide the service requested by the user."
+        "The site code saves the choice in localStorage under berrozpe-cookie-consent and in the berrozpe-cookie-consent-cookie cookie. The cookie lasts 180 days; localStorage remains until the user clears it.",
+        "This technical preference is needed to remember whether optional categories were accepted or rejected."
       ]
     },
     {
-      "heading": "Optional categories and consent",
+      "heading": "Accept, reject and configure",
       "body": [
-        "The website is prepared for optional categories such as preferences, analytics or marketing, but none of them are enabled by default or loaded before the relevant consent is given.",
-        "If optional tools are added in the future, they will only run after explicit acceptance of the corresponding category."
+        "The banner lets users accept all optional categories, reject them or open the settings. Accept and reject are presented at the same level with equivalent visibility.",
+        "Preferences, analytics and marketing categories are prepared, but no confirmed tools are active in them. The site does not store them as active by default."
       ]
     },
     {
-      "heading": "Managing preferences",
+      "heading": "Google Maps and external services",
       "body": [
-        "Users can accept, reject or configure cookies from the initial banner.",
-        "Preferences can be reopened at any time from the permanent link in the footer."
-      ]
-    },
-    {
-      "heading": "Google Maps and third parties",
-      "body": [
-        "The website does not load a live Google Maps iframe by default.",
-        "Location blocks work through text-based address information and an external link, avoiding unnecessary third-party loading before consent."
+        "Users can reopen preferences at any time from the permanent link in the footer.",
+        "The site does not load an embedded map or make Google Maps requests when a page opens. It shows the address and a link; Google Maps opens only if the user selects that link."
       ]
     }
   ],
-  "pendingLegalReview": false,
-  "pendingReviewNote": ""
+  "pendingLegalReview": true,
+  "pendingReviewNote": "The banner, preferences and saved choice were checked on a clean origin; a full capture of external requests still needs review before publication."
 }

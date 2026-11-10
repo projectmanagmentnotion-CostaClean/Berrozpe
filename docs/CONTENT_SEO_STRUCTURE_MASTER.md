@@ -270,7 +270,7 @@ Paginas estaticas:
 
 - El layout ya expone SEO comun y datos del sitio desde `src/lib/content.ts`
 - `LocalBusiness` implementado desde `getLocalBusinessSchema(...)`
-- `aggregateRating` visible y permitido solo en home y contacto
+- Production anterior conserva `aggregateRating` en LocalBusiness; la rama aislada de revisión lo elimina porque Google no admite reseñas auto-servidas de negocios locales para resultados enriquecidos
 - nombre legal soportado en schema:
   - `Instal Berrozpe S.L.`
 - `taxID` soportado en schema:
@@ -401,7 +401,7 @@ Campos activos:
 - telefono
 - servicio solicitado
 - mensaje
-- privacidad obligatoria
+- aviso informativo con enlace a la política de privacidad (no se exige aceptar la política para enviar una consulta)
 - honeypot
 
 Validacion:
@@ -421,10 +421,8 @@ Controles implementados:
 - API key y remitente se configuran solo como variables de entorno Vercel
 - honeypot, validación de origen, campo de tiempo mínimo y limitación por instancia
 
-Pendiente antes de produccion:
-
-- envío SiteGround confirmado históricamente el `2026-07-10`
-- nuevo envío en Vercel pendiente de credenciales Resend y verificación de dominio remitente
+- Estado actualizado al `2026-11-09`: envío real desde Production a `info@instalberrozpe.com` confirmado tras rotar la clave Resend; SPF, DKIM y DMARC pasaron en el mensaje de prueba.
+- No se ha comprobado la configuración contractual ni la retención real de datos de los proveedores.
 
 ## T. Migración a Vercel (2026-11-02)
 
@@ -680,8 +678,8 @@ Reduced motion:
   - marketing
 - No hay scripts opcionales confirmados cargandose antes del consentimiento
 - Enlace permanente para reabrir preferencias desde el footer
-- Google Maps sigue integrado como acceso externo verificado:
-  - sin iframe vivo en HTML inicial
+- Google Maps en la rama aislada de revisión se ofrece como enlace externo:
+  - sin iframe ni solicitud automática a terceros en HTML inicial de esa rama
   - sin carga automatica de terceros
   - con fallback visual en contacto
   - con enlace compacto en home
@@ -773,6 +771,29 @@ Reduced motion:
   - el detalle de servicio elimina resumen repetido bajo hero
 - Validacion:
   - `npm run build` correcto
+
+## U. Estado de indexación y revisión legal (2026-11-09)
+
+- Production Vercel sirve `robots.txt`, `sitemap-index.xml` y `sitemap-0.xml` con HTTP `200`; `robots.txt` permite el rastreo e incluye el sitemap. El sitemap enumera `44` URLs absolutas HTTPS sin duplicados.
+- Las `44/44` URLs del sitemap se consultaron públicamente el `2026-11-09`; todas respondieron HTTP `200`, con `lang` y canonical iguales a la URL, y sin `noindex`. No se detectaron URLs fuera del host canónico.
+- Las páginas ES, CA, EN y DE de inicio y un servicio comercial devolvieron canonical y `hreflang` recíprocos para los cuatro idiomas y `x-default`.
+- `www.instalberrozpe.com` respondió `308` hacia el host canónico y HTTP hacia HTTPS; rutas legacy representativas (`/`, `/contacto/`, `/electricidad-y-domotica/`) resolvieron al contenido canónico esperado.
+- Search Console se inspeccionó el `2026-11-09` desde la cuenta de David (`david@instalberrozpe.com`); la propiedad de dominio `instalberrozpe.com` quedó verificada automáticamente por Google mediante el proveedor de nombres de dominio. No se modificó DNS.
+- Los sitemaps existentes `sitemap-0.xml` y `sitemap-index.xml` figuran como `Correcto`; ambos descubren 44 páginas. No se enviaron duplicados.
+- Informe actualizado el `2026-11-06`: 43 páginas indexadas y 30 no indexadas. Los motivos incluyen 18 redirecciones (esperadas), 4 exclusiones noindex históricas, 4 URLs 404, 2 rastreadas sin indexar, 1 URL alternativa con canonical correcto y 1 descubierta sin rastrear (`/ca/politica-de-cookies/`). La mayoría de los ejemplos de exclusión/404 parecen históricos; en Production `/home` y `/contacte` siguen dando 404.
+- Inspección individual de Search Console: `/es/`, `/es/servicios/electricidad-y-domotica/` y `/es/contacto/` constan indexadas y servidas por HTTPS. No se solicitaron reindexaciones.
+- El Perfil de Empresa público de Google muestra `https://instalberrozpe.com/` como sitio web; coincide con el dominio canónico y redirige a la versión española.
+- La revisión aislada de contenido está basada en el commit de Production `1b5f0bcbbe052d8b1a7e6d7f0a5fa2e016a18340`; no se han cambiado Production ni DNS.
+- Se corrigió la carga previa del iframe de Google Maps en la rama de revisión; se cambió por un enlace externo. Production mantiene el iframe hasta aprobar y desplegar esa revisión.
+- El JSON-LD de Production contiene `LocalBusiness` en 44 páginas y JSON válido, pero incluye `AggregateRating` propio en inicio/contacto. La rama de revisión lo omite de `LocalBusiness`; Google no muestra resultados enriquecidos de reseñas auto-servidas para negocios locales. No se añade `Service` sin una necesidad o datos estructurados concretos.
+- Se añadió a las cuatro versiones del aviso legal la inscripción inicial de Instal Berrozpe S.L. publicada en el BORME de 2018: Registro Mercantil de Girona, tomo 3212, folio 133, sección 8, hoja GI-64419, inscripción 1.ª. David debe confirmar si existen modificaciones registrales posteriores.
+- La casilla obligatoria de privacidad del formulario se reemplazó en la rama por información básica y enlace a la política; la función serverless y Resend no requieren ese campo.
+- Prueba de consentimiento en rama local, con origen nuevo y viewport de `390 × 844`: el banner aparece sin elección previa; aceptar/rechazar usan botones equivalentes; rechazar persiste tras recargar; aceptar desde preferencias también se guarda. No se probó selección parcial, retirada de aceptación previa ni escritorio.
+- El preview local en `4324` y `4325` respondió con timeout desde los procesos y Chrome; no se verificó HTTP para las 44 rutas ni se obtuvo captura de red. El HTML no declara iframe de Maps ni scripts opcionales; esto no sustituye una captura de red real.
+- La prueba móvil detectó que el panel de preferencias se salía del viewport; se añadió desplazamiento vertical y altura máxima al modal. La acción de aceptar se completó desde el panel en el viewport móvil local.
+- La política legal está pendiente de confirmación de David sobre posibles modificaciones registrales posteriores, acuerdos vigentes de tratamiento, retención de Workspace y lista de subencargados; se recomienda revisión legal profesional antes de publicar.
+- En la revisión actual se añadieron redirects exactos para `/home` → `/en/` y `/contacte` → `/ca/contacte/`, en `content/shared/redirects.json` y `vercel.json`. Son cambios locales sin publicar: 29 redirects de contenido y 31 reglas en Vercel, que conservan además `/servicios/` y `/sitemap_index.xml` como compatibilidad.
+- Comprobación documental del 2026-11-10: el BORME oficial de Girona de 2025 publica la pérdida del carácter unipersonal de Instal Berrozpe S.L. (inscripción 3.ª, inscrita el 13/01/2025). El aviso legal solo cita la inscripción inicial de 2018 y solicita confirmar titularidad, administración y domicilio actuales. Fuentes oficiales: https://www.boe.es/diario_borme/txt.php?id=BORME-A-2025-11-17&lang=es y https://www.boe.es/diario_borme/txt.php?id=BORME-A-2018-142-17.
   - 45 paginas generadas
   - `sitemap-index.xml`, `sitemap-0.xml`, `robots.txt`, `.htaccess` y `form-handler.php` presentes en `dist/`
   - sin script de `lint` en `package.json`
