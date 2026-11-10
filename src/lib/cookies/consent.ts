@@ -1,7 +1,7 @@
 export const CONSENT_EVENT = 'berrozpe:cookie-consent-updated';
 export const OPEN_PREFERENCES_EVENT = 'berrozpe:open-cookie-preferences';
 
-export const CONSENT_CATEGORIES = ['necessary', 'preferences', 'analytics', 'marketing'] as const;
+export const CONSENT_CATEGORIES = ['necessary', 'preferences', 'googleMaps', 'analytics', 'marketing'] as const;
 
 export type ConsentCategory = (typeof CONSENT_CATEGORIES)[number];
 
@@ -39,6 +39,7 @@ export function getDefaultConsentState(version: string): ConsentState {
     categories: {
       necessary: true,
       preferences: false,
+      googleMaps: false,
       analytics: false,
       marketing: false,
     },
@@ -67,6 +68,7 @@ function parseConsentValue(value: string | null): ConsentState | null {
       categories: {
         necessary: true,
         preferences: Boolean(parsed.categories?.preferences),
+        googleMaps: Boolean(parsed.categories?.googleMaps),
         analytics: Boolean(parsed.categories?.analytics),
         marketing: Boolean(parsed.categories?.marketing),
       },
@@ -142,6 +144,7 @@ export function buildConsentState(
     categories: {
       necessary: true,
       preferences: Boolean(categories.preferences),
+      googleMaps: Boolean(categories.googleMaps),
       analytics: Boolean(categories.analytics),
       marketing: Boolean(categories.marketing),
     },

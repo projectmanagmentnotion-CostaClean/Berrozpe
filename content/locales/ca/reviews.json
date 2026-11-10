@@ -3,11 +3,12 @@
   "title": "Valoracio visible a Google",
   "intro": "Perfil public d'Instal Berrozpe a Google Business.",
   "ratingLabel": "4,9/5 a Google",
-  "reviewCountLabel": "67 ressenyes",
+  "reviewCountLabel": "68 ressenyes",
   "leaveReviewTitle": "Ja has treballat amb Instal Berrozpe?",
   "leaveReviewText": "La teva ressenya ajuda altres clients.",
   "leaveReviewButton": "Deixar ressenya a Google",
   "viewProfileButton": "Veure perfil a Google",
-  "noReviewsFallback": "",
+  "noReviewsFallback": "Les ressenyes destacades apareixeran aquí quan incorporem ressenyes reals i verificades del perfil de Google.",
+  "reviewSourceLabel": "Ressenya de Google",
   "trustNote": "Valoracio visible a Google Business."
 }

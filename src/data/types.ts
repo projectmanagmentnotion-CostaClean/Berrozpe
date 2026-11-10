@@ -58,6 +58,7 @@ export interface SharedContact {
     url: string;
   }>;
   googleMapsUrl?: string;
+  googleMapsEmbedUrl?: string;
   serviceArea?: string[];
   pendingConfirmation: string[];
 }
@@ -359,6 +360,7 @@ export interface MapContent {
   openMapLabel: string;
   mapConsentTitle: string;
   mapConsentText: string;
+  loadMapLabel: string;
   privacyNotice: string;
   fallbackText: string;
   footerLinkLabel: string;
@@ -380,6 +382,7 @@ export interface SharedReviews {
     ratingValue: number;
     reviewBody: string;
     datePublished?: string;
+    sourceUrl?: string;
   }>;
   pendingConfirmation: string[];
 }
@@ -395,6 +398,7 @@ export interface ReviewsContent {
   leaveReviewButton: string;
   viewProfileButton: string;
   noReviewsFallback: string;
+  reviewSourceLabel: string;
   trustNote: string;
 }
 

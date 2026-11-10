@@ -1,16 +1,44 @@
 {
   "googleBusinessName": "INSTAL BERROZPE",
-  "googleBusinessUrl": null,
+  "googleBusinessUrl": "https://www.google.com/maps?cid=12543893962034577576",
   "reviewRequestUrl": "https://g.page/r/CagAPRsZ3RSuEBM/review",
   "aggregateRating": {
     "ratingValue": 4.9,
-    "reviewCount": 67,
+    "reviewCount": 68,
     "bestRating": 5,
     "source": "Google Business Profile"
   },
-  "reviews": [],
-  "pendingConfirmation": [
-    "Confirmar URL publica directa de la ficha de Google Business si se quiere enlazar tambien al perfil.",
-    "Anadir textos de resenas reales solo si se copian desde resenas publicas confirmadas o si el cliente las autoriza."
-  ]
+  "reviews": [
+    {
+      "author": "José Delgado",
+      "ratingValue": 5,
+      "reviewBody": "Muy buen servicio",
+      "sourceUrl": "https://www.google.com/maps?cid=12543893962034577576"
+    },
+    {
+      "author": "Arnla Khatib",
+      "ratingValue": 5,
+      "reviewBody": "excellent and timely",
+      "sourceUrl": "https://www.google.com/maps?cid=12543893962034577576"
+    },
+    {
+      "author": "Fran Blanco",
+      "ratingValue": 5,
+      "reviewBody": "trato rápido y cercano",
+      "sourceUrl": "https://www.google.com/maps?cid=12543893962034577576"
+    },
+    {
+      "author": "Cris O",
+      "ratingValue": 5,
+      "reviewBody": "puntuales y sin sorpresas",
+      "sourceUrl": "https://www.google.com/maps?cid=12543893962034577576"
+    },
+    {
+      "author": "Juan Salvador Silva",
+      "ratingValue": 5,
+      "reviewBody": "Profesionales muy recomendables",
+      "sourceUrl": "https://www.google.com/maps?cid=12543893962034577576"
+    }
+  ],
+  "pendingConfirmation": []
 }

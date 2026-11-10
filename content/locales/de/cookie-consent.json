@@ -1,7 +1,7 @@
 {
   "locale": "de",
   "storageKey": "berrozpe-cookie-consent",
-  "version": "2026-07",
+  "version": "2026-11-google-maps",
   "banner": {
     "title": "Cookie-Einstellungen",
     "body": "Wir verwenden notwendige Cookies für die grundlegende Funktion der Website. Optionale Kategorien werden nur mit deiner Einwilligung aktiviert.",
@@ -35,6 +35,11 @@
       "title": "Präferenzen",
       "description": "Kategorie für nicht notwendige Komforteinstellungen. Derzeit sind in dieser Kategorie keine bestätigten Werkzeuge aktiv.",
       "pending": true
+    },
+    {
+      "key": "googleMaps",
+      "title": "Google Maps",
+      "description": "Ermöglicht eine Anfrage an die interaktive Google-Maps-Karte. Sie wird nur geladen, wenn du diese Option aktivierst oder „Google-Karte anzeigen“ auswählst."
     },
     {
       "key": "analytics",

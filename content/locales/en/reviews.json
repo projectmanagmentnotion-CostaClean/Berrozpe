@@ -3,11 +3,12 @@
   "title": "Visible rating on Google",
   "intro": "Public Instal Berrozpe profile on Google Business.",
   "ratingLabel": "4.9/5 on Google",
-  "reviewCountLabel": "67 reviews",
+  "reviewCountLabel": "68 reviews",
   "leaveReviewTitle": "Have you worked with Instal Berrozpe?",
   "leaveReviewText": "Your review helps other clients.",
   "leaveReviewButton": "Leave a Google review",
   "viewProfileButton": "View Google profile",
-  "noReviewsFallback": "",
+  "noReviewsFallback": "Featured reviews will appear here once we add real, verified reviews from the Google profile.",
+  "reviewSourceLabel": "Google review",
   "trustNote": "Rating visible on Google Business."
 }
