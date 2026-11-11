@@ -4,16 +4,17 @@
   "title": "Aviso legal",
   "seoTitle": "Aviso legal | Instal Berrozpe",
   "seoDescription": "Datos legales y de contacto de Instal Berrozpe S.L. para el uso informativo de instalberrozpe.com.",
-  "updatedAtLabel": "Ultima actualizacion",
-  "updatedAtValue": "2026-07-10",
-  "intro": "Este aviso legal regula el acceso y el uso informativo de la web instalberrozpe.com.",
+  "updatedAtLabel": "Última actualización",
+  "updatedAtValue": "2026-11-10",
+  "intro": "Este aviso legal regula el acceso y el uso informativo de instalberrozpe.com.",
   "sections": [
     {
       "heading": "Titular del sitio web",
       "body": [
         "El titular de esta web es Instal Berrozpe S.L., con CIF/NIF B55326813.",
-        "Domicilio legal y fiscal: Antiga 68 bajos de Blanes. Direccion publica de referencia: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
-        "Email de contacto y privacidad: david@instalberrozpe.com. Telefono fijo: 872 986 161. Movil y WhatsApp: 676 04 33 89.",
+        "Inscripción inicial publicada en el BORME: Registro Mercantil de Girona, tomo 3212, folio 133, sección 8, hoja GI-64419, inscripción 1.ª (17/07/2018).",
+        "Domicilio legal y fiscal: Antiga, 68, bajos, Blanes. Dirección pública: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
+        "Correo de contacto y privacidad: david@instalberrozpe.com. Teléfono fijo: 872 986 161. Móvil y WhatsApp: 676 04 33 89.",
         "Dominio web: instalberrozpe.com."
       ]
     },
@@ -21,19 +22,19 @@
       "heading": "Uso del sitio web",
       "body": [
         "La web tiene una finalidad informativa y de contacto sobre los servicios de Instal Berrozpe.",
-        "La persona usuaria se compromete a utilizar la web y sus formularios de forma licita, responsable y sin causar danos al sitio ni a terceros.",
+        "La persona usuaria se compromete a utilizar la web y sus formularios de forma lícita y responsable, sin causar daños al sitio ni a terceros.",
         "Los enlaces externos, si existen, se ofrecen solo como referencia. Instal Berrozpe no controla de forma permanente el contenido de sitios de terceros."
       ]
     },
     {
       "heading": "Propiedad intelectual y responsabilidad",
       "body": [
-        "Los textos, imagenes, logotipos, diseno y demas contenidos de la web estan protegidos por la normativa aplicable y no pueden reutilizarse sin autorizacion cuando corresponda.",
-        "Instal Berrozpe puede actualizar el contenido de la web cuando lo considere necesario para mantenerlo correcto y util.",
-        "No se garantiza la disponibilidad ininterrumpida del sitio, aunque se adoptaran medidas razonables para su correcto funcionamiento."
+        "Los textos, imágenes, logotipos, diseño y demás contenidos de la web están protegidos por la normativa aplicable y no pueden reutilizarse sin autorización cuando corresponda.",
+        "Instal Berrozpe puede actualizar el contenido de la web cuando lo considere necesario para mantenerlo correcto y útil.",
+        "No se garantiza la disponibilidad ininterrumpida del sitio, aunque se adoptarán medidas razonables para su correcto funcionamiento."
       ]
     }
   ],
-  "pendingLegalReview": false,
-  "pendingReviewNote": ""
+  "pendingLegalReview": true,
+  "pendingReviewNote": "La inscripción mercantil citada es la inicial de 2018; no se afirma que describa la titularidad o administración actuales."
 }

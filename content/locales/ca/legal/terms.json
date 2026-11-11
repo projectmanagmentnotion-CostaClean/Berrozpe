@@ -3,31 +3,31 @@
   "locale": "ca",
   "title": "Termes i condicions",
   "seoTitle": "Termes i condicions | Instal Berrozpe",
-  "seoDescription": "Termes i condicions informatius d'Instal Berrozpe per a l'us del lloc i la peticio de pressupostos.",
-  "updatedAtLabel": "Ultima actualitzacio",
-  "updatedAtValue": "2026-07-10",
-  "intro": "Aquests termes regulen l'us informatiu del web i l'enviament de sollicituds de contacte o pressupost.",
+  "seoDescription": "Termes i condicions informatius d'Instal Berrozpe per a l'ús del lloc i la petició de pressupostos.",
+  "updatedAtLabel": "Última actualització",
+  "updatedAtValue": "2026-11-09",
+  "intro": "Aquests termes regulen l'ús informatiu del web i l'enviament de sol·licituds de contacte o pressupost.",
   "sections": [
     {
       "heading": "Finalitat del lloc",
       "body": [
-        "El web te caracter informatiu i serveix com a canal de contacte per coneixer els serveis d'Instal Berrozpe.",
-        "La informacio publicada no constitueix per si sola una oferta vinculant ni una contractacio automatica de serveis."
+        "El web té caràcter informatiu i serveix com a canal de contacte per conèixer els serveis d'Instal Berrozpe.",
+        "La informació publicada no constitueix per si sola una oferta vinculant ni una contractació automàtica de serveis."
       ]
     },
     {
-      "heading": "Sollicituds i pressupostos",
+      "heading": "Sol·licituds i pressupostos",
       "body": [
-        "Cada sollicitud, pressupost o treball s'ha de confirmar de manera individual entre Instal Berrozpe i la persona interessada.",
-        "Els terminis, les condicions tecniques, la disponibilitat i el preu es concretaran segons el tipus de feina sollicitada."
+        "Cada sol·licitud, pressupost o feina s'ha de confirmar individualment entre Instal Berrozpe i la persona interessada.",
+        "Els terminis, les condicions tècniques, la disponibilitat i el preu es concretaran segons el tipus de feina sol·licitada."
       ]
     },
     {
       "heading": "Responsabilitat i enllacos",
       "body": [
-        "Instal Berrozpe procurara que la informacio del web sigui clara i actualitzada, pero la pot modificar quan sigui necessari.",
-        "El web pot incloure enllacos externs de caracter informatiu. Instal Berrozpe no assumeix responsabilitat directa per continguts o serveis aliens al domini propi.",
-        "Qualsevol questio relacionada amb aquest web s'interpretara d'acord amb la normativa aplicable."
+        "Instal Berrozpe procurarà que la informació del web sigui clara i actualitzada, però la podrà modificar quan calgui.",
+        "El web pot incloure enllaços externs de caràcter informatiu. Instal Berrozpe no assumeix responsabilitat directa pels continguts o serveis aliens al seu domini.",
+        "Qualsevol qüestió relacionada amb aquest web s'interpretarà d'acord amb la normativa aplicable."
       ]
     }
   ],

@@ -23,6 +23,7 @@
 | `/lampisteria-y-climatizacion/` | `/es/servicios/lampisteria-y-climatizacion/` | Servicio ES antiguo. |
 | `/alarmas-y-camaras-2/` | `/es/servicios/alarmas-y-camaras/` | Normalización de slug raro. |
 | `/home/` | `/en/` | Home EN antigua. |
+| `/home` | `/en/` | Compatibilidad de la ruta histórica sin barra final. |
 | `/about-us/` | `/en/about-us/` | Página EN antigua sin prefijo. |
 | `/contact/` | `/en/contact/` | Página EN antigua sin prefijo. |
 | `/electricity-and-home-automation/` | `/en/services/electricity-and-home-automation/` | Servicio EN antiguo. |
@@ -31,11 +32,13 @@
 | `/inici/` | `/ca/` | Home CA antigua. |
 | `/sobre-nosaltres/` | `/ca/sobre-nosaltres/` | Página CA antigua sin prefijo. |
 | `/contacte/` | `/ca/contacte/` | Página CA antigua sin prefijo. |
+| `/contacte` | `/ca/contacte/` | Compatibilidad de la ruta histórica sin barra final. |
 | `/electricitat-i-domotica/` | `/ca/serveis/electricitat-i-domotica/` | Servicio CA antiguo. |
 | `/lampisteria-y-climatizacio/` | `/ca/serveis/lampisteria-i-climatitzacio/` | Servicio CA antiguo con slug normalizado. |
 | `/alarmes-i-cameres/` | `/ca/serveis/alarmes-i-cameres/` | Servicio CA antiguo. |
 
-## Implementación preparada
+## Implementación
 
 - Fuente de verdad editorial: [content/shared/redirects.json](/C:/Users/USUARIO/Documents/Berrozpe/content/shared/redirects.json)
-- Reglas de Apache para SiteGround: [public/.htaccess](/C:/Users/USUARIO/Documents/Berrozpe/public/.htaccess)
+- Reglas de Vercel: `vercel.json` (incluye las rutas antiguas con y sin barra final).
+- Reglas de Apache para hosting legado: `public/.htaccess`.

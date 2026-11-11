@@ -26,6 +26,8 @@
     { "from": "/terminos-y-condiciones-es/", "to": "/es/terminos-y-condiciones/", "notes": "Alias legal ES normalizado." },
     { "from": "/terminos-y-condiciones-en/", "to": "/en/terms-and-conditions/", "notes": "Alias legal EN normalizado." },
     { "from": "/terminos-y-condiciones-cat/", "to": "/ca/termes-i-condicions/", "notes": "Alias legal CA normalizado." },
-    { "from": "/mas-informacion-sobre-las-cookies/", "to": "/es/politica-de-cookies/", "notes": "La página auxiliar se integra en cookies ES." }
+    { "from": "/mas-informacion-sobre-las-cookies/", "to": "/es/politica-de-cookies/", "notes": "La página auxiliar se integra en cookies ES." },
+    { "from": "/home", "to": "/en/", "notes": "Compatibilidad de la ruta histórica sin barra final." },
+    { "from": "/contacte", "to": "/ca/contacte/", "notes": "Compatibilidad de la ruta histórica sin barra final." }
   ]
 }

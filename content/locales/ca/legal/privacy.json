@@ -1,45 +1,52 @@
 {
   "slug": "politica-de-privacitat",
   "locale": "ca",
-  "title": "Politica de privacitat",
-  "seoTitle": "Politica de privacitat | Instal Berrozpe",
+  "title": "Política de privacitat",
+  "seoTitle": "Política de privacitat | Instal Berrozpe",
   "seoDescription": "Politica de privacitat d'Instal Berrozpe S.L. per a sollicituds rebudes per formulari, email, telefon o WhatsApp.",
-  "updatedAtLabel": "Ultima actualitzacio",
-  "updatedAtValue": "2026-07-10",
-  "intro": "Aquesta politica explica com tracta Instal Berrozpe S.L. les dades personals rebudes a traves d'aquest web i dels seus canals de contacte.",
+  "updatedAtLabel": "Última actualització",
+  "updatedAtValue": "2026-11-10",
+  "intro": "Aquesta política explica com Instal Berrozpe S.L. tracta les dades personals rebudes a través del web i dels seus canals de contacte.",
   "sections": [
     {
       "heading": "Responsable del tractament",
       "body": [
         "Responsable: Instal Berrozpe S.L.",
         "CIF/NIF: B55326813.",
-        "Domicili legal i fiscal: Antiga 68 baixos de Blanes. Adreca publica de referencia: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
-        "Email de contacte i privacitat: david@instalberrozpe.com."
+        "Domicili legal i fiscal: Antiga, 68, baixos, Blanes. Adreça pública: Carrer de l'Antiga, 68, 17300 Blanes, Girona.",
+        "Correu de contacte i privacitat: david@instalberrozpe.com."
       ]
     },
     {
-      "heading": "Finalitat i base legal",
+      "heading": "Finalitat i base jurídica",
       "body": [
-        "Les dades s'utilitzen per atendre sollicituds rebudes per formulari, email, telefon o WhatsApp, respondre consultes i gestionar el contacte demanat per la persona usuaria.",
-        "La base legal es el consentiment de la persona usuaria en enviar la seva consulta i l'interes legitim d'Instal Berrozpe a respondre sollicituds relacionades amb la seva activitat professional.",
-        "No s'utilitzaran les dades per a finalitats diferents de les indicades ni es vendran a tercers."
+        "Les dades que facilitis (nom, correu electrònic, telèfon si l'inclous, servei i missatge) s'utilitzen per respondre consultes i gestionar sol·licituds de pressupost.",
+        "Quan demanes un pressupost o informació sobre un possible servei, la base jurídica és l'aplicació de mesures precontractuals a petició teva (article 6.1.b del RGPD). Per respondre consultes generals, la base és l'interès legítim d'Instal Berrozpe S.L. a atendre les comunicacions rebudes (article 6.1.f). No cal acceptar aquesta política per enviar el formulari.",
+        "Les dades no s'utilitzen per a publicitat ni es venen a tercers."
       ]
     },
     {
-      "heading": "Conservacio i destinataris",
+      "heading": "Proveïdors, destinataris i transferències",
       "body": [
-        "Les dades es conservaran durant el temps necessari per atendre la sollicitud i durant els terminis exigits per la normativa aplicable quan correspongui.",
-        "Amb caracter general, no es comunicaran dades a tercers excepte obligacio legal o quan sigui necessari per a la correcta gestio tecnica del servei."
+        "El web i la funció que processa el formulari estan allotjats a Vercel, Inc. Resend, Inc. lliura el missatge com a servei de correu transaccional; després es rep al correu corporatiu gestionat amb Google Workspace. Aquests proveïdors tracten dades per a les funcions indicades.",
+        "Resend informa que emmagatzema les dades del correu i els registres als Estats Units i que les conserva durant 30 dies mentre el compte està actiu. Vercel pot tractar dades als Estats Units i en altres ubicacions on operi amb els seus subencarregats. Google Workspace tracta el correu segons la configuració de l'organització.",
+        "Les transferències internacionals, quan es produeixin, han d'estar emparades pels mecanismes i acords de protecció de dades vigents amb cada proveïdor, incloses les clàusules contractuals tipus quan correspongui. L'empresa ha de mantenir aquests acords i revisar les llistes de subencarregats."
       ]
     },
     {
-      "heading": "Drets de les persones usuaries",
+      "heading": "Conservació",
       "body": [
-        "Pots sollicitar l'acces, la rectificacio, la supressio, l'oposicio, la limitacio del tractament i la portabilitat de les teves dades quan sigui aplicable.",
-        "Per exercir aquests drets, escriu a david@instalberrozpe.com indicant la teva sollicitud i les dades necessaries per identificar-te."
+        "Els missatges rebuts a Google Workspace es conserven fins que s’esborren manualment; actualment no hi ha cap regla de supressió automàtica configurada. Això no substitueix els terminis legals aplicables."
+      ]
+    },
+    {
+      "heading": "Drets i reclamacions",
+      "body": [
+        "Pots sol·licitar l'accés, la rectificació, la supressió, l'oposició, la limitació del tractament i la portabilitat quan correspongui, escrivint a david@instalberrozpe.com.",
+        "També pots presentar una reclamació davant l'Agència Espanyola de Protecció de Dades (AEPD) a https://www.aepd.es/."
       ]
     }
   ],
-  "pendingLegalReview": false,
-  "pendingReviewNote": ""
+  "pendingLegalReview": true,
+  "pendingReviewNote": "Verificar a la consola d’administració si s’han acceptat les condicions de tractament de Google Workspace i revisar els subencarregats abans de tancar la revisió."
 }

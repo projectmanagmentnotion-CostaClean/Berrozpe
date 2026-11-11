@@ -27,11 +27,11 @@
       "placeholder": "Explica brevemente que necesitas",
       "rows": 6
     },
-    "privacy": {
-      "label": "He leido y acepto la politica de privacidad."
-    },
     "honeypot": {
       "label": "No rellenar este campo"
+    },
+    "privacy": {
+      "label": "Confirmo que he leído la información de privacidad."
     }
   },
   "serviceOptions": [
@@ -48,14 +48,11 @@
       "label": "Alarmas y camaras"
     }
   ],
-  "privacyConsent": {
-    "prefix": "Debes aceptar la",
-    "linkLabel": "politica de privacidad",
-    "suffix": "para poder enviar el formulario."
-  },
+  "privacyNoticeLinkLabel": "Lee la política de privacidad completa.",
   "legalSummary": [
-    "Tus datos se utilizaran para responder tu solicitud por formulario, email, telefono o WhatsApp.",
-    "El responsable del tratamiento es Instal Berrozpe S.L. y puedes ampliar informacion en la politica de privacidad."
+    "Responsable: Instal Berrozpe S.L. Usaremos los datos que facilites para responder a tu consulta y, si lo solicitas, preparar un presupuesto. La base jurídica es la gestión de medidas precontractuales que solicites o el interés legítimo en responder consultas generales.",
+    "Vercel aloja la web y procesa el formulario; Resend entrega el mensaje y Google Workspace lo recibe en el correo corporativo. La política completa explica el tratamiento por estos proveedores y las posibles transferencias internacionales.",
+    "La consulta se conserva mientras se gestiona y después durante los plazos legales aplicables. En Workspace los mensajes se mantienen hasta su borrado manual; actualmente no hay una regla de borrado automático configurada. Resend informa de una retención de 30 días para datos de correo y registros mientras la cuenta está activa."
   ],
   "submitLabel": "Enviar consulta",
   "sendingLabel": "Enviando...",
@@ -68,9 +65,14 @@
     "phoneInvalid": "Introduce un telefono valido o deja el campo vacio.",
     "serviceRequired": "Selecciona un servicio.",
     "messageRequired": "El mensaje es obligatorio.",
-    "privacyRequired": "Debes aceptar la politica de privacidad.",
     "honeypotFilled": "No se ha podido validar el envio.",
-    "genericError": "No se ha podido procesar el formulario."
+    "genericError": "No se ha podido procesar el formulario.",
+    "privacyRequired": "Confirma que has leído la información de privacidad."
   },
-  "honeypotLabel": "No rellenar este campo"
+  "honeypotLabel": "No rellenar este campo",
+  "privacyConsent": {
+    "prefix": "Consulta la",
+    "linkLabel": "política de privacidad",
+    "suffix": "antes de enviar el formulario."
+  }
 }

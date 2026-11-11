@@ -115,7 +115,7 @@ function validate(values: FormValues, now: number): Record<string, string> {
   if (values.phone && !PHONE_PATTERN.test(values.phone)) errors.phone = 'Phone is invalid.';
   if (!ALLOWED_SERVICES.has(values.service)) errors.service = 'Service is required.';
   if (!values.message) errors.message = 'Message is required.';
-  if (!['1', 'on', 'true'].includes(values.privacy)) errors.privacy = 'Privacy consent is required.';
+  if (!['1', 'on', 'true'].includes(values.privacy)) errors.privacy = 'Privacy notice acknowledgement is required.';
   if (values.website) errors.website = 'Validation failed.';
   if (values.formStartedAt) {
     const startedAt = Number(values.formStartedAt);

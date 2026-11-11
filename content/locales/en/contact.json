@@ -27,11 +27,11 @@
       "placeholder": "Briefly explain what you need",
       "rows": 6
     },
-    "privacy": {
-      "label": "I have read and accept the privacy policy."
-    },
     "honeypot": {
       "label": "Do not fill in this field"
+    },
+    "privacy": {
+      "label": "I confirm that I have read the privacy information."
     }
   },
   "serviceOptions": [
@@ -48,14 +48,11 @@
       "label": "Alarms and cameras"
     }
   ],
-  "privacyConsent": {
-    "prefix": "You must accept the",
-    "linkLabel": "privacy policy",
-    "suffix": "before sending the form."
-  },
+  "privacyNoticeLinkLabel": "Read the full privacy policy.",
   "legalSummary": [
-    "Your data will be used to answer your enquiry by form, email, phone or WhatsApp.",
-    "The data controller is Instal Berrozpe S.L. and you can read more in the privacy policy."
+    "Controller: Instal Berrozpe S.L. We use the details you provide to answer your enquiry and, if requested, prepare a quote. The legal basis is taking pre-contractual steps you request or our legitimate interest in answering general enquiries.",
+    "Vercel hosts the site and processes the form; Resend delivers the message and Google Workspace receives it in the company mailbox. The full policy explains these providers’ processing and possible international transfers.",
+    "The enquiry is kept while it is being handled and afterwards for applicable legal periods. In Workspace, messages remain until manually deleted; no automatic deletion rule is currently configured. Resend states that email data and logs are retained for 30 days while the account is active."
   ],
   "submitLabel": "Send enquiry",
   "sendingLabel": "Sending...",
@@ -68,9 +65,14 @@
     "phoneInvalid": "Enter a valid phone number or leave the field empty.",
     "serviceRequired": "Select a service.",
     "messageRequired": "Message is required.",
-    "privacyRequired": "You must accept the privacy policy.",
     "honeypotFilled": "The submission could not be validated.",
-    "genericError": "The form could not be processed."
+    "genericError": "The form could not be processed.",
+    "privacyRequired": "Confirm that you have read the privacy information."
   },
-  "honeypotLabel": "Do not fill in this field"
+  "honeypotLabel": "Do not fill in this field",
+  "privacyConsent": {
+    "prefix": "Read the full",
+    "linkLabel": "privacy policy",
+    "suffix": "before submitting the form."
+  }
 }

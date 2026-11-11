@@ -50,6 +50,9 @@ test('rejects invalid fields and the honeypot before sending', async () => {
   const invalid = await endpoint.fetch(request({ ...validFields, service: 'unknown' }));
   assert.equal(invalid.status, 422);
   assert.deepEqual((await invalid.json()).errors.service, 'Service is required.');
+  const unacknowledged = await endpoint.fetch(request({ ...validFields, privacy: '' }));
+  assert.equal(unacknowledged.status, 422);
+  assert.equal((await unacknowledged.json()).errors.privacy, 'Privacy notice acknowledgement is required.');
   const spam = await endpoint.fetch(request({ ...validFields, website: 'bot-filled' }));
   assert.equal(spam.status, 422);
   assert.ok((await spam.json()).errors.website);

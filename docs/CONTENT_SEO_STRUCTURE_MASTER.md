@@ -49,7 +49,7 @@ Fuente de verdad: `content/shared/contact.json`
 - `primaryEmail`: `david@instalberrozpe.com`
 - WhatsApp derivado: `https://wa.me/34676043389?...`
 - URL de Google Maps: `https://www.google.com/maps/search/?api=1&query=Carrer%20de%20l%27Antiga%2C%2068%2C%2017300%20Blanes%2C%20Girona`
-- Destinatario del formulario RGPD / handler PHP: `david@instalberrozpe.com`
+- Destinatario del formulario RGPD / `api/contact.ts`: `david@instalberrozpe.com`
 
 ## E. Estructura multidioma
 
@@ -371,8 +371,8 @@ Legales sincronizados en los 4 idiomas:
 
 Estado:
 
-- legales sincronizados y cerrados para `es`, `ca`, `en` y `de`
-- revision legal autorizada por cliente el `2026-07-10`
+- textos legales sincronizados para `es`, `ca`, `en` y `de`; verificación de términos de tratamiento de Workspace pendiente
+- datos operativos confirmados por David el `2026-11-10`
 - datos fiscales aplicados en contenido y soporte SEO compartido
 
 Datos aplicados:
@@ -382,7 +382,7 @@ Datos aplicados:
 - CIF/NIF:
   - `B55326813`
 - domicilio legal:
-  - `Antiga 68 bajos de Blanes`
+  - `Carrer de l’Antiga, 68, bajos, Blanes`
 - direccion publica normalizada:
   - `Carrer de l'Antiga, 68, 17300 Blanes, Girona`
 - email legal y de privacidad:
@@ -421,20 +421,19 @@ Controles implementados:
 - API key y remitente se configuran solo como variables de entorno Vercel
 - honeypot, validación de origen, campo de tiempo mínimo y limitación por instancia
 
-Pendiente antes de produccion:
+Estado de verificación:
 
-- envío SiteGround confirmado históricamente el `2026-07-10`
-- nuevo envío en Vercel pendiente de credenciales Resend y verificación de dominio remitente
+- La configuración del proveedor no sustituye una prueba de entrega real; no declarar la recepción como verificada sin enviar y confirmar un mensaje de prueba.
 
 ## T. Migración a Vercel (2026-11-02)
 
-- Rama canónica: `master`; GitHub declara `main` como predeterminada, por lo que el proyecto Vercel debe fijar explícitamente `master` como Production Branch.
+- Rama canónica/Production Branch: `master`; GitHub declara `main` como predeterminada.
 - Build estática Astro: `npm run build` → `dist/` (45 páginas).
 - `vercel.json` conserva redirecciones legacy y `/` → `/es/`.
 - El antiguo `public/form-handler.php` se sustituye por `api/contact.ts`; no se publica código PHP ni se usa `mail()`.
 - El handler envía solicitudes por Resend API. Variables necesarias en Vercel: `RESEND_API_KEY` (secreto), `RESEND_FROM_EMAIL` (remitente de dominio verificado) y `CONTACT_TO_EMAIL` (destino `david@instalberrozpe.com`).
 - El dominio y los registros DNS del correo no deben cambiarse durante la migración. La verificación del remitente requiere DNS propios de Resend; esos registros deberán revisarse para no duplicar ni sustituir SPF y añadirse por una persona autorizada.
-- La sesión Vercel comprobada el `2026-11-02` todavía informa plan Hobby; no crear ni desplegar en ese equipo.
+- Proyecto existente `instalberrozpe-web` en equipo Vercel Pro; no crear otro proyecto.
 
 ## K. Assets
 
@@ -680,12 +679,11 @@ Reduced motion:
   - marketing
 - No hay scripts opcionales confirmados cargandose antes del consentimiento
 - Enlace permanente para reabrir preferencias desde el footer
-- Google Maps sigue integrado como acceso externo verificado:
-  - sin iframe vivo en HTML inicial
-  - sin carga automatica de terceros
-  - con fallback visual en contacto
-  - con enlace compacto en home
-  - con enlace simple en footer
+- Google Maps se solicita solo tras consentimiento específico:
+  - el iframe no recibe `src` en el HTML inicial
+  - retirar el consentimiento elimina `src`
+  - la dirección y los enlaces externos siguen disponibles
+  - el pie de página permite reabrir preferencias
 - Validacion real en staging:
   - rechazo persistente tras recarga
   - opcionales no premarcadas
